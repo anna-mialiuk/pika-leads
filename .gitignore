@@ -25,3 +25,8 @@ dist-ssr
 
 # експорт контенту для CMS (npm run export:content)
 content-export
+
+# змінні оточення
+.env
+.env.*
+!.env.example
