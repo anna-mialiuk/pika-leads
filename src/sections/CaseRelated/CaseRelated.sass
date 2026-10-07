@@ -115,11 +115,8 @@
     scrollbar-width: none
     -ms-overflow-style: none
 
-    @include mix.tablet
+    @include mix.laptop
       gap: 2rem
-
-    @include mix.mobile
-      gap: 1.4rem
 
     &::-webkit-scrollbar
       display: none
@@ -135,13 +132,16 @@
     background: #191816
     scroll-snap-align: start
 
-    @include mix.tablet
+    // як у решти слайдерів: 2 картки до 1024px, 1 на всю ширину до 768px
+    @include mix.laptop
       width: calc((100% - 2rem) / 2)
       min-width: calc((100% - 2rem) / 2)
 
+    @include mix.tablet
+      width: 100%
+      min-width: 100%
+
     @include mix.mobile
-      width: 85%
-      min-width: 85%
       border-radius: 1.6rem
 
   &__image-wrapper

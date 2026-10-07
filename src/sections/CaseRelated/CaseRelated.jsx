@@ -36,7 +36,7 @@ function CaseRelated({ currentCase, cases = [] }) {
 
     if (!card) return;
 
-    const gap = 24;
+    const gap = parseFloat(getComputedStyle(sliderRef.current).columnGap) || 0;
     const scrollAmount = card.offsetWidth + gap;
 
     sliderRef.current.scrollBy({
