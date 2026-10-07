@@ -1,8 +1,8 @@
 /**
  * Єдина відправка заявок з усіх форм сайту.
  *
- * Куди: VITE_LEADS_ENDPOINT (.env) — POST JSON. Поки змінна не задана,
- * заявки лише виводяться в консоль у dev-режимі (на продакшені — нікуди).
+ * Куди: VITE_LEADS_ENDPOINT (.env), за замовчуванням на продакшені — /api/leads
+ * (приймач server/leads → Telegram). У dev-режимі без змінної — лише в консоль.
  *
  * Що надсилається:
  *   type        — consultation | audit | question | bonus | callback | chat-message | chat-callback
@@ -13,7 +13,10 @@
  *   createdAt
  * Після успіху в dataLayer пушиться подія lead_submit — для GTM / GA4 / пікселів.
  */
-const ENDPOINT = import.meta.env.VITE_LEADS_ENDPOINT;
+// На продакшені за замовчуванням — власний приймач на тому ж домені (server/leads)
+const ENDPOINT =
+  import.meta.env.VITE_LEADS_ENDPOINT ||
+  (import.meta.env.PROD ? "/api/leads" : "");
 const ATTRIBUTION_KEY = "pika-attribution";
 const TRACKED_PARAMS = [
   "utm_source",
@@ -21,9 +24,15 @@ const TRACKED_PARAMS = [
   "utm_campaign",
   "utm_content",
   "utm_term",
+  "utm_id",
   "gclid",
   "fbclid",
   "ttclid",
+  // параметри Meta з URL оголошення: ?campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&placement={{placement}}
+  "campaign_id",
+  "adset_id",
+  "ad_id",
+  "placement",
 ];
 
 const readStorage = () => {

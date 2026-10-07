@@ -113,3 +113,96 @@ Certbot сам допише HTTPS у конфіг Nginx і налаштує ав
 Комітите й пушите в `main` — через 1–2 хвилини зміни на сайті.
 Якщо збірка впала (наприклад, `i18n:check` знайшов неперекладений текст) — деплою не буде,
 а причину видно у вкладці **Actions**.
+
+---
+
+## Заявки в Telegram
+
+Усі форми сайту надсилають заявки на `https://pika-leads.com/api/leads`.
+Там працює невеликий приймач `server/leads/index.mjs`: перевіряє заявку, зберігає копію
+у `leads.jsonl` і надсилає повідомлення в Telegram.
+
+### 1. Бот і чат
+
+> **Окремий бот для сайту.** Якщо в групі вже є бот іншої системи (наприклад, квізів) з кнопками статусу,
+> не використовуйте його токен: два обробники кнопок на одному боті конфліктують, і зламаються обидва.
+> Створіть нового бота (наприклад, «Pikaleads Site») і додайте його в ту саму групу —
+> заявки з сайту й квізів падатимуть в один чат, кожна зі своїми кнопками.
+
+1. У Telegram відкрийте **@BotFather** → `/newbot` → назва (наприклад, «Pika Leads Заявки») і логін бота.
+   BotFather дасть **токен** виду `123456:ABC-...`.
+2. Створіть групу (наприклад, «Заявки Pika Leads»), додайте туди бота й усіх, хто має бачити заявки.
+   Напишіть у групі будь-яке повідомлення.
+3. Відкрийте в браузері `https://api.telegram.org/botТОКЕН/getUpdates` і знайдіть `"chat":{"id":-100…}`
+   — це **ID чату** (для групи він від'ємний).
+
+### 2. Сервер (один раз, як root)
+
+```bash
+node -v    # потрібен Node 18+
+
+mkdir -p /home/deploy/leads-server
+nano /home/deploy/leads-server/.env
+```
+
+Вміст `.env`:
+
+```
+TELEGRAM_BOT_TOKEN=123456:ABC-...
+TELEGRAM_CHAT_ID=-100...
+PORT=3010
+LEADS_FILE=/home/deploy/leads-server/leads.jsonl
+```
+
+```bash
+chown -R deploy:deploy /home/deploy/leads-server
+chmod 600 /home/deploy/leads-server/.env
+
+# сервіс (вміст — файл deploy/pikaleads-leads.service з репозиторію)
+nano /etc/systemd/system/pikaleads-leads.service
+systemctl daemon-reload
+systemctl enable pikaleads-leads
+
+# дозвіл для автодеплою перезапускати лише цей сервіс
+echo "deploy ALL=(root) NOPASSWD: /usr/bin/systemctl restart pikaleads-leads" > /etc/sudoers.d/pikaleads-leads
+chmod 440 /etc/sudoers.d/pikaleads-leads
+```
+
+Nginx: у `/etc/nginx/sites-available/pikaleads`, у блок `server` з `listen 443 ssl` і `server_name pika-leads.com`,
+перед `location / {` додайте:
+
+```nginx
+    location /api/leads {
+        proxy_pass http://127.0.0.1:3010;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        client_max_body_size 32k;
+    }
+```
+
+```bash
+nginx -t && systemctl reload nginx
+```
+
+### 3. Деплой і перевірка
+
+Push у `main` — автодеплой скопіює код приймача в `/home/deploy/leads-server` і перезапустить сервіс.
+
+```bash
+curl https://pika-leads.com/api/leads/health      # {"ok":true}
+systemctl status pikaleads-leads                  # active (running)
+journalctl -u pikaleads-leads -n 50               # лог, якщо щось не так
+```
+
+Надішліть тестову заявку з сайту — у групі має з'явитися повідомлення з ім'ям, телефоном (клікабельний),
+нішею, сторінкою, мовою, UTM-мітками й кнопками статусу («Идём на звонок», «Квалифицирован», «Продажа»…).
+Натискання кнопки змінює рядок «Статус лида: … · хто натиснув».
+
+**UTM для реклами Meta**, щоб у заявці заповнились Кампания / Ключ / Место размещения / ID:
+
+```
+utm_source=roma&utm_medium=paid&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&placement={{placement}}&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}
+```
+
+**Захист від спаму:** приховане поле-пастка в кожній формі й не більше 5 заявок з однієї IP за 10 хвилин.
+**Резервна копія:** усі заявки (навіть якщо Telegram недоступний) — у `/home/deploy/leads-server/leads.jsonl`.
