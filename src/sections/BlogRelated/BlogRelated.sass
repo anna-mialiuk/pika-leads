@@ -78,3 +78,16 @@
 
     @include mix.tablet
       grid-template-columns: minmax(0, 1fr)
+
+  // ≤1024px: картки — горизонтальна карусель (свайп)
+  @include mix.laptop
+    &__grid
+      @include mix.card-carousel(2rem)
+
+  @include mix.tablet
+    &__grid
+      @include mix.card-carousel-bleed(1.5rem)
+
+  @include mix.mobile
+    &__grid
+      @include mix.card-carousel-bleed(1rem)
