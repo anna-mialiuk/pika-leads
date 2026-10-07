@@ -30,6 +30,28 @@ $article-text: '.blog-article-content__body p, .blog-article-content__body li'
       font-size: 2rem
       line-height: 1.7
 
+    // питання FAQ і значення метрик мають бути помітнішими за підписи
+    // (значення тут ще множаться ×1.12 плагіном postcss/scale-mobile-text.js)
+    .faq-item__question
+      font-size: 1.75rem
+      line-height: 1.4
+
+    .case-card .case-card__metric-value
+      font-size: 1.75rem
+
     // більший шрифт — більше рядків, щоб відгук не обрізався раніше
     .testimonial-card__text
       -webkit-line-clamp: 10
+
+  // кікер картки кейсу з більшим шрифтом не вміщався в рядок — переносимо, а не обрізаємо
+  body .case-card__kicker
+    overflow: visible
+    white-space: normal
+    text-overflow: clip
+
+  // iPhone (Safari) збільшує сторінку при фокусі на полі зі шрифтом < 16px —
+  // 16px у всіх полях прибирає цей «стрибок» під час заповнення форм
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  select
+    font-size: 16px !important

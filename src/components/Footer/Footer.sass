@@ -99,6 +99,11 @@
   &__column
     min-width: 0
 
+    // довгі слова («конфиденциальности») переносяться у вузькій колонці
+    a
+      overflow-wrap: anywhere
+      hyphens: auto
+
     h3
       margin: 0 0 1.6rem
       color: vars.$color-white
