@@ -43,3 +43,14 @@ jobs:
           rsync -az --delete \
             -e "ssh -i ~/.ssh/deploy_key" \
             dist/ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
+
+      # приймач заявок: код у /home/deploy/leads-server (.env і файли заявок не чіпаємо)
+      - name: Update leads server
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          rsync -az --exclude ".env" --exclude "*.jsonl" \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            server/leads/ "$SSH_USER@$SSH_HOST:/home/deploy/leads-server/"
+          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" "sudo systemctl restart pikaleads-leads"
