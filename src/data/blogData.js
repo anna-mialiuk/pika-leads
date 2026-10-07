@@ -1,14 +1,14 @@
-import blogCapi from "../assets/images/blog/blog-capi.png";
-import blogTools from "../assets/images/blog/blog-tools.png";
-import blogBans from "../assets/images/blog/blog-bans.png";
-import blogMinusWords from "../assets/images/blog/meta-minus-words.png";
-import blogPixelWordpress from "../assets/images/blog/meta-pixel-wordpress.png";
-import blogMetaUpdate from "../assets/images/blog/meta-ads-update.png";
-import blogDirectLimits from "../assets/images/blog/meta-direct-eu-limits.png";
-import blogCyclicRestrictions from "../assets/images/blog/meta-cyclic-restrictions.png";
-import blogBusinessTrust from "../assets/images/blog/meta-business-trust.png";
-import blogAndromedaGem from "../assets/images/blog/meta-andromeda-gem.png";
-import blogAdRejections from "../assets/images/blog/meta-ad-rejections.png";
+import blogCapi from "../assets/images/blog/blog-capi.webp";
+import blogTools from "../assets/images/blog/blog-tools.webp";
+import blogBans from "../assets/images/blog/blog-bans.webp";
+import blogMinusWords from "../assets/images/blog/meta-minus-words.webp";
+import blogPixelWordpress from "../assets/images/blog/meta-pixel-wordpress.webp";
+import blogMetaUpdate from "../assets/images/blog/meta-ads-update.webp";
+import blogDirectLimits from "../assets/images/blog/meta-direct-eu-limits.webp";
+import blogCyclicRestrictions from "../assets/images/blog/meta-cyclic-restrictions.webp";
+import blogBusinessTrust from "../assets/images/blog/meta-business-trust.webp";
+import blogAndromedaGem from "../assets/images/blog/meta-andromeda-gem.webp";
+import blogAdRejections from "../assets/images/blog/meta-ad-rejections.webp";
 
 export const blogArticles = [
   {

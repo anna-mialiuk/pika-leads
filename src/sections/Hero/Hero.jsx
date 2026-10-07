@@ -1,6 +1,6 @@
 import Button from "../../components/Button/Button";
 
-import pikaHero from "../../assets/images/pika-hero.png";
+import pikaHero from "../../assets/images/pika-hero.webp";
 
 import Icon from "../../components/Icon/Icon";
 

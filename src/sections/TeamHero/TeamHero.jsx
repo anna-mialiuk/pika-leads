@@ -1,7 +1,7 @@
 import Badge from "../../components/Badge/Badge";
 import Button from "../../components/Button/Button";
 
-import founderImage from "../../assets/images/team/founder.jpg";
+import founderImage from "../../assets/images/team/founder.webp";
 
 import { useLanguage } from "../../i18n";
 

@@ -6,7 +6,7 @@ import { localizePath, stripLanguagePrefix } from "./paths";
 import { OG_LOCALES, SITE_NAME, absoluteUrl } from "./seoConfig.js";
 import { useLanguage } from "./useLanguage";
 
-import defaultImage from "../assets/images/pika-hero.png";
+import defaultImage from "../assets/images/pika-hero.webp";
 
 const MANAGED = "data-seo";
 

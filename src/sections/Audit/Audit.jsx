@@ -3,7 +3,7 @@ import Badge from "../../components/Badge/Badge";
 
 import AuditForm from "../../components/AuditForm/AuditForm";
 
-import auditExample from "../../assets/images/leadgen-audit.png";
+import auditExample from "../../assets/images/leadgen-audit.webp";
 
 import "./Audit.sass";
 

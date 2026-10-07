@@ -1,6 +1,6 @@
 import metaAuditImage from "../assets/images/service-pages/meta-audit-checklist.webp";
-import googleAuditImage from "../assets/images/service-pages/google-audit-uk.png";
-import universalAuditImage from "../assets/images/service-pages/universal-audit-uk.png";
+import googleAuditImage from "../assets/images/service-pages/google-audit-uk.webp";
+import universalAuditImage from "../assets/images/service-pages/universal-audit-uk.webp";
 
 import { serviceProcessSteps } from "./serviceProcessSteps";
 

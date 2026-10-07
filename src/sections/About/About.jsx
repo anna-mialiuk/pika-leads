@@ -1,8 +1,8 @@
 import Button from "../../components/Button/Button";
 import Badge from "../../components/Badge/Badge";
 
-import aboutTeam from "../../assets/images/about/about-team.png";
-import aboutOffice from "../../assets/images/about/about-office.png";
+import aboutTeam from "../../assets/images/about/about-team.webp";
+import aboutOffice from "../../assets/images/about/about-office.webp";
 
 import { useLanguage } from "../../i18n";
 

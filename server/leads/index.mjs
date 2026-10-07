@@ -97,6 +97,7 @@ const statusKeyboard = () => {
 };
 
 const STATUS_PREFIX = "<b>Статус лида:</b> ";
+const WIDE_SPACER = "\u2800".repeat(48);
 
 const escapeHtml = (value) =>
   String(value)
@@ -148,7 +149,9 @@ function formatMessage(lead) {
     field("Страница", lead.page),
     field("Откуда (кнопка)", lead.source, 60),
     field("Язык", lead.lang, 10),
-    "",
+    // невидимий рядок (U+2800) розширює повідомлення — тоді кнопки статусу
+    // показують повний текст, а не «Идё…звонок»
+    WIDE_SPACER,
     field("Кампания", a.utm_campaign),
     field("Ключ", a.utm_content),
     field("Место размещения", a.placement || a.utm_term),
