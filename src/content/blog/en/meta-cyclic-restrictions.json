@@ -1,0 +1,366 @@
+{
+  "id": "meta-cyclic-restrictions",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Advertisers often see Meta bans as a series of random events: today a card won’t link, tomorrow an ad account goes down, a week later a business account or Facebook Page gets restricted. If you look at only one ad account, it really does look chaotic. But across dozens of projects, a different picture emerges: the attention of enforcement systems periodically shifts between different elements of the ad infrastructure."
+    },
+    {
+      "type": "paragraph",
+      "text": "This doesn’t mean Meta officially runs waves on a schedule. There’s no public review calendar. However, teams that work with large numbers of ad assets every day regularly see periods with more payment checks, profile restrictions, ad account restrictions, business account restrictions or Page restrictions."
+    },
+    {
+      "type": "paragraph",
+      "text": "The main practical takeaway is simple: today, protecting only the ad account isn’t enough. Stability depends on the whole ecosystem — admin profiles, payment method, business portfolio, Facebook Page, Instagram account, domain, analytics, creatives and landing page."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "cyclic-restrictions",
+      "text": "What cyclical restrictions on Meta mean"
+    },
+    {
+      "type": "paragraph",
+      "text": "By cyclicality, we don’t mean a guaranteed sequence but recurring operational periods. At one point, teams more often run into payment checks and declined cards. At another — identity verification requests, ad account restrictions or problems accessing business assets. Then complaints about Pages, loss of advertising ability or extra post reviews increase."
+    },
+    {
+      "type": "paragraph",
+      "text": "These shifts may be related to updates to automated models, fraud prevention, new policies, regional risks, waves of abuse or retuning of violation detection systems. The advertiser doesn’t see the internal cause. They only see the consequence — more checks and less tolerance for poorly set-up assets."
+    },
+    {
+      "type": "paragraph",
+      "text": "That’s why the “find one immortal account” strategy no longer works. You need to reduce risk at every point in the system."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "facebook-page",
+      "text": "Why the Facebook Page has become critical"
+    },
+    {
+      "type": "paragraph",
+      "text": "To run ads on Facebook, an advertiser needs a Page. Meta also states directly that ad restrictions can apply not only to the account but also to the Page and other ad assets. If a Page loses the right to advertise, active campaigns can stop regardless of the ad account’s status."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Facebook Page used to be seen as a technical shell: create a name, add an avatar, connect it to the ad account — and you can launch a campaign. Now such a Page looks weak both to users and to enforcement systems."
+    },
+    {
+      "type": "paragraph",
+      "text": "An empty Page doesn’t explain:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "who is behind the ad",
+        "what exactly the business offers",
+        "how to contact it",
+        "whether the brand exists beyond a single ad",
+        "whether the Page’s content matches the creative and the landing page",
+        "whether the Page has a normal history of activity"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This doesn’t prove the existence of a separate “warm-up rating”. But a fully set-up Page reduces obvious inconsistencies and helps users verify the advertiser before clicking through or buying."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "ecosystem",
+      "text": "What Meta officially checks"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta states that ads undergo automated review for compliance with the Advertising Standards. The analysis can cover the creative, copy, targeting and destination page. Even after launch, an ad can be re-reviewed."
+    },
+    {
+      "type": "paragraph",
+      "text": "Separately, Meta takes ad experience quality into account. Low-quality attributes of an ad, Page or domain can worsen the ad’s position in the auction and increase cost per result. In addition, restrictions can be imposed for repeat violations, attempts to circumvent review, inauthentic behavior or misleading business practices."
+    },
+    {
+      "type": "paragraph",
+      "text": "At the same time, Meta doesn’t claim that “12 posts”, “14 days of warm-up” or a connected WhatsApp automatically raise an internal rating. Such recommendations should be seen as operational hygiene, not a secret formula."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "risk-signals",
+      "text": "How to prepare a Facebook Page for advertising"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. Fill in the basic information"
+    },
+    {
+      "type": "paragraph",
+      "text": "The name, category, description, website, email, phone and address should match the real business and the information on the landing page. Don’t copy random contacts or leave a template description that explains nothing."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the Page represents a local company, add current opening hours and the service area. If it’s an online service, explain how it works, the product and the countries where it’s available."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2. Use a recognizable brand identity"
+    },
+    {
+      "type": "paragraph",
+      "text": "The avatar and cover should look like elements of one brand. An aggressive ad banner as the cover, different names on the website and on Facebook, a blurry logo or poor-quality images create distrust before anyone even sees the ad."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3. Build a basic content history"
+    },
+    {
+      "type": "paragraph",
+      "text": "Before a large-scale launch, it makes sense to publish a series of posts that explain the product and how the business works. For most projects, 9–12 meaningful posts are a practical starting base, but this isn’t an official Meta threshold."
+    },
+    {
+      "type": "paragraph",
+      "text": "Content can include:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "an introduction to the company and team",
+        "a description of products or services",
+        "answers to frequently asked questions",
+        "cases and results without exaggerated promises",
+        "reviews that can be verified",
+        "useful materials on the business’s topic",
+        "explanations of payment, delivery or partnership terms"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "What matters isn’t quantity for its own sake but consistency. A user who opens the Page after seeing an ad should see the same brand, product and tone of communication."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "4. Don’t launch your maximum budget right after creating the Page"
+    },
+    {
+      "type": "paragraph",
+      "text": "At Pika Leads, we usually allow 5–14 days for proper setup, posts, access checks and fixing inconsistencies. This is an internal recommendation, not a Meta requirement."
+    },
+    {
+      "type": "paragraph",
+      "text": "The point of this period isn’t to “trick the algorithm” but to catch technical problems before significant budget is tied to the Page. During this time, you can check roles, two-factor authentication, contacts, links, mobile display and whether the content matches the landing page."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "5. Connect Instagram if you actually use it"
+    },
+    {
+      "type": "paragraph",
+      "text": "A connected Instagram account helps maintain a single brand identity, reply to messages and run ads from the correct profile. But connecting it alone doesn’t make up for an empty account, contradictory information or policy violations."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "6. Secure access"
+    },
+    {
+      "type": "paragraph",
+      "text": "Enable two-factor authentication for everyone with access to assets. Review roles regularly and remove employees or contractors who no longer need access. Avoid shared logins and don’t pass personal profiles between people."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "7. Check the “Page — ad — website” chain"
+    },
+    {
+      "type": "paragraph",
+      "text": "The brand name, product, price, terms, contacts and legal information shouldn’t contradict each other. If the ad promises one thing, the Page says another and the website leads to a third product, the risk of rejection and complaints grows."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "what-to-do",
+      "text": "Which Pages are at higher risk"
+    },
+    {
+      "type": "paragraph",
+      "text": "The most questions are raised by Pages that combine several weak signals at once:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "created right before a large budget launch",
+        "have no description, contacts or post history",
+        "use identical names, avatars and content across a large network of Pages",
+        "advertise a product that doesn’t appear in their organic content",
+        "lead to a domain with redirects or contradictory information",
+        "frequently change admins, names or categories",
+        "get complaints and negative reactions with no response from the business",
+        "use creatives with exaggeration, pressure or misleading promises"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "A single item from this list doesn’t mean an automatic ban. The problem arises when inconsistencies pile up."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "page-preparation-checklist",
+      "text": "A 14-day Page preparation checklist"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Days 1–3: the basics"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Check the name, category, description and contacts",
+        "Add an avatar and cover in a consistent style",
+        "Set up two-factor authentication",
+        "Check roles and access rights",
+        "Add a correct link to the website"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Days 4–7: content"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Publish posts about the company, product and team",
+        "Add answers to common questions",
+        "Show the real terms of partnership, payment or delivery",
+        "Check that posts don’t contradict future ad offers"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Days 8–10: connections and analytics"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Connect the current Instagram account",
+        "Check the domain and events in Events Manager",
+        "Make sure the Pixel and Conversions API don’t duplicate events without deduplication",
+        "Check the website’s mobile version, policies and contacts"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Days 11–14: a controlled launch"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Launch a campaign with a controlled budget",
+        "Check delivery status, comments and traffic quality",
+        "Don’t make a series of chaotic major changes right after launch",
+        "Record baseline metrics and all system notifications"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "after-launch",
+      "text": "What to monitor after launch"
+    },
+    {
+      "type": "paragraph",
+      "text": "Don’t limit monitoring to the “Active” column. Check statuses in Ads Manager, Business Support Home, Account Quality, Events Manager and the comments under ads. Watch for CPM changes, sharp drops in impressions, event problems, rejected posts and new asset restrictions."
+    },
+    {
+      "type": "paragraph",
+      "text": "If a problem occurs, first identify the level: ad, Page, ad account, payment profile, business portfolio or domain. Re-uploading without diagnosis often just multiplies the same mistakes."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "conclusion",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Facebook Page is no longer a technical intermediary for ads. It’s a separate business asset that affects user trust, the ad experience and the operational resilience of campaigns."
+    },
+    {
+      "type": "paragraph",
+      "text": "There’s no magic number of posts or guaranteed warm-up period. What there is instead: a consistent brand, real contacts, clear content, secure access, a correct website, clean events and policy compliance. That system is what gives you the best chance of getting through the next wave of checks without chaotic losses."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "faq",
+      "text": "FAQ"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "How long should you warm up a Facebook Page before advertising?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta doesn’t set an official period. A practical window of 5–14 days lets you set up the Page, publish basic content and check access, the website and analytics before scaling."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "How many posts should a Page have?"
+    },
+    {
+      "type": "paragraph",
+      "text": "There’s no official minimum. For a start, it makes sense to prepare 9–12 meaningful posts that explain the business’s activities and match the future ads."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Will a connected Instagram save you from a ban?"
+    },
+    {
+      "type": "paragraph",
+      "text": "No. A connected Instagram helps build a cohesive brand presence, but it doesn’t override the Advertising Standards or compensate for violations, a misleading landing page or access problems."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Where do I check Page restrictions?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check Business Support Home and the ad asset status overview. If a review request is available, submit it after fixing the cause, not after mechanically relaunching the same ad."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "sources",
+      "text": "Sources"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Meta Business Help Center: About Advertising Restrictions",
+        "Meta Transparency Center: Introduction to the Advertising Standards",
+        "Meta Business Help Center: About ad quality",
+        "Meta Transparency Center: Inauthentic Behavior"
+      ]
+    }
+  ]
+}

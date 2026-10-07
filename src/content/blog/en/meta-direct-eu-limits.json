@@ -1,0 +1,82 @@
+{
+  "id": "meta-direct-eu-limits",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "A familiar situation: you need to drive people to Direct messages, but in Europe this is restricted by privacy rules. Optimizing for clicks isn’t an option, yet you need results. Here’s a short solution that works."
+    },
+    {
+      "type": "note",
+      "text": "Use this wisely. If you run the setup with the “Traffic” objective, you most likely won’t get quality traffic.",
+      "variant": "warning"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "eu-restrictions",
+      "text": "Step 1. An intermediate page"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a short page on any service like mssg.me — it’s simple and convenient. The page should state your offer briefly and clearly. You can add a timer and mention that the offer is limited: “hurry to buy or book via Direct — tap below”."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "first-method",
+      "text": "Step 2. A modified link"
+    },
+    {
+      "type": "paragraph",
+      "text": "You need a special link. There are two ways — both may work, and both are worth testing."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Method 1: a direct ig.me link"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Direct link looks like ig.me/user_name — replace user_name with the username of the profile you need. This link always opens Direct in the Instagram app."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Method 2: lead forms for collecting contact details via messages"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lead forms in message format are an underrated feature. It sounds odd, but it works — though it’s a 50/50 chance, so be sure to test. Optimization here is aimed solely at contacts, and it works quite well, but you need to pay close attention to the message sequence. This option doesn’t require an intermediate page."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "second-method",
+      "text": "Step 3. The link in the button"
+    },
+    {
+      "type": "paragraph",
+      "text": "Insert the modified link into the button on the intermediate page."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "tracking",
+      "text": "Step 4. The pixel and the Lead event"
+    },
+    {
+      "type": "paragraph",
+      "text": "Install the pixel on mssg.me and record the Lead event right away. This lets you optimize correctly and get messages — instead of optimizing for clicks, you optimize for a real target action."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "conclusion",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "The setup is simple: the intermediate page acts as the place where you can install the pixel and record the event, and then the user goes to Direct via a direct link. It’s not a universal solution, but in European regions it gets the job done when direct optimization for messages isn’t available."
+    }
+  ]
+}

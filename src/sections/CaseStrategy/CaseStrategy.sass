@@ -1,0 +1,362 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.case-strategy
+  padding: 0 0 7rem
+  background: #0f0f0f
+
+  &__container
+    width: min(100% - 4rem, 110rem)
+    margin: 0 auto
+
+  &__block
+    margin: 0 0 3rem
+
+  &__subtitle
+    margin: 0 0 1.4rem
+    color: #f7f5ef
+    font-family: vars.$font-title
+    font-size: 2rem
+    font-weight: 800
+    line-height: 1.3
+
+  &__text
+    width: 100%
+    margin: 0
+    color: #cfcac0
+    font-size: 1.6rem
+    line-height: 1.7
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 1.1rem
+    margin: 0
+    padding: 0
+    list-style: none
+
+  &__list-item
+    position: relative
+    padding-left: 2rem
+    color: #cfcac0
+    font-size: 1.6rem
+    line-height: 1.6
+
+    &::before
+      position: absolute
+      top: .8rem
+      left: 0
+      width: .6rem
+      height: .6rem
+      border-radius: 50%
+      background: #ffc629
+      box-shadow: 0 0 1rem rgba(255, 198, 41, .5)
+      content: ''
+
+  // =========================
+  // ARCHITECTURE GALLERY
+  // =========================
+
+  &__gallery
+    width: 100%
+    margin: 3rem 0
+
+  &__screenshot
+    width: 100%
+    overflow: hidden
+    margin: 0
+    border: .1rem solid rgba(255, 255, 255, .12)
+    border-radius: 2rem
+    background: #090a08
+
+  &__image-wrapper
+    position: relative
+    width: 100%
+    height: 55rem
+    overflow: hidden
+    background: #090a08
+
+  &__image-button
+    position: absolute
+    inset: 0
+    display: flex
+    width: 100%
+    height: 100%
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    padding: 0
+    border: 0
+    background: #090a08
+    color: inherit
+    font: inherit
+    cursor: zoom-in
+
+    &:hover
+      .case-strategy__zoom
+        transform: scale(1.08)
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: contain
+    opacity: 1
+    transform: translateX(0) scale(1)
+    transition: opacity .22s ease, transform .22s ease
+    will-change: opacity, transform
+
+    &--changing
+      opacity: 0
+      transform: translateX(-1rem) scale(.995)
+
+  &__counter
+    position: absolute
+    top: 1.6rem
+    right: 6.8rem
+    z-index: 3
+    display: inline-flex
+    min-height: 3.2rem
+    align-items: center
+    justify-content: center
+    padding: .6rem 1rem
+    border-radius: 1rem
+    background: rgba(35, 32, 25, .92)
+    color: #ffc629
+    font-size: 1.15rem
+    font-weight: 800
+    line-height: 1
+
+  &__zoom
+    position: absolute
+    top: 1.6rem
+    right: 1.6rem
+    z-index: 3
+    display: flex
+    width: 4rem
+    height: 4rem
+    align-items: center
+    justify-content: center
+    border: .1rem solid rgba(255, 255, 255, .14)
+    border-radius: 1.2rem
+    background: rgba(38, 38, 38, .94)
+    color: #ffc629
+    font-size: 2.5rem
+    line-height: 1
+    pointer-events: none
+    transition: transform .2s ease
+
+  &__arrow
+    position: absolute
+    top: 50%
+    z-index: 4
+    display: flex
+    width: 4.6rem
+    height: 4.6rem
+    align-items: center
+    justify-content: center
+    padding: 0
+    border: .1rem solid rgba(255, 255, 255, .14)
+    border-radius: 50%
+    background: rgba(24, 24, 22, .92)
+    color: #f7f5ef
+    font-family: inherit
+    font-size: 3rem
+    line-height: 1
+    cursor: pointer
+    transform: translateY(-50%)
+    transition: background .2s ease, border-color .2s ease, opacity .2s ease
+
+    &:hover:not(:disabled)
+      border-color: rgba(255, 198, 41, .6)
+      background: #25231f
+
+    &:disabled
+      opacity: .55
+      cursor: default
+
+    &--prev
+      left: 1.5rem
+
+    &--next
+      right: 1.5rem
+
+  &__caption
+    min-height: 5rem
+    padding: 1.4rem 1.8rem
+    border-top: .1rem solid rgba(255, 255, 255, .1)
+    color: #817f7a
+    font-size: 1.35rem
+    line-height: 1.5
+    opacity: 1
+    transition: opacity .22s ease
+
+    &--changing
+      opacity: 0
+
+  &__thumbnails
+    display: flex
+    min-height: 7.5rem
+    align-items: center
+    gap: 1rem
+    padding: 1.2rem 1.8rem 1.6rem
+    border-top: .1rem solid rgba(255, 255, 255, .08)
+
+  &__thumbnail
+    width: 7rem
+    height: 5rem
+    flex: 0 0 auto
+    overflow: hidden
+    padding: 0
+    border: .1rem solid rgba(255, 255, 255, .12)
+    border-radius: .8rem
+    background: #151515
+    opacity: .55
+    cursor: pointer
+    transition: opacity .2s ease, border-color .2s ease, transform .2s ease
+
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &:hover:not(:disabled)
+      opacity: .85
+      transform: translateY(-.1rem)
+
+    &:disabled
+      cursor: default
+
+    &--active
+      border-color: #ffc629
+      opacity: 1
+
+  // =========================
+  // INFO CARDS
+  // =========================
+
+  &__cards
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    margin-top: .5rem
+
+  // =========================
+  // TABLET
+  // =========================
+
+  @include mix.tablet
+    &__container
+      width: min(100% - 3rem, 110rem)
+
+    &__subtitle
+      font-size: 1.9rem
+
+    &__text
+      font-size: 1.5rem
+
+    &__list-item
+      font-size: 1.5rem
+
+    &__image-wrapper
+      height: 42rem
+
+    &__cards
+      gap: 1.8rem
+
+  // =========================
+  // MOBILE
+  // =========================
+
+  @include mix.mobile
+    padding: 0 0 5rem
+
+    &__container
+      width: calc(100% - 2rem)
+
+    &__block
+      margin-bottom: 2.4rem
+
+    &__subtitle
+      margin-bottom: 1.2rem
+      font-size: 1.8rem
+
+    &__text
+      font-size: 1.45rem
+      line-height: 1.6
+
+    &__list
+      gap: 1rem
+
+    &__list-item
+      padding-left: 1.7rem
+      font-size: 1.45rem
+      line-height: 1.55
+
+      &::before
+        top: .7rem
+        width: .5rem
+        height: .5rem
+
+    &__gallery
+      margin: 2.4rem 0
+
+    &__screenshot
+      border-radius: 1.4rem
+
+    &__image-wrapper
+      height: 30rem
+
+    &__image
+      &--changing
+        transform: translateX(-.6rem) scale(.995)
+
+    &__counter
+      top: 1rem
+      right: 5.5rem
+      min-height: 2.8rem
+      padding: .5rem .8rem
+      font-size: 1rem
+
+    &__zoom
+      top: 1rem
+      right: 1rem
+      width: 3.6rem
+      height: 3.6rem
+      border-radius: 1rem
+      font-size: 2.2rem
+
+    &__arrow
+      width: 3.8rem
+      height: 3.8rem
+      font-size: 2.5rem
+
+      &--prev
+        left: .8rem
+
+      &--next
+        right: .8rem
+
+    &__caption
+      min-height: 4.5rem
+      padding: 1.2rem 1.4rem
+      font-size: 1.2rem
+
+    &__thumbnails
+      min-height: 6.5rem
+      gap: .8rem
+      overflow-x: auto
+      padding: 1rem 1.4rem 1.3rem
+      scrollbar-width: none
+
+      &::-webkit-scrollbar
+        display: none
+
+    &__thumbnail
+      width: 5.8rem
+      height: 4.2rem
+
+    &__cards
+      gap: 1.5rem
+      margin-top: 0

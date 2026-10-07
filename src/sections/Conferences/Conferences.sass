@@ -1,0 +1,36 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.conferences
+  @include mix.section
+  background: vars.$color-dark
+
+  &__container
+    @include mix.container
+    @include mix.container
+
+  &__label
+    margin-bottom: 2.2rem
+  &__title
+    @include mix.section-title
+    @include mix.section-title
+    margin: 0 0 1.4rem
+
+  &__description
+    @include mix.section-text
+    @include mix.section-text
+    max-width: 46.4rem
+    margin: 0 0 4rem
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: 2rem
+
+  @include mix.laptop
+    &__list
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+
+  @include mix.tablet
+    &__list
+      grid-template-columns: 1fr

@@ -1,0 +1,327 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+@keyframes service-hero-uiux-float
+  0%, 100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-1rem)
+
+.service-hero-uiux
+  position: relative
+  width: 41rem
+  max-width: 100%
+  animation: service-hero-uiux-float 6s ease-in-out infinite
+
+  @include mix.mobile
+    width: 100%
+    max-width: 36rem
+
+  &__border
+    position: absolute
+    inset: -0.3rem
+    border-radius: 2rem
+    background: var(--service-gradient)
+    filter: blur(0.3rem)
+    opacity: 0.5
+
+  &__window
+    position: relative
+    overflow: hidden
+    border: 0.1rem solid rgba(255, 255, 255, 0.1)
+    border-radius: 1.6rem
+    background: #141018
+    box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.55)
+
+  &__toolbar
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    padding: 1.1rem 1.4rem
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.06)
+    background: #1b1524
+
+  &__toolbar-dots
+    display: flex
+    flex: 0 0 auto
+    gap: 0.7rem
+
+    span
+      width: 1.1rem
+      height: 1.1rem
+      border-radius: 50%
+
+      &:nth-child(1)
+        background: var(--service-accent)
+
+      &:nth-child(2)
+        background: var(--service-secondary)
+
+      &:nth-child(3)
+        background: var(--service-accent-light)
+
+  &__toolbar-line
+    width: 12rem
+    max-width: 32%
+    height: 0.7rem
+    margin-right: auto
+    border-radius: 0.4rem
+    background: #2a2333
+
+  &__toolbar-actions
+    display: flex
+    gap: 0.6rem
+
+    span
+      display: block
+      width: 2rem
+      height: 2rem
+      border-radius: 0.6rem
+      background: #2a2333
+
+      &:nth-child(2)
+        background: rgba(var(--service-accent-rgb), 0.3)
+
+  &__workspace
+    display: flex
+    gap: 1.6rem
+    height: 33.4rem
+    box-sizing: border-box
+    padding: 2rem
+    background-color: #0f0b15
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 0.1rem, transparent 0.1rem)
+    background-size: 2rem 2rem
+
+    @include mix.mobile
+      height: 30rem
+      gap: 1.2rem
+      padding: 1.6rem
+
+    @include mix.mobile-s
+      height: 27rem
+      padding: 1.4rem
+
+  &__sidebar
+    display: flex
+    width: 6.4rem
+    flex: 0 0 6.4rem
+    flex-direction: column
+    gap: 0.8rem
+
+    @include mix.mobile-s
+      width: 4.8rem
+      flex-basis: 4.8rem
+
+    span
+      display: block
+      width: 78%
+      height: 0.7rem
+      border-radius: 0.3rem
+      background: #2a2333
+
+      &:nth-child(3)
+        width: 88%
+
+      &:nth-child(4)
+        width: 64%
+
+      &:nth-child(5)
+        width: 80%
+
+    .service-hero-uiux__sidebar-active
+      width: 100%
+      height: 0.9rem
+      background: rgba(var(--service-accent-rgb), 0.4)
+
+  &__canvas
+    position: relative
+    flex: 1
+    min-width: 0
+
+  &__artboard
+    position: relative
+    padding: 1.6rem
+    border-radius: 1.4rem
+    background: #fff
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.45)
+
+    @include mix.mobile
+      padding: 1.3rem
+
+  &__selection
+    position: absolute
+    z-index: 2
+    inset: -0.7rem
+    border: 0.15rem solid var(--service-accent)
+    border-radius: 1.7rem
+    pointer-events: none
+
+  &__handle
+    position: absolute
+    z-index: 3
+    width: 0.8rem
+    height: 0.8rem
+    border: 0.15rem solid var(--service-accent)
+    border-radius: 0.2rem
+    background: #fff
+
+    &--tl
+      top: -1.1rem
+      left: -1.1rem
+
+    &--tr
+      top: -1.1rem
+      right: -1.1rem
+
+    &--bl
+      bottom: -1.1rem
+      left: -1.1rem
+
+    &--br
+      right: -1.1rem
+      bottom: -1.1rem
+
+  &__artboard-hero
+    height: 7.8rem
+    margin-bottom: 1.3rem
+    border-radius: 1rem
+    background: var(--service-gradient)
+
+    @include mix.mobile-s
+      height: 6.2rem
+
+  &__artboard-title
+    width: 70%
+    height: 0.9rem
+    margin-bottom: 0.8rem
+    border-radius: 0.4rem
+    background: #2a2333
+
+  &__artboard-copy
+    display: flex
+    flex-direction: column
+    gap: 0.5rem
+    margin-bottom: 1.5rem
+
+    span
+      display: block
+      height: 0.6rem
+      border-radius: 0.3rem
+      background: #ddd6e6
+
+      &:first-child
+        width: 92%
+
+      &:last-child
+        width: 60%
+
+  &__artboard-actions
+    display: flex
+    gap: 0.8rem
+
+  &__artboard-primary
+    width: 9.6rem
+    height: 3rem
+    border-radius: 0.8rem
+    background: var(--service-accent)
+
+  &__artboard-secondary
+    width: 6.4rem
+    height: 3rem
+    box-sizing: border-box
+    border: 0.15rem solid #ddd6e6
+    border-radius: 0.8rem
+
+  &__palette
+    display: flex
+    gap: 0.7rem
+    margin-top: 1.6rem
+
+    span
+      width: 2.4rem
+      height: 2.4rem
+      flex: 0 0 auto
+      border-radius: 50%
+
+      &:nth-child(1)
+        background: var(--service-accent)
+
+      &:nth-child(2)
+        background: var(--service-secondary)
+
+      &:nth-child(3)
+        background: var(--service-accent-light)
+
+      &:nth-child(4)
+        background: #22d3ee
+
+      &:nth-child(5)
+        background: vars.$color-primary
+
+  &__metric
+    position: absolute
+    z-index: 5
+    padding: 1rem 1.4rem
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.4)
+    border-radius: 1.2rem
+    background: rgba(26, 24, 21, 0.92)
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.4)
+    backdrop-filter: blur(0.8rem)
+
+    span
+      display: block
+      color: #8f8a80
+      font-size: 1.05rem
+      font-weight: 700
+
+    strong
+      display: block
+      margin-top: 0.2rem
+      font-family: vars.$font-title
+      font-size: 2rem
+      font-weight: 800
+      line-height: 1.15
+
+    &--components
+      top: 8.8rem
+      left: -4.6rem
+
+      strong
+        color: var(--service-accent)
+
+    &--prototype
+      right: -4.2rem
+      bottom: 7rem
+
+      strong
+        color: vars.$color-green
+
+    @include mix.mobile
+      padding: 0.9rem 1.2rem
+
+      strong
+        font-size: 1.7rem
+
+      &--components
+        left: -2.4rem
+
+      &--prototype
+        right: -2.4rem
+
+    @include mix.mobile-s
+      padding: 0.8rem 1rem
+
+      span
+        font-size: 0.9rem
+
+      strong
+        font-size: 1.45rem
+
+      &--components
+        top: 7rem
+        left: -1.2rem
+
+      &--prototype
+        right: -1.2rem
+        bottom: 5rem

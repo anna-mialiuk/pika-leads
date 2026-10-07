@@ -1,0 +1,74 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.blog-related
+  padding: 1rem 0 9rem
+  background: #121110
+
+  @include mix.laptop
+    padding: 1rem 0 8rem
+
+  @include mix.mobile
+    padding: 1rem 0 6rem
+
+  &__container
+    width: min(100% - 4rem, 110rem)
+    margin: 0 auto
+
+    @include mix.tablet
+      width: min(100% - 3rem, 110rem)
+
+    @include mix.mobile
+      width: calc(100% - 2rem)
+
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 2rem
+    margin-bottom: 3rem
+
+    @include mix.mobile
+      align-items: flex-start
+      margin-bottom: 2.4rem
+
+  &__title
+    margin: 0
+    color: #f7f5ef
+    font-family: vars.$font-title
+    font-size: 2.6rem
+    font-weight: 800
+    line-height: 1.2
+
+    @include mix.mobile
+      font-size: 2.2rem
+
+  &__all
+    display: inline-flex
+    min-height: 4.8rem
+    flex: 0 0 auto
+    align-items: center
+    justify-content: center
+    padding: 0 2.2rem
+    border: .1rem solid rgba(255, 255, 255, .16)
+    border-radius: 1.2rem
+    color: #f7f5ef
+    font-size: 1.3rem
+    font-weight: 800
+    text-decoration: none
+    transition: border-color .2s ease, color .2s ease, background .2s ease
+
+    @include mix.mobile
+      min-height: 4.2rem
+      padding: 0 1.5rem
+      font-size: 1.15rem
+
+    &:hover
+      border-color: #ffc629
+      background: rgba(255, 198, 41, .06)
+      color: #ffc629
+
+  &__grid
+    display: grid
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: 2rem

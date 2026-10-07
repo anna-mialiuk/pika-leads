@@ -1,0 +1,34 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.service-wheel-form
+  @include mix.flex-column(1.2rem)
+  width: 100%
+  max-width: 47rem
+
+  &__input
+    @include mix.form-input(vars.$color-surface, vars.$color-surface)
+    height: 5rem
+    padding: 0 1.6rem
+
+    @include mix.mobile
+      font-size: 1.6rem
+
+  &__phone
+    height: 5rem
+    background: vars.$color-surface
+
+  &__submit
+    @include mix.form-submit
+    min-height: 5.6rem
+    border-radius: 1.1rem
+    font-size: 1.55rem
+    box-shadow: 0 0 2.8rem rgba(255, 198, 41, 0.32)
+
+    .icon
+      width: 1.6rem
+      height: 1.6rem
+
+  &__policy
+    @include mix.form-note
+    font-size: 1.2rem

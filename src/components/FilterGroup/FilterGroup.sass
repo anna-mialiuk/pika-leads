@@ -1,0 +1,79 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.filter-group
+  @include mix.flex-column(1.1rem)
+
+  &__label
+    @include mix.caption(rgba(247, 245, 239, 0.35))
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 0.9rem
+
+  &__button
+    @include mix.filter-button
+    min-height: 4.4rem
+    padding: 1rem 1.7rem
+    color: rgba(247, 245, 239, 0.72)
+    font-size: 1.3rem
+    line-height: 1
+
+    strong
+      color: rgba(247, 245, 239, 0.3)
+      font-size: 1.1rem
+      font-weight: 800
+
+    &--active
+      border-color: rgba(255, 198, 41, 0.55)
+      background: rgba(255, 198, 41, 0.12)
+      color: vars.$color-primary
+
+      strong
+        color: vars.$color-primary
+
+    // Кольорові фільтри (ніші кейсів): колір іде з --filter-color
+    &--colored
+      color: var(--filter-color)
+
+      &.filter-group__button--active
+        border-color: var(--filter-color)
+        background: var(--filter-color)
+        color: vars.$color-dark
+
+        strong
+          color: rgba(18, 17, 16, 0.65)
+
+        .filter-group__dot
+          background: rgba(18, 17, 16, 0.45)
+
+  &__dot
+    width: 0.7rem
+    height: 0.7rem
+    flex-shrink: 0
+    border-radius: 50%
+    background: var(--filter-color)
+
+  @include mix.tablet
+    &__list
+      gap: 0.8rem
+
+    &__button
+      min-height: 4.2rem
+      padding: 0.9rem 1.4rem
+
+  @include mix.mobile
+    &__list
+      flex-wrap: nowrap
+      overflow-x: auto
+      margin-right: -1.6rem
+      padding-right: 1.6rem
+      padding-bottom: 0.4rem
+      scrollbar-width: none
+
+      &::-webkit-scrollbar
+        display: none
+
+    &__button
+      flex-shrink: 0

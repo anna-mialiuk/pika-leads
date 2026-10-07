@@ -1,0 +1,140 @@
+{
+  "id": "disclaimer",
+  "title": "Disclaimer",
+  "description": "Terms and limitations of Pikaleads’ liability for the information on this website and for the advertising and marketing services we provide.",
+  "updatedAt": "2026-07-05",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "This disclaimer sets out the terms and limitations of liability of the Pikaleads agency (individual entrepreneur Roman Mykolaiovych Hrybuk, hereinafter the “Agency”, “we”) in relation to the information published on pika-leads.com and the advertising and marketing services we provide. By using the Website and ordering our services, you confirm that you have read and accept the terms of this disclaimer."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-1",
+      "text": "1. Informational nature of the materials"
+    },
+    {
+      "type": "paragraph",
+      "text": "All information on the Website (texts, case studies, blog articles, figures and estimates) is of a general informational nature and does not constitute individual advice, a guarantee of results, a public offer or legal advice, unless expressly stated otherwise. The specific terms of cooperation are set out in the contract and its annexes."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-2",
+      "text": "2. No guarantee of specific results"
+    },
+    {
+      "type": "paragraph",
+      "text": "The effectiveness of advertising depends on many factors beyond the Agency’s full control: the client’s niche and product, the quality of the website and offer, budget, seasonality, competition, audience behavior and the algorithms of advertising platforms. The figures in case studies and commercial materials (cost per lead, lead volume, ROAS, conversions) reflect the results of specific projects over a specific period and do not guarantee similar results for other clients. Forecasts and “estimated” figures are indicative only."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-3",
+      "text": "3. Areas of responsibility in ad management"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>3.1. The Agency’s responsibility.</strong> We are responsible for the professional setup and management of advertising campaigns: developing the strategy, building and launching campaigns, analytics and optimization within the scope agreed with the client, as well as timely reporting and communication."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>3.2. The client’s responsibility.</strong> The client is responsible for the accuracy of the materials and data provided, the legality of the advertised product or service, compliance of landing pages with platform requirements, the proper functioning of the website and lead intake system, processing of incoming leads and timely top-ups of advertising budgets. The Agency is not liable for lost profits resulting from the client’s untimely processing of leads."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>3.3. The advertising platforms’ responsibility.</strong> Meta, Google, TikTok, LinkedIn and other platforms are independent services with their own rules. The Agency does not control and is not responsible for their actions: suspensions and restrictions of ad accounts, rejection of ads in review, changes to algorithms, pricing and policies, technical failures, or fluctuations in the cost of impressions and clicks caused by the auction model."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-4",
+      "text": "4. Compliance with platform rules and the law"
+    },
+    {
+      "type": "paragraph",
+      "text": "The client warrants that its business and advertised products comply with applicable law and the rules of the advertising platforms. For regulated and sensitive niches (healthcare, finance, 18+, iGaming, dietary supplements, etc.), the client independently confirms that it holds the necessary licenses and permits and complies with the requirements of the jurisdictions in which advertising is run. The Agency may refuse to publish materials that violate the law or platform rules."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-5",
+      "text": "5. Links to third-party resources"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Website may contain links to third-party websites and services. The Agency does not control their content and is not responsible for the availability, accuracy or policies of those resources. Following external links is at the User’s own discretion and risk."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-6",
+      "text": "6. Limitation of liability"
+    },
+    {
+      "type": "paragraph",
+      "text": "To the maximum extent permitted by law, the Agency is not liable for indirect losses, lost profits, loss of data or business reputation arising from the use of the Website or services. The Agency’s total liability under a contract is limited to the fees actually paid for the relevant period, unless expressly provided otherwise by the contract or by law."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-7",
+      "text": "7. Intellectual property"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Website materials (texts, design, logos, graphics) belong to the Agency or are used on lawful grounds and are protected by intellectual property law. Use of the materials without the written consent of the rights holder is not permitted."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-8",
+      "text": "8. Testimonials and forward-looking statements"
+    },
+    {
+      "type": "paragraph",
+      "text": "Client testimonials on the Website reflect the personal opinions and experience of specific individuals and do not guarantee similar results. Any statements about future performance (forecasts, plans, estimates of potential) are indicative, based on current data and may differ from actual results."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-9",
+      "text": "9. No professional advice"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Website materials do not constitute legal, tax, financial or other professional advice. Before making decisions about advertising in regulated niches, the client is advised to consult relevant specialists independently."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-10",
+      "text": "10. Force majeure"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Agency is not liable for non-performance or improper performance of its obligations caused by force majeure: natural disasters, military action, power and communication outages, failures and restrictions on the side of advertising platforms and providers, acts of public authorities and other events beyond the reasonable control of the parties."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-11",
+      "text": "11. Indemnification and governing law"
+    },
+    {
+      "type": "paragraph",
+      "text": "The client undertakes to compensate the Agency for losses and costs arising from the client’s breach of its warranties regarding the legality of the advertised business or the accuracy of the materials provided, including claims by third parties and advertising platforms. Relations between the parties are governed by the law of the Agency’s place of registration, unless the contract provides otherwise. Disputes are resolved through negotiation and, failing agreement, in the manner prescribed by law."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-12",
+      "text": "12. Contacts"
+    },
+    {
+      "type": "paragraph",
+      "text": "For questions about this disclaimer and the terms of cooperation, contact: individual entrepreneur Roman Mykolaiovych Hrybuk, e-mail <a href=\"mailto:info@pika-leads.com\">info@pika-leads.com</a>, tel. <a href=\"tel:+380992377117\">+38 099 23 77 117</a>. See also the <a href=\"/privacy-policy\">Privacy Policy</a> and <a href=\"/personal-data\">Personal Data Protection</a>."
+    }
+  ]
+}

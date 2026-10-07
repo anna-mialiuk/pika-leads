@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pika-leads.com/sitemap.xml

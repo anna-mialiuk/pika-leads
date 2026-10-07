@@ -1,0 +1,64 @@
+{
+  "id": "meta-pixel-wordpress-errors",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Among Meta Pixel errors, there’s one that’s fairly rare but annoying: “Update IPv6 events on View Content”. It’s usually related to Meta Ads requiring more modern technologies for tracking actions on a website, in particular events based on the IPv6 protocol."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "what-to-check",
+      "text": "What to check, step by step"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "1. Pixel settings"
+    },
+    {
+      "type": "paragraph",
+      "text": "Go to Events Manager and check how your events are configured. Make sure the “View Content” event is set up correctly and supports the new standards, including IPv6."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "2. Protocol support on the server"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some systems still work only over IPv4. If your website or app doesn’t support IPv6, you need to update your server settings or hosting to enable support for this protocol."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "3. Domain settings"
+    },
+    {
+      "type": "paragraph",
+      "text": "DNS or SSL certificate issues can also cause this error. Make sure your domain supports IPv6 and that requests over this protocol go through without errors."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "4. Updating the SDK and tracking code"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check whether you’re using the latest version of the Facebook Pixel SDK and whether the tracking code is integrated correctly. Sometimes simply updating the code to Meta’s current requirements is enough."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "5. Contacting support"
+    },
+    {
+      "type": "paragraph",
+      "text": "If the error persists after all updates, write to the Help Center. Sometimes the problem is on the platform’s side, and then no changes on your end will help."
+    },
+    {
+      "type": "note",
+      "text": "On WordPress, this error can most often be fixed at the hosting level: enabling IPv6 support solves the problem in most cases."
+    }
+  ]
+}

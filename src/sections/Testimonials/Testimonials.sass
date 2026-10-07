@@ -1,0 +1,115 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.testimonials
+  position: relative
+  overflow: hidden
+  @include mix.section
+  background: vars.$color-dark
+
+  &::after
+    content: ''
+    position: absolute
+    top: 4.8rem
+    right: -12.8rem
+    width: 51.2rem
+    height: 51.2rem
+    background: radial-gradient(circle, rgba(255, 198, 41, 0.07), transparent 68%)
+    filter: blur(3.2rem)
+    pointer-events: none
+
+  &__container
+    @include mix.container
+    @include mix.container
+    position: relative
+    z-index: 1
+
+  &__label
+    margin-bottom: 2.4rem
+  &__heading
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    gap: 3.2rem
+    margin-bottom: 4.8rem
+
+  &__heading-content
+    min-width: 0
+
+  &__title
+    @include mix.section-title
+    @include mix.section-title
+    display: flex
+    flex-direction: column
+    margin: 0 0 3.2rem
+    text-transform: uppercase
+
+  &__description
+    @include mix.section-text
+    @include mix.section-text
+    margin: 0
+
+  &__slider
+    width: 100%
+    overflow: hidden
+
+  &__track
+    display: flex
+    align-items: stretch
+    gap: 2rem
+    will-change: transform
+
+  &__slide
+    min-width: calc((100% - 4rem) / 3)
+    flex: 0 0 calc((100% - 4rem) / 3)
+
+    .testimonial-card
+      height: 100%
+
+  &__pagination
+    @include mix.flex-center
+    gap: 0.8rem
+    margin-top: 4rem
+
+  &__dot
+    width: 0.8rem
+    height: 0.8rem
+    flex: 0 0 auto
+    padding: 0
+    border: 0
+    border-radius: vars.$radius-pill
+    background: rgba(255, 255, 255, 0.18)
+    cursor: pointer
+    transition: width 0.25s ease, background 0.25s ease
+
+    &:hover
+      background: rgba(255, 198, 41, 0.5)
+
+    &--active
+      width: 3.2rem
+      background: vars.$color-primary
+
+  @include mix.laptop
+    &__slide
+      min-width: calc((100% - 2rem) / 2)
+      flex-basis: calc((100% - 2rem) / 2)
+
+  @include mix.tablet
+    &__heading
+      align-items: flex-start
+      flex-direction: column
+
+    &__slide
+      min-width: 100%
+      flex-basis: 100%
+
+  @include mix.mobile
+
+    &__heading
+      margin-bottom: 3.2rem
+
+    &__title
+      margin-bottom: 2rem
+
+    .slider-controls
+      align-self: flex-end

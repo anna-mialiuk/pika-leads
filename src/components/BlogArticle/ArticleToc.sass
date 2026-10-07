@@ -1,0 +1,48 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.article-toc
+  position: relative
+  align-self: stretch
+  min-width: 0
+  grid-column: 2
+  grid-row: 1 / -1
+
+  @include mix.tablet
+    display: none
+
+  &__sticky
+    position: sticky
+    top: 11rem
+
+  &__title
+    margin-bottom: 1.6rem
+    color: #5f5c58
+    font-size: 1.2rem
+    font-weight: 800
+    letter-spacing: .14em
+    text-transform: uppercase
+
+  &__list
+    display: flex
+    flex-direction: column
+    padding-left: 1.8rem
+    border-left: .2rem solid rgba(255, 255, 255, .1)
+
+  &__link
+    display: block
+    padding: .8rem 0
+    color: #8f8b86
+    font-size: 1.3rem
+    font-weight: 500
+    line-height: 1.4
+    text-decoration: none
+    transition: color .2s ease, transform .2s ease
+
+    &:hover
+      color: #ffc629
+      transform: translateX(.3rem)
+
+    &:focus-visible
+      color: #ffc629
+      outline: none

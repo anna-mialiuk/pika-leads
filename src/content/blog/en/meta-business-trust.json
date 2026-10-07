@@ -1,0 +1,371 @@
+{
+  "id": "meta-business-trust",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Two advertisers can have similar budgets, the same campaign objective and an almost identical offer — yet get different CPMs, different moderation stability and different numbers of conversions. The simplest explanation is “Meta trusts one business more”. It’s convenient, but too vague."
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta doesn’t publish a universal Trust Score that awards points for a post, a review or a connected WhatsApp. Instead, the ad system uses many separate processes: policy review, ad quality assessment, prediction of action likelihood, event analysis, the auction, account security and control of inauthentic behavior."
+    },
+    {
+      "type": "paragraph",
+      "text": "So it’s more accurate to talk not about one secret score but about a combination of signals and inconsistencies. Some of them are confirmed by Meta. Others are reasonable practical assumptions that help build a resilient ad infrastructure but aren’t official ranking factors."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "trust-score",
+      "text": "Does a Meta Trust Score exist?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta’s public documentation contains no formula like:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trust Score = followers + posts + reviews + WhatsApp + account history."
+    },
+    {
+      "type": "paragraph",
+      "text": "Such a formula can only be used as an internal business maturity checklist. Calling it Meta’s official algorithm is incorrect."
+    },
+    {
+      "type": "paragraph",
+      "text": "The real system is more complex. Meta states that ad delivery is determined by the auction and machine learning. The auction takes into account the bid, the predicted likelihood of the desired action and ad quality. Separately, there are the Advertising Standards, ad asset restrictions, Account Quality, destination page review and systems for detecting inauthentic behavior."
+    },
+    {
+      "type": "paragraph",
+      "text": "So “trust” is a convenient name for a state in which a business has fewer risky inconsistencies and more quality data for ad delivery."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "real-signals",
+      "text": "Confirmed factors that really affect your ads"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ad quality"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta states directly: higher-quality ads compete better in the auction, while a low quality ranking can increase costs and reduce distribution. Low-quality attributes can include sensational wording, withholding information, aggressive engagement bait and a poor post-click experience."
+    },
+    {
+      "type": "paragraph",
+      "text": "A practical audit question: would the offer stay compelling if you removed the pressure, clickbait and exaggeration? If not, the problem isn’t the algorithm but the offer itself."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Page and domain consistency with the ad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta can analyze not only the ad’s image and text but also the destination page. The brand name, product, price, geography, terms and contact details should be consistent across the Facebook Page, Instagram, the ad and the website."
+    },
+    {
+      "type": "paragraph",
+      "text": "A mismatch doesn’t always lead to automatic rejection, but it creates a poor user experience, increases complaints and makes business verification harder."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Violation history and advertiser behavior"
+    },
+    {
+      "type": "paragraph",
+      "text": "Repeat violations, attempts to circumvent review, creating new assets to evade restrictions and inauthentic behavior can lead to harsher penalties. That’s why endlessly duplicating campaigns without fixing the cause isn’t a stability strategy."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Conversion data quality"
+    },
+    {
+      "type": "paragraph",
+      "text": "Event Match Quality shows how well events from your website or server can be matched to Meta accounts. Better matching helps attribution and ad delivery. The Pixel and Conversions API don’t create “brand trust”, but they give the system fuller signals about campaign results."
+    },
+    {
+      "type": "paragraph",
+      "text": "It’s especially important to check:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "that standard events are correct",
+        "the value, currency and content_ids parameters",
+        "deduplication of browser and server events via event_id",
+        "no fake Purchase or Lead events",
+        "that each event matches a real user action",
+        "enough matching parameters without breaching data rules"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "User reactions to ads"
+    },
+    {
+      "type": "paragraph",
+      "text": "User engagement helps Meta predict the likelihood of action, but not every like is equally useful. Comments from people outside the target audience don’t guarantee cheaper conversions. Negative feedback, complaints, hidden ads and disappointment after the click can matter far more than artificially gathered reactions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "business-assets",
+      "text": "Practical signals of a mature business"
+    },
+    {
+      "type": "paragraph",
+      "text": "The following elements shouldn’t be presented as a confirmed ranking formula. However, they create a clear digital presence and reduce inconsistencies."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Fully completed profiles"
+    },
+    {
+      "type": "paragraph",
+      "text": "Up-to-date information helps users verify a business. A Page without a description, website and contact details looks unfinished, even if it can technically run ads."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Regular meaningful content"
+    },
+    {
+      "type": "paragraph",
+      "text": "Regularity doesn’t mean posting daily for the sake of activity. It’s enough to consistently show that the company is operating: updating products, answering questions, showcasing cases and explaining terms."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Real reviews"
+    },
+    {
+      "type": "paragraph",
+      "text": "Reviews increase people’s trust, especially for local businesses and services with a long decision cycle. But bought ratings, templated texts or a wave of reviews from new profiles can have the opposite effect."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "A consistent ecosystem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Facebook, Instagram, the website, messengers and contact details should represent one business. Connecting Meta services is useful when it reflects the real communication process, not when used as a decorative “trust boost”."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Healthy operational behavior"
+    },
+    {
+      "type": "paragraph",
+      "text": "A stable access structure, well-reasoned campaign changes, a normal payment history and documented actions reduce chaos. Abruptly changing the country, time zones, payment methods, admins and domains all at once makes diagnosis harder even when each individual change is legitimate."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "trust-myths",
+      "text": "Popular myths about Meta trust"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Myth 1. You need to gain any followers you can"
+    },
+    {
+      "type": "paragraph",
+      "text": "Follower count alone doesn’t guarantee ad performance. A non-target audience can hurt organic engagement and distort the team’s early conclusions."
+    },
+    {
+      "type": "paragraph",
+      "text": "It’s better to have 300 relevant followers and real conversations than 10,000 random accounts with no interest in the product."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Myth 2. Comments from friends automatically lower CPM"
+    },
+    {
+      "type": "paragraph",
+      "text": "A lively discussion can increase social proof for people. But there’s no official rule under which a few friendly comments automatically give you an edge in the auction. Organized inauthentic activity also creates risks."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Myth 3. A connected WhatsApp gives a hidden bonus"
+    },
+    {
+      "type": "paragraph",
+      "text": "WhatsApp is useful as a communication channel and a source of conversions. Meta doesn’t claim that connecting it adds points to a universal Trust Score."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Myth 4. Logging into third-party sites with Facebook “warms up” your ad profile"
+    },
+    {
+      "type": "paragraph",
+      "text": "There’s no public confirmation of such a mechanism. Use Facebook Login for convenience and security where users need it, not for a hypothetical ad rating."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Myth 5. Nine posts guarantee you’ll pass moderation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The number of posts doesn’t cancel out policy violations. Nine or twelve posts are just a practical starting base for filling out a profile."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "internal-audit-model",
+      "text": "An internal audit model instead of a made-up Trust Score"
+    },
+    {
+      "type": "paragraph",
+      "text": "For project work, you can use your own eight-part assessment:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Identity: name, category, contacts, website, legal information",
+        "Content: post history, relevance to the product, real cases",
+        "Reputation: reviews, replies to comments, no mass complaints",
+        "Security: two-factor authentication, up-to-date roles, access control",
+        "Compliance: Meta policies, regulatory requirements, honest offers",
+        "Technical quality: website speed, mobile optimization, HTTPS, no redirect chains",
+        "Data: Pixel, Conversions API, deduplication, Event Match Quality, correct events",
+        "Operational stability: a clear campaign structure, a change log, control of payments and statuses"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Score each part from 0 to 5. This isn’t a Meta score but an internal prioritization tool. If a project scores 1 for security or policy compliance, there’s no point compensating with more posts."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "preparation-plan",
+      "text": "A 30-day business preparation plan"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Week 1: identity and security"
+    },
+    {
+      "type": "paragraph",
+      "text": "Update your information, check access rights, enable two-factor authentication, and align the brand across Facebook, Instagram and the website."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Week 2: content and reputation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create basic content, add an FAQ, publish cases, and set up a process for replying to comments and messages. Collect reviews only from real customers."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Week 3: website and data"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check speed, the mobile version, policies, contact pages, the Pixel, Conversions API, events and parameters. Compare data from the website, the CRM and Ads Manager."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Week 4: launch and monitoring"
+    },
+    {
+      "type": "paragraph",
+      "text": "Launch a controlled campaign structure, record baseline metrics, check lead quality and create a response protocol for rejections or restrictions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "conclusion",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta doesn’t literally “sell trust” and doesn’t show advertisers a universal Trust Score. But the system does evaluate ad quality, predict user reactions, analyze conversion signals and apply policies to the whole set of assets."
+    },
+    {
+      "type": "paragraph",
+      "text": "So a strong business on Meta isn’t a Page with lots of likes. It’s a consistent system: an honest offer, a clear brand, a quality website, a real reputation, secure access and correct data. That’s what gives the algorithms cleaner signals and gives the team more control over results."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "faq",
+      "text": "FAQ"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Is there an official Meta Trust Score?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta doesn’t publish a universal trust metric for a Page or business. The term can be used as an internal audit model, but not as an official platform metric."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Do Facebook reviews affect ads?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Reviews affect people’s trust and can change conversion after they land on the page. Meta doesn’t disclose any direct coefficient that’s automatically added in the auction for the number of positive reviews."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What’s more important: Page content or the Pixel?"
+    },
+    {
+      "type": "paragraph",
+      "text": "They solve different problems. Content builds trust and explains the business. The Pixel and Conversions API send signals about user actions for attribution and optimization."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Can I buy followers to warm up an account?"
+    },
+    {
+      "type": "paragraph",
+      "text": "You shouldn’t. Non-target or inauthentic followers don’t create real trust, can distort analytics and may violate platform rules."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "sources",
+      "text": "Sources"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Meta Business Help Center: About Ad Auctions",
+        "Meta Business Help Center: About ad quality",
+        "Meta Business Help Center: About Event Match Quality",
+        "Meta Business Help Center: About Conversions API",
+        "Meta Transparency Center: Advertising Standards"
+      ]
+    }
+  ]
+}

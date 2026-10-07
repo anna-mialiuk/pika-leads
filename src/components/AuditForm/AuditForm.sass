@@ -1,0 +1,129 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.audit-form
+  overflow: hidden
+  min-width: 0
+  width: 100%
+  align-self: start
+  border: 0.1rem solid rgba(255, 198, 41, 0.28)
+  border-radius: 2.2rem
+  background: rgba(18, 17, 16, 0.82)
+
+  &--service
+    align-self: center
+    border-color: rgba(var(--service-accent-rgb), 0.35)
+    background: vars.$color-dark
+    box-shadow: 0 2.4rem 6rem rgba(0, 0, 0, 0.45)
+
+    .audit-form__field > input:focus
+      border-color: rgba(var(--service-accent-rgb), 0.6)
+
+  &__body
+    @include mix.flex-column(1.6rem)
+    padding: 2.4rem
+
+  &__heading
+    margin-bottom: 0.4rem
+
+    h3
+      @include mix.card-title
+      margin: 0 0 0.4rem
+
+    p
+      @include mix.card-text
+      margin: 0
+
+  &__row
+    display: grid
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr)
+    gap: 1.2rem
+
+  &__field
+    @include mix.form-field
+
+  &__platforms
+    @include mix.flex-column(1rem)
+    min-width: 0
+
+    > span
+      color: vars.$color-text-secondary
+      font-size: 1.1rem
+      font-weight: 700
+
+  &__platform-list
+    display: flex
+    flex-wrap: wrap
+    gap: 0.8rem
+
+  &__platform
+    cursor: pointer
+
+    input
+      position: absolute
+      opacity: 0
+      pointer-events: none
+
+    span
+      @include mix.filter-button
+      padding: 0.8rem 1.4rem
+      color: vars.$color-white
+
+    input:checked + span
+      border-color: rgba(255, 198, 41, 0.45)
+      background: rgba(255, 198, 41, 0.12)
+      color: vars.$color-primary
+
+  &__submit
+    width: 100%
+    margin-top: 0.4rem
+
+  &__note
+    @include mix.form-note
+
+  @include mix.tablet
+    &__row
+      grid-template-columns: 1fr
+
+  @include mix.mobile
+    border-radius: 1.8rem
+
+    &__body
+      gap: 1.4rem
+      padding: 1.8rem
+
+    &__heading
+      h3
+        font-size: 1.8rem
+
+      p
+        font-size: 1.2rem
+
+    &__field
+      gap: 0.6rem
+
+      > input
+        height: 5rem
+
+    &__platform-list
+      gap: 0.7rem
+
+    &__platform
+      span
+        padding: 0.75rem 1.2rem
+        font-size: 1.1rem
+
+    &__submit
+      min-height: 5.2rem
+
+    &__note
+      font-size: 1rem
+
+  @include mix.mobile-s
+    &__body
+      padding: 1.6rem
+
+    &__platform
+      span
+        padding-right: 1.1rem
+        padding-left: 1.1rem

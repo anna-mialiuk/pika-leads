@@ -1,0 +1,125 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.conference-card
+  display: flex
+  flex-direction: column
+  @include mix.card
+  height: 100%
+  background: vars.$color-surface
+
+  &:hover
+    border-color: rgba(255, 198, 41, 0.22)
+    box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.28)
+    transform: translateY(-0.4rem)
+
+  &__media
+    position: relative
+    @include mix.flex-center
+    overflow: hidden
+    height: 18.4rem
+    background: #181613
+    cursor: pointer
+
+    &::after
+      content: ''
+      position: absolute
+      z-index: 1
+      inset: 0
+      background: linear-gradient(rgba(18, 16, 13, 0.08) 0%, rgba(18, 16, 13, 0.04) 55%, rgba(28, 26, 23, 0.35) 100%)
+      pointer-events: none
+
+    &:hover
+      .conference-card__image
+        transform: scale(1.03)
+
+      .conference-card__play
+        box-shadow: 0 0 4.4rem rgba(255, 198, 41, 0.72)
+        transform: translate(-50%, -50%) scale(1.06)
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform 0.3s ease
+
+  &__placeholder
+    position: relative
+    z-index: 0
+    color: rgba(255, 255, 255, 0.05)
+    font-size: 1.4rem
+    font-weight: 700
+
+  &__play
+    position: absolute
+    z-index: 2
+    top: 50%
+    left: 50%
+    @include mix.flex-center
+    width: 5.6rem
+    height: 5.6rem
+    border-radius: 50%
+    background: vars.$color-primary
+    box-shadow: 0 0 3.2rem rgba(255, 198, 41, 0.5)
+    transform: translate(-50%, -50%)
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+
+    span
+      width: 0
+      height: 0
+      margin-left: 0.3rem
+      border-top: 0.7rem solid transparent
+      border-bottom: 0.7rem solid transparent
+      border-left: 1.1rem solid vars.$color-dark
+
+  &__content
+    display: flex
+    flex: 1
+    flex-direction: column
+    padding: 2.4rem
+
+  &__title
+    @include mix.card-title
+    margin: 0 0 1rem
+
+  &__description
+    @include mix.card-text
+    min-height: 6rem
+    margin: 0 0 1.8rem
+
+  &__event
+    display: flex
+    align-items: center
+    gap: 0.8rem
+    margin-bottom: 2rem
+    color: vars.$color-primary
+    font-size: 1.2rem
+    font-weight: 700
+
+    svg
+      flex: 0 0 auto
+
+  &__link
+    @include mix.flex-center
+    gap: 0.7rem
+    width: 100%
+    margin-top: auto
+    padding: 1.2rem 1.6rem
+    border: 0.1rem solid rgba(255, 198, 41, 0.3)
+    border-radius: 1.1rem
+    background: rgba(255, 198, 41, 0.08)
+    color: vars.$color-primary
+    font-size: 1.2rem
+    font-weight: 800
+    transition: background 0.2s ease, border-color 0.2s ease
+
+    span
+      transition: transform 0.2s ease
+
+    &:hover
+      border-color: rgba(255, 198, 41, 0.55)
+      background: rgba(255, 198, 41, 0.14)
+
+      span
+        transform: translateX(0.3rem)

@@ -1,0 +1,312 @@
+.case-video-review
+  padding: 0 0 4rem
+
+  &__container
+    width: min(1068px, calc(100% - 40px))
+    margin: 0 auto
+
+  &__title
+    margin: 0 0 1rem
+    color: #ffc629
+    font-size: 1.25rem
+    font-weight: 800
+    text-transform: uppercase
+
+  &__card
+    display: block
+    position: relative
+    min-height: 34rem
+    overflow: hidden
+    border: 1px solid rgba(255, 198, 41, .16)
+    border-radius: 1.25rem
+    background: #0c0c0b
+    text-decoration: none
+    color: inherit
+
+    &::before
+      content: ""
+      position: absolute
+      inset: 0
+      opacity: .18
+      background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, .025) 0, rgba(255, 255, 255, .025) 1px, transparent 1px, transparent 5px)
+
+    &--lighting
+      background: radial-gradient(circle at 72% 58%, rgba(255, 198, 41, .1), transparent 30%), linear-gradient(135deg, #11110f 0%, #0c0c0b 100%)
+
+    &--furniture
+      border-color: rgba(79, 216, 138, .14)
+      background: radial-gradient(circle at 72% 58%, rgba(79, 216, 138, .08), transparent 30%), linear-gradient(135deg, #11110f 0%, #0c0c0b 100%)
+
+  &__content
+    position: relative
+    z-index: 1
+    min-height: 34rem
+    padding: 5rem 4rem
+
+  &__eyebrow
+    color: rgba(255, 255, 255, .18)
+    font-size: 1.25rem
+    font-weight: 800
+
+    span
+      margin: 0 .5rem
+      color: rgba(255, 198, 41, .3)
+
+  &__visual
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    min-height: 18rem
+
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__line
+    width: 4rem
+    height: .35rem
+    margin-bottom: 2rem
+    background: rgba(255, 198, 41, .35)
+
+  &__name
+    color: rgba(255, 255, 255, .15)
+    font-size: clamp(4rem, 7vw, 7rem)
+    font-weight: 900
+    line-height: .9
+
+  &__roas
+    margin-top: .8rem
+    color: rgba(255, 198, 41, .18)
+    font-size: 2rem
+    font-weight: 900
+
+  &__card--furniture &__line
+    background: rgba(79, 216, 138, .35)
+
+  &__card--furniture &__roas
+    color: rgba(79, 216, 138, .2)
+
+  &__lights
+    display: flex
+    align-items: flex-end
+    gap: 2.5rem
+    padding-right: 2rem
+
+    span
+      position: relative
+      display: block
+      width: 5.8rem
+      height: 8rem
+      border: 3px solid rgba(255, 198, 41, .15)
+      border-top: 0
+      clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%)
+
+      &::before
+        content: ""
+        position: absolute
+        width: 2px
+        height: 6rem
+        left: 50%
+        bottom: 100%
+        background: rgba(255, 198, 41, .14)
+
+      &:nth-child(2)
+        height: 10rem
+
+      &:nth-child(3)
+        height: 12rem
+
+  &__furniture
+    position: relative
+    width: 22rem
+    height: 14rem
+    opacity: .18
+
+  &__sofa
+    position: absolute
+    left: 50%
+    bottom: 1rem
+    width: 16rem
+    height: 6rem
+    transform: translateX(-50%)
+    border: 3px solid #4fd88a
+    border-radius: .4rem
+
+    &::before
+      content: ""
+      position: absolute
+      left: 1rem
+      right: 1rem
+      top: -3rem
+      height: 3rem
+      border: 3px solid #4fd88a
+      border-bottom: 0
+
+    &::after
+      content: ""
+      position: absolute
+      left: 1rem
+      right: 1rem
+      bottom: -2rem
+      height: 2rem
+      border-left: 3px solid #4fd88a
+      border-right: 3px solid #4fd88a
+
+  &__frame
+    position: absolute
+    top: 1rem
+    width: 4rem
+    height: 3rem
+    border: 3px solid #4fd88a
+
+    &--1
+      left: 2rem
+
+    &--2
+      left: 9rem
+
+    &--3
+      right: 2rem
+
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    display: grid
+    place-items: center
+    width: 5.5rem
+    height: 5.5rem
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    background: #ffc629
+    box-shadow: 0 0 40px rgba(255, 198, 41, .22)
+    color: #111
+    font-size: 1.6rem
+    transition: transform .25s ease, box-shadow .25s ease
+
+    span
+      margin-left: .2rem
+
+  &__card--furniture &__play
+    background: #4fd88a
+    box-shadow: 0 0 40px rgba(79, 216, 138, .18)
+
+  &__caption
+    position: absolute
+    top: calc(50% + 4.2rem)
+    left: 50%
+    transform: translateX(-50%)
+    color: #fff
+    font-size: 1rem
+    font-weight: 700
+    white-space: nowrap
+
+  &__bottom
+    position: absolute
+    left: 4rem
+    bottom: 2.5rem
+    display: flex
+    align-items: center
+    gap: 1rem
+    color: rgba(255, 255, 255, .13)
+    font-size: 1.1rem
+    font-weight: 800
+
+  &__small-play
+    display: grid
+    place-items: center
+    width: 3rem
+    height: 3rem
+    border: 2px solid rgba(255, 198, 41, .18)
+    border-radius: 50%
+    color: rgba(255, 198, 41, .2)
+
+  &__card--furniture &__small-play
+    border-color: rgba(79, 216, 138, .18)
+    color: rgba(79, 216, 138, .22)
+
+  &__card:hover &__play
+    transform: translate(-50%, -50%) scale(1.08)
+    box-shadow: 0 0 55px rgba(255, 198, 41, .35)
+
+  &__card--furniture:hover &__play
+    box-shadow: 0 0 55px rgba(79, 216, 138, .3)
+
+  @media (max-width: 768px)
+    padding-bottom: 2.5rem
+
+    &__container
+      width: min(100% - 24px, 1068px)
+
+    &__card,
+    &__content
+      min-height: 28rem
+
+    &__content
+      padding: 3rem 1.5rem
+
+    &__visual
+      min-height: 16rem
+
+    &__lights
+      gap: 1rem
+      padding-right: 0
+
+      span
+        width: 3.5rem
+        height: 5rem
+
+        &::before
+          height: 4rem
+
+        &:nth-child(2)
+          height: 6rem
+
+        &:nth-child(3)
+          height: 7rem
+
+    &__furniture
+      width: 14rem
+      height: 10rem
+
+    &__sofa
+      width: 10rem
+      height: 4rem
+
+      &::before
+        top: -2rem
+        height: 2rem
+
+      &::after
+        bottom: -1.5rem
+        height: 1.5rem
+
+    &__frame
+      width: 2.5rem
+      height: 2rem
+
+      &--1
+        left: 1rem
+
+      &--2
+        left: 5.7rem
+
+      &--3
+        right: 1rem
+
+    &__name
+      font-size: 3.5rem
+
+    &__roas
+      font-size: 1.4rem
+
+    &__caption
+      width: calc(100% - 40px)
+      text-align: center
+      white-space: normal
+
+    &__bottom
+      left: 1.5rem
+      bottom: 1.5rem
+      font-size: .9rem

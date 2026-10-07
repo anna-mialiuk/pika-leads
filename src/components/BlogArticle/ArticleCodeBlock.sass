@@ -1,0 +1,23 @@
+@use '../../styles/mixins' as mix
+
+.article-code-block
+  position: relative
+  overflow-x: auto
+  margin: 2.4rem 0 3rem
+  padding: 2.4rem 2.6rem
+  border: .1rem solid rgba(255, 255, 255, .1)
+  border-left: .3rem solid #ffc629
+  border-radius: 1.2rem
+  background: #0c0c0b
+  color: #d8f0c8
+  font-size: 1.35rem
+  line-height: 1.6
+  white-space: pre
+
+  code
+    font-family: monospace
+
+  @include mix.mobile
+    margin: 2rem 0 2.6rem
+    padding: 1.8rem
+    font-size: 1.2rem

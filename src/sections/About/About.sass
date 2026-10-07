@@ -1,0 +1,169 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.about
+  position: relative
+  overflow: hidden
+  @include mix.section
+  background: vars.$color-dark
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 51.2rem
+    height: 38.4rem
+    background: radial-gradient(circle, rgba(255, 198, 41, 0.07), transparent 68%)
+    filter: blur(3.2rem)
+    pointer-events: none
+
+  &__container
+    @include mix.container
+    @include mix.container
+    position: relative
+    z-index: 1
+    display: grid
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr)
+    gap: 7.2rem
+
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &__label
+    margin-bottom: 2.8rem
+  &__title
+    @include mix.section-title
+    @include mix.section-title
+    margin: 0 0 2.8rem
+
+  &__lead
+    @include mix.section-text
+    @include mix.section-text
+    position: relative
+    margin: 0 0 2.6rem
+    padding-left: 2rem
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 0.3rem
+      border-radius: 0.3rem
+      background: vars.$color-primary
+
+  &__text
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    margin-bottom: 3.2rem
+
+    p
+      @include mix.section-text
+      margin: 0
+
+    strong
+      color: vars.$color-white
+      font-weight: 700
+
+  &__buttons
+    display: flex
+    flex-wrap: wrap
+    gap: 1.6rem
+
+  &__visual
+    display: flex
+    flex-direction: column
+    gap: 1.6rem
+
+  &__team
+    overflow: hidden
+    height: 30rem
+    border-radius: vars.$radius-card
+    box-shadow: 0 1.8rem 5rem rgba(0, 0, 0, 0.5)
+
+  &__team-image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-bottom: 0.6rem solid vars.$color-primary
+
+  &__bottom
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 1.6rem
+
+  &__office
+    overflow: hidden
+    min-height: 18.8rem
+    border: 0.1rem solid vars.$color-border
+    border-radius: vars.$radius-card
+
+  &__office-image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__experience
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 18.8rem
+    padding: 2.8rem
+    border: 0.1rem solid vars.$color-border
+    border-radius: vars.$radius-card
+    background: radial-gradient(24rem 16rem at 20% 0%, rgba(255, 198, 41, 0.12), transparent 70%), rgba(28, 26, 23, 0.72)
+
+    strong
+      margin-bottom: 1rem
+      color: vars.$color-primary
+      font-family: vars.$font-title
+      font-size: 4rem
+      font-weight: 900
+      line-height: 1
+
+    span
+      color: vars.$color-text-secondary
+      font-size: 1.3rem
+      line-height: 1.4
+
+  @include mix.laptop
+
+    &__container
+      grid-template-columns: 1fr
+      gap: 4.8rem
+
+    &__team
+      height: auto
+      aspect-ratio: 16 / 7
+
+    &__office,
+    &__experience
+      min-height: 24rem
+
+  @include mix.mobile
+
+    &__bottom
+      grid-template-columns: 1fr
+
+    &__team
+      height: 24rem
+      aspect-ratio: auto
+
+    &__office
+      min-height: 19.2rem
+
+    &__experience
+      min-height: 16rem
+
+    &__buttons
+      flex-direction: column
+
+      .button
+        width: 100%

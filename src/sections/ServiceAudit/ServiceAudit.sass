@@ -1,0 +1,202 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.service-audit
+  padding: 2rem 4.8rem 8.4rem
+  background: vars.$color-dark
+
+  &__container
+    @include mix.container
+    display: grid
+    grid-template-columns: minmax(0, 1.15fr) minmax(36rem, 0.7fr)
+    gap: 4.8rem
+    padding: 5rem 5.6rem
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.22)
+    border-radius: 3rem
+    background: radial-gradient(60rem 32rem at 90% 0%, rgba(var(--service-accent-rgb), 0.18), transparent 60%), radial-gradient(50rem 30rem at 0% 100%, rgba(var(--service-secondary-rgb), 0.12), transparent 60%), #161412
+    box-shadow: 0 0 8rem rgba(var(--service-accent-rgb), 0.14)
+
+  &__content
+    min-width: 0
+
+  &__badge
+    margin-bottom: 1.8rem
+  &__title
+    max-width: 72rem
+    margin: 0 0 1.6rem
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 3.2rem
+    font-weight: 800
+    line-height: 1.12
+
+    span
+      background: var(--service-gradient)
+      background-size: 200% auto
+      -webkit-background-clip: text
+      background-clip: text
+      color: transparent
+      -webkit-text-fill-color: transparent
+
+  &__description
+    max-width: 62rem
+    margin: 0 0 2.4rem
+    color: vars.$color-text-muted
+    font-size: 1.55rem
+    font-weight: 500
+    line-height: 1.6
+
+  &__subtitle
+    margin-bottom: 1.2rem
+    color: var(--service-accent-light)
+    font-size: 1.15rem
+    font-weight: 800
+    letter-spacing: 0.12em
+    text-transform: uppercase
+
+  &__benefits
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+  &__benefit
+    display: flex
+    align-items: center
+    gap: 1.3rem
+    min-height: 5.8rem
+    padding: 1.4rem 1.8rem
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.16)
+    border-radius: 1.4rem
+    background: rgba(255, 255, 255, 0.03)
+    color: vars.$color-white
+    font-size: 1.45rem
+    font-weight: 700
+    line-height: 1.35
+
+    strong
+      color: vars.$color-primary
+
+  &__benefit-icon
+    @include mix.icon-box(2.6rem, 50%, rgba(var(--service-accent-rgb), 0.16))
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.4)
+
+    .icon
+      @include mix.icon-mask(1.3rem, var(--service-accent-light))
+
+  &__checklist
+    position: relative
+    overflow: hidden
+    display: block
+    width: 100%
+    margin-top: 2.2rem
+    padding: 0
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.25)
+    border-radius: 1.8rem
+    background: #101720
+    box-shadow: 0 2rem 5rem -1.8rem rgba(var(--service-accent-rgb), 0.5)
+    cursor: pointer
+
+    > img
+      display: block
+      width: 100%
+      aspect-ratio: 1671 / 941
+      object-fit: cover
+      transition: transform 0.3s ease
+
+    &:hover > img
+      transform: scale(1.03)
+
+  &__checklist-label
+    position: absolute
+    top: 1.4rem
+    left: 1.4rem
+    padding: 0.7rem 1.3rem
+    border: 0.1rem solid rgba(255, 198, 41, 0.35)
+    border-radius: vars.$radius-pill
+    background: rgba(18, 17, 16, 0.82)
+    color: vars.$color-primary
+    font-size: 1.1rem
+    font-weight: 800
+    letter-spacing: 0.04em
+
+  &__checklist-open
+    position: absolute
+    right: 1.4rem
+    bottom: 1.4rem
+    padding: 0.7rem 1.2rem
+    border: 0.1rem solid rgba(255, 255, 255, 0.16)
+    border-radius: vars.$radius-pill
+    background: rgba(18, 17, 16, 0.86)
+    color: vars.$color-white
+    font-size: 1.1rem
+    font-weight: 800
+
+  &__checklist--placeholder
+    min-height: 18rem
+    cursor: default
+
+  &__checklist-placeholder
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 1rem
+    min-height: 18rem
+    padding: 2rem
+    box-sizing: border-box
+    color: vars.$color-text-muted
+    font-size: 1.4rem
+    font-weight: 700
+    text-align: center
+
+  &__checklist-placeholder-icon
+    @include mix.flex-center
+    width: 2.8rem
+    height: 2.8rem
+    flex: 0 0 auto
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.4)
+    border-radius: 50%
+    background: rgba(var(--service-accent-rgb), 0.16)
+    color: var(--service-accent-light)
+
+  @include mix.laptop
+    padding: 2rem 3.2rem 6.4rem
+
+    &__container
+      grid-template-columns: 1fr
+      padding: 4rem
+
+  @include mix.mobile
+    padding: 1.4rem 1.8rem 4.8rem
+
+    &__container
+      gap: 3.2rem
+      padding: 2.4rem 1.8rem
+      border-radius: 2rem
+
+    &__title
+      font-size: 2.6rem
+
+    &__description
+      font-size: 1.4rem
+
+    &__benefit
+      padding: 1.3rem
+      font-size: 1.3rem
+
+    &__benefit-icon
+      width: 2.4rem
+      height: 2.4rem
+
+      .icon
+        width: 1.2rem
+        height: 1.2rem
+
+    &__checklist-label
+      top: 1rem
+      left: 1rem
+      font-size: 1rem
+
+    &__checklist-open
+      right: 1rem
+      bottom: 1rem
+      font-size: 1rem

@@ -1,0 +1,128 @@
+@use 'sass:color'
+@use '../variables' as vars
+@use './breakpoints' as *
+@use './layout' as *
+
+// ---------- UI ----------
+
+// Бейдж-«таблетка» з крапкою. Колір за замовчуванням — фірмовий жовтий.
+@mixin label($color: vars.$color-primary, $border: vars.$color-border-primary)
+  display: inline-flex
+  align-items: center
+  gap: 0.8rem
+  width: fit-content
+  padding: 0.7rem 1.4rem
+  border: 0.1rem solid $border
+  border-radius: vars.$radius-pill
+  color: $color
+  font-size: 1.1rem
+  font-weight: 800
+  letter-spacing: 0.12em
+
+@mixin label-dot($color: vars.$color-primary)
+  width: 0.6rem
+  height: 0.6rem
+  flex: 0 0 auto
+  border-radius: 50%
+  background: $color
+  box-shadow: 0 0 1rem $color
+
+// Бейдж на сторінках послуг: колір із CSS-змінних теми
+@mixin service-label
+  @include label(var(--service-accent-light), rgba(var(--service-accent-rgb), 0.4))
+  padding: 0.7rem 1.5rem
+  font-size: 1.2rem
+  font-weight: 700
+  letter-spacing: 0.14em
+
+@mixin service-label-dot
+  @include label-dot(var(--service-accent))
+  width: 0.7rem
+  height: 0.7rem
+
+// Генерує модифікатори &--blue, &--green … із CSS-змінними --accent / --accent-rgb,
+// щоб іконки, підкладки та підсвітки картки брали колір з одного місця
+@mixin accent-modifiers
+  @each $name, $color in vars.$accents
+    &--#{$name}
+      --accent: #{$color}
+      --accent-rgb: #{color.channel($color, "red")}, #{color.channel($color, "green")}, #{color.channel($color, "blue")}
+
+@mixin card
+  overflow: hidden
+  min-width: 0
+  border: 0.1rem solid vars.$color-border
+  border-radius: vars.$radius-card
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease
+
+// Підйом картки при наведенні
+@mixin hover-lift($offset: -0.4rem, $border: vars.$color-border-primary)
+  &:hover
+    transform: translateY($offset)
+    border-color: $border
+
+// Квадратна підкладка під іконку
+@mixin icon-box($size: 4.8rem, $radius: 1.2rem, $bg: rgba(255, 198, 41, 0.12))
+  @include flex-center
+  width: $size
+  height: $size
+  flex: 0 0 auto
+  border-radius: $radius
+  background: $bg
+
+// Монохромна SVG-іконка через mask (компонент Icon): форма — з CSS-змінної --icon,
+// колір — з `color` батька (currentColor) або переданого аргументу
+@mixin icon-mask($size: 1.4rem, $color: currentColor)
+  display: block
+  width: $size
+  height: $size
+  flex: 0 0 auto
+  background-color: $color
+  -webkit-mask-image: var(--icon)
+  mask-image: var(--icon)
+  -webkit-mask-repeat: no-repeat
+  mask-repeat: no-repeat
+  -webkit-mask-position: center
+  mask-position: center
+  -webkit-mask-size: contain
+  mask-size: contain
+
+// Кругла кнопка-стрілка слайдера
+@mixin slider-arrow($size: 4.8rem)
+  @include flex-center
+  width: $size
+  height: $size
+  border: 0.1rem solid vars.$color-border
+  border-radius: 50%
+  background: transparent
+  color: vars.$color-white
+  font-size: 2.4rem
+  line-height: 1
+  cursor: pointer
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease
+  &:hover
+    border-color: vars.$color-primary
+    background: rgba(255, 198, 41, 0.08)
+    color: vars.$color-primary
+
+// Кнопка-«таблетка» фільтра
+@mixin filter-button
+  display: inline-flex
+  align-items: center
+  gap: 0.8rem
+  padding: 0.9rem 1.5rem
+  border: 0.1rem solid vars.$color-border
+  border-radius: vars.$radius-pill
+  background: transparent
+  color: vars.$color-text-muted
+  font-size: 1.2rem
+  font-weight: 700
+  white-space: nowrap
+  cursor: pointer
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease
+  &:hover
+    border-color: vars.$color-border-primary
+    color: vars.$color-white
+  &:disabled
+    opacity: 0.35
+    cursor: not-allowed

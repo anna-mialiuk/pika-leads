@@ -1,0 +1,408 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.service-wheel
+  padding: 2rem 4.8rem 9rem
+  background: vars.$color-dark
+
+  @include mix.laptop
+    padding: 2rem 3.2rem 7rem
+
+  @include mix.mobile
+    padding: 1.4rem 1.8rem 5rem
+
+  &__container
+    @include mix.container
+    position: relative
+    overflow: hidden
+    display: grid
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr)
+    align-items: center
+    gap: 5.2rem
+    padding: 5.2rem 4.8rem
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.28)
+    border-radius: 3rem
+    background: radial-gradient(76rem 42rem at 15% 0%, rgba(var(--service-accent-rgb), 0.2), transparent 62%), radial-gradient(62rem 38rem at 100% 100%, rgba(var(--service-secondary-rgb), 0.15), transparent 60%), linear-gradient(160deg, #191713, #121016)
+
+    &::before
+      content: ''
+      position: absolute
+      inset: 0
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 0.1rem, transparent 0.1rem)
+      background-size: 2.6rem 2.6rem
+      opacity: 0.5
+      pointer-events: none
+
+    @include mix.laptop
+      grid-template-columns: 1fr
+      justify-items: center
+      gap: 4rem
+      padding: 4rem
+
+    @include mix.mobile
+      display: flex
+      flex-direction: column
+      align-items: stretch
+      gap: 3.6rem
+      padding: 3.2rem 1.8rem
+      border-radius: 2rem
+
+  &__visual
+    position: relative
+    z-index: 1
+    display: flex
+    min-width: 0
+    flex-direction: column
+    align-items: center
+    gap: 2.4rem
+
+    @include mix.laptop
+      width: 100%
+      order: 2
+
+  &__wheel-wrap
+    position: relative
+    width: min(39rem, 100%)
+    aspect-ratio: 1
+
+    @include mix.tablet
+      width: min(36rem, 72vw)
+
+    @include mix.mobile
+      width: min(30rem, 82vw)
+
+  &__glow
+    position: absolute
+    inset: -1rem
+    border-radius: 50%
+    background: var(--service-glow-gradient)
+    opacity: 0.55
+    filter: blur(2.2rem)
+    pointer-events: none
+
+  &__pointer
+    position: absolute
+    top: -0.6rem
+    left: 50%
+    z-index: 5
+    width: 0
+    height: 0
+    border-right: 1.7rem solid transparent
+    border-left: 1.7rem solid transparent
+    border-top: 2.8rem solid vars.$color-primary
+    filter: drop-shadow(0 0.3rem 0.8rem rgba(0, 0, 0, 0.5))
+    transform: translateX(-50%)
+
+    span
+      position: absolute
+      top: -1rem
+      left: 50%
+      width: 0.9rem
+      height: 0.9rem
+      border-radius: 50%
+      background: #ffffff
+      transform: translateX(-50%)
+
+  &__wheel
+    position: absolute
+    inset: 0
+    filter: drop-shadow(0 1.8rem 4rem rgba(0, 0, 0, 0.5))
+    transition: transform 3.4s cubic-bezier(0.12, 0.8, 0.15, 1)
+    will-change: transform
+
+  &__svg
+    display: block
+    width: 100%
+    height: 100%
+
+  &__base
+    fill: #0b0e13
+
+  &__segment-text
+    fill: #ffffff
+    font-family: vars.$font-title
+    font-size: 0.9rem
+    font-weight: 700
+    letter-spacing: 0.02rem
+
+    &--dark
+      fill: vars.$color-dark
+
+  &__inner-ring
+    fill: none
+    stroke: rgba(255, 255, 255, 0.1)
+    stroke-width: 1
+
+  &__outer-ring
+    fill: none
+    stroke: rgba(var(--service-accent-rgb), 0.5)
+    stroke-width: 3
+
+  &__hub
+    @include mix.flex-center
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 6
+    width: 23%
+    height: 23%
+    padding: 0
+    border: 0
+    border-radius: 50%
+    background: radial-gradient(circle at 35% 30%, #ffe08a, vars.$color-primary)
+    color: vars.$color-dark
+    font-family: vars.$font-title
+    font-size: 1.5rem
+    font-weight: 800
+    cursor: pointer
+    box-shadow: 0 0 0 0.5rem #121016, 0 0 2.6rem rgba(255, 198, 41, 0.55)
+    transform: translate(-50%, -50%)
+
+    &:disabled
+      cursor: default
+
+    @include mix.mobile
+      font-size: 1.2rem
+
+  &__spin-wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1.2rem
+
+  &__spin
+    @include mix.flex-center
+    gap: 1rem
+    min-width: 30rem
+    padding: 1.7rem 4.4rem
+    border: 0
+    border-radius: 1.4rem
+    background: vars.$color-primary
+    color: vars.$color-dark
+    font-family: vars.$font-main
+    font-size: 1.6rem
+    font-weight: 800
+    cursor: pointer
+    box-shadow: 0 0 3.4rem rgba(255, 198, 41, 0.4)
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+
+    &:hover
+      transform: translateY(-0.2rem)
+      box-shadow: 0 0 4rem rgba(255, 198, 41, 0.5)
+
+    @include mix.mobile
+      width: 100%
+      min-width: 0
+      padding: 1.5rem 2.4rem
+
+  &__spin-icon
+    width: 1.9rem
+    height: 1.9rem
+
+  &__attempt
+    display: inline-flex
+    align-items: center
+    gap: 0.7rem
+    color: vars.$color-text-secondary
+    font-size: 1.25rem
+    font-weight: 600
+
+  &__attempt-icon
+    width: 1.4rem
+    height: 1.4rem
+    color: vars.$color-primary
+
+  &__content
+    position: relative
+    z-index: 1
+    min-width: 0
+
+    @include mix.laptop
+      width: 100%
+      max-width: 54rem
+      order: 1
+      text-align: center
+
+    @include mix.mobile
+      max-width: none
+      text-align: left
+
+  &__badge
+    margin-bottom: 2rem
+  &__title
+    margin: 0 0 1.8rem
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 4.2rem
+    font-weight: 800
+    line-height: 1.08
+    text-transform: uppercase
+
+    span
+      color: vars.$color-primary
+
+    @include mix.tablet
+      font-size: 3.6rem
+
+    @include mix.mobile
+      font-size: 2.8rem
+      line-height: 1.08
+
+  &__description
+    max-width: 48rem
+    margin: 0 0 2.6rem
+    color: vars.$color-text-muted
+    font-size: 1.6rem
+    line-height: 1.6
+
+    @include mix.laptop
+      margin-right: auto
+      margin-left: auto
+
+    @include mix.mobile
+      max-width: none
+      margin-right: 0
+      margin-left: 0
+      font-size: 1.4rem
+
+  &__benefits
+    display: flex
+    max-width: 44rem
+    flex-direction: column
+    gap: 1.1rem
+
+    @include mix.laptop
+      margin: 0 auto
+      text-align: left
+
+    @include mix.mobile
+      max-width: none
+      margin: 0
+
+  &__benefit
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    color: #e6e2d8
+    font-size: 1.45rem
+    font-weight: 600
+
+    @include mix.mobile
+      font-size: 1.35rem
+
+    &__benefit-icon
+      @include mix.icon-box(2.4rem, 50%, rgba(var(--service-accent-rgb), 0.18))
+      border: 0.1rem solid rgba(var(--service-accent-rgb), 0.4)
+
+      .icon
+        @include mix.icon-mask(1.4rem, var(--service-accent-light))
+
+  &__available
+    display: inline-flex
+    align-items: center
+    gap: 0.8rem
+    margin-top: 2.4rem
+    padding: 1rem 1.6rem
+    border: 0.1rem solid rgba(255, 255, 255, 0.09)
+    border-radius: 1.2rem
+    background: rgba(255, 255, 255, 0.04)
+    color: vars.$color-text-secondary
+    font-size: 1.3rem
+
+    strong
+      margin: 0 0.3rem
+      color: vars.$color-primary
+
+    @include mix.mobile
+      justify-content: flex-start
+      flex-wrap: wrap
+      width: fit-content
+      text-align: left
+
+  &__available-icon
+    width: 1.5rem
+    height: 1.5rem
+    color: vars.$color-primary
+
+  &__prize-title
+    margin: 0 0 0.8rem
+    color: vars.$color-primary
+    font-family: vars.$font-title
+    font-size: 3.4rem
+    font-weight: 800
+    line-height: 1.1
+
+    @include mix.mobile
+      font-size: 2.8rem
+
+  &__prize-description
+    max-width: 44rem
+    margin: 0 0 2.2rem
+    color: vars.$color-text-muted
+    font-size: 1.5rem
+    line-height: 1.55
+
+    @include mix.laptop
+      margin-right: auto
+      margin-left: auto
+
+    @include mix.mobile
+      margin-right: 0
+      margin-left: 0
+      text-align: left
+
+  &__success
+    max-width: 44rem
+
+    @include mix.laptop
+      margin: 0 auto
+      text-align: left
+
+    @include mix.mobile
+      margin: 0
+
+    h2
+      margin: 0 0 1.2rem
+      color: vars.$color-white
+      font-family: vars.$font-title
+      font-size: 3rem
+      font-weight: 800
+      line-height: 1.1
+
+    p
+      margin: 0 0 2.4rem
+      color: vars.$color-text-muted
+      font-size: 1.55rem
+      line-height: 1.6
+
+      strong
+        color: vars.$color-primary
+
+  &__success-icon
+    @include mix.flex-center
+    width: 6.6rem
+    height: 6.6rem
+    margin-bottom: 2.2rem
+    border-radius: 50%
+    background: rgba(79, 216, 138, 0.15)
+    color: vars.$color-green
+
+    .icon
+      width: 2.4rem
+      height: 2.4rem
+
+  &__success-label
+    display: inline-flex
+    align-items: center
+    gap: 0.9rem
+    padding: 1.2rem 2rem
+    border: 0.1rem solid rgba(79, 216, 138, 0.3)
+    border-radius: 1.1rem
+    background: rgba(79, 216, 138, 0.12)
+    color: vars.$color-green
+    font-size: 1.35rem
+    font-weight: 600
+
+    .icon
+      width: 1.3rem
+      height: 1.3rem

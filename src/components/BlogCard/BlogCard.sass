@@ -1,0 +1,205 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.blog-card
+  display: flex
+  overflow: hidden
+  flex-direction: column
+  height: 100%
+  border: 0.1rem solid rgba(255, 255, 255, 0.08)
+  border-radius: 1.6rem
+  background: vars.$color-surface
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease
+
+  &:hover
+    border-color: rgba(255, 198, 41, 0.22)
+    box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.22)
+    transform: translateY(-0.3rem)
+
+  &__media
+    position: relative
+    overflow: hidden
+    width: 100%
+
+  &__media-link
+    display: block
+    width: 100%
+    height: 100%
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__category
+    position: absolute
+    z-index: 2
+    top: 1.4rem
+    left: 1.4rem
+    display: inline-flex
+    align-items: center
+    padding: 0.7rem 1.2rem
+    border: 0.1rem solid currentColor
+    border-radius: vars.$radius-pill
+    background: rgba(15, 15, 14, 0.74)
+    font-size: 1.05rem
+    font-weight: 800
+    line-height: 1
+    backdrop-filter: blur(0.8rem)
+
+    &--blue
+      color: #5b9bff
+
+    &--green
+      color: vars.$color-green
+
+    &--purple
+      color: #bd8bff
+
+    &--yellow
+      color: vars.$color-primary
+
+    &--red
+      color: #ff7568
+
+  &__content
+    display: flex
+    flex: 1
+    flex-direction: column
+
+  &__meta
+    display: flex
+    align-items: center
+    gap: 0.8rem
+    color: rgba(247, 245, 239, 0.42)
+    font-size: 1.05rem
+    font-weight: 500
+    line-height: 1.4
+
+  &__meta-dot
+    width: 0.35rem
+    height: 0.35rem
+    flex-shrink: 0
+    border-radius: 50%
+    background: rgba(247, 245, 239, 0.3)
+
+  &__title
+    margin: 0
+    font-family: vars.$font-title
+    font-weight: 800
+
+    a
+      color: vars.$color-white
+      text-decoration: none
+
+  &__description
+    margin: 0
+    color: rgba(247, 245, 239, 0.6)
+    font-weight: 400
+
+  &__link
+    display: inline-flex
+    align-items: center
+    gap: 0.7rem
+    width: fit-content
+    margin-top: auto
+    font-size: 1.15rem
+    font-weight: 800
+    text-decoration: none
+
+    &--blue
+      color: #5b9bff
+
+    &--green
+      color: vars.$color-green
+
+    &--purple
+      color: #bd8bff
+
+    &--yellow
+      color: vars.$color-primary
+
+    &--red
+      color: #ff7568
+
+  &__footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 1.6rem
+    margin-top: auto
+
+  &__level
+    flex-shrink: 0
+    font-size: 1.05rem
+    font-weight: 800
+
+    &--basic
+      color: vars.$color-green
+
+    &--intermediate
+      color: vars.$color-primary
+
+    &--advanced
+      color: #ff8066
+
+  &--home
+    .blog-card__media
+      height: 19rem
+
+    .blog-card__content
+      padding: 2.2rem
+
+    .blog-card__meta--top
+      margin-bottom: 1.4rem
+
+    .blog-card__title
+      margin-bottom: 1.4rem
+      font-size: 2rem
+      line-height: 1.15
+
+    .blog-card__description
+      margin-bottom: 2rem
+      font-size: 1.3rem
+      line-height: 1.6
+
+  &--catalog
+    .blog-card__media
+      height: 22.5rem
+      border-bottom: 0.2rem solid vars.$color-primary
+
+    .blog-card__content
+      padding: 2.4rem
+
+    .blog-card__title
+      margin-bottom: 1.6rem
+      font-size: 2rem
+      line-height: 1.16
+
+    .blog-card__description
+      margin-bottom: 2.4rem
+      font-size: 1.3rem
+      line-height: 1.65
+
+    .blog-card__footer
+      padding-top: 1.6rem
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.06)
+
+  @include mix.tablet
+    &--catalog
+      .blog-card__media
+        height: 21rem
+
+  @include mix.mobile
+    &--home,
+    &--catalog
+      .blog-card__media
+        height: auto
+        aspect-ratio: 16 / 9
+
+      .blog-card__content
+        padding: 2rem
+
+      .blog-card__title
+        font-size: 1.8rem

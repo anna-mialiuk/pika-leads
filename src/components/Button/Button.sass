@@ -1,0 +1,71 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  gap: 1rem
+  width: fit-content
+  border: 0
+  border-radius: 1.1rem
+  font-family: vars.$font-main
+  font-weight: 800
+  line-height: 1
+  text-decoration: none
+  white-space: nowrap
+  cursor: pointer
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease
+
+  &--primary
+    background: linear-gradient(135deg, vars.$color-yellow-light, vars.$color-yellow-dark)
+    box-shadow: 0 0.6rem 1.8rem -0.4rem rgba(255, 198, 41, 0.5)
+    color: vars.$color-dark
+
+    &:hover
+      box-shadow: 0 0.8rem 2.8rem -0.2rem rgba(255, 198, 41, 0.7)
+      transform: translateY(-0.2rem)
+
+    &:active
+      transform: translateY(0)
+
+  &--secondary
+    border: 0.2rem solid rgba(255, 255, 255, 0.3)
+    background: transparent
+    color: vars.$color-white
+
+    &:hover
+      border-color: vars.$color-primary
+      background: rgba(255, 198, 41, 0.08)
+
+  // Контурна кнопка-посилання («Дивитися всі →»)
+  &--outline
+    border: 0.1rem solid vars.$color-border-primary
+    background: transparent
+    color: vars.$color-primary
+
+    &:hover
+      border-color: rgba(255, 198, 41, 0.6)
+      background: rgba(255, 198, 41, 0.08)
+
+  &--small
+    padding: 1rem 1.8rem
+    border-radius: 1rem
+    font-size: 1.3rem
+
+  &--large
+    padding: 1.7rem 3rem
+    font-size: 1.6rem
+
+    .button__icon
+      width: 1.6rem
+      height: 1.6rem
+
+  &__icon
+    width: 1.4rem
+    height: 1.4rem
+    transition: transform 0.2s ease
+
+  &:hover
+    .button__icon
+      transform: translateX(0.3rem)

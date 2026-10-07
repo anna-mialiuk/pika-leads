@@ -1,0 +1,168 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.faq
+  position: relative
+  overflow: hidden
+  @include mix.section
+  background: vars.$color-dark
+
+  &::before
+    content: ''
+    position: absolute
+    bottom: -12.8rem
+    left: -12.8rem
+    width: 48rem
+    height: 48rem
+    background: radial-gradient(circle, rgba(255, 198, 41, 0.07), transparent 70%)
+    filter: blur(3.2rem)
+    pointer-events: none
+
+  &::after
+    content: ''
+    position: absolute
+    right: -12.8rem
+    bottom: -12.8rem
+    width: 44.8rem
+    height: 44.8rem
+    background: radial-gradient(circle, rgba(255, 198, 41, 0.05), transparent 70%)
+    pointer-events: none
+
+  &__container
+    @include mix.container
+    position: relative
+    z-index: 1
+    display: grid
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr)
+    align-items: start
+    gap: 5.6rem
+
+    @include mix.laptop
+      grid-template-columns: 1fr
+      gap: 4.8rem
+
+  &__content
+    position: sticky
+    top: 11rem
+    padding-top: 0
+
+    @include mix.laptop
+      position: static
+
+  &__label
+    margin-bottom: 2rem
+  &__title
+    margin: 0
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 4.4rem
+    font-weight: 800
+    line-height: 1.05
+    text-transform: uppercase
+
+    span
+      display: block
+      color: vars.$color-primary
+
+    @include mix.tablet
+      font-size: 4rem
+
+    @include mix.mobile
+      font-size: 3rem
+
+  &__description
+    max-width: 34rem
+    margin: 1.8rem 0 2.8rem
+    color: vars.$color-text-secondary
+    font-size: 1.55rem
+    line-height: 1.6
+
+    @include mix.laptop
+      max-width: 51.2rem
+
+    @include mix.mobile
+      font-size: 1.4rem
+
+  &__cta
+    max-width: 36rem
+    padding: 2.2rem 2.2rem 2.4rem
+    border: 0.1rem solid rgba(255, 198, 41, 0.25)
+    border-radius: 1.6rem
+    background: linear-gradient(
+      145deg,
+      rgba(255, 198, 41, 0.055),
+      rgba(28, 26, 23, 0.7)
+    )
+
+    @include mix.mobile
+      max-width: none
+
+    h3
+      margin: 0 0 0.6rem
+      color: vars.$color-white
+      font-family: vars.$font-main
+      font-size: 1.7rem
+      font-weight: 800
+      line-height: 1.35
+
+    p
+      margin: 0 0 1.6rem
+      color: vars.$color-text-secondary
+      font-family: vars.$font-main
+      font-size: 1.35rem
+      line-height: 1.55
+
+  &__buttons
+    display: flex
+    flex-wrap: wrap
+    gap: 1rem
+
+    @include mix.mobile
+      flex-direction: column
+
+      .button
+        width: 100%
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 1.4rem
+
+.service-page
+  .faq
+    &::before
+      background: radial-gradient(
+        circle,
+        rgba(var(--service-accent-rgb), 0.12),
+        transparent 70%
+      )
+
+    &::after
+      background: radial-gradient(
+        circle,
+        rgba(var(--service-secondary-rgb), 0.08),
+        transparent 70%
+      )
+
+    &__title
+      span
+        color: var(--service-accent-light)
+
+    &__cta
+      border-color: rgba(var(--service-accent-rgb), 0.24)
+      background: radial-gradient(
+        34rem 16rem at 0% 0%,
+        rgba(var(--service-accent-rgb), 0.14),
+        transparent 62%
+      ), #171512
+      box-shadow: 0 0 3.4rem rgba(var(--service-accent-rgb), 0.12)
+
+    &__buttons
+      .button--primary
+        background: var(--service-accent)
+        color: #fff
+        box-shadow: 0 0 2rem rgba(var(--service-accent-rgb), 0.35)
+
+        &:hover
+          background: var(--service-accent)
+          box-shadow: 0 0 2.8rem rgba(var(--service-accent-rgb), 0.5)

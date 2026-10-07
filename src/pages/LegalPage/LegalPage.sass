@@ -1,0 +1,107 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.legal-page
+  background: #121110
+
+  &__hero
+    padding: 11rem 0 0
+    background: #121110
+
+    @include mix.mobile
+      padding-top: 9rem
+
+  // ширина як у тексту документа (blog-article-page__container)
+  &__container
+    width: min(100% - 4rem, 110rem)
+    margin: 0 auto
+
+    @include mix.tablet
+      width: min(100% - 3rem, 110rem)
+
+    @include mix.mobile
+      width: calc(100% - 2rem)
+
+  &__breadcrumbs
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: 0.8rem
+    margin-bottom: 2.4rem
+    color: vars.$color-text-secondary
+    font-size: 1.3rem
+
+    a
+      color: inherit
+      transition: color 0.2s ease
+
+      &:hover
+        color: vars.$color-primary
+
+    strong
+      color: vars.$color-white
+      font-weight: 600
+
+  &__title
+    max-width: 90rem
+    margin: 0
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: clamp(3rem, 5vw, 5.2rem)
+    font-weight: 800
+    line-height: 1.1
+    text-transform: uppercase
+
+  &__meta
+    display: flex
+    flex-wrap: wrap
+    gap: 0.6rem 1rem
+    margin: 2rem 0 0
+    color: vars.$color-text-secondary
+    font-size: 1.4rem
+
+    a
+      color: vars.$color-primary
+
+  &__body
+    a
+      color: vars.$color-primary
+      text-decoration: underline
+      text-decoration-color: rgba(255, 198, 41, 0.4)
+      text-underline-offset: 0.3rem
+
+  &__related
+    margin-top: 4.8rem
+    padding-top: 2.4rem
+    border-top: 0.1rem solid vars.$color-border
+
+    span
+      display: block
+      margin-bottom: 1.4rem
+      color: vars.$color-text-secondary
+      font-size: 1.2rem
+      font-weight: 800
+      letter-spacing: 0.08em
+      text-transform: uppercase
+
+    ul
+      display: flex
+      flex-wrap: wrap
+      gap: 1rem
+      margin: 0
+      padding: 0
+      list-style: none
+
+    a
+      display: inline-flex
+      padding: 1rem 1.6rem
+      border: 0.1rem solid rgba(255, 198, 41, 0.3)
+      border-radius: vars.$radius-pill
+      color: vars.$color-white
+      font-size: 1.4rem
+      font-weight: 600
+      transition: border-color 0.2s ease, background 0.2s ease
+
+      &:hover
+        border-color: vars.$color-primary
+        background: rgba(255, 198, 41, 0.08)

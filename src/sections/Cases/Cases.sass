@@ -1,0 +1,50 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.cases
+  padding: 0 4.8rem 9.6rem
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.06)
+  background: vars.$color-dark
+
+  &__container
+    @include mix.container
+    @include mix.container
+
+  &__badge
+    margin-bottom: 2.4rem
+  &__heading
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    gap: 3.2rem
+    margin-bottom: 3.2rem
+
+  &__title
+    @include mix.section-title
+    @include mix.section-title
+    margin: 0
+
+  &__all
+    flex-shrink: 0
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: 2rem
+
+  @include mix.laptop
+    padding: 6.4rem 3.2rem
+
+    &__list
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+
+  @include mix.tablet
+    &__heading
+      align-items: flex-start
+      flex-direction: column
+
+    &__list
+      grid-template-columns: 1fr
+
+  @include mix.mobile
+    padding: 4.8rem 1.8rem

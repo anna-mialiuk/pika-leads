@@ -1,0 +1,69 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.blog-article-hero
+  padding: 4.8rem 0 0
+  background: vars.$color-dark
+
+  @include mix.laptop
+    padding: 4rem 0 0
+
+  @include mix.mobile
+    padding: 3rem 0 0
+
+  &__container
+    width: min(100% - 4rem, 110rem)
+    margin: 0 auto
+
+    @include mix.tablet
+      width: min(100% - 3rem, 110rem)
+
+    @include mix.mobile
+      width: calc(100% - 2rem)
+
+  &__breadcrumbs
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 1rem
+    margin-bottom: 3rem
+    color: #777167
+    font-size: 1.35rem
+    line-height: 1.4
+
+    a
+      color: #777167
+      text-decoration: none
+      transition: color .2s ease
+
+      &:hover
+        color: #f7f5ef
+
+    span
+      color: #4f4b45
+
+    strong
+      color: #ffc629
+      font-weight: 700
+
+    @include mix.mobile
+      gap: .7rem
+      margin-bottom: 2.2rem
+      font-size: 1.2rem
+
+  &__cover
+    position: relative
+    width: 100%
+    overflow: hidden
+    border: .1rem solid rgba(255, 255, 255, .1)
+    border-radius: 2rem
+    background: #171512
+
+    @include mix.mobile
+      border-radius: 1.4rem
+
+    img
+      display: block
+      width: 100%
+      height: auto
+      object-fit: cover

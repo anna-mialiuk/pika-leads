@@ -1,0 +1,61 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.blog-catalog
+  padding: 1.2rem 4.8rem 9.6rem
+
+  @include mix.laptop-big
+    padding-right: 3rem
+    padding-left: 3rem
+
+  @include mix.tablet
+    padding-right: 1.8rem
+    padding-left: 1.8rem
+
+  @include mix.mobile
+    padding: 1.2rem 1.6rem 6rem
+
+  &__container
+    @include mix.container
+    max-width: 118rem
+
+  &__filters
+    display: grid
+    grid-template-columns: 1.1fr 0.9fr
+    gap: 4rem
+    margin-bottom: 3.2rem
+
+    @include mix.tablet
+      grid-template-columns: 1fr
+      gap: 2.4rem
+
+  &__search
+    position: relative
+    margin-bottom: 2.8rem
+
+  &__search-icon
+    position: absolute
+    top: 50%
+    left: 1.8rem
+    width: 1.8rem
+    height: 1.8rem
+    color: rgba(247, 245, 239, 0.35)
+    transform: translateY(-50%)
+    pointer-events: none
+
+  &__search-input
+    @include mix.form-input(rgba(255, 255, 255, 0.02))
+    padding: 1.5rem 1.8rem 1.5rem 5rem
+    border-radius: 1.4rem
+    font-size: 1.3rem
+
+  &__list
+    @include mix.cards-grid
+
+  &__empty
+    padding: 5rem 2rem
+    border: 0.1rem dashed rgba(255, 255, 255, 0.1)
+    border-radius: 1.6rem
+    color: rgba(247, 245, 239, 0.5)
+    font-size: 1.4rem
+    text-align: center

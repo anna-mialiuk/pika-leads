@@ -1,0 +1,230 @@
+{
+  "id": "capi-setup",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Meta is steadily moving tracking to the server side: ad blockers, browser restrictions and privacy policies are depriving the service of more and more client-side events. The Conversions API is a way to send conversion data directly from your server, bypassing the browser. Let’s go through the setup step by step and look at the errors that take the most time to fix."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "meta-pixel",
+      "text": "Creating a Meta pixel"
+    },
+    {
+      "type": "paragraph",
+      "text": "The pixel tracks user behavior on the website and sends data to Meta’s servers for analytics and ad optimization. If you don’t have a pixel yet, create one in Meta Events Manager — it’s the main tool for the subsequent API integration."
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Link the pixel to the ad account you’ll be running campaigns from",
+        "Make sure the account has access to the pixel — otherwise some tracking features won’t be available",
+        "Check data transfer right away using the “Test Events” feature in Events Manager: there you can see every action the pixel sends from the website"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "access-token",
+      "text": "Getting an access token"
+    },
+    {
+      "type": "paragraph",
+      "text": "The access token is the key your server uses to send events to Meta. Without it, the connection between your server and Meta doesn’t work."
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Open Events Manager and find your pixel",
+        "Click “Set up” and choose Conversions API",
+        "Choose “Access Token” and generate it",
+        "Copy the token and store it somewhere safe — you’ll need it when configuring the server"
+      ]
+    },
+    {
+      "type": "note",
+      "text": "Tokens are usually long-lived, but still check their expiry. And never share the token with anyone: it grants the right to send events to your account."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "server-installation",
+      "text": "Installing the pixel and API on the server"
+    },
+    {
+      "type": "paragraph",
+      "text": "The choice of server depends on your technical level and the scale of the project:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Heroku — a simple option to start with: quick to deploy and doesn’t require deep knowledge",
+        "AWS — more flexibility and scalability, but a higher barrier to entry",
+        "DigitalOcean and other VPSs — for those who already have admin experience"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta provides SDKs for Node.js, PHP and Python — pick the language you’re comfortable with."
+    },
+    {
+      "type": "code",
+      "code": "npm install facebook-nodejs-business-sdk"
+    },
+    {
+      "type": "paragraph",
+      "text": "Example of sending a purchase event from the server:"
+    },
+    {
+      "type": "code",
+      "code": "const bizSdk = require('facebook-nodejs-business-sdk');\n\nconst EventRequest = bizSdk.EventRequest;\nconst ServerEvent = bizSdk.ServerEvent;\n\nconst accessToken = 'YOUR_ACCESS_TOKEN';\nconst pixelId = 'YOUR_PIXEL_ID';\n\nconst event = new ServerEvent()\n  .setEventName('Purchase')\n  .setEventTime(Math.floor(new Date() / 1000))\n  .setUserData({ email: 'user@mail.com' })\n  .setCustomData({ currency: 'USD', value: 55.00 });\n\nconst eventRequest = new EventRequest(\n  accessToken,\n  pixelId\n).setEvents([event]);\n\neventRequest.execute()\n  .then(res => console.log('Event sent:', res))\n  .catch(err => console.error('Send error:', err));"
+    },
+    {
+      "type": "paragraph",
+      "text": "After setup, check data transfer using the “Test Events” feature in Events Manager — you’ll see right away whether data is arriving from your server."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "events-setup",
+      "text": "Setting up events on the website"
+    },
+    {
+      "type": "paragraph",
+      "text": "Events let you track key user actions and optimize campaigns correctly."
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "AddToCart — a product was added to the cart",
+        "InitiateCheckout — checkout was started",
+        "Purchase — a purchase was made",
+        "Lead — the user left their contact details"
+      ]
+    },
+    {
+      "type": "code",
+      "code": "fbq('track', 'AddToCart', {\n  content_ids: ['12345'],\n  content_type: 'product',\n  value: 25.00,\n  currency: 'USD'\n});\n\nfbq('track', 'InitiateCheckout', {\n  content_ids: ['12345'],\n  content_type: 'product',\n  value: 25.00,\n  currency: 'USD'\n});\n\nfbq('track', 'Purchase', {\n  value: 30.00,\n  currency: 'USD'\n});\n\nfbq('track', 'Lead');"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can and should pass dynamic data in events — price, product ID, currency. This makes analytics more accurate and retargeting more effective: audiences of people who added a product to the cart but didn’t buy are built precisely from these events."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "common-problems",
+      "text": "Common problems and how to fix them"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "An invalid or expired access token"
+    },
+    {
+      "type": "paragraph",
+      "text": "The server can’t send events, and the logs show an authorization error. Check whether the token was generated correctly and whether it has expired; if it has, generate a new one and replace it in the code."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Events don’t fire or fire incorrectly"
+    },
+    {
+      "type": "paragraph",
+      "text": "Most often, the code is placed in the wrong spot: the purchase event should be tied to the order confirmation page, not to a button. Check with “Test Events” and the Meta Pixel Helper extension — it shows events in real time."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Delayed or missing events in reports"
+    },
+    {
+      "type": "paragraph",
+      "text": "A delay of up to a few minutes is normal. If there are still no events after a few hours, check the “Event History” section and the request logs between your server and Meta."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "user_data validation errors"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta rejects events with incorrect user data. The email address must be valid, and the phone number must be in the correct format. Personal data should be hashed before sending — it’s a Meta requirement and simply common sense."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Duplicates between the pixel and CAPI"
+    },
+    {
+      "type": "paragraph",
+      "text": "The most common and most expensive mistake. If you send the same event through both the pixel and the API without an identifier, Meta will treat them as two separate events, and all your optimization goes to waste. The solution: pass the same event_id from both sides, and Meta will deduplicate them itself."
+    },
+    {
+      "type": "code",
+      "code": "// Browser\nfbq('track', 'Purchase', {\n  value: 30.00,\n  currency: 'USD'\n}, {\n  eventID: 'unique_event_id_123'\n});\n\n// Server\nconst event = new ServerEvent()\n  .setEventName('Purchase')\n  .setEventId('unique_event_id_123')\n  .setEventTime(Math.floor(new Date() / 1000));"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Ad blockers"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some users block the pixel on the client — events simply don’t arrive. This is exactly the problem CAPI solves: blockers can’t see server events. But don’t switch off the pixel — the “pixel + API” combination gives you the most complete data."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Integrations with e-commerce platforms"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify, WooCommerce and similar platforms set up events via plugins, and these integrations often work intermittently. Check the plugin version and exactly how it builds events — sometimes it’s easier to write your own code than to fix someone else’s."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Server environment configuration"
+    },
+    {
+      "type": "paragraph",
+      "text": "Request timeouts, lack of network access, SSL issues — all of these get in the way of sending. On AWS and Heroku, check request limits separately."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Network errors and API unavailability"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sometimes Meta’s API is temporarily unavailable. Implement retry logic: the server should resend on a network error. And log every error — without logs, you won’t see that you’re losing conversions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "conclusion",
+      "text": "Conclusion"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Check your access tokens and the correctness of the data you send",
+        "Use Meta’s testing tools: Pixel Helper and “Test Events”",
+        "Always set up deduplication by event_id when integrating the pixel and CAPI",
+        "Set up retry logic and logging on the server"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The “pixel + Conversions API” combination with correct deduplication isn’t optional today — it’s a basic requirement for any revenue-generating project. You set it up once, and optimization quality noticeably improves."
+    }
+  ]
+}

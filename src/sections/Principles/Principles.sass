@@ -1,0 +1,50 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.principles
+  position: relative
+  overflow: hidden
+  @include mix.section
+  background: vars.$color-dark
+
+  &::before
+    content: ''
+    position: absolute
+    top: 6.4rem
+    left: -9.6rem
+    width: 44.8rem
+    height: 44.8rem
+    background: radial-gradient(circle, rgba(255, 198, 41, 0.06), transparent 70%)
+    filter: blur(3.2rem)
+    pointer-events: none
+
+  &__container
+    @include mix.container
+    @include mix.container
+    position: relative
+    z-index: 1
+
+  &__label
+    margin-bottom: 2.4rem
+  &__title
+    @include mix.section-title
+    @include mix.section-title
+    display: flex
+    flex-direction: column
+    width: fit-content
+    margin: 0 0 4.8rem
+    text-transform: uppercase
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 2rem
+
+  @include mix.tablet
+    &__list
+      grid-template-columns: 1fr
+
+  @include mix.mobile
+
+    &__title
+      margin-bottom: 3.2rem

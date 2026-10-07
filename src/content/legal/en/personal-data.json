@@ -1,0 +1,128 @@
+{
+  "id": "personal-data",
+  "title": "Personal Data Protection",
+  "description": "The organizational and technical measures Pikaleads applies to protect the personal data of clients, their leads and employees.",
+  "updatedAt": "2026-07-05",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "This document describes the organizational and technical measures the Pikaleads agency applies to protect the personal data of clients, their leads and employees. Because Pikaleads uses its own CRM system to receive and process leads, we pay particular attention to data security at every stage of its lifecycle. This document supplements the <a href=\"/privacy-policy\">Privacy Policy</a> and serves as its practical annex."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-1",
+      "text": "1. Data processing principles"
+    },
+    {
+      "type": "paragraph",
+      "text": "Our work with personal data is based on the principles of lawfulness and fairness; purpose limitation (data is collected for specific, predefined purposes); data minimization (only the necessary amount of data is collected); accuracy and currency; storage limitation (data is kept no longer than necessary); integrity and confidentiality; and the Operator’s accountability for compliance with these principles."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-2",
+      "text": "2. Pikaleads’ role: controller and processor"
+    },
+    {
+      "type": "paragraph",
+      "text": "For data of Website visitors and its own clients, Pikaleads acts as the controller (it independently determines the purposes and means of processing). For leads received while providing services to a client, Pikaleads may act as a processor acting on behalf of and in the interests of the client, who is the controller of such data. The division of roles and the parties’ obligations are set out in the contract and the data processing agreement."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-3",
+      "text": "3. Data in the CRM system"
+    },
+    {
+      "type": "paragraph",
+      "text": "Leads coming from advertising platforms, forms and messengers are collected in the Pikaleads CRM. The following measures apply to this data:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Role-based access control (RBAC):</strong> employees have access only to the data and functions they need to perform their duties (principle of least privilege);",
+        "<strong>Authentication and 2FA:</strong> access to the system is protected by a password and two-factor authentication; passwords are stored as irreversible hashes;",
+        "<strong>Activity logging:</strong> the system keeps a history of changes — who viewed, edited or exported data and when;",
+        "<strong>Project separation:</strong> data of different clients is logically separated, and access is granted only to authorized project members;",
+        "<strong>Export control:</strong> data exports are restricted by role and recorded in the log."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-4",
+      "text": "4. Technical security measures"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "encryption of data in transit via HTTPS/TLS;",
+        "hosting infrastructure with reliable providers in certified data centers;",
+        "regular backups and testing of data recovery;",
+        "timely software updates and fixing of vulnerabilities;",
+        "protection against unauthorized access, network firewalls and monitoring of suspicious activity;",
+        "anonymization and aggregation of data where identifying a specific person is not required (for example, in analytics)."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-5",
+      "text": "5. Organizational measures"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "non-disclosure agreements (NDAs) for employees and contractors with access to data;",
+        "internal policies and training on handling personal data;",
+        "periodic review of access rights and revocation of access when cooperation ends;",
+        "appointment of a person responsible for organizing data processing and protection;",
+        "oversight of engaged processors and inclusion of data protection terms in contracts."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-6",
+      "text": "6. Retention and deletion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Data is kept for the periods required for the purposes of processing and provided for by the contract and the law. Once the purposes are achieved or upon a justified request from the data subject, the information is deleted or anonymized. When a contract with a client is terminated, lead data processed on the client’s behalf is transferred to the client and/or deleted from Pikaleads’ systems as agreed."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-7",
+      "text": "7. Incident response"
+    },
+    {
+      "type": "paragraph",
+      "text": "If a security incident (a leak or unauthorized access) is detected, the Operator takes measures to contain and remedy its consequences, assesses the risks to data subjects and, without undue delay, notifies the affected persons and — where necessary — the competent authorities in the manner prescribed by law."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-8",
+      "text": "8. Data subject rights and requests"
+    },
+    {
+      "type": "paragraph",
+      "text": "Data subjects may request access to, correction, deletion and restriction of processing of their data, and may withdraw consent. Requests should be sent to <a href=\"mailto:info@pika-leads.com\">info@pika-leads.com</a>. If we process the data as a processor on behalf of a client, we forward the request to the relevant client-controller and assist in fulfilling it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-9",
+      "text": "9. Contacts"
+    },
+    {
+      "type": "paragraph",
+      "text": "For questions about personal data protection, contact the Operator: individual entrepreneur Roman Mykolaiovych Hrybuk, 12 Mlynivska St, Rivne, e-mail <a href=\"mailto:info@pika-leads.com\">info@pika-leads.com</a>, tel. <a href=\"tel:+380992377117\">+38 099 23 77 117</a>. Related documents: <a href=\"/privacy-policy\">Privacy Policy</a>, <a href=\"/cookies-policy\">Cookie Policy</a>."
+    }
+  ]
+}

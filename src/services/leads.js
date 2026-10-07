@@ -1,0 +1,104 @@
+/**
+ * Єдина відправка заявок з усіх форм сайту.
+ *
+ * Куди: VITE_LEADS_ENDPOINT (.env) — POST JSON. Поки змінна не задана,
+ * заявки лише виводяться в консоль у dev-режимі (на продакшені — нікуди).
+ *
+ * Що надсилається:
+ *   type        — consultation | audit | question | bonus | callback | chat-message | chat-callback
+ *   source      — звідки відкрили форму (hero, header, case, blog, chat…)
+ *   data        — поля форми (name, phone, phone_full, telegram, niche, message…)
+ *   lang, page, title, referrer
+ *   attribution — utm_*, gclid, fbclid, ttclid і сторінка входу (перший візит у сесії)
+ *   createdAt
+ * Після успіху в dataLayer пушиться подія lead_submit — для GTM / GA4 / пікселів.
+ */
+const ENDPOINT = import.meta.env.VITE_LEADS_ENDPOINT;
+const ATTRIBUTION_KEY = "pika-attribution";
+const TRACKED_PARAMS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_content",
+  "utm_term",
+  "gclid",
+  "fbclid",
+  "ttclid",
+];
+
+const readStorage = () => {
+  try {
+    return JSON.parse(sessionStorage.getItem(ATTRIBUTION_KEY)) ?? null;
+  } catch {
+    return null;
+  }
+};
+
+/** Запам'ятовує UTM-мітки та сторінку входу (викликається один раз при старті) */
+export function captureAttribution() {
+  if (typeof window === "undefined" || readStorage()) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const attribution = {
+    landingPage: window.location.pathname + window.location.search,
+    referrer: document.referrer || null,
+  };
+
+  TRACKED_PARAMS.forEach((key) => {
+    const value = params.get(key);
+    if (value) attribution[key] = value;
+  });
+
+  try {
+    sessionStorage.setItem(ATTRIBUTION_KEY, JSON.stringify(attribution));
+  } catch {
+    /* приватний режим — працюємо без збереження */
+  }
+}
+
+/** Поля форми → об'єкт; кілька значень з одним name (чекбокси) → масив */
+export function formToObject(form) {
+  const data = {};
+
+  new FormData(form).forEach((value, key) => {
+    if (key in data) data[key] = [].concat(data[key], value);
+    else data[key] = value;
+  });
+
+  return data;
+}
+
+export async function sendLead({ type, source = "", data = {} }) {
+  const payload = {
+    type,
+    source,
+    data,
+    lang: document.documentElement.lang,
+    page: window.location.pathname,
+    title: document.title,
+    attribution: readStorage(),
+    createdAt: new Date().toISOString(),
+  };
+
+  if (ENDPOINT) {
+    const response = await fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok)
+      throw new Error(`Lead request failed: ${response.status}`);
+  } else if (import.meta.env.DEV) {
+    console.info("[lead] VITE_LEADS_ENDPOINT не задано, заявка:", payload);
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "lead_submit",
+    lead_type: type,
+    lead_source: source,
+  });
+
+  return payload;
+}

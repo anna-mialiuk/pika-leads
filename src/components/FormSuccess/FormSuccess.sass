@@ -1,0 +1,37 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.form-success
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  width: 100%
+  min-height: 27rem
+  padding: 4rem
+  text-align: center
+
+  &__title
+    margin: 0
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 3.6rem
+    font-weight: 800
+    line-height: 1.1
+
+  &__text
+    max-width: 70rem
+    margin: 2rem 0 0
+    color: rgba(247, 245, 239, 0.62)
+    font-size: 1.8rem
+    line-height: 1.6
+
+  @include mix.mobile
+    min-height: 22rem
+    padding: 3rem 2rem
+
+    &__title
+      font-size: 2.8rem
+
+    &__text
+      font-size: 1.5rem

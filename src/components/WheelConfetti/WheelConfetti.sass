@@ -1,0 +1,38 @@
+.wheel-confetti
+  position: absolute
+  inset: 0
+  z-index: 40
+  overflow: hidden
+  pointer-events: none
+
+  &__piece
+    position: absolute
+    top: -1.6rem
+    opacity: 1
+    will-change: transform, opacity
+    animation-timing-function: cubic-bezier(.2, .6, .5, 1)
+    animation-fill-mode: forwards
+
+    &--left
+      animation-name: wheel-confetti-left
+
+    &--right
+      animation-name: wheel-confetti-right
+
+@keyframes wheel-confetti-left
+  from
+    transform: translate(0, 0) rotate(0)
+    opacity: 1
+
+  to
+    transform: translate(-7rem, 56rem) rotate(-660deg)
+    opacity: 0
+
+@keyframes wheel-confetti-right
+  from
+    transform: translate(0, 0) rotate(0)
+    opacity: 1
+
+  to
+    transform: translate(7rem, 56rem) rotate(680deg)
+    opacity: 0

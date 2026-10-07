@@ -1,0 +1,37 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.blog-article-page
+  min-height: 100vh
+  background: #121110
+
+  &__article
+    padding: 4rem 0 0
+    background: #121110
+
+    @include mix.mobile
+      padding: 3rem 0 0
+
+  &__container
+    display: grid
+    width: min(100% - 4rem, 110rem)
+    grid-template-columns: minmax(0, 1fr) 28rem
+    align-items: stretch
+    gap: 5rem
+    margin: 0 auto
+
+    @include mix.laptop
+      grid-template-columns: minmax(0, 1fr) 24rem
+      gap: 4rem
+
+    @include mix.tablet
+      width: min(100% - 3rem, 110rem)
+      grid-template-columns: minmax(0, 1fr)
+      gap: 0
+
+    @include mix.mobile
+      width: calc(100% - 2rem)
+
+  &__content
+    min-width: 0
+    width: 100%

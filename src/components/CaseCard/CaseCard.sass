@@ -1,0 +1,208 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.case-card
+  display: flex
+  flex-direction: column
+  @include mix.card
+  height: 100%
+  background: vars.$color-surface
+  cursor: pointer
+
+  &:hover
+    border-color: rgba(255, 198, 41, 0.22)
+    box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.28)
+    transform: translateY(-0.4rem)
+
+  &--featured
+    border-color: rgba(255, 198, 41, 0.32)
+
+  &__media
+    position: relative
+    overflow: hidden
+    height: 18.4rem
+
+    &::after
+      content: ''
+      position: absolute
+      z-index: 1
+      inset: 0
+      background: linear-gradient(rgba(18, 16, 13, 0.5) 0%, rgba(18, 16, 13, 0.05) 42%, rgba(28, 26, 23, 0.92) 100%)
+      pointer-events: none
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__category
+    position: absolute
+    z-index: 2
+    top: 1.4rem
+    left: 1.4rem
+    padding: 0.7rem 1.2rem
+    border: 0.1rem solid color-mix(in srgb, var(--case-category-color, #{vars.$color-primary}) 45%, transparent)
+    border-radius: vars.$radius-pill
+    background: rgba(18, 17, 16, 0.84)
+    color: var(--case-category-color, vars.$color-primary)
+    font-size: 1.1rem
+    font-weight: 800
+    backdrop-filter: blur(0.8rem)
+
+  &__number
+    position: absolute
+    z-index: 2
+    top: 1.4rem
+    right: 1.4rem
+    color: rgba(247, 245, 239, 0.45)
+    font-family: vars.$font-title
+    font-size: 1.1rem
+    font-weight: 800
+    line-height: 1
+
+  &__platform
+    position: absolute
+    z-index: 2
+    bottom: 1.4rem
+    left: 1.4rem
+    display: inline-flex
+    align-items: center
+    gap: 0.6rem
+    padding: 0.6rem 1.2rem
+    border-radius: vars.$radius-pill
+    font-size: 1.1rem
+    font-weight: 800
+    line-height: 1
+    backdrop-filter: blur(0.8rem)
+
+    &--meta
+      border: 0.1rem solid rgba(8, 102, 255, 0.42)
+      background: rgba(8, 102, 255, 0.14)
+      color: rgb(8, 102, 255)
+
+    &--google
+      border: 0.1rem solid rgba(91, 155, 255, 0.42)
+      background: rgba(91, 155, 255, 0.14)
+      color: #5b9bff
+
+  &__content
+    display: flex
+    flex: 1
+    flex-direction: column
+    padding: 2.4rem
+
+  &__kicker
+    overflow: hidden
+    margin-bottom: 0.8rem
+    color: vars.$color-primary
+    font-size: 1.05rem
+    font-weight: 800
+    line-height: 1.4
+    letter-spacing: 0.05em
+    text-overflow: ellipsis
+    text-transform: uppercase
+    white-space: nowrap
+
+  &__title
+    @include mix.card-title
+    margin: 0 0 2.4rem
+
+  &__description
+    @include mix.card-text
+    min-height: 7.2rem
+    margin: 0 0 2rem
+
+  &__metrics
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 1rem
+    margin-bottom: 1.6rem
+
+  &__metric
+    min-height: 8.4rem
+    padding: 1.2rem
+    border: 0.1rem solid rgba(255, 255, 255, 0.055)
+    border-radius: 1.2rem
+    background: rgba(18, 17, 16, 0.72)
+
+    &--accent
+      border-color: rgba(255, 198, 41, 0.22)
+      background: rgba(255, 198, 41, 0.07)
+
+  &__metric-label
+    display: block
+    margin-bottom: 0.6rem
+    color: #847e72
+    font-size: 1rem
+    font-weight: 600
+    text-transform: uppercase
+
+    &--accent
+      color: rgba(255, 198, 41, 0.7)
+
+  &__metric-value
+    display: block
+    min-width: 0
+    overflow-wrap: break-word
+    font-family: vars.$font-title
+    font-size: 1.7rem
+    font-weight: 800
+    line-height: 1.15
+
+    &--white
+      color: vars.$color-white
+
+    &--green
+      color: vars.$color-green
+
+    &--blue
+      color: #5b9bff
+
+    &--yellow
+      color: vars.$color-primary
+
+  &__link
+    display: inline-flex
+    align-items: center
+    gap: 0.8rem
+    width: fit-content
+    margin-top: auto
+    padding: 0
+    border: 0
+    background: transparent
+    color: vars.$color-primary
+    font-size: 1.2rem
+    font-weight: 800
+    transition: gap 0.2s ease, color 0.2s ease
+
+    &:hover
+      gap: 1.1rem
+      color: vars.$color-primary
+
+  @include mix.tablet
+    &__content
+      padding: 2rem
+
+    &__media
+      height: 17rem
+
+  @include mix.mobile
+    &__content
+      padding: 1.8rem
+
+    &__title
+      margin-bottom: 1.8rem
+
+    &__description
+      min-height: 0
+
+    &__metrics
+      gap: 0.8rem
+
+    &__metric
+      min-height: 7.6rem
+      padding: 1rem
+
+    &__metric-value
+      font-size: 1.5rem

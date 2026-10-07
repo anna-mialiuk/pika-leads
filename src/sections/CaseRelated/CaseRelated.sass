@@ -1,0 +1,293 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.case-related
+  overflow: hidden
+  padding: 6rem 0 7rem
+  background: #0f0f0f
+
+  @include mix.tablet
+    padding: 5rem 0 6rem
+
+  @include mix.mobile
+    padding: 4rem 0 5rem
+
+  &__container
+    width: min(100% - 4rem, 110rem)
+    margin: 0 auto
+
+    @include mix.tablet
+      width: min(100% - 3rem, 110rem)
+
+    @include mix.mobile
+      width: calc(100% - 2rem)
+
+  &__header
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    gap: 3rem
+    margin-bottom: 3rem
+
+    @include mix.mobile
+      align-items: center
+      gap: 1.5rem
+      margin-bottom: 2.5rem
+
+  &__heading
+    min-width: 0
+
+  &__kicker
+    display: block
+    margin-bottom: 1.2rem
+    color: #ffc629
+    font-size: 1.3rem
+    font-weight: 800
+    line-height: 1.2
+    letter-spacing: .12rem
+
+    @include mix.mobile
+      margin-bottom: .8rem
+      font-size: 1.05rem
+
+  &__title
+    margin: 0
+    color: #f7f5ef
+    font-family: vars.$font-title
+    font-size: 3.4rem
+    font-weight: 800
+    line-height: 1.1
+    letter-spacing: -.04rem
+
+    @include mix.tablet
+      font-size: 3rem
+
+    @include mix.mobile
+      font-size: 2.3rem
+
+  &__navigation
+    display: flex
+    flex: 0 0 auto
+    gap: 1rem
+
+    @include mix.mobile
+      gap: .7rem
+
+  &__arrow
+    display: flex
+    width: 5.6rem
+    height: 5.6rem
+    align-items: center
+    justify-content: center
+    padding: 0
+    border: .1rem solid rgba(255, 255, 255, .15)
+    border-radius: 1.5rem
+    background: transparent
+    color: #ffc629
+    font-family: inherit
+    font-size: 3.2rem
+    line-height: 1
+    cursor: pointer
+    transition: background .2s ease, border-color .2s ease, transform .2s ease
+
+    @include mix.tablet
+      width: 5rem
+      height: 5rem
+
+    @include mix.mobile
+      width: 4.2rem
+      height: 4.2rem
+      border-radius: 1.2rem
+      font-size: 2.5rem
+
+    &:hover
+      border-color: rgba(255, 198, 41, .6)
+      background: rgba(255, 198, 41, .06)
+      transform: translateY(-.2rem)
+
+  &__slider
+    display: flex
+    gap: 2.4rem
+    overflow-x: auto
+    overflow-y: hidden
+    scroll-behavior: smooth
+    scroll-snap-type: x mandatory
+    scrollbar-width: none
+    -ms-overflow-style: none
+
+    @include mix.tablet
+      gap: 2rem
+
+    @include mix.mobile
+      gap: 1.4rem
+
+    &::-webkit-scrollbar
+      display: none
+
+  &__card
+    display: flex
+    width: calc((100% - 4.8rem) / 3)
+    min-width: calc((100% - 4.8rem) / 3)
+    flex-direction: column
+    overflow: hidden
+    border: .1rem solid rgba(255, 255, 255, .12)
+    border-radius: 2rem
+    background: #191816
+    scroll-snap-align: start
+
+    @include mix.tablet
+      width: calc((100% - 2rem) / 2)
+      min-width: calc((100% - 2rem) / 2)
+
+    @include mix.mobile
+      width: 85%
+      min-width: 85%
+      border-radius: 1.6rem
+
+  &__image-wrapper
+    position: relative
+    display: block
+    height: 20rem
+    overflow: hidden
+    background: #090909
+
+    @include mix.tablet
+      height: 19rem
+
+    @include mix.mobile
+      height: 18rem
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform .35s ease
+
+    .case-related__card:hover &
+      transform: scale(1.025)
+
+  &__platform
+    position: absolute
+    bottom: 1.5rem
+    left: 1.5rem
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    padding: .7rem 1.4rem
+    border: .1rem solid #1877f2
+    border-radius: 2rem
+    background: rgba(24, 119, 242, .14)
+    color: #1877f2
+    font-size: 1.2rem
+    font-weight: 700
+
+    @include mix.mobile
+      bottom: 1rem
+      left: 1rem
+      padding: .6rem 1.1rem
+      font-size: 1.05rem
+
+  &__content
+    display: flex
+    flex: 1
+    flex-direction: column
+    padding: 2rem
+
+    @include mix.mobile
+      padding: 1.8rem
+
+  &__category
+    display: block
+    margin-bottom: 1.2rem
+    font-size: 1.2rem
+    font-weight: 800
+    line-height: 1.2
+    text-transform: uppercase
+
+    @include mix.mobile
+      margin-bottom: 1rem
+      font-size: 1.05rem
+
+  &__card-title
+    margin: 0 0 1.4rem
+    font-family: vars.$font-title
+    font-size: 2rem
+    font-weight: 800
+    line-height: 1.2
+
+    @include mix.mobile
+      font-size: 1.8rem
+
+    a
+      color: #f7f5ef
+      text-decoration: none
+
+  &__description
+    display: -webkit-box
+    overflow: hidden
+    margin: 0 0 2rem
+    color: #99958f
+    font-size: 1.4rem
+    line-height: 1.55
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 3
+
+    @include mix.mobile
+      font-size: 1.3rem
+
+  &__footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 2rem
+    margin-top: auto
+    padding-top: 1.6rem
+    border-top: .1rem solid rgba(255, 255, 255, .1)
+
+  &__metric
+    color: #77736d
+    font-size: 1.3rem
+    font-weight: 700
+
+  &__link
+    display: flex
+    align-items: center
+    gap: .6rem
+    color: #ffc629
+    font-size: 1.3rem
+    font-weight: 800
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  &__all
+    display: inline-flex
+    min-height: 5.6rem
+    align-items: center
+    justify-content: center
+    gap: 1.2rem
+    margin-top: 4rem
+    padding: 0 2.5rem
+    border: .1rem solid rgba(255, 255, 255, .16)
+    border-radius: 1.4rem
+    color: #f7f5ef
+    font-size: 1.4rem
+    font-weight: 700
+    text-decoration: none
+    transition: border-color .2s ease, background .2s ease
+
+    @include mix.mobile
+      width: 100%
+      min-height: 5.2rem
+      margin-top: 3rem
+      font-size: 1.3rem
+
+    span
+      color: #ffc629
+      font-size: 2rem
+
+    &:hover
+      border-color: rgba(255, 198, 41, .5)
+      background: rgba(255, 198, 41, .04)

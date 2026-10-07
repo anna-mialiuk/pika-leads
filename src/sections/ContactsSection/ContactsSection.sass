@@ -1,0 +1,117 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.contacts-section
+  padding: 4.8rem 4.8rem 8rem
+  background: vars.$color-dark
+
+  @include mix.laptop-big
+    padding-right: 3rem
+    padding-left: 3rem
+
+  @include mix.tablet
+    padding: 4rem 1.8rem 6rem
+
+  @include mix.mobile
+    padding: 3.2rem 1.6rem 5rem
+
+  &__container
+    display: grid
+    grid-template-columns: minmax(0, 1fr) minmax(48rem, 62rem)
+    gap: 7rem
+    width: 100%
+    max-width: 136rem
+    margin: 0 auto
+
+    @include mix.laptop
+      grid-template-columns: minmax(0, 1fr) minmax(42rem, 54rem)
+      gap: 4rem
+
+    @include mix.tablet
+      grid-template-columns: 1fr
+
+  &__info
+    padding-top: 0.8rem
+
+  &__title
+    margin: 0
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 4.8rem
+    font-weight: 900
+    line-height: 1
+    letter-spacing: -0.03em
+
+    @include mix.mobile
+      font-size: 3.4rem
+
+  &__description
+    max-width: 53rem
+    margin: 3.2rem 0 0
+    color: rgba(247, 245, 239, 0.7)
+    font-size: 1.6rem
+    line-height: 1.7
+
+    @include mix.mobile
+      margin-top: 2.4rem
+      font-size: 1.4rem
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 1.6rem
+    margin-top: 4.2rem
+
+  &__contact
+    display: flex
+    flex-wrap: wrap
+    gap: 0.5rem
+    font-size: 1.45rem
+    line-height: 1.5
+
+    span
+      color: rgba(247, 245, 239, 0.58)
+
+    a,
+    p
+      margin: 0
+      color: vars.$color-white
+      font-weight: 500
+      text-decoration: none
+
+    a
+      transition: color 0.2s ease
+
+      &:hover
+        color: vars.$color-primary
+
+  &__socials
+    display: flex
+    flex-wrap: wrap
+    gap: 1.1rem
+    margin-top: 3rem
+
+  &__social
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 4.2rem
+    height: 4.2rem
+    border: 0.1rem solid rgba(255, 255, 255, 0.1)
+    border-radius: 1rem
+    background: rgba(255, 255, 255, 0.04)
+    color: vars.$color-white
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease
+
+    &:hover
+      border-color: rgba(255, 198, 41, 0.4)
+      background: rgba(255, 198, 41, 0.08)
+      transform: translateY(-0.2rem)
+
+  &__social-icon
+    width: 1.9rem
+    height: 1.9rem
+
+    @include mix.mobile
+      width: 1.8rem
+      height: 1.8rem

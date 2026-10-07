@@ -1,0 +1,98 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.feature-card
+  position: relative
+  @include mix.card
+  padding: 2.8rem 2.4rem
+  background: rgba(28, 26, 23, 0.72)
+
+  &::before
+    content: ''
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    width: 32rem
+    height: 18rem
+    background: radial-gradient(32rem 18rem at 15% 0%, rgba(var(--accent-rgb), 0.133), transparent 65%)
+    pointer-events: none
+
+  @include mix.accent-modifiers
+
+  &:hover
+    border-color: rgba(255, 255, 255, 0.14)
+    box-shadow: 0 1.4rem 3.2rem rgba(0, 0, 0, 0.35)
+    transform: translateY(-0.4rem)
+
+  &__icon
+    position: relative
+    z-index: 1
+    @include mix.flex-center
+    width: 4.6rem
+    height: 4.6rem
+    min-width: 4.6rem
+    min-height: 4.6rem
+    margin-bottom: 1.8rem
+    border-radius: 1.2rem
+    background: rgba(var(--accent-rgb), 0.165)
+
+    .icon
+      width: 2.2rem
+      height: 2.2rem
+      color: var(--accent)
+
+  &__value
+    position: relative
+    z-index: 1
+    display: block
+    margin: 0 0 2.4rem
+    font-family: vars.$font-title
+    font-size: 5.2rem
+    font-weight: 900
+    color: var(--accent)
+    line-height: 1
+    white-space: nowrap
+
+  &__title
+    @include mix.card-title
+    position: relative
+    z-index: 1
+    margin: 0 0 1rem
+
+  &__text
+    @include mix.card-text
+    position: relative
+    z-index: 1
+    margin: 0
+
+  &--metric
+    padding: 2.8rem 2.4rem
+
+    .feature-card__icon
+      width: 4.6rem
+      height: 4.6rem
+      min-width: 4.6rem
+      min-height: 4.6rem
+      margin-bottom: 1.6rem
+      border-radius: 1.2rem
+
+      .icon
+        width: 2.2rem
+        height: 2.2rem
+
+    .feature-card__value
+      margin-bottom: 1.2rem
+      font-size: 3.6rem
+      font-weight: 900
+
+  @include mix.tablet
+    &--metric
+      padding: 2.8rem 2.4rem
+
+    &__value
+      font-size: 4.2rem
+
+    &--metric
+      .feature-card__value
+        font-size: 3.2rem

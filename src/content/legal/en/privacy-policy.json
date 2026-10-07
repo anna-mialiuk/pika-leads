@@ -1,0 +1,237 @@
+{
+  "id": "privacy-policy",
+  "title": "Privacy Policy",
+  "description": "How the Pikaleads agency collects, processes, stores and protects the personal data of website users and clients.",
+  "updatedAt": "2026-07-05",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "This Privacy Policy (the “Policy”) sets out how we collect, process, store, use and protect the personal data of individuals (the “User”, “data subject”) who interact with the pika-leads.com website (the “Website”), submit requests, contact support or use the services of the Pikaleads agency."
+    },
+    {
+      "type": "paragraph",
+      "text": "The personal data controller is individual entrepreneur Roman Mykolaiovych Hrybuk (“Pikaleads”, the “Operator”, “we”), place of business: 12 Mlynivska St, Rivne; contact e-mail: <a href=\"mailto:info@pika-leads.com\">info@pika-leads.com</a>; phone: <a href=\"tel:+380992377117\">+38 099 23 77 117</a>."
+    },
+    {
+      "type": "paragraph",
+      "text": "By submitting data on the Website, sending a request or entering into a contract, the User confirms that they have read this Policy, understand its terms and consent to the processing of their personal data on the terms set out below. If the User does not agree with the Policy, they should refrain from using the Website and providing their data."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-1",
+      "text": "1. Terms and definitions"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Personal data</strong> — any information relating to an identified or identifiable natural person."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Processing</strong> — any operation or set of operations performed on personal data: collection, recording, organization, accumulation, storage, adaptation, use, disclosure, anonymization, restriction and erasure."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Operator</strong> — a person who, alone or jointly with others, organizes and carries out the processing of personal data and determines the purposes and means of processing."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>Cookies</strong> — small text files stored by the User’s browser that make it possible to recognize the device and remember actions and preferences."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-2",
+      "text": "2. Categories of data processed"
+    },
+    {
+      "type": "paragraph",
+      "text": "Depending on how the User interacts with the Website and services, we may process the following categories of data:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Identification and contact data:</strong> first and last name, phone number, e-mail address, Telegram/WhatsApp/Viber username, company name and job title.",
+        "<strong>Request data:</strong> business niche, budget, task, the content of messages and correspondence, and any other information the User provides voluntarily.",
+        "<strong>Contract and payment data:</strong> invoicing details, information about services provided and payments made (without storing full bank card details).",
+        "<strong>Technical data:</strong> IP address, browser type and version, operating system, device type, language, traffic source (UTM tags, referrer), pages viewed, actions on the Website, date and time of the visit.",
+        "<strong>Advertising identifiers:</strong> cookies and advertising platform identifiers used for analytics and retargeting (see the <a href=\"/cookies-policy\">Cookie Policy</a> for details)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "We do not collect special categories of data (health, religious or political beliefs, biometrics) and ask Users not to submit such information through the Website’s forms."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-3",
+      "text": "3. Legal bases for processing"
+    },
+    {
+      "type": "paragraph",
+      "text": "Personal data is processed on one or more of the following grounds: (a) the data subject’s consent, given by filling in a form or otherwise voluntarily providing data; (b) the need to perform a contract to which the data subject is a party, or to take steps prior to entering into it; (c) compliance with the Operator’s legal obligations; (d) the Operator’s legitimate interests (analytics, security, service development), provided they do not override the rights and freedoms of the data subject."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-4",
+      "text": "4. Purposes of processing"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "handling and reviewing requests, and getting back to the User via their chosen channel;",
+        "concluding and performing contracts for marketing services, invoicing and settlements;",
+        "providing, supporting and improving services, and advising clients;",
+        "maintaining the client database in the Operator’s own CRM system and managing communication;",
+        "analyzing website traffic and the effectiveness of advertising campaigns, and optimizing the Website and marketing;",
+        "sending service and informational messages and, with separate consent, marketing communications;",
+        "ensuring the security of the Website and preventing fraud and abuse;",
+        "complying with legal requirements."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-5",
+      "text": "5. Cookies and tracking technologies"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Website uses cookies and similar technologies to function properly, analyze behavior and show relevant advertising. The cookies used, their purposes and how to manage them are described in detail in a separate <a href=\"/cookies-policy\">Cookie Policy</a>. The User can restrict or disable cookies in their browser settings; in that case, some Website features may not work correctly."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-6",
+      "text": "6. Disclosure to third parties"
+    },
+    {
+      "type": "paragraph",
+      "text": "We do not sell personal data. Data is disclosed to third parties only to the extent necessary to achieve the stated purposes and under contracts that ensure confidentiality. Recipients may include:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Advertising and analytics platforms:</strong> Meta Platforms (Facebook, Instagram), Google (Ads, Analytics), TikTok, LinkedIn — in the form of anonymized or hashed data for setting up and measuring advertising;",
+        "<strong>Infrastructure providers:</strong> hosting, cloud services, e-mail and telephony services that support the Website and CRM;",
+        "<strong>The Operator’s contractors and specialists</strong> involved in providing services — within the scope of their tasks and non-disclosure obligations;",
+        "<strong>Public authorities</strong> — in the cases and manner expressly provided for by law."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-7",
+      "text": "7. Cross-border data transfers"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some services (advertising platforms, cloud providers) may process data on servers located outside the User’s country. In such cases, we take reasonable steps to ensure that recipients provide an adequate level of data protection comparable to that required by applicable law."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-8",
+      "text": "8. Retention periods"
+    },
+    {
+      "type": "paragraph",
+      "text": "Personal data is kept no longer than necessary for the purposes of processing: data from requests that did not lead to a contract — as a rule, up to 24 months from the last contact; client data — for the term of the contract and for the periods required for keeping accounting and tax records; data for marketing communications — until consent is withdrawn. Once these periods expire, the data is deleted or anonymized."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-9",
+      "text": "9. Data security"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Operator applies organizational and technical security measures: role-based access restrictions, employee authentication and two-factor protection of CRM accounts, encrypted connections (HTTPS), activity logging, backups and regular review of access rights. Despite these measures, no method of transmission or storage can guarantee absolute security."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-10",
+      "text": "10. Data subject rights"
+    },
+    {
+      "type": "paragraph",
+      "text": "The User has the right to: receive information about the processing of their data; access, rectify, update or correct it; request erasure or restriction of processing; withdraw previously given consent; object to processing for marketing purposes; request data portability; and lodge a complaint with the competent data protection authority."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-11",
+      "text": "11. How to exercise your rights"
+    },
+    {
+      "type": "paragraph",
+      "text": "To exercise any of these rights, send a request to <a href=\"mailto:info@pika-leads.com\">info@pika-leads.com</a> with the subject “Personal data” or call <a href=\"tel:+380992377117\">+38 099 23 77 117</a>. We may ask for additional information to verify the requester’s identity and will respond within a reasonable time not exceeding 30 calendar days."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-12",
+      "text": "12. Automated processing and profiling"
+    },
+    {
+      "type": "paragraph",
+      "text": "To improve the relevance of advertising and the quality of our services, we may use automated analysis of anonymized data: audience segmentation, lookalike audiences and response likelihood estimates. Such processing has no legal effects for the User and is not based on special categories of data. The User may object to profiling for marketing purposes by sending a request to the Operator."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-13",
+      "text": "13. Marketing communications"
+    },
+    {
+      "type": "paragraph",
+      "text": "With separate consent, we may send the User informational and promotional messages by e-mail, SMS or messengers. Each such message includes a clear way to unsubscribe. Service messages related to the performance of a contract and the handling of a request (confirmations, notifications, invoices) are not promotional and are sent regardless of marketing consent. Withdrawing marketing consent does not affect the lawfulness of processing carried out before the withdrawal."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-14",
+      "text": "14. User obligations when sharing third-party data"
+    },
+    {
+      "type": "paragraph",
+      "text": "If the User shares personal data of third parties with us (for example, contacts of employees or partners), they confirm that they have a lawful basis for doing so and have informed those persons about the processing. The User undertakes not to submit excessive data, special categories of data or data whose use would infringe the rights of third parties through the Website’s forms."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-15",
+      "text": "15. Data of minors"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Website and services are not intended for persons under 18. We do not knowingly collect data from minors. If we learn that data was provided by a minor without the consent of a legal guardian, it will be deleted."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-16",
+      "text": "16. Changes to the Policy"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Operator may update this Policy from time to time. The current version is always published on this page together with its effective date. Users may additionally be notified of significant changes. Continued use of the Website after changes are published constitutes acceptance of the updated version."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-17",
+      "text": "17. Contacts"
+    },
+    {
+      "type": "paragraph",
+      "text": "For any questions about the processing and protection of personal data, contact the Operator: individual entrepreneur Roman Mykolaiovych Hrybuk, 12 Mlynivska St, Rivne, e-mail: <a href=\"mailto:info@pika-leads.com\">info@pika-leads.com</a>, tel.: <a href=\"tel:+380992377117\">+38 099 23 77 117</a>. Related documents: <a href=\"/cookies-policy\">Cookie Policy</a>, <a href=\"/personal-data\">Personal Data Protection</a>, <a href=\"/disclaimer\">Disclaimer</a>."
+    }
+  ]
+}

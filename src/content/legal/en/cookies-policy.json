@@ -1,0 +1,160 @@
+{
+  "id": "cookies-policy",
+  "title": "Cookie Policy",
+  "description": "Which cookies the Pikaleads website uses, for what purposes and how to manage them.",
+  "updatedAt": "2026-07-05",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "This Cookie Policy explains what cookies are, which types are used on pika-leads.com (the “Website”), for what purposes and on which platforms, and how the User can manage them. The Cookie Policy is an integral part of the <a href=\"/privacy-policy\">Privacy Policy</a>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-1",
+      "text": "1. What cookies are"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cookies are small text files that a website stores in the browser of the User’s device during a visit. They make it possible to remember actions and preferences (language, session, previously filled-in fields), support Website features, collect statistics and show relevant advertising. In addition to cookies, we use similar technologies — pixels (web beacons), local storage (localStorage) and device identifiers; in this Policy, all of them are referred to as “cookies”."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-2",
+      "text": "2. Categories of cookies used"
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>2.1. Strictly necessary (technical).</strong> Ensure the basic operation of the Website: page routing, security, and saving the session and interface settings. The Website cannot function properly without them, so they do not require consent and cannot be disabled through the Website."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>2.2. Functional.</strong> Remember the User’s choices (language, region, previously entered form data) for convenience. Disabling them does not block the Website but makes it less convenient to use."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>2.3. Analytics.</strong> Collect anonymized statistics on how visitors use the Website: which pages they view, how long they stay and where they come from. This helps us improve the Website’s structure and content."
+    },
+    {
+      "type": "paragraph",
+      "text": "<strong>2.4. Advertising (marketing).</strong> Used to measure the effectiveness of advertising campaigns, cap ad frequency and retarget — show relevant ads on partner platforms to Users who have previously visited the Website."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-3",
+      "text": "3. Third-party services and platforms"
+    },
+    {
+      "type": "paragraph",
+      "text": "Some cookies are set by third-party services we use for analytics and advertising. Data processing by these services is governed by their own privacy policies. Our main partners include:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Google (Analytics, Ads, Tag Manager):</strong> audience measurement, behavior analysis, conversion tracking and retargeting in the Display Network;",
+        "<strong>Meta Platforms (Facebook Pixel, Instagram):</strong> measuring ad effectiveness, building audiences and retargeting on Facebook and Instagram;",
+        "<strong>TikTok Pixel:</strong> conversion tracking and retargeting in the TikTok ad network;",
+        "<strong>LinkedIn Insight Tag:</strong> audience analytics and targeting on LinkedIn;",
+        "<strong>Other platforms</strong> for web analytics and session recording (for example, heatmap services), as well as chat and communication tools used on the Website."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-4",
+      "text": "4. Cookie lifespan"
+    },
+    {
+      "type": "paragraph",
+      "text": "By lifespan, cookies are divided into session cookies, which are deleted automatically when the browser is closed, and persistent cookies, which are kept for a set period (usually from a few days to 24 months) or until the User deletes them manually. Specific periods depend on the type of cookie and the policy of the relevant partner service."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-5",
+      "text": "5. Legal bases"
+    },
+    {
+      "type": "paragraph",
+      "text": "Strictly necessary cookies are used on the basis of the Operator’s legitimate interest in ensuring the Website works. Analytics and advertising cookies are used on the basis of the User’s consent, which can be given through the consent banner on the first visit or through browser settings. Consent can be withdrawn at any time."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-6",
+      "text": "6. Managing cookies"
+    },
+    {
+      "type": "paragraph",
+      "text": "The User can restrict or delete cookies at any time:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "through the consent banner on the Website, by accepting or rejecting individual cookie categories;",
+        "through browser settings — most browsers let you view, block and delete cookies (in the “Privacy” or “Site settings” sections);",
+        "using the opt-out tools of individual platforms (for example, the ad preference settings of Google, Meta, TikTok and LinkedIn)."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Please note: disabling strictly necessary cookies may cause the Website to malfunction, and disabling analytics and advertising cookies does not stop ads altogether but makes them less relevant."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-7",
+      "text": "7. Examples of cookies on the Website"
+    },
+    {
+      "type": "paragraph",
+      "text": "Below are typical groups of cookies that may be set when you visit the Website (specific names and lifespans may change):"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "<strong>Session and CSRF cookies</strong> (strictly necessary) — maintaining the session and protecting forms from cross-site requests; lifespan — session;",
+        "<strong>consent cookies</strong> — remember the User’s choice in the cookie banner; lifespan — up to 12 months;",
+        "<strong>_ga, _gid</strong> (Google Analytics) — distinguishing users and collecting visit statistics; lifespan — from 24 hours to 24 months;",
+        "<strong>_fbp</strong> (Meta Pixel) — conversion attribution and retargeting on Facebook/Instagram; lifespan — up to 3 months;",
+        "<strong>_ttp</strong> (TikTok Pixel) — conversion tracking in the TikTok ad network; lifespan — up to 13 months;",
+        "<strong>li_sugr, UserMatchHistory</strong> (LinkedIn Insight Tag) — analytics and targeting on LinkedIn; lifespan — up to 6 months."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-8",
+      "text": "8. Consent, Consent Mode and Do Not Track"
+    },
+    {
+      "type": "paragraph",
+      "text": "On the first visit, the Website may display a consent banner where the User can accept or reject analytics and advertising cookies. Until consent is given, such cookies are not set or operate in a restricted (consent mode) state. We respect the browser’s “Do Not Track” signal where technically feasible. Previously given consent can be withdrawn at any time by reopening the cookie settings or clearing cookies in the browser."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-9",
+      "text": "9. Changes to the Cookie Policy"
+    },
+    {
+      "type": "paragraph",
+      "text": "We may update this Cookie Policy when the technologies we use or legal requirements change. The current version is always available on this page together with its effective date."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "section-10",
+      "text": "10. Contacts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Send questions about the use of cookies to <a href=\"mailto:info@pika-leads.com\">info@pika-leads.com</a> or call <a href=\"tel:+380992377117\">+38 099 23 77 117</a>. Related documents: <a href=\"/privacy-policy\">Privacy Policy</a>, <a href=\"/personal-data\">Personal Data Protection</a>."
+    }
+  ]
+}

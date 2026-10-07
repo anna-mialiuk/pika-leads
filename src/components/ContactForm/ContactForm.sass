@@ -1,0 +1,61 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.contact-form
+  padding: 3.6rem
+  border: 0.1rem solid rgba(255, 255, 255, 0.11)
+  border-radius: 2rem
+  background: linear-gradient(135deg, rgba(255, 198, 41, 0.07) 0%, rgba(32, 29, 24, 0.98) 26%, rgba(29, 27, 24, 1) 100%)
+
+  @include mix.mobile
+    padding: 2rem
+    border-radius: 1.6rem
+
+  &__heading
+    display: flex
+    align-items: flex-start
+    gap: 1.6rem
+    margin-bottom: 3rem
+
+  &__icon
+    @include mix.icon-box(4.8rem, 1.2rem, rgba(255, 198, 41, 0.14))
+    color: vars.$color-primary
+
+    .icon
+      width: 2.4rem
+      height: 2.4rem
+
+  &__title
+    margin: 0
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 2.8rem
+    font-weight: 800
+    line-height: 1.15
+
+    @include mix.mobile
+      font-size: 2.2rem
+
+  &__description
+    @include mix.card-text
+    margin: 1rem 0 0
+
+  &__form
+    @include mix.flex-column(1.8rem)
+
+  &__field
+    @include mix.form-field(0.9rem)
+
+    > span
+      font-size: 1rem
+      font-weight: 800
+
+    > input
+      height: 5.4rem
+      padding: 0 1.6rem
+
+  &__submit
+    @include mix.form-submit
+    min-height: 5.6rem
+    margin-top: 0.8rem
+    font-size: 1.4rem

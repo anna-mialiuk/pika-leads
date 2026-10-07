@@ -1,0 +1,79 @@
+{
+  "id": "meta-minus-words",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "We’ve been tracking the words that trigger Meta’s system for a long time. We’ve gathered everything that got rejected for us over the years and expanded the list — broken down by vertical, with an explanation of exactly which rule each word breaks."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "why-words-matter",
+      "text": "Why moderators react to words at all"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta doesn’t formally ban specific vocabulary — it evaluates the promise behind the wording. Problems arise when the copy promises a result the advertiser can’t guarantee, or when it addresses a person’s personal attributes."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "financial-result",
+      "text": "Promising a financial result"
+    },
+    {
+      "type": "paragraph",
+      "text": "“Guaranteed income”, “easy money”, “earn with no investment”, “passive income from day one”. The violation: promising a specific result that depends on countless external factors. Rephrase around the process rather than the result: not “earn $5,000” but “we’ll show you how to build a sales system”."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "personal-attributes",
+      "text": "Personal attributes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wording like “struggling with your weight?”, “suffering from acne?”, “over 40 and single?” violates the Personal Attributes policy. Meta prohibits stating or implying that you know a user’s personal attributes. The solution is to talk about the product, not the person: not “get rid of wrinkles” but “retinol cream for skin care”."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "health-medicine",
+      "text": "Health and medicine"
+    },
+    {
+      "type": "paragraph",
+      "text": "“Cures”, “gets rid of it forever”, “100% results”, “doctor-approved” without proof. Moderation is strictest in healthcare: any promise of a cure is a direct violation. Use wording about care, support and consultations."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "urgency-pressure",
+      "text": "Urgency and pressure"
+    },
+    {
+      "type": "paragraph",
+      "text": "“Today only”, “last chance”, “hurry before it’s too late” are acceptable on their own, but combined with financial or medical promises they sharply increase the likelihood of rejection. Use them with caution."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "how-to-use",
+      "text": "How to work with the list"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Before publishing, check the finished ad copy against the list of words to avoid.",
+        "Replace trigger phrases with a description of the process or product.",
+        "Prepare 2–3 versions of the copy with different levels of aggressiveness.",
+        "Keep your own list: every vertical and every ad account builds up its own specifics."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Lists of banned words aren’t dogma but a working tool. Moderation policies change, and what was acceptable six months ago may be rejected today. That’s why it’s worth keeping your own list and updating it constantly."
+    }
+  ]
+}

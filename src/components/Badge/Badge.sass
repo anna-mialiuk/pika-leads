@@ -1,0 +1,27 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.badge
+  @include mix.label
+
+  &__dot
+    @include mix.label-dot
+
+  &__icon
+    width: 1.4rem
+    height: 1.4rem
+
+  &--service
+    @include mix.service-label
+
+    .badge__dot
+      @include mix.service-label-dot
+
+  &--success
+    border-color: rgba(79, 216, 138, 0.4)
+    background: rgba(79, 216, 138, 0.14)
+    color: vars.$color-green
+
+  @include mix.mobile
+    padding: 0.6rem 1.2rem
+    font-size: 1rem

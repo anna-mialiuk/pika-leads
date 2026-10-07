@@ -1,0 +1,84 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.service-card
+  position: relative
+  display: flex
+  flex-direction: column
+  @include mix.card
+  min-height: 23.2rem
+  padding: 2.8rem
+  background: rgba(28, 26, 23, 0.72)
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 32rem
+    height: 16rem
+    background: radial-gradient(32rem 16rem at 0% 0%, rgba(var(--accent-rgb), 0.14), transparent 68%)
+    pointer-events: none
+
+  @include mix.accent-modifiers
+
+  &:hover
+    border-color: rgba(255, 255, 255, 0.14)
+    box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.2)
+    transform: translateY(-0.4rem)
+
+  &__number
+    position: absolute
+    z-index: 1
+    top: 2rem
+    right: 2.4rem
+    color: rgba(255, 255, 255, 0.035)
+    font-family: vars.$font-title
+    font-size: 3.6rem
+    font-weight: 900
+    line-height: 1
+
+  &__icon
+    position: relative
+    z-index: 1
+    @include mix.flex-center
+    width: 5.6rem
+    height: 5.6rem
+    margin-bottom: 2rem
+    border: 0.2rem solid rgba(var(--accent-rgb), 0.38)
+    border-radius: 1.4rem
+    background: rgba(var(--accent-rgb), 0.12)
+    backdrop-filter: blur(0.8rem)
+
+    .icon
+      width: 2.4rem
+      height: 2.4rem
+      color: var(--accent)
+
+  &__title
+    @include mix.card-title
+    position: relative
+    z-index: 1
+    margin: 0 0 1rem
+
+  &__text
+    @include mix.card-text
+    position: relative
+    z-index: 1
+    margin: 0 0 2rem
+
+  &__link
+    position: relative
+    z-index: 1
+    display: inline-flex
+    align-items: center
+    gap: 0.8rem
+    width: fit-content
+    margin-top: auto
+    font-size: 1.2rem
+    font-weight: 800
+    transition: gap 0.2s ease
+
+    &:hover
+      gap: 1.2rem
+

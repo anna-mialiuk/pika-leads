@@ -1,0 +1,126 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.case-info-card
+  margin-top: 2.4rem
+  padding: 2.6rem
+  border: .1rem solid rgba(255, 255, 255, .1)
+  border-radius: 2rem
+  background: #171715
+
+  @include mix.tablet
+    padding: 2.3rem
+
+  @include mix.mobile
+    margin-top: 2rem
+    padding: 2rem
+    border-radius: 1.4rem
+
+  &--yellow
+    border-color: rgba(255, 198, 41, .35)
+
+    .case-info-card__title
+      color: #ffc629
+
+  &--green
+    border-color: rgba(79, 216, 138, .35)
+    background: #102017
+
+    .case-info-card__title
+      color: #4fd88a
+
+  &__title
+    margin: 0 0 2.2rem
+    color: #f7f5ef
+    font-family: vars.$font-title
+    font-size: 2rem
+    font-weight: 800
+    line-height: 1.2
+
+    @include mix.tablet
+      font-size: 1.9rem
+
+    @include mix.mobile
+      margin-bottom: 1.8rem
+      font-size: 1.8rem
+
+  &__items
+    display: grid
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+    gap: 2.5rem
+
+    @include mix.tablet
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+      gap: 2.2rem
+
+    @include mix.mobile
+      grid-template-columns: 1fr
+      gap: 1.8rem
+
+  &__item
+    display: flex
+    min-width: 0
+    flex-direction: column
+    gap: .7rem
+
+  &__label
+    color: #77746e
+    font-size: 1.05rem
+    font-weight: 700
+    line-height: 1.3
+    text-transform: uppercase
+    letter-spacing: .03rem
+
+    @include mix.mobile
+      font-size: 1rem
+
+  &__value
+    color: #f7f5ef
+    font-family: vars.$font-title
+    font-size: 1.9rem
+    font-weight: 800
+    line-height: 1.2
+    overflow-wrap: break-word
+
+    @include mix.laptop
+      font-size: 1.8rem
+
+    @include mix.tablet
+      font-size: 1.9rem
+
+    @include mix.mobile
+      font-size: 1.8rem
+
+    &--green
+      color: #4fd88a
+
+    &--yellow
+      color: #ffc629
+
+    &--blue
+      color: #5b9bff
+
+  &__description
+    max-width: 100%
+    margin: 0
+    color: #d0ccc4
+    font-size: 1.45rem
+    font-weight: 400
+    line-height: 1.7
+
+    @include mix.tablet
+      font-size: 1.4rem
+
+    @include mix.mobile
+      font-size: 1.35rem
+      line-height: 1.65
+
+  &__note
+    margin: 2.2rem 0 0
+    color: #77746e
+    font-size: 1.15rem
+    line-height: 1.6
+
+    @include mix.mobile
+      margin-top: 1.8rem
+      font-size: 1.1rem

@@ -1,0 +1,68 @@
+{
+  "id": "meta-ads-update",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Meta updates are something we can’t influence but have to adapt to. We had an in-depth conversation with support, during which we learned about several updates that are already affecting our work. Here are the key points."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "geo-targeting",
+      "text": "Geo-targeting"
+    },
+    {
+      "type": "paragraph",
+      "text": "A geo-targeting update is coming. If the announcement is to be believed, the ability to exclude individual geo zones, cities or districts at the campaign level will be removed — instead, you’ll be able to exclude them at the account level. We’ll see how this works in practice."
+    },
+    {
+      "type": "paragraph",
+      "text": "What this means for your work: if your campaigns use precise regional exclusions, prepare a plan B — the structure will have to be rebuilt one level up."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "budget-changes",
+      "text": "Adjusting the budget by +25%"
+    },
+    {
+      "type": "paragraph",
+      "text": "This recommendation isn’t the most obvious, but according to the marketing team, to take part in the auction properly, budgets today need to be adjusted by +25%. Roughly speaking, if you have a $100 budget, add $25, for a total of $125."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "learning-period",
+      "text": "Seven days for testing and stabilization"
+    },
+    {
+      "type": "paragraph",
+      "text": "This isn’t about learning but specifically about testing and stabilization — seven days are allotted for it. It’s good they said it directly: far too many people stop campaigns on day three without waiting for them to stabilize."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "testing",
+      "text": "Creatives and rejections"
+    },
+    {
+      "type": "paragraph",
+      "text": "The creative recommendations are as expected. As for the rejections everyone is seeing right now, there is a specific procedure for handling them, and support confirms this."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "conclusion",
+      "text": "What to do with this information"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Review the structure of campaigns where geographic exclusions are set precisely",
+        "Keep a budget reserve when planning — the auction demands more than it seems",
+        "Don’t stop tests before seven days: results before then aren’t representative"
+      ]
+    }
+  ]
+}

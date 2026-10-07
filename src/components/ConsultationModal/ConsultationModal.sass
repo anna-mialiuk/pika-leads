@@ -1,0 +1,123 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.consultation-modal
+  position: fixed
+  inset: 0
+  z-index: 1000
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 2rem
+  overflow-y: auto
+  background: rgba(8, 7, 6, 0.78)
+  animation: consultation-fade 0.2s ease
+
+  &__dialog
+    position: relative
+    width: 100%
+    max-width: 54rem
+    margin: auto
+    padding: 3.6rem 3.6rem 4rem
+    border: 0.1rem solid vars.$color-border
+    border-radius: 2.4rem
+    background: vars.$color-surface-alt
+    box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.55)
+    animation: consultation-rise 0.25s ease
+
+  &__close
+    position: absolute
+    top: 1.8rem
+    right: 1.8rem
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 3.6rem
+    height: 3.6rem
+    padding: 0
+    border: 0
+    border-radius: 1rem
+    background: rgba(255, 255, 255, 0.07)
+    color: vars.$color-white
+    cursor: pointer
+    transition: background 0.2s ease
+
+    svg
+      width: 1.8rem
+      height: 1.8rem
+      fill: none
+      stroke: currentColor
+      stroke-linecap: round
+      stroke-width: 2.2
+
+    &:hover
+      background: rgba(255, 255, 255, 0.14)
+
+    &:focus-visible
+      outline: 0.2rem solid vars.$color-primary
+      outline-offset: 0.2rem
+
+  &__title
+    margin: 0 4.4rem 1.2rem 0
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 2.6rem
+    font-weight: 800
+    line-height: 1.15
+    text-transform: uppercase
+
+  &__text
+    margin: 0 0 2.6rem
+    color: vars.$color-text-muted
+    font-size: 1.5rem
+    line-height: 1.5
+
+  &__form
+    @include mix.flex-column(1.2rem)
+
+  &__input
+    @include mix.form-input(#11100f, #11100f)
+    height: 5.4rem
+    padding: 0 1.8rem
+    font-size: 1.5rem
+
+  &__submit
+    @include mix.form-submit
+    margin-top: 0.6rem
+    min-height: 5.6rem
+    font-size: 1.6rem
+
+    &:focus-visible
+      outline: 0.2rem solid vars.$color-white
+      outline-offset: 0.3rem
+
+  &__success
+    padding-right: 4rem
+
+  @include mix.mobile
+    padding: 1.2rem
+    align-items: flex-end
+
+    &__dialog
+      padding: 2.8rem 2rem 2.4rem
+      border-radius: 2rem
+
+    &__title
+      font-size: 2rem
+
+    &__text
+      font-size: 1.4rem
+
+@keyframes consultation-fade
+  from
+    opacity: 0
+
+@keyframes consultation-rise
+  from
+    opacity: 0
+    transform: translateY(1.6rem)
+
+@media (prefers-reduced-motion: reduce)
+  .consultation-modal,
+  .consultation-modal__dialog
+    animation: none

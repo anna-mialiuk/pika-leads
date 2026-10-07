@@ -1,0 +1,129 @@
+{
+  "id": "capi-tools",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "There has long been talk that the web pixel will eventually be switched off, leaving only the Conversions API. It’s worth preparing in advance — especially since server-side tracking already delivers more complete data. We’ve gathered the tools you can use to connect CAPI, with an honest description of who each one suits."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "meta-native",
+      "text": "Meta Native Integration (Server-Side API)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta’s own tools are the most reliable integration method. It requires technical knowledge but gives you full control over data transfer. All the technical documentation is in the Marketing API section at developers.facebook.com."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "shopify",
+      "text": "Shopify"
+    },
+    {
+      "type": "paragraph",
+      "text": "Shopify has a built-in native integration with Meta for event tracking. It works, but not perfectly: there are issues with passing final data, and some events show up oddly. This can be fixed, but only manually."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "google-tag-manager",
+      "text": "Google Tag Manager"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google Tag Manager lets you set up event transfer to the Conversions API through tag templates without changing the website’s code. It suits sites already using GTM, but stable operation requires careful deduplication setup with the pixel."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "server-side-gtm",
+      "text": "Server-Side GTM (Google Cloud / AWS)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Server-side GTM on Google Cloud or AWS gives you stable server-side tracking with maximum control over your data. It’s harder to set up, but in terms of control it’s one of the best options after the native integration."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "segment",
+      "text": "Segment"
+    },
+    {
+      "type": "paragraph",
+      "text": "A powerful platform for managing user data and events. It supports the Meta Conversions API and lets you send server events centrally — handy when you have many data sources."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "elevar",
+      "text": "Elevar"
+    },
+    {
+      "type": "paragraph",
+      "text": "A specialized e-commerce tool that simplifies CAPI integration on Shopify, WooCommerce and other platforms. It’s focused specifically on conversion tracking accuracy."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "pixelyoursite",
+      "text": "PixelYourSite"
+    },
+    {
+      "type": "paragraph",
+      "text": "A plugin for WordPress and WooCommerce. It lets you set up CAPI and Meta Pixel events without deep technical knowledge — the easiest way for WordPress sites."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "trackify",
+      "text": "Trackify"
+    },
+    {
+      "type": "paragraph",
+      "text": "A platform for Shopify users that simplifies CAPI setup and event tracking together with Meta Ads."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "zapier",
+      "text": "Zapier"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lets you automate event transfer through integrations. It’s easier to set up but doesn’t always deliver stability and detail — not the best choice for business-critical projects."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "webgains-tealium",
+      "text": "WebGains and Tealium"
+    },
+    {
+      "type": "paragraph",
+      "text": "WebGains offers a convenient interface for managing pixels and server events. Tealium is an enterprise-grade solution with advanced capabilities for managing user data and events."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "what-to-choose",
+      "text": "What to choose"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "You have a developer and need control — the native integration or Server-Side GTM",
+        "WordPress / WooCommerce — PixelYourSite for a quick start",
+        "Shopify — Elevar or Trackify, and double-check the native integration",
+        "Many data sources and a large project — Segment or Tealium"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "There’s no universal solution: the choice depends on the platform, the budget and whether you have someone who can maintain it. The main thing is not to put off switching to server-side tracking until the pixel simply stops sending data."
+    }
+  ]
+}

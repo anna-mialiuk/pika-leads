@@ -1,0 +1,84 @@
+@use '../variables' as vars
+@use './breakpoints' as *
+
+// ---------- Forms ----------
+
+// Відключення жовтої підсвітки автозаповнення в Chrome
+@mixin autofill($bg: vars.$color-dark)
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active
+    -webkit-text-fill-color: vars.$color-white
+    -webkit-box-shadow: 0 0 0 100rem $bg inset
+    box-shadow: 0 0 0 100rem $bg inset
+    caret-color: vars.$color-white
+    transition: background-color 9999s ease-in-out 0s
+
+// Текстовий інпут / textarea
+@mixin form-input($bg: rgba(255, 255, 255, 0.025), $autofill-bg: vars.$color-dark)
+  width: 100%
+  border: 0.1rem solid rgba(255, 255, 255, 0.12)
+  border-radius: 1rem
+  outline: 0
+  background: $bg
+  color: vars.$color-white
+  font-family: vars.$font-main
+  font-size: 1.4rem
+  transition: border-color 0.2s ease, background 0.2s ease
+  &::placeholder
+    color: #69645c
+  &:focus
+    border-color: rgba(255, 198, 41, 0.55)
+  @include autofill($autofill-bg)
+
+// Поле форми: підпис + інпут у стовпчик
+@mixin form-field($gap: 0.7rem)
+  display: flex
+  flex-direction: column
+  gap: $gap
+  min-width: 0
+  width: 100%
+  > span
+    color: vars.$color-text-secondary
+    font-size: 1.1rem
+    font-weight: 700
+  > input,
+  > textarea
+    @include form-input
+  > input
+    height: 4.8rem
+    padding: 0 1.4rem
+  > textarea
+    min-height: 13.5rem
+    padding: 1.6rem
+    resize: vertical
+
+// Жовта кнопка сабміту на всю ширину
+@mixin form-submit
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 1rem
+  width: 100%
+  min-height: 5.4rem
+  border: 0
+  border-radius: 1rem
+  background: vars.$color-primary
+  color: vars.$color-dark
+  font-family: vars.$font-main
+  font-size: 1.45rem
+  font-weight: 800
+  cursor: pointer
+  transition: box-shadow 0.2s ease, transform 0.2s ease
+  &:hover
+    box-shadow: 0 0 2.6rem rgba(255, 198, 41, 0.5)
+    transform: translateY(-0.1rem)
+
+// Дрібна примітка під формою
+@mixin form-note
+  margin: 0
+  color: #6f695e
+  font-size: 1.1rem
+  line-height: 1.45
+  text-align: center

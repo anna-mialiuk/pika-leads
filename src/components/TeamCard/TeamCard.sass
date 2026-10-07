@@ -1,0 +1,105 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.team-card
+  display: flex
+  flex-direction: column
+  height: 100%
+  padding: 2.4rem
+  border: 0.1rem solid rgba(255, 255, 255, 0.1)
+  border-radius: 1.8rem
+  background: vars.$color-surface
+  transition: border-color 0.2s ease, transform 0.2s ease
+
+  &:hover
+    border-color: rgba(255, 198, 41, 0.28)
+    transform: translateY(-0.3rem)
+
+  &__media
+    position: relative
+    overflow: hidden
+    width: 100%
+    aspect-ratio: 1 / 1
+    border-bottom: 0.4rem solid vars.$color-primary
+    border-radius: 1.4rem 1.4rem 0 0
+    background: rgba(255, 255, 255, 0.015)
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center 25%
+
+  &__placeholder
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    background: radial-gradient(circle at 30% 20%, rgba(255, 198, 41, 0.16), transparent 60%), linear-gradient(160deg, #1d1b16 0%, #121110 100%)
+
+    span
+      color: vars.$color-primary
+      font-family: vars.$font-title
+      font-size: 6.4rem
+      font-weight: 800
+      letter-spacing: 0.02em
+      opacity: 0.9
+
+  &__content
+    display: flex
+    flex: 1
+    flex-direction: column
+    padding-top: 2.4rem
+
+  &__name
+    margin: 0 0 0.8rem
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 2rem
+    font-weight: 800
+    line-height: 1.15
+
+  &__position
+    margin-bottom: 1.6rem
+    color: vars.$color-primary
+    font-size: 1.4rem
+    font-weight: 700
+
+  &__description
+    margin: 0 0 2.4rem
+    color: rgba(247, 245, 239, 0.6)
+    font-size: 1.3rem
+    line-height: 1.6
+
+  &__link
+    font-family: inherit
+    background: transparent
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 1rem
+    width: 100%
+    min-height: 5rem
+    margin-top: auto
+    border: 0.1rem solid rgba(255, 198, 41, 0.5)
+    border-radius: 1.1rem
+    color: vars.$color-primary
+    font-size: 1.3rem
+    font-weight: 800
+    text-decoration: none
+    transition: background 0.2s ease, border-color 0.2s ease
+
+    &:hover
+      border-color: vars.$color-primary
+      background: rgba(255, 198, 41, 0.08)
+
+    &:focus-visible
+      outline: 0.2rem solid vars.$color-primary
+      outline-offset: 0.2rem
+
+  @include mix.mobile
+    padding: 1.8rem
+

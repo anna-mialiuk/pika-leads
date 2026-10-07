@@ -1,0 +1,117 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.case-cta
+  padding: 3rem 0 7rem
+  background: #0f0f0f
+
+  @include mix.tablet
+    padding: 2.5rem 0 6rem
+
+  @include mix.mobile
+    padding: 2rem 0 5rem
+
+  &__container
+    display: flex
+    width: min(100% - 4rem, 110rem)
+    min-height: 18rem
+    align-items: center
+    justify-content: space-between
+    gap: 4rem
+    margin: 0 auto
+    padding: 4rem
+    border: .1rem solid rgba(255, 198, 41, .38)
+    border-radius: 3rem
+    background: linear-gradient(110deg, rgba(255, 198, 41, .12) 0%, rgba(255, 198, 41, .035) 55%, rgba(255, 198, 41, .08) 100%)
+
+    @include mix.tablet
+      width: min(100% - 3rem, 110rem)
+      gap: 3rem
+      padding: 3.5rem
+
+    @include mix.mobile
+      width: calc(100% - 2rem)
+      min-height: 0
+      flex-direction: column
+      align-items: stretch
+      gap: 2.5rem
+      padding: 2.5rem 2rem
+      border-radius: 2rem
+
+  &__content
+    min-width: 0
+    flex: 1
+
+  &__title
+    margin: 0 0 1.5rem
+    color: #f7f5ef
+    font-family: vars.$font-title
+    font-size: 3.2rem
+    font-weight: 800
+    line-height: 1.15
+    letter-spacing: -.04rem
+
+    @include mix.tablet
+      font-size: 2.7rem
+
+    @include mix.mobile
+      margin-bottom: 1.2rem
+      font-size: 2.3rem
+      line-height: 1.2
+
+  &__description
+    max-width: 90rem
+    margin: 0
+    color: #8f8b84
+    font-size: 1.7rem
+    font-weight: 400
+    line-height: 1.6
+
+    @include mix.tablet
+      font-size: 1.55rem
+
+    @include mix.mobile
+      max-width: none
+      font-size: 1.4rem
+      line-height: 1.6
+
+  &__button
+    border: 0
+    font-family: inherit
+    cursor: pointer
+    display: inline-flex
+    min-width: 24rem
+    min-height: 7rem
+    flex: 0 0 auto
+    align-items: center
+    justify-content: center
+    padding: 1.5rem 3rem
+    border-radius: 2rem
+    background: #ffc629
+    box-shadow: 0 1.2rem 3rem rgba(255, 198, 41, .16)
+    color: #111
+    font-size: 1.8rem
+    font-weight: 800
+    line-height: 1.2
+    text-align: center
+    text-decoration: none
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease
+
+    @include mix.tablet
+      min-width: 22rem
+      min-height: 6.5rem
+      padding: 1.4rem 2.5rem
+      font-size: 1.6rem
+
+    @include mix.mobile
+      width: 100%
+      min-width: 0
+      min-height: 5.8rem
+      padding: 1.4rem 2rem
+      border-radius: 1.5rem
+      font-size: 1.5rem
+
+    &:hover
+      transform: translateY(-.2rem)
+      background: #ffd04d
+      box-shadow: 0 1.5rem 3.5rem rgba(255, 198, 41, .22)

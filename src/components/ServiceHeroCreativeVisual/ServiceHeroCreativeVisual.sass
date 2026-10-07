@@ -1,0 +1,376 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+@keyframes creative-float
+  0%, 100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-.625rem)
+
+.creative-visual
+  position: relative
+  width: 40rem
+  max-width: 100%
+  flex: 0 0 auto
+  margin: 0 auto
+  animation: creative-float 6s ease-in-out infinite
+
+  @include mix.laptop
+    width: 38rem
+
+  @include mix.tablet
+    width: 40rem
+    margin-top: 1.5rem
+
+  @include mix.mobile
+    width: calc(100% - 1rem)
+    margin-top: 1rem
+
+  &__glow
+    position: absolute
+    inset: -.25rem
+    border-radius: 1.6rem
+    background: linear-gradient(135deg, #F97316, #F43F5E)
+    filter: blur(.35rem)
+    opacity: .5
+
+  &__board
+    position: relative
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 1rem
+    padding: 1.25rem
+    overflow: hidden
+    border: .0625rem solid rgba(255, 255, 255, .1)
+    border-radius: 1.4rem
+    background: #161210
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .55)
+
+    @include mix.mobile
+      gap: .65rem
+      padding: .75rem
+      border-radius: 1rem
+
+  &__video
+    position: relative
+    grid-column: 1 / 3
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 15rem
+    overflow: hidden
+    border-radius: 1rem
+    background: linear-gradient(135deg, #F97316, #F43F5E)
+
+    @include mix.laptop
+      height: 14rem
+
+    @include mix.tablet
+      height: 15rem
+
+    @include mix.mobile
+      height: 8.5rem
+      border-radius: .75rem
+
+    strong
+      position: absolute
+      bottom: 1rem
+      left: 1.1rem
+      z-index: 2
+      color: #fff
+      font-family: vars.$font-title
+      font-size: 1.05rem
+      font-weight: 800
+
+      @include mix.mobile
+        bottom: .7rem
+        left: .75rem
+        font-size: .75rem
+
+  &__video-pattern
+    position: absolute
+    inset: 0
+    opacity: .5
+    background-image: radial-gradient(rgba(255, 255, 255, .18) .0625rem, transparent .0625rem)
+    background-size: 1.4rem 1.4rem
+
+  &__play
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 4rem
+    height: 4rem
+    border-radius: 50%
+    background: rgba(255, 255, 255, .92)
+    box-shadow: 0 .6rem 1.8rem rgba(0, 0, 0, .22)
+
+    @include mix.mobile
+      width: 3rem
+      height: 3rem
+
+    span
+      width: 0
+      height: 0
+      margin-left: .3rem
+      border-top: .75rem solid transparent
+      border-bottom: .75rem solid transparent
+      border-left: 1.2rem solid #F97316
+
+      @include mix.mobile
+        border-top-width: .55rem
+        border-bottom-width: .55rem
+        border-left-width: .9rem
+
+  &__small
+    position: relative
+    height: 11.8rem
+    padding: 1rem
+    overflow: hidden
+    box-sizing: border-box
+    border-radius: .9rem
+
+    @include mix.laptop
+      height: 11rem
+
+    @include mix.tablet
+      height: 11.8rem
+
+    @include mix.mobile
+      height: 6.5rem
+      padding: .7rem
+
+    strong
+      position: absolute
+      bottom: .8rem
+      font-size: .7rem
+      font-weight: 800
+
+      @include mix.mobile
+        bottom: .6rem
+        font-size: .6rem
+
+    &--story
+      background: #221a15
+
+      strong
+        left: 1rem
+        color: #FDBA74
+
+        @include mix.mobile
+          left: .7rem
+
+    &--banner
+      background: linear-gradient(135deg, #F43F5E, #F97316)
+
+      strong
+        right: 1rem
+        color: #fff
+
+        @include mix.mobile
+          right: .7rem
+
+  &__story-icon
+    width: 2rem
+    height: 2rem
+    margin-bottom: .8rem
+    border-radius: .6rem
+    background: rgba(249, 115, 22, .3)
+
+    @include mix.mobile
+      width: 1.5rem
+      height: 1.5rem
+      margin-bottom: .5rem
+
+  &__lines
+    display: flex
+    flex-direction: column
+    gap: .45rem
+
+    @include mix.mobile
+      gap: .3rem
+
+    span
+      display: block
+      height: .5rem
+      border-radius: .25rem
+      background: #3a2c22
+
+      @include mix.mobile
+        height: .35rem
+
+      &:first-child
+        width: 80%
+
+      &:last-child
+        width: 55%
+
+  &__banner-lines
+    display: flex
+    flex-direction: column
+    gap: .45rem
+
+    @include mix.mobile
+      gap: .3rem
+
+    span
+      display: block
+      border-radius: .25rem
+      background: rgba(255, 255, 255, .55)
+
+      &:nth-child(1)
+        width: 70%
+        height: .6rem
+        background: rgba(255, 255, 255, .9)
+
+        @include mix.mobile
+          height: .4rem
+
+      &:nth-child(2)
+        width: 90%
+        height: .45rem
+
+        @include mix.mobile
+          height: .3rem
+
+      &:nth-child(3)
+        width: 50%
+        height: .45rem
+
+        @include mix.mobile
+          height: .3rem
+
+  &__footer
+    grid-column: 1 / 3
+    display: flex
+    align-items: center
+    gap: .75rem
+    padding-top: .25rem
+
+    @include mix.mobile
+      gap: .5rem
+
+  &__footer-icon
+    width: 2.75rem
+    height: 2.75rem
+    flex-shrink: 0
+    border-radius: .7rem
+    background: linear-gradient(135deg, #F97316, #F43F5E)
+
+    @include mix.mobile
+      width: 2rem
+      height: 2rem
+
+  &__footer-lines
+    flex: 1
+
+    span
+      display: block
+      border-radius: .25rem
+
+      &:first-child
+        width: 60%
+        height: .5rem
+        margin-bottom: .4rem
+        background: #3a2c22
+
+        @include mix.mobile
+          height: .35rem
+          margin-bottom: .3rem
+
+      &:last-child
+        width: 40%
+        height: .375rem
+        background: #2a2019
+
+        @include mix.mobile
+          height: .25rem
+
+  &__dots
+    display: flex
+    gap: .4rem
+
+    @include mix.mobile
+      gap: .3rem
+
+    span
+      width: .65rem
+      height: .65rem
+      border-radius: 50%
+      background: #3a2c22
+
+      @include mix.mobile
+        width: .5rem
+        height: .5rem
+
+      &:first-child
+        background: #F97316
+
+  &__metric
+    position: absolute
+    z-index: 5
+    padding: .75rem 1rem
+    border: .0625rem solid rgba(249, 115, 22, .4)
+    border-radius: .85rem
+    background: rgba(26, 24, 21, .92)
+    backdrop-filter: blur(.5rem)
+    box-shadow: 0 .75rem 1.875rem rgba(0, 0, 0, .4)
+
+    @include mix.mobile
+      padding: .5rem .65rem
+      border-radius: .65rem
+
+    span
+      display: block
+      margin-bottom: .15rem
+      color: #8f8a80
+      font-size: .7rem
+      font-weight: 700
+
+      @include mix.mobile
+        font-size: .58rem
+
+    strong
+      display: block
+      font-family: vars.$font-title
+      font-size: 1.4rem
+      font-weight: 800
+
+      @include mix.mobile
+        font-size: 1rem
+
+    &--ctr
+      top: 5rem
+      left: -3rem
+
+      @include mix.laptop
+        left: -2rem
+
+      @include mix.tablet
+        left: -2rem
+
+      @include mix.mobile
+        top: 3rem
+        left: -.5rem
+
+      strong
+        color: vars.$color-green
+
+    &--formats
+      right: -2.8rem
+      bottom: 5.5rem
+
+      @include mix.laptop
+        right: -2rem
+
+      @include mix.tablet
+        right: -2rem
+
+      @include mix.mobile
+        right: -.5rem
+        bottom: 3.5rem
+
+      strong
+        color: #F97316

@@ -1,0 +1,475 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+@keyframes service-hero-drift
+  0%, 100%
+    transform: translate(0, 0)
+
+  50%
+    transform: translate(1.6rem, -1.2rem)
+
+@keyframes service-hero-pulse
+  0%, 100%
+    opacity: 0.5
+    transform: scale(1)
+
+  50%
+    opacity: 1
+    transform: scale(1.05)
+
+@keyframes service-hero-float
+  0%, 100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-1rem)
+
+@keyframes service-hero-shine
+  0%
+    background-position: 0% 50%
+
+  100%
+    background-position: 200% 50%
+
+.service-hero
+  position: relative
+  overflow: hidden
+  padding: 8rem 4.8rem 9.2rem
+  background: vars.$color-dark
+
+  @include mix.laptop
+    padding: 5.6rem 3.2rem 6.4rem
+
+  @include mix.mobile
+    padding: 4rem 1.8rem 4.8rem
+
+  &__container
+    @include mix.container
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: center
+    gap: 5.6rem
+
+    @include mix.laptop
+      gap: 4rem
+
+    @include mix.tablet
+      align-items: stretch
+      flex-direction: column
+      gap: 4.8rem
+
+  &__content
+    flex: 1.1
+    min-width: 0
+
+  &__decor
+    position: absolute
+    pointer-events: none
+
+    &--dots
+      inset: 0
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 0.1rem, transparent 0.1rem)
+      background-size: 2.8rem 2.8rem
+      opacity: 0.5
+      mask-image: radial-gradient(72rem 52rem at 74% 22%, black, transparent 76%)
+
+    &--blue
+      inset: 0
+      background: radial-gradient(94rem 50rem at 84% 16%, rgba(var(--service-accent-rgb), 0.2), transparent 60%)
+
+    &--instagram
+      top: -14rem
+      right: -6rem
+      width: 44rem
+      height: 44rem
+      border-radius: 50%
+      background: var(--service-glow-gradient)
+      filter: blur(9rem)
+      opacity: 0.28
+      animation: service-hero-drift 10s ease-in-out infinite
+
+  &__badge
+    margin-bottom: 2.6rem
+
+    @include mix.mobile
+      margin-bottom: 2rem
+  &__title
+    max-width: 72rem
+    margin: 0 0 2.4rem
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 5.6rem
+    font-weight: 800
+    line-height: 1.02
+    letter-spacing: -0.1rem
+
+    @include mix.laptop
+      font-size: 5.2rem
+
+    @include mix.mobile
+      font-size: 4rem
+      letter-spacing: -0.05rem
+
+    @include mix.mobile-s
+      font-size: 3.4rem
+
+  &__title-accent
+    background: var(--service-gradient)
+    background-size: 200% auto
+    background-clip: text
+    -webkit-background-clip: text
+    color: transparent
+    -webkit-text-fill-color: transparent
+    animation: service-hero-shine 5s linear infinite
+
+  &__description
+    max-width: 56rem
+    margin: 0 0 3.4rem
+    color: vars.$color-text-muted
+    font-size: 1.8rem
+    line-height: 1.7
+
+    @include mix.mobile
+      margin-bottom: 2.8rem
+      font-size: 1.5rem
+
+  &__actions
+    display: flex
+    flex-wrap: wrap
+    gap: 1.4rem
+    margin-bottom: 3.8rem
+
+    @include mix.mobile
+      align-items: stretch
+      flex-direction: column
+      gap: 1.2rem
+
+  &__button--secondary
+    border-width: 0.15rem
+    border-color: rgba(255, 255, 255, 0.2)
+
+    &:hover
+      border-color: var(--service-accent)
+      background: rgba(var(--service-accent-rgb), 0.1)
+
+  @include mix.mobile
+    .button
+      width: 100%
+
+  &__stats
+    display: flex
+    flex-wrap: wrap
+    gap: 3.4rem
+
+    @include mix.mobile
+      gap: 2.4rem
+
+  &__stat
+    display: flex
+    flex-direction: column
+
+    strong
+      color: var(--service-accent)
+      font-family: vars.$font-title
+      font-size: 3rem
+      font-weight: 800
+      line-height: 1
+
+      @include mix.mobile
+        font-size: 2.5rem
+
+    span
+      margin-top: 0.2rem
+      color: vars.$color-text-secondary
+      font-size: 1.3rem
+
+      @include mix.mobile
+        font-size: 1.15rem
+
+  &__triggers
+    display: flex
+    flex-wrap: wrap
+    gap: 1rem
+
+    @include mix.mobile
+      align-items: stretch
+      flex-direction: column
+
+  &__trigger
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    padding: 0.9rem 1.5rem 0.9rem 1.1rem
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.22)
+    border-radius: 10rem
+    background: rgba(var(--service-accent-rgb), 0.07)
+    color: #e9e5dc
+    font-size: 1.35rem
+    font-weight: 600
+    line-height: 1.25
+
+    @include mix.mobile
+      width: 100%
+      box-sizing: border-box
+      border-radius: 1.4rem
+
+  &__trigger-icon
+    @include mix.icon-box(2.8rem, 0.8rem, rgba(var(--service-accent-rgb), 0.14))
+    box-shadow: 0 0 1.2rem rgba(var(--service-accent-rgb), 0.22)
+
+    .icon
+      @include mix.icon-mask(1.7rem, var(--service-accent-light))
+
+  &__visual
+    display: flex
+    flex: 0.9
+    justify-content: center
+    min-width: 0
+
+    @include mix.tablet
+      width: 100%
+
+    @include mix.mobile
+      padding: 0 2.8rem
+
+    @include mix.mobile-s
+      padding: 0 1.8rem
+
+  // ====================================================
+  // ADS VISUAL
+  // ====================================================
+
+  &__instagram
+    position: relative
+    width: 34rem
+    animation: service-hero-float 6s ease-in-out infinite
+
+    @include mix.mobile
+      width: 100%
+      max-width: 34rem
+
+  &__instagram-border
+    position: absolute
+    inset: -0.3rem
+    border-radius: 2.6rem
+    background: var(--service-gradient)
+    filter: blur(0.2rem)
+    opacity: 0.9
+
+  &__instagram-card
+    position: relative
+    overflow: hidden
+    border-radius: 2.3rem
+    background: #1a1815
+    box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.55)
+
+  &__instagram-header
+    display: flex
+    align-items: center
+    gap: 1rem
+    padding: 1.4rem 1.6rem
+
+  &__avatar
+    width: 3.8rem
+    height: 3.8rem
+    flex-shrink: 0
+    border-radius: 50%
+    background: var(--service-gradient)
+
+  &__instagram-user
+    display: flex
+    flex: 1
+    min-width: 0
+    flex-direction: column
+
+    strong
+      color: vars.$color-white
+      font-size: 1.35rem
+      font-weight: 800
+
+    span
+      color: #8f8a80
+      font-size: 1.1rem
+
+  &__instagram-more
+    color: #8f8a80
+    font-size: 1.8rem
+
+  &__creative
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 30rem
+    background: var(--service-visual-gradient)
+
+    @include mix.mobile
+      height: 27rem
+
+    @include mix.mobile-s
+      height: 24rem
+
+  &__creative-pattern
+    position: absolute
+    inset: 0
+    background-image: radial-gradient(rgba(255, 255, 255, 0.18) 0.1rem, transparent 0.1rem)
+    background-size: 2.2rem 2.2rem
+    opacity: 0.5
+
+  &__creative-content
+    position: relative
+    z-index: 2
+    padding: 0 2.4rem
+    color: #fff
+    text-align: center
+
+    strong
+      display: block
+      font-family: vars.$font-title
+      font-size: 2.6rem
+      font-weight: 800
+      line-height: 1.1
+      text-shadow: 0 0.2rem 2rem rgba(0, 0, 0, 0.4)
+
+      @include mix.mobile-s
+        font-size: 2.3rem
+
+    span
+      display: inline-block
+      margin-top: 1.4rem
+      padding: 0.9rem 1.8rem
+      border-radius: 0.8rem
+      background: #fff
+      color: vars.$color-dark
+      font-size: 1.3rem
+      font-weight: 800
+
+  &__instagram-actions
+    display: flex
+    align-items: center
+    gap: 1.6rem
+    padding: 1.3rem 1.6rem 0.6rem
+    color: vars.$color-text-muted
+
+    .icon
+      width: 2.2rem
+      height: 2.2rem
+
+  &__instagram-action--heart
+    color: #ff5b7f
+
+  &__instagram-info
+    padding: 1.2rem 1.6rem 1.6rem
+    color: vars.$color-text-muted
+    font-size: 1.25rem
+
+    strong
+      color: vars.$color-white
+
+  &__metric
+    position: absolute
+    z-index: 4
+    padding: 1rem 1.4rem
+    border: 0.1rem solid rgba(var(--service-accent-rgb), 0.4)
+    border-radius: 1.2rem
+    background: rgba(26, 24, 21, 0.92)
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.4)
+    backdrop-filter: blur(0.8rem)
+
+    @include mix.mobile-s
+      padding: 0.8rem 1rem
+
+    span
+      display: block
+      color: #8f8a80
+      font-size: 1.05rem
+      font-weight: 700
+
+    strong
+      display: block
+      margin-top: 0.2rem
+      font-family: vars.$font-title
+      font-size: 2rem
+      font-weight: 800
+      line-height: 1.15
+
+      @include mix.mobile-s
+        font-size: 1.6rem
+
+    &--cpl
+      top: 6.4rem
+      left: -4.2rem
+
+      @include mix.mobile
+        left: -2.6rem
+
+      @include mix.mobile-s
+        left: -1.4rem
+
+      strong
+        color: vars.$color-green
+
+    &--roas
+      right: -3.8rem
+      bottom: 7.8rem
+
+      @include mix.mobile
+        right: -2.6rem
+
+      @include mix.mobile-s
+        right: -1.4rem
+
+      strong
+        color: var(--service-accent)
+
+// ======================================================
+// WEBSITE
+// ======================================================
+
+.service-hero--website
+  .service-hero__title
+    max-width: 76rem
+
+  .service-hero__description
+    max-width: 60rem
+
+  .service-hero__visual
+    align-items: center
+
+    @include mix.tablet
+      justify-content: center
+
+// ======================================================
+// CREATIVE
+// ======================================================
+
+.service-hero--creative
+  .service-hero__container
+    gap: 5.6rem
+
+  .service-hero__content
+    flex: 1.1
+    min-width: 0
+
+  .service-hero__visual
+    display: flex
+    flex: 0.9
+    align-items: center
+    justify-content: center
+    min-width: 0
+    overflow: visible
+
+  @include mix.laptop
+    .service-hero__container
+      gap: 4rem
+
+  @include mix.tablet
+    .service-hero__visual
+      width: 100%
+      justify-content: center
+
+  @include mix.mobile
+    .service-hero__visual
+      padding-right: 1rem
+      padding-left: 1rem

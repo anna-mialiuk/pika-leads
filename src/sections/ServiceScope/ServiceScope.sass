@@ -1,0 +1,208 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.service-scope
+  position: relative
+  overflow: hidden
+  padding: 4rem 4.8rem 7rem
+  background: vars.$color-dark
+
+  @include mix.laptop
+    padding: 4rem 3.2rem 6rem
+
+  @include mix.mobile
+    padding: 3.6rem 1.8rem 5rem
+
+  &__container
+    @include mix.container
+    position: relative
+    z-index: 2
+
+  // =========================
+  // HEADER
+  // =========================
+
+  &__header
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    gap: 3rem
+    margin-bottom: 4.2rem
+
+    @include mix.tablet
+      align-items: flex-start
+      flex-direction: column
+      gap: 2rem
+      margin-bottom: 3.4rem
+
+  &__heading
+    min-width: 0
+
+  &__badge
+    margin-bottom: 2rem
+  &__title
+    @include mix.service-section-title
+    max-width: 72rem
+    margin: 0
+
+  &__description
+    width: 100%
+    max-width: 36rem
+    margin: 0 0 .3rem
+    color: vars.$color-text-secondary
+    font-size: 1.45rem
+    line-height: 1.55
+
+    @include mix.tablet
+      max-width: 56rem
+
+    @include mix.mobile
+      font-size: 1.35rem
+
+  // =========================
+  // CARDS GRID
+  // =========================
+
+  &__grid
+    display: grid
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+    gap: 1.8rem
+
+    @include mix.laptop
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+
+    @include mix.mobile
+      grid-template-columns: 1fr
+      gap: 1.4rem
+
+  &__card
+    position: relative
+    min-width: 0
+    min-height: 19rem
+    padding: 2.4rem 2.2rem
+    overflow: hidden
+    box-sizing: border-box
+    border: .1rem solid rgba(var(--service-accent-rgb), .16)
+    border-radius: 1.8rem
+    background: radial-gradient(30rem 16rem at 15% 0%, rgba(var(--service-accent-rgb), .12), transparent 65%), #1a1815
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease
+
+    &::before
+      content: ''
+      position: absolute
+      top: -8rem
+      left: -6rem
+      width: 20rem
+      height: 15rem
+      border-radius: 50%
+      background: rgba(var(--service-accent-rgb), .08)
+      filter: blur(4rem)
+      pointer-events: none
+
+    &:hover
+      border-color: rgba(var(--service-accent-rgb), .32)
+      box-shadow: 0 1.8rem 4rem rgba(0, 0, 0, .35)
+      transform: translateY(-.5rem)
+
+    @include mix.mobile
+      min-height: 0
+      padding: 2rem
+
+  // =========================
+  // CARD ICON
+  // =========================
+
+  &__icon
+    @include mix.icon-box(4.8rem, 1.3rem, rgba(var(--service-accent-rgb), 0.14))
+    position: relative
+    z-index: 2
+    margin-bottom: 1.8rem
+    box-shadow: 0 0 2rem rgba(var(--service-accent-rgb), 0.08)
+
+    .icon
+      @include mix.icon-mask(2.2rem, var(--service-accent-light))
+
+    @include mix.mobile
+      width: 4.4rem
+      height: 4.4rem
+      margin-bottom: 1.5rem
+
+      .icon
+        width: 2rem
+        height: 2rem
+
+  // =========================
+  // CARD CONTENT
+  // =========================
+
+  &__card-title
+    position: relative
+    z-index: 2
+    margin: 0 0 .8rem
+    color: vars.$color-white
+    font-family: vars.$font-main
+    font-size: 1.65rem
+    font-weight: 800
+    line-height: 1.3
+
+    @include mix.mobile
+      font-size: 1.55rem
+
+  &__card-description
+    position: relative
+    z-index: 2
+    margin: 0
+    color: vars.$color-text-secondary
+    font-family: vars.$font-main
+    font-size: 1.3rem
+    line-height: 1.55
+
+    @include mix.mobile
+      font-size: 1.25rem
+
+  // =========================
+  // BOTTOM NOTES
+  // =========================
+
+  &__notes
+    display: flex
+    flex-wrap: wrap
+    gap: 1.4rem
+    margin-top: 2.4rem
+
+    @include mix.tablet
+      display: grid
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+
+    @include mix.mobile
+      grid-template-columns: 1fr
+      gap: 1rem
+      margin-top: 1.8rem
+
+  &__note
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    padding: 1.3rem 2rem
+    border: .1rem solid rgba(255, 198, 41, .28)
+    border-radius: 1.4rem
+    background: rgba(255, 198, 41, .07)
+    color: #f0ece2
+    font-size: 1.35rem
+    font-weight: 700
+    line-height: 1.35
+
+    @include mix.tablet
+      width: 100%
+      box-sizing: border-box
+
+    @include mix.mobile
+      padding: 1.2rem 1.5rem
+      font-size: 1.25rem
+
+  &__note-icon
+    @include mix.icon-box(2.2rem, 50%, rgba(255, 198, 41, 0.18))
+    border: 0.1rem solid rgba(255, 198, 41, 0.3)
+
+    .icon
+      @include mix.icon-mask(1.25rem)

@@ -1,0 +1,258 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.footer
+  position: relative
+  overflow: hidden
+  padding: 7.2rem 4.8rem 2.4rem
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.07)
+  background: vars.$color-dark
+
+  &__container
+    position: relative
+    max-width: 136rem
+    margin: 0 auto
+
+  &__top
+    position: relative
+    z-index: 2
+    display: grid
+    grid-template-columns: minmax(28.8rem, 0.85fr) minmax(0, 1.35fr)
+    gap: 11.2rem
+    padding-bottom: 6.4rem
+
+  &__brand
+    max-width: 40rem
+
+  &__logo
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    margin-bottom: 2rem
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 1.6rem
+    font-weight: 900
+
+  &__logo-icon
+    display: block
+    width: 3.2rem
+    height: 3.2rem
+    flex: 0 0 auto
+    object-fit: contain
+
+  &__logo-text span
+    color: vars.$color-primary
+
+  &__description
+    @include mix.card-text
+    max-width: 32rem
+    margin: 0 0 2.4rem
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    gap: 0.8rem
+
+  &__contact
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    width: fit-content
+    color: vars.$color-white
+
+  &__contact-icon
+    @include mix.flex-center
+    width: 3.8rem
+    height: 3.8rem
+    flex: 0 0 auto
+    border: 0.1rem solid rgba(255, 198, 41, 0.2)
+    border-radius: 1rem
+    background: rgba(255, 198, 41, 0.07)
+    color: vars.$color-primary
+
+    .icon
+      width: 1.8rem
+      height: 1.8rem
+
+  &__contact-content
+    display: flex
+    flex-direction: column
+    gap: 0.2rem
+
+    small
+      color: #666056
+      font-size: 0.9rem
+      font-weight: 600
+      letter-spacing: 0.04em
+
+    strong
+      color: vars.$color-white
+      font-size: 1.2rem
+      font-weight: 700
+
+  &__navigation
+    display: grid
+    grid-template-columns: 0.75fr 0.8fr 1.4fr 1.3fr
+    gap: 4rem
+
+  &__column
+    min-width: 0
+
+    h3
+      margin: 0 0 1.6rem
+      color: vars.$color-white
+      font-size: 1.2rem
+      font-weight: 800
+
+    ul
+      display: flex
+      flex-direction: column
+      gap: 1.2rem
+      margin: 0
+      padding: 0
+      list-style: none
+
+    a
+      color: vars.$color-text-secondary
+      font-size: 1.2rem
+      line-height: 1.4
+      transition: color 0.2s ease
+
+      &:hover
+        color: vars.$color-primary
+
+  &__socials
+    display: flex
+    flex-wrap: wrap
+    gap: 1rem
+
+  &__social
+    @include mix.flex-center
+    width: 3.6rem
+    height: 3.6rem
+    flex: 0 0 auto
+    border-radius: 0.8rem
+    background: rgba(255, 255, 255, 0.055)
+    color: vars.$color-white
+    transition: background 0.2s ease, transform 0.2s ease
+
+    .icon
+      width: 1.6rem
+      height: 1.6rem
+      opacity: 0.75
+      transition: opacity 0.2s ease
+
+    &:hover
+      background: rgba(255, 198, 41, 0.1)
+      transform: translateY(-0.2rem)
+
+      .icon
+        opacity: 1
+
+  &__word
+    position: absolute
+    z-index: 0
+    right: -3.2rem
+    bottom: -4rem
+    left: -3.2rem
+    overflow: hidden
+    color: rgba(255, 255, 255, 0.018)
+    font-family: vars.$font-title
+    font-size: 19.2rem
+    font-weight: 900
+    line-height: 0.75
+    text-align: center
+    white-space: nowrap
+    pointer-events: none
+
+  &__bottom
+    font-family: ui-monospace, monospace
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    gap: 3.2rem
+    padding-top: 2.4rem
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.055)
+
+    p
+      max-width: 56rem
+      margin: 0
+      color: #625d55
+      font-size: 1.1rem
+      line-height: 1.5
+
+      &:last-child
+        flex: 0 0 auto
+        text-align: right
+
+  @include mix.laptop
+    padding: 6.4rem 3.2rem 2.4rem
+
+    &__top
+      grid-template-columns: 1fr
+      gap: 4.8rem
+
+    &__brand
+      max-width: 48rem
+
+    &__navigation
+      grid-template-columns: repeat(4, minmax(0, 1fr))
+
+    &__word
+      font-size: 14.4rem
+
+  @include mix.tablet
+    &__navigation
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+      row-gap: 4rem
+
+    &__bottom
+      align-items: flex-start
+      flex-direction: column
+
+      p
+        &:last-child
+          text-align: left
+
+    &__word
+      font-size: 9.6rem
+
+  @include mix.mobile
+    padding: 4.8rem 1.8rem 2rem
+
+    &__top
+      gap: 4rem
+      padding-bottom: 4.8rem
+
+    &__brand
+      max-width: none
+
+    &__description
+      max-width: 28.8rem
+
+    &__navigation
+      grid-template-columns: 1fr 1fr
+      gap: 3.2rem 2rem
+
+    &__column
+      h3
+        margin-bottom: 1.4rem
+
+      ul
+        gap: 1rem
+
+    &__column--socials
+      grid-column: 1 / -1
+
+    &__socials
+      gap: 0.8rem
+
+    &__bottom
+      gap: 1.6rem
+
+    &__word
+      bottom: 1.6rem
+      font-size: 7.2rem

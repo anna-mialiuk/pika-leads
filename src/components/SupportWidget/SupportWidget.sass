@@ -1,0 +1,398 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+$widget-z: 900
+$offset: 2.4rem
+$fab-size: 6.4rem
+
+=icon($size: 2rem, $stroke: 2)
+  svg
+    width: $size
+    height: $size
+    fill: none
+    stroke: currentColor
+    stroke-linecap: round
+    stroke-linejoin: round
+    stroke-width: $stroke
+
+=focus-ring($color: vars.$color-primary)
+  &:focus-visible
+    outline: 0.2rem solid $color
+    outline-offset: 0.2rem
+
+// ---------- Кнопка чату ----------
+.support-widget
+  &__fab
+    position: fixed
+    right: $offset
+    bottom: $offset
+    z-index: $widget-z
+    display: flex
+    align-items: center
+    justify-content: center
+    width: $fab-size
+    height: $fab-size
+    padding: 0
+    border: 0
+    border-radius: 50%
+    background: vars.$color-primary
+    box-shadow: 0 0 0 0.8rem rgba(255, 198, 41, 0.12), 0 1.2rem 3.6rem rgba(255, 198, 41, 0.35)
+    color: vars.$color-dark
+    cursor: pointer
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+    +icon(2.6rem, 2)
+    +focus-ring(vars.$color-white)
+
+    &:hover
+      transform: scale(1.05)
+
+  &__badge
+    position: absolute
+    top: -0.2rem
+    right: -0.2rem
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 2.2rem
+    height: 2.2rem
+    padding: 0 0.6rem
+    border: 0.2rem solid vars.$color-dark
+    border-radius: vars.$radius-pill
+    background: #ff4d4d
+    color: #fff
+    font-size: 1.1rem
+    font-weight: 800
+
+// ---------- Спільна форма «телефон + кнопка» ----------
+.callback-form
+  @include mix.flex-column(1rem)
+
+  &__submit
+    @include mix.form-submit
+    min-height: 5rem
+    font-size: 1.5rem
+    +focus-ring(vars.$color-white)
+
+
+  .phone-field--invalid
+    border-color: #ff6255
+    box-shadow: 0 0 0 0.3rem rgba(255, 98, 85, 0.12)
+
+// ---------- Панель чату ----------
+.chat-panel
+  position: fixed
+  right: $offset
+  bottom: $offset + $fab-size + 1.6rem
+  z-index: $widget-z
+  display: flex
+  flex-direction: column
+  width: 38rem
+  height: min(56rem, calc(100vh - 14rem))
+  overflow: hidden
+  border: 0.1rem solid vars.$color-border
+  border-radius: 2.2rem
+  background: vars.$color-surface-alt
+  box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.55)
+  animation: support-rise 0.22s ease
+
+  &__header
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    padding: 1.6rem 1.6rem 1.6rem 1.8rem
+    background: vars.$color-primary
+    color: vars.$color-dark
+
+  &__avatar
+    position: relative
+    display: flex
+    flex-shrink: 0
+    align-items: center
+    justify-content: center
+    width: 4.4rem
+    height: 4.4rem
+    border-radius: 1.2rem
+    background: vars.$color-dark
+    color: vars.$color-primary
+
+    img
+      width: 2.6rem
+      height: 2.6rem
+
+    &::after
+      content: ""
+      position: absolute
+      right: -0.3rem
+      bottom: -0.3rem
+      width: 1.2rem
+      height: 1.2rem
+      border: 0.2rem solid vars.$color-primary
+      border-radius: 50%
+      background: vars.$color-green
+
+  &__heading
+    @include mix.flex-column(0.2rem)
+    flex: 1
+    min-width: 0
+
+    strong
+      font-family: vars.$font-title
+      font-size: 1.5rem
+      font-weight: 800
+
+    span
+      font-size: 1.2rem
+      font-weight: 600
+
+  &__close
+    display: flex
+    flex-shrink: 0
+    align-items: center
+    justify-content: center
+    width: 3.6rem
+    height: 3.6rem
+    padding: 0
+    border: 0
+    border-radius: 1rem
+    background: transparent
+    color: vars.$color-dark
+    cursor: pointer
+    +icon(2rem, 2.4)
+    +focus-ring(vars.$color-dark)
+
+    &:hover
+      background: rgba(0, 0, 0, 0.08)
+
+  &__messages
+    @include mix.flex-column(1rem)
+    flex: 1
+    padding: 1.6rem
+    overflow-y: auto
+    overscroll-behavior: contain
+
+  &__message
+    max-width: 88%
+    padding: 1.2rem 1.4rem
+    border-radius: 1.4rem
+    font-size: 1.4rem
+    line-height: 1.45
+
+    p
+      margin: 0
+
+    &--bot
+      align-self: flex-start
+      border-top-left-radius: 0.4rem
+      background: rgba(255, 255, 255, 0.06)
+      color: vars.$color-white
+
+    &--user
+      align-self: flex-end
+      border-top-right-radius: 0.4rem
+      background: vars.$color-primary
+      color: vars.$color-dark
+      font-weight: 600
+
+  &__cta
+    margin-top: 1rem
+    padding: 0.9rem 1.4rem
+    border: 0
+    border-radius: 1rem
+    background: vars.$color-primary
+    color: vars.$color-dark
+    font-family: inherit
+    font-size: 1.3rem
+    font-weight: 800
+    cursor: pointer
+    +focus-ring(vars.$color-white)
+
+  &__form
+    margin-top: 1.2rem
+
+    .phone-field
+      height: 4.8rem
+
+  &__typing
+    display: flex
+    gap: 0.5rem
+    padding: 1.4rem 1.6rem
+
+    span
+      width: 0.7rem
+      height: 0.7rem
+      border-radius: 50%
+      background: vars.$color-text-secondary
+      animation: support-typing 1s infinite ease-in-out
+
+      &:nth-child(2)
+        animation-delay: 0.15s
+
+      &:nth-child(3)
+        animation-delay: 0.3s
+
+  &__quick
+    display: flex
+    flex-wrap: wrap
+    gap: 0.8rem
+    padding: 0 1.6rem 1.4rem
+
+    button
+      padding: 0.9rem 1.4rem
+      border: 0.1rem solid rgba(255, 198, 41, 0.38)
+      border-radius: vars.$radius-pill
+      background: rgba(255, 198, 41, 0.06)
+      color: vars.$color-primary
+      font-family: inherit
+      font-size: 1.3rem
+      font-weight: 700
+      cursor: pointer
+      transition: background 0.2s ease
+      +focus-ring
+
+      &:hover
+        background: rgba(255, 198, 41, 0.14)
+
+  &__input
+    display: flex
+    gap: 1rem
+    padding: 1.4rem 1.6rem 1.6rem
+    border-top: 0.1rem solid vars.$color-border
+
+    input
+      @include mix.form-input(#11100f, #11100f)
+      flex: 1
+      height: 4.8rem
+      padding: 0 1.6rem
+      font-size: 1.4rem
+
+    button
+      display: flex
+      flex-shrink: 0
+      align-items: center
+      justify-content: center
+      width: 4.8rem
+      height: 4.8rem
+      padding: 0
+      border: 0
+      border-radius: 1rem
+      background: vars.$color-primary
+      color: vars.$color-dark
+      cursor: pointer
+      +icon(2rem, 2)
+      +focus-ring(vars.$color-white)
+
+      &:disabled
+        opacity: 0.55
+        cursor: default
+
+// ---------- Попап «Передзвонити вам?» ----------
+.callback-popup
+  position: fixed
+  right: $offset
+  bottom: $offset + $fab-size + 1.6rem
+  z-index: $widget-z
+  width: 34rem
+  max-height: calc(100vh - 11rem)
+  overflow-y: auto
+  padding: 2.2rem 2.2rem 1.6rem
+  border: 0.1rem solid vars.$color-border
+  border-radius: 2rem
+  background: vars.$color-surface-alt
+  box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.55)
+  animation: support-rise 0.3s ease
+
+  &__close
+    position: absolute
+    top: 1.2rem
+    right: 1.2rem
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 2.8rem
+    height: 2.8rem
+    padding: 0
+    border: 0
+    border-radius: 0.8rem
+    background: transparent
+    color: vars.$color-text-secondary
+    cursor: pointer
+    +icon(1.6rem, 2.2)
+    +focus-ring
+
+    &:hover
+      color: vars.$color-white
+
+  &__head
+    display: flex
+    gap: 1.4rem
+    margin-bottom: 1.8rem
+    padding-right: 2rem
+
+  &__icon
+    display: flex
+    flex-shrink: 0
+    align-items: center
+    justify-content: center
+    width: 4.4rem
+    height: 4.4rem
+    border-radius: 1.2rem
+    background: rgba(255, 255, 255, 0.06)
+    color: vars.$color-primary
+    +icon(2rem, 1.8)
+
+  &__title
+    display: block
+    margin-bottom: 0.4rem
+    color: vars.$color-white
+    font-family: vars.$font-title
+    font-size: 1.7rem
+    font-weight: 800
+
+  &__text
+    margin: 0
+    color: vars.$color-text-secondary
+    font-size: 1.3rem
+    line-height: 1.45
+
+  &__note
+    margin: 1.2rem 0 0
+    color: vars.$color-text-dim
+    font-size: 1.2rem
+    text-align: center
+
+// ---------- Мобільні ----------
+@include mix.mobile
+  .support-widget__fab
+    right: 1.6rem
+    bottom: 1.6rem
+    width: 5.6rem
+    height: 5.6rem
+
+  .chat-panel,
+  .callback-popup
+    right: 1.2rem
+    left: 1.2rem
+    bottom: 8.8rem
+    width: auto
+
+  .chat-panel
+    height: min(56rem, calc(100vh - 11rem))
+
+@keyframes support-rise
+  from
+    opacity: 0
+    transform: translateY(1.2rem)
+
+@keyframes support-typing
+  0%, 80%, 100%
+    opacity: 0.3
+    transform: translateY(0)
+  40%
+    opacity: 1
+    transform: translateY(-0.3rem)
+
+@media (prefers-reduced-motion: reduce)
+  .chat-panel,
+  .callback-popup,
+  .chat-panel__typing span
+    animation: none

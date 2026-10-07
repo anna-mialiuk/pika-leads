@@ -1,0 +1,350 @@
+{
+  "id": "meta-andromeda-gem",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "After Meta published technical materials about Andromeda and GEM, a convenient explanation quickly spread through the marketing community: GEM finds the people, and Andromeda decides which ad to show them. For a short post, this model sounds impressive. Technically, it’s inaccurate."
+    },
+    {
+      "type": "paragraph",
+      "text": "Andromeda and GEM do work within the same ad ecosystem, but they perform different functions and aren’t two competing buttons in Ads Manager. Andromeda is a system for personalized selection of ad candidates at an early stage. GEM is a large foundational recommendation model whose knowledge is passed on to many other models in the ad stack."
+    },
+    {
+      "type": "paragraph",
+      "text": "To understand their impact on campaigns, you first need to understand the multi-layered ad delivery system."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "ad-delivery-system",
+      "text": "How Meta chooses an ad for a specific impression"
+    },
+    {
+      "type": "paragraph",
+      "text": "When a user opens Facebook or Instagram, the system has a fraction of a second to pick an ad from a huge number of possible candidates. Checking every ad with the most complex model is impossible — it would be far too slow and expensive."
+    },
+    {
+      "type": "paragraph",
+      "text": "So the process consists of several layers:"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Determining eligible candidates, taking into account settings, policies, geography and other constraints",
+        "Retrieval — quickly selecting a few thousand relevant ads from tens of millions of candidates",
+        "Further ranking by more complex models that predict the value of the impression for the user and the advertiser",
+        "An auction that takes into account the bid, the predicted likelihood of the desired action and ad quality",
+        "Showing the winner and feeding new behavioral and conversion signals back into the system"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This is a simplified diagram, but it’s more accurate than the formula “one AI finds people, the other picks the creative”."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "andromeda",
+      "text": "What Andromeda is"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta introduced Andromeda as a personalized ads retrieval engine. Its job is to efficiently narrow a huge pool of available ads down to a much smaller group of relevant candidates for the next stages."
+    },
+    {
+      "type": "paragraph",
+      "text": "According to Meta, retrieval is the first stage of a multi-layered recommendation system. It processes orders of magnitude more ads than the later stages and has to work under very tight time constraints."
+    },
+    {
+      "type": "paragraph",
+      "text": "Andromeda uses deep neural networks, a hierarchical index and Meta and NVIDIA hardware infrastructure. The system learns to detect complex relationships between people’s interests, products, services and ads."
+    },
+    {
+      "type": "paragraph",
+      "text": "In practice, this means your creative first has to get into the set of candidates the system considers relevant for a specific impression request. Only then do more complex models evaluate it in more detail."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "gem",
+      "text": "What GEM is"
+    },
+    {
+      "type": "paragraph",
+      "text": "GEM stands for Generative Ads Recommendation Model. Meta calls it a foundational ad recommendation model built on an LLM-like paradigm and trained on a large volume of interactions with ads and organic content."
+    },
+    {
+      "type": "paragraph",
+      "text": "An important detail: GEM shouldn’t be pictured as a single model that serves every impression on its own. Its knowledge is passed on to other models in the ad stack through knowledge distillation, representation learning and parameter sharing."
+    },
+    {
+      "type": "paragraph",
+      "text": "GEM works with:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "sequences of user actions",
+        "user and ad attributes",
+        "creative formats and representations",
+        "ad objectives",
+        "clicks, views and conversions",
+        "interactions across Meta’s surfaces"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "GEM’s job is to improve the whole ad stack’s ability to understand complex patterns and make more accurate predictions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "andromeda-vs-gem",
+      "text": "Andromeda and GEM don’t compete"
+    },
+    {
+      "type": "paragraph",
+      "text": "Andromeda handles scalable early candidate selection. GEM builds deeper knowledge about interactions between users, content and ads and passes it on to other models in the system."
+    },
+    {
+      "type": "paragraph",
+      "text": "They can’t be meaningfully compared on a “which one matters more” basis. They’re different layers of the same architecture."
+    },
+    {
+      "type": "paragraph",
+      "text": "A handy analogy:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Andromeda is a librarian who, in a second, picks a few thousand potentially relevant books out of millions",
+        "Ranking models are experts who evaluate the shorter list in more detail",
+        "GEM is a large knowledge base and teacher that helps these experts understand patterns better",
+        "The auction is the final mechanism that determines the winner based on predicted value and ad conditions"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "broad-audiences",
+      "text": "Why broad audiences have become stronger"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta’s modern models learn from sequences of events, content interactions and large volumes of behavioral data. This lets the system find relevant subgroups within a broad audience without manually listing dozens of interests."
+    },
+    {
+      "type": "paragraph",
+      "text": "But broad targeting doesn’t mean settings no longer matter. The system still depends on:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "the correct campaign objective",
+        "the chosen optimization event",
+        "budget and bidding strategy",
+        "geographic and legal restrictions",
+        "creative quality and variety",
+        "Pixel and Conversions API data",
+        "real conversions after the impression"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "A broad audience gives the algorithm freedom. Quality signals determine whether it uses that freedom effectively."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "campaign-structure",
+      "text": "Is the “1 campaign — 1 ad set — 1 creative” structure really the best?"
+    },
+    {
+      "type": "paragraph",
+      "text": "There’s no universal structure that Andromeda always “likes”. Simple campaigns often perform better not because of some secret algorithm preference, but because budget and conversion signals are concentrated."
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta itself recommends consolidating similar ad sets when excessive fragmentation prevents them from getting enough results for learning. But a single creative also creates a risk of rapid audience fatigue and gives the system no choice between different messages."
+    },
+    {
+      "type": "paragraph",
+      "text": "A practical approach:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "don’t duplicate identical audiences across many ad sets without a clear hypothesis",
+        "concentrate budget where an ad set can get enough events",
+        "test several genuinely different creative concepts, not ten nearly identical banners",
+        "keep exploring new hypotheses separate from stable scaling",
+        "don’t change the campaign every hour because of short-term fluctuations"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "In other words, a clean signal doesn’t necessarily mean a single creative. It means a clear objective, a correct event, enough data and a controlled number of variables."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "critical-signals",
+      "text": "Which signals are critical after Andromeda and GEM"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "A strong creative"
+    },
+    {
+      "type": "paragraph",
+      "text": "The creative has to explain the product and the reason to pay attention quickly. The algorithm can find a relevant user, but it can’t turn a weak message into a compelling offer."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "A clear offer"
+    },
+    {
+      "type": "paragraph",
+      "text": "The offer defines exactly what the person gets, who the solution is for, why it’s relevant now and what the next step is. A vague offer produces vague behavior and weak signals."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The correct optimization event"
+    },
+    {
+      "type": "paragraph",
+      "text": "If the business needs sales but the campaign optimizes for clicks, the system learns to find people who are prone to clicking. That’s not a technical error by the algorithm — it’s the consequence of the task it was given."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "A clean Pixel and Conversions API"
+    },
+    {
+      "type": "paragraph",
+      "text": "Duplicates, fake Purchase events, mixed sources and wrong parameters degrade the quality of training data. Fewer real events are better than many events that don’t reflect the business result."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "A quality post-click experience"
+    },
+    {
+      "type": "paragraph",
+      "text": "A slow website, a different price, an unexpected redirect or a broken form ruin the user’s journey. The algorithm is responsible for delivery, but conversion depends on the whole funnel."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "advertising-strategy",
+      "text": "What to change in your ad strategy"
+    },
+    {
+      "type": "list",
+      "style": "ordered",
+      "items": [
+        "Build creative concepts, not endless cosmetic variations of one banner",
+        "Send events that are as close as possible to real business value",
+        "Don’t split the budget into structures that can’t accumulate data",
+        "Use broader audiences where geography, the product and legislation allow",
+        "Analyze not only CTR and CPC but also lead quality, sales, margin and return on investment",
+        "Compare campaigns over a sufficient period and account for the learning phase",
+        "Sync ad signals with your CRM and server-side analytics"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "conclusion",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Andromeda and GEM don’t cancel out marketing. They make mistakes in signals more expensive and strong inputs more valuable."
+    },
+    {
+      "type": "paragraph",
+      "text": "Andromeda helps quickly select relevant ad candidates. GEM learns from a huge volume of interactions and passes knowledge to the ad system’s models. Further models and the auction evaluate which ad creates the greatest predicted value."
+    },
+    {
+      "type": "paragraph",
+      "text": "So the advertiser’s main question isn’t “which AI is running Meta now”. It’s this: what data, creatives, events and business outcomes are we giving the system to learn from?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "faq",
+      "text": "FAQ"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What does Andromeda do in Meta Ads?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Andromeda works at the retrieval stage: it selects a few thousand relevant ad candidates from tens of millions of available ads for further ranking."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What does GEM do?"
+    },
+    {
+      "type": "paragraph",
+      "text": "GEM is a foundational ad recommendation model. It learns from large volumes of interactions and passes knowledge to other models in the ad stack."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Has GEM replaced Andromeda?"
+    },
+    {
+      "type": "paragraph",
+      "text": "No. They perform different functions in the same system and can work together."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Should I only run broad audiences now?"
+    },
+    {
+      "type": "paragraph",
+      "text": "No. Broad audiences often give the system more freedom, but results depend on the product, geography, optimization event, budget, data and creatives."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "How many creatives should an ad set have?"
+    },
+    {
+      "type": "paragraph",
+      "text": "There’s no universal number. Give the system several meaningfully different concepts, but don’t spread the budget across dozens of barely different variations."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "sources",
+      "text": "Sources"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Engineering at Meta: Meta Andromeda",
+        "Engineering at Meta: Meta’s Generative Ads Model (GEM)",
+        "Engineering at Meta: Sequence learning for personalized ads",
+        "Meta Business Help Center: About Ad Auctions",
+        "Meta Business Help Center: About managing ad volume"
+      ]
+    }
+  ]
+}

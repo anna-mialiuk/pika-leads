@@ -1,0 +1,386 @@
+{
+  "id": "meta-ad-rejections-after-launch",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "An ad passed review, got its first impressions and clicks, and then a few hours or days later was rejected. To the advertiser, this looks illogical: if the ad was already approved, why did the decision change?"
+    },
+    {
+      "type": "paragraph",
+      "text": "The reason is that an “Active” status isn’t a lifetime guarantee of compliance. Meta states directly that an ad may start receiving impressions before it has been checked against all policies, and all ads can be re-reviewed at any time."
+    },
+    {
+      "type": "paragraph",
+      "text": "So it helps to think not in terms of “passed or failed” but in terms of continuous monitoring. The system can pick up new signals from the landing page, user complaints, creative changes, asset behavior or an automated re-check."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "ad-review-process",
+      "text": "How Meta ad review works"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta says most ads are reviewed automatically before they start running, usually within 24 hours, although the process can take longer. The review may cover:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "images or video",
+        "primary text, headline and description",
+        "targeting settings",
+        "the product or service",
+        "the destination page",
+        "other related components of the ad experience"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "After launch, the ad remains subject to the policies. A re-review can be triggered by the automated system, an ad update, new signals or a user complaint."
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta doesn’t publish an official schedule like “day one — creative, day two — domain, day three — languages”. Such a sequence may sometimes match practical observations, but it isn’t a guaranteed calendar."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "approval-not-final",
+      "text": "Why initial approval doesn’t guarantee stability"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Not all policies can be checked before the first impression"
+    },
+    {
+      "type": "paragraph",
+      "text": "The official help center allows that an ad may start delivering before review against all rules is complete. So the initial status only reflects the system’s current decision."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The landing page may change"
+    },
+    {
+      "type": "paragraph",
+      "text": "A website can show different content due to an error, geolocation, cookies, an A/B test, a redirect or an update. If the post-click experience doesn’t match the ad or the policies, the ad may be re-reviewed."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Users file complaints"
+    },
+    {
+      "type": "paragraph",
+      "text": "A gap between expectation and the actual offer leads to hidden ads, negative reactions and complaints. Even a formally permitted product can create a low-quality experience through an exaggerated offer."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The context of your assets changes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Repeat violations by a Page, ad account or other business assets can affect access to advertising. If the system sees attempts to evade control through new accounts or content swapping, the risk of penalties grows."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Policies and enforcement models are updated"
+    },
+    {
+      "type": "paragraph",
+      "text": "The ad system is constantly changing. What passed before doesn’t automatically become safe forever. This is especially true for financial products, health, gambling, alcohol, pharmaceuticals and other regulated categories."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "post-launch-monitoring",
+      "text": "Why the problem may be in the landing page"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The first hours: checking delivery"
+    },
+    {
+      "type": "paragraph",
+      "text": "Monitor the ad status, actual impressions, and the correctness of URLs, UTM tags and events. Check the website from a mobile device and from the geography the campaign targets."
+    },
+    {
+      "type": "paragraph",
+      "text": "At this stage, don’t judge the campaign’s quality by a few clicks. The task is to make sure the technical path works and the user sees exactly what the ad promises."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The first day: checking consistency"
+    },
+    {
+      "type": "paragraph",
+      "text": "Compare the copy, the creative, the Facebook Page, Instagram and the landing page. Check comments, hidden ads, system notifications and website logs for errors."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the ad is rejected, identify the specific policy and review the entire user journey. Don’t stop at replacing one word if the problem is on the website."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Days two and three: checking signal quality"
+    },
+    {
+      "type": "paragraph",
+      "text": "Compare Ads Manager, website analytics and the CRM. Look for duplicate events, abnormally short sessions, form errors, geography mismatches and sharp drops in delivery."
+    },
+    {
+      "type": "paragraph",
+      "text": "If the ad stays active, that’s no reason to ignore lead quality. The wrong optimization event can steadily bring in cheap but worthless actions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "asset-reuse-risks",
+      "text": "Why reusing the same assets can cause problems"
+    },
+    {
+      "type": "paragraph",
+      "text": "Advertisers often move one creative, domain or product into many ad accounts. Reusing brand materials isn’t a violation in itself. Large companies legitimately use one domain across many campaigns."
+    },
+    {
+      "type": "paragraph",
+      "text": "The risk arises in a different case: when duplication is used to evade restrictions already imposed, disguise a prohibited product or continue the same violating practice through new assets. Meta explicitly prohibits attempts to circumvent review and enforcement."
+    },
+    {
+      "type": "paragraph",
+      "text": "So after a rejection, you need to fix the root cause rather than just create another copy."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "after-rejection",
+      "text": "What not to do after a rejection"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Mass-duplicate the same ad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dozens of copies don’t fix the violation and make analysis harder. If the cause is systemic, all the copies stay at risk."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Use cloaking or content swapping"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta defines cloaking as deliberately showing different external content in order to circumvent policies. It’s a separate violation that can lead to broader asset restrictions."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Appeal without checking the website"
+    },
+    {
+      "type": "paragraph",
+      "text": "If the problem persists, a successful review of one ad doesn’t guarantee stability. Before appealing, check the creative, copy, targeting, page, domain and product."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Change everything at once"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you replace the creative, domain, page, event and campaign structure all at once, the team won’t know what exactly caused the problem or fixed it."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Treat any technical visit as proof of manual review"
+    },
+    {
+      "type": "paragraph",
+      "text": "Server logs can include bots, previews, security scanners, analytics systems, browsers with limited data sharing and real users. You can’t reliably tell who exactly checked the website from a single IP or unusual behavior."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "rejection-diagnostics",
+      "text": "A rejection diagnostic process"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 1. Record the state"
+    },
+    {
+      "type": "paragraph",
+      "text": "Save the error text, the policy, the time of rejection, the ad ID, the URL, the creative and recent changes. Without this, the team will be working on assumptions."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 2. Identify the level of the problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check what exactly is restricted: the ad, the post, the Page, the ad account, the business portfolio, an admin profile or the payment method."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 3. Walk the user journey"
+    },
+    {
+      "type": "paragraph",
+      "text": "Open the ad the way the target audience sees it. Check all redirects, pop-ups, forms, payments, the mobile version, policies and contact details."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 4. Match it to a specific policy"
+    },
+    {
+      "type": "paragraph",
+      "text": "Don’t hunt for a “trigger word” at random. Read the relevant section of the Advertising Standards and check the substance of the offer, not just the wording."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 5. Make the minimal sufficient fix"
+    },
+    {
+      "type": "paragraph",
+      "text": "Change the cause of the violation and document the action. If the problem is a misleading promise, cosmetically changing the banner’s color won’t help."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 6. Request a review if the decision is wrong"
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the official review process in Business Support Home. In your explanation, briefly state what the business advertises, which policy was applied and what was checked or fixed."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Step 7. Monitor after restoration"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check not only the status but also delivery, comments, events, traffic quality and asset notifications over the following days."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "landing-page-checklist",
+      "text": "A technical landing page checklist"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "HTTPS works without certificate errors",
+        "The page loads quickly on mobile internet",
+        "There are no looping or unexpected redirects",
+        "The content matches the ad copy and product",
+        "Price, currency, discount and terms don’t contradict each other",
+        "Contact details, a privacy policy and the required legal information are present",
+        "Forms work, and events fire only after a real action",
+        "The page doesn’t change its content specifically for review systems",
+        "A regulated product has the required age and geographic restrictions",
+        "Third-party scripts don’t cause errors or unsafe redirects"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "conclusion",
+      "text": "Conclusion"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ad approval is permission for the moment, not a final safety certificate. Meta can re-review active ads, and the advertiser has to control the whole journey: from the page and creative to the domain, events and the real user experience."
+    },
+    {
+      "type": "paragraph",
+      "text": "Today, stability comes not from how fast you re-upload but from the quality of your diagnostics. Clean assets, an honest offer, a matching landing page, correct data and a documented response to errors work better than trying to hide the problem from the system."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "faq",
+      "text": "FAQ"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Can Meta reject an ad after it has already been running?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Yes. Meta states that all ads can be re-reviewed at any time."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "How long does Meta Ads review take?"
+    },
+    {
+      "type": "paragraph",
+      "text": "According to Meta, most reviews are completed within 24 hours, but sometimes the process takes longer. Re-review is also possible after the ad starts running."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Is there an official check on day two or three?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Meta doesn’t publish such a calendar. The first 72 hours are useful as an internal window for heightened monitoring, not as an official review schedule."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "What should I do if an ad was rejected by mistake?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Check all components, record the state and submit a review request through the official interface. Don’t create mass copies until the cause is clear."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Can I use one domain in several ad accounts?"
+    },
+    {
+      "type": "paragraph",
+      "text": "On its own, this isn’t an automatic violation. The risk grows if new assets are used to bypass previous restrictions or continue a violating practice."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "sources",
+      "text": "Sources"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Meta Business Help Center: About Ads In Review",
+        "Meta Transparency Center: Introduction to the Advertising Standards",
+        "Meta Business Help Center: Common examples of advertising policy violations",
+        "Meta Transparency Center: Spam and cloaking",
+        "Meta Transparency Center: Unacceptable Business Practices",
+        "Meta Business Help Center: Request a review for a restricted advertising account"
+      ]
+    }
+  ]
+}

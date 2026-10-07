@@ -1,0 +1,178 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.blog-article-intro
+  padding: 5rem 0rem 7rem
+  background: #121110
+
+  @include mix.laptop
+    padding: 4.5rem 0rem 6rem
+
+  @include mix.mobile
+    padding: 3.5rem 0rem 5rem
+
+  &__container
+    @include mix.container
+    display: grid
+    grid-template-columns: minmax(0, 1fr) 28rem
+    align-items: start
+    gap: 6.8rem
+
+    @include mix.laptop
+      grid-template-columns: minmax(0, 1fr) 24rem
+      gap: 4rem
+
+    @include mix.tablet
+      grid-template-columns: 1fr
+
+  &__main
+    min-width: 0
+
+  &__badges
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 1.2rem
+    margin-bottom: 2.8rem
+
+  &__badge,
+  &__level
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 4.2rem
+    padding: 0 1.8rem
+    border-radius: 10rem
+    font-size: 1.25rem
+    font-weight: 800
+
+  &__badge
+    border: .1rem solid rgba(255, 198, 41, .45)
+    background: rgba(255, 198, 41, .12)
+    color: #ffc629
+    text-transform: uppercase
+
+  &__level
+    border: .1rem solid rgba(255, 117, 70, .5)
+    background: rgba(255, 117, 70, .03)
+    color: #ff7546
+
+  &__title
+    max-width: 90rem
+    margin: 0 0 2.6rem
+    color: #f7f5ef
+    font-family: vars.$font-title
+    font-size: 5.6rem
+    font-weight: 800
+    line-height: 1.03
+    letter-spacing: -.08rem
+
+    @include mix.laptop
+      font-size: 4.8rem
+
+    @include mix.tablet
+      font-size: 4.2rem
+
+    @include mix.mobile
+      margin-bottom: 2rem
+      font-size: 3.2rem
+      line-height: 1.08
+      letter-spacing: -.03rem
+
+    @include mix.mobile-s
+      font-size: 2.8rem
+
+  &__description
+    max-width: 90rem
+    margin: 0 0 3.6rem
+    color: #9f9b96
+    font-size: 1.75rem
+    font-weight: 400
+    line-height: 1.65
+
+    @include mix.mobile
+      margin-bottom: 3rem
+      font-size: 1.45rem
+
+  &__meta
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 2.2rem
+    min-height: 7.4rem
+    padding: 1.8rem 0
+    border-top: .1rem solid rgba(255, 255, 255, .09)
+    border-bottom: .1rem solid rgba(255, 255, 255, .09)
+
+    @include mix.mobile
+      gap: 1.5rem
+
+  &__author
+    display: flex
+    align-items: center
+    gap: 1.2rem
+
+    strong
+      color: #f7f5ef
+      font-size: 1.4rem
+      font-weight: 700
+
+  &__author-avatar
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 4.2rem
+    height: 4.2rem
+    flex: 0 0 auto
+    border-radius: 50%
+    background: #ffc629
+    color: #121110
+    font-family: vars.$font-title
+    font-size: 1.5rem
+    font-weight: 800
+
+  &__meta-item
+    color: #85817c
+    font-size: 1.35rem
+    font-weight: 600
+
+  &__aside
+    position: relative
+    align-self: stretch
+    min-width: 0
+
+    @include mix.tablet
+      display: none
+
+  &__toc
+    position: sticky
+    top: 10rem
+
+  &__toc-title
+    margin-bottom: 1.8rem
+    color: #5f5c58
+    font-size: 1.25rem
+    font-weight: 800
+    letter-spacing: .14em
+    text-transform: uppercase
+
+  &__toc-list
+    display: flex
+    flex-direction: column
+    gap: 0
+    padding-left: 2rem
+    border-left: .2rem solid rgba(255, 255, 255, .09)
+
+  &__toc-link
+    display: block
+    padding: .9rem 0
+    color: #8f8b86
+    font-size: 1.35rem
+    font-weight: 500
+    line-height: 1.4
+    text-decoration: none
+    transition: color .2s ease, transform .2s ease
+
+    &:hover
+      color: #ffc629
+      transform: translateX(.3rem)

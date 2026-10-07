@@ -1,0 +1,85 @@
+{
+  "id": "meta-bans",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Facebook bans wear everyone down: ad rejections, constant disapprovals, bans over creatives, spam flags and instant bans. Let’s look at the three levels where the cause usually lies and what to do at each one."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "creative-problems",
+      "text": "Creative problems"
+    },
+    {
+      "type": "paragraph",
+      "text": "If you’re getting unexplained rejections, there are a few techniques that most often help solve the problem:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Make a collage of photos or videos so the system doesn’t fully understand what the creative is — cut out the object you need",
+        "If a video gets rejected, cut it into 21 or 30 parts and insert 0.02–0.03-second fragments with a frame change. Insert these fragments at moments the system might find suspicious",
+        "The system often reacts specifically to text in the creative — test several versions, from more aggressive to softer",
+        "If nothing helps, analyze the creative with Gemini: it will point out what’s wrong with the video or image and give recommendations"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "text-problems",
+      "text": "Copy problems"
+    },
+    {
+      "type": "paragraph",
+      "text": "Here, the logic of the text and specific words play a key role. During storms, promises of fast results trigger the strongest reaction:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "Easy money",
+        "Guaranteed profit",
+        "Get rich quick",
+        "Earn thousands in one day",
+        "Lose weight fast in a week",
+        "Get rid of wrinkles forever",
+        "Struggling with your weight?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "And, in general, any provocative calls to action. The rule is simple: the more specific and calm the wording, the less attention it gets from moderation."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "landing-page-problems",
+      "text": "The problem people overlook: the landing page"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bans and rejections are often caused by the website, and the cause is hard to find — the system doesn’t always explain it. Meta’s main complaints arise when the website is missing:"
+    },
+    {
+      "type": "list",
+      "style": "unordered",
+      "items": [
+        "A contact page",
+        "A cookie policy",
+        "A privacy policy",
+        "A public offer agreement",
+        "The parties’ areas of responsibility"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "These are the core rules Meta requires directly — support chat most often points to them. Close this item once, and it will stop being a source of problems."
+    },
+    {
+      "type": "note",
+      "text": "A separate observation from practice: accounts with a spending history get banned far less often than new ones."
+    }
+  ]
+}

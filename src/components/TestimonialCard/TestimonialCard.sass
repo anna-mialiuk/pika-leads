@@ -1,0 +1,128 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.testimonial-card
+  position: relative
+  display: flex
+  flex-direction: column
+  @include mix.card
+  min-height: 40rem
+  padding: 2.8rem
+  background: linear-gradient(160deg, rgba(31, 28, 24, 0.96), rgba(21, 20, 18, 0.96))
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease
+
+  &:hover
+    border-color: rgba(255, 198, 41, 0.2)
+    transform: translateY(-0.4rem)
+
+  &--featured
+    border-color: rgba(255, 198, 41, 0.38)
+    box-shadow: inset 0 0 2.8rem rgba(255, 198, 41, 0.025)
+
+  &__quote
+    position: absolute
+    z-index: 0
+    top: -0.4rem
+    right: 2.4rem
+    color: rgba(255, 198, 41, 0.09)
+    font-family: Georgia, serif
+    font-size: 12.8rem
+    font-weight: 700
+    line-height: 1
+    pointer-events: none
+
+  &__rating
+    position: relative
+    z-index: 1
+    margin-bottom: 1.6rem
+    color: vars.$color-primary
+    font-size: 1.6rem
+    letter-spacing: 0.1em
+
+  &__badge
+    position: relative
+    z-index: 1
+    width: 100%
+    margin-bottom: 2.4rem
+    padding: 0.6rem 1.2rem
+    border: 0.1rem solid rgba(255, 198, 41, 0.3)
+    border-radius: vars.$radius-pill
+    background: rgba(255, 198, 41, 0.07)
+    color: vars.$color-primary
+    font-size: 1.1rem
+    font-weight: 800
+
+  &__body
+    position: relative
+    z-index: 1
+    display: flex
+    flex: 1
+    flex-direction: column
+
+  &__text
+    @include mix.card-text
+    display: -webkit-box
+    overflow: hidden
+    margin: 0
+    -webkit-line-clamp: 7
+    -webkit-box-orient: vertical
+
+    &--expanded
+      display: block
+      overflow: visible
+
+  &__more
+    display: inline-flex
+    align-items: center
+    gap: 0.8rem
+    width: fit-content
+    margin-top: 1.2rem
+    padding: 0
+    border: 0
+    background: transparent
+    color: vars.$color-primary
+    font-family: vars.$font-main
+    font-size: 1.2rem
+    font-weight: 800
+    cursor: pointer
+
+  &__author
+    position: relative
+    z-index: 1
+    display: flex
+    align-items: center
+    gap: 1.2rem
+    margin-top: 2.4rem
+    padding-top: 2rem
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.07)
+
+  &__avatar
+    @include mix.flex-center
+    width: 4.4rem
+    height: 4.4rem
+    flex: 0 0 auto
+    border-radius: 50%
+    background: vars.$color-primary
+    color: #171512
+    font-family: vars.$font-title
+    font-size: 1.4rem
+    font-weight: 900
+
+  &__author-info
+    min-width: 0
+
+    strong
+      display: block
+      margin-bottom: 0.3rem
+      color: vars.$color-white
+      font-size: 1.3rem
+      font-weight: 800
+
+    span
+      display: block
+      overflow: hidden
+      color: #847e72
+      font-size: 1.1rem
+      line-height: 1.3
+      text-overflow: ellipsis
+      white-space: nowrap

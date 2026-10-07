@@ -1,0 +1,26 @@
+@use './variables' as vars
+@use './mixins' as mix
+@use './reset'
+
+// 1rem = 10px на десктопі; від 1140px увесь макет пропорційно зменшується
+html
+  font-size: 62.5%
+  scroll-behavior: smooth
+
+  @include mix.laptop-big
+    font-size: 50%
+body
+  background: vars.$color-dark
+  color: vars.$color-white
+  font-family: vars.$font-main
+  font-size: 1.6rem
+  font-weight: 400
+  line-height: 1.5
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: vars.$font-title

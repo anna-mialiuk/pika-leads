@@ -1,0 +1,30 @@
+@use '../../styles/variables' as vars
+@use '../../styles/mixins' as mix
+
+.advantages
+  @include mix.section
+
+  &__container
+    @include mix.container
+    @include mix.container
+
+  &__title
+    @include mix.section-title
+    @include mix.section-title
+    max-width: 72rem
+    margin: 0 0 4.4rem
+    text-transform: uppercase
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+    gap: 2.4rem
+
+  @include mix.laptop
+    &__list
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+
+  @include mix.mobile
+
+    &__list
+      grid-template-columns: 1fr
