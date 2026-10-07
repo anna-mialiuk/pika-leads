@@ -98,7 +98,10 @@ function CaseRelated({ currentCase, cases = [] }) {
                 >
                   <img
                     className="case-related__image"
-                    src={caseItem.image}
+                    src={caseItem.imageCard || caseItem.image}
+                    width="840"
+                    height="368"
+                    decoding="async"
                     alt={caseItem.title}
                     loading="lazy"
                   />

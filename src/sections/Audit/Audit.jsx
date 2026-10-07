@@ -4,6 +4,7 @@ import Badge from "../../components/Badge/Badge";
 import AuditForm from "../../components/AuditForm/AuditForm";
 
 import auditExample from "../../assets/images/leadgen-audit.webp";
+import auditExampleSmall from "../../assets/images/leadgen-audit-800.webp";
 
 import "./Audit.sass";
 
@@ -45,6 +46,12 @@ function Audit() {
             <img
               className="audit__example-image"
               src={auditExample}
+              srcSet={`${auditExampleSmall} 800w, ${auditExample} 1672w`}
+              sizes="(max-width: 1024px) 92vw, 580px"
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
               alt={t("audit.exampleAlt")}
             />
 

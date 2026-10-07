@@ -1,6 +1,8 @@
 import metaAuditImage from "../assets/images/service-pages/meta-audit-checklist.webp";
 import googleAuditImage from "../assets/images/service-pages/google-audit-uk.webp";
+import googleAuditImageSmall from "../assets/images/service-pages/google-audit-uk-800.webp";
 import universalAuditImage from "../assets/images/service-pages/universal-audit-uk.webp";
+import universalAuditImageSmall from "../assets/images/service-pages/universal-audit-uk-800.webp";
 
 import { serviceProcessSteps } from "./serviceProcessSteps";
 
@@ -250,6 +252,8 @@ export const servicePages = {
       ],
 
       checklistImage: googleAuditImage,
+
+      checklistImageSmall: googleAuditImageSmall,
       checklistAlt: "Чек-лист аудиту Google Ads",
     },
 
@@ -366,6 +370,8 @@ export const servicePages = {
       ],
 
       checklistImage: universalAuditImage,
+
+      checklistImageSmall: universalAuditImageSmall,
       checklistAlt:
         "Універсальний чек-лист аудиту TikTok Ads, LinkedIn Ads та X Ads",
     },
@@ -483,6 +489,8 @@ export const servicePages = {
       ],
 
       checklistImage: universalAuditImage,
+
+      checklistImageSmall: universalAuditImageSmall,
       checklistAlt:
         "Універсальний чек-лист аудиту TikTok Ads, LinkedIn Ads та X Ads",
     },
@@ -600,6 +608,8 @@ export const servicePages = {
       ],
 
       checklistImage: universalAuditImage,
+
+      checklistImageSmall: universalAuditImageSmall,
       checklistAlt:
         "Універсальний чек-лист аудиту TikTok Ads, LinkedIn Ads та X Ads",
     },

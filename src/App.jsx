@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
@@ -6,14 +6,17 @@ import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
 import { LANGUAGES, LanguageLayout } from "./i18n";
 
 import Home from "./pages/Home/Home";
-import Cases from "./pages/Cases/Cases";
-import CasePage from "./pages/CasePage/CasePage";
-import Blog from "./pages/Blog/Blog";
-import BlogArticlePage from "./pages/BlogArticlePage/BlogArticlePage";
-import Team from "./pages/Team/Team";
-import Contacts from "./pages/Contacts/Contacts";
-import ServicePage from "./pages/ServicePage/ServicePage";
-import LegalPage from "./pages/LegalPage/LegalPage";
+// Головна вантажиться одразу, решта сторінок — окремими файлами при переході
+const Cases = lazy(() => import("./pages/Cases/Cases"));
+const CasePage = lazy(() => import("./pages/CasePage/CasePage"));
+const Blog = lazy(() => import("./pages/Blog/Blog"));
+const BlogArticlePage = lazy(
+  () => import("./pages/BlogArticlePage/BlogArticlePage"),
+);
+const Team = lazy(() => import("./pages/Team/Team"));
+const Contacts = lazy(() => import("./pages/Contacts/Contacts"));
+const ServicePage = lazy(() => import("./pages/ServicePage/ServicePage"));
+const LegalPage = lazy(() => import("./pages/LegalPage/LegalPage"));
 import { LEGAL_SLUGS } from "./content/api";
 
 /** Сторінки сайту — однакові для всіх мов */

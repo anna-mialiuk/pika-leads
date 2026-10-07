@@ -23,7 +23,14 @@ function ServiceCaseCard({ item, sourceLabel, isPreview }) {
         }
       >
         {item.image ? (
-          <img src={item.image} alt={item.title} loading="lazy" />
+          <img
+            src={item.imageCard || item.image}
+            width="840"
+            height="368"
+            alt={item.title}
+            loading="lazy"
+            decoding="async"
+          />
         ) : (
           <div className="service-cases__image-pattern" />
         )}

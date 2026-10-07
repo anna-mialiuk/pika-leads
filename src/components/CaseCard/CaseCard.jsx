@@ -8,6 +8,7 @@ function CaseCard({
   categoryColor,
   platform,
   image,
+  imageCard,
   number,
   kicker,
   title,
@@ -30,7 +31,10 @@ function CaseCard({
         >
           <img
             className="case-card__image"
-            src={image}
+            src={imageCard || image}
+            width="840"
+            height="368"
+            decoding="async"
             alt={title}
             loading="lazy"
           />

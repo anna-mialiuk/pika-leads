@@ -1,55 +1,107 @@
 import case01 from "../assets/images/cases/healthy-food-social-pages.webp";
+import case01Card from "../assets/images/cases/card/healthy-food-social-pages.webp";
 import case02 from "../assets/images/cases/womens-lingerie-store.webp";
+import case02Card from "../assets/images/cases/card/womens-lingerie-store.webp";
 import case03 from "../assets/images/cases/online-clothing-store.webp";
+import case03Card from "../assets/images/cases/card/online-clothing-store.webp";
 import case04 from "../assets/images/cases/smm-studio.webp";
+import case04Card from "../assets/images/cases/card/smm-studio.webp";
 import case05 from "../assets/images/cases/printed-tshirts-store.webp";
+import case05Card from "../assets/images/cases/card/printed-tshirts-store.webp";
 import case06 from "../assets/images/cases/car-and-motorcycle-mounts.webp";
+import case06Card from "../assets/images/cases/card/car-and-motorcycle-mounts.webp";
 import case07 from "../assets/images/cases/vedic-school.webp";
+import case07Card from "../assets/images/cases/card/vedic-school.webp";
 import case08 from "../assets/images/cases/pastry-school-webinar.webp";
+import case08Card from "../assets/images/cases/card/pastry-school-webinar.webp";
 import case09 from "../assets/images/cases/cars-from-usa.webp";
+import case09Card from "../assets/images/cases/card/cars-from-usa.webp";
 import case10 from "../assets/images/cases/psychology-center-franchise.webp";
+import case10Card from "../assets/images/cases/card/psychology-center-franchise.webp";
 import case11 from "../assets/images/cases/motivation-training.webp";
+import case11Card from "../assets/images/cases/card/motivation-training.webp";
 import case12 from "../assets/images/cases/kids-sugar-webinar.webp";
+import case12Card from "../assets/images/cases/card/kids-sugar-webinar.webp";
 import case13 from "../assets/images/cases/young-models-course.webp";
+import case13Card from "../assets/images/cases/card/young-models-course.webp";
 import case14 from "../assets/images/cases/weight-control-honey.webp";
+import case14Card from "../assets/images/cases/card/weight-control-honey.webp";
 import case15 from "../assets/images/cases/amograce-franchise.webp";
+import case15Card from "../assets/images/cases/card/amograce-franchise.webp";
 import case16 from "../assets/images/cases/speed-reading-webinars.webp";
+import case16Card from "../assets/images/cases/card/speed-reading-webinars.webp";
 import case17 from "../assets/images/cases/jobs-abroad.webp";
+import case17Card from "../assets/images/cases/card/jobs-abroad.webp";
 import case18 from "../assets/images/cases/online-shoe-store.webp";
+import case18Card from "../assets/images/cases/card/online-shoe-store.webp";
 import case19 from "../assets/images/cases/ovita-education-center.webp";
+import case19Card from "../assets/images/cases/card/ovita-education-center.webp";
 import case20 from "../assets/images/cases/chatbots-marketer-marathons.webp";
+import case20Card from "../assets/images/cases/card/chatbots-marketer-marathons.webp";
 import case21 from "../assets/images/cases/build-your-online-store-masterclass.webp";
+import case21Card from "../assets/images/cases/card/build-your-online-store-masterclass.webp";
 import case22 from "../assets/images/cases/beauty-hacking-webinars.webp";
+import case22Card from "../assets/images/cases/card/beauty-hacking-webinars.webp";
 import case23 from "../assets/images/cases/remote-smm-webinar.webp";
+import case23Card from "../assets/images/cases/card/remote-smm-webinar.webp";
 import case24 from "../assets/images/cases/successful-trader-webinar.webp";
+import case24Card from "../assets/images/cases/card/successful-trader-webinar.webp";
 import case25 from "../assets/images/cases/abhra-meditation.webp";
+import case25Card from "../assets/images/cases/card/abhra-meditation.webp";
 import case26 from "../assets/images/cases/sweets-and-joy-masterclass.webp";
+import case26Card from "../assets/images/cases/card/sweets-and-joy-masterclass.webp";
 import case27 from "../assets/images/cases/childrens-sugar-webinar.webp";
+import case27Card from "../assets/images/cases/card/childrens-sugar-webinar.webp";
 import case28 from "../assets/images/cases/reading-five-plus-masterclass.webp";
+import case28Card from "../assets/images/cases/card/reading-five-plus-masterclass.webp";
 import case29 from "../assets/images/cases/luxury-car-carbon-body-kits.webp";
+import case29Card from "../assets/images/cases/card/luxury-car-carbon-body-kits.webp";
 import case30 from "../assets/images/cases/psychologist-personal-brand-growth.webp";
+import case30Card from "../assets/images/cases/card/psychologist-personal-brand-growth.webp";
 import case31 from "../assets/images/cases/womens-clothing-instagram-shop.webp";
+import case31Card from "../assets/images/cases/card/womens-clothing-instagram-shop.webp";
 import case32 from "../assets/images/cases/luxury-womens-fashion-buyer.webp";
+import case32Card from "../assets/images/cases/card/luxury-womens-fashion-buyer.webp";
 import case33 from "../assets/images/cases/onlyfans-paid-subscriptions.webp";
+import case33Card from "../assets/images/cases/card/onlyfans-paid-subscriptions.webp";
 import case34 from "../assets/images/cases/telegram-trading-bot.webp";
+import case34Card from "../assets/images/cases/card/telegram-trading-bot.webp";
 import case35 from "../assets/images/cases/us-shopify-ecommerce.webp";
+import case35Card from "../assets/images/cases/card/us-shopify-ecommerce.webp";
 import case36 from "../assets/images/cases/lighting-store-roas.jpg";
+import case36Card from "../assets/images/cases/card/lighting-store-roas.webp";
 import case37 from "../assets/images/cases/furniture-store-roas.jpg";
+import case37Card from "../assets/images/cases/card/furniture-store-roas.webp";
 import case38 from "../assets/images/cases/massage-training-leads.jpg";
+import case38Card from "../assets/images/cases/card/massage-training-leads.webp";
 import case39 from "../assets/images/cases/photography-school-webinar.jpg";
+import case39Card from "../assets/images/cases/card/photography-school-webinar.webp";
 import case40 from "../assets/images/cases/relationship-psychology-training.jpg";
+import case40Card from "../assets/images/cases/card/relationship-psychology-training.webp";
 import case41 from "../assets/images/cases/dihelen-lingerie-store.jpg";
+import case41Card from "../assets/images/cases/card/dihelen-lingerie-store.webp";
 import case42 from "../assets/images/cases/apple-products-poland.webp";
+import case42Card from "../assets/images/cases/card/apple-products-poland.webp";
 import case43 from "../assets/images/cases/web-model-recruitment-europe.webp";
+import case43Card from "../assets/images/cases/card/web-model-recruitment-europe.webp";
 import case44 from "../assets/images/cases/trading-eu.jpg";
+import case44Card from "../assets/images/cases/card/trading-eu.webp";
 import case45 from "../assets/images/cases/p2p-exchange-telegram.jpg";
+import case45Card from "../assets/images/cases/card/p2p-exchange-telegram.webp";
 import case46 from "../assets/images/cases/crypto-arbitrage.jpg";
+import case46Card from "../assets/images/cases/card/crypto-arbitrage.webp";
 import case47 from "../assets/images/cases/trading-and-script-trading.jpg";
+import case47Card from "../assets/images/cases/card/trading-and-script-trading.webp";
 import case48 from "../assets/images/cases/cryptocurrency-investments.jpg";
+import case48Card from "../assets/images/cases/card/cryptocurrency-investments.webp";
 import case49 from "../assets/images/cases/sales-manager-dnipro.webp";
+import case49Card from "../assets/images/cases/card/sales-manager-dnipro.webp";
 import case50 from "../assets/images/cases/money-fest-kazakhstan.webp";
+import case50Card from "../assets/images/cases/card/money-fest-kazakhstan.webp";
 import case51 from "../assets/images/cases/holycam-webinar-funnel.webp";
+import case51Card from "../assets/images/cases/card/holycam-webinar-funnel.webp";
 import case52 from "../assets/images/cases/cbd-products-uk.jpg";
+import case52Card from "../assets/images/cases/card/cbd-products-uk.webp";
 
 import healthyFoodScreen01 from "../assets/images/cases/content/healthy-food-social-pages/screenshot-01.webp";
 import healthyFoodScreen02 from "../assets/images/cases/content/healthy-food-social-pages/screenshot-02.webp";
@@ -450,6 +502,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case01,
+    imageCard: case01Card,
   },
 
   {
@@ -661,6 +714,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case02,
+    imageCard: case02Card,
   },
 
   {
@@ -872,6 +926,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case03,
+    imageCard: case03Card,
   },
 
   {
@@ -1069,6 +1124,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case04,
+    imageCard: case04Card,
   },
 
   {
@@ -1265,6 +1321,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case05,
+    imageCard: case05Card,
   },
 
   {
@@ -1460,6 +1517,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case06,
+    imageCard: case06Card,
   },
 
   {
@@ -1669,6 +1727,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case07,
+    imageCard: case07Card,
   },
 
   {
@@ -1865,6 +1924,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case08,
+    imageCard: case08Card,
   },
 
   {
@@ -2061,6 +2121,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case09,
+    imageCard: case09Card,
   },
 
   {
@@ -2255,6 +2316,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case10,
+    imageCard: case10Card,
   },
 
   {
@@ -2449,6 +2511,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case11,
+    imageCard: case11Card,
   },
 
   {
@@ -2621,6 +2684,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case12,
+    imageCard: case12Card,
   },
 
   {
@@ -2815,6 +2879,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case13,
+    imageCard: case13Card,
   },
 
   {
@@ -3009,6 +3074,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case14,
+    imageCard: case14Card,
   },
 
   {
@@ -3203,6 +3269,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case15,
+    imageCard: case15Card,
   },
 
   {
@@ -3397,6 +3464,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case16,
+    imageCard: case16Card,
   },
 
   {
@@ -3605,6 +3673,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case17,
+    imageCard: case17Card,
   },
 
   {
@@ -3812,6 +3881,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case18,
+    imageCard: case18Card,
   },
 
   {
@@ -4073,6 +4143,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case19,
+    imageCard: case19Card,
   },
 
   {
@@ -4360,6 +4431,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case20,
+    imageCard: case20Card,
   },
 
   {
@@ -4657,6 +4729,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case21,
+    imageCard: case21Card,
   },
 
   {
@@ -4973,6 +5046,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case22,
+    imageCard: case22Card,
   },
 
   {
@@ -5261,6 +5335,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case23,
+    imageCard: case23Card,
   },
 
   {
@@ -5577,6 +5652,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case24,
+    imageCard: case24Card,
   },
 
   {
@@ -5869,6 +5945,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case25,
+    imageCard: case25Card,
   },
 
   {
@@ -6130,6 +6207,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case26,
+    imageCard: case26Card,
   },
 
   {
@@ -6350,6 +6428,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case27,
+    imageCard: case27Card,
   },
 
   {
@@ -6630,6 +6709,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case28,
+    imageCard: case28Card,
   },
 
   {
@@ -6844,6 +6924,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case29,
+    imageCard: case29Card,
   },
 
   {
@@ -7121,6 +7202,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case30,
+    imageCard: case30Card,
   },
 
   {
@@ -7373,6 +7455,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case31,
+    imageCard: case31Card,
   },
 
   {
@@ -7617,6 +7700,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case32,
+    imageCard: case32Card,
   },
 
   {
@@ -7861,6 +7945,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case33,
+    imageCard: case33Card,
   },
 
   {
@@ -8092,6 +8177,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case34,
+    imageCard: case34Card,
   },
 
   {
@@ -8337,6 +8423,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case35,
+    imageCard: case35Card,
   },
 
   {
@@ -8535,6 +8622,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case36,
+    imageCard: case36Card,
   },
 
   {
@@ -8732,6 +8820,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case37,
+    imageCard: case37Card,
   },
 
   {
@@ -8964,6 +9053,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case38,
+    imageCard: case38Card,
   },
 
   {
@@ -9182,6 +9272,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case39,
+    imageCard: case39Card,
   },
 
   {
@@ -9390,6 +9481,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case40,
+    imageCard: case40Card,
   },
 
   {
@@ -9576,6 +9668,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case41,
+    imageCard: case41Card,
   },
 
   {
@@ -9775,6 +9868,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case42,
+    imageCard: case42Card,
   },
 
   {
@@ -9973,6 +10067,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case43,
+    imageCard: case43Card,
   },
 
   {
@@ -10172,6 +10267,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case44,
+    imageCard: case44Card,
   },
 
   {
@@ -10370,6 +10466,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case45,
+    imageCard: case45Card,
   },
 
   {
@@ -10568,6 +10665,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case46,
+    imageCard: case46Card,
   },
 
   {
@@ -10767,6 +10865,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case47,
+    imageCard: case47Card,
   },
 
   {
@@ -10966,6 +11065,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case48,
+    imageCard: case48Card,
   },
 
   {
@@ -11164,6 +11264,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case49,
+    imageCard: case49Card,
   },
 
   {
@@ -11391,6 +11492,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case50,
+    imageCard: case50Card,
   },
 
   {
@@ -11602,6 +11704,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case51,
+    imageCard: case51Card,
   },
 
   {
@@ -11800,6 +11903,7 @@ export const cases = [
 
     linkLabel: "Читати кейс",
     image: case52,
+    imageCard: case52Card,
   },
 
   {

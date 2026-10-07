@@ -20,6 +20,7 @@ function ServiceAudit({ data }) {
     subtitle,
     benefits = [],
     checklistImage,
+    checklistImageSmall,
     checklistAlt = t("serviceAudit.checklistAlt"),
     checklistLabel = t("serviceAudit.checklistLabel"),
     checklistPlaceholder = t("serviceAudit.checklistPlaceholder"),
@@ -62,7 +63,18 @@ function ServiceAudit({ data }) {
 
           {checklistImage ? (
             <button className="service-audit__checklist" type="button">
-              <img src={checklistImage} alt={checklistAlt} loading="lazy" />
+              <img
+                src={checklistImage}
+                srcSet={
+                  checklistImageSmall
+                    ? `${checklistImageSmall} 800w, ${checklistImage} 1672w`
+                    : undefined
+                }
+                sizes="(max-width: 1024px) 92vw, 600px"
+                alt={checklistAlt}
+                loading="lazy"
+                decoding="async"
+              />
 
               <span className="service-audit__checklist-label">
                 {checklistLabel}

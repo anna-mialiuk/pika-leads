@@ -1,6 +1,7 @@
 import Button from "../../components/Button/Button";
 
 import pikaHero from "../../assets/images/pika-hero.webp";
+import pikaHeroSmall from "../../assets/images/pika-hero-660.webp";
 
 import Icon from "../../components/Icon/Icon";
 
@@ -68,7 +69,16 @@ function Hero() {
         <div className="hero__visual">
           <div className="hero__glow" />
 
-          <img className="hero__image" src={pikaHero} alt="Pika Leads" />
+          <img
+            className="hero__image"
+            src={pikaHero}
+            srcSet={`${pikaHeroSmall} 660w, ${pikaHero} 1320w`}
+            sizes="(max-width: 1024px) 92vw, 660px"
+            width="1320"
+            height="1320"
+            fetchPriority="high"
+            alt="Pika Leads"
+          />
 
           {heroMetrics.map((metric) => (
             <div
