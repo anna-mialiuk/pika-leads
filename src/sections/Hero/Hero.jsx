@@ -1,7 +1,9 @@
 import Button from "../../components/Button/Button";
 
 import pikaHero from "../../assets/images/pika-hero.webp";
+import pikaHero480 from "../../assets/images/pika-hero-480.webp";
 import pikaHeroSmall from "../../assets/images/pika-hero-660.webp";
+import pikaHero880 from "../../assets/images/pika-hero-880.webp";
 
 import Icon from "../../components/Icon/Icon";
 
@@ -72,8 +74,8 @@ function Hero() {
           <img
             className="hero__image"
             src={pikaHero}
-            srcSet={`${pikaHeroSmall} 660w, ${pikaHero} 1320w`}
-            sizes="(max-width: 1024px) 92vw, 660px"
+            srcSet={`${pikaHero480} 480w, ${pikaHeroSmall} 660w, ${pikaHero880} 880w, ${pikaHero} 1320w`}
+            sizes="(max-width: 576px) 90vw, (max-width: 1024px) 55vw, 660px"
             width="1320"
             height="1320"
             fetchPriority="high"
