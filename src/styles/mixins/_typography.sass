@@ -40,6 +40,9 @@
   color: vars.$color-text-secondary
   font-size: 1.5rem
   line-height: 1.6
+  // ≤1024px rem = 8px — збільшуємо, щоб текст не був дрібним
+  @include laptop
+    font-size: 1.9rem
 
 @mixin card-title
   color: vars.$color-white
@@ -52,6 +55,8 @@
   color: vars.$color-text-secondary
   font-size: 1.3rem
   line-height: 1.55
+  @include laptop
+    font-size: 1.75rem
 
 // Дрібний підпис капсом (лейбли фільтрів, підписи метрик тощо)
 @mixin caption($color: vars.$color-text-dim)

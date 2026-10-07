@@ -1,0 +1,35 @@
+@use './mixins' as mix
+
+// Читабельність на планшетах і телефонах.
+// Від 1140px увесь макет масштабується до 1rem = 8px (див. index.sass),
+// через що абзаци ставали 10–12px. Тут — мінімальні розміри тексту для ≤1024px.
+// `body` перед класом — щоб правило було сильнішим за стилі компонентів.
+
+$notes: '.audit-form__note, .case-info-card__note, .case-results__summary-note, .footer__bottom p, .legal-page__meta'
+
+$card-text: '.feature-card__text, .case-card__description, .service-card__text, .conference-card__description, .blog-card .blog-card__description, .principle-card__text, .team-card__description, .testimonial-card__text, .footer__description, .contact-form__description, .service-process__step-description, .service-process__result-description, .case-related__description, .faq-item__answer p, .service-guarantees__card-text, .service-cases__description, .article-cta__description, .case-info-card__description, .case-evidence__description, .service-support__card-content p, .faq__cta p, .case-strategy__list-item, .service-testimonials__text'
+
+$lead-text: '.audit__text, .faq__description, .blog-hero__description, .team-hero__description p, .contacts-section__description, .service-guarantees__description, .service-audit__description, .service-wheel__description, .service-support__description, .case-cta__description, .case-hero__description, .blog-article-intro__description, .case-context__description, .case-strategy__text, .hero__text, .services__description, .conferences__description, .blog__description, .about__lead, .about__text p, .testimonials__description, .cases-hero__description, .team-catalog__description, .service-hero__description, .service-process__description'
+
+$article-text: '.blog-article-content__body p, .blog-article-content__body li'
+
+@include mix.laptop
+  body
+    #{$notes}
+      font-size: 1.5rem
+
+    #{$card-text}
+      font-size: 1.75rem
+      line-height: 1.55
+
+    #{$lead-text}
+      font-size: 1.9rem
+      line-height: 1.6
+
+    #{$article-text}
+      font-size: 2rem
+      line-height: 1.7
+
+    // більший шрифт — більше рядків, щоб відгук не обрізався раніше
+    .testimonial-card__text
+      -webkit-line-clamp: 10
