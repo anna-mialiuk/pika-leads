@@ -1,6 +1,7 @@
 import ConferenceCard from "../../components/ConferenceCard/ConferenceCard";
 import { useLanguage, useData } from "../../i18n";
 import Badge from "../../components/Badge/Badge";
+import CardSlider from "../../components/CardSlider/CardSlider";
 
 import "./Conferences.sass";
 
@@ -22,11 +23,11 @@ function Conferences() {
           {t("conferences.description")}
         </p>
 
-        <div className="conferences__list">
+        <CardSlider trackClassName="conferences__list">
           {conferences.map((conference) => (
             <ConferenceCard key={conference.id} {...conference} />
           ))}
-        </div>
+        </CardSlider>
       </div>
     </section>
   );

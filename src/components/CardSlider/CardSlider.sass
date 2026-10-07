@@ -1,0 +1,43 @@
+@use '../../styles/mixins' as mix
+
+.card-slider
+  &__controls
+    display: none
+
+  // картки в ряду однакової висоти
+  &__slide
+    display: flex
+    min-width: 0
+
+    > *
+      flex: 1 1 auto
+      min-width: 0
+
+  @include mix.laptop
+    &__controls
+      display: flex
+      justify-content: flex-end
+      margin-bottom: 2rem
+
+    // подвійний клас — сильніший за сітку секції (.cases__list тощо)
+    .card-slider__track.card-slider__track
+      display: flex
+      gap: 2rem
+      overflow-x: auto
+      overscroll-behavior-x: contain
+      scroll-snap-type: x mandatory
+      scrollbar-width: none
+      // запас, щоб не обрізались тіні й hover-підйом карток
+      padding-block: 1rem
+      margin-block: -1rem
+
+      &::-webkit-scrollbar
+        display: none
+
+    .card-slider__slide
+      flex: 0 0 calc((100% - 2rem) / 2)
+      scroll-snap-align: start
+
+  @include mix.tablet
+    .card-slider__slide
+      flex-basis: 100%

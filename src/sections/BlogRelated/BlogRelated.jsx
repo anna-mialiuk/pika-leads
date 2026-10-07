@@ -1,5 +1,6 @@
 import { LocalizedLink as Link, useLanguage } from "../../i18n";
 import { useArticles } from "../../content/hooks";
+import CardSlider from "../../components/CardSlider/CardSlider";
 
 import BlogCard from "../../components/BlogCard/BlogCard";
 
@@ -38,11 +39,11 @@ function BlogRelated({ article }) {
           </Link>
         </div>
 
-        <div className="blog-related__grid">
+        <CardSlider trackClassName="blog-related__grid">
           {relatedArticles.map((item) => (
             <BlogCard key={item.id} {...item} variant="catalog" />
           ))}
-        </div>
+        </CardSlider>
       </div>
     </section>
   );

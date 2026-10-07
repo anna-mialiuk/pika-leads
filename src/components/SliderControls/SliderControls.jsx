@@ -3,7 +3,13 @@ import { useLanguage } from "../../i18n";
 import "./SliderControls.sass";
 
 /** Пара кнопок «‹ ›» для слайдерів */
-function SliderControls({ onPrev, onNext, className = "" }) {
+function SliderControls({
+  onPrev,
+  onNext,
+  disablePrev = false,
+  disableNext = false,
+  className = "",
+}) {
   const { t } = useLanguage();
 
   return (
@@ -12,6 +18,7 @@ function SliderControls({ onPrev, onNext, className = "" }) {
         className="slider-controls__arrow"
         type="button"
         onClick={onPrev}
+        disabled={disablePrev}
         aria-label={t("testimonials.prev")}
       >
         ‹
@@ -21,6 +28,7 @@ function SliderControls({ onPrev, onNext, className = "" }) {
         className="slider-controls__arrow"
         type="button"
         onClick={onNext}
+        disabled={disableNext}
         aria-label={t("testimonials.next")}
       >
         ›

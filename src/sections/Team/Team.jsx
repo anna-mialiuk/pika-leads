@@ -2,6 +2,7 @@ import Badge from "../../components/Badge/Badge";
 import Button from "../../components/Button/Button";
 import TeamCard from "../../components/TeamCard/TeamCard";
 import { useLanguage, useData } from "../../i18n";
+import CardSlider from "../../components/CardSlider/CardSlider";
 
 import "./Team.sass";
 
@@ -37,11 +38,11 @@ function Team() {
           </Button>
         </div>
 
-        <div className="team__list">
+        <CardSlider trackClassName="team__list">
           {team.slice(0, HOME_TEAM_LIMIT).map((member) => (
             <TeamCard key={member.id} {...member} />
           ))}
-        </div>
+        </CardSlider>
       </div>
     </section>
   );

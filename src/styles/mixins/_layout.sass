@@ -36,41 +36,6 @@
   @include tablet
     grid-template-columns: 1fr
 
-// Горизонтальна карусель карток (свайп + scroll-snap, без JS).
-// $bleed — бічний відступ секції: стрічка виходить до країв екрана,
-// а перша картка вирівнюється з контентом.
-@mixin card-carousel($bleed: 3.2rem, $gap: 1.6rem)
-  display: flex
-  gap: $gap
-  overflow-x: auto
-  overscroll-behavior-x: contain
-  scroll-snap-type: x mandatory
-  scrollbar-width: none
-  // запас зверху/знизу, щоб не обрізались тіні й hover-підйом карток
-  padding-block: 1rem
-  margin-block: -1rem
-  @include card-carousel-bleed($bleed)
-
-  &::-webkit-scrollbar
-    display: none
-
-  // ширина картки: видно ~2,3 картки на ноутбуці, ~1,5 на планшеті, ~1,2 на телефоні
-  > *
-    flex: 0 0 42%
-    min-width: 0
-    scroll-snap-align: start
-
-    @include tablet
-      flex-basis: 64%
-
-    @include mobile
-      flex-basis: 84%
-
-@mixin card-carousel-bleed($bleed)
-  margin-inline: calc(#{$bleed} * -1)
-  padding-inline: $bleed
-  scroll-padding-inline: $bleed
-
 // Абсолютно позиціонований шар на всю площу батька
 @mixin absolute-fill
   position: absolute

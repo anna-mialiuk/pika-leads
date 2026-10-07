@@ -3,6 +3,7 @@ import Button from "../../components/Button/Button";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import { useLanguage } from "../../i18n";
 import { useFeaturedArticles } from "../../content/hooks";
+import CardSlider from "../../components/CardSlider/CardSlider";
 
 import "./Blog.sass";
 
@@ -38,11 +39,11 @@ function Blog() {
           </div>
         </div>
 
-        <div className="blog__list">
+        <CardSlider trackClassName="blog__list">
           {blogArticles.map((article) => (
             <BlogCard key={article.id} {...article} />
           ))}
-        </div>
+        </CardSlider>
       </div>
     </section>
   );

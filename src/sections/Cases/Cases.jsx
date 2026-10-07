@@ -3,6 +3,7 @@ import Button from "../../components/Button/Button";
 import CaseCard from "../../components/CaseCard/CaseCard";
 import { useLanguage } from "../../i18n";
 import { useFeaturedCases } from "../../content/hooks";
+import CardSlider from "../../components/CardSlider/CardSlider";
 
 import "./Cases.sass";
 
@@ -32,11 +33,11 @@ function Cases() {
           </Button>
         </div>
 
-        <div className="cases__list">
+        <CardSlider trackClassName="cases__list">
           {homeCases.map((caseItem) => (
             <CaseCard key={caseItem.id} {...caseItem} />
           ))}
-        </div>
+        </CardSlider>
       </div>
     </section>
   );

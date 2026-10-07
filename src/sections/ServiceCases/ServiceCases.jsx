@@ -1,6 +1,7 @@
 import Badge from "../../components/Badge/Badge";
 import Button from "../../components/Button/Button";
 import ServiceCaseCard from "./ServiceCaseCard";
+import CardSlider from "../../components/CardSlider/CardSlider";
 
 import { useLanguage, useData } from "../../i18n";
 import { useCases } from "../../content/hooks";
@@ -42,7 +43,7 @@ function ServiceCases({ data }) {
           <span>{data.accent || sourceInfo.name}</span>
         </h2>
 
-        <div className="service-cases__list">
+        <CardSlider trackClassName="service-cases__list">
           {items.map((item) => (
             <ServiceCaseCard
               key={item.id}
@@ -51,7 +52,7 @@ function ServiceCases({ data }) {
               isPreview={isPreview}
             />
           ))}
-        </div>
+        </CardSlider>
 
         {data.showButton !== false && (
           <div className="service-cases__footer">
