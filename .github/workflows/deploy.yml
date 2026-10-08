@@ -1,10 +1,14 @@
-# Автодеплой: кожен push у main → збірка → копіювання dist/ на VPS.
+# Автодеплой: кожен push у main →
+#   1) сайт (npm run build → dist/)            → /var/www/pikaleads
+#   2) адмінка (admin/ → admin/dist/)          → /var/www/pikaleads-admin  (app.pika-leads.com)
+#   3) приймач заявок + API адмінки (server/leads) → /home/deploy/leads-server і перезапуск сервісу
+# Налаштування: Settings → Secrets and variables → Actions (див. DEPLOY.md)
 name: Deploy
 
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+  workflow_dispatch: # ручний запуск з вкладки Actions
 
 concurrency:
   group: deploy
@@ -21,36 +25,65 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            admin/package-lock.json
 
+      # ---------- сайт ----------
       - run: npm ci
 
+      # i18n-перевірка + sitemap + збірка + пререндер
       - run: npm run build
         env:
           VITE_SITE_URL: ${{ vars.SITE_URL }}
           VITE_LEADS_ENDPOINT: ${{ secrets.LEADS_ENDPOINT }}
 
-      - name: Upload to server
+      # ---------- адмінка ----------
+      - name: Build admin
+        working-directory: admin
+        run: |
+          npm ci
+          npm run build
+
+      # ---------- копіювання на сервер ----------
+      - name: SSH key
         env:
           SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-          SSH_USER: ${{ secrets.SSH_USER }}
-          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Upload site
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        run: |
           rsync -az --delete \
             -e "ssh -i ~/.ssh/deploy_key" \
             dist/ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
 
-      # приймач заявок: код у /home/deploy/leads-server (.env і файли заявок не чіпаємо)
+      - name: Upload admin
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            admin/dist/ "$SSH_USER@$SSH_HOST:/var/www/pikaleads-admin/"
+
+      # код приймача; дані на сервері (.env, заявки, користувачі, ключ) не чіпаємо
       - name: Update leads server
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USER: ${{ secrets.SSH_USER }}
         run: |
-          rsync -az --exclude ".env" --exclude "*.jsonl" \
+          rsync -az \
+            --exclude ".env" --exclude "*.json" --exclude "*.jsonl" \
+            --exclude "*.key" --exclude "*.tmp" --exclude "*.broken-*" \
             -e "ssh -i ~/.ssh/deploy_key" \
             server/leads/ "$SSH_USER@$SSH_HOST:/home/deploy/leads-server/"
           ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" "sudo systemctl restart pikaleads-leads"

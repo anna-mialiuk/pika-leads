@@ -1,0 +1,155 @@
+.roles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.roles__card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+}
+
+.roles__card span {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-member {
+  display: grid;
+  grid-template-columns: minmax(200px, 1.3fr) minmax(150px, 1fr) 170px 160px 330px;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+}
+
+.team-member.is-disabled {
+  opacity: 0.55;
+}
+
+.team-member__who {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.team-member__who .faint {
+  overflow: hidden;
+  font-size: 12.5px;
+  text-overflow: ellipsis;
+}
+
+.team-member__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.team-badge {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+}
+
+.team-badge--ok {
+  background: rgba(79, 216, 138, 0.12);
+  color: var(--ok);
+}
+
+.team-badge--warn {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.team-badge--off {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.team-member__login {
+  font-size: 12px;
+}
+
+.team-member__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--border);
+}
+
+.credentials > div {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 14px;
+  background: var(--card);
+}
+
+.credentials b {
+  word-break: break-all;
+}
+
+@media (max-width: 1200px) {
+  .team-member {
+    grid-template-columns: 1fr auto;
+  }
+
+  .team-member__badges,
+  .team-member__login {
+    grid-column: 1 / -1;
+  }
+
+  .team-member__actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  .team-member__role {
+    width: auto;
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .roles {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member__role {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .credentials > div {
+    grid-template-columns: 1fr auto;
+  }
+
+  .credentials > div > span {
+    grid-column: 1 / -1;
+  }
+}

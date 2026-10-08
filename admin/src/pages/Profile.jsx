@@ -1,0 +1,210 @@
+import { useEffect, useState } from "react";
+
+import Icon from "../components/Icon";
+import { CodeInput, ErrorAlert, Field, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
+import { api } from "../lib/api";
+import { useAuth } from "../lib/auth";
+import { formatDate, passwordScore } from "../lib/format";
+
+import "./Profile.css";
+
+const ROLE_LABELS = { admin: "Администратор", manager: "Менеджер" };
+
+function Profile() {
+  const { user, setUser } = useAuth();
+  const [require2fa, setRequire2fa] = useState(true);
+
+  useEffect(() => {
+    api("/auth/me")
+      .then((data) => {
+        setRequire2fa(data.require2fa);
+        setUser(data.user);
+      })
+      .catch(() => {});
+  }, [setUser]);
+
+  return (
+    <div className="profile">
+      <div className="page-head">
+        <div>
+          <h1 className="page-title">Профиль</h1>
+          <p className="page-text">Ваш доступ к панели и безопасность входа.</p>
+        </div>
+      </div>
+
+      <div className="profile__grid">
+        <section className="card profile__card">
+          <h2>Учётная запись</h2>
+          <dl className="profile__dl">
+            <div>
+              <dt>Имя</dt>
+              <dd>{user.name}</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>{user.email}</dd>
+            </div>
+            <div>
+              <dt>Роль</dt>
+              <dd>{ROLE_LABELS[user.role]}</dd>
+            </div>
+            <div>
+              <dt>Последний вход</dt>
+              <dd>{formatDate(user.lastLoginAt)}</dd>
+            </div>
+          </dl>
+        </section>
+
+        <PasswordCard />
+        <TwoFactorCard user={user} required={require2fa} onChange={setUser} />
+      </div>
+    </div>
+  );
+}
+
+function PasswordCard() {
+  const [current, setCurrent] = useState("");
+  const [next, setNext] = useState("");
+  const [confirm, setConfirm] = useState("");
+  const [error, setError] = useState("");
+  const [done, setDone] = useState(false);
+  const [busy, setBusy] = useState(false);
+
+  const submit = async () => {
+    setError("");
+    setDone(false);
+    if (next.length < 10) return setError("Минимум 10 символов");
+    if (passwordScore(next) < 3) return setError("Пароль слишком простой — добавьте цифры, заглавные буквы или символы");
+    if (next !== confirm) return setError("Пароли не совпадают");
+    setBusy(true);
+    try {
+      await api("/me/password", { method: "POST", body: { current, password: next } });
+      setDone(true);
+      setCurrent("");
+      setNext("");
+      setConfirm("");
+    } catch (requestError) {
+      setError(requestError.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <section className="card profile__card">
+      <h2>
+        <Icon name="lock" /> Смена пароля
+      </h2>
+      <Field label="Текущий пароль">
+        <PasswordInput value={current} onChange={setCurrent} autoComplete="current-password" />
+      </Field>
+      <span className="field__label">Новый пароль</span>
+      <div style={{ marginTop: 7 }}>
+        <PasswordInput value={next} onChange={setNext} autoComplete="new-password" placeholder="Минимум 10 символов" />
+      </div>
+      <StrengthMeter password={next} />
+      <Field label="Повторите новый пароль">
+        <input className="input" type="password" autoComplete="new-password" value={confirm} onChange={(e) => setConfirm(e.target.value)} />
+      </Field>
+      <ErrorAlert error={error} />
+      {done && <div className="alert alert--ok">✓ Пароль изменён. На других устройствах нужно будет войти заново.</div>}
+      <button type="button" className="btn btn--primary" onClick={submit} disabled={busy}>
+        Сохранить пароль
+      </button>
+    </section>
+  );
+}
+
+function TwoFactorCard({ user, required, onChange }) {
+  const [setup, setSetup] = useState(null);
+  const [code, setCode] = useState("");
+  const [password, setPassword] = useState("");
+  const [disabling, setDisabling] = useState(false);
+  const [error, setError] = useState("");
+
+  const run = async (fn) => {
+    setError("");
+    try {
+      await fn();
+    } catch (requestError) {
+      setError(requestError.message);
+    }
+  };
+
+  const startSetup = () => run(async () => setSetup(await api("/me/2fa/setup", { method: "POST" })));
+
+  const enable = () =>
+    run(async () => {
+      const { user: updated } = await api("/me/2fa/enable", { method: "POST", body: { code } });
+      onChange(updated);
+      setSetup(null);
+      setCode("");
+    });
+
+  const disable = () =>
+    run(async () => {
+      const { user: updated } = await api("/me/2fa/disable", { method: "POST", body: { code, password } });
+      onChange(updated);
+      setDisabling(false);
+      setCode("");
+      setPassword("");
+    });
+
+  return (
+    <section className="card profile__card">
+      <h2>
+        <Icon name="shield" /> Двухфакторная защита
+      </h2>
+      {user.totpEnabled ? (
+        <>
+          <p className="profile__status profile__status--ok">● Включена — при входе нужен код из приложения-аутентификатора.</p>
+          <p className="muted profile__note">
+            Сменили телефон? Попросите администратора сбросить 2FA — при следующем входе вы подключите новое устройство.
+          </p>
+          {!required && !disabling && (
+            <button type="button" className="btn btn--danger btn--sm" onClick={() => setDisabling(true)}>
+              Отключить 2FA
+            </button>
+          )}
+          {disabling && (
+            <>
+              <Field label="Пароль">
+                <PasswordInput value={password} onChange={setPassword} autoComplete="current-password" />
+              </Field>
+              <span className="field__label">Код из приложения</span>
+              <div style={{ marginTop: 7 }}>
+                <CodeInput value={code} onChange={setCode} autoFocus={false} />
+              </div>
+              <ErrorAlert error={error} />
+              <button type="button" className="btn btn--danger" onClick={disable}>
+                Отключить
+              </button>
+            </>
+          )}
+        </>
+      ) : setup ? (
+        <>
+          <div className="profile__qr">
+            <QrCode text={setup.otpauth} size={150} />
+            <p className="muted">Отсканируйте QR-код в Google Authenticator, 1Password или Authy и введите код.</p>
+          </div>
+          <CodeInput value={code} onChange={setCode} onEnter={enable} />
+          <ErrorAlert error={error} />
+          <button type="button" className="btn btn--primary" onClick={enable}>
+            Включить 2FA
+          </button>
+        </>
+      ) : (
+        <>
+          <p className="profile__status">● Не подключена</p>
+          <ErrorAlert error={error} />
+          <button type="button" className="btn btn--primary" onClick={startSetup}>
+            Подключить 2FA
+          </button>
+        </>
+      )}
+    </section>
+  );
+}
+
+export default Profile;

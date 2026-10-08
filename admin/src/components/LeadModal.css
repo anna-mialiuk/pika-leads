@@ -1,0 +1,234 @@
+.lead-modal {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 26px;
+}
+
+.lead-modal__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-right: 40px;
+}
+
+.lead-modal__head .modal__title {
+  margin: 0;
+  font-size: 22px;
+  word-break: break-word;
+}
+
+.lead-modal__id {
+  color: var(--faint);
+  font-size: 12px;
+}
+
+.lead-modal__section {
+  margin-bottom: 22px;
+}
+
+.lead-modal__section h3,
+.lead-modal__side h3 {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lead-modal__manager .select {
+  max-width: 320px;
+}
+
+.lead-modal__hint {
+  margin: 8px 0 0;
+  color: var(--faint);
+  font-size: 12px;
+}
+
+.status-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.status-chip {
+  padding: 7px 11px;
+  border: 1px solid var(--border2);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text2);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.status-chip:hover {
+  border-color: color-mix(in srgb, var(--status) 60%, transparent);
+}
+
+.status-chip.is-active {
+  border-color: var(--status);
+  background: color-mix(in srgb, var(--status) 18%, transparent);
+  color: var(--status);
+}
+
+.lead-modal__dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--border);
+}
+
+.lead-modal__dl div {
+  padding: 10px 12px;
+  background: var(--card);
+}
+
+/* непарна кількість полів — останнє на всю ширину, без порожньої клітинки */
+.lead-modal__dl div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.lead-modal__dl dt {
+  margin-bottom: 2px;
+  color: var(--faint);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lead-modal__dl dd {
+  margin: 0;
+  font-size: 13.5px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.lead-modal__dl--mono dd {
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.lead-modal__dl a {
+  color: var(--accent);
+}
+
+.lead-history {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lead-history li {
+  position: relative;
+  padding: 0 0 12px 18px;
+  border-left: 1px solid var(--border2);
+  margin-left: 4px;
+}
+
+.lead-history li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.lead-history__text {
+  display: block;
+  font-size: 13px;
+}
+
+.lead-history__meta {
+  color: var(--faint);
+  font-size: 11.5px;
+}
+
+/* коментарі */
+.lead-modal__side {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding-left: 22px;
+  border-left: 1px solid var(--border);
+}
+
+.comments {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 520px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.comments__empty {
+  color: var(--faint);
+  font-size: 12.5px;
+}
+
+.comment {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px 12px 12px 4px;
+  background: var(--card);
+}
+
+.comment--own {
+  border-color: rgba(255, 198, 41, 0.22);
+  border-radius: 12px 12px 4px 12px;
+  background: rgba(255, 198, 41, 0.06);
+}
+
+.comment__meta {
+  margin-bottom: 3px;
+  color: var(--faint);
+  font-size: 11.5px;
+}
+
+.comment__meta b {
+  color: var(--text2);
+}
+
+.comment__text {
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .lead-modal {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-modal__side {
+    min-height: 0;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .lead-modal__dl {
+    grid-template-columns: 1fr;
+  }
+}

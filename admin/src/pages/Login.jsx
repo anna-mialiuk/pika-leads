@@ -1,0 +1,298 @@
+import { useState } from "react";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
+
+import Icon from "../components/Icon";
+import { CodeInput, CopyButton, ErrorAlert, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
+import { api } from "../lib/api";
+import { useAuth } from "../lib/auth";
+import { passwordScore } from "../lib/format";
+import logoMark from "../assets/logo-mark.svg";
+
+import "./Login.css";
+
+const validEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+
+/**
+ * Вхід у панель (за макетом Pikaleads Login):
+ * пароль → (зміна тимчасового пароля) → 2FA або підключення 2FA → панель.
+ */
+function Login() {
+  const { user, setUser } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [screen, setScreen] = useState("login");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(true);
+  const [code, setCode] = useState("");
+  const [newPass, setNewPass] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [step, setStep] = useState({});
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  if (user && screen !== "success") return <Navigate to={location.state?.from || "/leads"} replace />;
+
+  const go = (next) => {
+    setError("");
+    setCode("");
+    setScreen(next);
+  };
+
+  /** Відповідь сервера → наступний екран */
+  const handleStep = (response) => {
+    setStep(response);
+    if (response.status === "ok") {
+      setScreen("success");
+      setTimeout(() => {
+        setUser(response.user);
+        navigate(location.state?.from || "/leads", { replace: true });
+      }, 900);
+      return;
+    }
+    go({ "change-password": "change", "2fa": "twofa", "setup-2fa": "setup" }[response.status]);
+  };
+
+  const run = async (action) => {
+    if (busy) return;
+    setBusy(true);
+    setError("");
+    try {
+      handleStep(await action());
+    } catch (requestError) {
+      setError(requestError.message);
+      if (requestError.status === 401 && /истекла/.test(requestError.message)) {
+        setScreen("login");
+      }
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const submitLogin = () => {
+    if (!validEmail(email)) return setError("Введите корректный email");
+    if (!password) return setError("Введите пароль");
+    run(() => api("/auth/login", { method: "POST", body: { email, password, remember } }));
+  };
+
+  const submitCode = (path) => {
+    if (code.length !== 6) return setError("Введите 6-значный код");
+    run(() => api(path, { method: "POST", body: { ticket: step.ticket, code } }));
+  };
+
+  const submitNewPassword = () => {
+    if (newPass.length < 10) return setError("Минимум 10 символов");
+    if (passwordScore(newPass) < 3) return setError("Пароль слишком простой — добавьте цифры, заглавные буквы или символы");
+    if (newPass !== confirmPass) return setError("Пароли не совпадают");
+    run(() => api("/auth/change-password", { method: "POST", body: { ticket: step.ticket, password: newPass } }));
+  };
+
+  const backToLogin = () => {
+    setPassword("");
+    setNewPass("");
+    setConfirmPass("");
+    setStep({});
+    go("login");
+  };
+
+  return (
+    <div className="auth">
+      <div className="auth__card">
+        <aside className="auth__brand">
+          <div className="auth__glow" />
+          <div className="auth__logo">
+            <img src={logoMark} alt="" />
+            <div>
+              PIKA<span>LEADS</span>
+            </div>
+          </div>
+          <div>
+            <h1 className="auth__headline">
+              Панель управления
+              <br />
+              агентством
+            </h1>
+            <p className="auth__lead">Заявки с сайта, статусы и команда — в одном защищённом рабочем пространстве.</p>
+            <ul className="auth__features">
+              <li>
+                <span>✓</span>Все заявки сайта с UTM-метками
+              </li>
+              <li>
+                <span>✓</span>Статусы синхронизированы с Telegram
+              </li>
+              <li>
+                <span>✓</span>Ролевой доступ и 2FA
+              </li>
+            </ul>
+          </div>
+          <div className="auth__copy">© {new Date().getFullYear()} Pikaleads · app.pika-leads.com</div>
+        </aside>
+
+        <main className="auth__form">
+          {screen === "login" && (
+            <div className="auth__screen">
+              <h2 className="auth__title">Вход в панель</h2>
+              <p className="auth__text">Введите данные учётной записи</p>
+
+              <label className="field">
+                <span className="field__label">Email</span>
+                <input
+                  className="input"
+                  type="email"
+                  autoComplete="username"
+                  placeholder="name@company.com"
+                  value={email}
+                  autoFocus
+                  onChange={(event) => setEmail(event.target.value)}
+                  onKeyDown={(event) => event.key === "Enter" && submitLogin()}
+                />
+              </label>
+
+              <div className="auth__row">
+                <span className="field__label">Пароль</span>
+                <button type="button" className="auth__link" onClick={() => go("forgot")}>
+                  Забыли пароль?
+                </button>
+              </div>
+              <div style={{ marginBottom: 14 }}>
+                <PasswordInput value={password} onChange={setPassword} autoComplete="current-password" onEnter={submitLogin} />
+              </div>
+
+              <ErrorAlert error={error} />
+
+              <label className="auth__remember">
+                <input type="checkbox" checked={remember} onChange={(event) => setRemember(event.target.checked)} />
+                Запомнить меня на этом устройстве
+              </label>
+
+              <button type="button" className="btn btn--primary btn--block" onClick={submitLogin} disabled={busy}>
+                {busy ? <span className="spinner" /> : "Войти"}
+              </button>
+
+              <div className="auth__secure">
+                <i />
+                Двухфакторная защита включена
+              </div>
+            </div>
+          )}
+
+          {screen === "twofa" && (
+            <div className="auth__screen">
+              <button type="button" className="auth__back" onClick={backToLogin}>
+                ← Назад ко входу
+              </button>
+              <div className="auth__icon">
+                <Icon name="shield" size={24} />
+              </div>
+              <h2 className="auth__title">Подтверждение входа</h2>
+              <p className="auth__text">
+                Введите 6-значный код из приложения-аутентификатора для <b>{step.email}</b>
+              </p>
+              <CodeInput value={code} onChange={setCode} onEnter={() => submitCode("/auth/2fa")} />
+              <ErrorAlert error={error} />
+              <button type="button" className="btn btn--primary btn--block" onClick={() => submitCode("/auth/2fa")} disabled={busy}>
+                {busy ? <span className="spinner" /> : "Подтвердить и войти"}
+              </button>
+              <p className="auth__text" style={{ marginTop: 18, marginBottom: 0, fontSize: 12 }}>
+                Нет доступа к телефону? Попросите администратора сбросить 2FA.
+              </p>
+            </div>
+          )}
+
+          {screen === "setup" && (
+            <div className="auth__screen">
+              <button type="button" className="auth__back" onClick={backToLogin}>
+                ← Назад ко входу
+              </button>
+              <h2 className="auth__title">Подключите 2FA</h2>
+              <p className="auth__text">Для доступа к панели нужна двухфакторная защита. Это займёт минуту.</p>
+              <div className="auth__setup">
+                <QrCode text={step.otpauth} size={150} />
+                <ol className="auth__steps">
+                  <li>Установите Google Authenticator, 1Password или Authy</li>
+                  <li>Отсканируйте QR-код (или введите ключ ниже)</li>
+                  <li>Введите 6-значный код из приложения</li>
+                </ol>
+              </div>
+              <div className="auth__secret">
+                <span>{step.secret?.match(/.{1,4}/g)?.join(" ")}</span>
+                <CopyButton value={step.secret || ""} label="Скопировать ключ" />
+              </div>
+              <CodeInput value={code} onChange={setCode} onEnter={() => submitCode("/auth/2fa-setup")} autoFocus={false} />
+              <ErrorAlert error={error} />
+              <button type="button" className="btn btn--primary btn--block" onClick={() => submitCode("/auth/2fa-setup")} disabled={busy}>
+                {busy ? <span className="spinner" /> : "Включить 2FA и войти"}
+              </button>
+            </div>
+          )}
+
+          {screen === "change" && (
+            <div className="auth__screen">
+              <div className="auth__icon">
+                <Icon name="lock" size={24} />
+              </div>
+              <h2 className="auth__title">Новый пароль</h2>
+              <p className="auth__text">Вы вошли с временным паролем. Придумайте свой — его будете знать только вы.</p>
+
+              <span className="field__label">Новый пароль</span>
+              <div style={{ marginTop: 7 }}>
+                <PasswordInput value={newPass} onChange={setNewPass} placeholder="Минимум 10 символов" autoComplete="new-password" autoFocus />
+              </div>
+              <StrengthMeter password={newPass} />
+
+              <label className="field">
+                <span className="field__label">Повторите пароль</span>
+                <input
+                  className="input"
+                  type="password"
+                  autoComplete="new-password"
+                  placeholder="Повторите пароль"
+                  value={confirmPass}
+                  onChange={(event) => setConfirmPass(event.target.value)}
+                  onKeyDown={(event) => event.key === "Enter" && submitNewPassword()}
+                />
+              </label>
+
+              <ErrorAlert error={error} />
+              <button type="button" className="btn btn--primary btn--block" onClick={submitNewPassword} disabled={busy}>
+                {busy ? <span className="spinner" /> : "Сохранить пароль"}
+              </button>
+            </div>
+          )}
+
+          {screen === "forgot" && (
+            <div className="auth__screen">
+              <button type="button" className="auth__back" onClick={backToLogin}>
+                ← Назад ко входу
+              </button>
+              <div className="auth__icon">
+                <Icon name="key" size={24} />
+              </div>
+              <h2 className="auth__title">Сброс пароля</h2>
+              <p className="auth__text">
+                Напишите администратору панели — он выдаст временный пароль в разделе «Команда». При входе с ним вы сразу
+                зададите новый пароль.
+              </p>
+              <button type="button" className="btn btn--block" onClick={backToLogin}>
+                Вернуться ко входу
+              </button>
+            </div>
+          )}
+
+          {screen === "success" && (
+            <div className="auth__screen auth__done">
+              <div className="auth__done-icon">
+                <Icon name="check" size={34} strokeWidth="2.6" />
+              </div>
+              <h2 className="auth__title">Вход выполнен</h2>
+              <p className="auth__text">Добро пожаловать, {step.user?.name}. Открываем панель…</p>
+            </div>
+          )}
+        </main>
+      </div>
+    </div>
+  );
+}
+
+export default Login;

@@ -206,3 +206,90 @@ utm_source=roma&utm_medium=paid&utm_campaign={{campaign.name}}&utm_content={{ad.
 
 **Захист від спаму:** приховане поле-пастка в кожній формі й не більше 5 заявок з однієї IP за 10 хвилин.
 **Резервна копія:** усі заявки (навіть якщо Telegram недоступний) — у `/home/deploy/leads-server/leads.jsonl`.
+
+---
+
+## Адмінка app.pika-leads.com (CRM заявок)
+
+Адмінка — окремий застосунок у папці `admin/`. Бекенд — той самий приймач заявок `server/leads`
+(API `/api/admin/*`). Дані зберігаються на сервері поруч із журналом заявок:
+
+| Файл | Що в ньому |
+|---|---|
+| `leads.jsonl` | журнал усіх заявок (як і раніше, рядок на заявку) |
+| `leads.json` | CRM: статуси, менеджери, коментарі, історія |
+| `users.json` | співробітники (паролі — лише scrypt-хеші, 2FA-ключі) |
+| `secret.key` | ключ підпису сесій (генерується сам) |
+
+При першому запуску нової версії всі заявки з `leads.jsonl` автоматично переносяться в CRM,
+а статуси з уже натиснутих кнопок у Telegram підтягуються зі старих повідомлень.
+
+> **Порядок важливий:** спершу кроки 1–2 (DNS і сервер), потім push коду. Інакше крок
+> «Upload admin» у GitHub Actions впаде, бо на сервері ще немає папки `/var/www/pikaleads-admin`.
+
+### 1. DNS (Cloudflare)
+
+DNS → Records → **Add record**: тип `A`, ім'я `app`, IPv4 `173.242.63.233`, **DNS only** (сіра хмаринка).
+
+### 2. Сервер (як root)
+
+```bash
+# папка для файлів адмінки
+mkdir -p /var/www/pikaleads-admin
+chown deploy:deploy /var/www/pikaleads-admin
+
+# конфіг Nginx — вміст файлу deploy/nginx-admin.conf з репозиторію
+nano /etc/nginx/sites-available/pikaleads-admin
+ln -s /etc/nginx/sites-available/pikaleads-admin /etc/nginx/sites-enabled/
+nginx -t && systemctl reload nginx
+
+# HTTPS (коли DNS уже оновився: dig +short app.pika-leads.com → 173.242.63.233)
+certbot --nginx -d app.pika-leads.com
+```
+
+### 3. Код
+
+Push у `main` — GitHub Actions збере сайт і адмінку, скопіює їх на сервер, оновить приймач і перезапустить сервіс.
+
+Перевірка:
+
+```bash
+journalctl -u pikaleads-leads -n 20 --no-pager   # має бути «імпортовано N заявок» і «слушаю … /api/admin»
+```
+
+### 4. Перший адміністратор
+
+```bash
+cd /home/deploy/leads-server
+sudo -u deploy node --env-file=.env cli.mjs create-user --email ВАШ_EMAIL --name "Анна" --role admin
+```
+
+Команда покаже **тимчасовий пароль**. Відкрийте https://app.pika-leads.com, увійдіть з ним —
+панель попросить задати власний пароль і підключити 2FA (Google Authenticator / 1Password / Authy).
+
+Інших співробітників додавайте вже в самій панелі: **Команда → Добавить сотрудника**.
+
+> Команди `cli.mjs` завжди запускайте через `sudo -u deploy` — інакше файли даних стануть
+> власністю root і сервіс не зможе їх оновлювати.
+
+### Консольні команди (якщо доступ втрачено)
+
+```bash
+cd /home/deploy/leads-server
+sudo -u deploy node --env-file=.env cli.mjs list                                  # список співробітників
+sudo -u deploy node --env-file=.env cli.mjs reset-password --email EMAIL          # новий тимчасовий пароль
+sudo -u deploy node --env-file=.env cli.mjs reset-2fa --email EMAIL               # скинути 2FA (новий телефон)
+```
+
+### Резервна копія даних CRM
+
+Усі дані — у папці `/home/deploy/leads-server` (`*.json`, `*.jsonl`, `secret.key`). Достатньо раз на день
+копіювати їх в інше місце, наприклад:
+
+```bash
+crontab -u deploy -e
+# додати рядок:
+15 3 * * * tar czf /home/deploy/backup-crm-$(date +\%u).tgz -C /home/deploy/leads-server leads.json leads.jsonl users.json secret.key
+```
+
+(зберігає 7 щоденних копій по днях тижня)

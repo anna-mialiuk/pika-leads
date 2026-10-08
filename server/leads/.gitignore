@@ -1,0 +1,7 @@
+# дані CRM і секрети — лише на сервері, не в Git
+.env
+*.json
+*.jsonl
+*.key
+*.tmp
+*.broken-*
