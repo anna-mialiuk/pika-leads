@@ -18,7 +18,13 @@ function ConferenceCard({
   const mediaContent = (
     <>
       {image ? (
-        <img className="conference-card__image" src={image} alt={title} />
+        <img
+          className="conference-card__image"
+          src={image}
+          alt={title}
+          loading="lazy"
+          decoding="async"
+        />
       ) : (
         <span className="conference-card__placeholder">
           {t("conferences.videoPreview")}

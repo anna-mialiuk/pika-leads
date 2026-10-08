@@ -26,7 +26,13 @@ function BlogCard({
     >
       <div className="blog-card__media">
         <Link className="blog-card__media-link" to={href}>
-          <img className="blog-card__image" src={image} alt={title} />
+          <img
+            className="blog-card__image"
+            src={image}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+          />
         </Link>
 
         <span className={`blog-card__category blog-card__category--${type}`}>

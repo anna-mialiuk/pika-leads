@@ -18,6 +18,7 @@ function TeamHero() {
             className="team-hero__image"
             src={founderImage}
             alt={t("teamPage.founderAlt")}
+            fetchPriority="high"
           />
         </div>
 

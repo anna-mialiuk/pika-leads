@@ -35,7 +35,12 @@ function CaseHero({ caseItem }) {
         </nav>
 
         <div className="case-hero__card">
-          <img className="case-hero__image" src={image} alt={title} />
+          <img
+            className="case-hero__image"
+            src={image}
+            alt={title}
+            fetchPriority="high"
+          />
 
           <div className="case-hero__overlay" />
 

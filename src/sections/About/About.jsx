@@ -58,6 +58,8 @@ function About() {
           <div className="about__team">
             <img
               className="about__team-image"
+              loading="lazy"
+              decoding="async"
               src={aboutTeam}
               alt={t("about.teamAlt")}
             />
@@ -67,6 +69,8 @@ function About() {
             <div className="about__office">
               <img
                 className="about__office-image"
+                loading="lazy"
+                decoding="async"
                 src={aboutOffice}
                 alt={t("about.officeAlt")}
               />

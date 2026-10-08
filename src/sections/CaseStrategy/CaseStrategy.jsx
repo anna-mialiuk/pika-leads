@@ -82,6 +82,8 @@ function StrategyGallery({
               }`}
               src={activeScreenshot.image}
               alt={activeScreenshot.alt || ""}
+              loading="lazy"
+              decoding="async"
             />
 
             {hasSlider && (

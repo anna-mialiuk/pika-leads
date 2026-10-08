@@ -98,6 +98,8 @@ function CaseContext({ context, onImageClick, galleryOffset = 0 }) {
                   }`}
                   src={activeScreenshot.image}
                   alt={activeScreenshot.alt || ""}
+                  loading="lazy"
+                  decoding="async"
                 />
 
                 <span className="case-context__counter" aria-hidden="true">
