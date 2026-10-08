@@ -318,3 +318,8 @@
     justify-items: center;
   }
 }
+
+.auth__reset-back {
+  display: block;
+  margin: 16px auto 0;
+}

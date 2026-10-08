@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 import Icon from "../components/Icon";
@@ -21,7 +21,10 @@ function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [screen, setScreen] = useState("login");
+  // посилання з листа: /login#reset=<токен>
+  const [resetToken, setResetToken] = useState(() => /reset=([\w-]+)/.exec(window.location.hash)?.[1] || "");
+  const [screen, setScreen] = useState(resetToken ? "reset" : "login");
+  const [forgotAvailable, setForgotAvailable] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(true);
@@ -31,6 +34,27 @@ function Login() {
   const [step, setStep] = useState({});
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+
+  // посилання з листа відкрили у вже відкритій вкладці входу
+  useEffect(() => {
+    const onHash = () => {
+      const token = /reset=([\w-]+)/.exec(window.location.hash)?.[1];
+      if (token) {
+        setResetToken(token);
+        setError("");
+        setScreen("reset");
+      }
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  useEffect(() => {
+    if (screen !== "forgot" || forgotAvailable !== null) return;
+    api("/auth/forgot")
+      .then(({ available }) => setForgotAvailable(available))
+      .catch(() => setForgotAvailable(false));
+  }, [screen, forgotAvailable]);
 
   if (user && screen !== "success") return <Navigate to={location.state?.from || "/leads"} replace />;
 
@@ -88,7 +112,41 @@ function Login() {
     run(() => api("/auth/change-password", { method: "POST", body: { ticket: step.ticket, password: newPass } }));
   };
 
+  const submitForgot = async () => {
+    if (!validEmail(email)) return setError("Введите корректный email");
+    setBusy(true);
+    setError("");
+    try {
+      await api("/auth/forgot", { method: "POST", body: { email } });
+      go("sent");
+    } catch (requestError) {
+      setError(requestError.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const submitReset = async () => {
+    if (newPass.length < 10) return setError("Минимум 10 символов");
+    if (passwordScore(newPass) < 3) return setError("Пароль слишком простой — добавьте цифры, заглавные буквы или символы");
+    if (newPass !== confirmPass) return setError("Пароли не совпадают");
+    setBusy(true);
+    setError("");
+    try {
+      await api("/auth/reset", { method: "POST", body: { token: resetToken, password: newPass } });
+      window.history.replaceState(null, "", "/login");
+      setNewPass("");
+      setConfirmPass("");
+      go("resetDone");
+    } catch (requestError) {
+      setError(requestError.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const backToLogin = () => {
+    if (window.location.hash) window.history.replaceState(null, "", "/login");
     setPassword("");
     setNewPass("");
     setConfirmPass("");
@@ -237,7 +295,13 @@ function Login() {
 
               <span className="field__label">Новый пароль</span>
               <div style={{ marginTop: 7 }}>
-                <PasswordInput value={newPass} onChange={setNewPass} placeholder="Минимум 10 символов" autoComplete="new-password" autoFocus />
+                <PasswordInput
+                  value={newPass}
+                  onChange={setNewPass}
+                  placeholder="Минимум 10 символов"
+                  autoComplete="new-password"
+                  autoFocus
+                />
               </div>
               <StrengthMeter password={newPass} />
 
@@ -270,12 +334,111 @@ function Login() {
                 <Icon name="key" size={24} />
               </div>
               <h2 className="auth__title">Сброс пароля</h2>
+              {forgotAvailable === null && <div className="spinner" />}
+              {forgotAvailable === false && (
+                <>
+                  <p className="auth__text">
+                    Напишите администратору панели — он выдаст временный пароль в разделе «Команда». При входе с ним вы сразу зададите новый
+                    пароль.
+                  </p>
+                  <button type="button" className="btn btn--block" onClick={backToLogin}>
+                    Вернуться ко входу
+                  </button>
+                </>
+              )}
+              {forgotAvailable && (
+                <>
+                  <p className="auth__text">Введите email, с которым входите в панель, — пришлём ссылку для нового пароля.</p>
+                  <label className="field">
+                    <span className="field__label">Email</span>
+                    <input
+                      className="input"
+                      type="email"
+                      autoComplete="username"
+                      placeholder="you@pika-leads.com"
+                      value={email}
+                      autoFocus
+                      onChange={(event) => setEmail(event.target.value)}
+                      onKeyDown={(event) => event.key === "Enter" && submitForgot()}
+                    />
+                  </label>
+                  <ErrorAlert error={error} />
+                  <button type="button" className="btn btn--primary btn--block" onClick={submitForgot} disabled={busy}>
+                    {busy ? <span className="spinner" /> : "Отправить ссылку"}
+                  </button>
+                </>
+              )}
+            </div>
+          )}
+
+          {screen === "sent" && (
+            <div className="auth__screen">
+              <div className="auth__icon">
+                <Icon name="mail" size={24} />
+              </div>
+              <h2 className="auth__title">Проверьте почту</h2>
               <p className="auth__text">
-                Напишите администратору панели — он выдаст временный пароль в разделе «Команда». При входе с ним вы сразу
-                зададите новый пароль.
+                Если <b>{email.trim()}</b> есть в панели, на него придёт письмо со ссылкой. Она действует 30 минут. Письма нет — загляните в
+                «Спам».
               </p>
               <button type="button" className="btn btn--block" onClick={backToLogin}>
                 Вернуться ко входу
+              </button>
+            </div>
+          )}
+
+          {screen === "reset" && (
+            <div className="auth__screen">
+              <div className="auth__icon">
+                <Icon name="lock" size={24} />
+              </div>
+              <h2 className="auth__title">Новый пароль</h2>
+              <p className="auth__text">Придумайте новый пароль. После сохранения все устройства выйдут из панели.</p>
+
+              <span className="field__label">Новый пароль</span>
+              <div style={{ marginTop: 7 }}>
+                <PasswordInput
+                  value={newPass}
+                  onChange={setNewPass}
+                  placeholder="Минимум 10 символов"
+                  autoComplete="new-password"
+                  autoFocus
+                />
+              </div>
+              <StrengthMeter password={newPass} />
+
+              <label className="field">
+                <span className="field__label">Повторите пароль</span>
+                <input
+                  className="input"
+                  type="password"
+                  autoComplete="new-password"
+                  placeholder="Повторите пароль"
+                  value={confirmPass}
+                  onChange={(event) => setConfirmPass(event.target.value)}
+                  onKeyDown={(event) => event.key === "Enter" && submitReset()}
+                />
+              </label>
+
+              <ErrorAlert error={error} />
+              <button type="button" className="btn btn--primary btn--block" onClick={submitReset} disabled={busy}>
+                {busy ? <span className="spinner" /> : "Сохранить пароль"}
+              </button>
+              <button type="button" className="auth__link auth__reset-back" onClick={backToLogin}>
+                Вспомнили пароль? Войти
+              </button>
+            </div>
+          )}
+
+          {screen === "resetDone" && (
+            <div className="auth__screen auth__done">
+              <div className="auth__done-icon">
+                <Icon name="check" size={34} strokeWidth="2.6" />
+              </div>
+              <h2 className="auth__title">Пароль изменён</h2>
+              <p className="auth__text">Войдите с новым паролем. Код 2FA понадобится как обычно.</p>
+              <button type="button" className="btn btn--primary btn--block" onClick={backToLogin}>
+                Войти
               </button>
             </div>
           )}

@@ -34,6 +34,7 @@ import { HttpError, clientIp, cookieHeader, parseCookies, readBody, send } from 
 import { addComment, createLead, deleteLead, leads, publicLead, setManager, setStatus } from "./leads.mjs";
 import { LEAD_TYPES, STATUSES, isStatus } from "./statuses.mjs";
 import { clean } from "./telegram.mjs";
+import { requestReset, resetAvailable, resetPassword } from "./reset.mjs";
 import {
   contentStatus,
   deleteContent,
@@ -111,6 +112,19 @@ route("POST", "/auth/login", { public: true }, async ({ req, res, body }) => {
   if (!user || !valid || user.disabled) throw new HttpError(401, "Неверный email или пароль");
   forgiveAttempt(ip, email);
   return nextStep(res, user, body.remember);
+});
+
+// ---------- відновлення пароля через email ----------
+route("GET", "/auth/forgot", { public: true }, ({ res }) => send(res, 200, { available: resetAvailable() }));
+
+route("POST", "/auth/forgot", { public: true }, ({ req, res, body }) => {
+  requestReset(body.email, clientIp(req));
+  return send(res, 200, { ok: true });
+});
+
+route("POST", "/auth/reset", { public: true }, async ({ req, res, body }) => {
+  await resetPassword(body.token, body.password, clientIp(req));
+  return send(res, 200, { ok: true });
 });
 
 route("POST", "/auth/change-password", { public: true }, async ({ res, body }) => {

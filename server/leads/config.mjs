@@ -35,3 +35,11 @@ export const GITHUB_BRANCH = env.GITHUB_BRANCH || "main";
 export const GITHUB_API = (env.GITHUB_API_URL || "https://api.github.com").replace(/\/$/, "");
 export const GITHUB_AUTHOR_EMAIL = env.GITHUB_AUTHOR_EMAIL || "admin@pika-leads.com";
 export const SITE_URL = (env.SITE_URL || "https://pika-leads.com").replace(/\/$/, "");
+
+// Пошта (відновлення пароля): SMTP з TLS на порту 465 — див. mail.mjs
+export const SMTP_HOST = env.SMTP_HOST || "";
+export const SMTP_PORT = Number(env.SMTP_PORT || 465);
+export const SMTP_USER = env.SMTP_USER || "";
+export const SMTP_PASS = env.SMTP_PASS || "";
+export const MAIL_FROM = env.MAIL_FROM || "";
+export const MAIL_FROM_NAME = env.MAIL_FROM_NAME || "Pikaleads";
