@@ -1,0 +1,479 @@
+{
+  "order": 2,
+  "originalId": 3,
+  "id": "online-clothing-store",
+  "featured": true,
+  "number": "03",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "E-commerce / покупки",
+    "en": "E-commerce / purchases",
+    "ru": "E-commerce / покупки"
+  },
+  "title": {
+    "uk": "Інтернет-магазин одягу",
+    "en": "Online clothing store",
+    "ru": "Интернет-магазин одежды"
+  },
+  "description": {
+    "uk": "Спершу відновили вимірювання воронки, потім закуповували трафік — покупка $1.20–$3.20.",
+    "en": "First we restored funnel tracking, then bought traffic — $1.20–$3.20 per purchase.",
+    "ru": "Сначала восстановили измерение воронки, потом закупали трафик — покупка $1.20–$3.20."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "1 980–3 780",
+        "en": "1,980–3,780",
+        "ru": "1 980–3 780"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.05–$0.09",
+        "en": "CPC $0.05–$0.09",
+        "ru": "CPC $0.05–$0.09"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "22–42 замовлення/день",
+        "en": "22–42 orders/day",
+        "ru": "22–42 заказа/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$4 950",
+        "en": "$4,950",
+        "ru": "$4 950"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.05–$0.09",
+          "en": "$0.05–$0.09",
+          "ru": "$0.05–$0.09"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна покупки",
+          "en": "Cost per purchase",
+          "ru": "Цена покупки"
+        },
+        "value": {
+          "uk": "$1.20–$3.20",
+          "en": "$1.20–$3.20",
+          "ru": "$1.20–$3.20"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$50",
+          "en": "$50",
+          "ru": "$50"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "22–42 покупки",
+          "en": "22–42 purchases",
+          "ru": "22–42 покупки"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "7 на скринах кампаній",
+        "en": "7 in campaign screenshots",
+        "ru": "7 на скринах кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$4 950",
+            "en": "$4,950",
+            "ru": "$4 950"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "1 980–3 780 покупок за 90 днів",
+            "en": "1,980–3,780 purchases in 90 days",
+            "ru": "1 980–3 780 покупок за 90 дней"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа розрахунку: $55/день × 90 днів роботи",
+        "en": "Account total for the whole period · calculation basis: $55/day × 90 days of work",
+        "ru": "Итог кабинета за весь срок · основа расчёта: $55/день × 90 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Проєкт прийшов із проблемою аналітики: реклама могла давати дешеві переходи, але бізнесу було складно точно пов’язати їх із покупками. Тому першим етапом стала не закупівля трафіку, а відновлення вимірювання воронки.",
+      "en": "The project came to us with an analytics problem: ads could deliver cheap clicks, but the business struggled to tie them accurately to purchases. So the first stage was not buying traffic but restoring funnel tracking.",
+      "ru": "Проект пришёл с проблемой аналитики: реклама могла давать дешёвые переходы, но бизнесу было сложно точно связать их с покупками. Поэтому первым этапом стала не закупка трафика, а восстановление измерения воронки."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/online-clothing-store/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній інтернет-магазину одягу",
+          "en": "Online clothing store ad campaign results",
+          "ru": "Результаты рекламных кампаний интернет-магазина одежды"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / покупки",
+          "en": "Screenshot 1 — E-commerce / purchases",
+          "ru": "Скриншот 1 — E-commerce / покупки"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "До запуску були перевірені GTM, події перегляду товару, кошика, checkout і purchase. Після тестової кампанії на обмеженому бюджеті порівняли дані кабінету із замовленнями сайту і лише потім увімкнули основну структуру продажів.",
+      "en": "Before launch, we checked GTM and the view product, cart, checkout and purchase events. After a test campaign on a limited budget, we compared ad account data with website orders and only then switched on the main sales structure.",
+      "ru": "До запуска были проверены GTM, события просмотра товара, корзины, checkout и purchase. После тестовой кампании на ограниченном бюджете сравнили данные кабинета с заказами сайта и только потом включили основную структуру продаж."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/online-clothing-store/screenshot-02.webp",
+        "alt": {
+          "uk": "Історія запуску рекламної кампанії інтернет-магазину одягу",
+          "en": "Online clothing store ad campaign launch history",
+          "ru": "История запуска рекламной кампании интернет-магазина одежды"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — E-commerce / покупки",
+          "en": "Screenshot 2 — E-commerce / purchases",
+          "ru": "Скриншот 2 — E-commerce / покупки"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Технічна кампанія на перевірку подій і якості атрибуції.",
+        "en": "A technical campaign to verify events and attribution quality.",
+        "ru": "Техническая кампания на проверку событий и качества атрибуции."
+      },
+      {
+        "uk": "Основна Sales-кампанія на широку аудиторію з оптимізацією Purchase.",
+        "en": "The main Sales campaign for a broad audience, optimized for Purchase.",
+        "ru": "Основная Sales-кампания на широкую аудиторию с оптимизацией Purchase."
+      },
+      {
+        "uk": "Категорійні групи за сукнями, базовим одягом і товарами-лідерами.",
+        "en": "Category ad sets for dresses, basics and best-selling products.",
+        "ru": "Категорийные группы по платьям, базовой одежде и товарам-лидерам."
+      },
+      {
+        "uk": "Динамічний ретаргетинг користувачів, які дивилися товар або почали checkout.",
+        "en": "Dynamic retargeting of users who viewed a product or started checkout.",
+        "ru": "Динамический ретаргетинг пользователей, которые смотрели товар или начали checkout."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "У рекламі поєднувалися каталожна подача та lifestyle-візуали. Для холодної аудиторії показували готові образи, а в ретаргетингу — конкретний переглянутий товар і причину завершити покупку.",
+        "en": "The ads combined catalog-style presentation with lifestyle visuals. Cold audiences saw complete outfits, while retargeting showed the specific product viewed and a reason to complete the purchase.",
+        "ru": "В рекламе сочетались каталожная подача и lifestyle-визуалы. Холодной аудитории показывали готовые образы, а в ретаргетинге — конкретный просмотренный товар и причину завершить покупку."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Протягом двох місяців бюджет перерозподілявся за фактичною ціною покупки, а не за CTR. Окремо відстежувалися розбіжності між рекламним кабінетом і сайтом, щоб не масштабувати хибнопозитивні зв’язки.",
+        "en": "Over two months, the budget was reallocated based on actual cost per purchase, not CTR. Discrepancies between the ad account and the website were tracked separately so as not to scale false-positive funnels.",
+        "ru": "На протяжении двух месяцев бюджет перераспределялся по фактической цене покупки, а не по CTR. Отдельно отслеживались расхождения между рекламным кабинетом и сайтом, чтобы не масштабировать ложноположительные связки."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$55",
+            "en": "$55",
+            "ru": "$55"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 650",
+            "en": "$1,650",
+            "ru": "$1 650"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.31–$2.50",
+            "en": "$1.31–$2.50",
+            "ru": "$1.31–$2.50"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "660–1 260 покупок",
+            "en": "660–1,260 purchases",
+            "ru": "660–1 260 покупок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 660–1 260 покупок за 30 днів при збереженні заявленого темпу.",
+        "en": "Cross-check with the source: 660–1,260 purchases in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 660–1 260 покупок за 30 дней при сохранении заявленного темпа."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Після переналаштування аналітики проєкт утримував покупку в діапазоні $1.20–$3.20 і отримував 22–42 замовлення на день при бюджеті $50.",
+        "en": "After the analytics were reconfigured, the project held the cost per purchase at $1.20–$3.20 and received 22–42 orders a day on a $50 budget.",
+        "ru": "После перенастройки аналитики проект удерживал покупку в диапазоне $1.20–$3.20 и получал 22–42 заказа в день при бюджете $50."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/online-clothing-store/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії інтернет-магазину одягу",
+          "en": "Online clothing store ad campaign results",
+          "ru": "Результаты рекламной кампании интернет-магазина одежды"
+        },
+        "caption": {
+          "uk": "1 / 2",
+          "en": "1 / 2",
+          "ru": "1 / 2"
+        }
+      },
+      {
+        "image": "cases/content/online-clothing-store/screenshot-02.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії інтернет-магазину одягу",
+          "en": "Online clothing store ad campaign results",
+          "ru": "Результаты рекламной кампании интернет-магазина одежды"
+        },
+        "caption": {
+          "uk": "2 / 2",
+          "en": "2 / 2",
+          "ru": "2 / 2"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/online-clothing-store.webp",
+  "imageCard": "cases/card/online-clothing-store.webp"
+}

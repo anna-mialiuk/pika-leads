@@ -1,0 +1,25 @@
+{
+  "order": 65,
+  "originalId": 66,
+  "id": "uiux-mobile-app",
+  "number": "66",
+  "source": "uiux",
+  "niche": "mobile",
+  "category": {
+    "uk": "Mobile UI",
+    "en": "Mobile UI",
+    "ru": "Mobile UI"
+  },
+  "categoryColor": "#A78BFA",
+  "platform": "UI/UX",
+  "title": {
+    "uk": "Мобільний застосунок",
+    "en": "Mobile app",
+    "ru": "Мобильное приложение"
+  },
+  "description": {
+    "uk": "UX і UI мобільного продукту: екрани, стани, анімації.",
+    "en": "UX and UI for a mobile product: screens, states, animations.",
+    "ru": "UX и UI мобильного продукта: экраны, состояния, анимации."
+  }
+}

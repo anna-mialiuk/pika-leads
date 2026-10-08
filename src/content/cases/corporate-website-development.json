@@ -1,0 +1,25 @@
+{
+  "order": 58,
+  "originalId": 59,
+  "id": "corporate-website-development",
+  "number": "59",
+  "source": "website",
+  "niche": "corporate",
+  "category": {
+    "uk": "Корпоративний",
+    "en": "Corporate",
+    "ru": "Корпоративный"
+  },
+  "categoryColor": "#3B82F6",
+  "platform": "Website",
+  "title": {
+    "uk": "Корпоративний сайт",
+    "en": "Corporate website",
+    "ru": "Корпоративный сайт"
+  },
+  "description": {
+    "uk": "Багатосторінковий сайт із блогом, послугами та формами захоплення.",
+    "en": "A multi-page website with a blog, services and lead capture forms.",
+    "ru": "Многостраничный сайт с блогом, услугами и формами захвата."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "order": 59,
+  "originalId": 60,
+  "id": "traffic-landing-development",
+  "number": "60",
+  "source": "website",
+  "niche": "landing",
+  "category": {
+    "uk": "Лендінг",
+    "en": "Landing page",
+    "ru": "Лендинг"
+  },
+  "categoryColor": "#22D3EE",
+  "platform": "Website",
+  "title": {
+    "uk": "Лендінг під трафік",
+    "en": "Landing page for paid traffic",
+    "ru": "Лендинг под трафик"
+  },
+  "description": {
+    "uk": "Односторінковий сайт зі швидким завантаженням і високою конверсією.",
+    "en": "A fast-loading, high-converting one-page website.",
+    "ru": "Одностраничный сайт с быстрой загрузкой и высокой конверсией."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "order": 69,
+  "originalId": 70,
+  "id": "uiux-product-redesign",
+  "number": "70",
+  "source": "uiux",
+  "niche": "redesign",
+  "category": {
+    "uk": "Редизайн",
+    "en": "Redesign",
+    "ru": "Редизайн"
+  },
+  "categoryColor": "#EC4899",
+  "platform": "UI/UX",
+  "title": {
+    "uk": "Редизайн продукту",
+    "en": "Product redesign",
+    "ru": "Редизайн продукта"
+  },
+  "description": {
+    "uk": "Переробка UX і візуалу наявного продукту.",
+    "en": "Reworking the UX and visuals of an existing product.",
+    "ru": "Переработка UX и визуала существующего продукта."
+  }
+}

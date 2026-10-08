@@ -1,0 +1,480 @@
+{
+  "order": 39,
+  "originalId": 40,
+  "id": "relationship-psychology-training",
+  "number": "40",
+  "source": "google",
+  "niche": "webinar",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Google Ads / тестовий запуск",
+    "en": "Google Ads / test launch",
+    "ru": "Google Ads / тестовый запуск"
+  },
+  "title": {
+    "uk": "Психологія стосунків: 234 ліди по $5.68",
+    "en": "Relationship psychology: 234 leads at $5.68",
+    "ru": "Психология отношений: 234 лида по $5.68"
+  },
+  "description": {
+    "uk": "Практичний тренінг для російськомовних жінок за кордоном: CPL на 18,9% нижчий за допустимий рівень.",
+    "en": "A practical training for Russian-speaking women abroad: CPL 18.9% below the acceptable level.",
+    "ru": "Практический тренинг для русскоязычных женщин за рубежом: CPL на 18,9% ниже допустимого уровня."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "234 ліди",
+        "en": "234 leads",
+        "ru": "234 лида"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL $5.68",
+        "en": "CPL $5.68",
+        "ru": "CPL $5.68"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "click→lead 6.7%",
+        "en": "click→lead 6.7%",
+        "ru": "click→lead 6.7%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$1 328",
+        "en": "$1,328",
+        "ru": "$1 328"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$1 328",
+          "en": "$1,328",
+          "ru": "$1 328"
+        },
+        "note": {
+          "uk": "фактичні витрати",
+          "en": "actual spend",
+          "ru": "фактические расходы"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "234",
+          "en": "234",
+          "ru": "234"
+        },
+        "note": {
+          "uk": "скріншот: 233.99 конверсії",
+          "en": "screenshot: 233.99 conversions",
+          "ru": "скриншот: 233.99 конверсии"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$5.68",
+          "en": "$5.68",
+          "ru": "$5.68"
+        },
+        "note": {
+          "uk": "на 18.9% нижче KPI $7",
+          "en": "18.9% below the $7 KPI",
+          "ru": "на 18.9% ниже KPI $7"
+        }
+      },
+      {
+        "label": {
+          "uk": "Кліки",
+          "en": "Clicks",
+          "ru": "Клики"
+        },
+        "value": {
+          "uk": "≈ 3 490",
+          "en": "≈ 3,490",
+          "ru": "≈ 3 490"
+        },
+        "note": {
+          "uk": "Google Ads",
+          "en": "Google Ads",
+          "ru": "Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахунковий CPC",
+          "en": "Calculated CPC",
+          "ru": "Расчётный CPC"
+        },
+        "value": {
+          "uk": "$0.38",
+          "en": "$0.38",
+          "ru": "$0.38"
+        },
+        "note": {
+          "uk": "$1 328 / 3 490",
+          "en": "$1,328 / 3,490",
+          "ru": "$1 328 / 3 490"
+        }
+      },
+      {
+        "label": {
+          "uk": "Click → lead",
+          "en": "Click → lead",
+          "ru": "Click → lead"
+        },
+        "value": {
+          "uk": "6.7%",
+          "en": "6.7%",
+          "ru": "6.7%"
+        },
+        "note": {
+          "uk": "234 / 3 490",
+          "en": "234 / 3,490",
+          "ru": "234 / 3 490"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "тестовий запуск",
+        "en": "test launch",
+        "ru": "тестовый запуск"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$1 328",
+            "en": "$1,328",
+            "ru": "$1 328"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "234 ліди",
+            "en": "234 leads",
+            "ru": "234 лида"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "≈ 3 490 кліків",
+            "en": "≈ 3,490 clicks",
+            "ru": "≈ 3 490 кликов"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: фактичні витрати",
+        "en": "Account total for the whole period · basis: actual spend",
+        "ru": "Итог кабинета за весь срок · основа: фактические расходы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Практичний тренінг «Як закохати потрібного чоловіка» у ніші психології стосунків. Воронка: Google Ads → реєстрація → тренінг → продаж основної програми. Географія — весь світ, крім Казахстану, Білорусі, України та Росії. Аудиторія — російськомовні жінки за кордоном із запитом на побудову стосунків. Ключовий мотив — отримати зрозумілу модель поведінки в конкретній романтичній ситуації. KPI — протестувати попит і утримати CPL до $7.",
+      "en": "A practical training, “How to Make the Right Man Fall in Love”, in the relationship psychology niche. Funnel: Google Ads → registration → training → sale of the main program. Geography: worldwide except Kazakhstan, Belarus, Ukraine and Russia. Audience: Russian-speaking women abroad looking to build relationships. Key motive: getting a clear behavior model for a specific romantic situation. KPI: test demand and keep CPL under $7.",
+      "ru": "Практический тренинг «Как влюбить нужного мужчину» в нише психологии отношений. Воронка: Google Ads → регистрация → тренинг → продажа основной программы. География — весь мир, кроме Казахстана, Беларуси, Украины и России. Аудитория — русскоязычные женщины за рубежом с запросом на построение отношений. Ключевой мотив — получить понятную модель поведения в конкретной романтической ситуации. KPI — протестировать спрос и удержать CPL до $7."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/relationship-psychology-training/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для тренінгу з психології стосунків",
+          "en": "Google Ads results for the relationship psychology training",
+          "ru": "Результаты Google Ads для тренинга по психологии отношений"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Google Ads / тестовий запуск",
+          "en": "Screenshot 1 — Google Ads / test launch",
+          "ru": "Скриншот 1 — Google Ads / тестовый запуск"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Запустили трафік одразу на цільову реєстрацію, щоб оцінювати не залучення, а кінцеву дію у воронці. Розвели три емоційні гіпотези: «як закохати конкретного чоловіка», «як побудувати стосунки» та «психологія тяжіння». Використовували відеокреативи, у яких спочатку позначалася ситуація аудиторії, потім — обіцянка тренінгу та наступний крок.",
+      "en": "We sent traffic straight to the target registration so we’d evaluate the funnel’s final action, not engagement. We set up three emotional hypotheses: “how to make a specific man fall in love”, “how to build a relationship” and “the psychology of attraction”. We used video creatives that first named the audience’s situation, then the training promise and the next step.",
+      "ru": "Запустили трафик сразу на целевую регистрацию, чтобы оценивать не вовлечение, а конечное действие в воронке. Развели три эмоциональные гипотезы: «как влюбить конкретного мужчину», «как построить отношения» и «психология притяжения». Использовали видеокреативы, в которых сначала обозначалась ситуация аудитории, затем — обещание тренинга и следующий шаг."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Етап 1 — перевірка повідомлень: три офери × кілька відео; перехід далі лише за реєстрацій по прийнятній ціні.",
+        "en": "Stage 1 — message testing: three offers × several videos; moving on only with registrations at an acceptable price.",
+        "ru": "Этап 1 — проверка сообщений: три оффера × несколько видео; переход дальше только при регистрациях по приемлемой цене."
+      },
+      {
+        "uk": "Етап 2 — оптимізація: відключення слабких зв’язок за умови стабільного CPL нижче $7.",
+        "en": "Stage 2 — optimization: cutting weak funnels provided CPL stayed stable below $7.",
+        "ru": "Этап 2 — оптимизация: отключение слабых связок при условии стабильного CPL ниже $7."
+      },
+      {
+        "uk": "Етап 3 — розширення: укрупнення переможців, поки ціна не росте швидше за обсяг.",
+        "en": "Stage 3 — expansion: consolidating winners as long as cost didn’t grow faster than volume.",
+        "ru": "Этап 3 — расширение: укрупнение победителей, пока цена не растёт быстрее объёма."
+      },
+      {
+        "uk": "Широка міжнародна географія з контролем фактичної російськомовності через тексти оголошень і посадкову сторінку.",
+        "en": "Broad international geography, with actual Russian-speaking reach controlled through ad copy and the landing page.",
+        "ru": "Широкая международная география с контролем фактической русскоязычности через тексты объявлений и посадочную страницу."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Відеокреативи будувалися за схемою «ситуація аудиторії → обіцянка тренінгу → наступний крок». Конкретний емоційний результат виявився сильнішим за абстрактну обіцянку «розібратися у стосунках», а формат відео допомагав передати тональність експерта та знизити недовіру до переходу на сторінку реєстрації.",
+        "en": "Video creatives followed the pattern “the audience’s situation → the training’s promise → the next step”. A concrete emotional outcome proved stronger than the abstract promise to “figure out relationships”, and the video format helped convey the expert’s tone and reduce distrust before clicking through to registration.",
+        "ru": "Видеокреативы строились по схеме «ситуация аудитории → обещание тренинга → следующий шаг». Конкретный эмоциональный результат оказался сильнее абстрактного обещания «разобраться в отношениях», а формат видео помогал передать тональность эксперта и снизить недоверие перед переходом на страницу регистрации."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Порівнювали зв’язки за CPL і обсягом, відключали дорогі або нестабільні комбінації аудиторії та повідомлення. Навіть на широкій міжнародній географії запуск утримав CPL нижче цільового порогу: $5.68 проти допустимих $7.",
+        "en": "We compared funnels by CPL and volume and switched off expensive or unstable audience-message combinations. Even with broad international geography, the launch kept CPL below the target threshold: $5.68 versus the acceptable $7.",
+        "ru": "Сравнивали связки по CPL и объёму, отключали дорогие или нестабильные комбинации аудитории и сообщения. Даже на широкой международной географии запуск удержал CPL ниже целевого порога: $5.68 против допустимых $7."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "не визначений",
+            "en": "not specified",
+            "ru": "не определён"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "не визначений",
+            "en": "not specified",
+            "ru": "не определён"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPL ≤ $7",
+            "en": "CPL ≤ $7",
+            "ru": "CPL ≤ $7"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "CPL $5.68",
+            "en": "CPL $5.68",
+            "ru": "CPL $5.68"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Денна та місячна динаміка не розраховується: на наданому скріншоті немає дат звітного періоду. Для точного середнього потрібен діапазон дат із Google Ads.",
+        "en": "Daily and monthly dynamics aren’t calculated: the screenshot provided shows no reporting period dates. An accurate average requires the date range from Google Ads.",
+        "ru": "Дневная и месячная динамика не рассчитывается: на предоставленном скриншоте нет дат отчётного периода. Для точного среднего нужен диапазон дат из Google Ads."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Тестовий запуск вклався в KPI: 234 ліди по $5.68 при бюджеті $1 328. Перевірено три емоційні гіпотези, знайдена робоча — конкретна ситуація замість загальної обіцянки.",
+        "en": "The test launch met the KPI: 234 leads at $5.68 on a $1,328 budget. Three emotional hypotheses were tested and a working one found — a specific situation instead of a general promise.",
+        "ru": "Тестовый запуск уложился в KPI: 234 лида по $5.68 при бюджете $1 328. Проверены три эмоциональные гипотезы, найдена рабочая — конкретная ситуация вместо общего обещания."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/relationship-psychology-training/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads тестового запуску тренінгу з психології стосунків",
+          "en": "Google Ads results for the relationship psychology training test launch",
+          "ru": "Результаты Google Ads тестового запуска тренинга по психологии отношений"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот Google Ads із початкового звіту. Підтверджено близько 3.49 тис. кліків, 233.99 конверсії, CPL $5.68 і витрати близько $1.33 тис. Підсумкові 234 ліди округлено з фактичного значення конверсій.",
+      "en": "Google Ads screenshot from the original report. Confirmed: about 3.49k clicks, 233.99 conversions, a $5.68 CPL and about $1.33k in spend. The final 234 leads are rounded from the actual conversion value.",
+      "ru": "Скриншот Google Ads из исходного отчёта. Подтверждено около 3.49 тыс. кликов, 233.99 конверсии, CPL $5.68 и расходы около $1.33 тыс. Итоговые 234 лида округлены из фактического значения конверсий."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/relationship-psychology-training.jpg",
+  "imageCard": "cases/card/relationship-psychology-training.webp"
+}

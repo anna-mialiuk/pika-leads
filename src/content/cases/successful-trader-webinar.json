@@ -1,0 +1,707 @@
+{
+  "order": 23,
+  "originalId": 24,
+  "id": "successful-trader-webinar",
+  "number": "24",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Денис Пруський / трейдинг-освіта",
+    "en": "Denys Pruskyi / trading education",
+    "ru": "Денис Прусский / трейдинг-образование"
+  },
+  "title": {
+    "uk": "Вебінар «Успішний трейдер»",
+    "en": "“Successful Trader” webinar",
+    "ru": "Вебинар «Успешный трейдер»"
+  },
+  "description": {
+    "uk": "Основний підрядник з трафіку та організації рекламної системи вебінару.",
+    "en": "Main contractor for traffic and for organizing the webinar’s ad system.",
+    "ru": "Основной подрядчик по трафику и организации рекламной системы вебинара."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього лідів",
+        "en": "Total leads",
+        "ru": "Всего лидов"
+      },
+      "value": {
+        "uk": "9 587",
+        "en": "9,587",
+        "ru": "9 587"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "ROI",
+        "en": "ROI",
+        "ru": "ROI"
+      },
+      "value": {
+        "uk": "285.21%",
+        "en": "285.21%",
+        "ru": "285.21%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Конверсія сторінки",
+        "en": "Page conversion rate",
+        "ru": "Конверсия страницы"
+      },
+      "value": {
+        "uk": "29.54–38.98%",
+        "en": "29.54–38.98%",
+        "ru": "29.54–38.98%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$11 330.47",
+        "en": "$11,330.47",
+        "ru": "$11 330.47"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$11 330.47",
+          "en": "$11,330.47",
+          "ru": "$11 330.47"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "9 587",
+          "en": "9,587",
+          "ru": "9 587"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$1.18",
+          "en": "$1.18",
+          "ru": "$1.18"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "29.54–38.98%",
+          "en": "29.54–38.98%",
+          "ru": "29.54–38.98%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "748%",
+          "en": "748%",
+          "ru": "748%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "285.21%",
+          "en": "285.21%",
+          "ru": "285.21%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Вихідний потік: 100–200 лідів на день",
+          "en": "Starting flow: 100–200 leads a day",
+          "ru": "Исходный поток: 100–200 лидов в день"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "11 матеріалів кампаній",
+        "en": "11 campaign materials",
+        "ru": "11 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$11 330.47",
+            "en": "$11,330.47",
+            "ru": "$11 330.47"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "9 587 лідів",
+            "en": "9,587 leads",
+            "ru": "9 587 лидов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "У проєкті вже був попит, але обсяг 100–200 лідів на день обмежував продажі. При збільшенні бюджету вартість зростала, а креативи, сторінка та аналітика не давали впевненості, що масштабування не погіршить якість аудиторії.",
+      "en": "The project already had demand, but a volume of 100–200 leads a day was limiting sales. As the budget grew, costs rose, and the creatives, page and analytics gave no confidence that scaling wouldn’t hurt audience quality.",
+      "ru": "В проекте уже был спрос, но объём 100–200 лидов в день ограничивал продажи. При увеличении бюджета стоимость росла, а креативы, страница и аналитика не давали уверенности, что масштабирование не ухудшит качество аудитории."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/successful-trader/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний креатив вебінару «Успішний трейдер» про інвестування в криптовалюти",
+          "en": "“Successful Trader” webinar ad creative about cryptocurrency investing",
+          "ru": "Рекламный креатив вебинара «Успешный трейдер» об инвестировании в криптовалюты"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Креатив із офером безкоштовного майстер-класу з інвестування",
+          "en": "Screenshot 1 — Creative with a free investing master class offer",
+          "ru": "Скриншот 1 — Креатив с оффером бесплатного мастер-класса по инвестированию"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий рекламний матеріал вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar — second ad material",
+          "ru": "Второй рекламный материал вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Варіація рекламного креативу для тестування оферу",
+          "en": "Screenshot 2 — An ad creative variation for testing the offer",
+          "ru": "Скриншот 2 — Вариация рекламного креатива для тестирования оффера"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-03.webp",
+        "alt": {
+          "uk": "Третій рекламний матеріал вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar — third ad material",
+          "ru": "Третий рекламный материал вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Креативна гіпотеза для залучення нової аудиторії",
+          "en": "Screenshot 3 — A creative hypothesis for attracting a new audience",
+          "ru": "Скриншот 3 — Креативная гипотеза для привлечения новой аудитории"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Відокремили освітню обіцянку від неприпустимих гарантій прибутковості та побудували комунікацію навколо навички й процесу. Перевірили сторінку, події та узгодженість обіцянок між рекламою і вебінаром. Створили сегменти за досвідом: новачки, інвестори та користувачі, які цікавляться ринками. Тестували кілька типів доказів: програму, методику, розбір ринку та компетентність експерта. Масштабували лише ті зв’язки, де реєстрація зберігала прийнятну доходимість і якість продажів.",
+      "en": "We separated the educational promise from unacceptable profit guarantees and built the messaging around skills and process. We checked the page, events and consistency of promises between the ads and the webinar. We created segments by experience: beginners, investors and people interested in markets. We tested several types of proof: the program, the methodology, a market breakdown and the expert’s competence. Only funnels where registrations kept acceptable attendance and sales quality were scaled.",
+      "ru": "Отделили образовательное обещание от недопустимых гарантий доходности и построили коммуникацию вокруг навыка и процесса. Проверили страницу, события и согласованность обещаний между рекламой и вебинаром. Создали сегменты по опыту: новички, инвесторы и пользователи, интересующиеся рынками. Тестировали несколько типов доказательств: программу, методику, разбор рынка и компетентность эксперта. Масштабировали только те связки, где регистрация сохраняла приемлемую доходимость и качество продаж."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/successful-trader/screenshot-04.webp",
+        "alt": {
+          "uk": "Рекламний креатив вебінару «Успішний трейдер» про криптовалюти",
+          "en": "“Successful Trader” webinar ad creative about cryptocurrencies",
+          "ru": "Рекламный креатив вебинара «Успешный трейдер» о криптовалютах"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Креатив із освітнім офером про криптовалютний ринок",
+          "en": "Screenshot 1 — Creative with an educational offer about the crypto market",
+          "ru": "Скриншот 1 — Креатив с образовательным оффером о криптовалютном рынке"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-05.webp",
+        "alt": {
+          "uk": "Другий рекламний матеріал вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar — second ad material",
+          "ru": "Второй рекламный материал вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Варіація рекламного повідомлення для тестування аудиторії",
+          "en": "Screenshot 2 — An ad message variation for audience testing",
+          "ru": "Скриншот 2 — Вариация рекламного сообщения для тестирования аудитории"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-06.webp",
+        "alt": {
+          "uk": "Третій рекламний матеріал вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar — third ad material",
+          "ru": "Третий рекламный материал вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Тестування креативної гіпотези та освітнього оферу",
+          "en": "Screenshot 3 — Testing a creative hypothesis and educational offer",
+          "ru": "Скриншот 3 — Тестирование креативной гипотезы и образовательного оффера"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Acquisition: широка аудиторія плюс тематичні контрольні сегменти.",
+        "en": "Acquisition: broad audience plus themed control segments.",
+        "ru": "Acquisition: широкая аудитория плюс тематические контрольные сегменты."
+      },
+      {
+        "uk": "Compliance-safe creative lab: тест формулювань без обіцянок гарантованого заробітку.",
+        "en": "Compliance-safe creative lab: testing wording without promises of guaranteed earnings.",
+        "ru": "Compliance-safe creative lab: тест формулировок без обещаний гарантированного заработка."
+      },
+      {
+        "uk": "Retarget: перегляд відео, відвідування сторінки, реєстрація без відвідування.",
+        "en": "Retarget: video views, page visits, registered but didn’t attend.",
+        "ru": "Retarget: просмотр видео, посещение страницы, регистрация без посещения."
+      },
+      {
+        "uk": "Post-webinar: відповіді на заперечення, кейси навчання та обмежений дедлайн.",
+        "en": "Post-webinar: answers to objections, training cases and a limited deadline.",
+        "ru": "Post-webinar: ответы на возражения, кейсы обучения и ограниченный дедлайн."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/successful-trader/screenshot-07.webp",
+        "alt": {
+          "uk": "Посадкова сторінка майстер-класу «Успішний трейдер»",
+          "en": "“Successful Trader” master class landing page",
+          "ru": "Посадочная страница мастер-класса «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Посадкова сторінка безкоштовного майстер-класу з криптовалют",
+          "en": "Screenshot 1 — Free crypto master class landing page",
+          "ru": "Скриншот 1 — Посадочная страница бесплатного мастер-класса по криптовалютам"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-08.webp",
+        "alt": {
+          "uk": "Другий матеріал рекламної архітектури вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar ad architecture — second material",
+          "ru": "Второй материал рекламной архитектуры вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Структура оферу та рекламної воронки вебінару",
+          "en": "Screenshot 2 — Webinar offer and ad funnel structure",
+          "ru": "Скриншот 2 — Структура оффера и рекламной воронки вебинара"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-09.webp",
+        "alt": {
+          "uk": "Третій матеріал рекламної архітектури вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar ad architecture — third material",
+          "ru": "Третий материал рекламной архитектуры вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Логіка залучення, ретаргетингу та роботи з аудиторією",
+          "en": "Screenshot 3 — Acquisition, retargeting and audience logic",
+          "ru": "Скриншот 3 — Логика привлечения, ретаргетинга и работы с аудиторией"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Робоча подача будувалася на ясності та експертності: що буде розібрано, для кого підходить матеріал і яку навичку отримає учасник. У ніші трейдингу довіра важливіша за клікбейт, тому агресивні обіцянки замінювали демонстрацією процесу прийняття рішень.",
+        "en": "The working approach relied on clarity and expertise: what would be covered, who the material is for and what skill the participant would gain. In the trading niche, trust matters more than clickbait, so aggressive promises were replaced with a demonstration of the decision-making process.",
+        "ru": "Рабочая подача строилась на ясности и экспертности: что будет разобрано, кому подходит материал и какой навык получит участник. В нише трейдинга доверие важнее кликбейта, поэтому агрессивные обещания заменяли демонстрацией процесса принятия решений."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/successful-trader/screenshot-10.webp",
+        "alt": {
+          "uk": "Схема рекламної воронки вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar ad funnel diagram",
+          "ru": "Схема рекламной воронки вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Структура трафіку, оферів і рекламної воронки",
+          "en": "Screenshot 1 — Traffic, offer and ad funnel structure",
+          "ru": "Скриншот 1 — Структура трафика, офферов и рекламной воронки"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-11.webp",
+        "alt": {
+          "uk": "Другий матеріал креативної стратегії вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar creative strategy — second material",
+          "ru": "Второй материал креативной стратегии вебинара «Успешный трейдер»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Логіка сегментації, ретаргетингу та роботи з аудиторіями",
+          "en": "Screenshot 2 — Segmentation, retargeting and audience logic",
+          "ru": "Скриншот 2 — Логика сегментации, ретаргетинга и работы с аудиториями"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Стежили не лише за CPL, а й за часткою якісних учасників. Різке зростання дешевих реєстрацій перевіряли за доходимістю та продажами. Нові креативи виводили в окремий тест, щоб не збивати навчання основної кампанії.",
+        "en": "We watched not only CPL but also the share of quality participants. Sharp spikes in cheap registrations were checked against attendance and sales. New creatives went into a separate test so as not to disrupt the main campaign’s learning.",
+        "ru": "Следили не только за CPL, но и за долей качественных участников. Резкий рост дешёвых регистраций проверяли по доходимости и продажам. Новые креативы выводили в отдельный тест, чтобы не сбивать обучение основной кампании."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "300 лідів/день",
+            "en": "300 leads/day",
+            "ru": "300 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$10 620 → $9 000",
+            "en": "$10,620 → $9,000",
+            "ru": "$10 620 → $9 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.18",
+            "en": "$1.18",
+            "ru": "$1.18"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. Показники перенесено з джерела. У документі не робиться висновок про фінансову прибутковість для учасників — ROAS і ROI стосуються економіки рекламодавця.",
+        "en": "Data check. Figures are taken from the source. The document draws no conclusions about financial returns for participants — ROAS and ROI refer to the advertiser’s economics.",
+        "ru": "Проверка данных. Показатели перенесены из источника. В документе не делается вывод о финансовой доходности для участников — ROAS и ROI относятся к экономике рекламодателя."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "На $11.33 тис. бюджету залучено 9 587 лідів по $1.18. При конверсії сторінки до 38.98% і заявленому ROI 285.21% проєкт підтвердив, що зростання можливе без опори на агресивні обіцянки.",
+        "en": "On an $11.33k budget, 9,587 leads were acquired at $1.18. With page conversion of up to 38.98% and a stated ROI of 285.21%, the project confirmed that growth is possible without relying on aggressive promises.",
+        "ru": "На $11.33 тыс. бюджета привлечено 9 587 лидов по $1.18. При конверсии страницы до 38.98% и заявленном ROI 285.21% проект подтвердил, что рост возможен без опоры на агрессивные обещания."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/successful-trader/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний креатив вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar ad creative",
+          "ru": "Рекламный креатив вебинара «Успешный трейдер»"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий рекламний матеріал вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar — second ad material",
+          "ru": "Второй рекламный материал вебинара «Успешный трейдер»"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-03.webp",
+        "alt": {
+          "uk": "Матеріал рекламної кампанії з трейдингу та криптовалют",
+          "en": "Trading and crypto ad campaign material",
+          "ru": "Материал рекламной кампании по трейдингу и криптовалютам"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-04.webp",
+        "alt": {
+          "uk": "Освітній рекламний креатив про криптовалютний ринок",
+          "en": "Educational ad creative about the crypto market",
+          "ru": "Образовательный рекламный креатив о криптовалютном рынке"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-05.webp",
+        "alt": {
+          "uk": "Рекламний матеріал про криптовалютний ринок",
+          "en": "Ad material about the crypto market",
+          "ru": "Рекламный материал о криптовалютном рынке"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-06.webp",
+        "alt": {
+          "uk": "Сегментація цільової аудиторії вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar target audience segmentation",
+          "ru": "Сегментация целевой аудитории вебинара «Успешный трейдер»"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-07.webp",
+        "alt": {
+          "uk": "Посадкова сторінка безкоштовного майстер-класу",
+          "en": "Free master class landing page",
+          "ru": "Посадочная страница бесплатного мастер-класса"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-08.webp",
+        "alt": {
+          "uk": "Робоча комунікація команди рекламного проєкту",
+          "en": "Ad project team communication",
+          "ru": "Рабочая коммуникация команды рекламного проекта"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-09.webp",
+        "alt": {
+          "uk": "Робоча комунікація та налаштування рекламної кампанії",
+          "en": "Team communication and ad campaign setup",
+          "ru": "Рабочая коммуникация и настройка рекламной кампании"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-10.webp",
+        "alt": {
+          "uk": "Схема рекламної воронки вебінару «Успішний трейдер»",
+          "en": "“Successful Trader” webinar ad funnel diagram",
+          "ru": "Схема рекламной воронки вебинара «Успешный трейдер»"
+        }
+      },
+      {
+        "image": "cases/content/successful-trader/screenshot-11.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній у рекламному кабінеті",
+          "en": "Ad campaign results in the ad account",
+          "ru": "Результаты рекламных кампаний в рекламном кабинете"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/successful-trader-webinar.webp",
+  "imageCard": "cases/card/successful-trader-webinar.webp"
+}

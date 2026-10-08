@@ -1,0 +1,35 @@
+{
+  "order": 2,
+  "id": 3,
+  "initials": {
+    "uk": "KM",
+    "en": "KM",
+    "ru": "KM"
+  },
+  "name": {
+    "uk": "Комбінезон Менеджер",
+    "en": "Kombinezon Manager",
+    "ru": "Комбинезон Менеджер"
+  },
+  "category": {
+    "uk": "Контекстна реклама та SEO",
+    "en": "PPC & SEO",
+    "ru": "Контекстная реклама и SEO"
+  },
+  "meta": {
+    "uk": "1 відгук",
+    "en": "1 review",
+    "ru": "1 отзыв"
+  },
+  "badge": {
+    "uk": "Топ-3 у ніші за пів року",
+    "en": "Top 3 in the niche in six months",
+    "ru": "Топ-3 в нише за полгода"
+  },
+  "text": {
+    "uk": "«Вели контекстну рекламу в агенції, і результат ведення не вразив: при вкладеннях >300к на місяць кількість і якість заявок залишали бажати кращого. Тому почали шукати інший варіант. За рекомендацією звернулися до Романа — різницю помітили вже першого місяця. За того ж бюджету значно зросли кількість і якість лідів, виросли...»",
+    "en": "“Our PPC was handled by an agency, and the results didn’t impress: with a spend of over 300k a month, the number and quality of leads left much to be desired. So we started looking for an alternative. On a recommendation, we turned to Roman — and saw the difference in the very first month. With the same budget, the number and quality of leads grew significantly, and...”",
+    "ru": "«Вели контекстную рекламу в агентстве, и результат ведения не впечатлил: при вложениях >300к в месяц количество и качество заявок оставляли желать лучшего. Поэтому начали искать другой вариант. По рекомендации обратились к Роману — разницу заметили уже в первый месяц. При том же бюджете значительно выросли количество и качество лидов, выросли...»"
+  },
+  "expandable": true
+}

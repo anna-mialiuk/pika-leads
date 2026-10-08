@@ -1,0 +1,446 @@
+{
+  "order": 42,
+  "originalId": 43,
+  "id": "web-model-recruitment-europe",
+  "number": "43",
+  "source": "google",
+  "niche": "hr",
+  "category": {
+    "uk": "HR та рекрутинг",
+    "en": "HR & recruiting",
+    "ru": "HR и рекрутинг"
+  },
+  "categoryColor": "#8BE1CA",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Рекрутинг / мультирегіональний Search / EU",
+    "en": "Recruitment / multi-regional Search / EU",
+    "ru": "Рекрутинг / мультирегиональный Search / EU"
+  },
+  "title": {
+    "uk": "Набір веб-моделей у 6 країнах",
+    "en": "Recruiting webcam models in 6 countries",
+    "ru": "Набор веб-моделей в 6 странах"
+  },
+  "description": {
+    "uk": "3 303 ліди по $3.11 одночасно в Польщі, Сербії, Угорщині, Литві, Латвії та Румунії.",
+    "en": "3,303 leads at $3.11 simultaneously in Poland, Serbia, Hungary, Lithuania, Latvia and Romania.",
+    "ru": "3 303 лида по $3.11 одновременно в Польше, Сербии, Венгрии, Литве, Латвии и Румынии."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "3 303 ліди",
+        "en": "3,303 leads",
+        "ru": "3 303 лида"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL $3.11",
+        "en": "CPL $3.11",
+        "ru": "CPL $3.11"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "6 країн",
+        "en": "6 countries",
+        "ru": "6 стран"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$10 380",
+        "en": "$10,380",
+        "ru": "$10 380"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$10 380",
+          "en": "$10,380",
+          "ru": "$10 380"
+        },
+        "note": {
+          "uk": "427 221,99 грн по кабінету",
+          "en": "UAH 427,221.99 for the account",
+          "ru": "427 221,99 грн по кабинету"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "3 303",
+          "en": "3,303",
+          "ru": "3 303"
+        },
+        "note": {
+          "uk": "конверсії Google Ads",
+          "en": "Google Ads conversions",
+          "ru": "конверсии Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$3.11",
+          "en": "$3.11",
+          "ru": "$3.11"
+        },
+        "note": {
+          "uk": "128,95 грн за конверсію",
+          "en": "UAH 128.95 per conversion",
+          "ru": "128,95 грн за конверсию"
+        }
+      },
+      {
+        "label": {
+          "uk": "Географія",
+          "en": "Geography",
+          "ru": "География"
+        },
+        "value": {
+          "uk": "6 країн",
+          "en": "6 countries",
+          "ru": "6 стран"
+        },
+        "note": {
+          "uk": "PL, RS, HU, LT, LV, RO",
+          "en": "PL, RS, HU, LT, LV, RO",
+          "ru": "PL, RS, HU, LT, LV, RO"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "мультирегіональний Search",
+        "en": "multi-regional Search",
+        "ru": "мультирегиональный Search"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$10 380",
+            "en": "$10,380",
+            "ru": "$10 380"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "3 303 конверсії",
+            "en": "3,303 conversions",
+            "ru": "3 303 конверсии"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "PL, RS, HU, LT, LV, RO",
+            "en": "PL, RS, HU, LT, LV, RO",
+            "ru": "PL, RS, HU, LT, LV, RO"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: 427 221,99 грн, вивантаження Google Ads",
+        "en": "Account total for the whole period · basis: UAH 427,221.99, Google Ads export",
+        "ru": "Итог кабинета за весь срок · основа: 427 221,99 грн, выгрузка Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Клієнту був потрібен стабільний потік заявок на вакансію одразу у шести країнах: Польщі, Сербії, Угорщині, Литві, Латвії та Румунії. Складність — неоднорідність попиту: різні мови й формулювання вакансії, різна конкуренція та вартість кліка, а також необхідність утримувати рекламні повідомлення в межах вимог Google Ads.",
+      "en": "The client needed a steady flow of applications for a vacancy in six countries at once: Poland, Serbia, Hungary, Lithuania, Latvia and Romania. The difficulty was uneven demand: different languages and ways of phrasing the vacancy, different competition and click costs, plus the need to keep ad messages within Google Ads policies.",
+      "ru": "Клиенту был нужен стабильный поток заявок на вакансию сразу в шести странах: Польше, Сербии, Венгрии, Литве, Латвии и Румынии. Сложность — неоднородность спроса: разные языки и формулировки вакансии, разная конкуренция и стоимость клика, а также необходимость удерживать рекламные сообщения в рамках требований Google Ads."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/web-model-recruitment-europe/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для мультирегіонального рекрутингу у шести країнах Європи",
+          "en": "Google Ads results for multi-regional recruitment in six European countries",
+          "ru": "Результаты Google Ads для мультирегионального рекрутинга в шести странах Европы"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Рекрутинг / мультирегіональний Search / EU",
+          "en": "Screenshot 1 — Recruitment / multi-regional Search / EU",
+          "ru": "Скриншот 1 — Рекрутинг / мультирегиональный Search / EU"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Почали з аналізу пошукового попиту та розширеного збору семантики. У структуру включали не лише прямі запити про роботу, а й близькі за наміром формулювання — це дозволило розширити охоплення в межах правил майданчика. Після збору семантики відфільтрували її за комерційним наміром. Під відібрані групи написали оголошення, максимально наближені до наміру користувача, замість одного універсального повідомлення на всі країни. Далі — контрольований тест, перепакування оголошень за першими даними і тільки потім масштабування.",
+      "en": "We started with search demand analysis and extended keyword research. The structure included not only direct job queries but also phrasings close in intent — which broadened reach within the platform’s rules. After collecting keywords, we filtered them by commercial intent. For the selected groups, we wrote ads as close as possible to the user’s intent instead of one universal message for all countries. Next came a controlled test, repackaging the ads based on the first data, and only then scaling.",
+      "ru": "Начали с анализа поискового спроса и расширенного сбора семантики. В структуру включали не только прямые запросы о работе, но и близкие по намерению формулировки — это позволило расширить охват в рамках правил площадки. После сбора семантики отфильтровали её по коммерческому намерению. Под отобранные группы написали объявления, максимально приближённые к намерению пользователя, вместо одного универсального сообщения на все страны. Далее — контролируемый тест, переупаковка объявлений по первым данным и только потом масштабирование."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Search за прямими запитами про вакансію — ядро обсягу в кожній із шести країн.",
+        "en": "Search on direct vacancy queries — the core volume in each of the six countries.",
+        "ru": "Search по прямым запросам о вакансии — ядро объёма в каждой из шести стран."
+      },
+      {
+        "uk": "Search за суміжними формулюваннями наміру — розширення охоплення після фільтрації за комерційним intent.",
+        "en": "Search on adjacent intent phrasings — expanding reach after filtering by commercial intent.",
+        "ru": "Search по смежным формулировкам намерения — расширение охвата после фильтрации по коммерческому intent."
+      },
+      {
+        "uk": "Окремі оголошення під кожен кластер запитів — без одного універсального повідомлення на всі ринки.",
+        "en": "Separate ads for each query cluster — no single universal message for all markets.",
+        "ru": "Отдельные объявления под каждый кластер запросов — без одного универсального сообщения на все рынки."
+      },
+      {
+        "uk": "Тестовий обсяг перед масштабуванням: оцінка не лише кількості лідів, а й CPL по кожній зв’язці.",
+        "en": "Test volume before scaling: evaluating not just the number of leads but CPL per funnel.",
+        "ru": "Тестовый объём перед масштабированием: оценка не только количества лидов, но и CPL по каждой связке."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Повідомлення писалося під intent, а не під вакансію взагалі. Після перших даних частину текстів переписали: уточнили формулювання, посилили відповідність запиту й перерозподілили бюджет на користь кампаній із більш дешевим результатом. Оголошення не залишалися статичними — саме постійна робота з повідомленням поступово знижувала ціну заявки.",
+        "en": "Messages were written for intent, not for the vacancy in general. After the first data, some copy was rewritten: wording was refined, query relevance strengthened and budget shifted toward campaigns with cheaper results. The ads didn’t stay static — it was constant work on the message that gradually lowered the cost per lead.",
+        "ru": "Сообщение писалось под intent, а не под вакансию вообще. После первых данных часть текстов переписали: уточнили формулировки, усилили соответствие запросу и перераспределили бюджет в пользу кампаний с более дешёвым результатом. Объявления не оставались статичными — именно постоянная работа с сообщением постепенно снижала цену заявки."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Масштабування почалося лише після того, як CPL закріпився в діапазоні $3.10–$3.20 і влаштував клієнта. Це принциповий момент методики: бюджет збільшується після підтвердження економіки, а не до отримання стабільної бази. Розділення тесту та масштабування не дозволяло слабким зв’язкам рости разом із робочими.",
+        "en": "Scaling started only once CPL settled in the $3.10–$3.20 range and suited the client. This is a fundamental point of the methodology: the budget grows after the economics are confirmed, not before a stable base is in place. Separating testing from scaling kept weak funnels from growing alongside working ones.",
+        "ru": "Масштабирование началось только после того, как CPL закрепился в диапазоне $3.10–$3.20 и устроил клиента. Это принципиальный момент методики: бюджет увеличивается после подтверждения экономики, а не до получения стабильной базы. Разделение теста и масштабирования не позволяло слабым связкам расти вместе с рабочими."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$350",
+            "en": "$350",
+            "ru": "$350"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$10 500",
+            "en": "$10,500",
+            "ru": "$10 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$3.11",
+            "en": "$3.11",
+            "ru": "$3.11"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 3 370 лідів",
+            "en": "≈ 3,370 leads",
+            "ru": "≈ 3 370 лидов"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні зафіксованого CPL $3.11.",
+        "en": "30-day projection at the recorded CPL of $3.11.",
+        "ru": "Расчёт на 30 дней при сохранении зафиксированного CPL $3.11."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "$10 380 рекламного бюджету дали 3 303 ліди за звітної вартості $3.11. Підтвердження з Google Ads: 427 221,99 грн витрат, 3 303 конверсії, 128,95 грн за конверсію. Проєкт підтвердив, що пошукову рекламу можна масштабувати одразу на шість країн, якщо спочатку вибудувати семантику й релевантність, а зростання бюджету прив’язати до досягнутого CPL.",
+        "en": "A $10,380 ad budget delivered 3,303 leads at a reported cost of $3.11. Confirmation from Google Ads: UAH 427,221.99 spent, 3,303 conversions, UAH 128.95 per conversion. The project confirmed that search advertising can be scaled across six countries at once if you build the keywords and relevance first and tie budget growth to the CPL achieved.",
+        "ru": "$10 380 рекламного бюджета дали 3 303 лида по отчётной стоимости $3.11. Подтверждение из Google Ads: 427 221,99 грн расходов, 3 303 конверсии, 128,95 грн за конверсию. Проект подтвердил, что поисковую рекламу можно масштабировать сразу на шесть стран, если сначала выстроить семантику и релевантность, а рост бюджета привязать к достигнутому CPL."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/web-model-recruitment-europe/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для набору веб-моделей у шести країнах Європи",
+          "en": "Google Ads results for webcam model recruitment in six European countries",
+          "ru": "Результаты Google Ads для набора веб-моделей в шести странах Европы"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/web-model-recruitment-europe.webp",
+  "imageCard": "cases/card/web-model-recruitment-europe.webp"
+}

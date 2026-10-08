@@ -1,0 +1,401 @@
+{
+  "order": 11,
+  "originalId": 12,
+  "id": "kids-sugar-webinar",
+  "number": "12",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Освітній вебінар для батьків",
+    "en": "Educational webinar for parents",
+    "ru": "Образовательный вебинар для родителей"
+  },
+  "title": {
+    "uk": "Вебінар «Дитячий цукор»",
+    "en": "“Kids and Sugar” webinar",
+    "ru": "Вебинар «Детский сахар»"
+  },
+  "description": {
+    "uk": "Відповідальна комунікація в чутливій темі: освітня цінність замість залякування.",
+    "en": "Responsible communication on a sensitive topic: educational value instead of scare tactics.",
+    "ru": "Ответственная коммуникация в чувствительной теме: образовательная ценность вместо запугивания."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "≈ 21 196",
+        "en": "≈ 21,196",
+        "ru": "≈ 21 196"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.028–$0.079",
+        "en": "CPC $0.028–$0.079",
+        "ru": "CPC $0.028–$0.079"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "658–715 реєстр./день",
+        "en": "658–715 sign-ups/day",
+        "ru": "658–715 регистр./день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$3 913.08",
+        "en": "$3,913.08",
+        "ru": "$3 913.08"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.028–$0.079",
+          "en": "$0.028–$0.079",
+          "ru": "$0.028–$0.079"
+        },
+        "note": {
+          "uk": "2,2–6,3 RUB / 80",
+          "en": "2.2–6.3 RUB / 80",
+          "ru": "2,2–6,3 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$0.115",
+          "en": "$0.115",
+          "ru": "$0.115"
+        },
+        "note": {
+          "uk": "9,2 RUB / 80",
+          "en": "9.2 RUB / 80",
+          "ru": "9,2 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$81.25",
+          "en": "$81.25",
+          "ru": "$81.25"
+        },
+        "note": {
+          "uk": "6 500 RUB / 80",
+          "en": "6,500 RUB / 80",
+          "ru": "6 500 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "658–715 заявок",
+          "en": "658–715 leads",
+          "ru": "658–715 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "53 кампанії",
+        "en": "53 campaigns",
+        "ru": "53 кампании"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$3 913.08",
+            "en": "$3,913.08",
+            "ru": "$3 913.08"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "65 440 кліків за посиланням",
+            "en": "65,440 link clicks",
+            "ru": "65 440 кликов по ссылке"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "2 350 066",
+            "en": "2,350,066",
+            "ru": "2 350 066"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "4 855 548",
+            "en": "4,855,548",
+            "ru": "4 855 548"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: 313 046,34 ₽ / 80 — підсумок кабінету",
+        "en": "Account total for the whole period · basis: 313,046.34 ₽ / 80 — account total",
+        "ru": "Итог кабинета за весь срок · основа: 313 046,34 ₽ / 80 — итог кабинета"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Тема зачіпає щоденну проблему батьків і легко привертає увагу, але комунікація має бути відповідальною: без залякування й медичних обіцянок, з фокусом на освітній цінності вебінару.",
+      "en": "The topic touches an everyday problem for parents and easily grabs attention, but the communication has to be responsible: no scare tactics or medical promises, with a focus on the webinar’s educational value.",
+      "ru": "Тема затрагивает ежедневную проблему родителей и легко привлекает внимание, но коммуникация должна быть ответственной: без запугивания и медицинских обещаний, с фокусом на образовательной ценности вебинара."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/kids-sugar-webinar/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній вебінару «Дитячий цукор»",
+          "en": "“Kids and Sugar” webinar ad campaign results",
+          "ru": "Результаты рекламных кампаний вебинара «Детский сахар»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Лідогенерація на вебінар",
+          "en": "Screenshot 1 — Lead generation for a webinar",
+          "ru": "Скриншот 1 — Лидогенерация на вебинар"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Запуск будувався навколо зрозумілих побутових питань: скільки цукру отримує дитина, як читати склад і чим замінити звичні продукти. Різні питання ставали окремими оголошеннями й вели на одну реєстрацію.",
+      "en": "The launch was built around clear everyday questions: how much sugar a child gets, how to read ingredient labels and what to replace familiar foods with. Each question became a separate ad leading to the same registration.",
+      "ru": "Запуск строился вокруг понятных бытовых вопросов: сколько сахара получает ребёнок, как читать состав и чем заменить привычные продукты. Разные вопросы становились отдельными объявлениями и вели на одну регистрацию."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Lead-кампанія на батьків із короткою формою реєстрації.",
+        "en": "Lead campaign for parents with a short registration form.",
+        "ru": "Lead-кампания на родителей с короткой формой регистрации."
+      },
+      {
+        "uk": "Широка аудиторія для алгоритмічного пошуку дешевих лідів.",
+        "en": "Broad audience for algorithmic discovery of cheap leads.",
+        "ru": "Широкая аудитория для алгоритмического поиска дешёвых лидов."
+      },
+      {
+        "uk": "Тематичні групи за харчуванням, батьківством і освітнім контентом.",
+        "en": "Themed ad sets on nutrition, parenting and educational content.",
+        "ru": "Тематические группы по питанию, родительству и образовательному контенту."
+      },
+      {
+        "uk": "Ретаргетинг перегляду відео та відвідувачів сторінки перед ефіром.",
+        "en": "Retargeting of video viewers and page visitors before the broadcast.",
+        "ru": "Ретаргетинг просмотров видео и посетителей страницы перед эфиром."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Візуал показував знайомі продукти й конкретне питання, а не діагноз. Така подача давала високий відгук і залишалася ближчою до освітньої комунікації.",
+        "en": "The visuals showed familiar foods and a specific question, not a diagnosis. This approach got a strong response while staying close to educational communication.",
+        "ru": "Визуал показывал знакомые продукты и конкретный вопрос, а не диагноз. Такая подача давала высокий отклик и оставалась ближе к образовательной коммуникации."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "При дуже низькому CPL важливо було контролювати якість: валідність контактів, підтвердження реєстрації та доходимість. Дешевий лід сам по собі не дорівнює учаснику вебінару.",
+        "en": "With a very low CPL, it was important to control quality: valid contacts, registration confirmation and attendance. A cheap lead on its own doesn’t equal a webinar participant.",
+        "ru": "При очень низком CPL было важно контролировать качество: валидность контактов, подтверждение регистрации и доходимость. Дешёвый лид сам по себе не равен участнику вебинара."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$81.25",
+            "en": "$81.25",
+            "ru": "$81.25"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$2 437.50",
+            "en": "$2,437.50",
+            "ru": "$2 437.50"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.12",
+            "en": "$0.12",
+            "ru": "$0.12"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 21 196 реєстрацій",
+            "en": "≈ 21,196 registrations",
+            "ru": "≈ 21 196 регистраций"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 19 740–21 450 реєстрацій за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 19,740–21,450 registrations in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 19 740–21 450 регистраций за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Ціна реєстрації близько $0.115 дозволяла отримувати 658–715 заявок на день. Бюджетна арифметика майже повністю збігається із заявленим обсягом.",
+        "en": "A cost per registration of about $0.115 brought in 658–715 leads a day. The budget arithmetic almost exactly matches the stated volume.",
+        "ru": "Цена регистрации около $0.115 позволяла получать 658–715 заявок в день. Бюджетная арифметика почти полностью совпадает с заявленным объёмом."
+      }
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/kids-sugar-webinar.webp",
+  "imageCard": "cases/card/kids-sugar-webinar.webp"
+}

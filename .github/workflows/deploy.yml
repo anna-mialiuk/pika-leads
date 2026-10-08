@@ -10,9 +10,10 @@ on:
     branches: [main]
   workflow_dispatch: # ручний запуск з вкладки Actions
 
+# запуски йдуть по черзі (кілька збережень в адмінці поспіль не переривають один одного)
 concurrency:
   group: deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -81,9 +82,16 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USER: ${{ secrets.SSH_USER }}
         run: |
-          rsync -az \
+          # -c: порівняння за вмістом (без -t час файлів не важливий) — вивід лише для змінених
+          CHANGED=$(rsync -rlzci \
             --exclude ".env" --exclude "*.json" --exclude "*.jsonl" \
             --exclude "*.key" --exclude "*.tmp" --exclude "*.broken-*" \
             -e "ssh -i ~/.ssh/deploy_key" \
-            server/leads/ "$SSH_USER@$SSH_HOST:/home/deploy/leads-server/"
-          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" "sudo systemctl restart pikaleads-leads"
+            server/leads/ "$SSH_USER@$SSH_HOST:/home/deploy/leads-server/")
+          # перезапуск лише якщо змінився код (збереження контенту з адмінки його не чіпає)
+          if [ -n "$CHANGED" ]; then
+            echo "$CHANGED"
+            ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" "sudo systemctl restart pikaleads-leads"
+          else
+            echo "Код приймача не змінився — без перезапуску"
+          fi

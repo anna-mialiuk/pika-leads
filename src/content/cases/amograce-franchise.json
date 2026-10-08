@@ -1,0 +1,445 @@
+{
+  "order": 14,
+  "originalId": 15,
+  "id": "amograce-franchise",
+  "number": "15",
+  "source": "meta",
+  "niche": "b2b",
+  "category": {
+    "uk": "B2B та франшизи",
+    "en": "B2B & franchises",
+    "ru": "B2B и франшизы"
+  },
+  "categoryColor": "#FF9F43",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "B2B-лідогенерація франшизи",
+    "en": "B2B franchise lead generation",
+    "ru": "B2B-лидогенерация франшизы"
+  },
+  "title": {
+    "uk": "Франшиза «Амогрейс»",
+    "en": "“Amograce” franchise",
+    "ru": "Франшиза «Амогрейс»"
+  },
+  "description": {
+    "uk": "Швидке створення верху воронки: простий перший крок плюс форма кваліфікації.",
+    "en": "Building the top of the funnel fast: a simple first step plus a qualifying form.",
+    "ru": "Быстрое создание верха воронки: простой первый шаг плюс форма квалификации."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "≈ 6 842",
+        "en": "≈ 6,842",
+        "ru": "≈ 6 842"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.031–$0.104",
+        "en": "CPC $0.031–$0.104",
+        "ru": "CPC $0.031–$0.104"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "220–228 лідів/день",
+        "en": "220–228 leads/day",
+        "ru": "220–228 лидов/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$7 552.22",
+        "en": "$7,552.22",
+        "ru": "$7 552.22"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.031–$0.104",
+          "en": "$0.031–$0.104",
+          "ru": "$0.031–$0.104"
+        },
+        "note": {
+          "uk": "2,5–8,3 RUB / 80",
+          "en": "2.5–8.3 RUB / 80",
+          "ru": "2,5–8,3 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$0.356",
+          "en": "$0.356",
+          "ru": "$0.356"
+        },
+        "note": {
+          "uk": "28,5 RUB / 80",
+          "en": "28.5 RUB / 80",
+          "ru": "28,5 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$81.25",
+          "en": "$81.25",
+          "ru": "$81.25"
+        },
+        "note": {
+          "uk": "6 500 RUB / 80",
+          "en": "6,500 RUB / 80",
+          "ru": "6 500 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "220–228 заявок",
+          "en": "220–228 leads",
+          "ru": "220–228 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "37 кампаній",
+        "en": "37 campaigns",
+        "ru": "37 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$7 552.22",
+            "en": "$7,552.22",
+            "ru": "$7 552.22"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "7 43x лідів і початих переписок",
+            "en": "7 43x leads and conversations started",
+            "ru": "7 43x лидов и начатых переписок"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "1 043 081",
+            "en": "1,043,081",
+            "ru": "1 043 081"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "3 829 924",
+            "en": "3,829,924",
+            "ru": "3 829 924"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: 604 177,99 ₽ / 80 — підсумок кабінету",
+        "en": "Account total for the whole period · basis: 604,177.99 ₽ / 80 — account total",
+        "ru": "Итог кабинета за весь срок · основа: 604 177,99 ₽ / 80 — итог кабинета"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Завдання — швидко створити верх воронки для франшизи. Низька ціна заявки вказує на максимально простий перший крок, але подальша цінність залежить від кваліфікації кандидатів.",
+      "en": "The task was to quickly build the top of the funnel for a franchise. A low cost per lead points to the simplest possible first step, but the further value depends on how well candidates are qualified.",
+      "ru": "Задача — быстро создать верх воронки для франшизы. Низкая цена заявки указывает на максимально простой первый шаг, но дальнейшая ценность зависит от квалификации кандидатов."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/amograce-franchise/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній франшизи «Амогрейс»",
+          "en": "“Amograce” franchise ad campaign results",
+          "ru": "Результаты рекламных кампаний франшизы «Амогрейс»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Лідогенерація та повідомлення для франшизи",
+          "en": "Screenshot 1 — Lead generation and messages for the franchise",
+          "ru": "Скриншот 1 — Лидогенерация и сообщения для франшизы"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "На першому етапі тестувалися різні мотиви: власний бізнес, готова модель, підтримка та запуск без профільного досвіду. Після визначення дешевого офера у форму додавалися питання, які допомагали відділу продажів пріоритизувати контакти.",
+      "en": "In the first stage, we tested different motives: your own business, a ready-made model, support and launching without industry experience. Once the cheap offer was found, questions were added to the form to help the sales team prioritize contacts.",
+      "ru": "На первом этапе тестировались разные мотивы: собственный бизнес, готовая модель, поддержка и запуск без профильного опыта. После определения дешёвого оффера в форму добавлялись вопросы, которые помогали отделу продаж приоритизировать контакты."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Lead-кампанія на обсяг із короткою формою.",
+        "en": "Lead campaign for volume with a short form.",
+        "ru": "Lead-кампания на объём с короткой формой."
+      },
+      {
+        "uk": "Окрема, докладніша форма для кваліфікації.",
+        "en": "A separate, more detailed form for qualification.",
+        "ru": "Отдельная, более подробная форма для квалификации."
+      },
+      {
+        "uk": "Сегменти підприємців, спеціалістів ніші та аудиторії зміни кар’єри.",
+        "en": "Segments for entrepreneurs, niche specialists and career changers.",
+        "ru": "Сегменты предпринимателей, специалистов ниши и аудитории смены карьеры."
+      },
+      {
+        "uk": "Ретаргетинг відвідувачів презентації та залучених користувачів.",
+        "en": "Retargeting of presentation visitors and engaged users.",
+        "ru": "Ретаргетинг посетителей презентации и вовлечённых пользователей."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креативи переводили франшизу з абстрактної ідеї в зрозумілий пакет: модель, підтримка, запуск і наступний крок. Важливий елемент — не перевантажувати перше оголошення всією економікою.",
+        "en": "The creatives turned the franchise from an abstract idea into a clear package: model, support, launch and next step. A key element was not overloading the first ad with all the economics.",
+        "ru": "Креативы переводили франшизу из абстрактной идеи в понятный пакет: модель, поддержка, запуск и следующий шаг. Важный элемент — не перегружать первое объявление всей экономикой."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Після отримання обсягу головний аналіз зміщувався з CPL на частку кваліфікованих лідів, дзвінків і презентацій. Без цього наднизька ціна може бути хибним успіхом.",
+        "en": "Once volume came in, the main analysis shifted from CPL to the share of qualified leads, calls and presentations. Without this, an ultra-low cost can be a false success.",
+        "ru": "После получения объёма главный анализ смещался с CPL на долю квалифицированных лидов, звонков и презентаций. Без этого сверхнизкая цена может быть ложным успехом."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$81.25",
+            "en": "$81.25",
+            "ru": "$81.25"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$2 437.50",
+            "en": "$2,437.50",
+            "ru": "$2 437.50"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.36",
+            "en": "$0.36",
+            "ru": "$0.36"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 6 842 заявок",
+            "en": "≈ 6,842 leads",
+            "ru": "≈ 6 842 заявки"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 6 600–6 840 заявок за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 6,600–6,840 leads in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 6 600–6 840 заявок за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Кейс показує ціну заявки близько $0.356 і 220–228 лідів на день. Математика бюджету й CPL узгоджується із заявленим обсягом.",
+        "en": "The case shows a cost per lead of about $0.356 and 220–228 leads a day. The budget and CPL math matches the stated volume.",
+        "ru": "Кейс показывает цену заявки около $0.356 и 220–228 лидов в день. Математика бюджета и CPL согласуется с заявленным объёмом."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/amograce-franchise/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній франшизи «Амогрейс»",
+          "en": "“Amograce” franchise ad campaign results",
+          "ru": "Результаты рекламных кампаний франшизы «Амогрейс»"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/amograce-franchise.webp",
+  "imageCard": "cases/card/amograce-franchise.webp"
+}

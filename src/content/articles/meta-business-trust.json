@@ -1,0 +1,30 @@
+{
+  "order": 8,
+  "id": "meta-business-trust",
+  "topic": "advertising",
+  "level": "intermediate",
+  "category": {
+    "uk": "Реклама",
+    "en": "Advertising",
+    "ru": "Реклама"
+  },
+  "type": "yellow",
+  "image": "blog/meta-business-trust.webp",
+  "date": "2026-08-06",
+  "readTime": {
+    "uk": "13 хв",
+    "en": "13 min",
+    "ru": "13 мин"
+  },
+  "title": {
+    "uk": "Як підвищити довіру до бізнесу в Meta: реальні сигнали, практичний аудит і міфи",
+    "en": "How to build business trust with Meta: real signals, a practical audit and myths",
+    "ru": "Как повысить доверие к бизнесу в Meta: реальные сигналы, практический аудит и мифы"
+  },
+  "description": {
+    "uk": "Універсального Trust Score у Meta немає. Розбираємо, які фактори підтверджені платформою, які міфи коштують грошей і як зібрати чесний внутрішній аудит із восьми блоків.",
+    "en": "There is no universal Trust Score at Meta. We look at which factors the platform confirms, which myths cost money, and how to run an honest eight-part internal audit.",
+    "ru": "Универсального Trust Score в Meta нет. Разбираем, какие факторы подтверждены платформой, какие мифы стоят денег и как провести честный внутренний аудит из восьми блоков."
+  },
+  "href": "/blog/meta-business-trust"
+}

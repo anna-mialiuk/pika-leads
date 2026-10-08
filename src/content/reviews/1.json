@@ -1,0 +1,34 @@
+{
+  "order": 0,
+  "id": 1,
+  "initials": {
+    "uk": "IM",
+    "en": "IM",
+    "ru": "IM"
+  },
+  "name": {
+    "uk": "Inna Morozova",
+    "en": "Inna Morozova",
+    "ru": "Inna Morozova"
+  },
+  "category": {
+    "uk": "Таргетинг і трафік",
+    "en": "Targeting & traffic",
+    "ru": "Таргетинг и трафик"
+  },
+  "meta": {
+    "uk": "Місцевий експерт · 13 відгуків",
+    "en": "Local Guide · 13 reviews",
+    "ru": "Местный эксперт · 13 отзывов"
+  },
+  "badge": {
+    "uk": "3+ роки разом",
+    "en": "3+ years together",
+    "ru": "3+ года вместе"
+  },
+  "text": {
+    "uk": "«Працюємо більше 3 років. Чітко розуміє, що потрібно, добре відчуває сенси. Глибоко розбирається в таргетингу та трафіку. Рекомендую і планую працювати разом далі!»",
+    "en": "“We’ve been working together for over 3 years. He clearly understands what’s needed and has a great feel for messaging. Knows targeting and traffic inside out. I recommend him and plan to keep working together!”",
+    "ru": "«Работаем больше 3 лет. Чётко понимает, что нужно, хорошо чувствует смыслы. Глубоко разбирается в таргетинге и трафике. Рекомендую и планирую работать вместе дальше!»"
+  }
+}

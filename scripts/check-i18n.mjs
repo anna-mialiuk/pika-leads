@@ -28,6 +28,9 @@ const server = await createServer({
 const errors = [];
 const warnings = [];
 
+// дані, що редагуються в адмінці (src/content/<колекція>/*.json)
+const ADMIN_CONTENT = new Set(["casesData", "blogData", "testimonialsData"]);
+
 const CYRILLIC = /[\u0400-\u04FF]/;
 const UKRAINIAN = /[іїєґІЇЄҐ]/;
 const EN_NUMBER = /\d[ \u00a0]\d{3}(?![\d%])/;
@@ -162,12 +165,14 @@ try {
     }
 
     for (const name of dataFiles.filter((n) => usedData.has(n))) {
+      // контент з адмінки (відгуки) не зупиняє збірку — неперекладене лише попередження
+      const report = ADMIN_CONTENT.has(name) ? warnings : errors;
       for (const [where, text] of leaves({ ...getData(name, lang) })) {
         const place = `${lang}: src/data/${name}.js → ${where}`;
         if (lang === "en" && CYRILLIC.test(text))
-          errors.push(`${place}: не перекладено «${text.slice(0, 60)}»`);
+          report.push(`${place}: не перекладено «${text.slice(0, 60)}»`);
         if (lang === "ru" && UKRAINIAN.test(text))
-          errors.push(`${place}: український текст «${text.slice(0, 60)}»`);
+          report.push(`${place}: український текст «${text.slice(0, 60)}»`);
         if (lang === "en" && EN_NUMBER.test(text) && !/^\+\d/.test(text))
           warnings.push(`${place}: формат числа «${text}» (для EN — 1,000)`);
       }
@@ -229,12 +234,13 @@ try {
         if (block.type === "code") return; // код не перекладаємо
 
         for (const [, text] of leaves(block)) {
+          // тексти статей редагуються в адмінці — неперекладене не зупиняє збірку
           if (lang === "en" && CYRILLIC.test(text))
-            errors.push(
+            warnings.push(
               `${where} → blocks[${index}]: не перекладено «${text.slice(0, 60)}»`,
             );
           if (lang === "ru" && UKRAINIAN.test(text))
-            errors.push(
+            warnings.push(
               `${where} → blocks[${index}]: український текст «${text.slice(0, 60)}»`,
             );
         }
@@ -279,7 +285,7 @@ try {
     }
   }
 
-  // файли статей без картки в blogData
+  // файли статей без картки в src/content/articles
   for (const { code: lang } of LANGUAGES) {
     const dir = path.join(blogDir, lang);
     if (!fs.existsSync(dir)) continue;
@@ -287,7 +293,7 @@ try {
       .filter((f) => f.endsWith(".json") && !ids.has(f.slice(0, -5)))
       .forEach((f) =>
         warnings.push(
-          `content/blog/${lang}/${f}: немає картки статті в src/data/blogData.js`,
+          `content/blog/${lang}/${f}: немає картки статті в src/content/articles/`,
         ),
       );
   }

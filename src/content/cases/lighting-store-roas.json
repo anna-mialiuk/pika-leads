@@ -1,0 +1,477 @@
+{
+  "order": 35,
+  "originalId": 36,
+  "id": "lighting-store-roas",
+  "number": "36",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "E-commerce / товари для дому",
+    "en": "E-commerce / home goods",
+    "ru": "E-commerce / товары для дома"
+  },
+  "title": {
+    "uk": "Люстри та освітлення: продажі з ROAS від 300%",
+    "en": "Chandeliers and lighting: sales with 300%+ ROAS",
+    "ru": "Люстры и освещение: продажи с ROAS от 300%"
+  },
+  "description": {
+    "uk": "Півроку роботи з магазином світла: покупка по $3.8–$4.5 при середньому ROAS від 300% і бюджеті $25 566.",
+    "en": "Six months with a lighting store: $3.8–$4.5 per purchase at an average ROAS of 300%+ on a $25,566 budget.",
+    "ru": "Полгода работы с магазином света: покупка по $3.8–$4.5 при среднем ROAS от 300% и бюджете $25 566."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "ROAS від 300%",
+        "en": "ROAS 300%+",
+        "ru": "ROAS от 300%"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "покупка $3.8–$4.5",
+        "en": "purchase $3.8–$4.5",
+        "ru": "покупка $3.8–$4.5"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "6 місяців",
+        "en": "6 months",
+        "ru": "6 месяцев"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$25 566",
+        "en": "$25,566",
+        "ru": "$25 566"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$25 566",
+          "en": "$25,566",
+          "ru": "$25 566"
+        },
+        "note": {
+          "uk": "за 6 місяців",
+          "en": "over 6 months",
+          "ru": "за 6 месяцев"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середня ціна покупки",
+          "en": "Average cost per purchase",
+          "ru": "Средняя цена покупки"
+        },
+        "value": {
+          "uk": "$3.8–$4.5",
+          "en": "$3.8–$4.5",
+          "ru": "$3.8–$4.5"
+        },
+        "note": {
+          "uk": "дані кабінету",
+          "en": "ad account data",
+          "ru": "данные кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середній ROAS",
+          "en": "Average ROAS",
+          "ru": "Средний ROAS"
+        },
+        "value": {
+          "uk": "від 300%",
+          "en": "300%+",
+          "ru": "от 300%"
+        },
+        "note": {
+          "uk": "дані кабінету",
+          "en": "ad account data",
+          "ru": "данные кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "Період роботи",
+          "en": "Period of work",
+          "ru": "Период работы"
+        },
+        "value": {
+          "uk": "6 місяців",
+          "en": "6 months",
+          "ru": "6 месяцев"
+        },
+        "note": {
+          "uk": "строк проєкту",
+          "en": "project duration",
+          "ru": "срок проекта"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середній денний бюджет",
+          "en": "Average daily budget",
+          "ru": "Средний дневной бюджет"
+        },
+        "value": {
+          "uk": "≈ $142",
+          "en": "≈ $142",
+          "ru": "≈ $142"
+        },
+        "note": {
+          "uk": "$25 566 / 180 днів",
+          "en": "$25,566 / 180 days",
+          "ru": "$25 566 / 180 дней"
+        }
+      },
+      {
+        "label": {
+          "uk": "Модельний обсяг покупок",
+          "en": "Modeled purchase volume",
+          "ru": "Модельный объём покупок"
+        },
+        "value": {
+          "uk": "≈ 5 700–6 700",
+          "en": "≈ 5,700–6,700",
+          "ru": "≈ 5 700–6 700"
+        },
+        "note": {
+          "uk": "бюджет / CPA",
+          "en": "budget / CPA",
+          "ru": "бюджет / CPA"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "—",
+        "en": "—",
+        "ru": "—"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$25 566",
+            "en": "$25,566",
+            "ru": "$25 566"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "ROAS від 300%",
+            "en": "ROAS 300%+",
+            "ru": "ROAS от 300%"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: бюджет за 6 місяців",
+        "en": "Account total for the whole period · basis: 6-month budget",
+        "ru": "Итог кабинета за весь срок · основа: бюджет за 6 месяцев"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Товарна категорія з довгим вибором і високою візуальною складовою: люстру купують «під інтер’єр», тому рішення приймається не з першого дотику. Аудиторія — люди в процесі ремонту, купівлі житла або оновлення інтер’єру, а також дизайнери й підрядники оздоблювальних робіт.",
+      "en": "A product category with a long decision process and a strong visual component: people buy a chandelier “to match the interior”, so the decision isn’t made at first touch. The audience: people renovating, buying a home or updating their interior, plus designers and finishing contractors.",
+      "ru": "Товарная категория с долгим выбором и высокой визуальной составляющей: люстру покупают «под интерьер», поэтому решение принимается не с первого касания. Аудитория — люди в процессе ремонта, покупки жилья или обновления интерьера, а также дизайнеры и подрядчики отделочных работ."
+    }
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Почали з товарної аналітики: розклали асортимент за стилями, ціновими сегментами та типами приміщень, щоб зрозуміти, які позиції реально тягнуть категорію. Налаштували коректну передачу події Purchase зі значенням замовлення, підключили каталог і динамічні кампанії. Перші два тижні тестували товарні групи та формати, після чого бюджет переходив у зв’язки з підтвердженою ціною покупки.",
+      "en": "We started with product analytics: breaking the range down by style, price segment and room type to see which items really drive the category. We set up correct passing of the Purchase event with order value, connected the catalog and launched dynamic campaigns. For the first two weeks we tested product groups and formats, after which the budget moved to funnels with a confirmed cost per purchase.",
+      "ru": "Начали с товарной аналитики: разложили ассортимент по стилям, ценовым сегментам и типам помещений, чтобы понять, какие позиции реально тянут категорию. Настроили корректную передачу события Purchase со значением заказа, подключили каталог и динамические кампании. Первые две недели тестировали товарные группы и форматы, после чего бюджет переходил в связки с подтверждённой ценой покупки."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Cold broad і Advantage+ Shopping на широку аудиторію з оптимізацією на покупку.",
+        "en": "Cold broad and Advantage+ Shopping for a broad audience, optimized for purchases.",
+        "ru": "Cold broad и Advantage+ Shopping на широкую аудиторию с оптимизацией на покупку."
+      },
+      {
+        "uk": "DPA prospecting за каталогом: пошук холодної аудиторії за товарними сетами.",
+        "en": "Catalog DPA prospecting: finding cold audiences by product sets.",
+        "ru": "DPA prospecting по каталогу: поиск холодной аудитории по товарным сетам."
+      },
+      {
+        "uk": "DPA retargeting: ViewContent, AddToCart і покинуті кошики з вікнами 7/14/30 днів.",
+        "en": "DPA retargeting: ViewContent, AddToCart and abandoned carts with 7/14/30-day windows.",
+        "ru": "DPA retargeting: ViewContent, AddToCart и брошенные корзины с окнами 7/14/30 дней."
+      },
+      {
+        "uk": "Окремі кампанії за стилями та ціновими сегментами, щоб бачити реальний попит на групу товарів.",
+        "en": "Separate campaigns by style and price segment to see real demand for each product group.",
+        "ru": "Отдельные кампании по стилям и ценовым сегментам, чтобы видеть реальный спрос на группу товаров."
+      },
+      {
+        "uk": "Retention: повторні покупки та супутні позиції — бра, споти, лампи.",
+        "en": "Retention: repeat purchases and related items — wall lights, spotlights, lamps.",
+        "ru": "Retention: повторные покупки и сопутствующие позиции — бра, споты, лампы."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "У категорії освітлення вирішує подача товару в інтер’єрі: люстра в реальній кімнаті, масштаб відносно меблів, тепле й холодне світло, деталі плафонів. Працювали серії «товар в інтер’єрі × стиль × ціна», короткі відео з увімкненням світла та каруселі з варіантами для однієї кімнати.",
+        "en": "In lighting, what decides it is showing the product in an interior: a chandelier in a real room, its scale relative to furniture, warm and cool light, shade details. What worked were “product in interior × style × price” series, short videos of the light being switched on and carousels with options for a single room.",
+        "ru": "В категории освещения решает подача товара в интерьере: люстра в реальной комнате, масштаб относительно мебели, тёплый и холодный свет, детали плафонов. Работали серии «товар в интерьере × стиль × цена», короткие видео с включением света и карусели с вариантами для одной комнаты."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Орієнтувалися на ціну покупки та частку виручки, а не на кліки. Асортимент із високою маржею отримував пріоритет у бюджеті, слабкі товарні групи відключалися. Стабільна ціна покупки $3.8–$4.5 при середньому ROAS від 300% дозволила нарощувати бюджет без втрати ефективності протягом усього періоду.",
+        "en": "We focused on cost per purchase and share of revenue, not clicks. High-margin items got budget priority, and weak product groups were switched off. A stable cost per purchase of $3.8–$4.5 at an average ROAS of 300%+ made it possible to grow the budget without losing efficiency throughout the period.",
+        "ru": "Ориентировались на цену покупки и долю выручки, а не на клики. Ассортимент с высокой маржой получал приоритет в бюджете, слабые товарные группы отключались. Стабильная цена покупки $3.8–$4.5 при среднем ROAS от 300% позволила наращивать бюджет без потери эффективности на протяжении всего периода."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "≈ $142",
+            "en": "≈ $142",
+            "ru": "≈ $142"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "≈ $4 261",
+            "en": "≈ $4,261",
+            "ru": "≈ $4 261"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPA $3.8–$4.5",
+            "en": "CPA $3.8–$4.5",
+            "ru": "CPA $3.8–$4.5"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "ROAS від 300%",
+            "en": "ROAS 300%+",
+            "ru": "ROAS от 300%"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Показники надані власником кейсу та підтверджені у відеорозборі. Точна розбивка за місяцями та товарними групами у публічній версії не розкривається.",
+        "en": "Figures provided by the case owner and confirmed in the video breakdown. The exact breakdown by month and product group isn’t disclosed in the public version.",
+        "ru": "Показатели предоставлены владельцем кейса и подтверждены в видеоразборе. Точная разбивка по месяцам и товарным группам в публичной версии не раскрывается."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За пів року роботи магазин освітлення вийшов на стабільну ціну покупки $3.8–$4.5 при середньому ROAS від 300%. Основний ефект дало поєднання коректної передачі цінності замовлення, роботи з каталогом і креативів, що показували товар у реальному інтер’єрі.",
+        "en": "Over six months, the lighting store reached a stable cost per purchase of $3.8–$4.5 at an average ROAS of 300%+. The main effect came from combining correct order-value tracking, catalog work and creatives that showed products in real interiors.",
+        "ru": "За полгода работы магазин освещения вышел на стабильную цену покупки $3.8–$4.5 при среднем ROAS от 300%. Основной эффект дало сочетание корректной передачи ценности заказа, работы с каталогом и креативов, показывающих товар в реальном интерьере."
+      }
+    }
+  },
+  "videoReview": {
+    "title": {
+      "uk": "Відеорозбір кейсу",
+      "en": "Video case breakdown",
+      "ru": "Видеоразбор кейса"
+    },
+    "url": "https://www.youtube.com/watch?v=1JtfL0wk96c",
+    "label": {
+      "uk": "Відеорозбір кейсу: люстри та освітлення",
+      "en": "Video case breakdown: chandeliers and lighting",
+      "ru": "Видеоразбор кейса: люстры и освещение"
+    },
+    "eyebrow": {
+      "uk": "PIKA LEADS",
+      "en": "PIKA LEADS",
+      "ru": "PIKA LEADS"
+    },
+    "name": {
+      "uk": "ЛЮСТРИ",
+      "en": "CHANDELIERS",
+      "ru": "ЛЮСТРЫ"
+    },
+    "metric": {
+      "uk": "ROAS 300%+",
+      "en": "ROAS 300%+",
+      "ru": "ROAS 300%+"
+    },
+    "caption": {
+      "uk": "Відеорозбір кейсу: люстри та освітлення",
+      "en": "Video case breakdown: chandeliers and lighting",
+      "ru": "Видеоразбор кейса: люстры и освещение"
+    },
+    "visual": "lighting"
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/lighting-store-roas.jpg",
+  "imageCard": "cases/card/lighting-store-roas.webp"
+}

@@ -5,6 +5,10 @@ import Leads from "./pages/Leads";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Team from "./pages/Team";
+import ContentList from "./pages/ContentList";
+import ContentEditor from "./pages/ContentEditor";
+import Reviews from "./pages/Reviews";
+import { PublishProvider } from "./lib/publish";
 import { useAuth } from "./lib/auth";
 import { MetaProvider } from "./lib/meta";
 
@@ -32,7 +36,9 @@ function App() {
         element={
           <Protected>
             <MetaProvider>
-              <Layout />
+              <PublishProvider>
+                <Layout />
+              </PublishProvider>
             </MetaProvider>
           </Protected>
         }
@@ -48,6 +54,15 @@ function App() {
           }
         />
         <Route path="/profile" element={<Profile />} />
+        {[
+          ["/cases", <ContentList collection="cases" key="cases" />],
+          ["/cases/:id", <ContentEditor collection="cases" key="case" />],
+          ["/blog", <ContentList collection="articles" key="articles" />],
+          ["/blog/:id", <ContentEditor collection="articles" key="article" />],
+          ["/reviews", <Reviews key="reviews" />],
+        ].map(([path, element]) => (
+          <Route key={path} path={path} element={<Protected admin>{element}</Protected>} />
+        ))}
       </Route>
       <Route path="*" element={<Navigate to="/leads" replace />} />
     </Routes>

@@ -1,0 +1,450 @@
+{
+  "order": 5,
+  "originalId": 6,
+  "id": "car-and-motorcycle-mounts",
+  "number": "06",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "E-commerce / покупки",
+    "en": "E-commerce / purchases",
+    "ru": "E-commerce / покупки"
+  },
+  "title": {
+    "uk": "Авто- та мототримачі",
+    "en": "Car and motorcycle mounts",
+    "ru": "Авто- и мотодержатели"
+  },
+  "description": {
+    "uk": "Коротка демонстрація замість опису: встановлення, фіксація та поведінка на нерівній дорозі.",
+    "en": "A short demo instead of a description: installation, locking and behavior on a bumpy road.",
+    "ru": "Короткая демонстрация вместо описания: установка, фиксация и поведение на неровной дороге."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "3 060–6 660",
+        "en": "3,060–6,660",
+        "ru": "3 060–6 660"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.12–$0.18",
+        "en": "CPC $0.12–$0.18",
+        "ru": "CPC $0.12–$0.18"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "17–37 покупок/день",
+        "en": "17–37 purchases/day",
+        "ru": "17–37 покупок/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$8 100",
+        "en": "$8,100",
+        "ru": "$8 100"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.12–$0.18",
+          "en": "$0.12–$0.18",
+          "ru": "$0.12–$0.18"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна покупки",
+          "en": "Cost per purchase",
+          "ru": "Цена покупки"
+        },
+        "value": {
+          "uk": "$0.33–$1.92",
+          "en": "$0.33–$1.92",
+          "ru": "$0.33–$1.92"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$20–$40",
+          "en": "$20–$40",
+          "ru": "$20–$40"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "17–37 покупок",
+          "en": "17–37 purchases",
+          "ru": "17–37 покупок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "4 на скринах кампаній",
+        "en": "4 in campaign screenshots",
+        "ru": "4 на скринах кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$8 100",
+            "en": "$8,100",
+            "ru": "$8 100"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "3 060–6 660 покупок за 180 днів",
+            "en": "3,060–6,660 purchases in 180 days",
+            "ru": "3 060–6 660 покупок за 180 дней"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа розрахунку: $45/день × 180 днів роботи",
+        "en": "Account total for the whole period · calculation basis: $45/day × 180 days of work",
+        "ru": "Итог кабинета за весь срок · основа расчёта: $45/день × 180 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Товар вирішує зрозумілу побутову проблему, але виглядає схожим на десятки аналогів. Реклама мала за кілька секунд показати сценарій використання й довести, чому тримач зручніший за дешеву альтернативу.",
+      "en": "The product solves a clear everyday problem but looks like dozens of alternatives. The ads had to show the use case in a few seconds and prove why this mount is more convenient than a cheap alternative.",
+      "ru": "Товар решает понятную бытовую проблему, но выглядит похожим на десятки аналогов. Реклама должна была за несколько секунд показать сценарий использования и доказать, почему держатель удобнее дешёвой альтернативы."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/car-and-motorcycle-mounts/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії авто- та мототримачів",
+          "en": "Car and motorcycle mounts ad campaign results",
+          "ru": "Результаты рекламной кампании авто- и мотодержателей"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / покупки",
+          "en": "Screenshot 1 — E-commerce / purchases",
+          "ru": "Скриншот 1 — E-commerce / покупки"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "На старті протестували різні кути: безпека за кермом, навігація, надійна фіксація та подарунок автомобілісту. Після перших покупок кампанію розділили на авто- та мотоаудиторію, оскільки мотиви й візуальний контекст відрізнялися.",
+      "en": "At the start, we tested different angles: safety behind the wheel, navigation, secure grip and a gift for drivers. After the first purchases, the campaign was split into car and motorcycle audiences, since their motivations and visual context differed.",
+      "ru": "На старте протестировали разные углы: безопасность за рулём, навигация, надёжная фиксация и подарок автомобилисту. После первых покупок кампанию разделили на авто- и мотоаудиторию, поскольку мотивы и визуальный контекст отличались."
+    }
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Sales-кампанія на широку аудиторію з демонстраційними відео.",
+        "en": "Sales campaign for a broad audience with demo videos.",
+        "ru": "Sales-кампания на широкую аудиторию с демонстрационными видео."
+      },
+      {
+        "uk": "Окремі групи для авто- та мотосегментів.",
+        "en": "Separate ad sets for car and motorcycle segments.",
+        "ru": "Отдельные группы для авто- и мотосегментов."
+      },
+      {
+        "uk": "Тест interest-аудиторій за марками, аксесуарами та подорожами.",
+        "en": "Interest-audience tests by car brands, accessories and travel.",
+        "ru": "Тест interest-аудиторий по маркам, аксессуарам и путешествиям."
+      },
+      {
+        "uk": "Ретаргетинг переглядів товару й кошиків із доказом надійності.",
+        "en": "Retargeting of product views and carts with proof of reliability.",
+        "ru": "Ретаргетинг просмотров товара и корзин с доказательством надёжности."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Найкращий формат для такого товару — коротка демонстрація: встановлення, фіксація телефона й поведінка на нерівній дорозі. Візуал відповідав на заперечення до того, як користувач встигав його сформулювати.",
+        "en": "The best format for a product like this is a short demo: installation, how the phone locks in and how it behaves on a bumpy road. The visuals answered objections before the user could even voice them.",
+        "ru": "Лучший формат для такого товара — короткая демонстрация: установка, фиксация телефона и поведение на неровной дороге. Визуал отвечал на возражение до того, как пользователь успевал его сформулировать."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Зв’язки порівнювалися за покупкою та поверненнями, а не лише за переглядом відео. Великий розкид CPA підказував, які кути подачі підходять конкретній аудиторії.",
+        "en": "Funnels were compared on purchases and returns, not just video views. The wide spread in CPA showed which angles suited which audience.",
+        "ru": "Связки сравнивались по покупке и возвратам, а не только по просмотру видео. Большой разброс CPA подсказывал, какие углы подачи подходят конкретной аудитории."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$45",
+            "en": "$45",
+            "ru": "$45"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 350",
+            "en": "$1,350",
+            "ru": "$1 350"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.22–$2.65",
+            "en": "$1.22–$2.65",
+            "ru": "$1.22–$2.65"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "510–1 110 покупок",
+            "en": "510–1,110 purchases",
+            "ru": "510–1 110 покупок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 510–1 110 покупок за 30 днів по заявленому денному темпу.",
+        "en": "Cross-check with the source: 510–1,110 purchases in 30 days at the stated daily pace.",
+        "ru": "Сверка с источником: 510–1 110 покупок за 30 дней по заявленному дневному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "При бюджеті $20–$40 на день проєкт отримував 17–37 покупок. Ціна покупки від $0.33 до $1.92 давала запас для масштабування та повторного тесту нових товарних відео.",
+        "en": "On a $20–$40 daily budget, the project got 17–37 purchases a day. A cost per purchase of $0.33 to $1.92 left room for scaling and for retesting new product videos.",
+        "ru": "При бюджете $20–$40 в день проект получал 17–37 покупок. Цена покупки от $0.33 до $1.92 давала запас для масштабирования и повторного теста новых товарных видео."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/car-and-motorcycle-mounts/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії авто- та мототримачів",
+          "en": "Car and motorcycle mounts ad campaign results",
+          "ru": "Результаты рекламной кампании авто- и мотодержателей"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/car-and-motorcycle-mounts.webp",
+  "imageCard": "cases/card/car-and-motorcycle-mounts.webp"
+}

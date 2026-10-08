@@ -1,0 +1,64 @@
+{
+  "order": 52,
+  "originalId": 53,
+  "id": "tiktok-clothing-store",
+  "number": "53",
+  "source": "tiktok",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#FE2C55",
+  "platform": "TikTok",
+  "kicker": {
+    "uk": "TikTok Ads / E-commerce",
+    "en": "TikTok Ads / E-commerce",
+    "ru": "TikTok Ads / E-commerce"
+  },
+  "title": {
+    "uk": "Магазин одягу",
+    "en": "Clothing store",
+    "ru": "Магазин одежды"
+  },
+  "description": {
+    "uk": "Масштабували закупівлю зі збереженням ROAS через тести 40+ креативів.",
+    "en": "Scaled media buying while keeping ROAS, through tests of 40+ creatives.",
+    "ru": "Масштабировали закупку с сохранением ROAS через тесты 40+ креативов."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "ROAS",
+        "en": "ROAS",
+        "ru": "ROAS"
+      },
+      "value": {
+        "uk": "6.4x",
+        "en": "6.4x",
+        "ru": "6.4x"
+      },
+      "type": "pink"
+    },
+    {
+      "label": {
+        "uk": "обсяг",
+        "en": "volume",
+        "ru": "объём"
+      },
+      "value": {
+        "uk": "×3",
+        "en": "×3",
+        "ru": "×3"
+      },
+      "type": "pink"
+    }
+  ],
+  "visualGradient": "linear-gradient(135deg, #FE2C55 0%, #D95780 32%, #6BCED0 68%, #25F4EE 100%)",
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "order": 46,
+  "originalId": 47,
+  "id": "trading-and-script-trading",
+  "number": "47",
+  "source": "google",
+  "niche": "crypto",
+  "category": {
+    "uk": "Крипта та фінанси",
+    "en": "Crypto & finance",
+    "ru": "Крипта и финансы"
+  },
+  "categoryColor": "#FFA63D",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Google Ads → Telegram / Іспанія, Італія, Туреччина",
+    "en": "Google Ads → Telegram / Spain, Italy, Turkey",
+    "ru": "Google Ads → Telegram / Испания, Италия, Турция"
+  },
+  "title": {
+    "uk": "Трейдинг і скрипт-трейдинг",
+    "en": "Trading and script trading",
+    "ru": "Трейдинг и скрипт-трейдинг"
+  },
+  "description": {
+    "uk": "3 730 конверсій за витрат $11 900 і CPA $3.19 — з окремою економікою по трьох ринках.",
+    "en": "3,730 conversions on $11,900 spend at a $3.19 CPA — with separate economics for three markets.",
+    "ru": "3 730 конверсий при расходах $11 900 и CPA $3.19 — с отдельной экономикой по трём рынкам."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "3 730 конверсій",
+        "en": "3,730 conversions",
+        "ru": "3 730 конверсий"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPA $3.19",
+        "en": "CPA $3.19",
+        "ru": "CPA $3.19"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "CPC $0.29",
+        "en": "CPC $0.29",
+        "ru": "CPC $0.29"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$11 900",
+        "en": "$11,900",
+        "ru": "$11 900"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$11 900",
+          "en": "$11,900",
+          "ru": "$11 900"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсії",
+          "en": "Conversions",
+          "ru": "Конверсии"
+        },
+        "value": {
+          "uk": "3 730",
+          "en": "3,730",
+          "ru": "3 730"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPA",
+          "en": "CPA",
+          "ru": "CPA"
+        },
+        "value": {
+          "uk": "$3.19",
+          "en": "$3.19",
+          "ru": "$3.19"
+        },
+        "note": {
+          "uk": "витрати / конверсії",
+          "en": "spend / conversions",
+          "ru": "расходы / конверсии"
+        }
+      },
+      {
+        "label": {
+          "uk": "Кліки",
+          "en": "Clicks",
+          "ru": "Клики"
+        },
+        "value": {
+          "uk": "40 500",
+          "en": "40,500",
+          "ru": "40 500"
+        },
+        "note": {
+          "uk": "CPC $0.29, 12.9 млн показів",
+          "en": "CPC $0.29, 12.9M impressions",
+          "ru": "CPC $0.29, 12.9 млн показов"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "розділення по GEO",
+        "en": "split by geo",
+        "ru": "разделение по GEO"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$11 900",
+            "en": "$11,900",
+            "ru": "$11 900"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "3 730 конверсій",
+            "en": "3,730 conversions",
+            "ru": "3 730 конверсий"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "ES, IT, TR",
+            "en": "ES, IT, TR",
+            "ru": "ES, IT, TR"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "12,9 млн",
+            "en": "12.9M",
+            "ru": "12,9 млн"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: вивантаження Google Ads",
+        "en": "Account total for the whole period · basis: Google Ads export",
+        "ru": "Итог кабинета за весь срок · основа: выгрузка Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Продукт — Telegram-канал про криптовалюту та скрипт-трейдинг, основні ринки: Іспанія, Італія, Туреччина. Користувач проходив шлях від рекламного повідомлення до цільової дії, після чого якість оцінювалася вже всередині каналу: підписка, активність, виконання потрібного кроку. За даними команди, фактична вартість підписника відрізнялася за ринками — Іспанія $7–8, Італія до $7, Туреччина $4–5. Ці значення вище середнього CPA з Google Ads, тому що рекламна конверсія та підтверджений підписник Telegram — різні рівні воронки.",
+      "en": "The product is a Telegram channel about crypto and script trading; the main markets are Spain, Italy and Turkey. Users went from the ad message to the target action, after which quality was evaluated inside the channel: subscription, activity, completing the required step. According to the team, the actual cost per subscriber varied by market — Spain $7–8, Italy up to $7, Turkey $4–5. These are higher than the average Google Ads CPA, because an ad conversion and a confirmed Telegram subscriber are different levels of the funnel.",
+      "ru": "Продукт — Telegram-канал о криптовалюте и скрипт-трейдинге, основные рынки: Испания, Италия, Турция. Пользователь проходил путь от рекламного сообщения до целевого действия, после чего качество оценивалось уже внутри канала: подписка, активность, выполнение нужного шага. По данным команды, фактическая стоимость подписчика отличалась по рынкам — Испания $7–8, Италия до $7, Турция $4–5. Эти значения выше среднего CPA из Google Ads, потому что рекламная конверсия и подтверждённый подписчик Telegram — разные уровни воронки."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/trading-and-script-trading/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для трейдингу та скрипт-трейдингу в Іспанії, Італії та Туреччині",
+          "en": "Google Ads results for trading and script trading in Spain, Italy and Turkey",
+          "ru": "Результаты Google Ads для трейдинга и скрипт-трейдинга в Испании, Италии и Турции"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Google Ads → Telegram / Іспанія, Італія, Туреччина",
+          "en": "Screenshot 1 — Google Ads → Telegram / Spain, Italy, Turkey",
+          "ru": "Скриншот 1 — Google Ads → Telegram / Испания, Италия, Турция"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Потрібно було отримати обсяг у трьох мовних і цінових зонах, утримати конкурентну вартість входу та не втратити якість під час масштабування. У трейдингу окремо важливо не обіцяти гарантований дохід: точне позиціонування одночасно підвищує якість аудиторії та знижує ризик нестабільної модерації.",
+      "en": "We needed volume in three language and price zones, a competitive entry cost and no loss of quality during scaling. In trading, it’s especially important not to promise guaranteed income: precise positioning both improves audience quality and lowers the risk of unstable moderation.",
+      "ru": "Нужно было получить объём в трёх языковых и ценовых зонах, удержать конкурентную стоимость входа и не потерять качество при масштабировании. В трейдинге отдельно важно не обещать гарантированный доход: точное позиционирование одновременно повышает качество аудитории и снижает риск нестабильной модерации."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Окремі кампанії та повідомлення за GEO — Іспанія, Італія й Туреччина не змішувалися в одну економіку.",
+        "en": "Separate campaigns and messages by geo — Spain, Italy and Turkey weren’t mixed into one set of economics.",
+        "ru": "Отдельные кампании и сообщения по GEO — Испания, Италия и Турция не смешивались в одну экономику."
+      },
+      {
+        "uk": "Тест кількох кутів подачі: прикладний торговий контент, аналітика ринку, скрипти та супровід.",
+        "en": "Testing several angles: practical trading content, market analysis, scripts and support.",
+        "ru": "Тест нескольких углов подачи: прикладной торговый контент, аналитика рынка, скрипты и сопровождение."
+      },
+      {
+        "uk": "Звірка рекламних кабінетів із Telegram-аналітикою — окрема оцінка дешевої конверсії та фактичної ціни підписника по кожній країні.",
+        "en": "Reconciling ad accounts with Telegram analytics — separately evaluating cheap conversions and the actual cost per subscriber in each country.",
+        "ru": "Сверка рекламных кабинетов с Telegram-аналитикой — отдельная оценка дешёвой конверсии и фактической цены подписчика по каждой стране."
+      },
+      {
+        "uk": "Поступове масштабування робочих комбінацій із контролем CPC, CPA, фактичного CPL каналу та активності підписників.",
+        "en": "Gradual scaling of working combinations with control of CPC, CPA, the channel’s actual CPL and subscriber activity.",
+        "ru": "Постепенное масштабирование рабочих комбинаций с контролем CPC, CPA, фактического CPL канала и активности подписчиков."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Кути подачі тестувалися паралельно, а бюджет переносився в ті повідомлення, які давали не просто кліки, а якісніших підписників. Позиціонування трималося в межах правил: без обіцянок гарантованого доходу — лише зміст каналу, практичні інструменти та користь для трейдера.",
+        "en": "Angles were tested in parallel, and budget moved to the messages that brought not just clicks but higher-quality subscribers. Positioning stayed within the rules: no promises of guaranteed income — only the channel’s content, practical tools and value for traders.",
+        "ru": "Углы подачи тестировались параллельно, а бюджет переносился в те сообщения, которые давали не просто клики, а более качественных подписчиков. Позиционирование держалось в рамках правил: без обещаний гарантированного дохода — только содержание канала, практические инструменты и польза для трейдера."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Великий обсяг показів дав системі достатньо даних для пошуку робочих сегментів, а окрема оцінка трьох GEO не дозволила дешевшій Туреччині приховати дорожчу економіку Іспанії та Італії. Це ключовий методичний висновок кейсу: усереднення за ринками маскує збиткові напрямки. Окремо: 3 730 конверсій і CPA $3.19 розраховані за даними Google Ads, а вартість підписника $4–8 взята з Telegram-аналітики команди — ці показники навмисно не об’єднані в один CPL.",
+        "en": "The large impression volume gave the system enough data to find working segments, and evaluating the three geos separately kept cheaper Turkey from hiding the more expensive economics of Spain and Italy. This is the key methodological takeaway of the case: averaging across markets masks unprofitable directions. Separately: 3,730 conversions and a $3.19 CPA are calculated from Google Ads data, while the $4–8 cost per subscriber comes from the team’s Telegram analytics — these figures are deliberately not combined into one CPL.",
+        "ru": "Большой объём показов дал системе достаточно данных для поиска рабочих сегментов, а отдельная оценка трёх GEO не позволила более дешёвой Турции скрыть более дорогую экономику Испании и Италии. Это ключевой методический вывод кейса: усреднение по рынкам маскирует убыточные направления. Отдельно: 3 730 конверсий и CPA $3.19 рассчитаны по данным Google Ads, а стоимость подписчика $4–8 взята из Telegram-аналитики команды — эти показатели намеренно не объединены в один CPL."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$400",
+            "en": "$400",
+            "ru": "$400"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$12 000",
+            "en": "$12,000",
+            "ru": "$12 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$3.19",
+            "en": "$3.19",
+            "ru": "$3.19"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 3 760 конверсій",
+            "en": "≈ 3,760 conversions",
+            "ru": "≈ 3 760 конверсий"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні CPA $3.19 із вивантаження Google Ads.",
+        "en": "30-day projection at the $3.19 CPA from the Google Ads export.",
+        "ru": "Расчёт на 30 дней при сохранении CPA $3.19 из выгрузки Google Ads."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Google Ads зафіксував близько 40 500 кліків, 12.9 млн показів і 3 730 конверсій при витратах $11 900. Розрахунковий CPC — $0.29, CPA — $3.19, співвідношення конверсій до кліків — близько 9.21%. Команда отримала масштабний потік і зрозумілі орієнтири фактичної вартості підписника за країнами: Іспанія $7–8, Італія до $7, Туреччина $4–5.",
+        "en": "Google Ads recorded about 40,500 clicks, 12.9M impressions and 3,730 conversions on $11,900 in spend. Calculated CPC: $0.29; CPA: $3.19; conversion-to-click ratio: about 9.21%. The team got a large-scale flow and clear benchmarks for the actual cost per subscriber by country: Spain $7–8, Italy up to $7, Turkey $4–5.",
+        "ru": "Google Ads зафиксировал около 40 500 кликов, 12.9 млн показов и 3 730 конверсий при расходах $11 900. Расчётный CPC — $0.29, CPA — $3.19, соотношение конверсий к кликам — около 9.21%. Команда получила масштабный поток и понятные ориентиры фактической стоимости подписчика по странам: Испания $7–8, Италия до $7, Турция $4–5."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/trading-and-script-trading/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для трейдингу та скрипт-трейдингу в Іспанії, Італії та Туреччині",
+          "en": "Google Ads results for trading and script trading in Spain, Italy and Turkey",
+          "ru": "Результаты Google Ads для трейдинга и скрипт-трейдинга в Испании, Италии и Турции"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/trading-and-script-trading.jpg",
+  "imageCard": "cases/card/trading-and-script-trading.webp"
+}

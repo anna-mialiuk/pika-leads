@@ -1,0 +1,30 @@
+{
+  "order": 5,
+  "id": "meta-ads-update",
+  "topic": "advertising",
+  "level": "intermediate",
+  "category": {
+    "uk": "Реклама",
+    "en": "Advertising",
+    "ru": "Реклама"
+  },
+  "type": "purple",
+  "image": "blog/meta-ads-update.webp",
+  "date": "2024-10-08",
+  "readTime": {
+    "uk": "3 хв",
+    "en": "3 min",
+    "ru": "3 мин"
+  },
+  "title": {
+    "uk": "Оновлення Meta Ads: що розповіла підтримка про гео, бюджети й тести",
+    "en": "Meta Ads update: what support told us about geo, budgets and tests",
+    "ru": "Обновление Meta Ads: что рассказала поддержка о гео, бюджетах и тестах"
+  },
+  "description": {
+    "uk": "Розбір прямої розмови з підтримкою Meta: зміни гео-таргетингу, корекція бюджету на +25% і сім днів на стабілізацію.",
+    "en": "Notes from a direct conversation with Meta support: geo-targeting changes, +25% budget adjustments and seven days to stabilize.",
+    "ru": "Разбор прямого разговора с поддержкой Meta: изменения гео-таргетинга, корректировка бюджета на +25% и семь дней на стабилизацию."
+  },
+  "href": "/blog/meta-ads-update"
+}

@@ -1,0 +1,25 @@
+{
+  "order": 68,
+  "originalId": 69,
+  "id": "uiux-saas-interface",
+  "number": "69",
+  "source": "uiux",
+  "niche": "saas",
+  "category": {
+    "uk": "SaaS",
+    "en": "SaaS",
+    "ru": "SaaS"
+  },
+  "categoryColor": "#A78BFA",
+  "platform": "UI/UX",
+  "title": {
+    "uk": "SaaS-інтерфейс",
+    "en": "SaaS interface",
+    "ru": "SaaS-интерфейс"
+  },
+  "description": {
+    "uk": "Складний продуктовий інтерфейс з онбордингом і налаштуваннями.",
+    "en": "A complex product interface with onboarding and settings.",
+    "ru": "Сложный продуктовый интерфейс с онбордингом и настройками."
+  }
+}

@@ -23,8 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# експорт контенту для CMS (npm run export:content)
-content-export
 
 # змінні оточення
 .env

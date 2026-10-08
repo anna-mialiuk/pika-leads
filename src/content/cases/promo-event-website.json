@@ -1,0 +1,25 @@
+{
+  "order": 62,
+  "originalId": 63,
+  "id": "promo-event-website",
+  "number": "63",
+  "source": "website",
+  "niche": "promo",
+  "category": {
+    "uk": "Промо",
+    "en": "Promo",
+    "ru": "Промо"
+  },
+  "categoryColor": "#BD8BFF",
+  "platform": "Website",
+  "title": {
+    "uk": "Промо / event",
+    "en": "Promo / event",
+    "ru": "Промо / event"
+  },
+  "description": {
+    "uk": "Яскравий промо-сайт під запуск продукту або подію.",
+    "en": "A bold promo website for a product launch or an event.",
+    "ru": "Яркий промо-сайт под запуск продукта или событие."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "order": 1,
+  "id": "capi-tools",
+  "featured": true,
+  "topic": "analytics",
+  "level": "intermediate",
+  "category": {
+    "uk": "Аналітика",
+    "en": "Analytics",
+    "ru": "Аналитика"
+  },
+  "type": "green",
+  "image": "blog/blog-tools.webp",
+  "date": "2024-10-07",
+  "readTime": {
+    "uk": "3 хв",
+    "en": "3 min",
+    "ru": "3 мин"
+  },
+  "title": {
+    "uk": "Сервіси для підключення CAPI: 11 способів налаштувати серверний трекінг",
+    "en": "CAPI connection tools: 11 ways to set up server-side tracking",
+    "ru": "Сервисы для подключения CAPI: 11 способов настроить серверный трекинг"
+  },
+  "description": {
+    "uk": "Якщо web-піксель вимкнуть, залишиться Conversions API. Розбираємо інструменти — від нативної інтеграції Meta до Server-Side GTM.",
+    "en": "If the web pixel gets switched off, you’ll still have the Conversions API. We review the tools — from Meta’s native integration to Server-Side GTM.",
+    "ru": "Если web-пиксель отключат, останется Conversions API. Разбираем инструменты — от нативной интеграции Meta до Server-Side GTM."
+  },
+  "href": "/blog/capi-tools"
+}

@@ -27,3 +27,11 @@ export const COOKIE_SECURE = env.COOKIE_SECURE !== "0";
 export const SESSION_HOURS = Number(env.SESSION_HOURS || 12);
 export const REMEMBER_DAYS = Number(env.REMEMBER_DAYS || 30);
 export const TOTP_ISSUER = env.TOTP_ISSUER || "Pikaleads";
+
+// Публікація контенту сайту (кейси, блог, відгуки) — коміти в GitHub, див. github.mjs
+export const GITHUB_TOKEN = env.GITHUB_TOKEN || "";
+export const GITHUB_REPO = env.GITHUB_REPO || "";
+export const GITHUB_BRANCH = env.GITHUB_BRANCH || "main";
+export const GITHUB_API = (env.GITHUB_API_URL || "https://api.github.com").replace(/\/$/, "");
+export const GITHUB_AUTHOR_EMAIL = env.GITHUB_AUTHOR_EMAIL || "admin@pika-leads.com";
+export const SITE_URL = (env.SITE_URL || "https://pika-leads.com").replace(/\/$/, "");

@@ -1,0 +1,542 @@
+{
+  "order": 33,
+  "originalId": 34,
+  "id": "telegram-trading-bot",
+  "number": "34",
+  "source": "meta",
+  "niche": "crypto",
+  "category": {
+    "uk": "Крипта та фінанси",
+    "en": "Crypto & finance",
+    "ru": "Крипта и финансы"
+  },
+  "categoryColor": "#FFA63D",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Fintech Lead Generation / 349 кампаній",
+    "en": "Fintech Lead Generation / 349 campaigns",
+    "ru": "Fintech Lead Generation / 349 кампаний"
+  },
+  "title": {
+    "uk": "Трейдинг-бот: підписники в Telegram",
+    "en": "Trading bot: Telegram subscribers",
+    "ru": "Трейдинг-бот: подписчики в Telegram"
+  },
+  "description": {
+    "uk": "12 593 чистих підписники Telegram по $2.14 за 1 125 днів роботи та 349 кампаній.",
+    "en": "12,593 clean Telegram subscribers at $2.14 over 1,125 days of work and 349 campaigns.",
+    "ru": "12 593 чистых подписчика Telegram по $2.14 за 1 125 дней работы и 349 кампаний."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "12 593 підписники",
+        "en": "12,593 subscribers",
+        "ru": "12 593 подписчика"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPA $2.14",
+        "en": "CPA $2.14",
+        "ru": "CPA $2.14"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "CTR 0.64%",
+        "en": "CTR 0.64%",
+        "ru": "CTR 0.64%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$26 915.72",
+        "en": "$26,915.72",
+        "ru": "$26 915.72"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$26 915.72",
+          "en": "$26,915.72",
+          "ru": "$26 915.72"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Покази",
+          "en": "Impressions",
+          "ru": "Показы"
+        },
+        "value": {
+          "uk": "3 328 619",
+          "en": "3,328,619",
+          "ru": "3 328 619"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPM",
+          "en": "CPM",
+          "ru": "CPM"
+        },
+        "value": {
+          "uk": "$8.09",
+          "en": "$8.09",
+          "ru": "$8.09"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Link clicks",
+          "en": "Link clicks",
+          "ru": "Link clicks"
+        },
+        "value": {
+          "uk": "21 454",
+          "en": "21,454",
+          "ru": "21 454"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPC link",
+          "en": "CPC link",
+          "ru": "CPC link"
+        },
+        "value": {
+          "uk": "$1.25",
+          "en": "$1.25",
+          "ru": "$1.25"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Link CTR",
+          "en": "Link CTR",
+          "ru": "Link CTR"
+        },
+        "value": {
+          "uk": "0.64%",
+          "en": "0.64%",
+          "ru": "0.64%"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Чисті підписники",
+          "en": "Clean subscribers",
+          "ru": "Чистые подписчики"
+        },
+        "value": {
+          "uk": "12 593",
+          "en": "12,593",
+          "ru": "12 593"
+        },
+        "note": {
+          "uk": "landing page views",
+          "en": "landing page views",
+          "ru": "landing page views"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна підписника",
+          "en": "Cost per subscriber",
+          "ru": "Цена подписчика"
+        },
+        "value": {
+          "uk": "$2.14",
+          "en": "$2.14",
+          "ru": "$2.14"
+        },
+        "note": {
+          "uk": "$26 915.72 / 12 593",
+          "en": "$26,915.72 / 12,593",
+          "ru": "$26 915.72 / 12 593"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "349 кампаній",
+        "en": "349 campaigns",
+        "ru": "349 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$26 915.72",
+            "en": "$26,915.72",
+            "ru": "$26 915.72"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "12 593 підписники",
+            "en": "12,593 subscribers",
+            "ru": "12 593 подписчика"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "3 328 619",
+            "en": "3,328,619",
+            "ru": "3 328 619"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: Ads Manager",
+        "en": "Account total for the whole period · basis: Ads Manager",
+        "ru": "Итог кабинета за весь срок · основа: Ads Manager"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Чоловіки та жінки 25–55 років з інтересом до трейдингу, інвестицій, автоматизації та фінансових ринків. Географія визначалася структурою рекламного кабінету: Україна, Молдова, Ізраїль, Італія, Латвія, Австралія та інші ринки, розділені за мовою й вартістю залучення. У фінансовій ніші дешевий клік сам по собі мало що означає — користувач має зрозуміти продукт, довіряти джерелу та свідомо перейти в Telegram.",
+      "en": "Men and women aged 25–55 interested in trading, investing, automation and financial markets. Geography was set by the ad account structure: Ukraine, Moldova, Israel, Italy, Latvia, Australia and other markets, split by language and acquisition cost. In the finance niche, a cheap click on its own means little — the user has to understand the product, trust the source and deliberately move to Telegram.",
+      "ru": "Мужчины и женщины 25–55 лет с интересом к трейдингу, инвестициям, автоматизации и финансовым рынкам. География определялась структурой рекламного кабинета: Украина, Молдова, Израиль, Италия, Латвия, Австралия и другие рынки, разделённые по языку и стоимости привлечения. В финансовой нише дешёвый клик сам по себе мало что значит — пользователь должен понять продукт, доверять источнику и осознанно перейти в Telegram."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/telegram-trading-bot/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламні кампанії трейдинг-бота з залученням підписників у Telegram",
+          "en": "Trading bot ad campaigns acquiring Telegram subscribers",
+          "ru": "Рекламные кампании трейдинг-бота с привлечением подписчиков в Telegram"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Fintech lead generation / 349 кампаній",
+          "en": "Screenshot 1 — Fintech lead generation / 349 campaigns",
+          "ru": "Скриншот 1 — Fintech lead generation / 349 кампаний"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Розділили географії та мови, щоб не змішувати дешевий, але слабкий трафік із платоспроможними сегментами. Зібрали оголошення навколо продукту й процесу: як працює бот, кому підходить, які ризики та обмеження існують. Оптимізували шлях на landing page view і чисту підписку, порівнюючи його з link click. Окремо перевіряли втрати між кліком і Telegram: із 21 454 link clicks підписалися 12 593 користувачі — близько 58.7%.",
+      "en": "We separated geos and languages so as not to mix cheap but weak traffic with solvent segments. We built the ads around the product and process: how the bot works, who it’s for, and what risks and limitations exist. We optimized the path for landing page views and clean subscriptions, comparing it with link clicks. We separately checked the drop-off between the click and Telegram: out of 21,454 link clicks, 12,593 users subscribed — about 58.7%.",
+      "ru": "Разделили географии и языки, чтобы не смешивать дешёвый, но слабый трафик с платёжеспособными сегментами. Собрали объявления вокруг продукта и процесса: как работает бот, кому подходит, какие риски и ограничения существуют. Оптимизировали путь на landing page view и чистую подписку, сравнивая его с link click. Отдельно проверяли потери между кликом и Telegram: из 21 454 link clicks подписались 12 593 пользователя — около 58.7%."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/telegram-trading-bot/screenshot-02.webp",
+        "alt": {
+          "uk": "Історія запуску рекламних кампаній трейдинг-бота з переходом у Telegram",
+          "en": "Trading bot ad campaign launch history with a move to Telegram",
+          "ru": "История запуска рекламных кампаний трейдинг-бота с переходом в Telegram"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Fintech Lead Generation / 349 кампаній",
+          "en": "Screenshot 2 — Fintech Lead Generation / 349 campaigns",
+          "ru": "Скриншот 2 — Fintech Lead Generation / 349 кампаний"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Acquisition: окремі кампанії за країною та мовою, broad і Advantage+.",
+        "en": "Acquisition: separate campaigns by country and language, broad and Advantage+.",
+        "ru": "Acquisition: отдельные кампании по стране и языку, broad и Advantage+."
+      },
+      {
+        "uk": "Message angles: автоматизація, дисципліна, прозора методологія, onboarding і risk-disclaimer.",
+        "en": "Message angles: automation, discipline, transparent methodology, onboarding and a risk disclaimer.",
+        "ru": "Message angles: автоматизация, дисциплина, прозрачная методология, onboarding и risk-disclaimer."
+      },
+      {
+        "uk": "Conversion: click → landing view → Telegram subscribe → контент → продаж.",
+        "en": "Conversion: click → landing view → Telegram subscribe → content → sale.",
+        "ru": "Conversion: click → landing view → Telegram subscribe → контент → продажа."
+      },
+      {
+        "uk": "Analytics: UTM і бот-мітки, когорта підписки, відписка, активація та продаж за джерелом.",
+        "en": "Analytics: UTMs and bot tags, subscription cohort, unsubscribes, activation and sales by source.",
+        "ru": "Analytics: UTM и бот-метки, когорта подписки, отписка, активация и продажа по источнику."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Найкраще масштабується доказова подача: інтерфейс, логіка роботи, зрозумілий сценарій використання та попередження про ризики. Креатив не обіцяє гарантовану дохідність, а продає інструмент, метод і можливість вивчити рішення в Telegram.",
+        "en": "Evidence-based presentation scales best: the interface, how it works, a clear use case and risk warnings. The creative doesn’t promise guaranteed returns; it sells a tool, a method and the chance to explore the solution in Telegram.",
+        "ru": "Лучше всего масштабируется доказательная подача: интерфейс, логика работы, понятный сценарий использования и предупреждение о рисках. Креатив не обещает гарантированную доходность, а продаёт инструмент, метод и возможность изучить решение в Telegram."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Зниження CPC саме по собі не було ціллю. Ключовий показник — $2.14 за чистого підписника. При 58.7% конверсії кліка в підписку можна точково покращувати проміжну сторінку й onboarding, а далі оцінювати якість за активацією та оплатами.",
+        "en": "Lowering CPC wasn’t a goal in itself. The key metric was $2.14 per clean subscriber. With a 58.7% click-to-subscribe rate, the intermediate page and onboarding can be improved selectively, and quality then judged by activation and payments.",
+        "ru": "Снижение CPC само по себе не было целью. Ключевой показатель — $2.14 за чистого подписчика. При 58.7% конверсии клика в подписку можно точечно улучшать промежуточную страницу и onboarding, а дальше оценивать качество по активации и оплатам."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$23.93",
+            "en": "$23.93",
+            "ru": "$23.93"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$717.75",
+            "en": "$717.75",
+            "ru": "$717.75"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPA ≤ $2.14",
+            "en": "CPA ≤ $2.14",
+            "ru": "CPA ≤ $2.14"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 336 підписників / 30 днів",
+            "en": "≈ 336 subscribers / 30 days",
+            "ru": "≈ 336 подписчиков / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "План за історичним темпом: $717.75 на 30 днів → близько 336 підписників. При 7% конверсії в продаж це 23.5 покупки й приблизно $11 753 виручки; модельний CAC продажу — $30.53.",
+        "en": "Plan at the historical pace: $717.75 for 30 days → about 336 subscribers. At a 7% sale conversion, that’s 23.5 purchases and about $11,753 in revenue; the modeled CAC per sale is $30.53.",
+        "ru": "План по историческому темпу: $717.75 на 30 дней → около 336 подписчиков. При 7% конверсии в продажу это 23.5 покупки и примерно $11 753 выручки; модельный CAC продажи — $30.53."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "12 593 чистих підписники Telegram по $2.14. При заданій конверсії в продаж 7% і середньому чеку $500 модель дає близько 882 продажів і $440.8 тис. виручки. Це сценарій, а не вивантаження оплат і не обіцянка фінансового результату: з виручки не відняті продукт, команда, повернення та комісії.",
+        "en": "12,593 clean Telegram subscribers at $2.14. With a given 7% sale conversion and a $500 average order value, the model gives about 882 sales and $440.8k in revenue. This is a scenario, not a payment export and not a promise of financial results: product, team, refunds and fees haven’t been deducted from revenue.",
+        "ru": "12 593 чистых подписчика Telegram по $2.14. При заданной конверсии в продажу 7% и среднем чеке $500 модель даёт около 882 продаж и $440.8 тыс. выручки. Это сценарий, а не выгрузка оплат и не обещание финансового результата: из выручки не вычтены продукт, команда, возвраты и комиссии."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/telegram-trading-bot/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет трейдинг-бота — скріншот 1",
+          "en": "Trading bot ad account — screenshot 1",
+          "ru": "Рекламный кабинет трейдинг-бота — скриншот 1"
+        },
+        "caption": {
+          "uk": "1 / 2",
+          "en": "1 / 2",
+          "ru": "1 / 2"
+        }
+      },
+      {
+        "image": "cases/content/telegram-trading-bot/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний кабінет трейдинг-бота — скріншот 2",
+          "en": "Trading bot ad account — screenshot 2",
+          "ru": "Рекламный кабинет трейдинг-бота — скриншот 2"
+        },
+        "caption": {
+          "uk": "2 / 2",
+          "en": "2 / 2",
+          "ru": "2 / 2"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншоти Meta Ads Manager з початкового звіту. Підтверджено бюджет $26 915.72, 3 328 619 показів, 21 454 переходи за посиланням і 12 593 чистих підписники Telegram. Ціна підписника $2.14 розрахована як співвідношення загального бюджету до кількості підписників.",
+      "en": "Meta Ads Manager screenshots from the original report. Confirmed: a $26,915.72 budget, 3,328,619 impressions, 21,454 link clicks and 12,593 clean Telegram subscribers. The $2.14 cost per subscriber is calculated as total budget divided by the number of subscribers.",
+      "ru": "Скриншоты Meta Ads Manager из исходного отчёта. Подтверждены бюджет $26 915.72, 3 328 619 показов, 21 454 перехода по ссылке и 12 593 чистых подписчика Telegram. Цена подписчика $2.14 рассчитана как отношение общего бюджета к количеству подписчиков."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/telegram-trading-bot.webp",
+  "imageCard": "cases/card/telegram-trading-bot.webp"
+}

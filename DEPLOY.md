@@ -293,3 +293,30 @@ crontab -u deploy -e
 ```
 
 (зберігає 7 щоденних копій по днях тижня)
+
+## Кейси, блог і відгуки в адмінці
+
+Адмінка зберігає зміни комітом у цей репозиторій (від імені токена) → GitHub Actions
+збирає й викладає сайт, як після звичайного `git push`. Стан збірки видно в адмінці
+(ліва панель: «Сайт обновлён / обновляется / ошибка»).
+
+### 1. Токен GitHub (один раз)
+
+github.com → аватар → Settings → Developer settings → Personal access tokens →
+**Fine-grained tokens** → Generate new token:
+
+- Repository access: **Only select repositories** → `pika-leads`
+- Permissions → Repository permissions: **Contents — Read and write**, **Actions — Read-only**
+
+### 2. Сервер (як root)
+
+    read -rsp "Токен: " T && printf '\nGITHUB_TOKEN=%s\nGITHUB_REPO=anna-mialiuk/pika-leads\nGITHUB_BRANCH=main\n' "$T" >> /home/deploy/leads-server/.env && unset T && systemctl restart pikaleads-leads
+
+Nginx адмінки: `client_max_body_size 40m;` у `location /api/admin/` (картинки) і
+`blob:` в `img-src` CSP (конвертація картинок у браузері) — див. `deploy/nginx-admin.conf`.
+
+### Якщо збірка впала
+
+Сайт лишається попередньої версії. Відкрийте запуск у GitHub → Actions (посилання —
+у статусі в адмінці), знайдіть помилку; виправте запис в адмінці або відкотіть коміт.
+Кожне збереження — окремий коміт «Админка: …» в історії GitHub, його можна відкотити (`git revert <коміт>`).

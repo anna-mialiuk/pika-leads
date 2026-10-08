@@ -1,0 +1,640 @@
+{
+  "order": 29,
+  "originalId": 30,
+  "id": "psychologist-personal-brand-growth",
+  "number": "30",
+  "source": "meta",
+  "niche": "social",
+  "category": {
+    "uk": "Соцмережі",
+    "en": "Social media",
+    "ru": "Соцсети"
+  },
+  "categoryColor": "#FF7AC8",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Personal brand / Instagram growth",
+    "en": "Personal brand / Instagram growth",
+    "ru": "Personal brand / Instagram growth"
+  },
+  "title": {
+    "uk": "Психолог: зростання особистого бренду до 280 801 підписника",
+    "en": "Psychologist: growing a personal brand to 280,801 followers",
+    "ru": "Психолог: рост личного бренда до 280 801 подписчика"
+  },
+  "description": {
+    "uk": "За 18 місяців блог виріс з 5 000 до 280 801 підписника — зростання в 56 разів при робочій витраті $175–$200 на добу.",
+    "en": "In 18 months the blog grew from 5,000 to 280,801 followers — 56× growth at a working spend of $175–$200 a day.",
+    "ru": "За 18 месяцев блог вырос с 5 000 до 280 801 подписчика — рост в 56 раз при рабочем расходе $175–$200 в сутки."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Старт аудиторії",
+        "en": "Starting audience",
+        "ru": "Старт аудитории"
+      },
+      "value": {
+        "uk": "5 000",
+        "en": "5,000",
+        "ru": "5 000"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Фінал",
+        "en": "Final",
+        "ru": "Финал"
+      },
+      "value": {
+        "uk": "280 801",
+        "en": "280,801",
+        "ru": "280 801"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Зростання",
+        "en": "Growth",
+        "ru": "Рост"
+      },
+      "value": {
+        "uk": "×56.16",
+        "en": "×56.16",
+        "ru": "×56.16"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$95 812.50–$109 500",
+        "en": "$95,812.50–$109,500",
+        "ru": "$95 812.50–$109 500"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Старт аудиторії",
+          "en": "Starting audience",
+          "ru": "Старт аудитории"
+        },
+        "value": {
+          "uk": "5 000 підписників",
+          "en": "5,000 followers",
+          "ru": "5 000 подписчиков"
+        },
+        "note": {
+          "uk": "SocialBlade",
+          "en": "SocialBlade",
+          "ru": "SocialBlade"
+        }
+      },
+      {
+        "label": {
+          "uk": "Фінал",
+          "en": "Final",
+          "ru": "Финал"
+        },
+        "value": {
+          "uk": "280 801 підписник",
+          "en": "280,801 followers",
+          "ru": "280 801 подписчик"
+        },
+        "note": {
+          "uk": "SocialBlade",
+          "en": "SocialBlade",
+          "ru": "SocialBlade"
+        }
+      },
+      {
+        "label": {
+          "uk": "Чистий приріст",
+          "en": "Net growth",
+          "ru": "Чистый прирост"
+        },
+        "value": {
+          "uk": "+275 801",
+          "en": "+275,801",
+          "ru": "+275 801"
+        },
+        "note": {
+          "uk": "розрахунок",
+          "en": "calculated",
+          "ru": "расчёт"
+        }
+      },
+      {
+        "label": {
+          "uk": "Зростання бази",
+          "en": "Audience growth",
+          "ru": "Рост базы"
+        },
+        "value": {
+          "uk": "×56.16 / +5 516%",
+          "en": "×56.16 / +5,516%",
+          "ru": "×56.16 / +5 516%"
+        },
+        "note": {
+          "uk": "розрахунок",
+          "en": "calculated",
+          "ru": "расчёт"
+        }
+      },
+      {
+        "label": {
+          "uk": "Витрати на добу",
+          "en": "Spend per day",
+          "ru": "Расходы в сутки"
+        },
+        "value": {
+          "uk": "$175–$200",
+          "en": "$175–$200",
+          "ru": "$175–$200"
+        },
+        "note": {
+          "uk": "дані власника",
+          "en": "owner’s data",
+          "ru": "данные владельца"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахунковий бюджет",
+          "en": "Projected budget",
+          "ru": "Расчётный бюджет"
+        },
+        "value": {
+          "uk": "$95 812.50–$109 500",
+          "en": "$95,812.50–$109,500",
+          "ru": "$95 812.50–$109 500"
+        },
+        "note": {
+          "uk": "547,5 дня × $175–$200",
+          "en": "547.5 days × $175–$200",
+          "ru": "547,5 дня × $175–$200"
+        }
+      },
+      {
+        "label": {
+          "uk": "Підтверджені зрізи",
+          "en": "Confirmed slices",
+          "ru": "Подтверждённые срезы"
+        },
+        "value": {
+          "uk": "$80 714.58",
+          "en": "$80,714.58",
+          "ru": "$80 714.58"
+        },
+        "note": {
+          "uk": "два кабінети",
+          "en": "two ad accounts",
+          "ru": "два кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "Останні 30 днів",
+          "en": "Last 30 days",
+          "ru": "Последние 30 дней"
+        },
+        "value": {
+          "uk": "+3 420 підписників",
+          "en": "+3,420 followers",
+          "ru": "+3 420 подписчиков"
+        },
+        "note": {
+          "uk": "SocialBlade",
+          "en": "SocialBlade",
+          "ru": "SocialBlade"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "2 підтверджених контури кампаній",
+        "en": "2 confirmed campaign loops",
+        "ru": "2 подтверждённых контура кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$95 812.50–$109 500",
+            "en": "$95,812.50–$109,500",
+            "ru": "$95 812.50–$109 500"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "+275 801 підписник",
+            "en": "+275,801 followers",
+            "ru": "+275 801 подписчик"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Сума кампаній, що потрапили на скріншот — реальні витрати вищі · основа: 547,5 дня × $175–$200",
+        "en": "Sum of campaigns captured in the screenshot — actual spend is higher · basis: 547.5 days × $175–$200",
+        "ru": "Сумма кампаний, попавших на скриншот — реальные расходы выше · основа: 547,5 дня × $175–$200"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Ядро аудиторії — жінки 25–55 років, які цікавляться стосунками, самоцінністю, тривогою, сімейними сценаріями, материнством та особистісним зростанням. Географія — Україна, Європа та російсько-/україномовна аудиторія по всьому світу. На старті блог мав невелику базу й залежав від поодиноких публікацій.",
+      "en": "The core audience: women aged 25–55 interested in relationships, self-worth, anxiety, family patterns, motherhood and personal growth. Geography: Ukraine, Europe and Russian- and Ukrainian-speaking audiences worldwide. At the start, the blog had a small base and depended on occasional posts.",
+      "ru": "Ядро аудитории — женщины 25–55 лет, интересующиеся отношениями, самоценностью, тревогой, семейными сценариями, материнством и личностным ростом. География — Украина, Европа и русско-/украиноязычная аудитория по всему миру. На старте блог имел небольшую базу и зависел от единичных публикаций."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/psychologist/screenshot-01.webp",
+        "alt": {
+          "uk": "Статистика зростання Instagram-аудиторії психолога в SocialBlade",
+          "en": "The psychologist’s Instagram audience growth stats in SocialBlade",
+          "ru": "Статистика роста Instagram-аудитории психолога в SocialBlade"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Personal brand / Instagram growth",
+          "en": "Screenshot 1 — Personal brand / Instagram growth",
+          "ru": "Скриншот 1 — Personal brand / Instagram growth"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий матеріал зі статистикою особистого бренду психолога",
+          "en": "The psychologist’s personal brand stats — second material",
+          "ru": "Второй материал со статистикой личного бренда психолога"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Personal brand / Instagram growth",
+          "en": "Screenshot 2 — Personal brand / Instagram growth",
+          "ru": "Скриншот 2 — Personal brand / Instagram growth"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Потрібно було побудувати не разовий набір підписників, а машину зростання: контент регулярно створює довіру, реклама приводить людей на сильні публікації, профіль перетворює візит на підписку та діалог. Провели аудит профілю — позиціонування, шапка, закріплені публікації, теми, візуальна впізнаваність і точки входу в консультацію. Зібрали контент-матрицю з діагностичних тем, особистих історій, розборів стосунків і коротких практичних Reels. Щотижня відбирали органічні публікації з найкращим утриманням і просували їх на холодну аудиторію.",
+      "en": "The goal wasn’t a one-off follower drive but a growth engine: content consistently builds trust, ads drive people to strong posts, and the profile turns a visit into a follow and a conversation. We audited the profile — positioning, bio, pinned posts, topics, visual recognition and entry points to a consultation. We built a content matrix of diagnostic topics, personal stories, relationship breakdowns and short practical Reels. Every week we picked the organic posts with the best retention and promoted them to cold audiences.",
+      "ru": "Нужно было построить не разовый набор подписчиков, а машину роста: контент регулярно создаёт доверие, реклама приводит людей на сильные публикации, профиль превращает визит в подписку и диалог. Провели аудит профиля — позиционирование, шапка, закреплённые публикации, темы, визуальная узнаваемость и точки входа в консультацию. Собрали контент-матрицу из диагностических тем, личных историй, разборов отношений и коротких практических Reels. Еженедельно отбирали органические публикации с лучшим удержанием и продвигали их на холодную аудиторию."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/psychologist/screenshot-03.webp",
+        "alt": {
+          "uk": "Графік щомісячного приросту підписників особистого бренду психолога",
+          "en": "Chart of the psychologist’s personal brand monthly follower growth",
+          "ru": "График ежемесячного прироста подписчиков личного бренда психолога"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Personal brand / Instagram growth",
+          "en": "Screenshot 1 — Personal brand / Instagram growth",
+          "ru": "Скриншот 1 — Personal brand / Instagram growth"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-04.webp",
+        "alt": {
+          "uk": "Другий матеріал зі статистикою зростання Instagram особистого бренду психолога",
+          "en": "The psychologist’s personal brand Instagram growth stats — second material",
+          "ru": "Второй материал со статистикой роста Instagram личного бренда психолога"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Personal brand / Instagram growth",
+          "en": "Screenshot 2 — Personal brand / Instagram growth",
+          "ru": "Скриншот 2 — Personal brand / Instagram growth"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Холодний шар: Advantage+ broad, широкі жіночі аудиторії та контрольні інтереси з психології й стосунків.",
+        "en": "Cold layer: Advantage+ broad, broad female audiences and control interests in psychology and relationships.",
+        "ru": "Холодный слой: Advantage+ broad, широкие женские аудитории и контрольные интересы по психологии и отношениям."
+      },
+      {
+        "uk": "Контентний шар: окремі кампанії на Reels і Stories; ціль — дешевий якісний візит у профіль та утримання.",
+        "en": "Content layer: separate campaigns for Reels and Stories; the goal — cheap, quality profile visits and retention.",
+        "ru": "Контентный слой: отдельные кампании на Reels и Stories; цель — дешёвый качественный визит в профиль и удержание."
+      },
+      {
+        "uk": "Теплий шар: залучені за 7/30/90 днів, відвідувачі профілю, глядачі відео, користувачі, які надіслали повідомлення.",
+        "en": "Warm layer: engaged in the last 7/30/90 days, profile visitors, video viewers, users who sent a message.",
+        "ru": "Тёплый слой: вовлечённые за 7/30/90 дней, посетители профиля, зрители видео, пользователи, отправившие сообщение."
+      },
+      {
+        "uk": "Нижній шар: Direct, лід-магніт і консультація; оцінка не за лайками, а за ціною діалогу та клієнтським шляхом.",
+        "en": "Bottom layer: Direct, a lead magnet and a consultation; judged not by likes but by cost per conversation and the customer journey.",
+        "ru": "Нижний слой: Direct, лид-магнит и консультация; оценка не по лайкам, а по цене диалога и клиентскому пути."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/psychologist/screenshot-05.webp",
+        "alt": {
+          "uk": "Графік загального зростання Instagram-аудиторії особистого бренду психолога",
+          "en": "Chart of the psychologist’s personal brand total Instagram audience growth",
+          "ru": "График общего роста Instagram-аудитории личного бренда психолога"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Personal brand / Instagram growth",
+          "en": "Screenshot 1 — Personal brand / Instagram growth",
+          "ru": "Скриншот 1 — Personal brand / Instagram growth"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-06.webp",
+        "alt": {
+          "uk": "Другий матеріал архітектури рекламних кампаній особистого бренду психолога",
+          "en": "The psychologist’s personal brand ad campaign architecture — second material",
+          "ru": "Второй материал архитектуры рекламных кампаний личного бренда психолога"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Personal brand / Instagram growth",
+          "en": "Screenshot 2 — Personal brand / Instagram growth",
+          "ru": "Скриншот 2 — Personal brand / Instagram growth"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Замість абстрактних обіцянок використовували впізнавані психологічні ситуації: «чому я повторюю цей сценарій», «що відбувається у стосунках», «як розпізнати модель поведінки». Перші секунди Reels давали діагноз ситуації, потім — коротку користь і запрошення продовжити в профілі.",
+        "en": "Instead of abstract promises, we used recognizable psychological situations: “why do I keep repeating this pattern”, “what’s happening in my relationship”, “how to recognize a behavior pattern”. The first seconds of a Reel named the situation, then gave a short takeaway and an invitation to continue in the profile.",
+        "ru": "Вместо абстрактных обещаний использовали узнаваемые психологические ситуации: «почему я повторяю этот сценарий», «что происходит в отношениях», «как распознать модель поведения». Первые секунды Reels давали диагноз ситуации, затем — короткую пользу и приглашение продолжить в профиле."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/psychologist/screenshot-07.webp",
+        "alt": {
+          "uk": "Рекламні кампанії Reels і Stories для особистого бренду психолога",
+          "en": "Reels and Stories ad campaigns for the psychologist’s personal brand",
+          "ru": "Рекламные кампании Reels и Stories для личного бренда психолога"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Personal brand / Instagram growth",
+          "en": "Screenshot 1 — Personal brand / Instagram growth",
+          "ru": "Скриншот 1 — Personal brand / Instagram growth"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "У першому контурі видима ціна візиту в профіль трималася близько $0.12 у масштабних кампаніях. У другому Reels-зв’язки давали кліки по $0.17–$0.48, Stories — близько $0.26–$0.56. Бюджет отримували не найбільш емоційні пости, а публікації, які одночасно утримували увагу й конвертували профіль у підписку.",
+        "en": "In the first loop, the visible cost per profile visit held at about $0.12 in large-scale campaigns. In the second, Reels funnels delivered clicks at $0.17–$0.48 and Stories at about $0.26–$0.56. Budget went not to the most emotional posts but to those that both held attention and converted the profile into a follow.",
+        "ru": "В первом контуре видимая цена визита в профиль держалась около $0.12 в масштабных кампаниях. Во втором Reels-связки давали клики по $0.17–$0.48, Stories — около $0.26–$0.56. Бюджет получали не самые эмоциональные посты, а публикации, которые одновременно удерживали внимание и конвертировали профиль в подписку."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$187.50",
+            "en": "$187.50",
+            "ru": "$187.50"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$5 625",
+            "en": "$5,625",
+            "ru": "$5 625"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.12 за візит",
+            "en": "$0.12 per visit",
+            "ru": "$0.12 за визит"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "+3 420 підписників / 30 днів",
+            "en": "+3,420 followers / 30 days",
+            "ru": "+3 420 подписчиков / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Медіаплан на 180 днів за центральним темпом $187.50 на добу: $33 750. Структура: холодне зростання 55%, контентні переможці 20%, ретаргет 15%, Direct/лід-магніти 5%, тести 5%.",
+        "en": "180-day media plan at a central pace of $187.50 a day: $33,750. Structure: cold growth 55%, content winners 20%, retargeting 15%, Direct/lead magnets 5%, tests 5%.",
+        "ru": "Медиаплан на 180 дней по центральному темпу $187.50 в сутки: $33 750. Структура: холодный рост 55%, контентные победители 20%, ретаргет 15%, Direct/лид-магниты 5%, тесты 5%."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За 18 місяців особистий бренд виріс більш ніж у 56 разів. Скріншоти $36 357.32 і $44 357.26 — підтверджені зрізи двох контурів, але не весь бюджет; охоплення не можна складати як унікальне охоплення. Продажі та виручка в кейсі не представлені.",
+        "en": "In 18 months, the personal brand grew more than 56-fold. The $36,357.32 and $44,357.26 screenshots are confirmed slices of two loops, not the whole budget; reach can’t be added up as unique reach. Sales and revenue aren’t presented in this case.",
+        "ru": "За 18 месяцев личный бренд вырос более чем в 56 раз. Скриншоты $36 357.32 и $44 357.26 — подтверждённые срезы двух контуров, но не весь бюджет; охваты нельзя складывать как уникальный охват. Продажи и выручка в кейсе не представлены."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/psychologist/screenshot-01.webp",
+        "alt": {
+          "uk": "Статистика Instagram-аудиторії психолога в SocialBlade",
+          "en": "The psychologist’s Instagram audience stats in SocialBlade",
+          "ru": "Статистика Instagram-аудитории психолога в SocialBlade"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий зріз статистики Instagram-аудиторії психолога",
+          "en": "The psychologist’s Instagram audience stats — second slice",
+          "ru": "Второй срез статистики Instagram-аудитории психолога"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-03.webp",
+        "alt": {
+          "uk": "Графік щомісячного приросту підписників психолога",
+          "en": "Chart of the psychologist’s monthly follower growth",
+          "ru": "График ежемесячного прироста подписчиков психолога"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-04.webp",
+        "alt": {
+          "uk": "Графік загального зростання Instagram-аудиторії психолога",
+          "en": "Chart of the psychologist’s total Instagram audience growth",
+          "ru": "График общего роста Instagram-аудитории психолога"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-05.webp",
+        "alt": {
+          "uk": "Динаміка зростання особистого бренду психолога",
+          "en": "The psychologist’s personal brand growth over time",
+          "ru": "Динамика роста личного бренда психолога"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-06.webp",
+        "alt": {
+          "uk": "Рекламний кабінет особистого бренду психолога",
+          "en": "The psychologist’s personal brand ad account",
+          "ru": "Рекламный кабинет личного бренда психолога"
+        }
+      },
+      {
+        "image": "cases/content/psychologist/screenshot-07.webp",
+        "alt": {
+          "uk": "Рекламні кампанії Reels і Stories особистого бренду психолога",
+          "en": "Reels and Stories ad campaigns for the psychologist’s personal brand",
+          "ru": "Рекламные кампании Reels и Stories личного бренда психолога"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/psychologist-personal-brand-growth.webp",
+  "imageCard": "cases/card/psychologist-personal-brand-growth.webp"
+}

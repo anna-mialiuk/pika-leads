@@ -1,0 +1,25 @@
+{
+  "order": 61,
+  "originalId": 62,
+  "id": "service-company-website",
+  "number": "62",
+  "source": "website",
+  "niche": "services",
+  "category": {
+    "uk": "Послуги",
+    "en": "Services",
+    "ru": "Услуги"
+  },
+  "categoryColor": "#93C5FD",
+  "platform": "Website",
+  "title": {
+    "uk": "Сайт компанії послуг",
+    "en": "Service company website",
+    "ru": "Сайт компании услуг"
+  },
+  "description": {
+    "uk": "Сайт послуг з онлайн-заявкою та калькулятором.",
+    "en": "A services website with online booking and a calculator.",
+    "ru": "Сайт услуг с онлайн-заявкой и калькулятором."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "order": 4,
+  "id": 5,
+  "initials": {
+    "uk": "SS",
+    "en": "SS",
+    "ru": "SS"
+  },
+  "name": {
+    "uk": "SH SH",
+    "en": "SH SH",
+    "ru": "SH SH"
+  },
+  "category": {
+    "uk": "Налаштування реклами",
+    "en": "Ad setup",
+    "ru": "Настройка рекламы"
+  },
+  "meta": {
+    "uk": "3 відгуки",
+    "en": "3 reviews",
+    "ru": "3 отзыва"
+  },
+  "badge": {
+    "uk": "Перші клієнти за 3 дні",
+    "en": "First clients in 3 days",
+    "ru": "Первые клиенты за 3 дня"
+  },
+  "text": {
+    "uk": "«Цю агенцію порекомендував мені партнер з іншого міста, їхньою роботою він дуже задоволений. Перших клієнтів він отримав через три дні роботи. Моя компанія співпрацює з агенцією близько місяця; у нас були проблеми з налаштуванням реклами — команда розібралася і все налагодила.»",
+    "en": "“This agency was recommended to me by a partner from another city who is very happy with their work. He got his first clients after three days. My company has been working with the agency for about a month; we had problems with our ad setup — the team got to the bottom of it and fixed everything.”",
+    "ru": "«Это агентство мне порекомендовал партнёр из другого города, их работой он очень доволен. Первых клиентов он получил через три дня работы. Моя компания сотрудничает с агентством около месяца; у нас были проблемы с настройкой рекламы — команда разобралась и всё наладила.»"
+  },
+  "expandable": true
+}

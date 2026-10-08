@@ -1,0 +1,667 @@
+{
+  "order": 24,
+  "originalId": 25,
+  "id": "abhra-meditation",
+  "number": "25",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Короткий запуск після невдалих підрядників",
+    "en": "A short launch after unsuccessful contractors",
+    "ru": "Короткий запуск после неудачных подрядчиков"
+  },
+  "title": {
+    "uk": "Медитації Abhra",
+    "en": "Abhra meditations",
+    "ru": "Медитации Abhra"
+  },
+  "description": {
+    "uk": "Приватний проєкт, що прийшов за рекомендацією після роботи з LeeLoo.ai.",
+    "en": "A private project that came by referral after our work with LeeLoo.ai.",
+    "ru": "Частный проект, пришедший по рекомендации после работы с LeeLoo.ai."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього лідів",
+        "en": "Total leads",
+        "ru": "Всего лидов"
+      },
+      "value": {
+        "uk": "801",
+        "en": "801",
+        "ru": "801"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "ROI",
+        "en": "ROI",
+        "ru": "ROI"
+      },
+      "value": {
+        "uk": "541%",
+        "en": "541%",
+        "ru": "541%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Конверсія сторінки",
+        "en": "Page conversion rate",
+        "ru": "Конверсия страницы"
+      },
+      "value": {
+        "uk": "46.51–55.81%",
+        "en": "46.51–55.81%",
+        "ru": "46.51–55.81%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$3 541.31",
+        "en": "$3,541.31",
+        "ru": "$3 541.31"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$3 541.31",
+          "en": "$3,541.31",
+          "ru": "$3 541.31"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "801",
+          "en": "801",
+          "ru": "801"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$0.22 заявлено / $4.42 розрахунково",
+          "en": "$0.22 stated / $4.42 calculated",
+          "ru": "$0.22 заявлено / $4.42 расчётно"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "46.51–55.81%",
+          "en": "46.51–55.81%",
+          "ru": "46.51–55.81%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "1 341%",
+          "en": "1,341%",
+          "ru": "1 341%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "541%",
+          "en": "541%",
+          "ru": "541%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Ціль: 150 лідів на день протягом тижня",
+          "en": "Goal: 150 leads a day for a week",
+          "ru": "Цель: 150 лидов в день в течение недели"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "9 матеріалів кампаній",
+        "en": "9 campaign materials",
+        "ru": "9 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$3 541.31",
+            "en": "$3,541.31",
+            "ru": "$3 541.31"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "801 лідів",
+            "en": "801 leads",
+            "ru": "801 лид"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Попередні спеціалісти не змогли стабілізувати рекламу. Не було релевантної системи креативів і оферів, окремого лендингу не існувало, тому потрібно було переробити поточну механіку LGT. Джерело також стверджує, що CPL $2–3 вважався занадто високим.",
+      "en": "Previous specialists hadn’t managed to stabilize the ads. There was no relevant system of creatives and offers and no separate landing page, so the existing LGT mechanics had to be reworked. The source also states that a $2–3 CPL was considered too high.",
+      "ru": "Предыдущие специалисты не смогли стабилизировать рекламу. Не было релевантной системы креативов и офферов, отдельного лендинга не существовало, поэтому нужно было переделать текущую механику LGT. Источник также утверждает, что CPL $2–3 считался слишком высоким."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/abhra/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільових аудиторій проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” target audience segmentation",
+          "ru": "Сегментация целевых аудиторий проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 1 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 1 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий матеріал дослідження аудиторії проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” audience research — second material",
+          "ru": "Второй материал исследования аудитории проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 2 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 2 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Зібрали окрему карту мотивів: зниження напруження, регулярна практика, сон та емоційна стійкість. Перепакували перший екран і реєстрацію всередині наявної технічної оболонки. Запустили обмежений набір гіпотез, оскільки вікно становило один тиждень. Щодня звіряли фактичні витрати, кількість унікальних лідів і коректність подій. Перед будь-яким повторним масштабуванням зафіксували необхідність узгодити агрегати джерела.",
+      "en": "We built a separate motive map: reducing tension, regular practice, sleep and emotional resilience. We repackaged the first screen and registration within the existing technical shell. We launched a limited set of hypotheses, since the window was one week. Every day we reconciled actual spend, the number of unique leads and the correctness of events. Before any further scaling, we noted the need to reconcile the source totals.",
+      "ru": "Собрали отдельную карту мотивов: снижение напряжения, регулярная практика, сон и эмоциональная устойчивость. Переупаковали первый экран и регистрацию внутри существующей технической оболочки. Запустили ограниченный набор гипотез, поскольку окно составляло одну неделю. Ежедневно сверяли фактические расходы, количество уникальных лидов и корректность событий. Перед любым повторным масштабированием зафиксировали необходимость согласовать агрегаты источника."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/abhra/screenshot-03.webp",
+        "alt": {
+          "uk": "Рекламний матеріал проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” ad material",
+          "ru": "Рекламный материал проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 1 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 1 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-04.webp",
+        "alt": {
+          "uk": "Другий рекламний матеріал проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” — second ad material",
+          "ru": "Второй рекламный материал проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 2 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 2 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Одна основна conversion-кампанія для концентрації даних у короткому вікні.",
+        "en": "One main conversion campaign to concentrate data within a short window.",
+        "ru": "Одна основная conversion-кампания для концентрации данных в коротком окне."
+      },
+      {
+        "uk": "Кілька креативних кутів замість надмірного дроблення аудиторій.",
+        "en": "Several creative angles instead of over-fragmenting audiences.",
+        "ru": "Несколько креативных углов вместо избыточного дробления аудиторий."
+      },
+      {
+        "uk": "Ретаргетинг залучених користувачів і відвідувачів із м’яким нагадуванням про практику.",
+        "en": "Retargeting engaged users and visitors with a gentle reminder about the practice.",
+        "ru": "Ретаргетинг вовлечённых пользователей и посетителей с мягким напоминанием о практике."
+      },
+      {
+        "uk": "Контрольна таблиця: spend → унікальні ліди → реєстрації в системі → оплати.",
+        "en": "Control sheet: spend → unique leads → registrations in the system → payments.",
+        "ru": "Контрольная таблица: spend → уникальные лиды → регистрации в системе → оплаты."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/abhra/screenshot-05.webp",
+        "alt": {
+          "uk": "Посадкова сторінка та перевірка подій проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” landing page and event verification",
+          "ru": "Посадочная страница и проверка событий проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 1 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 1 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-06.webp",
+        "alt": {
+          "uk": "Другий матеріал рекламної архітектури проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” ad architecture — second material",
+          "ru": "Второй материал рекламной архитектуры проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 2 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 2 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Візуали уникали обіцянок миттєвого результату. Вони показували стан, ритуал і конкретний формат практики. Для холодної аудиторії важливим був низький поріг входу; для ретаргетингу — довіра до автора та зрозумілий режим участі.",
+        "en": "The visuals avoided promises of instant results. They showed a state of mind, a ritual and a specific practice format. For cold audiences, a low barrier to entry mattered; for retargeting, trust in the author and a clear way to participate.",
+        "ru": "Визуалы избегали обещаний мгновенного результата. Они показывали состояние, ритуал и конкретный формат практики. Для холодной аудитории был важен низкий порог входа; для ретаргетинга — доверие к автору и понятный режим участия."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/abhra/screenshot-07.webp",
+        "alt": {
+          "uk": "Робочий процес створення рекламних матеріалів проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” ad material production workflow",
+          "ru": "Рабочий процесс создания рекламных материалов проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 1 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 1 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-08.webp",
+        "alt": {
+          "uk": "Другий матеріал креативної стратегії проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” creative strategy — second material",
+          "ru": "Второй материал креативной стратегии проекта «Медитации Abhra»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 2 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 2 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Через невідповідність цифр головним кроком має бути верифікація. У робочому запуску рішення приймали б за ефективним CPL, розрахованим із бюджету та унікальних лідів, доки джерело не підтвердить інше визначення результату.",
+        "en": "Because the figures don’t match, the main step has to be verification. In a live launch, decisions would be made on the effective CPL calculated from the budget and unique leads until the source confirms a different definition of the result.",
+        "ru": "Из-за несоответствия цифр главным шагом должна быть верификация. В рабочем запуске решения принимались бы по эффективному CPL, рассчитанному из бюджета и уникальных лидов, пока источник не подтвердит другое определение результата."
+      }
+    },
+    "optimizationScreenshots": [
+      {
+        "image": "cases/content/abhra/screenshot-09.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній проєкту «Медитації Abhra» у рекламному кабінеті",
+          "en": "“Abhra Meditations” ad campaign results in the ad account",
+          "ru": "Результаты рекламных кампаний проекта «Медитации Abhra» в рекламном кабинете"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — КОРОТКИЙ ЗАПУСК ПІСЛЯ НЕВДАЛИХ ПІДРЯДНИКІВ",
+          "en": "Screenshot 1 — A SHORT LAUNCH AFTER UNSUCCESSFUL CONTRACTORS",
+          "ru": "Скриншот 1 — КОРОТКИЙ ЗАПУСК ПОСЛЕ НЕУДАЧНЫХ ПОДРЯДЧИКОВ"
+        }
+      }
+    ],
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "150 лідів/день",
+            "en": "150 leads/day",
+            "ru": "150 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$4 641 → 1 050",
+            "en": "$4,641 → 1,050",
+            "ru": "$4 641 → 1 050"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$4.42",
+            "en": "$4.42",
+            "ru": "$4.42"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "7 днів",
+            "en": "7 days",
+            "ru": "7 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. $3 541.31 / 801 = приблизно $4.42 за лід. Значення $0.22 із підсумкового слайда не узгоджується з бюджетом і кількістю лідів; можливі різні періоди або визначення результату.",
+        "en": "Data check. $3,541.31 / 801 = about $4.42 per lead. The $0.22 figure from the summary slide doesn’t match the budget and lead count; the periods or definitions of the result may differ.",
+        "ru": "Проверка данных. $3 541.31 / 801 = примерно $4.42 за лид. Значение $0.22 с итогового слайда не согласуется с бюджетом и количеством лидов; возможны разные периоды или определения результата."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Проєкт демонструє сильну продуктову упаковку та високу конверсію сторінки, але водночас підкреслює важливість арифметичної перевірки. Для комерційного портфоліо чесне розкриття розходження підвищує довіру сильніше, ніж спроба повторити неузгоджений CPL.",
+        "en": "The project shows strong product packaging and high page conversion, but it also highlights the importance of checking the arithmetic. For a commercial portfolio, honestly disclosing a discrepancy builds more trust than repeating an inconsistent CPL.",
+        "ru": "Проект демонстрирует сильную продуктовую упаковку и высокую конверсию страницы, но вместе с тем подчёркивает важность арифметической проверки. Для коммерческого портфолио честное раскрытие расхождения повышает доверие сильнее, чем попытка повторить несогласованный CPL."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/abhra/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільових аудиторій проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” target audience segmentation",
+          "ru": "Сегментация целевых аудиторий проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий матеріал дослідження аудиторії проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” audience research — second material",
+          "ru": "Второй материал исследования аудитории проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-03.webp",
+        "alt": {
+          "uk": "Рекламний матеріал проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” ad material",
+          "ru": "Рекламный материал проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-04.webp",
+        "alt": {
+          "uk": "Другий рекламний матеріал проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” — second ad material",
+          "ru": "Второй рекламный материал проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-05.webp",
+        "alt": {
+          "uk": "Посадкова сторінка та перевірка подій проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” landing page and event verification",
+          "ru": "Посадочная страница и проверка событий проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-06.webp",
+        "alt": {
+          "uk": "Робоча комунікація проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” team communication",
+          "ru": "Рабочая коммуникация проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-07.webp",
+        "alt": {
+          "uk": "Робочий процес створення рекламних матеріалів проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” ad material production workflow",
+          "ru": "Рабочий процесс создания рекламных материалов проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-08.webp",
+        "alt": {
+          "uk": "Схема рекламної воронки проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” ad funnel diagram",
+          "ru": "Схема рекламной воронки проекта «Медитации Abhra»"
+        }
+      },
+      {
+        "image": "cases/content/abhra/screenshot-09.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній проєкту «Медитації Abhra»",
+          "en": "“Abhra Meditations” ad campaign results",
+          "ru": "Результаты рекламных кампаний проекта «Медитации Abhra»"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/abhra-meditation.webp",
+  "imageCard": "cases/card/abhra-meditation.webp"
+}

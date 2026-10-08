@@ -1,0 +1,575 @@
+{
+  "order": 34,
+  "originalId": 35,
+  "id": "us-shopify-ecommerce",
+  "number": "35",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "USA / Shopify / Purchase & DPA",
+    "en": "USA / Shopify / Purchase & DPA",
+    "ru": "USA / Shopify / Purchase & DPA"
+  },
+  "title": {
+    "uk": "Американський e-commerce у Q4: масштабування Shopify",
+    "en": "US e-commerce in Q4: scaling Shopify",
+    "ru": "Американский e-commerce в Q4: масштабирование Shopify"
+  },
+  "description": {
+    "uk": "ROAS зріс з 1.45 до 2.67 на бюджеті $1.89 млн — стабільно 400+ покупок на добу в найдорожчий сезон.",
+    "en": "ROAS grew from 1.45 to 2.67 on a $1.89M budget — a steady 400+ purchases a day in the most expensive season.",
+    "ru": "ROAS вырос с 1.45 до 2.67 на бюджете $1.89 млн — стабильно 400+ покупок в сутки в самый дорогой сезон."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "400+ покупок/день",
+        "en": "400+ purchases/day",
+        "ru": "400+ покупок/день"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "ROAS 1.45 → 2.67",
+        "en": "ROAS 1.45 → 2.67",
+        "ru": "ROAS 1.45 → 2.67"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "CPA $35–$45",
+        "en": "CPA $35–$45",
+        "ru": "CPA $35–$45"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$1 890 561.78",
+        "en": "$1,890,561.78",
+        "ru": "$1 890 561.78"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет кейсу",
+          "en": "Case budget",
+          "ru": "Бюджет кейса"
+        },
+        "value": {
+          "uk": "$1 890 561.78",
+          "en": "$1,890,561.78",
+          "ru": "$1 890 561.78"
+        },
+        "note": {
+          "uk": "дані власника",
+          "en": "owner’s data",
+          "ru": "данные владельца"
+        }
+      },
+      {
+        "label": {
+          "uk": "Бюджет до нашої роботи",
+          "en": "Budget before we started",
+          "ru": "Бюджет до нашей работы"
+        },
+        "value": {
+          "uk": "≈ $2.2 млн",
+          "en": "≈ $2.2M",
+          "ru": "≈ $2.2 млн"
+        },
+        "note": {
+          "uk": "історія кабінету",
+          "en": "account history",
+          "ru": "история кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROAS на старті",
+          "en": "ROAS at the start",
+          "ru": "ROAS на старте"
+        },
+        "value": {
+          "uk": "1.45",
+          "en": "1.45",
+          "ru": "1.45"
+        },
+        "note": {
+          "uk": "дані власника",
+          "en": "owner’s data",
+          "ru": "данные владельца"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROAS після перебудови",
+          "en": "ROAS after the rebuild",
+          "ru": "ROAS после перестройки"
+        },
+        "value": {
+          "uk": "2.67",
+          "en": "2.67",
+          "ru": "2.67"
+        },
+        "note": {
+          "uk": "дані власника",
+          "en": "owner’s data",
+          "ru": "данные владельца"
+        }
+      },
+      {
+        "label": {
+          "uk": "Зростання ROAS",
+          "en": "ROAS growth",
+          "ru": "Рост ROAS"
+        },
+        "value": {
+          "uk": "+84.1%",
+          "en": "+84.1%",
+          "ru": "+84.1%"
+        },
+        "note": {
+          "uk": "розрахунок",
+          "en": "calculated",
+          "ru": "расчёт"
+        }
+      },
+      {
+        "label": {
+          "uk": "Вартість покупки",
+          "en": "Cost per purchase",
+          "ru": "Стоимость покупки"
+        },
+        "value": {
+          "uk": "$35–$45",
+          "en": "$35–$45",
+          "ru": "$35–$45"
+        },
+        "note": {
+          "uk": "дані власника",
+          "en": "owner’s data",
+          "ru": "данные владельца"
+        }
+      },
+      {
+        "label": {
+          "uk": "CTR / CPM",
+          "en": "CTR / CPM",
+          "ru": "CTR / CPM"
+        },
+        "value": {
+          "uk": "3.45% / $21.45",
+          "en": "3.45% / $21.45",
+          "ru": "3.45% / $21.45"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Асортимент",
+          "en": "Product range",
+          "ru": "Ассортимент"
+        },
+        "value": {
+          "uk": "з 5 до 30 позицій",
+          "en": "from 5 to 30 items",
+          "ru": "с 5 до 30 позиций"
+        },
+        "note": {
+          "uk": "робота з каталогом",
+          "en": "catalog work",
+          "ru": "работа с каталогом"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "lifetime 2 624",
+        "en": "lifetime 2,624",
+        "ru": "lifetime 2 624"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$1 890 561.78",
+            "en": "$1,890,561.78",
+            "ru": "$1 890 561.78"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "≈ 42 012–54 016 покупок",
+            "en": "≈ 42,012–54,016 purchases",
+            "ru": "≈ 42 012–54 016 покупок"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: бюджет 4 місяців",
+        "en": "Account total for the whole period · basis: 4-month budget",
+        "ru": "Итог кабинета за весь срок · основа: бюджет 4 месяцев"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Покупці в США, яким важливі зрозумілий продукт, швидка доставка, чесна знижка та соціальний доказ. Проєкт увійшов у роботу в один із найдорожчих періодів для Meta Ads — у Q4. У кабінеті вже було витрачено близько $2.2 млн, але Pixel і Google Analytics передавали події нестабільно, пропозиція та логіка знижок були відсутні, Shopify втрачав користувачів на швидкості й checkout, а каталог і Merchant Center містили помилки.",
+      "en": "US shoppers who value a clear product, fast shipping, an honest discount and social proof. The project came in during one of the most expensive periods for Meta Ads — Q4. The account had already spent about $2.2M, but the Pixel and Google Analytics were passing events unreliably, there was no offer or discount logic, Shopify was losing users on speed and checkout, and the catalog and Merchant Center had errors.",
+      "ru": "Покупатели в США, для которых важны понятный продукт, быстрая доставка, честная скидка и социальное доказательство. Проект зашёл в работу в один из самых дорогих периодов для Meta Ads — в Q4. В кабинете уже было потрачено около $2.2 млн, но Pixel и Google Analytics передавали события нестабильно, предложение и логика скидок отсутствовали, Shopify терял пользователей на скорости и checkout, а каталог и Merchant Center содержали ошибки."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/us-shopify-ecommerce/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламні кампанії американського Shopify-магазину в Meta Ads Manager",
+          "en": "US Shopify store ad campaigns in Meta Ads Manager",
+          "ru": "Рекламные кампании американского Shopify-магазина в Meta Ads Manager"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — USA / Shopify / Purchase & DPA",
+          "en": "Screenshot 1 — USA / Shopify / Purchase & DPA",
+          "ru": "Скриншот 1 — USA / Shopify / Purchase & DPA"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "У перші сім днів звірили Pixel, Google Analytics і Shopify, додали Hotjar та відновили спостережуваність шляху користувача до покупки. Розібрали історію кабінету з витратами близько $2.2 млн: кампанії, аудиторії, частоту, товарні групи, атрибуцію та провали між кліком, кошиком і checkout. Переписали пропозицію: базова вигода, сезонні знижки й окремі офери для нових клієнтів. Підготували детальне ТЗ на перезйомку, виправили фіди, product sets, каталог Meta та Merchant Center. Після цього перебудували неймінг і архітектуру кампаній.",
+      "en": "In the first seven days, we reconciled the Pixel, Google Analytics and Shopify, added Hotjar and restored visibility into the user’s path to purchase. We reviewed the account history of about $2.2M in spend: campaigns, audiences, frequency, product groups, attribution and drop-offs between click, cart and checkout. We rewrote the offer: a core benefit, seasonal discounts and separate offers for new customers. We prepared a detailed brief for a reshoot and fixed the feeds, product sets, the Meta catalog and Merchant Center. After that, we rebuilt the naming and campaign architecture.",
+      "ru": "В первые семь дней сверили Pixel, Google Analytics и Shopify, добавили Hotjar и восстановили наблюдаемость пути пользователя к покупке. Разобрали историю кабинета с расходами около $2.2 млн: кампании, аудитории, частоту, товарные группы, атрибуцию и провалы между кликом, корзиной и checkout. Переписали предложение: базовая выгода, сезонные скидки и отдельные офферы для новых клиентов. Подготовили детальное ТЗ на пересъёмку, исправили фиды, product sets, каталог Meta и Merchant Center. После этого перестроили нейминг и архитектуру кампаний."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/us-shopify-ecommerce/screenshot-02.webp",
+        "alt": {
+          "uk": "Історія запуску рекламних кампаній Shopify-магазину в США",
+          "en": "US Shopify store ad campaign launch history",
+          "ru": "История запуска рекламных кампаний Shopify-магазина в США"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — USA / Shopify / Purchase & DPA",
+          "en": "Screenshot 2 — USA / Shopify / Purchase & DPA",
+          "ru": "Скриншот 2 — USA / Shopify / Purchase & DPA"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Cold acquisition: broad/Advantage і великі look-alike замість вузьких 1–3%, які при бюджеті від $3 000 на добу вигорали надто швидко.",
+        "en": "Cold acquisition: broad/Advantage and large lookalikes instead of narrow 1–3% ones, which burned out too fast at budgets of $3,000+ a day.",
+        "ru": "Cold acquisition: broad/Advantage и крупные look-alike вместо узких 1–3%, которые при бюджете от $3 000 в сутки выгорали слишком быстро."
+      },
+      {
+        "uk": "DPA prospecting: підключали лише після накопичення приблизно 400 покупок, коли алгоритм отримував достатній сигнал.",
+        "en": "DPA prospecting: switched on only after about 400 purchases had accumulated, once the algorithm had enough signal.",
+        "ru": "DPA prospecting: подключали только после накопления примерно 400 покупок, когда алгоритм получал достаточный сигнал."
+      },
+      {
+        "uk": "DPA retargeting: після формування обсягу понад 5 000 кошиків за 14 днів; вікна ділили за ViewContent, AddToCart, минулими покупцями та неактивними клієнтами.",
+        "en": "DPA retargeting: once volume exceeded 5,000 carts in 14 days; windows were split by ViewContent, AddToCart, past buyers and inactive customers.",
+        "ru": "DPA retargeting: после формирования объёма более 5 000 корзин за 14 дней; окна делили по ViewContent, AddToCart, прошлым покупателям и неактивным клиентам."
+      },
+      {
+        "uk": "Offline events + Conversions API: повертали в Meta фактичні покупки, знижували втрати після iOS і розширювали базу для якісних look-alike.",
+        "en": "Offline events + Conversions API: sent actual purchases back to Meta, reduced post-iOS data loss and expanded the base for quality lookalikes.",
+        "ru": "Offline events + Conversions API: возвращали в Meta фактические покупки, снижали потери после iOS и расширяли базу для качественных look-alike."
+      },
+      {
+        "uk": "Каталоги: окремі product sets під категорії, розпродажі та мікси для керованого cross-sell і up-sell.",
+        "en": "Catalogs: separate product sets for categories, sales and mixes for controlled cross-sell and up-sell.",
+        "ru": "Каталоги: отдельные product sets под категории, распродажи и миксы для управляемого cross-sell и up-sell."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/us-shopify-ecommerce/screenshot-03.webp",
+        "alt": {
+          "uk": "Архітектура рекламних кампаній Shopify e-commerce у США",
+          "en": "US Shopify e-commerce ad campaign architecture",
+          "ru": "Архитектура рекламных кампаний Shopify e-commerce в США"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — USA / Shopify / Purchase & DPA",
+          "en": "Screenshot 3 — USA / Shopify / Purchase & DPA",
+          "ru": "Скриншот 3 — USA / Shopify / Purchase & DPA"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "В американському e-commerce найкраще працювали максимально прямі оголошення: якісне фото товару, короткий текст, видима знижка та проста стрілка до продукту. Складний дизайн і спроби «намалювати щось креативне» програвали зрозумілому повідомленню «цей товар зараз зі знижкою». Креативна система будувалася серіями: товар × офер × формат × доказ.",
+        "en": "In US e-commerce, the most direct ads worked best: a high-quality product photo, short copy, a visible discount and a simple arrow to the product. Complex design and attempts to “draw something creative” lost to the clear message “this product is on sale now”. The creative system was built in series: product × offer × format × proof.",
+        "ru": "В американском e-commerce лучше всего работали максимально прямые объявления: качественное фото товара, короткий текст, видимая скидка и простая стрелка к продукту. Сложный дизайн и попытки «нарисовать что-то креативное» проигрывали понятному сообщению «этот товар сейчас со скидкой». Креативная система строилась сериями: товар × оффер × формат × доказательство."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "ROAS виріс на 1.22 пункту — з 1.45 до 2.67, або на 84.1% відносно стартової ефективності. При бюджеті $1.89 млн і ROAS 2.67 модель атрибутованої виручки становить близько $5.05 млн. Діапазон CPA $35–$45 відповідає приблизно 42–54 тис. покупок за період. Бюджет збільшувався за підтвердженим ROAS і CPA покупки, а не за дешевим кліком.",
+        "en": "ROAS rose by 1.22 points — from 1.45 to 2.67, or 84.1% over the starting efficiency. On a $1.89M budget at a 2.67 ROAS, the attributed revenue model comes to about $5.05M. The $35–$45 CPA range corresponds to roughly 42–54k purchases over the period. The budget was increased based on confirmed ROAS and cost per purchase, not cheap clicks.",
+        "ru": "ROAS вырос на 1.22 пункта — с 1.45 до 2.67, или на 84.1% относительно стартовой эффективности. При бюджете $1.89 млн и ROAS 2.67 модель атрибутированной выручки составляет около $5.05 млн. Диапазон CPA $35–$45 соответствует примерно 42–54 тыс. покупок за период. Бюджет увеличивался по подтверждённому ROAS и CPA покупки, а не по дешёвому клику."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$15 754.68",
+            "en": "$15,754.68",
+            "ru": "$15 754.68"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$472 640.45",
+            "en": "$472,640.45",
+            "ru": "$472 640.45"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPA $35–$45",
+            "en": "CPA $35–$45",
+            "ru": "CPA $35–$45"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 10 503–13 504 покупки / 30 днів",
+            "en": "≈ 10,503–13,504 purchases / 30 days",
+            "ru": "≈ 10 503–13 504 покупки / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Реконструкція медіамікса: cold broad/Advantage і великі LLA — 55% ($1 039 809), DPA prospecting — 15% ($283 584), DPA retargeting — 18% ($340 301), creative tests — 8% ($151 245), retention/cross-sell — 4% ($75 622).",
+        "en": "Media mix reconstruction: cold broad/Advantage and large LLAs — 55% ($1,039,809), DPA prospecting — 15% ($283,584), DPA retargeting — 18% ($340,301), creative tests — 8% ($151,245), retention/cross-sell — 4% ($75,622).",
+        "ru": "Реконструкция медиамикса: cold broad/Advantage и крупные LLA — 55% ($1 039 809), DPA prospecting — 15% ($283 584), DPA retargeting — 18% ($340 301), creative tests — 8% ($151 245), retention/cross-sell — 4% ($75 622)."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За чотири місяці на американському ринку інвестовано $1.89 млн; ROAS виріс з 1.45 до 2.67, CPA утримувався в $35–$45, а стабільний обсяг перевищив 400 покупок на добу. Скріншот Ads Manager із $4 129 459.55 — lifetime-зріз усього кабінету, а не бюджет чотирьох місяців. Shopify $1 538 105.05 стосується лише 42 днів 01.11–12.12.2020. Значення ROAS 154.08 в окремому рядку — одиничний локальний результат, його не можна використовувати як середнє акаунта.",
+        "en": "Over four months in the US market, $1.89M was invested; ROAS rose from 1.45 to 2.67, CPA held at $35–$45, and steady volume exceeded 400 purchases a day. The Ads Manager screenshot showing $4,129,459.55 is a lifetime slice of the whole account, not the four-month budget. The Shopify figure of $1,538,105.05 covers only the 42 days from 01.11 to 12.12.2020. The ROAS of 154.08 in a separate row is a one-off local result and can’t be used as the account average.",
+        "ru": "За четыре месяца на американском рынке инвестировано $1.89 млн; ROAS вырос с 1.45 до 2.67, CPA удерживался в $35–$45, а стабильный объём превысил 400 покупок в сутки. Скриншот Ads Manager с $4 129 459.55 — lifetime-срез всего кабинета, а не бюджет четырёх месяцев. Shopify $1 538 105.05 относится лишь к 42 дням 01.11–12.12.2020. Значение ROAS 154.08 в отдельной строке — единичный локальный результат, его нельзя использовать как среднее по аккаунту."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/us-shopify-ecommerce/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет Shopify e-commerce у США — скріншот 1",
+          "en": "US Shopify e-commerce ad account — screenshot 1",
+          "ru": "Рекламный кабинет Shopify e-commerce в США — скриншот 1"
+        },
+        "caption": {
+          "uk": "1 / 3",
+          "en": "1 / 3",
+          "ru": "1 / 3"
+        }
+      },
+      {
+        "image": "cases/content/us-shopify-ecommerce/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний кабінет Shopify e-commerce у США — скріншот 2",
+          "en": "US Shopify e-commerce ad account — screenshot 2",
+          "ru": "Рекламный кабинет Shopify e-commerce в США — скриншот 2"
+        },
+        "caption": {
+          "uk": "2 / 3",
+          "en": "2 / 3",
+          "ru": "2 / 3"
+        }
+      },
+      {
+        "image": "cases/content/us-shopify-ecommerce/screenshot-03.webp",
+        "alt": {
+          "uk": "Shopify та результати продажів американського e-commerce — скріншот 3",
+          "en": "Shopify and US e-commerce sales results — screenshot 3",
+          "ru": "Shopify и результаты продаж американского e-commerce — скриншот 3"
+        },
+        "caption": {
+          "uk": "3 / 3",
+          "en": "3 / 3",
+          "ru": "3 / 3"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/us-shopify-ecommerce.webp",
+  "imageCard": "cases/card/us-shopify-ecommerce.webp"
+}

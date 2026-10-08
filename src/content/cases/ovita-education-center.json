@@ -1,0 +1,601 @@
+{
+  "order": 18,
+  "originalId": 19,
+  "id": "ovita-education-center",
+  "number": "19",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Портфель із 8 освітніх продуктів",
+    "en": "A portfolio of 8 education products",
+    "ru": "Портфель из 8 образовательных продуктов"
+  },
+  "title": {
+    "uk": "Навчальний центр Ovita",
+    "en": "Ovita training center",
+    "ru": "Учебный центр Ovita"
+  },
+  "description": {
+    "uk": "Основний підрядник з платного трафіку та збірки інфраструктури запусків.",
+    "en": "Main contractor for paid traffic and for building the launch infrastructure.",
+    "ru": "Основной подрядчик по платному трафику и сборке инфраструктуры запусков."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "30 124",
+        "en": "30,124",
+        "ru": "30 124"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "198–234%",
+        "en": "198–234%",
+        "ru": "198–234%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "35.87–38.15%",
+        "en": "35.87–38.15%",
+        "ru": "35.87–38.15%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$50 254",
+        "en": "$50,254",
+        "ru": "$50 254"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$50 254",
+          "en": "$50,254",
+          "ru": "$50 254"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "30 124",
+          "en": "30,124",
+          "ru": "30 124"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$1.66",
+          "en": "$1.66",
+          "ru": "$1.66"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "35.87–38.15%",
+          "en": "35.87–38.15%",
+          "ru": "35.87–38.15%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "405–584%",
+          "en": "405–584%",
+          "ru": "405–584%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "198–234%",
+          "en": "198–234%",
+          "ru": "198–234%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Доходимість першого дня: 25.21–38%",
+          "en": "First-day attendance: 25.21–38%",
+          "ru": "Доходимость первого дня: 25.21–38%"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "6 матеріалів кампаній",
+        "en": "6 campaign materials",
+        "ru": "6 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$50 254",
+            "en": "$50,254",
+            "ru": "$50 254"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "30 124 лідів",
+            "en": "30,124 leads",
+            "ru": "30 124 лида"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "У проєкті одночасно просувалися вісім продуктів і крос-заходи. Посадкові сторінки та логіка воронок потребували переробки, зовнішній трафік надходив від кількох виконавців без єдиного контролю, а потік до 200 лідів на день на чотирьох продуктах не забезпечував потрібної швидкості окупності.",
+      "en": "The project was promoting eight products and cross-events at the same time. The landing pages and funnel logic needed rework, outside traffic came from several contractors with no unified control, and a flow of up to 200 leads a day across four products wasn’t delivering the payback speed needed.",
+      "ru": "В проекте одновременно продвигались восемь продуктов и кросс-мероприятия. Посадочные страницы и логика воронок требовали переработки, внешний трафик поступал от нескольких исполнителей без единого контроля, а поток до 200 лидов в день на четырёх продуктах не обеспечивал нужной скорости окупаемости."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/ovita/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільових аудиторій навчального центру Ovita",
+          "en": "Ovita training center target audience segmentation",
+          "ru": "Сегментация целевых аудиторий учебного центра Ovita"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — ПОРТФЕЛЬ ІЗ 8 ОСВІТНІХ ПРОДУКТІВ",
+          "en": "Screenshot 1 — A PORTFOLIO OF 8 EDUCATION PRODUCTS",
+          "ru": "Скриншот 1 — ПОРТФЕЛЬ ИЗ 8 ОБРАЗОВАТЕЛЬНЫХ ПРОДУКТОВ"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий матеріал навчального центру Ovita",
+          "en": "Ovita training center — second material",
+          "ru": "Второй материал учебного центра Ovita"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Матеріали та структура рекламної воронки",
+          "en": "Screenshot 2 — Ad funnel materials and structure",
+          "ru": "Скриншот 2 — Материалы и структура рекламной воронки"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Розклали портфель на продуктові гілки та зафіксували єдині визначення ліда, реєстрації, учасника й оплати. Переформатували посадкові сторінки та переписали офери під конкретну аудиторію кожного продукту. Зібрали шаблон аудиторного брифу й вимоги до відео, щоб креативи створювалися не за смаком команди, а під гіпотезу. Розвели робочі чати, кампанії та звітність за продуктами, зберігши спільний управлінський контур. Масштабували зв’язки лише після звірки реєстрацій, доходимості першого дня та оплат.",
+      "en": "We broke the portfolio into product branches and set single definitions for a lead, a registration, a participant and a payment. We reworked the landing pages and rewrote the offers for each product’s specific audience. We put together an audience brief template and video requirements so creatives were made for a hypothesis, not the team’s taste. We separated work chats, campaigns and reporting by product while keeping a shared management loop. Funnels were scaled only after reconciling registrations, first-day attendance and payments.",
+      "ru": "Разложили портфель на продуктовые ветки и зафиксировали единые определения лида, регистрации, участника и оплаты. Переформатировали посадочные страницы и переписали офферы под конкретную аудиторию каждого продукта. Собрали шаблон аудиторного брифа и требования к видео, чтобы креативы создавались не по вкусу команды, а под гипотезу. Развели рабочие чаты, кампании и отчётность по продуктам, сохранив общий управленческий контур. Масштабировали связки только после сверки регистраций, доходимости первого дня и оплат."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/ovita/screenshot-03.webp",
+        "alt": {
+          "uk": "Робоча комунікація команди навчального центру Ovita",
+          "en": "Ovita training center team communication",
+          "ru": "Рабочая коммуникация команды учебного центра Ovita"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Робоча комунікація та координація запусків",
+          "en": "Screenshot 1 — Team communication and launch coordination",
+          "ru": "Скриншот 1 — Рабочая коммуникация и координация запусков"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-04.webp",
+        "alt": {
+          "uk": "Матеріали робочого процесу навчального центру Ovita",
+          "en": "Ovita training center workflow materials",
+          "ru": "Материалы рабочего процесса учебного центра Ovita"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Організація роботи та контроль запусків",
+          "en": "Screenshot 2 — Organizing work and controlling launches",
+          "ru": "Скриншот 2 — Организация работы и контроль запусков"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "TOF: окремі acquisition-кампанії на кожен продукт і широкі аудиторії для пошуку нових сегментів.",
+        "en": "TOF: separate acquisition campaigns for each product and broad audiences to find new segments.",
+        "ru": "TOF: отдельные acquisition-кампании на каждый продукт и широкие аудитории для поиска новых сегментов."
+      },
+      {
+        "uk": "MOF: ретаргетинг відвідувачів, тих, хто переглянув відео та почав реєстрацію, з посиленням програми й експерта.",
+        "en": "MOF: retargeting visitors, video viewers and people who started registering, with more emphasis on the program and the expert.",
+        "ru": "MOF: ретаргетинг посетителей, тех, кто посмотрел видео и начал регистрацию, с усилением программы и эксперта."
+      },
+      {
+        "uk": "BOF: нагадування, дедлайн і відповіді на заперечення перед заходом; після події — продаж і крос-офер.",
+        "en": "BOF: reminders, the deadline and answers to objections before the event; after the event — the sale and a cross-offer.",
+        "ru": "BOF: напоминания, дедлайн и ответы на возражения перед мероприятием; после события — продажа и кросс-оффер."
+      },
+      {
+        "uk": "Операційний шар: єдині UTM, таблиця статусів, щоденна звірка рекламного кабінету, CRM і фактичних оплат.",
+        "en": "Operational layer: unified UTMs, a status sheet, daily reconciliation of the ad account, CRM and actual payments.",
+        "ru": "Операционный слой: единые UTM, таблица статусов, ежедневная сверка рекламного кабинета, CRM и фактических оплат."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/ovita/screenshot-05.webp",
+        "alt": {
+          "uk": "Схема стратегії трафіку навчального центру Ovita",
+          "en": "Ovita training center traffic strategy diagram",
+          "ru": "Схема стратегии трафика учебного центра Ovita"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Архітектура рекламної воронки та стратегія трафіку",
+          "en": "Screenshot 1 — Ad funnel architecture and traffic strategy",
+          "ru": "Скриншот 1 — Архитектура рекламной воронки и стратегия трафика"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-06.webp",
+        "alt": {
+          "uk": "Продовження схеми рекламної воронки навчального центру Ovita",
+          "en": "Ovita training center ad funnel diagram, continued",
+          "ru": "Продолжение схемы рекламной воронки учебного центра Ovita"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Продовження архітектури рекламної воронки",
+          "en": "Screenshot 2 — Ad funnel architecture, continued",
+          "ru": "Скриншот 2 — Продолжение архитектуры рекламной воронки"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креативна фабрика працювала від карти мотивів: проблема аудиторії, обіцянка конкретної навички, доказ компетентності експерта та простий наступний крок. Відеобриф фіксував перші три секунди, головну тезу, демонстрацію результату та CTA. Це дозволило масштабувати не один банер, а повторювану систему варіацій.",
+        "en": "The creative factory worked from a motive map: the audience’s problem, the promise of a specific skill, proof of the expert’s competence and a simple next step. The video brief fixed the first three seconds, the key message, the demonstration of results and the CTA. This made it possible to scale not one banner but a repeatable system of variations.",
+        "ru": "Креативная фабрика работала от карты мотивов: проблема аудитории, обещание конкретного навыка, доказательство компетентности эксперта и простой следующий шаг. Видеобриф фиксировал первые три секунды, главный тезис, демонстрацию результата и CTA. Это позволило масштабировать не один баннер, а повторяемую систему вариаций."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Бюджет перерозподіляли між продуктами за повним шляхом ліда. Дешева реєстрація не вважалася перемогою, якщо падала доходимість або продажі. Для продуктів із більшим обсягом вводили окремий контур оновлення креативів та обмежували частку бюджету на ще не підтверджену гіпотезу.",
+        "en": "Budget was reallocated between products based on the full lead journey. A cheap registration didn’t count as a win if attendance or sales dropped. For higher-volume products, we introduced a separate creative refresh loop and capped the share of budget going to unconfirmed hypotheses.",
+        "ru": "Бюджет перераспределяли между продуктами по полному пути лида. Дешёвая регистрация не считалась победой, если падала доходимость или продажи. Для продуктов с большим объёмом вводили отдельный контур обновления креативов и ограничивали долю бюджета на ещё не подтверждённую гипотезу."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "500 лідів/день",
+            "en": "500 leads/day",
+            "ru": "500 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$24 900 → $15 000",
+            "en": "$24,900 → $15,000",
+            "ru": "$24 900 → $15 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.66",
+            "en": "$1.66",
+            "ru": "$1.66"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. Цифри перенесено з підсумкового слайда вихідного PDF. Період агрегування в джерелі не зазначений, тому документ не перераховує їх у денний темп.",
+        "en": "Data check. Figures are taken from the summary slide of the original PDF. The source doesn’t state the aggregation period, so the document doesn’t convert them into a daily pace.",
+        "ru": "Проверка данных. Цифры перенесены с итогового слайда исходного PDF. Период агрегирования в источнике не указан, поэтому документ не пересчитывает их в дневной темп."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Кейс показує управління освітнім портфелем, а не однією рекламною кампанією: $50,3 тис. бюджету, 30,1 тис. лідів, конверсія сторінок до 38,15% і позитивна економіка на рівні оплат. Головний актив — єдина система продукту, трафіку, креативу та аналітики.",
+        "en": "The case shows managing an education portfolio, not a single ad campaign: $50.3k in budget, 30.1k leads, page conversion up to 38.15% and positive economics at the payment level. The main asset is a unified system of product, traffic, creative and analytics.",
+        "ru": "Кейс показывает управление образовательным портфелем, а не одной рекламной кампанией: $50,3 тыс. бюджета, 30,1 тыс. лидов, конверсия страниц до 38,15% и положительная экономика на уровне оплат. Главный актив — единая система продукта, трафика, креатива и аналитики."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/ovita/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільових аудиторій навчального центру Ovita",
+          "en": "Ovita training center target audience segmentation",
+          "ru": "Сегментация целевых аудиторий учебного центра Ovita"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-02.webp",
+        "alt": {
+          "uk": "Матеріали та структура рекламної воронки Ovita",
+          "en": "Ovita ad funnel materials and structure",
+          "ru": "Материалы и структура рекламной воронки Ovita"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-03.webp",
+        "alt": {
+          "uk": "Робоча комунікація та координація запусків Ovita",
+          "en": "Ovita team communication and launch coordination",
+          "ru": "Рабочая коммуникация и координация запусков Ovita"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-04.webp",
+        "alt": {
+          "uk": "Матеріали робочого процесу навчального центру Ovita",
+          "en": "Ovita training center workflow materials",
+          "ru": "Материалы рабочего процесса учебного центра Ovita"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-05.webp",
+        "alt": {
+          "uk": "Архітектура рекламної воронки та стратегія трафіку Ovita",
+          "en": "Ovita ad funnel architecture and traffic strategy",
+          "ru": "Архитектура рекламной воронки и стратегия трафика Ovita"
+        }
+      },
+      {
+        "image": "cases/content/ovita/screenshot-06.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній навчального центру Ovita",
+          "en": "Ovita training center ad campaign results",
+          "ru": "Результаты рекламных кампаний учебного центра Ovita"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Матеріали кейсу включають сегментацію цільових аудиторій, структуру рекламної воронки, робочу комунікацію команди, архітектуру трафіку та результати рекламних кампаній. Дані й матеріали використані для реконструкції стратегії запуску та підтвердження наведених у кейсі показників.",
+      "en": "The case materials include target audience segmentation, the ad funnel structure, team communication, traffic architecture and ad campaign results. The data and materials were used to reconstruct the launch strategy and confirm the figures cited in the case.",
+      "ru": "Материалы кейса включают сегментацию целевых аудиторий, структуру рекламной воронки, рабочую коммуникацию команды, архитектуру трафика и результаты рекламных кампаний. Данные и материалы использованы для реконструкции стратегии запуска и подтверждения приведённых в кейсе показателей."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/ovita-education-center.webp",
+  "imageCard": "cases/card/ovita-education-center.webp"
+}

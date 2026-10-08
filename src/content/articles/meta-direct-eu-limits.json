@@ -1,0 +1,30 @@
+{
+  "order": 6,
+  "id": "meta-direct-eu-limits",
+  "topic": "advertising",
+  "level": "advanced",
+  "category": {
+    "uk": "Реклама",
+    "en": "Advertising",
+    "ru": "Реклама"
+  },
+  "type": "red",
+  "image": "blog/meta-direct-eu-limits.webp",
+  "date": "2024-01-29",
+  "readTime": {
+    "uk": "2 хв",
+    "en": "2 min",
+    "ru": "2 мин"
+  },
+  "title": {
+    "uk": "Обхід європейських обмежень на Direct: як оптимізуватися на повідомлення",
+    "en": "Getting around EU restrictions on Direct: how to optimize for messages",
+    "ru": "Обход европейских ограничений на Direct: как оптимизироваться на сообщения"
+  },
+  "description": {
+    "uk": "Коли треба гнати на Direct по Європі, а оптимізація на кліки не варіант. Два способи з налаштуванням пікселя на проміжну сторінку.",
+    "en": "When you need to drive European traffic to Direct and optimizing for clicks isn’t an option. Two methods using a pixel on an intermediate page.",
+    "ru": "Когда нужно гнать на Direct по Европе, а оптимизация на клики не вариант. Два способа с настройкой пикселя на промежуточную страницу."
+  },
+  "href": "/blog/meta-direct-eu-limits"
+}

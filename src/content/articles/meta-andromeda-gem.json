@@ -1,0 +1,30 @@
+{
+  "order": 9,
+  "id": "meta-andromeda-gem",
+  "topic": "analytics",
+  "level": "advanced",
+  "category": {
+    "uk": "Аналітика",
+    "en": "Analytics",
+    "ru": "Аналитика"
+  },
+  "type": "purple",
+  "image": "blog/meta-andromeda-gem.webp",
+  "date": "2026-08-01",
+  "readTime": {
+    "uk": "11 хв",
+    "en": "11 min",
+    "ru": "11 мин"
+  },
+  "title": {
+    "uk": "Andromeda та GEM у Meta Ads: як насправді працюють рекламні AI-моделі",
+    "en": "Andromeda and GEM in Meta Ads: how the ad AI models really work",
+    "ru": "Andromeda и GEM в Meta Ads: как на самом деле работают рекламные AI-модели"
+  },
+  "description": {
+    "uk": "«GEM шукає людей, Andromeda обирає креатив» — красиве, але хибне формулювання. Розбираємо справжню багаторівневу архітектуру доставки реклами.",
+    "en": "“GEM finds the people, Andromeda picks the creative” — a neat but wrong way to put it. We break down the real multi-layered ad delivery architecture.",
+    "ru": "«GEM ищет людей, Andromeda выбирает креатив» — красивая, но ошибочная формулировка. Разбираем настоящую многоуровневую архитектуру доставки рекламы."
+  },
+  "href": "/blog/meta-andromeda-gem"
+}

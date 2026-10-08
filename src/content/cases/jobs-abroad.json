@@ -1,0 +1,473 @@
+{
+  "order": 16,
+  "originalId": 17,
+  "id": "jobs-abroad",
+  "number": "17",
+  "source": "meta",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Лідогенерація",
+    "en": "Lead generation",
+    "ru": "Лидогенерация"
+  },
+  "categoryColor": "#5B9BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Рекрутингова лідогенерація",
+    "en": "Recruitment lead generation",
+    "ru": "Рекрутинговая лидогенерация"
+  },
+  "title": {
+    "uk": "Робота за кордоном",
+    "en": "Jobs abroad",
+    "ru": "Работа за границей"
+  },
+  "description": {
+    "uk": "У рекрутингу дешева заявка легко перетворюється на потік нецільових контактів — фільтруємо на вході.",
+    "en": "In recruitment, a cheap lead easily turns into a stream of irrelevant contacts — we filter at the entry point.",
+    "ru": "В рекрутинге дешёвая заявка легко превращается в поток нецелевых контактов — фильтруем на входе."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "≈ 1 935",
+        "en": "≈ 1,935",
+        "ru": "≈ 1 935"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.06–$0.18",
+        "en": "CPC $0.06–$0.18",
+        "ru": "CPC $0.06–$0.18"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "60–68 заявок/день",
+        "en": "60–68 leads/day",
+        "ru": "60–68 заявок/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$12 053.20",
+        "en": "$12,053.20",
+        "ru": "$12 053.20"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.06–$0.18",
+          "en": "$0.06–$0.18",
+          "ru": "$0.06–$0.18"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$0.31",
+          "en": "$0.31",
+          "ru": "$0.31"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$20",
+          "en": "$20",
+          "ru": "$20"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "60–68 заявок",
+          "en": "60–68 leads",
+          "ru": "60–68 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "157 кампаній",
+        "en": "157 campaigns",
+        "ru": "157 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$12 053.20",
+            "en": "$12,053.20",
+            "ru": "$12 053.20"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "78 624 кліка + 4 93x лідів",
+            "en": "78,624 clicks + 4,93x leads",
+            "ru": "78 624 клика + 4 93x лидов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "2 601 502",
+            "en": "2,601,502",
+            "ru": "2 601 502"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "7 429 887",
+            "en": "7,429,887",
+            "ru": "7 429 887"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: два кабінети: $3 535.71 + $8 517.49",
+        "en": "Account total for the whole period · basis: two ad accounts: $3,535.71 + $8,517.49",
+        "ru": "Итог кабинета за весь срок · основа: два кабинета: $3 535.71 + $8 517.49"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "У рекрутингу дешева заявка легко перетворюється на потік нецільових контактів. Тому оголошення має одразу повідомляти країну, тип роботи, базові вимоги й умови, а форма — збирати дані для первинної фільтрації.",
+      "en": "In recruitment, a cheap lead easily turns into a stream of irrelevant contacts. So the ad has to state the country, type of work, basic requirements and conditions right away, and the form has to collect data for initial screening.",
+      "ru": "В рекрутинге дешёвая заявка легко превращается в поток нецелевых контактов. Поэтому объявление должно сразу сообщать страну, тип работы, базовые требования и условия, а форма — собирать данные для первичной фильтрации."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/work-abroad/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній з працевлаштування за кордоном",
+          "en": "Jobs abroad ad campaign results",
+          "ru": "Результаты рекламных кампаний по трудоустройству за границей"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Лідогенерація та повідомлення для вакансій за кордоном",
+          "en": "Screenshot 1 — Lead generation and messages for jobs abroad",
+          "ru": "Скриншот 1 — Лидогенерация и сообщения для вакансий за границей"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Вакансії групувалися за країною та типом зайнятості. Для кожної створювався окремий креатив з умовами, після чого результати порівнювалися за ціною валідного контакту й готовністю кандидата продовжити оформлення.",
+      "en": "Vacancies were grouped by country and type of employment. Each got its own creative with the conditions, and results were then compared on cost per valid contact and the candidate’s readiness to continue the application.",
+      "ru": "Вакансии группировались по стране и типу занятости. Для каждой создавался отдельный креатив с условиями, после чего результаты сравнивались по цене валидного контакта и готовности кандидата продолжить оформление."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/work-abroad/screenshot-02.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній з працевлаштування за кордоном",
+          "en": "Jobs abroad ad campaign results",
+          "ru": "Результаты рекламных кампаний по трудоустройству за границей"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Кампанії за вакансіями, віком та аудиторіями",
+          "en": "Screenshot 2 — Campaigns by vacancy, age and audience",
+          "ru": "Скриншот 2 — Кампании по вакансиям, возрасту и аудиториям"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Lead-кампанії за окремими країнами й вакансіями.",
+        "en": "Lead campaigns for individual countries and vacancies.",
+        "ru": "Lead-кампании по отдельным странам и вакансиям."
+      },
+      {
+        "uk": "Розділення аудиторій за географією проживання та мовою.",
+        "en": "Audiences split by country of residence and language.",
+        "ru": "Разделение аудиторий по географии проживания и языку."
+      },
+      {
+        "uk": "Форма з питаннями про досвід, документи й термін готовності.",
+        "en": "A form with questions about experience, documents and availability.",
+        "ru": "Форма с вопросами об опыте, документах и сроке готовности."
+      },
+      {
+        "uk": "Ретаргетинг тих, хто відкрив, але не надіслав анкету.",
+        "en": "Retargeting of people who opened but didn’t submit the application.",
+        "ru": "Ретаргетинг тех, кто открыл, но не отправил анкету."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Текст будувався як коротка картка вакансії: посада, країна, оплата, вимоги й наступний крок. Це знижувало кількість кліків із цікавості.",
+        "en": "The copy was built like a short job card: position, country, pay, requirements and the next step. This cut down on curiosity clicks.",
+        "ru": "Текст строился как короткая карточка вакансии: должность, страна, оплата, требования и следующий шаг. Это снижало количество кликов из любопытства."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Оптимізація йшла за валідною заявкою, а не за заповненням будь-якої форми. Окремо виключалися гео та плейсменти з низьким додзвоном.",
+        "en": "Optimization was for valid leads, not for any form submission. Geos and placements with low call reach rates were excluded separately.",
+        "ru": "Оптимизация шла по валидной заявке, а не по заполнению любой формы. Отдельно исключались гео и плейсменты с низким дозвоном."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$20",
+            "en": "$20",
+            "ru": "$20"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$600",
+            "en": "$600",
+            "ru": "$600"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.31",
+            "en": "$0.31",
+            "ru": "$0.31"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 1 935 заявок",
+            "en": "≈ 1,935 leads",
+            "ru": "≈ 1 935 заявок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 1 800–2 040 заявок за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 1,800–2,040 leads in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 1 800–2 040 заявок за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "При бюджеті $20 проєкт отримував 60–68 заявок на день по $0.31. Розрахунковий обсяг відповідає даним першоджерела.",
+        "en": "On a $20 budget, the project got 60–68 leads a day at $0.31. The projected volume matches the source data.",
+        "ru": "При бюджете $20 проект получал 60–68 заявок в день по $0.31. Расчётный объём соответствует данным первоисточника."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/work-abroad/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати першого рекламного кабінету з працевлаштування за кордоном",
+          "en": "Jobs abroad — first ad account results",
+          "ru": "Результаты первого рекламного кабинета по трудоустройству за границей"
+        },
+        "caption": {
+          "uk": "1 / 2",
+          "en": "1 / 2",
+          "ru": "1 / 2"
+        }
+      },
+      {
+        "image": "cases/content/work-abroad/screenshot-02.webp",
+        "alt": {
+          "uk": "Результати другого рекламного кабінету з працевлаштування за кордоном",
+          "en": "Jobs abroad — second ad account results",
+          "ru": "Результаты второго рекламного кабинета по трудоустройству за границей"
+        },
+        "caption": {
+          "uk": "2 / 2",
+          "en": "2 / 2",
+          "ru": "2 / 2"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншоти рекламних кабінетів з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshots from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншоты рекламных кабинетов из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/jobs-abroad.webp",
+  "imageCard": "cases/card/jobs-abroad.webp"
+}

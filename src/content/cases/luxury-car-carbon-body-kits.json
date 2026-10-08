@@ -1,0 +1,518 @@
+{
+  "order": 28,
+  "originalId": 29,
+  "id": "luxury-car-carbon-body-kits",
+  "number": "29",
+  "source": "meta",
+  "niche": "auto",
+  "category": {
+    "uk": "Авто та тюнінг",
+    "en": "Auto & tuning",
+    "ru": "Авто и тюнинг"
+  },
+  "categoryColor": "#6ED6F5",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "High-ticket / міжнародний трафік",
+    "en": "High-ticket / international traffic",
+    "ru": "High-ticket / международный трафик"
+  },
+  "title": {
+    "uk": "Карбонові обвіси для luxury-авто",
+    "en": "Carbon body kits for luxury cars",
+    "ru": "Карбоновые обвесы для luxury-авто"
+  },
+  "description": {
+    "uk": "Індивідуальне виробництво карбонових обвісів: 10 кабінетів, 7 місяців і 72 320 запитів на виготовлення.",
+    "en": "Custom manufacturing of carbon body kits: 10 ad accounts, 7 months and 72,320 production inquiries.",
+    "ru": "Индивидуальное производство карбоновых обвесов: 10 кабинетов, 7 месяцев и 72 320 запросов на изготовление."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Запити на виготовлення",
+        "en": "Production inquiries",
+        "ru": "Запросы на изготовление"
+      },
+      "value": {
+        "uk": "72 320",
+        "en": "72,320",
+        "ru": "72 320"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "CPA",
+        "en": "CPA",
+        "ru": "CPA"
+      },
+      "value": {
+        "uk": "$17.83",
+        "en": "$17.83",
+        "ru": "$17.83"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Тривалість",
+        "en": "Duration",
+        "ru": "Длительность"
+      },
+      "value": {
+        "uk": "7 місяців",
+        "en": "7 months",
+        "ru": "7 месяцев"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$1 289 178.91",
+        "en": "$1,289,178.91",
+        "ru": "$1 289 178.91"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Повний рекламний бюджет",
+          "en": "Total ad budget",
+          "ru": "Полный рекламный бюджет"
+        },
+        "value": {
+          "uk": "$1 289 178.91",
+          "en": "$1,289,178.91",
+          "ru": "$1 289 178.91"
+        },
+        "note": {
+          "uk": "надано власником кейсу",
+          "en": "provided by the case owner",
+          "ru": "предоставлено владельцем кейса"
+        }
+      },
+      {
+        "label": {
+          "uk": "Тривалість",
+          "en": "Duration",
+          "ru": "Длительность"
+        },
+        "value": {
+          "uk": "7 місяців / ≈ 213 днів",
+          "en": "7 months / ≈ 213 days",
+          "ru": "7 месяцев / ≈ 213 дней"
+        },
+        "note": {
+          "uk": "період роботи",
+          "en": "period of work",
+          "ru": "период работы"
+        }
+      },
+      {
+        "label": {
+          "uk": "Рекламна інфраструктура",
+          "en": "Ad infrastructure",
+          "ru": "Рекламная инфраструктура"
+        },
+        "value": {
+          "uk": "10 верифікованих кабінетів",
+          "en": "10 verified ad accounts",
+          "ru": "10 верифицированных кабинетов"
+        },
+        "note": {
+          "uk": "структура проєкту",
+          "en": "project structure",
+          "ru": "структура проекта"
+        }
+      },
+      {
+        "label": {
+          "uk": "Запити на виготовлення",
+          "en": "Production inquiries",
+          "ru": "Запросы на изготовление"
+        },
+        "value": {
+          "uk": "72 320",
+          "en": "72,320",
+          "ru": "72 320"
+        },
+        "note": {
+          "uk": "дані кабінетів",
+          "en": "ad account data",
+          "ru": "данные кабинетов"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPA за повним бюджетом",
+          "en": "CPA on the total budget",
+          "ru": "CPA по полному бюджету"
+        },
+        "value": {
+          "uk": "$17.83",
+          "en": "$17.83",
+          "ru": "$17.83"
+        },
+        "note": {
+          "uk": "$1 289 178.91 / 72 320",
+          "en": "$1,289,178.91 / 72,320",
+          "ru": "$1 289 178.91 / 72 320"
+        }
+      },
+      {
+        "label": {
+          "uk": "Заявлений CPA",
+          "en": "Stated CPA",
+          "ru": "Заявленный CPA"
+        },
+        "value": {
+          "uk": "$15.21",
+          "en": "$15.21",
+          "ru": "$15.21"
+        },
+        "note": {
+          "uk": "атрибуційний зріз",
+          "en": "attribution slice",
+          "ru": "атрибуционный срез"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середній чек",
+          "en": "Average order value",
+          "ru": "Средний чек"
+        },
+        "value": {
+          "uk": "$197 890",
+          "en": "$197,890",
+          "ru": "$197 890"
+        },
+        "note": {
+          "uk": "дані власника",
+          "en": "owner’s data",
+          "ru": "данные владельца"
+        }
+      },
+      {
+        "label": {
+          "uk": "Зріз одного кабінету",
+          "en": "Single-account slice",
+          "ru": "Срез одного кабинета"
+        },
+        "value": {
+          "uk": "$124 699.32",
+          "en": "$124,699.32",
+          "ru": "$124 699.32"
+        },
+        "note": {
+          "uk": "скріншот 1 із 10",
+          "en": "screenshot 1 of 10",
+          "ru": "скриншот 1 из 10"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "10 кабінетів кампаній",
+        "en": "10 campaign ad accounts",
+        "ru": "10 кабинетов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$1 289 178.91",
+            "en": "$1,289,178.91",
+            "ru": "$1 289 178.91"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "72 320 запитів",
+            "en": "72,320 inquiries",
+            "ru": "72 320 запросов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "3 113 208 (зріз)",
+            "en": "3,113,208 (slice)",
+            "ru": "3 113 208 (срез)"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "3 422 345 (зріз)",
+            "en": "3,422,345 (slice)",
+            "ru": "3 422 345 (срез)"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: повний бюджет проєкту",
+        "en": "Account total for the whole period · basis: total project budget",
+        "ru": "Итог кабинета за весь срок · основа: полный бюджет проекта"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Вузьке high-ticket ядро: власники та колекціонери преміальних і спортивних автомобілів, готові інвестувати від $150 тис. в індивідуальний зовнішній пакет. Другий шар — тюнінг-ательє, детейлінг-центри, автосалони та партнери, здатні привести кінцевого покупця. Проєкт стартував без продавального сайту, фото- й відеоконтенту, опису аудиторії та доказової бази продукту; каталоги отримували обмеження через ризик збігів із захищеними дизайнами.",
+      "en": "A narrow high-ticket core: owners and collectors of premium and sports cars willing to invest $150k+ in a custom exterior package. The second layer: tuning studios, detailing centers, dealerships and partners able to bring in the end buyer. The project started with no sales website, no photo or video content, no audience profile and no proof base for the product; catalogs were getting restricted due to the risk of matches with protected designs.",
+      "ru": "Узкое high-ticket ядро: владельцы и коллекционеры премиальных и спортивных автомобилей, готовые инвестировать от $150 тыс. в индивидуальный внешний пакет. Второй слой — тюнинг-ателье, детейлинг-центры, автосалоны и партнёры, способные привести конечного покупателя. Проект стартовал без продающего сайта, фото- и видеоконтента, описания аудитории и доказательной базы продукта; каталоги получали ограничения из-за риска совпадений с защищёнными дизайнами."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/carbon/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет проєкту карбонових обвісів для преміальних автомобілів",
+          "en": "Ad account for the carbon body kits project for premium cars",
+          "ru": "Рекламный кабинет проекта карбоновых обвесов для премиальных автомобилей"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — HIGH-TICKET / МІЖНАРОДНИЙ ТРАФІК",
+          "en": "Screenshot 1 — HIGH-TICKET / INTERNATIONAL TRAFFIC",
+          "ru": "Скриншот 1 — HIGH-TICKET / МЕЖДУНАРОДНЫЙ ТРАФИК"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Вивчили публічні дані конкурентів через TrendHERO, Iconosquare і HypeAuditor: залучені теми, сильні публікації та перетини інтересів. Створили лендинг, який показував виробництво, матеріали, етапи замовлення, індивідуальну підгонку, строки, доставку та реальні автомобілі клієнтів. Вбудували кваліфікаційний квіз: автомобіль, рік, бажаний комплект, країна, бюджет, строк і необхідність персональної консультації. Підготували точні ТЗ на зйомку виробництва, викладки карбону, контролю геометрії та передачі комплекту клієнту. Підключили нативного перекладача й закадрову озвучку, щоб реклама не виглядала перекладною. Створили присутність на Etsy, Amazon та eBay з документованим походженням і перевіреними відгуками.",
+      "en": "We studied competitors’ public data via TrendHERO, Iconosquare and HypeAuditor: engaging topics, strong posts and overlapping interests. We built a landing page showing production, materials, ordering stages, custom fitting, timelines, shipping and real client cars. We embedded a qualifying quiz: car, year, desired kit, country, budget, timeline and need for a personal consultation. We prepared precise briefs for filming production, carbon layup, geometry checks and handing the kit over to the client. We brought in a native-speaker translator and voice-over so the ads wouldn’t look translated. We set up a presence on Etsy, Amazon and eBay with documented origin and verified reviews.",
+      "ru": "Изучили публичные данные конкурентов через TrendHERO, Iconosquare и HypeAuditor: вовлекающие темы, сильные публикации и пересечения интересов. Создали лендинг, который показывал производство, материалы, этапы заказа, индивидуальную подгонку, сроки, доставку и реальные автомобили клиентов. Встроили квалификационный квиз: автомобиль, год, желаемый комплект, страна, бюджет, срок и необходимость персональной консультации. Подготовили точные ТЗ на съёмку производства, выкладки карбона, контроля геометрии и передачи комплекта клиенту. Подключили переводчика-носителя и закадровую озвучку, чтобы реклама не выглядела переводной. Создали присутствие на Etsy, Amazon и eBay с документированным происхождением и проверенными отзывами."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Cold B2C: власники конкретних luxury/sport моделей, car culture, преміальний тюнінг, аукціони та профільні спільноти.",
+        "en": "Cold B2C: owners of specific luxury/sports models, car culture, premium tuning, auctions and enthusiast communities.",
+        "ru": "Cold B2C: владельцы конкретных luxury/sport моделей, car culture, премиальный тюнинг, аукционы и профильные сообщества."
+      },
+      {
+        "uk": "Cold B2B: тюнінг-ательє, детейлінг, автосалони та установчі центри — окремий контур із пропозицією партнерства.",
+        "en": "Cold B2B: tuning studios, detailing, dealerships and installation centers — a separate loop with a partnership offer.",
+        "ru": "Cold B2B: тюнинг-ателье, детейлинг, автосалоны и установочные центры — отдельный контур с предложением партнёрства."
+      },
+      {
+        "uk": "Broad/Advantage: пошук неочевидних заможних сегментів, оцінка тільки за часткою кваліфікованих запитів.",
+        "en": "Broad/Advantage: finding non-obvious affluent segments, judged only by the share of qualified inquiries.",
+        "ru": "Broad/Advantage: поиск неочевидных состоятельных сегментов, оценка только по доле квалифицированных запросов."
+      },
+      {
+        "uk": "AQUIZ: основний масштабований контур з оптимізацією на запит; квіз відсікав несумісні автомобілі та нетерміновий попит.",
+        "en": "AQUIZ: the main scalable loop, optimized for inquiries; the quiz filtered out incompatible cars and non-urgent demand.",
+        "ru": "AQUIZ: основной масштабируемый контур с оптимизацией на запрос; квиз отсекал несовместимые автомобили и несрочный спрос."
+      },
+      {
+        "uk": "Look-alike: будували за кваліфікованими консультаціями та підтвердженими замовленнями, а не за всіма кліками.",
+        "en": "Lookalike: built from qualified consultations and confirmed orders, not from all clicks.",
+        "ru": "Look-alike: строили по квалифицированным консультациям и подтверждённым заказам, а не по всем кликам."
+      },
+      {
+        "uk": "Retargeting: виробництво, сертифікати матеріалів, відгуки, автомобілі клієнтів, етапи встановлення та відповіді на ризики дорогої міжнародної покупки.",
+        "en": "Retargeting: production, material certificates, reviews, client cars, installation stages and answers to the risks of an expensive international purchase.",
+        "ru": "Retargeting: производство, сертификаты материалов, отзывы, автомобили клиентов, этапы установки и ответы на риски дорогой международной покупки."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креативи продавали не красиву деталь, а контроль над індивідуальним виробництвом. Найсильніше працювали відео «від матеріалу до готового автомобіля», ручна викладка карбону, крупні плани геометрії, примірка, трансформація до/після та відгук власника з відкритим посиланням на його соцмережі. Формула: автомобіль → виробничий процес → індивідуальність → доказ → консультація.",
+        "en": "The creatives sold not a pretty part but control over custom production. The strongest were “from raw material to finished car” videos, hand carbon layup, close-ups of the geometry, test fitting, before/after transformations and owner reviews with an open link to their social media. The formula: car → production process → individuality → proof → consultation.",
+        "ru": "Креативы продавали не красивую деталь, а контроль над индивидуальным производством. Сильнее всего работали видео «от материала до готового автомобиля», ручная выкладка карбона, крупные планы геометрии, примерка, трансформация до/после и отзыв владельца с открытой ссылкой на его соцсети. Формула: автомобиль → производственный процесс → индивидуальность → доказательство → консультация."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Головна метрика — не кількість checkout, а частка запитів, що відповідають автомобілю, бюджету та строку покупки. 72 320 запитів при повному бюджеті дають CPA $17.83; заявлені $15.21 відповідають атрибутованим витратам близько $1 099 987, тому різниця приблизно $189 192 відноситься до тестів, інших цілей і неповного зіставлення подій. При ROAS 5.65× проєкт повернув близько $7.28 млн виручки. Десять кабінетів розділялися за гео та роллю — це не обхід обмежень, а вимога підтвердженого володіння, білінгу та верифікації; апеляції супроводжувалися тільки реальними документами та відео виробництва.",
+        "en": "The main metric was not the number of checkouts but the share of inquiries matching the car, budget and purchase timeline. 72,320 inquiries on the total budget give a CPA of $17.83; the stated $15.21 corresponds to attributed spend of about $1,099,987, so the difference of roughly $189,192 relates to tests, other objectives and incomplete event matching. At a 5.65× ROAS, the project returned about $7.28M in revenue. The ten ad accounts were split by geo and role — not to circumvent restrictions, but as a requirement of confirmed ownership, billing and verification; appeals were supported only by real documents and production videos.",
+        "ru": "Главная метрика — не количество checkout, а доля запросов, соответствующих автомобилю, бюджету и сроку покупки. 72 320 запросов при полном бюджете дают CPA $17.83; заявленные $15.21 соответствуют атрибутированным расходам около $1 099 987, поэтому разница примерно $189 192 относится к тестам, другим целям и неполному сопоставлению событий. При ROAS 5.65× проект вернул около $7.28 млн выручки. Десять кабинетов разделялись по гео и роли — это не обход ограничений, а требование подтверждённого владения, биллинга и верификации; апелляции сопровождались только реальными документами и видео производства."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$6 050.71",
+            "en": "$6,050.71",
+            "ru": "$6 050.71"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$181 521.23",
+            "en": "$181,521.23",
+            "ru": "$181 521.23"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPA $15–$18",
+            "en": "CPA $15–$18",
+            "ru": "CPA $15–$18"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 339 запитів в день",
+            "en": "≈ 339 inquiries a day",
+            "ru": "≈ 339 запросов в день"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Реконструкція бюджету: cold B2C/broad — 45% ($580 130.51), B2B і партнери — 15% ($193 376.84), AQUIZ/кваліфікація — 20% ($257 835.78), ретаргетинг — 15% ($193 376.84), контент і тести — 5% ($64 458.94).",
+        "en": "Budget reconstruction: cold B2C/broad — 45% ($580,130.51), B2B and partners — 15% ($193,376.84), AQUIZ/qualification — 20% ($257,835.78), retargeting — 15% ($193,376.84), content and tests — 5% ($64,458.94).",
+        "ru": "Реконструкция бюджета: cold B2C/broad — 45% ($580 130.51), B2B и партнёры — 15% ($193 376.84), AQUIZ/квалификация — 20% ($257 835.78), ретаргетинг — 15% ($193 376.84), контент и тесты — 5% ($64 458.94)."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За сім місяців міжнародного просування інвестовано $1.289 млн і отримано 72 320 запитів на індивідуальне виготовлення. При ROAS 5.65× виручка проєкту становить близько $7.28 млн — приблизно 37 завершених замовлень за середнього чека $197 890. Скріншот $124 699.32 — лише один із десяти кабінетів, а не весь проєкт.",
+        "en": "Over seven months of international promotion, $1.289M was invested and 72,320 custom manufacturing inquiries were received. At a 5.65× ROAS, project revenue is about $7.28M — roughly 37 completed orders at an average order value of $197,890. The $124,699.32 screenshot is just one of the ten ad accounts, not the whole project.",
+        "ru": "За семь месяцев международного продвижения инвестировано $1.289 млн и получено 72 320 запросов на индивидуальное изготовление. При ROAS 5.65× выручка проекта составляет около $7.28 млн — примерно 37 завершённых заказов при среднем чеке $197 890. Скриншот $124 699.32 — лишь один из десяти кабинетов, а не весь проект."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/carbon/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет проєкту карбонових обвісів для luxury-автомобілів",
+          "en": "Ad account for the carbon body kits project for luxury cars",
+          "ru": "Рекламный кабинет проекта карбоновых обвесов для luxury-автомобилей"
+        }
+      }
+    ],
+    "description": {
+      "uk": "HIGH-TICKET / МІЖНАРОДНИЙ ТРАФІК",
+      "en": "HIGH-TICKET / INTERNATIONAL TRAFFIC",
+      "ru": "HIGH-TICKET / МЕЖДУНАРОДНЫЙ ТРАФИК"
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/luxury-car-carbon-body-kits.webp",
+  "imageCard": "cases/card/luxury-car-carbon-body-kits.webp"
+}

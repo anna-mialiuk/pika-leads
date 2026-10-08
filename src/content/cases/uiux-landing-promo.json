@@ -1,0 +1,25 @@
+{
+  "order": 66,
+  "originalId": 67,
+  "id": "uiux-landing-promo",
+  "number": "67",
+  "source": "uiux",
+  "niche": "landing",
+  "category": {
+    "uk": "Веб-дизайн",
+    "en": "Web design",
+    "ru": "Веб-дизайн"
+  },
+  "categoryColor": "#C4B5FD",
+  "platform": "UI/UX",
+  "title": {
+    "uk": "Лендинг / промо",
+    "en": "Landing page / promo",
+    "ru": "Лендинг / промо"
+  },
+  "description": {
+    "uk": "Продавальний дизайн лендингу під бренд і завдання.",
+    "en": "A conversion-focused landing page design for the brand and the task.",
+    "ru": "Продающий дизайн лендинга под бренд и задачу."
+  }
+}

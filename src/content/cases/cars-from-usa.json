@@ -1,0 +1,450 @@
+{
+  "order": 8,
+  "originalId": 9,
+  "id": "cars-from-usa",
+  "number": "09",
+  "source": "meta",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Лідогенерація",
+    "en": "Lead generation",
+    "ru": "Лидогенерация"
+  },
+  "categoryColor": "#5B9BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Кваліфіковані заявки",
+    "en": "Qualified leads",
+    "ru": "Квалифицированные заявки"
+  },
+  "title": {
+    "uk": "Автомобілі зі США",
+    "en": "Cars from the USA",
+    "ru": "Автомобили из США"
+  },
+  "description": {
+    "uk": "Довге рішення з високим чеком: кваліфікуюча форма замість голого номера телефону.",
+    "en": "A long, high-ticket decision: a qualifying form instead of just a phone number.",
+    "ru": "Долгое решение с высоким чеком: квалифицирующая форма вместо голого номера телефона."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "900–1 080",
+        "en": "900–1,080",
+        "ru": "900–1 080"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.08–$0.22",
+        "en": "CPC $0.08–$0.22",
+        "ru": "CPC $0.08–$0.22"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "10–12 заявок/день",
+        "en": "10–12 leads/day",
+        "ru": "10–12 заявок/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$3 600",
+        "en": "$3,600",
+        "ru": "$3 600"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.08–$0.22",
+          "en": "$0.08–$0.22",
+          "ru": "$0.08–$0.22"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$2.47",
+          "en": "$2.47",
+          "ru": "$2.47"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$30",
+          "en": "$30",
+          "ru": "$30"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "10–12 заявок",
+          "en": "10–12 leads",
+          "ru": "10–12 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "5 кампаній",
+        "en": "5 campaigns",
+        "ru": "5 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$3 600",
+            "en": "$3,600",
+            "ru": "$3 600"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "57 лідів + 1 089 кліків",
+            "en": "57 leads + 1,089 clicks",
+            "ru": "57 лидов + 1 089 кликов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "92 319",
+            "en": "92,319",
+            "ru": "92 319"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "115 770",
+            "en": "115,770",
+            "ru": "115 770"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: $40/день × 90 днів роботи",
+        "en": "Account total for the whole period · basis: $40/day × 90 days of work",
+        "ru": "Итог кабинета за весь срок · основа: $40/день × 90 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Купівля авто зі США — тривале й тривожне рішення. Користувач оцінює не лише ціну, а й ризики аукціону, доставки, ремонту та документів. Тому лід має приходити з базовим розумінням процесу.",
+      "en": "Buying a car from the USA is a long and stressful decision. People weigh not only the price but also the risks of the auction, shipping, repairs and paperwork. So a lead has to come in with a basic understanding of the process.",
+      "ru": "Покупка авто из США — долгое и тревожное решение. Пользователь оценивает не только цену, но и риски аукциона, доставки, ремонта и документов. Поэтому лид должен приходить с базовым пониманием процесса."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/cars-from-usa/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній з продажу автомобілів зі США",
+          "en": "US car sales ad campaign results",
+          "ru": "Результаты рекламных кампаний по продаже автомобилей из США"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Кваліфіковані заявки",
+          "en": "Screenshot 1 — Qualified leads",
+          "ru": "Скриншот 1 — Квалифицированные заявки"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Реклама починалася з кількох сценаріїв: розрахунок вартості під ключ, підбір авто під бюджет і розбір вигідних лотів. У форму додавалися кваліфікуючі питання, щоб менеджер отримував не просто номер телефона, а бюджет і клас автомобіля, що цікавить.",
+      "en": "The ads started with several scenarios: an all-in cost calculation, choosing a car to fit a budget and breakdowns of good lots. Qualifying questions were added to the form so the manager got not just a phone number but the budget and the car class the person was interested in.",
+      "ru": "Реклама начиналась с нескольких сценариев: расчёт стоимости под ключ, подбор авто под бюджет и разбор выгодных лотов. В форму добавлялись квалифицирующие вопросы, чтобы менеджер получал не просто номер телефона, а бюджет и интересующий класс автомобиля."
+    }
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Lead-кампанія з кваліфікуючою формою.",
+        "en": "Lead campaign with a qualifying form.",
+        "ru": "Lead-кампания с квалифицирующей формой."
+      },
+      {
+        "uk": "Сегменти за наміром: зміна авто, інтерес до аукціонів, конкретні марки.",
+        "en": "Segments by intent: changing cars, interest in auctions, specific makes.",
+        "ru": "Сегменты по намерению: смена авто, интерес к аукционам, конкретные марки."
+      },
+      {
+        "uk": "Креативи за ціновими категоріями та реальними сценаріями покупки.",
+        "en": "Creatives by price category and real purchase scenarios.",
+        "ru": "Креативы по ценовым категориям и реальным сценариям покупки."
+      },
+      {
+        "uk": "Ретаргетинг тих, хто переглянув розбори та розрахунки вартості.",
+        "en": "Retargeting of people who viewed breakdowns and cost calculations.",
+        "ru": "Ретаргетинг тех, кто просмотрел разборы и расчёты стоимости."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Замість загальної обіцянки «дешевше за ринок» використовувалися зрозумілі приклади бюджету та етапів. Це зменшувало кількість цікавих і підвищувало готовність до розмови.",
+        "en": "Instead of a generic “cheaper than the market” promise, we used clear examples of budgets and stages. This reduced the number of mere browsers and increased readiness to talk.",
+        "ru": "Вместо общего обещания «дешевле рынка» использовались понятные примеры бюджета и этапов. Это уменьшало количество любопытствующих и повышало готовность к разговору."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Зв’язки оцінювалися за CPL і зворотним зв’язком відділу продажів. Якщо дешева аудиторія не відповідала або не проходила за бюджетом, її вимикали навіть за хорошого CTR.",
+        "en": "Funnels were judged by CPL and feedback from the sales team. If a cheap audience didn’t answer or didn’t fit the budget, it was switched off even with a good CTR.",
+        "ru": "Связки оценивались по CPL и обратной связи отдела продаж. Если дешёвая аудитория не отвечала или не проходила по бюджету, её отключали даже при хорошем CTR."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$40",
+            "en": "$40",
+            "ru": "$40"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 200",
+            "en": "$1,200",
+            "ru": "$1 200"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$3.33–$4.00",
+            "en": "$3.33–$4.00",
+            "ru": "$3.33–$4.00"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "300–360 заявок",
+            "en": "300–360 leads",
+            "ru": "300–360 заявок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 300–360 заявок за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 300–360 leads in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 300–360 заявок за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Проєкт отримував 10–12 заявок на день по $2.47 на бюджеті $30. Для дорогого продукту це робочий обсяг, який дозволяє відділу продажів якісно опрацьовувати кожен контакт.",
+        "en": "The project got 10–12 leads a day at $2.47 on a $30 budget. For an expensive product, that’s a workable volume that lets the sales team handle every contact properly.",
+        "ru": "Проект получал 10–12 заявок в день по $2.47 на бюджете $30. Для дорогого продукта это рабочий объём, который позволяет отделу продаж качественно обрабатывать каждый контакт."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/cars-from-usa/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній автомобілів зі США",
+          "en": "US cars ad campaign results",
+          "ru": "Результаты рекламных кампаний автомобилей из США"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/cars-from-usa.webp",
+  "imageCard": "cases/card/cars-from-usa.webp"
+}

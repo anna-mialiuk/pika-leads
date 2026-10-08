@@ -1,0 +1,570 @@
+{
+  "order": 31,
+  "originalId": 32,
+  "id": "luxury-womens-fashion-buyer",
+  "number": "32",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Instagram Shop / Profile Visits",
+    "en": "Instagram Shop / Profile Visits",
+    "ru": "Instagram Shop / Profile Visits"
+  },
+  "title": {
+    "uk": "Брендові жіночі речі через байєра",
+    "en": "Branded women’s fashion via a personal buyer",
+    "ru": "Брендовые женские вещи через байера"
+  },
+  "description": {
+    "uk": "Продажі преміальних брендів через профіль байєра: щонайменше 9 362 візити профілю при бюджеті $2 862.89.",
+    "en": "Selling premium brands through a buyer’s profile: at least 9,362 profile visits on a $2,862.89 budget.",
+    "ru": "Продажи премиальных брендов через профиль байера: не менее 9 362 визитов профиля при бюджете $2 862.89."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "≥ 9 362 візити",
+        "en": "≥ 9,362 visits",
+        "ru": "≥ 9 362 визита"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "модель 468 покупок",
+        "en": "model: 468 purchases",
+        "ru": "модель 468 покупок"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "візит ≤ $0.31",
+        "en": "visit ≤ $0.31",
+        "ru": "визит ≤ $0.31"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$2 862.89",
+        "en": "$2,862.89",
+        "ru": "$2 862.89"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$2 862.89",
+          "en": "$2,862.89",
+          "ru": "$2 862.89"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Кампанії",
+          "en": "Campaigns",
+          "ru": "Кампании"
+        },
+        "value": {
+          "uk": "65",
+          "en": "65",
+          "ru": "65"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Охоплення",
+          "en": "Reach",
+          "ru": "Охват"
+        },
+        "value": {
+          "uk": "314 229",
+          "en": "314,229",
+          "ru": "314 229"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Частота",
+          "en": "Frequency",
+          "ru": "Частота"
+        },
+        "value": {
+          "uk": "1.85",
+          "en": "1.85",
+          "ru": "1.85"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахункові покази",
+          "en": "Estimated impressions",
+          "ru": "Расчётные показы"
+        },
+        "value": {
+          "uk": "≈ 581 324",
+          "en": "≈ 581,324",
+          "ru": "≈ 581 324"
+        },
+        "note": {
+          "uk": "охоплення × частота",
+          "en": "reach × frequency",
+          "ru": "охват × частота"
+        }
+      },
+      {
+        "label": {
+          "uk": "Візити профілю",
+          "en": "Profile visits",
+          "ru": "Визиты профиля"
+        },
+        "value": {
+          "uk": "≥ 9 362",
+          "en": "≥ 9,362",
+          "ru": "≥ 9 362"
+        },
+        "note": {
+          "uk": "видимий мінімум",
+          "en": "visible minimum",
+          "ru": "видимый минимум"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна візиту",
+          "en": "Cost per visit",
+          "ru": "Цена визита"
+        },
+        "value": {
+          "uk": "≤ $0.31",
+          "en": "≤ $0.31",
+          "ru": "≤ $0.31"
+        },
+        "note": {
+          "uk": "по мінімуму",
+          "en": "at the minimum",
+          "ru": "по минимуму"
+        }
+      },
+      {
+        "label": {
+          "uk": "Історичний темп",
+          "en": "Historical pace",
+          "ru": "Исторический темп"
+        },
+        "value": {
+          "uk": "$17.67/день",
+          "en": "$17.67/day",
+          "ru": "$17.67/день"
+        },
+        "note": {
+          "uk": "162 дні",
+          "en": "162 days",
+          "ru": "162 дня"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "65 кампаній",
+        "en": "65 campaigns",
+        "ru": "65 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$2 862.89",
+            "en": "$2,862.89",
+            "ru": "$2 862.89"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "≥ 9 362 візити профілю",
+            "en": "≥ 9,362 profile visits",
+            "ru": "≥ 9 362 визита профиля"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "314 229",
+            "en": "314,229",
+            "ru": "314 229"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "≈ 581 324",
+            "en": "≈ 581,324",
+            "ru": "≈ 581 324"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: Ads Manager",
+        "en": "Account total for the whole period · basis: Ads Manager",
+        "ru": "Итог кабинета за весь срок · основа: Ads Manager"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Жінки 22–45 років з інтересом до преміальної моди та брендів, для яких важливі оригінальність, розмір, наявність, ціна й довіра до байєра. Географія — Україна та Європа. У продажах через байєра головний бар’єр — довіра: автентичність речей, строки доставки та точний стан товару.",
+      "en": "Women aged 22–45 interested in premium fashion and brands, who care about authenticity, size, availability, price and trust in the buyer. Geography: Ukraine and Europe. In sales through a personal buyer, the main barrier is trust: authenticity of items, delivery times and the exact condition of the product.",
+      "ru": "Женщины 22–45 лет с интересом к премиальной моде и брендам, для которых важны оригинальность, размер, наличие, цена и доверие к байеру. География — Украина и Европа. В продажах через байера главный барьер — доверие: подлинность вещей, сроки доставки и точное состояние товара."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/luxury-womens-fashion-buyer/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламні кампанії преміального жіночого одягу через байєра в Meta Ads Manager",
+          "en": "Premium women’s fashion via a buyer: ad campaigns in Meta Ads Manager",
+          "ru": "Рекламные кампании премиальной женской одежды через байера в Meta Ads Manager"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Instagram Shop / Profile Visits",
+          "en": "Screenshot 1 — Instagram Shop / Profile Visits",
+          "ru": "Скриншот 1 — Instagram Shop / Profile Visits"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Перепакували профіль навколо довіри: походження товарів, відгуки, доставка, повернення й актуальна наявність. Відділили контент-вітрину від трафікових Reels: перші продавали асортимент, другі — причину підписатися й стежити за новими дропами. Запустили кампанії на візити профілю для широкої жіночої аудиторії та тематичних сегментів преміальних брендів. Ретаргетинг будувався через scarcity: обмежена наявність, нові надходження та персональний підбір.",
+      "en": "We repackaged the profile around trust: product origin, reviews, delivery, returns and current availability. We separated the content storefront from traffic Reels: the first sold the range, the second gave a reason to follow and watch for new drops. We launched profile-visit campaigns for a broad female audience and themed premium-brand segments. Retargeting was built on scarcity: limited availability, new arrivals and personal styling.",
+      "ru": "Переупаковали профиль вокруг доверия: происхождение товаров, отзывы, доставка, возврат и актуальное наличие. Отделили контент-витрину от трафиковых Reels: первые продавали ассортимент, вторые — причину подписаться и следить за новыми дропами. Запустили кампании на визиты профиля для широкой женской аудитории и тематических сегментов премиальных брендов. Ретаргетинг строился через scarcity: ограниченное наличие, новые поступления и персональный подбор."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/luxury-womens-fashion-buyer/screenshot-02.webp",
+        "alt": {
+          "uk": "Історія запуску рекламних кампаній преміального жіночого одягу через байєра",
+          "en": "Premium women’s fashion via a buyer: ad campaign launch history",
+          "ru": "История запуска рекламных кампаний премиальной женской одежды через байера"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Instagram Shop / Profile Visits",
+          "en": "Screenshot 2 — Instagram Shop / Profile Visits",
+          "ru": "Скриншот 2 — Instagram Shop / Profile Visits"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Cold: Reels і Stories на profile visit з образом, ціновим діапазоном та обіцянкою актуальних дропів.",
+        "en": "Cold: Reels and Stories for profile visits with a look, a price range and the promise of current drops.",
+        "ru": "Cold: Reels и Stories на profile visit с образом, ценовым диапазоном и обещанием актуальных дропов."
+      },
+      {
+        "uk": "Warm: engaged і profile visitors, перегляди відео, збереження та підписники.",
+        "en": "Warm: engaged users and profile visitors, video views, saves and followers.",
+        "ru": "Warm: engaged и profile visitors, просмотры видео, сохранения и подписчики."
+      },
+      {
+        "uk": "Direct: підбір за розміром, брендом і бюджетом; менеджер фіксує джерело та результат діалогу.",
+        "en": "Direct: selection by size, brand and budget; the manager records the source and the outcome of the conversation.",
+        "ru": "Direct: подбор по размеру, бренду и бюджету; менеджер фиксирует источник и результат диалога."
+      },
+      {
+        "uk": "Retention: повторні покупки, wishlist, повідомлення про надходження та VIP-сегмент.",
+        "en": "Retention: repeat purchases, wishlists, arrival notifications and a VIP segment.",
+        "ru": "Retention: повторные покупки, wishlist, уведомления о поступлениях и VIP-сегмент."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/luxury-womens-fashion-buyer/screenshot-03.webp",
+        "alt": {
+          "uk": "Архітектура рекламних кампаній преміального жіночого одягу через байєра",
+          "en": "Premium women’s fashion via a buyer: ad campaign architecture",
+          "ru": "Архитектура рекламных кампаний премиальной женской одежды через байера"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Instagram Shop / Profile Visits",
+          "en": "Screenshot 3 — Instagram Shop / Profile Visits",
+          "ru": "Скриншот 3 — Instagram Shop / Profile Visits"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креативи показували не лише річ, а й контекст покупки: оригінальність, вигідну ціну, примірку, деталі, упаковку та шлях замовлення. Для Reels працювали швидкі добірки «3 образи», «що прийшло сьогодні» та порівняння retail-ціни з ціною байєра.",
+        "en": "The creatives showed not just the item but the purchase context: authenticity, a good price, try-ons, details, packaging and the ordering path. For Reels, quick roundups worked well: “3 looks”, “what arrived today” and comparing the retail price with the buyer’s price.",
+        "ru": "Креативы показывали не только вещь, но и контекст покупки: оригинальность, выгодную цену, примерку, детали, упаковку и путь заказа. Для Reels работали быстрые подборки «3 образа», «что пришло сегодня» и сравнение retail-цены с ценой байера."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Оптимізація йшла по воронці profile visit → follow → dialog → purchase. За заданими коефіцієнтами 35% / 15% / 5% ціна підписника становить не більше $0.87, діалогу — не більше $2.04, покупки — не більше $6.12. Це верхні оцінки, тому що 9 362 — лише видимий мінімум візитів.",
+        "en": "Optimization followed the funnel profile visit → follow → dialog → purchase. At the given rates of 35% / 15% / 5%, the cost per follower is at most $0.87, per conversation at most $2.04 and per purchase at most $6.12. These are upper estimates, since 9,362 is only the visible minimum of visits.",
+        "ru": "Оптимизация шла по воронке profile visit → follow → dialog → purchase. При заданных коэффициентах 35% / 15% / 5% цена подписчика составляет не более $0.87, диалога — не более $2.04, покупки — не более $6.12. Это верхние оценки, так как 9 362 — лишь видимый минимум визитов."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$17.67",
+            "en": "$17.67",
+            "ru": "$17.67"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$530.16",
+            "en": "$530.16",
+            "ru": "$530.16"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CAC ≤ $6.12",
+            "en": "CAC ≤ $6.12",
+            "ru": "CAC ≤ $6.12"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 87 покупок / 30 днів",
+            "en": "≈ 87 purchases / 30 days",
+            "ru": "≈ 87 покупок / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "90-денна модель за історичним темпом: $1 590.49. Profile visits 50%, engagement/direct 25%, ретаргет 15%, тести 10%.",
+        "en": "90-day model at the historical pace: $1,590.49. Profile visits 50%, engagement/direct 25%, retargeting 15%, tests 10%.",
+        "ru": "90-дневная модель по историческому темпу: $1 590.49. Profile visits 50%, engagement/direct 25%, ретаргет 15%, тесты 10%."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "При $2.86 тис. витрат рекламний кабінет показує не менше 9 362 візитів профілю — модельно близько 3 277 підписників, 1 404 діалогів і 468 покупок. Конверсії 35%, 15% і 5% надані власником кейсу; покупки та CAC — розрахункова модель, а не експорт замовлень.",
+        "en": "At $2.86k in spend, the ad account shows at least 9,362 profile visits — modeled as about 3,277 followers, 1,404 conversations and 468 purchases. The 35%, 15% and 5% conversion rates were provided by the case owner; purchases and CAC are a projection model, not an order export.",
+        "ru": "При $2.86 тыс. расходов рекламный кабинет показывает не менее 9 362 визитов профиля — модельно около 3 277 подписчиков, 1 404 диалогов и 468 покупок. Конверсии 35%, 15% и 5% предоставлены владельцем кейса; покупки и CAC — расчётная модель, а не экспорт заказов."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/luxury-womens-fashion-buyer/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет преміального жіночого одягу через байєра — скріншот 1",
+          "en": "Premium women’s fashion via a buyer: ad account — screenshot 1",
+          "ru": "Рекламный кабинет премиальной женской одежды через байера — скриншот 1"
+        },
+        "caption": {
+          "uk": "1 / 3",
+          "en": "1 / 3",
+          "ru": "1 / 3"
+        }
+      },
+      {
+        "image": "cases/content/luxury-womens-fashion-buyer/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний кабінет преміального жіночого одягу через байєра — скріншот 2",
+          "en": "Premium women’s fashion via a buyer: ad account — screenshot 2",
+          "ru": "Рекламный кабинет премиальной женской одежды через байера — скриншот 2"
+        },
+        "caption": {
+          "uk": "2 / 3",
+          "en": "2 / 3",
+          "ru": "2 / 3"
+        }
+      },
+      {
+        "image": "cases/content/luxury-womens-fashion-buyer/screenshot-03.webp",
+        "alt": {
+          "uk": "Рекламний кабінет преміального жіночого одягу через байєра — скріншот 3",
+          "en": "Premium women’s fashion via a buyer: ad account — screenshot 3",
+          "ru": "Рекламный кабинет премиальной женской одежды через байера — скриншот 3"
+        },
+        "caption": {
+          "uk": "3 / 3",
+          "en": "3 / 3",
+          "ru": "3 / 3"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/luxury-womens-fashion-buyer.webp",
+  "imageCard": "cases/card/luxury-womens-fashion-buyer.webp"
+}

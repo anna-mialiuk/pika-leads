@@ -1,0 +1,30 @@
+{
+  "order": 4,
+  "id": "meta-pixel-wordpress-errors",
+  "topic": "technical",
+  "level": "intermediate",
+  "category": {
+    "uk": "Технічно",
+    "en": "Technical",
+    "ru": "Технически"
+  },
+  "type": "blue",
+  "image": "blog/meta-pixel-wordpress.webp",
+  "date": "2024-10-07",
+  "readTime": {
+    "uk": "2 хв",
+    "en": "2 min",
+    "ru": "2 мин"
+  },
+  "title": {
+    "uk": "Помилки Meta Pixel на WordPress: «Оновіть події IPv6 на View Content»",
+    "en": "Meta Pixel errors on WordPress: “Update IPv6 events on View Content”",
+    "ru": "Ошибки Meta Pixel на WordPress: «Обновите события IPv6 на View Content»"
+  },
+  "description": {
+    "uk": "Рідкісна, але неприємна помилка пікселя. Розбираємо, звідки вона береться і як її закрити за п’ять кроків.",
+    "en": "A rare but annoying pixel error. We explain where it comes from and how to fix it in five steps.",
+    "ru": "Редкая, но неприятная ошибка пикселя. Разбираем, откуда она берётся и как закрыть её за пять шагов."
+  },
+  "href": "/blog/meta-pixel-wordpress-errors"
+}

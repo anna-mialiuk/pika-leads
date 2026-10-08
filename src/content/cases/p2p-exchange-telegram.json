@@ -1,0 +1,446 @@
+{
+  "order": 44,
+  "originalId": 45,
+  "id": "p2p-exchange-telegram",
+  "number": "45",
+  "source": "google",
+  "niche": "crypto",
+  "category": {
+    "uk": "Крипта та фінанси",
+    "en": "Crypto & finance",
+    "ru": "Крипта и финансы"
+  },
+  "categoryColor": "#FFA63D",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Google Ads → Telegram / Multi-Geo",
+    "en": "Google Ads → Telegram / Multi-Geo",
+    "ru": "Google Ads → Telegram / Multi-Geo"
+  },
+  "title": {
+    "uk": "P2P та обмінні зв’язки",
+    "en": "P2P and exchange funnels",
+    "ru": "P2P и обменные связки"
+  },
+  "description": {
+    "uk": "13 143 конверсії за 64,4 млн показів і витрат ₴2 707 717 — найбільший акаунт добірки.",
+    "en": "13,143 conversions from 64.4M impressions and ₴2,707,717 in spend — the largest account in this collection.",
+    "ru": "13 143 конверсии за 64,4 млн показов и расходов ₴2 707 717 — самый крупный аккаунт подборки."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "13 143 конверсії",
+        "en": "13,143 conversions",
+        "ru": "13 143 конверсии"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPA ₴206.02",
+        "en": "CPA ₴206.02",
+        "ru": "CPA ₴206.02"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "64,4 млн показів",
+        "en": "64.4M impressions",
+        "ru": "64,4 млн показов"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "₴2 707 717,51",
+        "en": "₴2,707,717.51",
+        "ru": "₴2 707 717,51"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "₴2 707 717,51",
+          "en": "₴2,707,717.51",
+          "ru": "₴2 707 717,51"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads, all-time",
+          "en": "Google Ads export, all-time",
+          "ru": "выгрузка Google Ads, all-time"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсії",
+          "en": "Conversions",
+          "ru": "Конверсии"
+        },
+        "value": {
+          "uk": "13 143,04",
+          "en": "13,143.04",
+          "ru": "13 143,04"
+        },
+        "note": {
+          "uk": "дробове значення — атрибуція Google",
+          "en": "fractional value — Google attribution",
+          "ru": "дробное значение — атрибуция Google"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахунковий CPA",
+          "en": "Calculated CPA",
+          "ru": "Расчётный CPA"
+        },
+        "value": {
+          "uk": "₴206.02",
+          "en": "₴206.02",
+          "ru": "₴206.02"
+        },
+        "note": {
+          "uk": "витрати / конверсії",
+          "en": "spend / conversions",
+          "ru": "расходы / конверсии"
+        }
+      },
+      {
+        "label": {
+          "uk": "Покази",
+          "en": "Impressions",
+          "ru": "Показы"
+        },
+        "value": {
+          "uk": "64 375 886",
+          "en": "64,375,886",
+          "ru": "64 375 886"
+        },
+        "note": {
+          "uk": "вивантаження кабінету",
+          "en": "ad account export",
+          "ru": "выгрузка кабинета"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "сегментація за намірами",
+        "en": "segmentation by intent",
+        "ru": "сегментация по намерениям"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "₴2 707 717,51",
+            "en": "₴2,707,717.51",
+            "ru": "₴2 707 717,51"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "13 143,04 конверсії",
+            "en": "13,143.04 conversions",
+            "ru": "13 143,04 конверсии"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "multi-GEO",
+            "en": "multi-GEO",
+            "ru": "multi-GEO"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "64 375 886",
+            "en": "64,375,886",
+            "ru": "64 375 886"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: вивантаження Google Ads, all-time",
+        "en": "Account total for the whole period · basis: Google Ads export, all-time",
+        "ru": "Итог кабинета за весь срок · основа: выгрузка Google Ads, all-time"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Напрям — залучення аудиторії в Telegram-воронку навколо P2P, обміну та прикладної криптоінформації. На такому масштабі завдання не лише в дешевому переході, а й у збереженні якості трафіку: користувач має розуміти тематику каналу ще до кліка й виконувати потрібну цільову дію після переходу. Зведений екран кабінету не показує деталізацію за країнами, тому кейс коректно позначено як multi-GEO — конкретні країни без підтверджених даних не додаються.",
+      "en": "The goal was to bring audiences into a Telegram funnel around P2P, exchange and practical crypto information. At this scale, the task isn’t only a cheap click but keeping traffic quality: the user has to understand the channel’s topic before clicking and complete the required target action afterward. The account summary screen doesn’t show a breakdown by country, so the case is correctly labeled multi-geo — specific countries aren’t listed without confirmed data.",
+      "ru": "Направление — привлечение аудитории в Telegram-воронку вокруг P2P, обмена и прикладной криптоинформации. На таком масштабе задача не только в дешёвом переходе, но и в сохранении качества трафика: пользователь должен понимать тематику канала ещё до клика и выполнять нужное целевое действие после перехода. Сводный экран кабинета не показывает детализацию по странам, поэтому кейс корректно обозначен как multi-GEO — конкретные страны без подтверждённых данных не добавляются."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/p2p-exchange-telegram/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для P2P та обмінної Telegram-воронки",
+          "en": "Google Ads results for a P2P and exchange Telegram funnel",
+          "ru": "Результаты Google Ads для P2P и обменной Telegram-воронки"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Google Ads → Telegram / Multi-Geo",
+          "en": "Screenshot 1 — Google Ads → Telegram / Multi-Geo",
+          "ru": "Скриншот 1 — Google Ads → Telegram / Multi-Geo"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Зв’язка будувалася як керований перехід із Google Ads у Telegram-екосистему. Рекламне повідомлення відсікало випадковий інтерес ще до переходу, а аналітика відокремлювала рекламний клік від цільової дії, налаштованої в акаунті. Для P2P це критично: широкий криптозапит дає обсяг, але без кваліфікуючого офера швидко погіршує якість аудиторії.",
+      "en": "The setup was built as a controlled transition from Google Ads into the Telegram ecosystem. The ad message filtered out random interest before the click, and analytics separated the ad click from the target action configured in the account. For P2P, this is critical: a broad crypto query brings volume, but without a qualifying offer it quickly degrades audience quality.",
+      "ru": "Связка строилась как управляемый переход из Google Ads в Telegram-экосистему. Рекламное сообщение отсекало случайный интерес ещё до перехода, а аналитика отделяла рекламный клик от целевого действия, настроенного в аккаунте. Для P2P это критично: широкий криптозапрос даёт объём, но без квалифицирующего оффера быстро ухудшает качество аудитории."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Розділення попиту за намірами: інформаційні запити, інтерес до P2P-механіки, обмін і практичні сценарії — в окремих кампаніях.",
+        "en": "Splitting demand by intent: informational queries, interest in P2P mechanics, exchange and practical use cases — in separate campaigns.",
+        "ru": "Разделение спроса по намерениям: информационные запросы, интерес к P2P-механике, обмен и практические сценарии — в отдельных кампаниях."
+      },
+      {
+        "uk": "Синхронізація оголошення та наступного кроку: користувач заздалегідь знав, що отримає контент і комунікацію в Telegram, а не товарну сторінку.",
+        "en": "Syncing the ad and the next step: the user knew in advance they’d get content and communication in Telegram, not a product page.",
+        "ru": "Синхронизация объявления и следующего шага: пользователь заранее знал, что получит контент и коммуникацию в Telegram, а не товарную страницу."
+      },
+      {
+        "uk": "Регулярне відключення слабких сегментів і перерозподіл бюджету — на 64,4 млн показів працює системність, а не одинична правка.",
+        "en": "Regularly switching off weak segments and reallocating budget — at 64.4M impressions, it’s consistency that works, not a one-off tweak.",
+        "ru": "Регулярное отключение слабых сегментов и перераспределение бюджета — на 64,4 млн показов работает системность, а не единичная правка."
+      },
+      {
+        "uk": "Контроль вигорання оголошень, перетину запитів і частки нецільового інтересу.",
+        "en": "Monitoring ad burnout, query overlap and the share of non-target interest.",
+        "ru": "Контроль выгорания объявлений, пересечения запросов и доли нецелевого интереса."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "На такому обсязі головний ризик — втома аудиторії. Повідомлення оновлювалися за графіком, а не після фактичного падіння показників: коли вигорання вже видно в цифрах, частина бюджету втрачена. Офер завжди прямо називав тематику — це могло давати дорожчий клік, але чистішу аудиторію.",
+        "en": "At this volume, the main risk is audience fatigue. Messages were refreshed on a schedule, not after metrics had actually dropped: once burnout shows in the numbers, part of the budget is already lost. The offer always named the topic directly — this could mean pricier clicks but a cleaner audience.",
+        "ru": "На таком объёме главный риск — усталость аудитории. Сообщения обновлялись по графику, а не после фактического падения показателей: когда выгорание уже видно в цифрах, часть бюджета потеряна. Оффер всегда прямо называл тематику — это могло давать более дорогой клик, но более чистую аудиторию."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Масштаб сформувався завдяки накопиченій історії акаунта, сегментації попиту й послідовній оптимізації. 13,1 тис. конверсій показують, що воронка витримувала великий обсяг трафіку, а середня ціна не була результатом короткого тесту на кількох десятках дій. Важливий нюанс методики: скріншот показує режим «за весь час» і дробове значення конверсій, що нормально для атрибуції Google Ads. Точний тип конверсії та GEO на цьому екрані не розкриті, тому показник не називається підтвердженою кількістю Telegram-підписників.",
+        "en": "The scale came from accumulated account history, demand segmentation and consistent optimization. 13.1k conversions show the funnel withstood heavy traffic, and the average cost wasn’t the product of a short test on a few dozen actions. An important methodological nuance: the screenshot shows the “all time” view and a fractional conversion value, which is normal for Google Ads attribution. The exact conversion type and geos aren’t shown on this screen, so the figure isn’t called a confirmed number of Telegram subscribers.",
+        "ru": "Масштаб сформировался благодаря накопленной истории аккаунта, сегментации спроса и последовательной оптимизации. 13,1 тыс. конверсий показывают, что воронка выдерживала большой объём трафика, а средняя цена не была результатом короткого теста на нескольких десятках действий. Важный нюанс методики: скриншот показывает режим «за всё время» и дробное значение конверсий, что нормально для атрибуции Google Ads. Точный тип конверсии и GEO на этом экране не раскрыты, поэтому показатель не называется подтверждённым количеством Telegram-подписчиков."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "₴30 000",
+            "en": "₴30,000",
+            "ru": "₴30 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "₴900 000",
+            "en": "₴900,000",
+            "ru": "₴900 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "₴206.02",
+            "en": "₴206.02",
+            "ru": "₴206.02"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 4 370 конверсій",
+            "en": "≈ 4,370 conversions",
+            "ru": "≈ 4 370 конверсий"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні розрахункового CPA ₴206.02. Вихідні дані — представлення «за весь час».",
+        "en": "30-day projection at the calculated CPA of ₴206.02. Source data: the “all time” view.",
+        "ru": "Расчёт на 30 дней при сохранении расчётного CPA ₴206.02. Исходные данные — представление «за всё время»."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Google Ads зафіксував 64 375 886 показів і 13 143,04 конверсії при витратах ₴2 707 717,51 — розрахункова вартість однієї конверсії ₴206,02. Цінність конверсій у кабінеті становить 1 157 531,27 одиниці. Це найбільший проєкт добірки за обсягом даних і цільових дій. Головний висновок — зв’язка утримувала якість на дистанції, а не показала сильний результат на короткому відрізку.",
+        "en": "Google Ads recorded 64,375,886 impressions and 13,143.04 conversions on ₴2,707,717.51 in spend — a calculated cost per conversion of ₴206.02. Conversion value in the account is 1,157,531.27 units. This is the largest project in the collection by data volume and target actions. The main takeaway: the setup held quality over the long run rather than showing a strong result over a short stretch.",
+        "ru": "Google Ads зафиксировал 64 375 886 показов и 13 143,04 конверсии при расходах ₴2 707 717,51 — расчётная стоимость одной конверсии ₴206,02. Ценность конверсий в кабинете составляет 1 157 531,27 единицы. Это крупнейший проект подборки по объёму данных и целевых действий. Главный вывод — связка удерживала качество на дистанции, а не показала сильный результат на коротком отрезке."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/p2p-exchange-telegram/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для P2P та обмінної Telegram-воронки",
+          "en": "Google Ads results for a P2P and exchange Telegram funnel",
+          "ru": "Результаты Google Ads для P2P и обменной Telegram-воронки"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/p2p-exchange-telegram.jpg",
+  "imageCard": "cases/card/p2p-exchange-telegram.webp"
+}

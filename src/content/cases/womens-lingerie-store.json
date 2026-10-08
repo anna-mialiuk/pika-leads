@@ -1,0 +1,479 @@
+{
+  "order": 1,
+  "originalId": 2,
+  "id": "womens-lingerie-store",
+  "featured": true,
+  "number": "02",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "E-commerce / покупки",
+    "en": "E-commerce / purchases",
+    "ru": "E-commerce / покупки"
+  },
+  "title": {
+    "uk": "Магазин жіночої білизни",
+    "en": "Women’s lingerie store",
+    "ru": "Магазин женского белья"
+  },
+  "description": {
+    "uk": "Продажі зі швидким оборотом асортименту: матриця оферів, бестселери та ретаргетинг кошиків.",
+    "en": "Sales with fast inventory turnover: an offer matrix, bestsellers and cart retargeting.",
+    "ru": "Продажи с быстрым оборотом ассортимента: матрица офферов, бестселлеры и ретаргетинг корзин."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "до 15 000",
+        "en": "up to 15,000",
+        "ru": "до 15 000"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.02–$0.11",
+        "en": "CPC $0.02–$0.11",
+        "ru": "CPC $0.02–$0.11"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "до 100 покупок/день",
+        "en": "up to 100 purchases/day",
+        "ru": "до 100 покупок/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$22 500",
+        "en": "$22,500",
+        "ru": "$22 500"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.02–$0.11",
+          "en": "$0.02–$0.11",
+          "ru": "$0.02–$0.11"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна покупки",
+          "en": "Cost per purchase",
+          "ru": "Цена покупки"
+        },
+        "value": {
+          "uk": "$0.92–$1.81",
+          "en": "$0.92–$1.81",
+          "ru": "$0.92–$1.81"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$50–$90",
+          "en": "$50–$90",
+          "ru": "$50–$90"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "до 100 покупок",
+          "en": "up to 100 purchases",
+          "ru": "до 100 покупок"
+        },
+        "note": {
+          "uk": "піковий показник першоджерела",
+          "en": "peak figure from the source",
+          "ru": "пиковый показатель первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "6 на скринах кампаній",
+        "en": "6 in campaign screenshots",
+        "ru": "6 на скринах кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$22 500",
+            "en": "$22,500",
+            "ru": "$22 500"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "до 15 000 покупок за 150 днів",
+            "en": "up to 15,000 purchases in 150 days",
+            "ru": "до 15 000 покупок за 150 дней"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · $150/день × 150 днів роботи",
+        "en": "Account total for the whole period · $150/day × 150 days of work",
+        "ru": "Итог кабинета за весь срок · $150/день × 150 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Магазину потрібні були продажі зі швидким оборотом асортименту. Основне обмеження e-commerce тут — різні моделі, розміри та візуальні вподобання, тому один універсальний креатив швидко вигорав.",
+      "en": "The store needed sales with fast inventory turnover. The main e-commerce constraint here was the range of models, sizes and visual preferences, so a single universal creative burned out quickly.",
+      "ru": "Магазину нужны были продажи с быстрым оборотом ассортимента. Основное ограничение e-commerce здесь — разные модели, размеры и визуальные предпочтения, поэтому один универсальный креатив быстро выгорал."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/womens-lingerie-store/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній магазину жіночої білизни",
+          "en": "Women’s lingerie store ad campaign results",
+          "ru": "Результаты рекламных кампаний магазина женского белья"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / покупки",
+          "en": "Screenshot 1 — E-commerce / purchases",
+          "ru": "Скриншот 1 — E-commerce / покупки"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Перший тиждень відводився на матрицю оферів: базові моделі, комплекти, новинки та акції. Після виявлення товарів-лідерів бюджет переносився із загальної вітрини на конкретні картки та добірки, які вже довели конверсію в покупку.",
+      "en": "The first week went to an offer matrix: core models, sets, new arrivals and promotions. Once the best-selling items were identified, the budget moved from the general storefront to specific product pages and collections that had already proven they convert into purchases.",
+      "ru": "Первая неделя отводилась на матрицу офферов: базовые модели, комплекты, новинки и акции. После выявления товаров-лидеров бюджет переносился с общей витрины на конкретные карточки и подборки, которые уже доказали конверсию в покупку."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/womens-lingerie-store/screenshot-02.webp",
+        "alt": {
+          "uk": "Історія запуску рекламної кампанії магазину жіночої білизни",
+          "en": "Women’s lingerie store ad campaign launch history",
+          "ru": "История запуска рекламной кампании магазина женского белья"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — E-commerce / покупки",
+          "en": "Screenshot 2 — E-commerce / purchases",
+          "ru": "Скриншот 2 — E-commerce / покупки"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Кампанія Sales / Purchase: широка жіноча аудиторія без надмірного дроблення.",
+        "en": "Sales / Purchase campaign: a broad female audience without excessive fragmentation.",
+        "ru": "Кампания Sales / Purchase: широкая женская аудитория без избыточного дробления."
+      },
+      {
+        "uk": "Окремі групи за бестселерами та категоріями з різною маржинальністю.",
+        "en": "Separate ad sets for bestsellers and for categories with different margins.",
+        "ru": "Отдельные группы по бестселлерам и категориям с разной маржинальностью."
+      },
+      {
+        "uk": "Ретаргетинг переглядів картки та додавань у кошик з обмеженим вікном.",
+        "en": "Retargeting of product page views and add-to-carts with a limited window.",
+        "ru": "Ретаргетинг просмотров карточки и добавлений в корзину с ограниченным окном."
+      },
+      {
+        "uk": "Тест look-alike на покупців після накопичення достатнього обсягу подій.",
+        "en": "Lookalike test on buyers once enough events had been collected.",
+        "ru": "Тест look-alike на покупателей после накопления достаточного объёма событий."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Використовувалися предметні фото, короткі відео з посадкою та каруселі комплектів. Офер робив акцент на зрозумілому виборі, наявності розмірів і конкретній вигоді, а не на абстрактному іміджі бренду.",
+        "en": "We used product photos, short videos showing the fit and carousels of sets. The offer focused on easy choice, size availability and a concrete benefit rather than an abstract brand image.",
+        "ru": "Использовались предметные фото, короткие видео с посадкой и карусели комплектов. Оффер делал акцент на понятном выборе, наличии размеров и конкретной выгоде, а не на абстрактном имидже бренда."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Оптимізація йшла за покупкою, а не за кліком. Креативи оцінювалися разом із конверсією картки товару: дешевий CPC не вважався успіхом, якщо користувач не переходив до кошика.",
+        "en": "Optimization was for purchases, not clicks. Creatives were judged together with product page conversion: a cheap CPC didn’t count as success if the user didn’t move on to the cart.",
+        "ru": "Оптимизация шла по покупке, а не по клику. Креативы оценивались вместе с конверсией карточки товара: дешёвый CPC не считался успехом, если пользователь не переходил в корзину."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$150",
+            "en": "$150",
+            "ru": "$150"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$4 500",
+            "en": "$4,500",
+            "ru": "$4 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.50",
+            "en": "$1.50",
+            "ru": "$1.50"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "до 3 000 покупок",
+            "en": "up to 3,000 purchases",
+            "ru": "до 3 000 покупок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: до 3 000 покупок за 30 днів при збереженні пікового темпу.",
+        "en": "Cross-check with the source: up to 3,000 purchases in 30 days at the peak pace.",
+        "ru": "Сверка с источником: до 3 000 покупок за 30 дней при сохранении пикового темпа."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Отримано ціну покупки нижче $2 при денному бюджеті до $90. Масштабування будувалося через товари-лідери та оновлення візуалів, що дозволяло зберігати обсяг до 100 покупок у сильні дні.",
+        "en": "We achieved a cost per purchase under $2 on a daily budget of up to $90. Scaling relied on best-selling products and refreshed visuals, which kept volume at up to 100 purchases on strong days.",
+        "ru": "Получена цена покупки ниже $2 при дневном бюджете до $90. Масштабирование строилось через товары-лидеры и обновление визуалов, что позволяло сохранять объём до 100 покупок в сильные дни."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/womens-lingerie-store/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії магазину жіночої білизни",
+          "en": "Women’s lingerie store ad campaign results",
+          "ru": "Результаты рекламной кампании магазина женского белья"
+        },
+        "caption": {
+          "uk": "1 / 2",
+          "en": "1 / 2",
+          "ru": "1 / 2"
+        }
+      },
+      {
+        "image": "cases/content/womens-lingerie-store/screenshot-02.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії магазину жіночої білизни",
+          "en": "Women’s lingerie store ad campaign results",
+          "ru": "Результаты рекламной кампании магазина женского белья"
+        },
+        "caption": {
+          "uk": "2 / 2",
+          "en": "2 / 2",
+          "ru": "2 / 2"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншоти рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshots from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншоты рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/womens-lingerie-store.webp",
+  "imageCard": "cases/card/womens-lingerie-store.webp"
+}

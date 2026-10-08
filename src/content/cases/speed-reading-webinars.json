@@ -1,0 +1,445 @@
+{
+  "order": 15,
+  "originalId": 16,
+  "id": "speed-reading-webinars",
+  "number": "16",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Реєстрації на освітній вебінар",
+    "en": "Educational webinar registrations",
+    "ru": "Регистрации на образовательный вебинар"
+  },
+  "title": {
+    "uk": "Вебінари зі швидкочитання",
+    "en": "Speed-reading webinars",
+    "ru": "Вебинары по скорочтению"
+  },
+  "description": {
+    "uk": "Один вебінар, три мови вигоди: батькам, студентам і дорослим фахівцям.",
+    "en": "One webinar, three benefit angles: for parents, students and working adults.",
+    "ru": "Один вебинар, три языка выгоды: родителям, студентам и взрослым специалистам."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "58 400–62 000",
+        "en": "58,400–62,000",
+        "ru": "58 400–62 000"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "ROAS 346.7%",
+        "en": "ROAS 346.7%",
+        "ru": "ROAS 346.7%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "160–170 реєстр./день",
+        "en": "160–170 sign-ups/day",
+        "ru": "160–170 регистр./день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$54 750",
+        "en": "$54,750",
+        "ru": "$54 750"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.040–$0.116",
+          "en": "$0.040–$0.116",
+          "ru": "$0.040–$0.116"
+        },
+        "note": {
+          "uk": "3,2–9,3 RUB / 80",
+          "en": "3.2–9.3 RUB / 80",
+          "ru": "3,2–9,3 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$0.344",
+          "en": "$0.344",
+          "ru": "$0.344"
+        },
+        "note": {
+          "uk": "27,5 RUB / 80",
+          "en": "27.5 RUB / 80",
+          "ru": "27,5 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$56.25",
+          "en": "$56.25",
+          "ru": "$56.25"
+        },
+        "note": {
+          "uk": "4 500 RUB / 80",
+          "en": "4,500 RUB / 80",
+          "ru": "4 500 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "160–170 заявок",
+          "en": "160–170 leads",
+          "ru": "160–170 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "6 на скрінах кампаній",
+        "en": "6 in campaign screenshots",
+        "ru": "6 на скринах кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$54 750",
+            "en": "$54,750",
+            "ru": "$54 750"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "58 400–62 000 реєстрацій за 365 днів",
+            "en": "58,400–62,000 registrations in 365 days",
+            "ru": "58 400–62 000 регистраций за 365 дней"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: $150/день × 365 днів роботи",
+        "en": "Account total for the whole period · basis: $150/day × 365 days of work",
+        "ru": "Итог кабинета за весь срок · основа: $150/день × 365 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Швидкочитання можна продавати дорослим як продуктивність і батькам як розвиток дитини. Змішувати ці мотиви в одній групі невигідно, тому воронка розділялася за аудиторією та обіцянкою.",
+      "en": "Speed reading can be sold to adults as productivity and to parents as child development. Mixing these motives in one ad set doesn’t pay off, so the funnel was split by audience and promise.",
+      "ru": "Скорочтение можно продавать взрослым как продуктивность, а родителям — как развитие ребёнка. Смешивать эти мотивы в одной группе невыгодно, поэтому воронка разделялась по аудитории и обещанию."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/speed-reading-webinar/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній вебінарів зі швидкочитання",
+          "en": "Speed-reading webinar ad campaign results",
+          "ru": "Результаты рекламных кампаний вебинаров по скорочтению"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Реєстрації на вебінари зі швидкочитання",
+          "en": "Screenshot 1 — Speed-reading webinar registrations",
+          "ru": "Скриншот 1 — Регистрации на вебинары по скорочтению"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "У тест заходили окремі оголошення для батьків, студентів і дорослих фахівців. Кожне вело на один вебінар, але пояснювало користь мовою конкретного сегмента.",
+      "en": "Separate ads for parents, students and working adults went into the test. Each led to the same webinar but explained the benefit in the language of its specific segment.",
+      "ru": "В тест заходили отдельные объявления для родителей, студентов и взрослых специалистов. Каждое вело на один вебинар, но объясняло пользу языком конкретного сегмента."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Lead-кампанія з окремими групами за віком і мотивом.",
+        "en": "Lead campaign with separate ad sets by age and motive.",
+        "ru": "Lead-кампания с отдельными группами по возрасту и мотиву."
+      },
+      {
+        "uk": "Широка аудиторія як контрольна група.",
+        "en": "Broad audience as a control group.",
+        "ru": "Широкая аудитория как контрольная группа."
+      },
+      {
+        "uk": "Look-alike зареєстрованих після накопичення даних.",
+        "en": "Lookalike of registrants once enough data had been collected.",
+        "ru": "Look-alike зарегистрированных после накопления данных."
+      },
+      {
+        "uk": "Ретаргетинг залучених із дедлайном найближчого ефіру.",
+        "en": "Retargeting engaged users with the deadline of the next broadcast.",
+        "ru": "Ретаргетинг вовлечённых с дедлайном ближайшего эфира."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Замість абстрактного «читайте швидше» оголошення показували вимірюваний сценарій: більше сторінок за той самий час, легше вчитися, менше втомлюватися від тексту.",
+        "en": "Instead of an abstract “read faster”, the ads showed a measurable scenario: more pages in the same time, easier studying, less fatigue from reading.",
+        "ru": "Вместо абстрактного «читайте быстрее» объявления показывали измеримый сценарий: больше страниц за то же время, легче учиться, меньше уставать от текста."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Порівнювалися CPL і доходимість різних сегментів. Дорожча реєстрація могла бути вигіднішою, якщо аудиторія частіше приходила на ефір.",
+        "en": "CPL and attendance were compared across segments. A more expensive registration could pay off better if that audience showed up to the broadcast more often.",
+        "ru": "Сравнивались CPL и доходимость разных сегментов. Более дорогая регистрация могла быть выгоднее, если аудитория чаще приходила на эфир."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$150",
+            "en": "$150",
+            "ru": "$150"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$4 500",
+            "en": "$4,500",
+            "ru": "$4 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.88",
+            "en": "$0.88",
+            "ru": "$0.88"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "4 800–5 100 реєстрацій",
+            "en": "4,800–5,100 registrations",
+            "ru": "4 800–5 100 регистраций"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 4 800–5 100 реєстрацій за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 4,800–5,100 registrations in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 4 800–5 100 регистраций за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Кампанія отримувала 160–170 реєстрацій на день по $0.344. Бюджет і зазначений обсяг практично збігаються.",
+        "en": "The campaign got 160–170 registrations a day at $0.344. The budget and the stated volume practically match.",
+        "ru": "Кампания получала 160–170 регистраций в день по $0.344. Бюджет и указанный объём практически совпадают."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/speed-reading-webinar/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній вебінарів зі швидкочитання",
+          "en": "Speed-reading webinar ad campaign results",
+          "ru": "Результаты рекламных кампаний вебинаров по скорочтению"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/speed-reading-webinars.webp",
+  "imageCard": "cases/card/speed-reading-webinars.webp"
+}

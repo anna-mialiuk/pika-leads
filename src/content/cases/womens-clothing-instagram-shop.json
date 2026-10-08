@@ -1,0 +1,581 @@
+{
+  "order": 30,
+  "originalId": 31,
+  "id": "womens-clothing-instagram-shop",
+  "number": "31",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "E-commerce / Direct Sales",
+    "en": "E-commerce / Direct Sales",
+    "ru": "E-commerce / Direct Sales"
+  },
+  "title": {
+    "uk": "Жіночий одяг через Instagram Shop",
+    "en": "Women’s clothing via Instagram Shop",
+    "ru": "Женская одежда через Instagram Shop"
+  },
+  "description": {
+    "uk": "Продажі колекцій через Instagram Direct: 142 кампанії, 502 523 охоплення та діалог по $0.79–$2.99.",
+    "en": "Collection sales via Instagram Direct: 142 campaigns, 502,523 reach and conversations at $0.79–$2.99.",
+    "ru": "Продажи коллекций через Instagram Direct: 142 кампании, 502 523 охвата и диалог по $0.79–$2.99."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Охоплення",
+        "en": "Reach",
+        "ru": "Охват"
+      },
+      "value": {
+        "uk": "502 523",
+        "en": "502,523",
+        "ru": "502 523"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Покази",
+        "en": "Impressions",
+        "ru": "Показы"
+      },
+      "value": {
+        "uk": "≈ 2 733 725",
+        "en": "≈ 2,733,725",
+        "ru": "≈ 2 733 725"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Ціна діалогу",
+        "en": "Cost per conversation",
+        "ru": "Цена диалога"
+      },
+      "value": {
+        "uk": "$0.79–$2.99",
+        "en": "$0.79–$2.99",
+        "ru": "$0.79–$2.99"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$11 930.08",
+        "en": "$11,930.08",
+        "ru": "$11 930.08"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$11 930.08",
+          "en": "$11,930.08",
+          "ru": "$11 930.08"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Кампанії",
+          "en": "Campaigns",
+          "ru": "Кампании"
+        },
+        "value": {
+          "uk": "142",
+          "en": "142",
+          "ru": "142"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Охоплення",
+          "en": "Reach",
+          "ru": "Охват"
+        },
+        "value": {
+          "uk": "502 523",
+          "en": "502,523",
+          "ru": "502 523"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Частота",
+          "en": "Frequency",
+          "ru": "Частота"
+        },
+        "value": {
+          "uk": "5.44",
+          "en": "5.44",
+          "ru": "5.44"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахункові покази",
+          "en": "Estimated impressions",
+          "ru": "Расчётные показы"
+        },
+        "value": {
+          "uk": "≈ 2 733 725",
+          "en": "≈ 2,733,725",
+          "ru": "≈ 2 733 725"
+        },
+        "note": {
+          "uk": "охоплення × частота",
+          "en": "reach × frequency",
+          "ru": "охват × частота"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна діалогу",
+          "en": "Cost per conversation",
+          "ru": "Цена диалога"
+        },
+        "value": {
+          "uk": "$0.79–$2.99",
+          "en": "$0.79–$2.99",
+          "ru": "$0.79–$2.99"
+        },
+        "note": {
+          "uk": "видимий діапазон",
+          "en": "visible range",
+          "ru": "видимый диапазон"
+        }
+      },
+      {
+        "label": {
+          "uk": "Період",
+          "en": "Period",
+          "ru": "Период"
+        },
+        "value": {
+          "uk": "390 днів",
+          "en": "390 days",
+          "ru": "390 дней"
+        },
+        "note": {
+          "uk": "09.12.2022–02.01.2024",
+          "en": "09.12.2022–02.01.2024",
+          "ru": "09.12.2022–02.01.2024"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "142 кампанії",
+        "en": "142 campaigns",
+        "ru": "142 кампании"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$11 930.08",
+            "en": "$11,930.08",
+            "ru": "$11 930.08"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "≈ 2 733 725 показів",
+            "en": "≈ 2,733,725 impressions",
+            "ru": "≈ 2 733 725 показов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "502 523",
+            "en": "502,523",
+            "ru": "502 523"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "≈ 2 733 725",
+            "en": "≈ 2,733,725",
+            "ru": "≈ 2 733 725"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: Ads Manager",
+        "en": "Account total for the whole period · basis: Ads Manager",
+        "ru": "Итог кабинета за весь срок · основа: Ads Manager"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Жінки 18–44 років в Україні, які цікавляться сукнями, костюмами, модою, локальними брендами та покупками через Instagram. Покупка відбувалася не на повноцінному сайті, а через контент і переписку — отже, реклама мала не просто зібрати клік, а показати посадку, колір, деталі й привід купити, після чого передати теплого користувача менеджеру в Direct.",
+      "en": "Women aged 18–44 in Ukraine interested in dresses, suits, fashion, local brands and shopping via Instagram. Purchases happened not on a full website but through content and messaging — so the ads had to do more than get a click: they had to show the fit, color, details and a reason to buy, then hand a warm user over to a manager in Direct.",
+      "ru": "Женщины 18–44 лет в Украине, интересующиеся платьями, костюмами, модой, локальными брендами и покупками через Instagram. Покупка происходила не на полноценном сайте, а через контент и переписку — значит, реклама должна была не просто собрать клик, а показать посадку, цвет, детали и повод купить, после чего передать тёплого пользователя менеджеру в Direct."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/womens-clothing/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламні кампанії жіночого одягу в Meta Ads Manager",
+          "en": "Women’s clothing ad campaigns in Meta Ads Manager",
+          "ru": "Рекламные кампании женской одежды в Meta Ads Manager"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / Direct sales",
+          "en": "Screenshot 1 — E-commerce / Direct sales",
+          "ru": "Скриншот 1 — E-commerce / Direct sales"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Сегментували каталог за колекціями, сезонністю, типом речі та ціною; обрали герої-дропи для трафіку. Підготували Reels із посадкою на моделі, каруселі з деталями та Stories із ціною, наявністю й CTA в Direct. Запустили холодні кампанії на Instagram Direct і окремі кампанії на залучену аудиторію. Кожен новий дроп отримував короткий тест, після чого переможців переносили в стабільний контур.",
+      "en": "We segmented the catalog by collection, season, item type and price, and chose hero drops for traffic. We prepared Reels showing the fit on a model, carousels with details and Stories with price, availability and a CTA to Direct. We launched cold campaigns to Instagram Direct and separate campaigns for engaged audiences. Each new drop got a short test, after which winners moved into the stable loop.",
+      "ru": "Сегментировали каталог по коллекциям, сезонности, типу вещи и цене; выбрали герой-дропы для трафика. Подготовили Reels с посадкой на модели, карусели с деталями и Stories с ценой, наличием и CTA в Direct. Запустили холодные кампании на Instagram Direct и отдельные кампании на вовлечённую аудиторию. Каждый новый дроп получал короткий тест, после чего победителей переносили в стабильный контур."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/womens-clothing/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламні кампанії жіночого одягу в Meta Ads Manager",
+          "en": "Women’s clothing ad campaigns in Meta Ads Manager",
+          "ru": "Рекламные кампании женской одежды в Meta Ads Manager"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / Direct sales",
+          "en": "Screenshot 1 — E-commerce / Direct sales",
+          "ru": "Скриншот 1 — E-commerce / Direct sales"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Cold: жінки по гео, broad та інтереси fashion; ціль — початок переписки або перехід до посту.",
+        "en": "Cold: women by geo, broad and fashion interests; goal — starting a conversation or clicking through to the post.",
+        "ru": "Cold: женщины по гео, broad и интересы fashion; цель — начало переписки или переход к посту."
+      },
+      {
+        "uk": "Warm: engaged 30/90/180 днів, взаємодія з Reels і Stories, профіль і Direct.",
+        "en": "Warm: engaged 30/90/180 days, interactions with Reels and Stories, profile and Direct.",
+        "ru": "Warm: engaged 30/90/180 дней, взаимодействие с Reels и Stories, профиль и Direct."
+      },
+      {
+        "uk": "Product layer: окремі кампанії на колекцію і модель, щоб бачити реальний попит на SKU.",
+        "en": "Product layer: separate campaigns per collection and model to see real demand per SKU.",
+        "ru": "Product layer: отдельные кампании на коллекцию и модель, чтобы видеть реальный спрос на SKU."
+      },
+      {
+        "uk": "Retention: новинки, повторні покупки, sale-вікна і cross-sell по існуючій базі.",
+        "en": "Retention: new arrivals, repeat purchases, sale windows and cross-sell to the existing base.",
+        "ru": "Retention: новинки, повторные покупки, sale-окна и cross-sell по существующей базе."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/womens-clothing/screenshot-03.webp",
+        "alt": {
+          "uk": "Архітектура рекламних кампаній жіночого одягу в Meta Ads Manager",
+          "en": "Women’s clothing ad campaign architecture in Meta Ads Manager",
+          "ru": "Архитектура рекламных кампаний женской одежды в Meta Ads Manager"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / Direct sales",
+          "en": "Screenshot 1 — E-commerce / Direct sales",
+          "ru": "Скриншот 1 — E-commerce / Direct sales"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "У цій ніші оголошення фактично замінювало примірочну: важливішими за загальний lifestyle були рух тканини, крупні плани, готовий образ, колір і зрозуміла ціна. Креативи будували серіями — одна модель речі в різних кольорах, кілька сценаріїв носіння та швидкий CTA написати свій розмір у Direct.",
+        "en": "In this niche, the ad effectively replaced the fitting room: fabric movement, close-ups, a complete look, color and a clear price mattered more than general lifestyle. Creatives were built in series — one item in different colors, several ways to wear it and a quick CTA to message your size in Direct.",
+        "ru": "В этой нише объявление фактически заменяло примерочную: важнее общего lifestyle были движение ткани, крупные планы, готовый образ, цвет и понятная цена. Креативы строили сериями — одна модель вещи в разных цветах, несколько сценариев ношения и быстрый CTA написать свой размер в Direct."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/womens-clothing/screenshot-04.webp",
+        "alt": {
+          "uk": "Креативна стратегія рекламних кампаній жіночого одягу в Meta Ads Manager",
+          "en": "Women’s clothing ad campaign creative strategy in Meta Ads Manager",
+          "ru": "Креативная стратегия рекламных кампаний женской одежды в Meta Ads Manager"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / Direct sales",
+          "en": "Screenshot 1 — E-commerce / Direct sales",
+          "ru": "Скриншот 1 — E-commerce / Direct sales"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "На рівні кампаній порівнювали вартість діалогу, швидкість відповіді менеджера та якість запитів. Частота 5.44 за довгий період показує необхідність постійної ротації: нова колекція, новий візуальний сценарій і нові аудиторії, а не нескінченний показ одного поста.",
+        "en": "At the campaign level, we compared cost per conversation, manager response speed and inquiry quality. A frequency of 5.44 over a long period shows the need for constant rotation: a new collection, a new visual scenario and new audiences, not endless impressions of one post.",
+        "ru": "На уровне кампаний сравнивали стоимость диалога, скорость ответа менеджера и качество запросов. Частота 5.44 за длительный период показывает необходимость постоянной ротации: новая коллекция, новый визуальный сценарий и новые аудитории, а не бесконечный показ одного поста."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$30.59",
+            "en": "$30.59",
+            "ru": "$30.59"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$917.70",
+            "en": "$917.70",
+            "ru": "$917.70"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "ціна діалогу",
+            "en": "cost per conversation",
+            "ru": "цена диалога"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 210 287 показів / 30 днів",
+            "en": "≈ 210,287 impressions / 30 days",
+            "ru": "≈ 210 287 показов / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "90-денний бюджет $2 753.10 за історичним темпом $30.59 на день. Розподіл: cold 50%, Direct/engaged 25%, ретаргет 15%, тести 10%.",
+        "en": "90-day budget of $2,753.10 at the historical pace of $30.59 a day. Split: cold 50%, Direct/engaged 25%, retargeting 15%, tests 10%.",
+        "ru": "90-дневный бюджет $2 753.10 по историческому темпу $30.59 в день. Распределение: cold 50%, Direct/engaged 25%, ретаргет 15%, тесты 10%."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "$11.9 тис. бюджету були спрямовані на продажі колекцій через Instagram Direct. У рекламному кабінеті змішані кліки та початки переписки, а експорт продажів відсутній — тому кейс не перетворює всі результати на замовлення і не розраховує виручку без підтверджених оплат.",
+        "en": "$11.9k of budget went into selling collections via Instagram Direct. The ad account mixes clicks and conversation starts, and there’s no sales export — so the case doesn’t turn all results into orders or calculate revenue without confirmed payments.",
+        "ru": "$11.9 тыс. бюджета были направлены на продажи коллекций через Instagram Direct. В рекламном кабинете смешаны клики и начала переписки, а экспорт продаж отсутствует — поэтому кейс не превращает все результаты в заказы и не рассчитывает выручку без подтверждённых оплат."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/womens-clothing/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет жіночого одягу — скріншот 1",
+          "en": "Women’s clothing ad account — screenshot 1",
+          "ru": "Рекламный кабинет женской одежды — скриншот 1"
+        },
+        "caption": {
+          "uk": "1 / 4",
+          "en": "1 / 4",
+          "ru": "1 / 4"
+        }
+      },
+      {
+        "image": "cases/content/womens-clothing/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний кабінет жіночого одягу — скріншот 2",
+          "en": "Women’s clothing ad account — screenshot 2",
+          "ru": "Рекламный кабинет женской одежды — скриншот 2"
+        },
+        "caption": {
+          "uk": "2 / 4",
+          "en": "2 / 4",
+          "ru": "2 / 4"
+        }
+      },
+      {
+        "image": "cases/content/womens-clothing/screenshot-03.webp",
+        "alt": {
+          "uk": "Рекламний кабінет жіночого одягу — скріншот 3",
+          "en": "Women’s clothing ad account — screenshot 3",
+          "ru": "Рекламный кабинет женской одежды — скриншот 3"
+        },
+        "caption": {
+          "uk": "3 / 4",
+          "en": "3 / 4",
+          "ru": "3 / 4"
+        }
+      },
+      {
+        "image": "cases/content/womens-clothing/screenshot-04.webp",
+        "alt": {
+          "uk": "Рекламний кабінет жіночого одягу — скріншот 4",
+          "en": "Women’s clothing ad account — screenshot 4",
+          "ru": "Рекламный кабинет женской одежды — скриншот 4"
+        },
+        "caption": {
+          "uk": "4 / 4",
+          "en": "4 / 4",
+          "ru": "4 / 4"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/womens-clothing-instagram-shop.webp",
+  "imageCard": "cases/card/womens-clothing-instagram-shop.webp"
+}

@@ -1,0 +1,25 @@
+{
+  "order": 63,
+  "originalId": 64,
+  "id": "web-service-saas",
+  "number": "64",
+  "source": "website",
+  "niche": "saas",
+  "category": {
+    "uk": "Web-app",
+    "en": "Web-app",
+    "ru": "Web-app"
+  },
+  "categoryColor": "#FFC629",
+  "platform": "Website",
+  "title": {
+    "uk": "Веб-сервіс / SaaS",
+    "en": "Web service / SaaS",
+    "ru": "Веб-сервис / SaaS"
+  },
+  "description": {
+    "uk": "Особистий кабінет і дашборд для онлайн-сервісу.",
+    "en": "A user account area and dashboard for an online service.",
+    "ru": "Личный кабинет и дашборд для онлайн-сервиса."
+  }
+}

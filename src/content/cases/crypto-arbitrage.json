@@ -1,0 +1,446 @@
+{
+  "order": 45,
+  "originalId": 46,
+  "id": "crypto-arbitrage",
+  "number": "46",
+  "source": "google",
+  "niche": "crypto",
+  "category": {
+    "uk": "Крипта та фінанси",
+    "en": "Crypto & finance",
+    "ru": "Крипта и финансы"
+  },
+  "categoryColor": "#FFA63D",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Google Ads → Telegram / PH, ZA, NZ+",
+    "en": "Google Ads → Telegram / PH, ZA, NZ+",
+    "ru": "Google Ads → Telegram / PH, ZA, NZ+"
+  },
+  "title": {
+    "uk": "Криптоарбітраж",
+    "en": "Crypto arbitrage",
+    "ru": "Криптоарбитраж"
+  },
+  "description": {
+    "uk": "4 240 кліків із пошуку по ₴10.06 за CTR 4.99% — верхня частина воронки під Telegram-канал.",
+    "en": "4,240 search clicks at ₴10.06 with a 4.99% CTR — the top of the funnel for a Telegram channel.",
+    "ru": "4 240 кликов из поиска по ₴10.06 при CTR 4.99% — верх воронки под Telegram-канал."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "4 240 кліків",
+        "en": "4,240 clicks",
+        "ru": "4 240 кликов"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC ₴10.06",
+        "en": "CPC ₴10.06",
+        "ru": "CPC ₴10.06"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "CTR 4.99%",
+        "en": "CTR 4.99%",
+        "ru": "CTR 4.99%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "₴42 600",
+        "en": "₴42,600",
+        "ru": "₴42 600"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Кліки",
+          "en": "Clicks",
+          "ru": "Клики"
+        },
+        "value": {
+          "uk": "4 240",
+          "en": "4,240",
+          "ru": "4 240"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Покази",
+          "en": "Impressions",
+          "ru": "Показы"
+        },
+        "value": {
+          "uk": "84 900",
+          "en": "84,900",
+          "ru": "84 900"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "₴10.06",
+          "en": "₴10.06",
+          "ru": "₴10.06"
+        },
+        "note": {
+          "uk": "інтерфейс кабінету",
+          "en": "account interface",
+          "ru": "интерфейс кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "CTR",
+          "en": "CTR",
+          "ru": "CTR"
+        },
+        "value": {
+          "uk": "4.99%",
+          "en": "4.99%",
+          "ru": "4.99%"
+        },
+        "note": {
+          "uk": "розрахунок кліки / покази",
+          "en": "calculated as clicks / impressions",
+          "ru": "расчёт клики / показы"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "кластери за усвідомленістю",
+        "en": "clusters by awareness level",
+        "ru": "кластеры по осознанности"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "₴42 600",
+            "en": "₴42,600",
+            "ru": "₴42 600"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "4 240 кліків",
+            "en": "4,240 clicks",
+            "ru": "4 240 кликов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "PH, ZA, NZ та інші ринки",
+            "en": "PH, ZA, NZ and other markets",
+            "ru": "PH, ZA, NZ и другие рынки"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "84 900",
+            "en": "84,900",
+            "ru": "84 900"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: вивантаження Google Ads",
+        "en": "Account total for the whole period · basis: Google Ads export",
+        "ru": "Итог кабинета за весь срок · основа: выгрузка Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Ціль — залучати зацікавлену аудиторію в Telegram-канал або гібридну воронку «сайт + канал» за темою криптоарбітражу. Тестувалися міжнародні ринки, включно з Філіппінами, Південною Африкою та Новою Зеландією. На окремих зв’язках внутрішня аналітика каналу показувала середню вартість підписника близько $2. Google Ads тут працював насамперед як джерело контрольованого пошукового трафіку, тому скріншот підтверджує верхню частину воронки — покази, кліки, CTR, CPC і витрати, а вартість підписника належить до окремої Telegram-аналітики й не підміняється метрикою кліка.",
+      "en": "The goal was to bring an interested audience into a Telegram channel or a hybrid “website + channel” funnel on crypto arbitrage. International markets were tested, including the Philippines, South Africa and New Zealand. On certain funnels, the channel’s internal analytics showed an average cost per subscriber of about $2. Google Ads served primarily as a source of controlled search traffic here, so the screenshot confirms the top of the funnel — impressions, clicks, CTR, CPC and spend — while cost per subscriber comes from separate Telegram analytics and isn’t substituted with a click metric.",
+      "ru": "Цель — привлекать заинтересованную аудиторию в Telegram-канал или гибридную воронку «сайт + канал» по теме криптоарбитража. Тестировались международные рынки, включая Филиппины, Южную Африку и Новую Зеландию. На отдельных связках внутренняя аналитика канала показывала среднюю стоимость подписчика около $2. Google Ads здесь работал прежде всего как источник контролируемого поискового трафика, поэтому скриншот подтверждает верхнюю часть воронки — показы, клики, CTR, CPC и расходы, а стоимость подписчика относится к отдельной Telegram-аналитике и не подменяется метрикой клика."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/crypto-arbitrage/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для криптоарбітражної Telegram-воронки",
+          "en": "Google Ads results for a crypto arbitrage Telegram funnel",
+          "ru": "Результаты Google Ads для криптоарбитражной Telegram-воронки"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Google Ads → Telegram / PH, ZA, NZ+",
+          "en": "Screenshot 1 — Google Ads → Telegram / PH, ZA, NZ+",
+          "ru": "Скриншот 1 — Google Ads → Telegram / PH, ZA, NZ+"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Семантику розділили за мотивами користувача: пошук арбітражних можливостей, навчання, зв’язки між майданчиками, інструменти та контент для практиків. Таке розділення не змішувало новачків, інформаційний трафік і аудиторію з вираженим наміром перейти в Telegram.",
+      "en": "Keywords were split by user motive: finding arbitrage opportunities, learning, cross-platform funnels, tools and content for practitioners. This split kept beginners, informational traffic and users with clear intent to move to Telegram from being mixed together.",
+      "ru": "Семантику разделили по мотивам пользователя: поиск арбитражных возможностей, обучение, связки между площадками, инструменты и контент для практиков. Такое разделение не смешивало новичков, информационный трафик и аудиторию с выраженным намерением перейти в Telegram."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Кластери запитів під різні рівні усвідомленості, з виключенням формулювань, які дають цікавість без переходу в Telegram.",
+        "en": "Query clusters for different awareness levels, excluding phrasings that bring curiosity without a move to Telegram.",
+        "ru": "Кластеры запросов под разные уровни осознанности, с исключением формулировок, которые дают любопытство без перехода в Telegram."
+      },
+      {
+        "uk": "Локалізація повідомлень під ринок і мову — універсальний англомовний текст не використовувався як єдина версія.",
+        "en": "Messages localized for each market and language — a universal English text wasn’t used as the only version.",
+        "ru": "Локализация сообщений под рынок и язык — универсальный англоязычный текст не использовался как единственная версия."
+      },
+      {
+        "uk": "Пряма та гібридна механіка: частину аудиторії переводили в канал одразу, частину — після проміжного пояснення офера на сайті.",
+        "en": "Direct and hybrid mechanics: part of the audience went straight to the channel, part after an intermediate explanation of the offer on the website.",
+        "ru": "Прямая и гибридная механика: часть аудитории переводили в канал сразу, часть — после промежуточного объяснения оффера на сайте."
+      },
+      {
+        "uk": "Оцінка за зв’язкою «клік → перехід у Telegram → підписка → активність», а не лише за CPC.",
+        "en": "Evaluation by the “click → move to Telegram → subscription → activity” chain, not just CPC.",
+        "ru": "Оценка по связке «клик → переход в Telegram → подписка → активность», а не только по CPC."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Оголошення писалися під конкретний рівень усвідомленості: новачку пояснювали механіку, практику — давали інструмент. Такий підхід дорожчий у виробництві, але саме він утримував CTR близько 4.99% — показник хорошого збігу оголошення зі сформованим пошуковим попитом.",
+        "en": "Ads were written for a specific awareness level: beginners got the mechanics explained, practitioners got a tool. This approach costs more to produce, but it’s what kept CTR at about 4.99% — a sign of a good match between the ad and existing search demand.",
+        "ru": "Объявления писались под конкретный уровень осознанности: новичку объясняли механику, практику — давали инструмент. Такой подход дороже в производстве, но именно он удерживал CTR около 4.99% — показатель хорошего совпадения объявления со сформированным поисковым спросом."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Дешевий трафік без утримання не дає бізнес-результату, тому рішення приймали за всією послідовністю, а не за ціною кліка. Середній CPC ₴10.06 дозволив отримати близько 4.24 тис. переходів і зібрати достатній масив даних для порівняння GEO, запитів і посадкових сценаріїв. Важливе обмеження: у наданому скріншоті стовпець конверсій не показаний, тому кейс не приписує Google Ads кількість підписників або CPL, яких немає в інтерфейсі. Орієнтир близько $2 за підписника зберігається як окремий результат внутрішньої Telegram-аналітики.",
+        "en": "Cheap traffic without retention doesn’t produce a business result, so decisions were based on the whole sequence, not click cost. An average CPC of ₴10.06 brought about 4.24k clicks and enough data to compare geos, queries and landing scenarios. An important limitation: the conversions column isn’t shown in the screenshot provided, so the case doesn’t attribute to Google Ads a number of subscribers or a CPL that isn’t in the interface. The benchmark of about $2 per subscriber is kept as a separate result from internal Telegram analytics.",
+        "ru": "Дешёвый трафик без удержания не даёт бизнес-результата, поэтому решения принимали по всей последовательности, а не по цене клика. Средний CPC ₴10.06 позволил получить около 4.24 тыс. переходов и собрать достаточный массив данных для сравнения GEO, запросов и посадочных сценариев. Важное ограничение: на предоставленном скриншоте столбец конверсий не показан, поэтому кейс не приписывает Google Ads количество подписчиков или CPL, которых нет в интерфейсе. Ориентир около $2 за подписчика сохраняется как отдельный результат внутренней Telegram-аналитики."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "₴1 500",
+            "en": "₴1,500",
+            "ru": "₴1 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "₴45 000",
+            "en": "₴45,000",
+            "ru": "₴45 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "₴10.06",
+            "en": "₴10.06",
+            "ru": "₴10.06"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 4 470 кліків",
+            "en": "≈ 4,470 clicks",
+            "ru": "≈ 4 470 кликов"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні середнього CPC ₴10.06. Конверсії у вихідному вивантаженні не показані.",
+        "en": "30-day projection at the average CPC of ₴10.06. Conversions aren’t shown in the source export.",
+        "ru": "Расчёт на 30 дней при сохранении среднего CPC ₴10.06. Конверсии в исходной выгрузке не показаны."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Кампанії отримали близько 4 240 кліків при 84 900 показах і витратах ₴42 600. Розрахунковий CTR — 4.99%, середня ціна кліка в інтерфейсі — ₴10.06. Це підтверджена верхня частина воронки; вартість підписника близько $2 на окремих зв’язках проходить за внутрішньою аналітикою каналу й навмисно не змішується з рекламною метрикою.",
+        "en": "The campaigns got about 4,240 clicks from 84,900 impressions on ₴42,600 in spend. Calculated CTR: 4.99%; average cost per click in the interface: ₴10.06. This is the confirmed top of the funnel; the cost per subscriber of about $2 on certain funnels comes from the channel’s internal analytics and is deliberately not mixed with the ad metric.",
+        "ru": "Кампании получили около 4 240 кликов при 84 900 показах и расходах ₴42 600. Расчётный CTR — 4.99%, средняя цена клика в интерфейсе — ₴10.06. Это подтверждённая верхняя часть воронки; стоимость подписчика около $2 на отдельных связках идёт по внутренней аналитике канала и намеренно не смешивается с рекламной метрикой."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/crypto-arbitrage/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для криптоарбітражної Telegram-воронки",
+          "en": "Google Ads results for a crypto arbitrage Telegram funnel",
+          "ru": "Результаты Google Ads для криптоарбитражной Telegram-воронки"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/crypto-arbitrage.jpg",
+  "imageCard": "cases/card/crypto-arbitrage.webp"
+}

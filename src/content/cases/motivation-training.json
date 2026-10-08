@@ -1,0 +1,445 @@
+{
+  "order": 10,
+  "originalId": 11,
+  "id": "motivation-training",
+  "number": "11",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Масштабний набір реєстрацій",
+    "en": "Large-scale registration drive",
+    "ru": "Масштабный набор регистраций"
+  },
+  "title": {
+    "uk": "Тренінг з мотивації",
+    "en": "Motivation training",
+    "ru": "Тренинг по мотивации"
+  },
+  "description": {
+    "uk": "Бюджет $625/день: завдання не знайти дешеву аудиторію, а втримати CPL при вигоранні креативів.",
+    "en": "A $625/day budget: the task was not to find a cheap audience, but to hold CPL as creatives burned out.",
+    "ru": "Бюджет $625/день: задача не найти дешёвую аудиторию, а удержать CPL при выгорании креативов."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "≈ 20 833",
+        "en": "≈ 20,833",
+        "ru": "≈ 20 833"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.15–$0.31",
+        "en": "CPC $0.15–$0.31",
+        "ru": "CPC $0.15–$0.31"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "685–697 лідів/день",
+        "en": "685–697 leads/day",
+        "ru": "685–697 лидов/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$18 666.15",
+        "en": "$18,666.15",
+        "ru": "$18 666.15"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.15–$0.31",
+          "en": "$0.15–$0.31",
+          "ru": "$0.15–$0.31"
+        },
+        "note": {
+          "uk": "12,3–24,8 RUB / 80",
+          "en": "12.3–24.8 RUB / 80",
+          "ru": "12,3–24,8 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$0.90",
+          "en": "$0.90",
+          "ru": "$0.90"
+        },
+        "note": {
+          "uk": "72 RUB / 80",
+          "en": "72 RUB / 80",
+          "ru": "72 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$625",
+          "en": "$625",
+          "ru": "$625"
+        },
+        "note": {
+          "uk": "50 000 RUB / 80",
+          "en": "50,000 RUB / 80",
+          "ru": "50 000 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "685–697 заявок",
+          "en": "685–697 leads",
+          "ru": "685–697 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "117 кампаній",
+        "en": "117 campaigns",
+        "ru": "117 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$18 666.15",
+            "en": "$18,666.15",
+            "ru": "$18 666.15"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "36 624 кліки за посиланням",
+            "en": "36,624 link clicks",
+            "ru": "36 624 клика по ссылке"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "1 391 866",
+            "en": "1,391,866",
+            "ru": "1 391 866"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "4 158 742",
+            "en": "4,158,742",
+            "ru": "4 158 742"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: 1 493 291,95 ₽ / 80 — підсумок кабінету",
+        "en": "Account total for the whole period · basis: 1,493,291.95 ₽ / 80 — account total",
+        "ru": "Итог кабинета за весь срок · основа: 1 493 291,95 ₽ / 80 — итог кабинета"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Це кейс не про локальний тест, а про масштаб. При бюджеті $625 на день ключова проблема — не знайти одну дешеву аудиторію, а утримувати CPL при постійному зростанні частоти й вигоранні креативів.",
+      "en": "This case isn’t about a local test, it’s about scale. At $625 a day, the key problem isn’t finding one cheap audience but holding CPL as frequency keeps rising and creatives burn out.",
+      "ru": "Это кейс не о локальном тесте, а о масштабе. При бюджете $625 в день ключевая проблема — не найти одну дешёвую аудиторию, а удерживать CPL при постоянном росте частоты и выгорании креативов."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/motivation-training/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній тренінгу з мотивації",
+          "en": "Motivation training ad campaign results",
+          "ru": "Результаты рекламных кампаний тренинга по мотивации"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Масштабна лідогенерація",
+          "en": "Screenshot 1 — Large-scale lead generation",
+          "ru": "Скриншот 1 — Масштабная лидогенерация"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Спершу визначалася контрольна зв’язка на обмеженій частині бюджету. Після підтвердження CPL масштабування йшло ступенями: розширення аудиторій, дублювання переможців в окремі групи та щоденне додавання нових креативних кутів.",
+      "en": "First, a control funnel was identified on a limited share of the budget. Once CPL was confirmed, scaling went in steps: broadening audiences, duplicating winners into separate ad sets and adding new creative angles every day.",
+      "ru": "Сначала определялась контрольная связка на ограниченной части бюджета. После подтверждения CPL масштабирование шло ступенями: расширение аудиторий, дублирование победителей в отдельные группы и ежедневное добавление новых креативных углов."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Core-кампанія на широку аудиторію з основним обсягом бюджету.",
+        "en": "Core campaign for a broad audience with the bulk of the budget.",
+        "ru": "Core-кампания на широкую аудиторию с основным объёмом бюджета."
+      },
+      {
+        "uk": "Пули інтересів і look-alike як додаткові джерела масштабу.",
+        "en": "Interest pools and lookalikes as additional sources of scale.",
+        "ru": "Пулы интересов и look-alike как дополнительные источники масштаба."
+      },
+      {
+        "uk": "Окрема кампанія ретаргетингу на залучених і відвідувачів лендингу.",
+        "en": "A separate retargeting campaign for engaged users and landing page visitors.",
+        "ru": "Отдельная кампания ретаргетинга на вовлечённых и посетителей лендинга."
+      },
+      {
+        "uk": "Резерв 15–20% бюджету на постійний тест нових оголошень.",
+        "en": "A 15–20% budget reserve for continuous testing of new ads.",
+        "ru": "Резерв 15–20% бюджета на постоянный тест новых объявлений."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креативна матриця включала біль, бажану трансформацію, авторитет спікера, програму та дедлайн. Це дозволяло змінювати не лише картинку, а й сам мотив реєстрації.",
+        "en": "The creative matrix covered pain, the desired transformation, the speaker’s authority, the program and the deadline. This made it possible to change not only the image but the very motive for registering.",
+        "ru": "Креативная матрица включала боль, желаемую трансформацию, авторитет спикера, программу и дедлайн. Это позволяло менять не только картинку, но и сам мотив регистрации."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Щодня контролювалися CPL, частота, темп витрат і розподіл лідів за зв’язками. Масштабування зупинялося при зростанні CPL, після чого в кампанію заходив новий пакет креативів.",
+        "en": "CPL, frequency, spend pace and lead distribution across funnels were monitored daily. Scaling paused when CPL rose, after which a new creative pack went into the campaign.",
+        "ru": "Ежедневно контролировались CPL, частота, темп расходов и распределение лидов по связкам. Масштабирование останавливалось при росте CPL, после чего в кампанию заходил новый пакет креативов."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$625",
+            "en": "$625",
+            "ru": "$625"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$18 750",
+            "en": "$18,750",
+            "ru": "$18 750"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.90",
+            "en": "$0.90",
+            "ru": "$0.90"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 20 833 заявок",
+            "en": "≈ 20,833 leads",
+            "ru": "≈ 20 833 заявки"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 20 550–20 910 заявок за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 20,550–20,910 leads in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 20 550–20 910 заявок за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Кампанія утримувала заявку близько $0.90 і генерувала 685–697 лідів на день. Тут особливо сильна математична узгодженість: бюджет і CPL дають приблизно той самий обсяг.",
+        "en": "The campaign held the cost per lead at about $0.90 and generated 685–697 leads a day. The math is especially consistent here: budget and CPL give roughly the same volume.",
+        "ru": "Кампания удерживала заявку около $0.90 и генерировала 685–697 лидов в день. Здесь особенно сильная математическая согласованность: бюджет и CPL дают примерно тот же объём."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/motivation-training/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній тренінгу з мотивації",
+          "en": "Motivation training ad campaign results",
+          "ru": "Результаты рекламных кампаний тренинга по мотивации"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/motivation-training.webp",
+  "imageCard": "cases/card/motivation-training.webp"
+}

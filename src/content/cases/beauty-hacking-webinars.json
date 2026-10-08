@@ -1,0 +1,707 @@
+{
+  "order": 21,
+  "originalId": 22,
+  "id": "beauty-hacking-webinars",
+  "number": "22",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Ірина Міхіна / додатковий підрядник",
+    "en": "Iryna Mikhina / additional contractor",
+    "ru": "Ирина Михина / дополнительный подрядчик"
+  },
+  "title": {
+    "uk": "Вебінари Beauty Hacking",
+    "en": "Beauty Hacking webinars",
+    "ru": "Вебинары Beauty Hacking"
+  },
+  "description": {
+    "uk": "Трафік-підрядник через маркетолога, без прямого контакту з клієнтом.",
+    "en": "Traffic contractor via the marketer, with no direct contact with the client.",
+    "ru": "Трафик-подрядчик через маркетолога, без прямого контакта с клиентом."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього лідів",
+        "en": "Total leads",
+        "ru": "Всего лидов"
+      },
+      "value": {
+        "uk": "10 882",
+        "en": "10,882",
+        "ru": "10 882"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "ROI",
+        "en": "ROI",
+        "ru": "ROI"
+      },
+      "value": {
+        "uk": "245%",
+        "en": "245%",
+        "ru": "245%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Конверсія сторінки",
+        "en": "Page conversion rate",
+        "ru": "Конверсия страницы"
+      },
+      "value": {
+        "uk": "64.21%",
+        "en": "64.21%",
+        "ru": "64.21%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$12 543.41",
+        "en": "$12,543.41",
+        "ru": "$12 543.41"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$12 543.41",
+          "en": "$12,543.41",
+          "ru": "$12 543.41"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "10 882",
+          "en": "10,882",
+          "ru": "10 882"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$1.15",
+          "en": "$1.15",
+          "ru": "$1.15"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "64.21%",
+          "en": "64.21%",
+          "ru": "64.21%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "685%",
+          "en": "685%",
+          "ru": "685%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "245%",
+          "en": "245%",
+          "ru": "245%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Першоджерело: 1 003 473.12 ₽ і 92.2 ₽/лід",
+          "en": "Source: 1,003,473.12 ₽ and 92.2 ₽/lead",
+          "ru": "Первоисточник: 1 003 473.12 ₽ и 92.2 ₽/лид"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "11 матеріалів кампаній",
+        "en": "11 campaign materials",
+        "ru": "11 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$12 543.41",
+            "en": "$12,543.41",
+            "ru": "$12 543.41"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "10 882 лідів",
+            "en": "10,882 leads",
+            "ru": "10 882 лида"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Проєкт уже залучав до 150 лідів на день, але зі збільшенням обсягу зростала ціна. Креативи не забезпечували стабільної системи, сайт і аналітика періодично ламали вимірювання. Додаткова складність — відсутність прямого доступу до клієнта: рішення проходили через маркетолога.",
+      "en": "The project was already bringing in up to 150 leads a day, but cost rose as volume grew. The creatives weren’t a stable system, and the website and analytics periodically broke tracking. An extra complication: no direct access to the client — decisions went through the marketer.",
+      "ru": "Проект уже привлекал до 150 лидов в день, но с ростом объёма росла цена. Креативы не обеспечивали стабильной системы, сайт и аналитика периодически ломали измерение. Дополнительная сложность — отсутствие прямого доступа к клиенту: решения проходили через маркетолога."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/beauty-hacking/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільових аудиторій проєкту Beauty Hacking",
+          "en": "Beauty Hacking target audience segmentation",
+          "ru": "Сегментация целевых аудиторий проекта Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Сегментація аудиторій та опрацювання портретів клієнтів",
+          "en": "Screenshot 1 — Audience segmentation and customer personas",
+          "ru": "Скриншот 1 — Сегментация аудиторий и проработка портретов клиентов"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий матеріал дослідження аудиторії Beauty Hacking",
+          "en": "Beauty Hacking audience research — second material",
+          "ru": "Второй материал исследования аудитории Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Аналіз сегментів і мотивації цільової аудиторії",
+          "en": "Screenshot 2 — Analysis of target audience segments and motivation",
+          "ru": "Скриншот 2 — Анализ сегментов и мотивации целевой аудитории"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-03.webp",
+        "alt": {
+          "uk": "Третій матеріал підготовки рекламної стратегії Beauty Hacking",
+          "en": "Beauty Hacking ad strategy preparation — third material",
+          "ru": "Третий материал подготовки рекламной стратегии Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Підготовка аудиторій та рекламних гіпотез",
+          "en": "Screenshot 3 — Preparing audiences and ad hypotheses",
+          "ru": "Скриншот 3 — Подготовка аудиторий и рекламных гипотез"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Узгодили короткий формат постановки задач і єдиний звіт, щоб компенсувати відсутність прямого контакту. Перевірили посадкову сторінку, події та трактування реєстрацій. Розділили креативи за мотивами аудиторії: зовнішній результат, професійна техніка, економія часу та експертність. Відокремили тестові бюджети від обсягу та зафіксували правило вимкнення за цільовим CPL. Повернули масштаб через системне оновлення матеріалів, а не через неконтрольоване збільшення бюджету.",
+      "en": "We agreed on a short task format and a single report to make up for the lack of direct contact. We checked the landing page, events and how registrations were counted. We split creatives by audience motive: visible result, professional technique, saving time and expertise. We separated test budgets from volume budgets and set a rule for switching off by target CPL. We brought back scale through systematic material refreshes, not uncontrolled budget increases.",
+      "ru": "Согласовали короткий формат постановки задач и единый отчёт, чтобы компенсировать отсутствие прямого контакта. Проверили посадочную страницу, события и трактовку регистраций. Разделили креативы по мотивам аудитории: внешний результат, профессиональная техника, экономия времени и экспертность. Отделили тестовые бюджеты от объёма и зафиксировали правило отключения по целевому CPL. Вернули масштаб через системное обновление материалов, а не через неконтролируемое увеличение бюджета."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/beauty-hacking/screenshot-04.webp",
+        "alt": {
+          "uk": "Рекламний креатив Beauty Hacking для власників beauty-бізнесу",
+          "en": "Beauty Hacking ad creative for beauty business owners",
+          "ru": "Рекламный креатив Beauty Hacking для владельцев beauty-бизнеса"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Креатив для залучення власників і спеціалістів beauty-бізнесу",
+          "en": "Screenshot 1 — Creative for attracting beauty business owners and specialists",
+          "ru": "Скриншот 1 — Креатив для привлечения владельцев и специалистов beauty-бизнеса"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-05.webp",
+        "alt": {
+          "uk": "Другий рекламний матеріал Beauty Hacking",
+          "en": "Beauty Hacking — second ad material",
+          "ru": "Второй рекламный материал Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Варіація рекламного креативу та тестування оферу",
+          "en": "Screenshot 2 — Ad creative variation and offer testing",
+          "ru": "Скриншот 2 — Вариация рекламного креатива и тестирование оффера"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-06.webp",
+        "alt": {
+          "uk": "Третій рекламний матеріал Beauty Hacking",
+          "en": "Beauty Hacking — third ad material",
+          "ru": "Третий рекламный материал Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Креативна гіпотеза для окремого сегмента аудиторії",
+          "en": "Screenshot 3 — A creative hypothesis for a separate audience segment",
+          "ru": "Скриншот 3 — Креативная гипотеза для отдельного сегмента аудитории"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Основна кампанія на реєстрацію із широким ядром аудиторії.",
+        "en": "Main registration campaign with a broad core audience.",
+        "ru": "Основная кампания на регистрацию с широким ядром аудитории."
+      },
+      {
+        "uk": "Контрольні сегменти за інтересами beauty та професійним навчанням.",
+        "en": "Control segments by beauty interests and professional training.",
+        "ru": "Контрольные сегменты по интересам beauty и профессиональному обучению."
+      },
+      {
+        "uk": "Ретаргетинг відвідувачів і залучених із програмою вебінару та дедлайном.",
+        "en": "Retargeting of visitors and engaged users with the webinar program and deadline.",
+        "ru": "Ретаргетинг посетителей и вовлечённых с программой вебинара и дедлайном."
+      },
+      {
+        "uk": "Окремі набори для нових креативів, щоб тест не руйнував стабільну кампанію.",
+        "en": "Separate ad sets for new creatives so testing wouldn’t disrupt the stable campaign.",
+        "ru": "Отдельные наборы для новых креативов, чтобы тест не разрушал стабильную кампанию."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/beauty-hacking/screenshot-07.webp",
+        "alt": {
+          "uk": "Посадкова сторінка Beauty Hacking для власників beauty-бізнесу",
+          "en": "Beauty Hacking landing page for beauty business owners",
+          "ru": "Посадочная страница Beauty Hacking для владельцев beauty-бизнеса"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Посадкова сторінка та структура оферу Beauty Hacking",
+          "en": "Screenshot 1 — Beauty Hacking landing page and offer structure",
+          "ru": "Скриншот 1 — Посадочная страница и структура оффера Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-08.webp",
+        "alt": {
+          "uk": "Другий матеріал рекламної архітектури Beauty Hacking",
+          "en": "Beauty Hacking ad architecture — second material",
+          "ru": "Второй материал рекламной архитектуры Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Структура кампанії та робота з аудиторіями",
+          "en": "Screenshot 2 — Campaign structure and audience work",
+          "ru": "Скриншот 2 — Структура кампании и работа с аудиториями"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-09.webp",
+        "alt": {
+          "uk": "Третій матеріал рекламної архітектури Beauty Hacking",
+          "en": "Beauty Hacking ad architecture — third material",
+          "ru": "Третий материал рекламной архитектуры Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Ретаргетинг і логіка масштабування рекламної кампанії",
+          "en": "Screenshot 3 — Retargeting and campaign scaling logic",
+          "ru": "Скриншот 3 — Ретаргетинг и логика масштабирования рекламной кампании"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Оголошення показували конкретну трансформацію та зрозумілу навичку, яку учасник отримає після ефіру. За відсутності прямої комунікації з експертом особливо важливими були структуровані ТЗ: теза, візуальний доказ, обмеження обіцянки та CTA.",
+        "en": "The ads showed a specific transformation and a clear skill the participant would get after the broadcast. With no direct communication with the expert, structured briefs were especially important: the key message, visual proof, limits on the promise and the CTA.",
+        "ru": "Объявления показывали конкретную трансформацию и понятный навык, который участник получит после эфира. При отсутствии прямой коммуникации с экспертом особенно важны были структурированные ТЗ: тезис, визуальное доказательство, ограничение обещания и CTA."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/beauty-hacking/screenshot-10.webp",
+        "alt": {
+          "uk": "Схема креативної стратегії та сегментації аудиторій Beauty Hacking",
+          "en": "Beauty Hacking creative strategy and audience segmentation diagram",
+          "ru": "Схема креативной стратегии и сегментации аудиторий Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Креативна стратегія, сегментація аудиторій та система оферів",
+          "en": "Screenshot 1 — Creative strategy, audience segmentation and offer system",
+          "ru": "Скриншот 1 — Креативная стратегия, сегментация аудиторий и система офферов"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-11.webp",
+        "alt": {
+          "uk": "Другий матеріал креативної стратегії Beauty Hacking",
+          "en": "Beauty Hacking creative strategy — second material",
+          "ru": "Второй материал креативной стратегии Beauty Hacking"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Структура креативних гіпотез і робота з рекламними оферами",
+          "en": "Screenshot 2 — Creative hypothesis structure and work with ad offers",
+          "ru": "Скриншот 2 — Структура креативных гипотез и работа с рекламными офферами"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Кожен етап оцінювали в однаковому вікні атрибуції. При зростанні вартості перевіряли три причини: вигорання оголошень, падіння конверсії сторінки та розширення на менш якісну аудиторію. Масштаб повертали лише після визначення причини.",
+        "en": "Each stage was evaluated in the same attribution window. When costs rose, we checked three causes: ad burnout, a drop in page conversion and expansion into a lower-quality audience. Scale was restored only once the cause was identified.",
+        "ru": "Каждый этап оценивали в одинаковом окне атрибуции. При росте стоимости проверяли три причины: выгорание объявлений, падение конверсии страницы и расширение на менее качественную аудиторию. Масштаб возвращали только после определения причины."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "150 лідів/день",
+            "en": "150 leads/day",
+            "ru": "150 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$5 175 → $4 500",
+            "en": "$5,175 → $4,500",
+            "ru": "$5 175 → $4 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.15",
+            "en": "$1.15",
+            "ru": "$1.15"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. Для зіставлення 1 003 473.12 ₽ і 92.2 ₽ переведено за курсом 80 ₽/$1. На скріншоті звіту також зустрічається загальний показник 14 425 лідів; підсумковий слайд використовує 10 882. Без вивантаження за визначенням метрик вони не об’єднуються.",
+        "en": "Data check. For comparison, 1,003,473.12 ₽ and 92.2 ₽ were converted at 80 ₽/$1. The report screenshot also shows a total of 14,425 leads; the summary slide uses 10,882. Without an export clarifying the metric definitions, they aren’t combined.",
+        "ru": "Проверка данных. Для сопоставления 1 003 473.12 ₽ и 92.2 ₽ переведены по курсу 80 ₽/$1. На скриншоте отчёта также встречается общий показатель 14 425 лидов; итоговый слайд использует 10 882. Без выгрузки с определением метрик они не объединяются."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Перерахований бюджет становив $12,54 тис., середня вартість ліда — близько $1.15, а конверсія сторінки — 64.21%. Кейс демонструє, що структурований процес може працювати навіть при комунікації через проміжного маркетолога.",
+        "en": "The converted budget was $12.54k, the average cost per lead about $1.15 and page conversion 64.21%. The case shows that a structured process can work even when communicating through an intermediary marketer.",
+        "ru": "Пересчитанный бюджет составил $12,54 тыс., средняя стоимость лида — около $1.15, а конверсия страницы — 64.21%. Кейс показывает, что структурированный процесс может работать даже при коммуникации через промежуточного маркетолога."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/beauty-hacking/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація аудиторій Beauty Hacking",
+          "en": "Beauty Hacking audience segmentation",
+          "ru": "Сегментация аудиторий Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний креатив Beauty Hacking",
+          "en": "Beauty Hacking ad creative",
+          "ru": "Рекламный креатив Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-03.webp",
+        "alt": {
+          "uk": "Варіація рекламного креативу Beauty Hacking",
+          "en": "Beauty Hacking ad creative variation",
+          "ru": "Вариация рекламного креатива Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-04.webp",
+        "alt": {
+          "uk": "Креатив із фінансовим планом для beauty-бізнесу",
+          "en": "Creative with a financial plan for a beauty business",
+          "ru": "Креатив с финансовым планом для beauty-бизнеса"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-05.webp",
+        "alt": {
+          "uk": "Рекламні матеріали Beauty Hacking",
+          "en": "Beauty Hacking ad materials",
+          "ru": "Рекламные материалы Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-06.webp",
+        "alt": {
+          "uk": "Робочі матеріали кампанії Beauty Hacking",
+          "en": "Beauty Hacking campaign working materials",
+          "ru": "Рабочие материалы кампании Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-07.webp",
+        "alt": {
+          "uk": "Посадкова сторінка Beauty Hacking",
+          "en": "Beauty Hacking landing page",
+          "ru": "Посадочная страница Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-08.webp",
+        "alt": {
+          "uk": "Матеріали рекламної кампанії Beauty Hacking",
+          "en": "Beauty Hacking ad campaign materials",
+          "ru": "Материалы рекламной кампании Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-09.webp",
+        "alt": {
+          "uk": "Структура рекламної кампанії Beauty Hacking",
+          "en": "Beauty Hacking ad campaign structure",
+          "ru": "Структура рекламной кампании Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-10.webp",
+        "alt": {
+          "uk": "Схема сегментації та рекламних оферів Beauty Hacking",
+          "en": "Beauty Hacking segmentation and ad offers diagram",
+          "ru": "Схема сегментации и рекламных офферов Beauty Hacking"
+        }
+      },
+      {
+        "image": "cases/content/beauty-hacking/screenshot-11.webp",
+        "alt": {
+          "uk": "Структура креативних гіпотез Beauty Hacking",
+          "en": "Beauty Hacking creative hypothesis structure",
+          "ru": "Структура креативных гипотез Beauty Hacking"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/beauty-hacking-webinars.webp",
+  "imageCard": "cases/card/beauty-hacking-webinars.webp"
+}

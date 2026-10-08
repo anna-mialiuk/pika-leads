@@ -1,0 +1,64 @@
+{
+  "order": 54,
+  "originalId": 55,
+  "id": "tiktok-online-school",
+  "number": "55",
+  "source": "tiktok",
+  "niche": "webinars",
+  "category": {
+    "uk": "Інфобізнес",
+    "en": "Online education",
+    "ru": "Инфобизнес"
+  },
+  "categoryColor": "#FE2C55",
+  "platform": "TikTok",
+  "kicker": {
+    "uk": "TikTok Ads / Онлайн-освіта",
+    "en": "TikTok Ads / Online education",
+    "ru": "TikTok Ads / Онлайн-образование"
+  },
+  "title": {
+    "uk": "Онлайн-школа",
+    "en": "Online school",
+    "ru": "Онлайн-школа"
+  },
+  "description": {
+    "uk": "Стабільний набір на вебінари через рекламні зв'язки TikTok та лід-форми.",
+    "en": "A steady stream of webinar sign-ups through TikTok ad funnels and lead forms.",
+    "ru": "Стабильный набор на вебинары через рекламные связки TikTok и лид-формы."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "за лід",
+        "en": "per lead",
+        "ru": "за лид"
+      },
+      "value": {
+        "uk": "$1.9",
+        "en": "$1.9",
+        "ru": "$1.9"
+      },
+      "type": "pink"
+    },
+    {
+      "label": {
+        "uk": "заявок",
+        "en": "leads",
+        "ru": "заявок"
+      },
+      "value": {
+        "uk": "8 200",
+        "en": "8,200",
+        "ru": "8 200"
+      },
+      "type": "pink"
+    }
+  ],
+  "visualGradient": "linear-gradient(135deg, #FE2C55 0%, #D95780 32%, #6BCED0 68%, #25F4EE 100%)",
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  }
+}

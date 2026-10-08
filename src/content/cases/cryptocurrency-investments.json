@@ -1,0 +1,446 @@
+{
+  "order": 47,
+  "originalId": 48,
+  "id": "cryptocurrency-investments",
+  "number": "48",
+  "source": "google",
+  "niche": "crypto",
+  "category": {
+    "uk": "Крипта та фінанси",
+    "en": "Crypto & finance",
+    "ru": "Крипта и финансы"
+  },
+  "categoryColor": "#FFA63D",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Google Ads → Telegram / депозитна воронка",
+    "en": "Google Ads → Telegram / deposit funnel",
+    "ru": "Google Ads → Telegram / депозитная воронка"
+  },
+  "title": {
+    "uk": "Інвестиції в криптовалюту",
+    "en": "Cryptocurrency investments",
+    "ru": "Инвестиции в криптовалюту"
+  },
+  "description": {
+    "uk": "1 240 конверсій по $5.73 з контролем нижньої частини воронки — близько 7% переходу в депозит.",
+    "en": "1,240 conversions at $5.73 with control over the bottom of the funnel — about 7% converting to a deposit.",
+    "ru": "1 240 конверсий по $5.73 с контролем нижней части воронки — около 7% перехода в депозит."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "1 240 конверсій",
+        "en": "1,240 conversions",
+        "ru": "1 240 конверсий"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPA $5.73",
+        "en": "CPA $5.73",
+        "ru": "CPA $5.73"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "≈7% у депозит",
+        "en": "≈7% to deposit",
+        "ru": "≈7% в депозит"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$7 100",
+        "en": "$7,100",
+        "ru": "$7 100"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$7 100",
+          "en": "$7,100",
+          "ru": "$7 100"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсії",
+          "en": "Conversions",
+          "ru": "Конверсии"
+        },
+        "value": {
+          "uk": "1 240",
+          "en": "1,240",
+          "ru": "1 240"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPA",
+          "en": "CPA",
+          "ru": "CPA"
+        },
+        "value": {
+          "uk": "$5.73",
+          "en": "$5.73",
+          "ru": "$5.73"
+        },
+        "note": {
+          "uk": "$7 100 / 1 240",
+          "en": "$7,100 / 1,240",
+          "ru": "$7 100 / 1 240"
+        }
+      },
+      {
+        "label": {
+          "uk": "Перехід у депозит",
+          "en": "Conversion to deposit",
+          "ru": "Переход в депозит"
+        },
+        "value": {
+          "uk": "≈ 7%",
+          "en": "≈ 7%",
+          "ru": "≈ 7%"
+        },
+        "note": {
+          "uk": "дані команди, ≈87 депозитів",
+          "en": "team data, ≈87 deposits",
+          "ru": "данные команды, ≈87 депозитов"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "квіз + депозитна воронка",
+        "en": "quiz + deposit funnel",
+        "ru": "квиз + депозитная воронка"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$7 100",
+            "en": "$7,100",
+            "ru": "$7 100"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "1 240 конверсій",
+            "en": "1,240 conversions",
+            "ru": "1 240 конверсий"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "Туреччина",
+            "en": "Turkey",
+            "ru": "Турция"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "6,01 млн",
+            "en": "6.01M",
+            "ru": "6,01 млн"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: вивантаження Google Ads",
+        "en": "Account total for the whole period · basis: Google Ads export",
+        "ru": "Итог кабинета за весь срок · основа: выгрузка Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Інвестиційний напрям працював на Туреччину через квізову та депозитну модель. Ціллю була не просто підписка або перехід у Telegram, а глибша дія у воронці з подальшою конверсією користувача в депозит. Потрібно було утримати вартість первинної конверсії в діапазоні $5–6 і паралельно контролювати нижню частину: дешевий лід без наступного кроку добре виглядає в кабінеті, але не створює цінності для бізнесу.",
+      "en": "The investment direction targeted Turkey through a quiz and deposit model. The goal wasn’t just a subscription or a move to Telegram, but a deeper action in the funnel with the user then converting to a deposit. We had to hold the initial conversion cost at $5–6 while also monitoring the bottom of the funnel: a cheap lead with no next step looks good in the account but creates no value for the business.",
+      "ru": "Инвестиционное направление работало на Турцию через квизовую и депозитную модель. Целью была не просто подписка или переход в Telegram, а более глубокое действие в воронке с последующей конверсией пользователя в депозит. Нужно было удержать стоимость первичной конверсии в диапазоне $5–6 и параллельно контролировать нижнюю часть: дешёвый лид без следующего шага хорошо выглядит в кабинете, но не создаёт ценности для бизнеса."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/cryptocurrency-investments/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для інвестиційної криптовалютної воронки в Туреччині",
+          "en": "Google Ads results for a cryptocurrency investment funnel in Turkey",
+          "ru": "Результаты Google Ads для инвестиционной криптовалютной воронки в Турции"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Google Ads → Telegram / депозитна воронка / Туреччина",
+          "en": "Screenshot 1 — Google Ads → Telegram / deposit funnel / Turkey",
+          "ru": "Скриншот 1 — Google Ads → Telegram / депозитная воронка / Турция"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Рекламний трафік сегментували за рівнем наміру: загальний інтерес до криптовалют, пошук інвестиційних можливостей і більш сформований запит на конкретний формат участі. Квіз використовувався для попередньої кваліфікації та пояснення наступного кроку до переходу користувача в депозитну частину.",
+      "en": "Ad traffic was segmented by intent level: general interest in crypto, searching for investment opportunities and a more defined request for a specific participation format. The quiz was used for pre-qualification and to explain the next step before the user moved to the deposit part.",
+      "ru": "Рекламный трафик сегментировали по уровню намерения: общий интерес к криптовалютам, поиск инвестиционных возможностей и более сформированный запрос на конкретный формат участия. Квиз использовался для предварительной квалификации и объяснения следующего шага до перехода пользователя в депозитную часть."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Розділення інформаційного та комерційного попиту, щоб загальний інтерес до крипти не розмивав кампанії під цільову дію.",
+        "en": "Separating informational and commercial demand so general crypto interest wouldn’t dilute the target-action campaigns.",
+        "ru": "Разделение информационного и коммерческого спроса, чтобы общий интерес к крипте не размывал кампании под целевое действие."
+      },
+      {
+        "uk": "Адаптація оголошень і квіза під турецький ринок: мова, аргументація, порядок питань, формулювання наступного кроку.",
+        "en": "Adapting ads and the quiz for the Turkish market: language, reasoning, question order and how the next step is phrased.",
+        "ru": "Адаптация объявлений и квиза под турецкий рынок: язык, аргументация, порядок вопросов, формулировка следующего шага."
+      },
+      {
+        "uk": "Послідовна оцінка воронки: клік → конверсія Google Ads → кваліфікація → депозит.",
+        "en": "Step-by-step funnel evaluation: click → Google Ads conversion → qualification → deposit.",
+        "ru": "Последовательная оценка воронки: клик → конверсия Google Ads → квалификация → депозит."
+      },
+      {
+        "uk": "Масштабування тільки тих зв’язок, які тримали CPA $5–6 і прийнятну частку переходу в депозит.",
+        "en": "Scaling only the funnels that held a $5–6 CPA and an acceptable deposit rate.",
+        "ru": "Масштабирование только тех связок, которые держали CPA $5–6 и приемлемую долю перехода в депозит."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Квіз виконував подвійну роботу: кваліфікував користувача й заздалегідь пояснював, що буде далі. В інвестиційній ніші це знижує частку випадкових заявок сильніше, ніж будь-яке додаткове звуження таргетингу.",
+        "en": "The quiz did double duty: it qualified the user and explained in advance what would happen next. In the investment niche, this cuts the share of random leads more than any extra narrowing of targeting.",
+        "ru": "Квиз выполнял двойную работу: квалифицировал пользователя и заранее объяснял, что будет дальше. В инвестиционной нише это снижает долю случайных заявок сильнее, чем любое дополнительное сужение таргетинга."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "За 1 240 зафіксованих конверсій і орієнтирі 7% розрахункова кількість депозитних дій — близько 87. Це аналітична оцінка, а не число зі скріншота, і вона не подається як підтверджений показник кабінету без CRM-вивантаження. Головний висновок: кампанія утримувала первинну вартість у робочому діапазоні $5–6 і сформувала достатній обсяг для оптимізації нижньої частини воронки — для інвест-напряму це сильніше, ніж окремий показник дешевого кліка.",
+        "en": "With 1,240 recorded conversions and a 7% benchmark, the calculated number of deposit actions is about 87. This is an analytical estimate, not a number from the screenshot, and it isn’t presented as a confirmed account metric without a CRM export. The main takeaway: the campaign held the initial cost within the working $5–6 range and built enough volume to optimize the bottom of the funnel — for an investment product, that matters more than a standalone cheap-click metric.",
+        "ru": "При 1 240 зафиксированных конверсиях и ориентире 7% расчётное количество депозитных действий — около 87. Это аналитическая оценка, а не число со скриншота, и она не подаётся как подтверждённый показатель кабинета без CRM-выгрузки. Главный вывод: кампания удерживала первичную стоимость в рабочем диапазоне $5–6 и сформировала достаточный объём для оптимизации нижней части воронки — для инвест-направления это сильнее, чем отдельный показатель дешёвого клика."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$240",
+            "en": "$240",
+            "ru": "$240"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$7 200",
+            "en": "$7,200",
+            "ru": "$7 200"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$5.73",
+            "en": "$5.73",
+            "ru": "$5.73"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 1 250 конверсій",
+            "en": "≈ 1,250 conversions",
+            "ru": "≈ 1 250 конверсий"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "CPA $5.73 підтверджується арифметикою: $7 100 / 1 240. Показник ≈7% у депозит наданий командою й не відображений на скріншоті.",
+        "en": "The $5.73 CPA is confirmed by arithmetic: $7,100 / 1,240. The ≈7% deposit rate was provided by the team and isn’t shown in the screenshot.",
+        "ru": "CPA $5.73 подтверждается арифметикой: $7 100 / 1 240. Показатель ≈7% в депозит предоставлен командой и не отражён на скриншоте."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Google Ads зафіксував близько 34 400 кліків і 1 240 конверсій при витратах $7 100. Розрахунковий CPC — $0.21, CPA — $5.73, співвідношення конверсій до кліків — близько 3.60%. За даними команди, приблизно 7% цільових конверсій переходили в депозит — розрахунково близько 87 депозитних дій.",
+        "en": "Google Ads recorded about 34,400 clicks and 1,240 conversions on $7,100 in spend. Calculated CPC: $0.21; CPA: $5.73; conversion-to-click ratio: about 3.60%. According to the team, about 7% of target conversions went on to deposit — roughly 87 deposit actions.",
+        "ru": "Google Ads зафиксировал около 34 400 кликов и 1 240 конверсий при расходах $7 100. Расчётный CPC — $0.21, CPA — $5.73, соотношение конверсий к кликам — около 3.60%. По данным команды, примерно 7% целевых конверсий переходили в депозит — расчётно около 87 депозитных действий."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/cryptocurrency-investments/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для інвестиційної криптовалютної воронки в Туреччині",
+          "en": "Google Ads results for a cryptocurrency investment funnel in Turkey",
+          "ru": "Результаты Google Ads для инвестиционной криптовалютной воронки в Турции"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/cryptocurrency-investments.jpg",
+  "imageCard": "cases/card/cryptocurrency-investments.webp"
+}

@@ -1,0 +1,514 @@
+{
+  "order": 26,
+  "originalId": 27,
+  "id": "childrens-sugar-webinar",
+  "number": "27",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Анастасія Комиш / антикризове підключення",
+    "en": "Anastasiia Komysh / crisis takeover",
+    "ru": "Анастасия Комыш / антикризисное подключение"
+  },
+  "title": {
+    "uk": "Вебінар «Дитячий цукор»",
+    "en": "“Kids and Sugar” webinar",
+    "ru": "Вебинар «Детский сахар»"
+  },
+  "description": {
+    "uk": "Перехоплення проєкту після зникнення попереднього таргетолога.",
+    "en": "Taking over the project after the previous targeting specialist disappeared.",
+    "ru": "Перехват проекта после исчезновения предыдущего таргетолога."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього лідів",
+        "en": "Total leads",
+        "ru": "Всего лидов"
+      },
+      "value": {
+        "uk": "34 981",
+        "en": "34,981",
+        "ru": "34 981"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "ROI",
+        "en": "ROI",
+        "ru": "ROI"
+      },
+      "value": {
+        "uk": "761%",
+        "en": "761%",
+        "ru": "761%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Конверсія сторінки",
+        "en": "Page conversion rate",
+        "ru": "Конверсия страницы"
+      },
+      "value": {
+        "uk": "67.87–71.54%",
+        "en": "67.87–71.54%",
+        "ru": "67.87–71.54%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$3 916.84",
+        "en": "$3,916.84",
+        "ru": "$3 916.84"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$3 916.84",
+          "en": "$3,916.84",
+          "ru": "$3 916.84"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "34 981",
+          "en": "34,981",
+          "ru": "34 981"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$0.112",
+          "en": "$0.112",
+          "ru": "$0.112"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "67.87–71.54%",
+          "en": "67.87–71.54%",
+          "ru": "67.87–71.54%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "1 981%",
+          "en": "1,981%",
+          "ru": "1 981%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "761%",
+          "en": "761%",
+          "ru": "761%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Першоджерело: 313 346.81 ₽ і 8.96 ₽/лід",
+          "en": "Source: 313,346.81 ₽ and 8.96 ₽/lead",
+          "ru": "Первоисточник: 313 346.81 ₽ и 8.96 ₽/лид"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "2 матеріали кампаній",
+        "en": "2 campaign materials",
+        "ru": "2 материала кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$3 916.84",
+            "en": "$3,916.84",
+            "ru": "$3 916.84"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "34 981 лідів",
+            "en": "34,981 leads",
+            "ru": "34 981 лид"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Після раптового відходу спеціаліста потрібно було швидко відновити управління рекламою. Креативи мали потенціал, але не були зібрані в логічну систему оферів. Реєстрація проходила через просту підписку в месенджері; вебінар був сильним за контентом, але продажна частина потребувала доопрацювання. Ціль — 500 лідів на день по 20 ₽.",
+      "en": "After a specialist suddenly left, ad management had to be restored fast. The creatives had potential but weren’t organized into a logical offer system. Registration was a simple messenger subscription; the webinar had strong content, but the sales part needed work. The goal: 500 leads a day at 20 ₽.",
+      "ru": "После внезапного ухода специалиста нужно было быстро восстановить управление рекламой. Креативы имели потенциал, но не были собраны в логичную систему офферов. Регистрация проходила через простую подписку в мессенджере; вебинар был сильным по контенту, но продающая часть требовала доработки. Цель — 500 лидов в день по 20 ₽."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/kids-sugar/screenshot-01.webp",
+        "alt": {
+          "uk": "Схема рекламної воронки вебінару «Дитячий цукор»",
+          "en": "“Kids and Sugar” webinar ad funnel diagram",
+          "ru": "Схема рекламной воронки вебинара «Детский сахар»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — АНАСТАСІЯ КОМИШ / АНТИКРИЗОВЕ ПІДКЛЮЧЕННЯ",
+          "en": "Screenshot 1 — ANASTASIIA KOMYSH / CRISIS TAKEOVER",
+          "ru": "Скриншот 1 — АНАСТАСИЯ КОМЫШ / АНТИКРИЗИСНОЕ ПОДКЛЮЧЕНИЕ"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Провели швидкий аудит доступів, активних кампаній, подій і фактичних витрат. Зберегли робочі візуали, але перебудували їх за логікою проблеми, результату та CTA. Спростили шлях у месенджер і перевірили коректність передачі підписки. Допрацювали перехід від освітньої частини вебінару до оферу. Повернули масштаб із жорстким контролем вартості відносно цілі 20 ₽.",
+      "en": "We ran a quick audit of access, active campaigns, events and actual spend. We kept the working visuals but rebuilt them around problem, result and CTA. We simplified the path into the messenger and checked that subscriptions were being passed correctly. We refined the transition from the webinar’s educational part to the offer. We brought back scale with strict cost control against the 20 ₽ target.",
+      "ru": "Провели быстрый аудит доступов, активных кампаний, событий и фактических расходов. Сохранили рабочие визуалы, но перестроили их по логике проблемы, результата и CTA. Упростили путь в мессенджер и проверили корректность передачи подписки. Доработали переход от образовательной части вебинара к офферу. Вернули масштаб с жёстким контролем стоимости относительно цели 20 ₽."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/kids-sugar/screenshot-02.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній вебінару «Дитячий цукор»",
+          "en": "“Kids and Sugar” webinar ad campaign results",
+          "ru": "Результаты рекламных кампаний вебинара «Детский сахар»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — АНАСТАСІЯ КОМИШ / АНТИКРИЗОВЕ ПІДКЛЮЧЕННЯ",
+          "en": "Screenshot 1 — ANASTASIIA KOMYSH / CRISIS TAKEOVER",
+          "ru": "Скриншот 1 — АНАСТАСИЯ КОМЫШ / АНТИКРИЗИСНОЕ ПОДКЛЮЧЕНИЕ"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Core acquisition: широкі аудиторії з оптимізацією за підпискою/реєстрацією.",
+        "en": "Core acquisition: broad audiences optimized for subscription/registration.",
+        "ru": "Core acquisition: широкие аудитории с оптимизацией на подписку/регистрацию."
+      },
+      {
+        "uk": "Control segments: батьки, харчування дітей, здоров’я сім’ї.",
+        "en": "Control segments: parents, children’s nutrition, family health.",
+        "ru": "Control segments: родители, питание детей, здоровье семьи."
+      },
+      {
+        "uk": "Retarget: залучені користувачі та ті, хто почав шлях у месенджері.",
+        "en": "Retarget: engaged users and those who started the messenger journey.",
+        "ru": "Retarget: вовлечённые пользователи и те, кто начал путь в мессенджере."
+      },
+      {
+        "uk": "Webinar monetization: нагадування, продажний міст, дедлайн і follow-up.",
+        "en": "Webinar monetization: reminders, a sales bridge, the deadline and follow-up.",
+        "ru": "Webinar monetization: напоминания, продающий мост, дедлайн и follow-up."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Тема потребувала обережної подачі. Креативи не залякували батьків, а пояснювали проблему та обіцяли зрозумілу систему дій. Найкращі матеріали поєднували впізнавану ситуацію, авторитет експерта та конкретну користь вебінару.",
+        "en": "The topic required careful handling. The creatives didn’t scare parents; they explained the problem and promised a clear system of action. The best materials combined a recognizable situation, the expert’s authority and the concrete benefit of the webinar.",
+        "ru": "Тема требовала осторожной подачи. Креативы не запугивали родителей, а объясняли проблему и обещали понятную систему действий. Лучшие материалы сочетали узнаваемую ситуацию, авторитет эксперта и конкретную пользу вебинара."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Фактична вартість 8.96 ₽ була більш ніж удвічі нижчою за цільові 20 ₽. Це давало запас для масштабування, але бюджет збільшували тільки після перевірки доходимості та продажної частини, оскільки наддешевий лід сам по собі не гарантує виручку.",
+        "en": "The actual cost of 8.96 ₽ was less than half the 20 ₽ target. That left room for scaling, but the budget was increased only after checking attendance and the sales part, since an ultra-cheap lead doesn’t guarantee revenue on its own.",
+        "ru": "Фактическая стоимость 8.96 ₽ была более чем вдвое ниже целевых 20 ₽. Это давало запас для масштабирования, но бюджет увеличивали только после проверки доходимости и продающей части, поскольку сверхдешёвый лид сам по себе не гарантирует выручку."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "500 лідів/день",
+            "en": "500 leads/day",
+            "ru": "500 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 680 → 15 000",
+            "en": "$1,680 → 15,000",
+            "ru": "$1 680 → 15 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.112",
+            "en": "$0.112",
+            "ru": "$0.112"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. 313 346.81 ₽ перераховано за курсом 80 ₽/$1. Скріншот кабінету показує 313 464.34 ₽ — розходження близько 0.04%; підсумковий слайд прийнято як основний агрегат.",
+        "en": "Data check. 313,346.81 ₽ was converted at 80 ₽/$1. The ad account screenshot shows 313,464.34 ₽ — a discrepancy of about 0.04%; the summary slide is used as the main total.",
+        "ru": "Проверка данных. 313 346.81 ₽ пересчитано по курсу 80 ₽/$1. Скриншот кабинета показывает 313 464.34 ₽ — расхождение около 0.04%; итоговый слайд принят как основной агрегат."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Проєкт отримав майже 35 тис. лідів по 8.96 ₽ ($0.112), значно краще цілі 20 ₽. Сильна конверсія реєстрації до 71.54% і заявлений ROI 761% показують ефект зв’язки дешевого входу, теми з високою актуальністю та доопрацьованого вебінару.",
+        "en": "The project got almost 35k leads at 8.96 ₽ ($0.112), far better than the 20 ₽ target. Strong registration conversion of up to 71.54% and a stated ROI of 761% show the effect of combining a cheap entry point, a highly relevant topic and a refined webinar.",
+        "ru": "Проект получил почти 35 тыс. лидов по 8.96 ₽ ($0.112), значительно лучше цели 20 ₽. Сильная конверсия регистрации до 71.54% и заявленный ROI 761% показывают эффект связки дешёвого входа, темы с высокой актуальностью и доработанного вебинара."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/kids-sugar/screenshot-01.webp",
+        "alt": {
+          "uk": "Схема рекламної воронки вебінару «Дитячий цукор»",
+          "en": "“Kids and Sugar” webinar ad funnel diagram",
+          "ru": "Схема рекламной воронки вебинара «Детский сахар»"
+        }
+      },
+      {
+        "image": "cases/content/kids-sugar/screenshot-02.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній вебінару «Дитячий цукор»",
+          "en": "“Kids and Sugar” webinar ad campaign results",
+          "ru": "Результаты рекламных кампаний вебинара «Детский сахар»"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/childrens-sugar-webinar.webp",
+  "imageCard": "cases/card/childrens-sugar-webinar.webp"
+}

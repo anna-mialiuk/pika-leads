@@ -1,0 +1,667 @@
+{
+  "order": 20,
+  "originalId": 21,
+  "id": "build-your-online-store-masterclass",
+  "number": "21",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Павло Шульга / 30-денний запуск",
+    "en": "Pavlo Shulha / 30-day launch",
+    "ru": "Павел Шульга / 30-дневный запуск"
+  },
+  "title": {
+    "uk": "Майстер-клас «Створи свій інтернет-магазин»",
+    "en": "“Build Your Online Store” master class",
+    "ru": "Мастер-класс «Создай свой интернет-магазин»"
+  },
+  "description": {
+    "uk": "Керівник трафік-команди: координація підрядників, креативів, аналітики та нового сайту.",
+    "en": "Head of the traffic team: coordinating contractors, creatives, analytics and the new website.",
+    "ru": "Руководитель трафик-команды: координация подрядчиков, креативов, аналитики и нового сайта."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього лідів",
+        "en": "Total leads",
+        "ru": "Всего лидов"
+      },
+      "value": {
+        "uk": "1 984",
+        "en": "1,984",
+        "ru": "1 984"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "ROI",
+        "en": "ROI",
+        "ru": "ROI"
+      },
+      "value": {
+        "uk": "204.41%",
+        "en": "204.41%",
+        "ru": "204.41%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Конверсія сторінки",
+        "en": "Page conversion rate",
+        "ru": "Конверсия страницы"
+      },
+      "value": {
+        "uk": "33.58–39.68%",
+        "en": "33.58–39.68%",
+        "ru": "33.58–39.68%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$3 524.49",
+        "en": "$3,524.49",
+        "ru": "$3 524.49"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$3 524.49",
+          "en": "$3,524.49",
+          "ru": "$3 524.49"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "1 984",
+          "en": "1,984",
+          "ru": "1 984"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$1.78",
+          "en": "$1.78",
+          "ru": "$1.78"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "33.58–39.68%",
+          "en": "33.58–39.68%",
+          "ru": "33.58–39.68%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "541%",
+          "en": "541%",
+          "ru": "541%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "204.41%",
+          "en": "204.41%",
+          "ru": "204.41%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Період: 30 днів",
+          "en": "Period: 30 days",
+          "ru": "Период: 30 дней"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "9 матеріалів кампаній",
+        "en": "9 campaign materials",
+        "ru": "9 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$3 524.49",
+            "en": "$3,524.49",
+            "ru": "$3 524.49"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "1 984 лідів",
+            "en": "1,984 leads",
+            "ru": "1 984 лида"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Для беззбитковості проєкту потрібно було понад 600 лідів на день, але до запуску не було стабільного потоку креативів, централізованого управління підрядниками та прозорої аналітики. Сайт також не відповідав завданню масштабування.",
+      "en": "To break even, the project needed over 600 leads a day, but before launch there was no steady flow of creatives, no centralized management of contractors and no transparent analytics. The website also wasn’t fit for scaling.",
+      "ru": "Для безубыточности проекту нужно было более 600 лидов в день, но до запуска не было стабильного потока креативов, централизованного управления подрядчиками и прозрачной аналитики. Сайт также не соответствовал задаче масштабирования."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/master-class/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламні матеріали майстер-класу",
+          "en": "Master class ad materials",
+          "ru": "Рекламные материалы мастер-класса"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Рекламні матеріали та креативи майстер-класу",
+          "en": "Screenshot 1 — Master class ad materials and creatives",
+          "ru": "Скриншот 1 — Рекламные материалы и креативы мастер-класса"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-02.webp",
+        "alt": {
+          "uk": "Креатив майстер-класу з налаштування реклами",
+          "en": "Creative for the ad setup master class",
+          "ru": "Креатив мастер-класса по настройке рекламы"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Приклад рекламного креативу для залучення аудиторії",
+          "en": "Screenshot 2 — Example ad creative for audience acquisition",
+          "ru": "Скриншот 2 — Пример рекламного креатива для привлечения аудитории"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Зафіксували продуктову механіку майстер-класу та зібрали новий лендинг під одну цільову дію. Визначили сегменти: підприємці-початківці, діючі продавці та спеціалісти, які шукають додатковий дохід. Створили лінійку креативів під візуальний бриф, щоб кожен візуал відповідав конкретному запереченню. Розподілили підрядників за зонами відповідальності та запровадили єдиний щоденний звіт. Провели тестовий 30-денний цикл і звірили економіку до оплат.",
+      "en": "We locked in the master class product mechanics and built a new landing page around a single target action. We defined segments: aspiring entrepreneurs, existing sellers and specialists looking for extra income. We created a line of creatives from a visual brief so each visual addressed a specific objection. We assigned contractors to areas of responsibility and introduced a single daily report. We ran a 30-day test cycle and reconciled the economics down to payments.",
+      "ru": "Зафиксировали продуктовую механику мастер-класса и собрали новый лендинг под одно целевое действие. Определили сегменты: начинающие предприниматели, действующие продавцы и специалисты, ищущие дополнительный доход. Создали линейку креативов по визуальному брифу, чтобы каждый визуал отвечал на конкретное возражение. Распределили подрядчиков по зонам ответственности и ввели единый ежедневный отчёт. Провели тестовый 30-дневный цикл и сверили экономику до оплат."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/master-class/screenshot-03.webp",
+        "alt": {
+          "uk": "Рекламний креатив майстер-класу для підприємців",
+          "en": "Master class ad creative for entrepreneurs",
+          "ru": "Рекламный креатив мастер-класса для предпринимателей"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Креатив для залучення підприємців на безкоштовний майстер-клас",
+          "en": "Screenshot 1 — Creative to attract entrepreneurs to a free master class",
+          "ru": "Скриншот 1 — Креатив для привлечения предпринимателей на бесплатный мастер-класс"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-04.webp",
+        "alt": {
+          "uk": "Другий рекламний матеріал майстер-класу",
+          "en": "Master class — second ad material",
+          "ru": "Второй рекламный материал мастер-класса"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Варіація рекламного креативу для тестування оферу",
+          "en": "Screenshot 2 — An ad creative variation for testing the offer",
+          "ru": "Скриншот 2 — Вариация рекламного креатива для тестирования оффера"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Acquisition: широкий трафік і окремі сегменти за наміром відкрити магазин.",
+        "en": "Acquisition: broad traffic plus separate segments by intent to open a store.",
+        "ru": "Acquisition: широкий трафик и отдельные сегменты по намерению открыть магазин."
+      },
+      {
+        "uk": "Landing test: варіанти заголовка, програми та обіцянки результату.",
+        "en": "Landing test: variations of the headline, program and promised result.",
+        "ru": "Landing test: варианты заголовка, программы и обещания результата."
+      },
+      {
+        "uk": "Retarget: відвідувачі без реєстрації та зареєстровані без участі.",
+        "en": "Retarget: visitors who didn’t register and registrants who didn’t attend.",
+        "ru": "Retarget: посетители без регистрации и зарегистрированные без участия."
+      },
+      {
+        "uk": "Sales follow-up: комунікація після майстер-класу з опрацюванням бар’єрів старту.",
+        "en": "Sales follow-up: post–master class communication addressing barriers to getting started.",
+        "ru": "Sales follow-up: коммуникация после мастер-класса с проработкой барьеров старта."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/master-class/screenshot-05.webp",
+        "alt": {
+          "uk": "Посадкова сторінка майстер-класу зі створення інтернет-магазину",
+          "en": "“Build Your Online Store” master class landing page",
+          "ru": "Посадочная страница мастер-класса по созданию интернет-магазина"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Посадкова сторінка та офер майстер-класу",
+          "en": "Screenshot 1 — Master class landing page and offer",
+          "ru": "Скриншот 1 — Посадочная страница и оффер мастер-класса"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-06.webp",
+        "alt": {
+          "uk": "Другий варіант посадкової сторінки майстер-класу",
+          "en": "Master class landing page — second version",
+          "ru": "Второй вариант посадочной страницы мастер-класса"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Тестування структури, програми та оферу посадкової сторінки",
+          "en": "Screenshot 2 — Testing the landing page structure, program and offer",
+          "ru": "Скриншот 2 — Тестирование структуры, программы и оффера посадочной страницы"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креативи продавали не абстрактний «бізнес в інтернеті», а найближчий досяжний результат: обрати нішу, зібрати вітрину та запустити перші продажі. Частина матеріалів працювала на раціональний мотив, частина — на бажання самостійності та нової професії.",
+        "en": "The creatives sold not an abstract “online business” but the nearest achievable result: pick a niche, build a storefront and make the first sales. Some materials worked on the rational motive, others on the desire for independence and a new profession.",
+        "ru": "Креативы продавали не абстрактный «бизнес в интернете», а ближайший достижимый результат: выбрать нишу, собрать витрину и запустить первые продажи. Часть материалов работала на рациональный мотив, часть — на желание самостоятельности и новой профессии."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/master-class/screenshot-07.webp",
+        "alt": {
+          "uk": "Схема трафіку та рекламної воронки майстер-класу",
+          "en": "Master class traffic and ad funnel diagram",
+          "ru": "Схема трафика и рекламной воронки мастер-класса"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Структура трафіку, оферів і рекламної воронки",
+          "en": "Screenshot 1 — Traffic, offer and ad funnel structure",
+          "ru": "Скриншот 1 — Структура трафика, офферов и рекламной воронки"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-08.webp",
+        "alt": {
+          "uk": "Детальна схема рекламної стратегії та ретаргетингу майстер-класу",
+          "en": "Detailed ad strategy and retargeting diagram for the master class",
+          "ru": "Детальная схема рекламной стратегии и ретаргетинга мастер-класса"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Логіка сегментації, ретаргетингу та роботи з аудиторіями",
+          "en": "Screenshot 2 — Segmentation, retargeting and audience logic",
+          "ru": "Скриншот 2 — Логика сегментации, ретаргетинга и работы с аудиториями"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Перші рішення приймали за якістю посадкової сторінки та CPL, потім — за участю й продажами. Головний управлінський висновок: у цій ітерації економіку було підтверджено, але заявленого масштабу 600+ лідів на день ще не досягнуто.",
+        "en": "Early decisions were made based on landing page quality and CPL, later on attendance and sales. The key management takeaway: this iteration confirmed the economics, but the stated scale of 600+ leads a day hasn’t been reached yet.",
+        "ru": "Первые решения принимали по качеству посадочной страницы и CPL, затем — по участию и продажам. Главный управленческий вывод: в этой итерации экономика подтверждена, но заявленный масштаб 600+ лидов в день ещё не достигнут."
+      }
+    },
+    "optimizationScreenshots": [
+      {
+        "image": "cases/content/master-class/screenshot-09.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній майстер-класу в рекламному кабінеті",
+          "en": "Master class ad campaign results in the ad account",
+          "ru": "Результаты рекламных кампаний мастер-класса в рекламном кабинете"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Результати кампаній, вартість ліда та витрати рекламного кабінету",
+          "en": "Screenshot 1 — Campaign results, cost per lead and ad account spend",
+          "ru": "Скриншот 1 — Результаты кампаний, стоимость лида и расходы рекламного кабинета"
+        }
+      }
+    ],
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "600 лідів/день",
+            "en": "600 leads/day",
+            "ru": "600 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$32 040 → $18 000",
+            "en": "$32,040 → $18,000",
+            "ru": "$32 040 → $18 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.78",
+            "en": "$1.78",
+            "ru": "$1.78"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. 600+ лідів на день у джерелі позначено як вимогу беззбитковості, а не досягнутий результат. У цьому документі ціль і факт розділені.",
+        "en": "Data check. In the source, 600+ leads a day is marked as the break-even requirement, not an achieved result. This document keeps target and actual separate.",
+        "ru": "Проверка данных. 600+ лидов в день в источнике обозначено как требование безубыточности, а не достигнутый результат. В этом документе цель и факт разделены."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За 30 днів отримано 1 984 ліди по $1.78 при позитивній економіці. Кейс підтверджує робочу зв’язку та показує чітку точку зростання: наступний етап — не просто збільшити бюджет у дев’ять разів, а розширити аудиторії та креативне виробництво без втрати конверсії.",
+        "en": "In 30 days, we got 1,984 leads at $1.78 with positive economics. The case confirms a working funnel and shows a clear growth point: the next stage isn’t simply a ninefold budget increase, but expanding audiences and creative production without losing conversion.",
+        "ru": "За 30 дней получено 1 984 лида по $1.78 при положительной экономике. Кейс подтверждает рабочую связку и показывает чёткую точку роста: следующий этап — не просто увеличить бюджет в девять раз, а расширить аудитории и креативное производство без потери конверсии."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/master-class/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація аудиторії майстер-класу",
+          "en": "Master class audience segmentation",
+          "ru": "Сегментация аудитории мастер-класса"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний креатив майстер-класу",
+          "en": "Master class ad creative",
+          "ru": "Рекламный креатив мастер-класса"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-03.webp",
+        "alt": {
+          "uk": "Креатив для залучення підприємців",
+          "en": "Creative for attracting entrepreneurs",
+          "ru": "Креатив для привлечения предпринимателей"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-04.webp",
+        "alt": {
+          "uk": "Варіація рекламного креативу",
+          "en": "Ad creative variation",
+          "ru": "Вариация рекламного креатива"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-05.webp",
+        "alt": {
+          "uk": "Посадкова сторінка майстер-класу",
+          "en": "Master class landing page",
+          "ru": "Посадочная страница мастер-класса"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-06.webp",
+        "alt": {
+          "uk": "Робочі матеріали рекламної кампанії",
+          "en": "Ad campaign working materials",
+          "ru": "Рабочие материалы рекламной кампании"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-07.webp",
+        "alt": {
+          "uk": "Робоча комунікація команди",
+          "en": "Team communication",
+          "ru": "Рабочая коммуникация команды"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-08.webp",
+        "alt": {
+          "uk": "Схема трафіку та рекламної воронки",
+          "en": "Traffic and ad funnel diagram",
+          "ru": "Схема трафика и рекламной воронки"
+        }
+      },
+      {
+        "image": "cases/content/master-class/screenshot-09.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній у рекламному кабінеті",
+          "en": "Ad campaign results in the ad account",
+          "ru": "Результаты рекламных кампаний в рекламном кабинете"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/build-your-online-store-masterclass.webp",
+  "imageCard": "cases/card/build-your-online-store-masterclass.webp"
+}

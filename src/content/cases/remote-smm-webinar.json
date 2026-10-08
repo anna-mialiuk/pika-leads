@@ -1,0 +1,644 @@
+{
+  "order": 22,
+  "originalId": 23,
+  "id": "remote-smm-webinar",
+  "number": "23",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Natali Winner / масштаб до 2 000 лідів на день",
+    "en": "Natali Winner / scaling to 2,000 leads a day",
+    "ru": "Natali Winner / масштаб до 2 000 лидов в день"
+  },
+  "title": {
+    "uk": "Вебінар «Віддалений SMM»",
+    "en": "“Remote SMM” webinar",
+    "ru": "Вебинар «Удалённый SMM»"
+  },
+  "description": {
+    "uk": "Додатковий підрядник через маркетолога, відповідальний за високообʼємний трафік.",
+    "en": "Additional contractor via the marketer, responsible for high-volume traffic.",
+    "ru": "Дополнительный подрядчик через маркетолога, отвечающий за высокообъёмный трафик."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього лідів",
+        "en": "Total leads",
+        "ru": "Всего лидов"
+      },
+      "value": {
+        "uk": "99 587",
+        "en": "99,587",
+        "ru": "99 587"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "ROI",
+        "en": "ROI",
+        "ru": "ROI"
+      },
+      "value": {
+        "uk": "354%",
+        "en": "354%",
+        "ru": "354%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Конверсія сторінки",
+        "en": "Page conversion rate",
+        "ru": "Конверсия страницы"
+      },
+      "value": {
+        "uk": "38.9%",
+        "en": "38.9%",
+        "ru": "38.9%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$48 155.19",
+        "en": "$48,155.19",
+        "ru": "$48 155.19"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$48 155.19",
+          "en": "$48,155.19",
+          "ru": "$48 155.19"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "99 587",
+          "en": "99,587",
+          "ru": "99 587"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$0.48",
+          "en": "$0.48",
+          "ru": "$0.48"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "38.9%",
+          "en": "38.9%",
+          "ru": "38.9%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "985%",
+          "en": "985%",
+          "ru": "985%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "354%",
+          "en": "354%",
+          "ru": "354%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Першоджерело: 3 852 415.21 ₽ і 38.7 ₽/лід",
+          "en": "Source: 3,852,415.21 ₽ and 38.7 ₽/lead",
+          "ru": "Первоисточник: 3 852 415.21 ₽ и 38.7 ₽/лид"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "8 матеріалів кампаній",
+        "en": "8 campaign materials",
+        "ru": "8 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$48 155.19",
+            "en": "$48,155.19",
+            "ru": "$48 155.19"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "99 587 лідів",
+            "en": "99,587 leads",
+            "ru": "99 587 лидов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Проєкт отримував до 300 лідів на день, але бізнесу потрібно було близько 2 000. Зростання ставок і бюджету погіршувало вартість, сайт та аналітика потребували контролю, а креативи не були розраховані на постійне вигорання при великому обсязі.",
+      "en": "The project was getting up to 300 leads a day, but the business needed about 2,000. Rising bids and budgets worsened costs, the website and analytics needed monitoring, and the creatives weren’t designed for constant burnout at high volume.",
+      "ru": "Проект получал до 300 лидов в день, но бизнесу нужно было около 2 000. Рост ставок и бюджета ухудшал стоимость, сайт и аналитика требовали контроля, а креативы не были рассчитаны на постоянное выгорание при большом объёме."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/remote-smm/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільових аудиторій вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar target audience segmentation",
+          "ru": "Сегментация целевых аудиторий вебинара «Удалённый SMM»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Сегментація аудиторій та опрацювання портретів клієнтів",
+          "en": "Screenshot 1 — Audience segmentation and customer personas",
+          "ru": "Скриншот 1 — Сегментация аудиторий и проработка портретов клиентов"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий матеріал дослідження аудиторії вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar audience research — second material",
+          "ru": "Второй материал исследования аудитории вебинара «Удалённый SMM»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Аналіз сегментів, мотивації та поведінки цільової аудиторії",
+          "en": "Screenshot 2 — Analysis of target audience segments, motivation and behavior",
+          "ru": "Скриншот 2 — Анализ сегментов, мотивации и поведения целевой аудитории"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Зафіксували єдиний цільовий CPL і мінімальний набір показників якості після реєстрації. Розділили кампанії на стабільний обсяг, тест нових гіпотез і ретаргетинг. Зібрали сегменти навколо зміни професії, віддаленого доходу, навички SMM і більш гнучкого графіка. Налаштували регулярне виробництво креативів і раннє виявлення вигорання. Масштабували через нові аудиторії, акаунти та підтверджені варіанти, не перевантажуючи одну кампанію.",
+      "en": "We set a single target CPL and a minimum set of post-registration quality metrics. We split campaigns into stable volume, testing new hypotheses and retargeting. We built segments around career change, remote income, SMM skills and a more flexible schedule. We set up regular creative production and early burnout detection. We scaled through new audiences, ad accounts and proven variations without overloading a single campaign.",
+      "ru": "Зафиксировали единый целевой CPL и минимальный набор показателей качества после регистрации. Разделили кампании на стабильный объём, тест новых гипотез и ретаргетинг. Собрали сегменты вокруг смены профессии, удалённого дохода, навыка SMM и более гибкого графика. Настроили регулярное производство креативов и раннее выявление выгорания. Масштабировали через новые аудитории, аккаунты и подтверждённые варианты, не перегружая одну кампанию."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/remote-smm/screenshot-03.webp",
+        "alt": {
+          "uk": "Рекламний креатив вебінару «Віддалений SMM» про перехід на фриланс",
+          "en": "“Remote SMM” webinar ad creative about switching to freelancing",
+          "ru": "Рекламный креатив вебинара «Удалённый SMM» о переходе на фриланс"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Креатив із офером переходу на фриланс і віддалену роботу",
+          "en": "Screenshot 1 — Creative with an offer to switch to freelancing and remote work",
+          "ru": "Скриншот 1 — Креатив с оффером перехода на фриланс и удалённую работу"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-04.webp",
+        "alt": {
+          "uk": "Другий рекламний креатив вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar — second ad creative",
+          "ru": "Второй рекламный креатив вебинара «Удалённый SMM»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Варіація рекламного оферу для тестування аудиторії",
+          "en": "Screenshot 2 — An ad offer variation for audience testing",
+          "ru": "Скриншот 2 — Вариация рекламного оффера для тестирования аудитории"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Core scale: широкі кампанії з оптимізацією на реєстрацію.",
+        "en": "Core scale: broad campaigns optimized for registrations.",
+        "ru": "Core scale: широкие кампании с оптимизацией на регистрацию."
+      },
+      {
+        "uk": "Creative lab: обмежені бюджети на тестування нових кутів і форматів.",
+        "en": "Creative lab: limited budgets for testing new angles and formats.",
+        "ru": "Creative lab: ограниченные бюджеты на тестирование новых углов и форматов."
+      },
+      {
+        "uk": "Segment campaigns: новачки, спеціалісти суміжних професій, батьки та аудиторія віддаленої роботи.",
+        "en": "Segment campaigns: beginners, specialists in related professions, parents and the remote-work audience.",
+        "ru": "Segment campaigns: новички, специалисты смежных профессий, родители и аудитория удалённой работы."
+      },
+      {
+        "uk": "Retarget: відвідувачі, залучені користувачі, зареєстровані без відвідування та учасники без оплати.",
+        "en": "Retarget: visitors, engaged users, registrants who didn’t attend and participants who didn’t pay.",
+        "ru": "Retarget: посетители, вовлечённые пользователи, зарегистрированные без посещения и участники без оплаты."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/remote-smm/screenshot-05.webp",
+        "alt": {
+          "uk": "Робоча комунікація команди вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar team communication",
+          "ru": "Рабочая коммуникация команды вебинара «Удалённый SMM»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Технічна координація, налаштування аналітики та рекламної інфраструктури",
+          "en": "Screenshot 1 — Technical coordination, analytics setup and ad infrastructure",
+          "ru": "Скриншот 1 — Техническая координация, настройка аналитики и рекламной инфраструктуры"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-06.webp",
+        "alt": {
+          "uk": "Другий матеріал рекламної архітектури вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar ad architecture — second material",
+          "ru": "Второй материал рекламной архитектуры вебинара «Удалённый SMM»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Робочий процес запуску та масштабування рекламних кампаній",
+          "en": "Screenshot 2 — Ad campaign launch and scaling workflow",
+          "ru": "Скриншот 2 — Рабочий процесс запуска и масштабирования рекламных кампаний"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Масовий продукт потребував широких, але конкретних повідомлень. Варіанти пояснювали, що робить SMM-спеціаліст, який перший результат отримає учасник і чому навчання підходить новачку. Переможний мотив масштабували у відео, статиці, сторіс і різних візуальних сценах.",
+        "en": "A mass-market product needed broad but specific messages. Variations explained what an SMM specialist does, what first result a participant would get and why the training suits a beginner. The winning motive was scaled across video, static, stories and different visual scenes.",
+        "ru": "Массовый продукт требовал широких, но конкретных сообщений. Варианты объясняли, что делает SMM-специалист, какой первый результат получит участник и почему обучение подходит новичку. Победивший мотив масштабировали в видео, статике, сторис и разных визуальных сценах."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/remote-smm/screenshot-07.webp",
+        "alt": {
+          "uk": "Схема креативної та рекламної стратегії вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar creative and ad strategy diagram",
+          "ru": "Схема креативной и рекламной стратегии вебинара «Удалённый SMM»"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Структура рекламної воронки, оферів і роботи з аудиторіями",
+          "en": "Screenshot 1 — Ad funnel, offer and audience structure",
+          "ru": "Скриншот 1 — Структура рекламной воронки, офферов и работы с аудиториями"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-08.webp",
+        "alt": {
+          "uk": "Другий матеріал креативної стратегії вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar creative strategy — second material",
+          "ru": "Второй материал креативной стратегии вебинара «Удалённый SMM»"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Розвиток рекламних гіпотез і логіка масштабування",
+          "en": "Screenshot 2 — Developing ad hypotheses and scaling logic",
+          "ru": "Скриншот 2 — Развитие рекламных гипотез и логика масштабирования"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Ключовим обмеженням була місткість. Тому крім CPL відстежували частоту, розподіл показів і частку бюджету на один креатив. Масштаб відкривали лише за наявності запасу нових матеріалів і справної передачі подій.",
+        "en": "The key constraint was capacity. So besides CPL, we tracked frequency, impression distribution and the share of budget per creative. Scale was opened up only when there was a stock of new materials and event tracking was working properly.",
+        "ru": "Ключевым ограничением была ёмкость. Поэтому помимо CPL отслеживали частоту, распределение показов и долю бюджета на один креатив. Масштаб открывали только при наличии запаса новых материалов и исправной передаче событий."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "2 000 лідів/день",
+            "en": "2,000 leads/day",
+            "ru": "2 000 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$28 800 → $60 000",
+            "en": "$28,800 → $60,000",
+            "ru": "$28 800 → $60 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.48",
+            "en": "$0.48",
+            "ru": "$0.48"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. Рублеві значення перераховано за курсом 80 ₽/$1. Фактичний CPL із бюджету та кількості лідів становить близько $0.484, що узгоджується з округленням джерела.",
+        "en": "Data check. Ruble values were converted at 80 ₽/$1. The actual CPL from budget and lead count is about $0.484, which is consistent with the source’s rounding.",
+        "ru": "Проверка данных. Рублёвые значения пересчитаны по курсу 80 ₽/$1. Фактический CPL из бюджета и количества лидов составляет около $0.484, что согласуется с округлением источника."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Майже 100 тис. лідів було залучено при перерахованому бюджеті $48.16 тис. і CPL близько $0.48. Це один із найсильніших об’ємних кейсів: висока швидкість реєстрацій поєднувалася із заявленою позитивною економікою до оплат.",
+        "en": "Almost 100k leads were acquired on a converted budget of $48.16k at a CPL of about $0.48. This is one of the strongest high-volume cases: a high registration rate combined with the stated positive economics before payouts.",
+        "ru": "Почти 100 тыс. лидов было привлечено при пересчитанном бюджете $48.16 тыс. и CPL около $0.48. Это один из самых сильных объёмных кейсов: высокая скорость регистраций сочеталась с заявленной положительной экономикой до оплат."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/remote-smm/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільової аудиторії вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar target audience segmentation",
+          "ru": "Сегментация целевой аудитории вебинара «Удалённый SMM»"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний матеріал вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar ad material",
+          "ru": "Рекламный материал вебинара «Удалённый SMM»"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-03.webp",
+        "alt": {
+          "uk": "Креатив із офером переходу на фриланс",
+          "en": "Creative with an offer to switch to freelancing",
+          "ru": "Креатив с оффером перехода на фриланс"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-04.webp",
+        "alt": {
+          "uk": "Варіація рекламного креативу для віддаленої роботи",
+          "en": "Ad creative variation for remote work",
+          "ru": "Вариация рекламного креатива для удалённой работы"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-05.webp",
+        "alt": {
+          "uk": "Робоча комунікація та технічне налаштування кампанії",
+          "en": "Team communication and campaign technical setup",
+          "ru": "Рабочая коммуникация и техническая настройка кампании"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-06.webp",
+        "alt": {
+          "uk": "Робочі матеріали рекламної кампанії",
+          "en": "Ad campaign working materials",
+          "ru": "Рабочие материалы рекламной кампании"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-07.webp",
+        "alt": {
+          "uk": "Схема рекламної воронки вебінару «Віддалений SMM»",
+          "en": "“Remote SMM” webinar ad funnel diagram",
+          "ru": "Схема рекламной воронки вебинара «Удалённый SMM»"
+        }
+      },
+      {
+        "image": "cases/content/remote-smm/screenshot-08.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній у рекламному кабінеті",
+          "en": "Ad campaign results in the ad account",
+          "ru": "Результаты рекламных кампаний в рекламном кабинете"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/remote-smm-webinar.webp",
+  "imageCard": "cases/card/remote-smm-webinar.webp"
+}

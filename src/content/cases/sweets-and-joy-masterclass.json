@@ -1,0 +1,602 @@
+{
+  "order": 25,
+  "originalId": 26,
+  "id": "sweets-and-joy-masterclass",
+  "number": "26",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Анна Неймарк / запуск з нуля",
+    "en": "Anna Neimark / launch from scratch",
+    "ru": "Анна Неймарк / запуск с нуля"
+  },
+  "title": {
+    "uk": "Майстер-клас «Солодощі-радощі»",
+    "en": "“Sweets & Joy” master class",
+    "ru": "Мастер-класс «Сладости-радости»"
+  },
+  "description": {
+    "uk": "Повна збірка маркетингового контуру для знайомого клієнта: офер, сайт, сценарії та трафік.",
+    "en": "A complete marketing setup for a client we knew: offer, website, scripts and traffic.",
+    "ru": "Полная сборка маркетингового контура для знакомого клиента: оффер, сайт, сценарии и трафик."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього лідів",
+        "en": "Total leads",
+        "ru": "Всего лидов"
+      },
+      "value": {
+        "uk": "14 561",
+        "en": "14,561",
+        "ru": "14 561"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "ROI",
+        "en": "ROI",
+        "ru": "ROI"
+      },
+      "value": {
+        "uk": "456%",
+        "en": "456%",
+        "ru": "456%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Конверсія сторінки",
+        "en": "Page conversion rate",
+        "ru": "Конверсия страницы"
+      },
+      "value": {
+        "uk": "51.76–55.81%",
+        "en": "51.76–55.81%",
+        "ru": "51.76–55.81%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$2 912.20",
+        "en": "$2,912.20",
+        "ru": "$2 912.20"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$2 912.20",
+          "en": "$2,912.20",
+          "ru": "$2 912.20"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "14 561",
+          "en": "14,561",
+          "ru": "14 561"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$0.20",
+          "en": "$0.20",
+          "ru": "$0.20"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "51.76–55.81%",
+          "en": "51.76–55.81%",
+          "ru": "51.76–55.81%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "1 871%",
+          "en": "1,871%",
+          "ru": "1 871%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "456%",
+          "en": "456%",
+          "ru": "456%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "Трафік розподілявся через 10 кабінетів",
+          "en": "Traffic was distributed across 10 ad accounts",
+          "ru": "Трафик распределялся через 10 кабинетов"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "7 матеріалів кампаній",
+        "en": "7 campaign materials",
+        "ru": "7 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$2 912.20",
+            "en": "$2,912.20",
+            "ru": "$2 912.20"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "14 561 лідів",
+            "en": "14,561 leads",
+            "ru": "14 561 лид"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "На старті не було готових матеріалів, сайту та методології майстер-класу. Потрібно було не лише привести реєстрації, а фактично зібрати продуктову упаковку й сценарій продажу. Бізнесу був потрібен мінімум 300 лідів на день.",
+      "en": "At the start, there were no ready materials, no website and no master class methodology. We didn’t just need to bring in registrations — we effectively had to build the product packaging and the sales script. The business needed at least 300 leads a day.",
+      "ru": "На старте не было готовых материалов, сайта и методологии мастер-класса. Нужно было не только привести регистрации, а фактически собрать продуктовую упаковку и сценарий продажи. Бизнесу был нужен минимум 300 лидов в день."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/sweets/screenshot-01.webp",
+        "alt": {
+          "uk": "Матеріали майстер-класу «Солодощі» Анни Неймарк",
+          "en": "Anna Neimark’s “Sweets” master class materials",
+          "ru": "Материалы мастер-класса «Сладости» Анны Неймарк"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — АННА НЕЙМАРК / ЗАПУСК З НУЛЯ",
+          "en": "Screenshot 1 — ANNA NEIMARK / LAUNCH FROM SCRATCH",
+          "ru": "Скриншот 1 — АННА НЕЙМАРК / ЗАПУСК С НУЛЯ"
+        }
+      },
+      {
+        "image": "cases/content/sweets/screenshot-02.webp",
+        "alt": {
+          "uk": "Візуальні матеріали майстер-класу «Солодощі» Анни Неймарк",
+          "en": "Anna Neimark’s “Sweets” master class visuals",
+          "ru": "Визуальные материалы мастер-класса «Сладости» Анны Неймарк"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — АННА НЕЙМАРК / ЗАПУСК З НУЛЯ",
+          "en": "Screenshot 2 — ANNA NEIMARK / LAUNCH FROM SCRATCH",
+          "ru": "Скриншот 2 — АННА НЕЙМАРК / ЗАПУСК С НУЛЯ"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Сформулювали результат майстер-класу, аудиторії та ключові заперечення. Зібрали структуру лендингу й офери, потім написали сценарій заходу та продажної частини. Підготували креативи навколо готового продукту, емоції від процесу та простоти повторення. Розподілили трафік між десятьма кабінетами, щоб утримувати вартість і знижувати операційний ризик. Синхронізували рекламу, нагадування та продажний блок майстер-класу.",
+      "en": "We defined the master class outcome, the audiences and the key objections. We built the landing page structure and offers, then wrote the event script and the sales part. We prepared creatives around the finished product, the joy of the process and how easy it is to repeat. We spread traffic across ten ad accounts to hold costs and reduce operational risk. We synced the ads, reminders and the sales block of the master class.",
+      "ru": "Сформулировали результат мастер-класса, аудитории и ключевые возражения. Собрали структуру лендинга и офферы, затем написали сценарий мероприятия и продающей части. Подготовили креативы вокруг готового продукта, эмоций от процесса и простоты повторения. Распределили трафик между десятью кабинетами, чтобы удерживать стоимость и снижать операционный риск. Синхронизировали рекламу, напоминания и продающий блок мастер-класса."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/sweets/screenshot-03.webp",
+        "alt": {
+          "uk": "Креативні матеріали майстер-класу Анни Неймарк",
+          "en": "Anna Neimark’s master class creatives",
+          "ru": "Креативные материалы мастер-класса Анны Неймарк"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — АННА НЕЙМАРК / ЗАПУСК З НУЛЯ",
+          "en": "Screenshot 1 — ANNA NEIMARK / LAUNCH FROM SCRATCH",
+          "ru": "Скриншот 1 — АННА НЕЙМАРК / ЗАПУСК С НУЛЯ"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Кілька acquisition-контурів з єдиними naming і UTM.",
+        "en": "Several acquisition loops with unified naming and UTMs.",
+        "ru": "Несколько acquisition-контуров с едиными naming и UTM."
+      },
+      {
+        "uk": "Креативні групи за результатом, емоцією та зручністю формату.",
+        "en": "Creative groups by result, emotion and format convenience.",
+        "ru": "Креативные группы по результату, эмоции и удобству формата."
+      },
+      {
+        "uk": "Ретаргетинг відвідувачів і залучених користувачів перед датою майстер-класу.",
+        "en": "Retargeting of visitors and engaged users before the master class date.",
+        "ru": "Ретаргетинг посетителей и вовлечённых пользователей перед датой мастер-класса."
+      },
+      {
+        "uk": "Після реєстрації: серія нагадувань, підготовчий контент, захід, офер і follow-up.",
+        "en": "After registration: a series of reminders, prep content, the event, the offer and follow-up.",
+        "ru": "После регистрации: серия напоминаний, подготовительный контент, мероприятие, оффер и follow-up."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/sweets/screenshot-04.webp",
+        "alt": {
+          "uk": "Робоча комунікація та підготовка вебінару Анни Неймарк",
+          "en": "Anna Neimark’s webinar: team communication and preparation",
+          "ru": "Рабочая коммуникация и подготовка вебинара Анны Неймарк"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — АННА НЕЙМАРК / ЗАПУСК З НУЛЯ",
+          "en": "Screenshot 1 — ANNA NEIMARK / LAUNCH FROM SCRATCH",
+          "ru": "Скриншот 1 — АННА НЕЙМАРК / ЗАПУСК С НУЛЯ"
+        }
+      },
+      {
+        "image": "cases/content/sweets/screenshot-05.webp",
+        "alt": {
+          "uk": "Другий матеріал архітектури рекламних кампаній Анни Неймарк",
+          "en": "Anna Neimark’s ad campaign architecture — second material",
+          "ru": "Второй материал архитектуры рекламных кампаний Анны Неймарк"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — АННА НЕЙМАРК / ЗАПУСК З НУЛЯ",
+          "en": "Screenshot 2 — ANNA NEIMARK / LAUNCH FROM SCRATCH",
+          "ru": "Скриншот 2 — АННА НЕЙМАРК / ЗАПУСК С НУЛЯ"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Візуал продавав задоволення й відчутний результат: десерт, який учасник зможе повторити. Офер знімав страх складності та відсутності досвіду. Завдяки низькому порогу входу реклама могла працювати широко, а якість посилювалася вже програмою та нагадуваннями.",
+        "en": "The visuals sold enjoyment and a tangible result: a dessert the participant could make themselves. The offer removed the fear of difficulty and lack of experience. Thanks to the low barrier to entry, the ads could run broadly, while quality was reinforced by the program and reminders.",
+        "ru": "Визуал продавал удовольствие и ощутимый результат: десерт, который участник сможет повторить. Оффер снимал страх сложности и отсутствия опыта. Благодаря низкому порогу входа реклама могла работать широко, а качество усиливалось уже программой и напоминаниями."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/sweets/screenshot-06.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній майстер-класу Анни Неймарк",
+          "en": "Anna Neimark’s master class ad campaign results",
+          "ru": "Результаты рекламных кампаний мастер-класса Анны Неймарк"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — АННА НЕЙМАРК / ЗАПУСК З НУЛЯ",
+          "en": "Screenshot 1 — ANNA NEIMARK / LAUNCH FROM SCRATCH",
+          "ru": "Скриншот 1 — АННА НЕЙМАРК / ЗАПУСК С НУЛЯ"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Десять кабінетів вимагали суворої дисципліни: єдині назви, ліміти, антидублювання та спільний звіт. Переможців переносили між контурами обережно, щоб не вважати одну аудиторію незалежним новим джерелом.",
+        "en": "Ten ad accounts required strict discipline: unified names, caps, de-duplication and a shared report. Winners were moved between loops carefully so as not to treat the same audience as an independent new source.",
+        "ru": "Десять кабинетов требовали строгой дисциплины: единые названия, лимиты, антидублирование и общий отчёт. Победителей переносили между контурами осторожно, чтобы не считать одну аудиторию независимым новым источником."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "300 лідів/день",
+            "en": "300 leads/day",
+            "ru": "300 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 800 → 9 000",
+            "en": "$1,800 → 9,000",
+            "ru": "$1 800 → 9 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.20",
+            "en": "$0.20",
+            "ru": "$0.20"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. Підсумковий агрегат взято з PDF. Скріншот одного кабінету показує лише частину обсягу; джерело окремо вказує розподіл трафіку через 10 кабінетів.",
+        "en": "Data check. The final total is taken from the PDF. A screenshot of one ad account shows only part of the volume; the source separately notes traffic was distributed across 10 accounts.",
+        "ru": "Проверка данных. Итоговый агрегат взят из PDF. Скриншот одного кабинета показывает лишь часть объёма; источник отдельно указывает распределение трафика через 10 кабинетов."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "При бюджеті $2.91 тис. отримано 14.56 тис. лідів по $0.20, а конверсія сторінки перевищувала 51%. Кейс особливо цінний тим, що реклама була не окремою послугою: команда зібрала продукт, воронку, креативи та операційну структуру.",
+        "en": "On a $2.91k budget, 14.56k leads were acquired at $0.20, and page conversion exceeded 51%. The case is especially valuable because the ads weren’t a standalone service: the team built the product, funnel, creatives and operational structure.",
+        "ru": "При бюджете $2.91 тыс. получено 14.56 тыс. лидов по $0.20, а конверсия страницы превышала 51%. Кейс особенно ценен тем, что реклама не была отдельной услугой: команда собрала продукт, воронку, креативы и операционную структуру."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/sweets/screenshot-01.webp",
+        "alt": {
+          "uk": "Матеріали майстер-класу Анни Неймарк",
+          "en": "Anna Neimark’s master class materials",
+          "ru": "Материалы мастер-класса Анны Неймарк"
+        }
+      },
+      {
+        "image": "cases/content/sweets/screenshot-02.webp",
+        "alt": {
+          "uk": "Візуальні матеріали запуску Анни Неймарк",
+          "en": "Anna Neimark launch visuals",
+          "ru": "Визуальные материалы запуска Анны Неймарк"
+        }
+      },
+      {
+        "image": "cases/content/sweets/screenshot-03.webp",
+        "alt": {
+          "uk": "Креативні матеріали майстер-класу Анни Неймарк",
+          "en": "Anna Neimark’s master class creatives",
+          "ru": "Креативные материалы мастер-класса Анны Неймарк"
+        }
+      },
+      {
+        "image": "cases/content/sweets/screenshot-04.webp",
+        "alt": {
+          "uk": "Робоча комунікація команди запуску Анни Неймарк",
+          "en": "Anna Neimark launch team communication",
+          "ru": "Рабочая коммуникация команды запуска Анны Неймарк"
+        }
+      },
+      {
+        "image": "cases/content/sweets/screenshot-05.webp",
+        "alt": {
+          "uk": "Архітектура рекламної воронки майстер-класу",
+          "en": "Master class ad funnel architecture",
+          "ru": "Архитектура рекламной воронки мастер-класса"
+        }
+      },
+      {
+        "image": "cases/content/sweets/screenshot-06.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії майстер-класу",
+          "en": "Master class ad campaign results",
+          "ru": "Результаты рекламной кампании мастер-класса"
+        }
+      }
+    ],
+    "description": {
+      "uk": "АННА НЕЙМАРК / ЗАПУСК З НУЛЯ",
+      "en": "ANNA NEIMARK / LAUNCH FROM SCRATCH",
+      "ru": "АННА НЕЙМАРК / ЗАПУСК С НУЛЯ"
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/sweets-and-joy-masterclass.webp",
+  "imageCard": "cases/card/sweets-and-joy-masterclass.webp"
+}

@@ -1,0 +1,35 @@
+{
+  "order": 6,
+  "id": 7,
+  "initials": {
+    "uk": "AD",
+    "en": "AD",
+    "ru": "AD"
+  },
+  "name": {
+    "uk": "Alla Dresses",
+    "en": "Alla Dresses",
+    "ru": "Alla Dresses"
+  },
+  "category": {
+    "uk": "Просування в Instagram",
+    "en": "Instagram promotion",
+    "ru": "Продвижение в Instagram"
+  },
+  "meta": {
+    "uk": "1 відгук",
+    "en": "1 review",
+    "ru": "1 отзыв"
+  },
+  "badge": {
+    "uk": "На зв'язку 24/7",
+    "en": "Available 24/7",
+    "ru": "На связи 24/7"
+  },
+  "text": {
+    "uk": "«Ми довго шукали хлопців для просування Instagram для своїх проектів, знайшли — і тепер не відпускаємо. Робота робиться завжди вчасно, завжди якісно і завжди на рівні. Бувало таке, що навіть посеред ночі ми телефонували і хлопці вирішували проблему або пояснювали й знімали наші переживання. Працюватимемо далі!»",
+    "en": "“We searched for a long time for a team to promote our projects on Instagram — we found them, and now we’re not letting go. The work is always on time, always high quality and always up to standard. There were times we called even in the middle of the night, and the guys solved the problem or talked us through it and put our minds at ease. We’ll keep working together!”",
+    "ru": "«Мы долго искали ребят для продвижения Instagram своих проектов, нашли — и теперь не отпускаем. Работа делается всегда вовремя, всегда качественно и всегда на уровне. Бывало, что даже посреди ночи мы звонили, и ребята решали проблему или объясняли и снимали наши переживания. Будем работать дальше!»"
+  },
+  "expandable": true
+}

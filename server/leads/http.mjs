@@ -19,21 +19,34 @@ export class HttpError extends Error {
 
 export function readBody(req, limit = 20 * 1024) {
   return new Promise((resolve, reject) => {
-    let raw = "";
+    const chunks = [];
+    let size = 0;
+    let failed = false;
     req.on("data", (chunk) => {
-      raw += chunk;
-      if (raw.length > limit) {
+      if (failed) return;
+      size += chunk.length;
+      if (size > limit) {
+        failed = true;
         reject(new HttpError(413, "Слишком большой запрос"));
-        req.destroy();
+        req.resume();
+        return;
       }
+      chunks.push(chunk);
     });
     req.on("end", () => {
-      if (!raw) return resolve({});
+      if (failed) return;
+      if (!size) return resolve({});
+      let data;
       try {
-        resolve(JSON.parse(raw));
+        data = JSON.parse(Buffer.concat(chunks).toString("utf8"));
       } catch {
-        reject(new HttpError(400, "Некорректный JSON"));
+        return reject(new HttpError(400, "Некорректный JSON"));
       }
+      // очікуємо лише об'єкт
+      if (data === null || typeof data !== "object" || Array.isArray(data)) {
+        return reject(new HttpError(400, "Некорректный запрос"));
+      }
+      resolve(data);
     });
     req.on("error", reject);
   });

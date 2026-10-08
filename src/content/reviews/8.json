@@ -1,0 +1,34 @@
+{
+  "order": 7,
+  "id": 8,
+  "initials": {
+    "uk": "OG",
+    "en": "OG",
+    "ru": "OG"
+  },
+  "name": {
+    "uk": "Oleksiy Gritsay",
+    "en": "Oleksiy Gritsay",
+    "ru": "Oleksiy Gritsay"
+  },
+  "category": {
+    "uk": "Сервіс і супровід",
+    "en": "Service & support",
+    "ru": "Сервис и сопровождение"
+  },
+  "meta": {
+    "uk": "Місцевий експерт · 25 відгуків",
+    "en": "Local Guide · 25 reviews",
+    "ru": "Местный эксперт · 25 отзывов"
+  },
+  "badge": {
+    "uk": "Швидко та якісно",
+    "en": "Fast and high quality",
+    "ru": "Быстро и качественно"
+  },
+  "text": {
+    "uk": "«Сервіс ідеальний, усе швидко та якісно! Щойно розберемося з клієнтами — обов'язково повернуся!»",
+    "en": "“The service is perfect, everything is fast and high quality! As soon as we sort things out with our clients, I’ll definitely be back!”",
+    "ru": "«Сервис идеальный, всё быстро и качественно! Как только разберёмся с клиентами — обязательно вернусь!»"
+  }
+}

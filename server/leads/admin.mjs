@@ -34,6 +34,16 @@ import { HttpError, clientIp, cookieHeader, parseCookies, readBody, send } from 
 import { addComment, createLead, deleteLead, leads, publicLead, setManager, setStatus } from "./leads.mjs";
 import { LEAD_TYPES, STATUSES, isStatus } from "./statuses.mjs";
 import { clean } from "./telegram.mjs";
+import {
+  contentStatus,
+  deleteContent,
+  getContent,
+  listContent,
+  nextNumbers,
+  readImage,
+  reorderContent,
+  saveContent,
+} from "./content.mjs";
 
 const routes = [];
 const route = (method, pattern, options, handler) =>
@@ -372,16 +382,66 @@ route("POST", "/users/(\\d+)/reset-2fa", { admin: true }, ({ res, params }) => {
   return send(res, 200, { user: publicUser(updated) });
 });
 
+// ---------- контент сайту (кейси, блог, відгуки) — лише адміністратор ----------
+const COLLECTION = "(cases|articles|reviews)";
+const ITEM_ID = "([a-z0-9-]{1,80})";
+
+route("GET", "/content/status", { admin: true }, async ({ res }) => send(res, 200, await contentStatus()));
+
+// картинка з репозиторію для <img> (браузер не додає X-Requested-With; cookie SameSite=Strict)
+route("GET", "/content/image", { admin: true, image: true }, async ({ req, res, query }) => {
+  const { buffer, type, etag } = await readImage(String(query.get("path") || ""));
+  if (req.headers["if-none-match"] === etag) {
+    res.writeHead(304, { ETag: etag });
+    return res.end();
+  }
+  res.writeHead(200, {
+    "Content-Type": type,
+    "Content-Length": buffer.length,
+    "Cache-Control": "private, max-age=3600",
+    ETag: etag,
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+  });
+  res.end(buffer);
+});
+
+route("GET", `/content/${COLLECTION}`, { admin: true }, async ({ res, params }) =>
+  send(res, 200, await listContent(params[0])),
+);
+
+route("GET", `/content/${COLLECTION}/new`, { admin: true }, async ({ res, params }) =>
+  send(res, 200, { next: await nextNumbers(params[0]) }),
+);
+
+route("POST", `/content/${COLLECTION}/order`, { admin: true }, async ({ res, params, body, user }) =>
+  send(res, 200, { commit: await reorderContent(params[0], body.ids, user) }),
+);
+
+route("GET", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true }, async ({ res, params }) =>
+  send(res, 200, await getContent(params[0], params[1])),
+);
+
+route("PUT", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true, bodyLimit: 40 * 1024 * 1024 }, async ({ res, params, body, user }) =>
+  send(res, 200, await saveContent(params[0], params[1], body, user)),
+);
+
+route("DELETE", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true }, async ({ res, params, query, user }) =>
+  send(res, 200, { commit: await deleteContent(params[0], params[1], query.get("sha"), user) }),
+);
+
 // ---------- обробник ----------
 export async function handleAdmin(req, res) {
-  if (req.headers["x-requested-with"] !== "pika-admin") {
-    return send(res, 403, { error: "Forbidden" });
-  }
-
   const url = new URL(req.url, "http://localhost");
   const match = routes
     .map((r) => ({ r, m: r.method === req.method && url.pathname.match(r.pattern) }))
     .find(({ m }) => m);
+
+  // захист від CSRF; виняток — GET картинок для <img> (нічого не змінює)
+  const isImage = match?.r.image && req.method === "GET";
+  if (!isImage && req.headers["x-requested-with"] !== "pika-admin") {
+    return send(res, 403, { error: "Forbidden" });
+  }
   if (!match) return send(res, 404, { error: "Not found" });
 
   const { r, m } = match;
@@ -392,11 +452,13 @@ export async function handleAdmin(req, res) {
       if (!user) return send(res, 401, { error: "Требуется вход" });
       if (r.admin && user.role !== "admin") return send(res, 403, { error: "Недостаточно прав" });
     }
-    const body = ["POST", "PATCH", "PUT"].includes(req.method) ? await readBody(req) : {};
+    const body = ["POST", "PATCH", "PUT"].includes(req.method) ? await readBody(req, r.bodyLimit) : {};
     await r.handler({ req, res, body, user, params: m.slice(1), query: url.searchParams });
   } catch (error) {
     const status = error.status || 500;
     if (status >= 500) console.error("[admin]", error);
-    if (!res.headersSent) send(res, status, { error: status >= 500 ? "Ошибка сервера" : error.message });
+    // HttpError — повідомлення для людини (напр. «GitHub: …»), інше — внутрішня помилка
+    const message = error instanceof HttpError ? error.message : "Ошибка сервера";
+    if (!res.headersSent) send(res, status, { error: message });
   }
 }

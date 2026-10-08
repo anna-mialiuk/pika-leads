@@ -1,0 +1,25 @@
+{
+  "order": 60,
+  "originalId": 61,
+  "id": "ecommerce-website-development",
+  "number": "61",
+  "source": "website",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Website",
+  "title": {
+    "uk": "Інтернет-магазин",
+    "en": "Online store",
+    "ru": "Интернет-магазин"
+  },
+  "description": {
+    "uk": "Каталог, кошик, оплата та інтеграція з CRM.",
+    "en": "Catalog, cart, payments and CRM integration.",
+    "ru": "Каталог, корзина, оплата и интеграция с CRM."
+  }
+}

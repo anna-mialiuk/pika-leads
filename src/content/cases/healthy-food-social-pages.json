@@ -1,0 +1,470 @@
+{
+  "order": 0,
+  "originalId": 1,
+  "id": "healthy-food-social-pages",
+  "featured": true,
+  "number": "01",
+  "source": "meta",
+  "niche": "social",
+  "category": {
+    "uk": "Соцмережі",
+    "en": "Social media",
+    "ru": "Соцсети"
+  },
+  "categoryColor": "#FF7AC8",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Зростання підписників та звернень",
+    "en": "Follower and inquiry growth",
+    "ru": "Рост подписчиков и обращений"
+  },
+  "title": {
+    "uk": "Мережа пабліків здорової їжі",
+    "en": "Network of healthy-food pages",
+    "ru": "Сеть пабликов здоровой еды"
+  },
+  "description": {
+    "uk": "Системне зростання кількох тематичних пабліків: підписка як проміжна цінність, звернення як комерційний сигнал.",
+    "en": "Systematic growth of several themed pages: a follow as an intermediate win, an inquiry as the commercial signal.",
+    "ru": "Системный рост нескольких тематических пабликов: подписка как промежуточная ценность, обращение как коммерческий сигнал."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього звернень",
+        "en": "Total inquiries",
+        "ru": "Всего обращений"
+      },
+      "value": {
+        "uk": "8 100–27 400",
+        "en": "8,100–27,400",
+        "ru": "8 100–27 400"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.019",
+        "en": "CPC $0.019",
+        "ru": "CPC $0.019"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "45–152 зверн./день",
+        "en": "45–152 inquiries/day",
+        "ru": "45–152 обращ./день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$24 000",
+        "en": "$24,000",
+        "ru": "$24 000"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.019",
+          "en": "$0.019",
+          "ru": "$0.019"
+        },
+        "note": {
+          "uk": "1,52 RUB / 80",
+          "en": "1.52 RUB / 80",
+          "ru": "1,52 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна підписника",
+          "en": "Cost per subscriber",
+          "ru": "Цена подписчика"
+        },
+        "value": {
+          "uk": "$0.056–$0.098",
+          "en": "$0.056–$0.098",
+          "ru": "$0.056–$0.098"
+        },
+        "note": {
+          "uk": "4,5–7,8 RUB / 80",
+          "en": "4.5–7.8 RUB / 80",
+          "ru": "4,5–7,8 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "до $12.50",
+          "en": "up to $12.50",
+          "ru": "до $12.50"
+        },
+        "note": {
+          "uk": "до 1 000 RUB / 80",
+          "en": "up to 1,000 RUB / 80",
+          "ru": "до 1 000 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "150–328 підписок; 45–152 звернень",
+          "en": "150–328 follows; 45–152 inquiries",
+          "ru": "150–328 подписок; 45–152 обращения"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "6 на скринах кампаній",
+        "en": "6 in campaign screenshots",
+        "ru": "6 на скринах кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$24 000",
+            "en": "$24,000",
+            "ru": "$24 000"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "8 100–27 400 звернень за 180 днів",
+            "en": "8,100–27,400 inquiries in 180 days",
+            "ru": "8 100–27 400 обращений за 180 дней"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: $4 000/міс × 6 місяців роботи",
+        "en": "Account total for the whole period · basis: $4,000/month × 6 months of work",
+        "ru": "Итог кабинета за весь срок · основа: $4 000/мес × 6 месяцев работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Завдання полягало не просто в купівлі дешевого трафіку, а в системному зростанні кількох тематичних пабліків. Для мережі були важливі дві конверсії: підписка як проміжна цінність і звернення як комерційний сигнал.",
+      "en": "The task was not simply to buy cheap traffic, but to systematically grow several themed pages. Two conversions mattered for the network: a follow as an intermediate win and an inquiry as the commercial signal.",
+      "ru": "Задача состояла не просто в покупке дешёвого трафика, а в системном росте нескольких тематических пабликов. Для сети были важны две конверсии: подписка как промежуточная ценность и обращение как коммерческий сигнал."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/healthy-food-social-pages/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії",
+          "en": "Ad campaign results",
+          "ru": "Результаты рекламной кампании"
+        },
+        "caption": {
+          "uk": "Скріншот 1",
+          "en": "Screenshot 1",
+          "ru": "Скриншот 1"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Запуск починався з розподілу пабліків за темами та оцінки органічного відгуку. На першій хвилі тестувалися короткі відео, рецепти й візуальні добірки; на другій — бюджет переносився у зв’язки, де підписник не лише натискав «підписатися», а й переходив до діалогу.",
+      "en": "The launch started with grouping the pages by topic and assessing organic response. The first wave tested short videos, recipes and visual roundups; in the second, the budget moved to funnels where followers didn’t just tap “follow” but went on to start a conversation.",
+      "ru": "Запуск начался с распределения пабликов по темам и оценки органического отклика. В первой волне тестировались короткие видео, рецепты и визуальные подборки; во второй — бюджет переносился в связки, где подписчик не только нажимал «подписаться», но и переходил к диалогу."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/healthy-food-social-pages/screenshot-02.webp",
+        "alt": {
+          "uk": "Історія запуску рекламної кампанії",
+          "en": "Ad campaign launch history",
+          "ru": "История запуска рекламной кампании"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — E-commerce / покупки",
+          "en": "Screenshot 2 — E-commerce / purchases",
+          "ru": "Скриншот 2 — E-commerce / покупки"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Кампанія 1: холодна аудиторія за інтересами healthy food, рецепти, фітнес і свідоме харчування.",
+        "en": "Campaign 1: cold audience by interests — healthy food, recipes, fitness and mindful eating.",
+        "ru": "Кампания 1: холодная аудитория по интересам healthy food, рецепты, фитнес и осознанное питание."
+      },
+      {
+        "uk": "Кампанія 2: широка аудиторія з оптимізацією за найдешевшими підписками.",
+        "en": "Campaign 2: broad audience optimized for the cheapest follows.",
+        "ru": "Кампания 2: широкая аудитория с оптимизацией на самые дешёвые подписки."
+      },
+      {
+        "uk": "Кампанія 3: ретаргетинг залучених користувачів і відвідувачів профілю на звернення.",
+        "en": "Campaign 3: retargeting engaged users and profile visitors for inquiries.",
+        "ru": "Кампания 3: ретаргетинг вовлечённых пользователей и посетителей профиля на обращения."
+      },
+      {
+        "uk": "Розділення оголошень за пабліками, щоб бюджет не маскував слабкі майданчики.",
+        "en": "Splitting ads by page so the budget wouldn’t hide weak placements.",
+        "ru": "Разделение объявлений по пабликам, чтобы бюджет не маскировал слабые площадки."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креативи будувалися навколо корисного контенту, а не прямого продажу: добірки страв, зрозумілий результат за один екран і обіцянка регулярної практичної користі після підписки. Комерційний CTA підключався вже в ретаргетингу.",
+        "en": "Creatives were built around useful content rather than direct selling: dish roundups, a clear takeaway on a single screen and the promise of regular practical value after following. The commercial CTA came in only at the retargeting stage.",
+        "ru": "Креативы строились вокруг полезного контента, а не прямой продажи: подборки блюд, понятный результат на один экран и обещание регулярной практической пользы после подписки. Коммерческий CTA подключался уже в ретаргетинге."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Кожні 2–3 дні порівнювалися ціна підписки, частка переходів у профіль і кількість звернень. Слабкі пабліки й теми вимикалися, а найкращі зв’язки переносилися в окремі групи для контрольованого масштабування.",
+        "en": "Every 2–3 days we compared cost per follow, the share of profile visits and the number of inquiries. Weak pages and topics were switched off, and the best funnels were moved into separate ad sets for controlled scaling.",
+        "ru": "Каждые 2–3 дня сравнивались цена подписки, доля переходов в профиль и количество обращений. Слабые паблики и темы отключались, а лучшие связки переносились в отдельные группы для контролируемого масштабирования."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$133",
+            "en": "$133",
+            "ru": "$133"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$4 000",
+            "en": "$4,000",
+            "ru": "$4 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.88–$2.96",
+            "en": "$0.88–$2.96",
+            "ru": "$0.88–$2.96"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "1 350–4 560 звернень",
+            "en": "1,350–4,560 inquiries",
+            "ru": "1 350–4 560 обращений"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 4 500–9 840 підписок і 1 350–4 560 звернень за 30 днів при збереженні темпу.",
+        "en": "Cross-check with the source: 4,500–9,840 follows and 1,350–4,560 inquiries in 30 days at the same pace.",
+        "ru": "Сверка с источником: 4 500–9 840 подписок и 1 350–4 560 обращений за 30 дней при сохранении темпа."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За 180 днів роботи мережа отримала стійкий обсяг підписок і звернень при середніх витратах $133 на день. Головний ефект — бюджет працював не на один акаунт, а на портфель пабліків, де гроші швидко перерозподілялися на користь найсильнішої теми.",
+        "en": "Over 180 days, the network got a steady volume of follows and inquiries at an average spend of $133 a day. The main effect: the budget worked not for a single account but for a portfolio of pages, where money was quickly reallocated to the strongest topic.",
+        "ru": "За 180 дней работы сеть получила устойчивый объём подписок и обращений при средних расходах $133 в день. Главный эффект — бюджет работал не на один аккаунт, а на портфель пабликов, где деньги быстро перераспределялись в пользу самой сильной темы."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "description": {
+      "uk": "Скріншоти рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshots from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншоты рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/healthy-food-social-pages/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет — скріншот 1",
+          "en": "Ad account — screenshot 1",
+          "ru": "Рекламный кабинет — скриншот 1"
+        }
+      },
+      {
+        "image": "cases/content/healthy-food-social-pages/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний кабінет — скріншот 2",
+          "en": "Ad account — screenshot 2",
+          "ru": "Рекламный кабинет — скриншот 2"
+        }
+      }
+    ]
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/healthy-food-social-pages.webp",
+  "imageCard": "cases/card/healthy-food-social-pages.webp"
+}

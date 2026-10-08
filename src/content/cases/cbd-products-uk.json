@@ -1,0 +1,446 @@
+{
+  "order": 51,
+  "originalId": 52,
+  "id": "cbd-products-uk",
+  "number": "52",
+  "source": "google",
+  "niche": "ecom",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Google",
+  "kicker": {
+    "uk": "E-commerce / Search / Велика Британія",
+    "en": "E-commerce / Search / United Kingdom",
+    "ru": "E-commerce / Search / Великобритания"
+  },
+  "title": {
+    "uk": "CBD-продукти у Великій Британії",
+    "en": "CBD products in the UK",
+    "ru": "CBD-продукты в Великобритании"
+  },
+  "description": {
+    "uk": "133,83 покупки по $28.05, ROAS 567% і розрахунковий дохід $20 071 за бюджету $3 539,87.",
+    "en": "133.83 purchases at $28.05, 567% ROAS and estimated revenue of $20,071 on a $3,539.87 budget.",
+    "ru": "133,83 покупки по $28.05, ROAS 567% и расчётный доход $20 071 при бюджете $3 539,87."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "133,83 покупки",
+        "en": "133.83 purchases",
+        "ru": "133,83 покупки"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "ROAS 567%",
+        "en": "ROAS 567%",
+        "ru": "ROAS 567%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "CPA $28,05",
+        "en": "CPA $28.05",
+        "ru": "CPA $28,05"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$3 539,87",
+        "en": "$3,539.87",
+        "ru": "$3 539,87"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$3 539,87",
+          "en": "$3,539.87",
+          "ru": "$3 539,87"
+        },
+        "note": {
+          "uk": "підсумок трьох Search-кампаній",
+          "en": "total of three Search campaigns",
+          "ru": "итог трёх Search-кампаний"
+        }
+      },
+      {
+        "label": {
+          "uk": "Покупки",
+          "en": "Purchases",
+          "ru": "Покупки"
+        },
+        "value": {
+          "uk": "133,83",
+          "en": "133.83",
+          "ru": "133,83"
+        },
+        "note": {
+          "uk": "конверсія Purchase",
+          "en": "Purchase conversion",
+          "ru": "конверсия Purchase"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPA",
+          "en": "CPA",
+          "ru": "CPA"
+        },
+        "value": {
+          "uk": "$28,05",
+          "en": "$28.05",
+          "ru": "$28,05"
+        },
+        "note": {
+          "uk": "за покупку",
+          "en": "per purchase",
+          "ru": "за покупку"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROAS / ROI",
+          "en": "ROAS / ROI",
+          "ru": "ROAS / ROI"
+        },
+        "value": {
+          "uk": "567% / 467%",
+          "en": "567% / 467%",
+          "ru": "567% / 467%"
+        },
+        "note": {
+          "uk": "розрахункова виручка $20 071,06",
+          "en": "calculated revenue $20,071.06",
+          "ru": "расчётная выручка $20 071,06"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "3 кампанії",
+        "en": "3 campaigns",
+        "ru": "3 кампании"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$3 539,87",
+            "en": "$3,539.87",
+            "ru": "$3 539,87"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "133,83 покупки",
+            "en": "133.83 purchases",
+            "ru": "133,83 покупки"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "Великобританія",
+            "en": "United Kingdom",
+            "ru": "Великобритания"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "27 703",
+            "en": "27,703",
+            "ru": "27 703"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий рядок таблиці Google Ads",
+        "en": "Account total for the whole period · basis: the Google Ads table total row",
+        "ru": "Итог кабинета за весь срок · основа: итоговая строка таблицы Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "E-commerce-проєкт продавав CBD-продукти на ринку Великобританії. Завдання — отримувати покупки зі сформованого пошукового попиту, утримувати вартість замовлення та стабільно передавати в Google Ads коректну подію Purchase із цінністю замовлення.",
+      "en": "An e-commerce project selling CBD products in the UK market. The task: get purchases from existing search demand, hold the cost per order and consistently pass a correct Purchase event with order value to Google Ads.",
+      "ru": "E-commerce-проект продавал CBD-продукты на рынке Великобритании. Задача — получать покупки из сформированного поискового спроса, удерживать стоимость заказа и стабильно передавать в Google Ads корректное событие Purchase с ценностью заказа."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/cbd-uk-ecommerce/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для продажу CBD-продуктів у Великобританії",
+          "en": "Google Ads results for CBD product sales in the UK",
+          "ru": "Результаты Google Ads для продажи CBD-продуктов в Великобритании"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / Search / Великобританія",
+          "en": "Screenshot 1 — E-commerce / Search / United Kingdom",
+          "ru": "Скриншот 1 — E-commerce / Search / Великобритания"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Перед запуском перевірили відповідність оголошень, ключових запитів, посадкових сторінок і товарної інформації вимогам платформи та законодавства ринку. Окрему увагу приділили домену, швидкості завантаження, checkout, політиці конфіденційності, контактам і прозорому опису продукту. Жодних способів приховування контенту, підміни сторінки чи обходу перевірки: користувач і рекламна система бачили один і той самий офер.",
+      "en": "Before launch, we checked that ads, keywords, landing pages and product information complied with platform policies and local law. Special attention went to the domain, load speed, checkout, privacy policy, contact details and a transparent product description. No content cloaking, page swapping or review circumvention: users and the ad system saw the same offer.",
+      "ru": "Перед запуском проверили соответствие объявлений, ключевых запросов, посадочных страниц и товарной информации требованиям платформы и законодательства рынка. Отдельное внимание уделили домену, скорости загрузки, checkout, политике конфиденциальности, контактам и прозрачному описанию продукта. Никаких способов скрытия контента, подмены страницы или обхода проверки: пользователь и рекламная система видели один и тот же оффер."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Три пошукові кампанії за сформованими CBD-запитами — окремі семантичні кластери без змішування статистики.",
+        "en": "Three search campaigns on existing CBD queries — separate keyword clusters with no mixing of stats.",
+        "ru": "Три поисковые кампании по сформированным CBD-запросам — отдельные семантические кластеры без смешивания статистики."
+      },
+      {
+        "uk": "Фільтрація інформаційного трафіку, запитів про самостійне виготовлення, безкоштовні зразки та нерелевантні категорії.",
+        "en": "Filtering out informational traffic, DIY queries, free samples and irrelevant categories.",
+        "ru": "Фильтрация информационного трафика, запросов о самостоятельном изготовлении, бесплатных образцах и нерелевантных категориях."
+      },
+      {
+        "uk": "Purchase як основна конверсія з передачею цінності замовлення — оцінка не лише кількості покупок, а й ROAS.",
+        "en": "Purchase as the main conversion with order value passed through — evaluating not only the number of purchases but also ROAS.",
+        "ru": "Purchase как основная конверсия с передачей ценности заказа — оценка не только количества покупок, но и ROAS."
+      },
+      {
+        "uk": "Перерозподіл бюджету на користь кампаній із кращою зв’язкою CPA та доходу: ціна покупки за кампаніями $22.63–$32.64.",
+        "en": "Reallocating budget toward campaigns with a better CPA-to-revenue ratio: cost per purchase by campaign ranged from $22.63 to $32.64.",
+        "ru": "Перераспределение бюджета в пользу кампаний с лучшей связкой CPA и дохода: цена покупки по кампаниям $22.63–$32.64."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Оголошення писалися окремо під кожен кластер — у регульованій категорії точність формулювання впливає і на конверсію, і на проходження модерації. На етапі накопичення даних оптимізація йшла на максимум кліків, після чого рішення приймали вже за покупками, CPA та виручкою.",
+        "en": "Ads were written separately for each cluster — in a regulated category, precise wording affects both conversion and passing moderation. While data was accumulating, optimization aimed at maximum clicks; after that, decisions were made on purchases, CPA and revenue.",
+        "ru": "Объявления писались отдельно под каждый кластер — в регулируемой категории точность формулировки влияет и на конверсию, и на прохождение модерации. На этапе накопления данных оптимизация шла на максимум кликов, после чего решения принимали уже по покупкам, CPA и выручке."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "При витратах $3 539.87 і ROAS 5.67× розрахункова виручка становить $20 071.06, різниця з рекламними витратами — $16 531.19, рекламний ROI — 467%. Розрахунковий середній дохід на атрибутовану покупку — близько $149.97. Важливо: це рекламний ROI, а не чиста маржинальність бізнесу — для чистого прибутку потрібно відняти собівартість, логістику, комісії, повернення та операційні витрати. Уточнення по даних: верхня картка витрат на скріншоті показує обрізане значення, для розрахунків використано узгоджений табличний підсумок.",
+        "en": "With $3,539.87 in spend and a 5.67× ROAS, calculated revenue is $20,071.06, the difference from ad spend is $16,531.19 and ad ROI is 467%. Calculated average revenue per attributed purchase is about $149.97. Important: this is ad ROI, not the business’s net margin — for net profit, you’d need to subtract cost of goods, logistics, fees, returns and operating costs. A note on the data: the spend card at the top of the screenshot shows a truncated value, so calculations use the matching table total.",
+        "ru": "При расходах $3 539.87 и ROAS 5.67× расчётная выручка составляет $20 071.06, разница с рекламными расходами — $16 531.19, рекламный ROI — 467%. Расчётный средний доход на атрибутированную покупку — около $149.97. Важно: это рекламный ROI, а не чистая маржинальность бизнеса — для чистой прибыли нужно вычесть себестоимость, логистику, комиссии, возвраты и операционные расходы. Уточнение по данным: верхняя карточка расходов на скриншоте показывает обрезанное значение, для расчётов использован согласованный табличный итог."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$118",
+            "en": "$118",
+            "ru": "$118"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$3 540",
+            "en": "$3,540",
+            "ru": "$3 540"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$28.05",
+            "en": "$28.05",
+            "ru": "$28.05"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈126 покупок",
+            "en": "≈126 purchases",
+            "ru": "≈126 покупок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "ROAS 567% наданий командою; виручка, ROI та середній дохід на покупку розраховані математично від табличного підсумку кабінету.",
+        "en": "The 567% ROAS was provided by the team; revenue, ROI and average revenue per purchase are calculated from the account’s table total.",
+        "ru": "ROAS 567% предоставлен командой; выручка, ROI и средний доход на покупку рассчитаны математически от табличного итога кабинета."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За табличним підсумком трьох Search-кампаній витрачено $3 539.87 і зафіксовано 133.83 покупки по $28.05. При ROAS 567% розрахункова виручка становить $20 071.06, а рекламний ROI — 467% до врахування собівартості й операційних витрат. Підтвердження з кабінету: 27 703 покази, 1 806 кліків, розрахунковий CTR 6.52%, середній CPC близько $1.96, конверсія кліка в покупку близько 7.41%.",
+        "en": "According to the table total for three Search campaigns, $3,539.87 was spent and 133.83 purchases recorded at $28.05 each. At a 567% ROAS, calculated revenue is $20,071.06 and ad ROI is 467% before cost of goods and operating costs. Confirmation from the account: 27,703 impressions, 1,806 clicks, a calculated CTR of 6.52%, an average CPC of about $1.96 and a click-to-purchase rate of about 7.41%.",
+        "ru": "По табличному итогу трёх Search-кампаний потрачено $3 539.87 и зафиксировано 133.83 покупки по $28.05. При ROAS 567% расчётная выручка составляет $20 071.06, а рекламный ROI — 467% до учёта себестоимости и операционных расходов. Подтверждение из кабинета: 27 703 показа, 1 806 кликов, расчётный CTR 6.52%, средний CPC около $1.96, конверсия клика в покупку около 7.41%."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/cbd-uk-ecommerce/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для CBD e-commerce у Великобританії",
+          "en": "Google Ads results for CBD e-commerce in the UK",
+          "ru": "Результаты Google Ads для CBD e-commerce в Великобритании"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/cbd-products-uk.jpg",
+  "imageCard": "cases/card/cbd-products-uk.webp"
+}

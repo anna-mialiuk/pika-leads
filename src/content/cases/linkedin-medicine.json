@@ -1,0 +1,64 @@
+{
+  "order": 56,
+  "originalId": 57,
+  "id": "linkedin-medicine",
+  "number": "57",
+  "source": "linkedin",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Медицина",
+    "en": "Medicine",
+    "ru": "Медицина"
+  },
+  "categoryColor": "#00A0DC",
+  "platform": "LinkedIn",
+  "kicker": {
+    "uk": "LinkedIn Ads / Лідогенерація",
+    "en": "LinkedIn Ads / Lead generation",
+    "ru": "LinkedIn Ads / Лидогенерация"
+  },
+  "title": {
+    "uk": "Клініка естетики",
+    "en": "Aesthetic clinic",
+    "ru": "Клиника эстетики"
+  },
+  "description": {
+    "uk": "Потік цільових записів із LinkedIn зі зниженням вартості заявки.",
+    "en": "A flow of qualified bookings from LinkedIn with a lower cost per lead.",
+    "ru": "Поток целевых записей из LinkedIn со снижением стоимости заявки."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "CPL",
+        "en": "CPL",
+        "ru": "CPL"
+      },
+      "value": {
+        "uk": "−48%",
+        "en": "−48%",
+        "ru": "−48%"
+      },
+      "type": "linkedin"
+    },
+    {
+      "label": {
+        "uk": "заявок",
+        "en": "leads",
+        "ru": "заявок"
+      },
+      "value": {
+        "uk": "+210%",
+        "en": "+210%",
+        "ru": "+210%"
+      },
+      "type": "linkedin"
+    }
+  ],
+  "visualGradient": "linear-gradient(135deg, #00A0DC 0%, #0A66C2 100%)",
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  }
+}

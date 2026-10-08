@@ -1,0 +1,514 @@
+{
+  "order": 38,
+  "originalId": 39,
+  "id": "photography-school-webinar",
+  "number": "39",
+  "source": "google",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Google Ads / вебінарна воронка",
+    "en": "Google Ads / webinar funnel",
+    "ru": "Google Ads / вебинарная воронка"
+  },
+  "title": {
+    "uk": "Школа фотографії: 3 733 реєстрації по $3.18",
+    "en": "Photography school: 3,733 registrations at $3.18",
+    "ru": "Школа фотографии: 3 733 регистрации по $3.18"
+  },
+  "description": {
+    "uk": "Міжнародна вебінарна воронка навчання фотографії: CPL на 47% нижчий за цільову стелю при 40,5 тис. кліків.",
+    "en": "An international webinar funnel for photography training: CPL 47% below the target ceiling, with 40.5k clicks.",
+    "ru": "Международная вебинарная воронка обучения фотографии: CPL на 47% ниже целевого потолка при 40,5 тыс. кликов."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "3 733 реєстрації",
+        "en": "3,733 registrations",
+        "ru": "3 733 регистрации"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL $3.18",
+        "en": "CPL $3.18",
+        "ru": "CPL $3.18"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "click→lead 9.2%",
+        "en": "click→lead 9.2%",
+        "ru": "click→lead 9.2%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$11 876",
+        "en": "$11,876",
+        "ru": "$11 876"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$11 876",
+          "en": "$11,876",
+          "ru": "$11 876"
+        },
+        "note": {
+          "uk": "Google Ads",
+          "en": "Google Ads",
+          "ru": "Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Реєстрації",
+          "en": "Registrations",
+          "ru": "Регистрации"
+        },
+        "value": {
+          "uk": "3 733",
+          "en": "3,733",
+          "ru": "3 733"
+        },
+        "note": {
+          "uk": "Google Ads",
+          "en": "Google Ads",
+          "ru": "Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$3.18",
+          "en": "$3.18",
+          "ru": "$3.18"
+        },
+        "note": {
+          "uk": "на 47% нижче KPI $6",
+          "en": "47% below the $6 KPI",
+          "ru": "на 47% ниже KPI $6"
+        }
+      },
+      {
+        "label": {
+          "uk": "Кліки",
+          "en": "Clicks",
+          "ru": "Клики"
+        },
+        "value": {
+          "uk": "40 500+",
+          "en": "40,500+",
+          "ru": "40 500+"
+        },
+        "note": {
+          "uk": "Google Ads",
+          "en": "Google Ads",
+          "ru": "Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахунковий CPC",
+          "en": "Calculated CPC",
+          "ru": "Расчётный CPC"
+        },
+        "value": {
+          "uk": "$0.29",
+          "en": "$0.29",
+          "ru": "$0.29"
+        },
+        "note": {
+          "uk": "$11 876 / 40 500",
+          "en": "$11,876 / 40,500",
+          "ru": "$11 876 / 40 500"
+        }
+      },
+      {
+        "label": {
+          "uk": "Click → lead",
+          "en": "Click → lead",
+          "ru": "Click → lead"
+        },
+        "value": {
+          "uk": "9.2%",
+          "en": "9.2%",
+          "ru": "9.2%"
+        },
+        "note": {
+          "uk": "3 733 / 40 500",
+          "en": "3,733 / 40,500",
+          "ru": "3 733 / 40 500"
+        }
+      },
+      {
+        "label": {
+          "uk": "Витрати на добу",
+          "en": "Spend per day",
+          "ru": "Расходы в сутки"
+        },
+        "value": {
+          "uk": "$93.51",
+          "en": "$93.51",
+          "ru": "$93.51"
+        },
+        "note": {
+          "uk": "127 днів",
+          "en": "127 days",
+          "ru": "127 дней"
+        }
+      },
+      {
+        "label": {
+          "uk": "30-денний еквівалент",
+          "en": "30-day equivalent",
+          "ru": "30-дневный эквивалент"
+        },
+        "value": {
+          "uk": "$2 805 / 882 реєстрації",
+          "en": "$2,805 / 882 registrations",
+          "ru": "$2 805 / 882 регистрации"
+        },
+        "note": {
+          "uk": "розрахунок",
+          "en": "calculated",
+          "ru": "расчёт"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "127 днів кампаній",
+        "en": "127 days of campaigns",
+        "ru": "127 дней кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$11 876",
+            "en": "$11,876",
+            "ru": "$11 876"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "3 733 реєстрації",
+            "en": "3,733 registrations",
+            "ru": "3 733 регистрации"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "40 500+ кліків",
+            "en": "40,500+ clicks",
+            "ru": "40 500+ кликов"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: Google Ads",
+        "en": "Account total for the whole period · basis: Google Ads",
+        "ru": "Итог кабинета за весь срок · основа: Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Онлайн-навчання фотографії з додатковою обіцянкою навчитися заробляти на зйомці та контенті. Воронка: Google Ads → реєстрація на вебінар → участь → продаж програми. Географія — Німеччина, Туреччина, Франція, Італія, Велика Британія, Іспанія та Ізраїль. Аудиторія — російськомовні користувачі за кордоном, новачки у фотографії та люди, які шукають віддалений дохід. KPI — великий обсяг реєстрацій при CPL не вище $6.",
+      "en": "Online photography training with an extra promise: learn to earn from shooting and content. Funnel: Google Ads → webinar registration → attendance → program sale. Geography: Germany, Turkey, France, Italy, the UK, Spain and Israel. Audience: Russian speakers abroad, photography beginners and people looking for remote income. KPI: high registration volume at a CPL no higher than $6.",
+      "ru": "Онлайн-обучение фотографии с дополнительным обещанием научиться зарабатывать на съёмке и контенте. Воронка: Google Ads → регистрация на вебинар → участие → продажа программы. География — Германия, Турция, Франция, Италия, Великобритания, Испания и Израиль. Аудитория — русскоязычные пользователи за рубежом, новички в фотографии и люди, ищущие удалённый доход. KPI — большой объём регистраций при CPL не выше $6."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/photography-school-webinar/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для вебінарної воронки школи фотографії",
+          "en": "Google Ads results for the photography school webinar funnel",
+          "ru": "Результаты Google Ads для вебинарной воронки школы фотографии"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Google Ads / вебінарна воронка",
+          "en": "Screenshot 1 — Google Ads / webinar funnel",
+          "ru": "Скриншот 1 — Google Ads / вебинарная воронка"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Визначили реєстрацію на вебінар як основну конверсію та оптимізували кампанії саме на неї. Розділили аудиторії за мотивом: інтерес до фотографії, інтерес до заробітку та комбінований сегмент «творчість + дохід». Протестували понад 20 креативів; основний обсяг тестів віддали відео, щоб показати результат навчання та зняти бар’єр старту. Порівняли два головні офери: «навчання фотографії з нуля» та «заробіток на фотографії».",
+      "en": "We made webinar registration the main conversion and optimized campaigns for it. We split audiences by motive: interest in photography, interest in earning and a combined “creativity + income” segment. We tested 20+ creatives, with most tests going to video to show the learning outcome and remove the barrier to starting. We compared two main offers: “photography from scratch” and “earning from photography”.",
+      "ru": "Определили регистрацию на вебинар как основную конверсию и оптимизировали кампании именно на неё. Разделили аудитории по мотиву: интерес к фотографии, интерес к заработку и комбинированный сегмент «творчество + доход». Протестировали более 20 креативов; основной объём тестов отдали видео, чтобы показать результат обучения и снять барьер старта. Сравнили два главных оффера: «обучение фотографии с нуля» и «заработок на фотографии»."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Дні 1–14: перевірка аудиторій, оферів і відео — контроль за конверсіями та CPL зв’язки.",
+        "en": "Days 1–14: testing audiences, offers and videos — monitoring conversions and CPL per funnel.",
+        "ru": "Дни 1–14: проверка аудиторий, офферов и видео — контроль конверсий и CPL связки."
+      },
+      {
+        "uk": "Дні 15–45: відключення слабких гіпотез, укрупнення переможців при CPL ≤ $6.",
+        "en": "Days 15–45: cutting weak hypotheses, consolidating winners at CPL ≤ $6.",
+        "ru": "Дни 15–45: отключение слабых гипотез, укрупнение победителей при CPL ≤ $6."
+      },
+      {
+        "uk": "Дні 46–100: масштабування та розширення охоплення з контролем стабільності CPL і темпу лідів.",
+        "en": "Days 46–100: scaling and expanding reach while keeping CPL and lead pace stable.",
+        "ru": "Дни 46–100: масштабирование и расширение охвата с контролем стабильности CPL и темпа лидов."
+      },
+      {
+        "uk": "Дні 101–127: оновлення креативів і стабілізація без просідань за обсягом.",
+        "en": "Days 101–127: refreshing creatives and stabilizing without dips in volume.",
+        "ru": "Дни 101–127: обновление креативов и стабилизация без просадок по объёму."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Протестували понад 20 креативів, основний обсяг — відео. Зв’язка «творча навичка + зрозуміла монетизація» розширила попит за межі аудиторії, яка просто цікавиться фотографією. Відео швидше пояснювало трансформацію продукту та давало більше контексту до переходу на посадкову сторінку.",
+        "en": "We tested 20+ creatives, mostly video. The “creative skill + clear monetization” pairing expanded demand beyond people simply interested in photography. Video explained the product’s transformation faster and gave more context before clicking through to the landing page.",
+        "ru": "Протестировали более 20 креативов, основной объём — видео. Связка «творческий навык + понятная монетизация» расширила спрос за пределы аудитории, просто интересующейся фотографией. Видео быстрее объясняло трансформацию продукта и давало больше контекста до перехода на посадочную страницу."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Оптимізація за реєстрацією, а не за дешевим кліком, утримувала якість трафіку під час масштабування. Фактичний CPL $3.18 виявився на 47% нижчим за цільову межу $6, при цьому обсяг виріс до 3 733 реєстрацій і понад 40.5 тис. кліків за 127 днів.",
+        "en": "Optimizing for registrations rather than cheap clicks kept traffic quality up during scaling. The actual CPL of $3.18 came in 47% below the $6 ceiling, while volume grew to 3,733 registrations and 40.5k+ clicks over 127 days.",
+        "ru": "Оптимизация по регистрации, а не по дешёвому клику, удерживала качество трафика при масштабировании. Фактический CPL $3.18 оказался на 47% ниже целевой границы $6, при этом объём вырос до 3 733 регистраций и более 40.5 тыс. кликов за 127 дней."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$93.51",
+            "en": "$93.51",
+            "ru": "$93.51"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$2 805",
+            "en": "$2,805",
+            "ru": "$2 805"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPL ≤ $6",
+            "en": "CPL ≤ $6",
+            "ru": "CPL ≤ $6"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 882 реєстрації / 30 днів",
+            "en": "≈ 882 registrations / 30 days",
+            "ru": "≈ 882 регистрации / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Продажі, виручка та ROAS не розраховувалися: у вихідних матеріалах немає підтверджених даних щодо оплат. Денний і 30-денний показники — арифметичні еквіваленти, а не вивантаження розбивки за днями.",
+        "en": "Sales, revenue and ROAS weren’t calculated: the source materials contain no confirmed payment data. The daily and 30-day figures are arithmetic equivalents, not an export of a day-by-day breakdown.",
+        "ru": "Продажи, выручка и ROAS не рассчитывались: в исходных материалах нет подтверждённых данных по оплатам. Дневной и 30-дневный показатели — арифметические эквиваленты, а не выгрузка разбивки по дням."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "При бюджеті $11 876 проєкт отримав 3 733 реєстрації по $3.18 — майже вдвічі дешевше за цільовий KPI. Ключ до результату — оптимізація на кінцеву дію воронки та розділення аудиторії за мотивом, а не лише за інтересом до теми.",
+        "en": "On an $11,876 budget, the project got 3,733 registrations at $3.18 — almost half the target KPI. The key to the result: optimizing for the funnel’s final action and splitting the audience by motive, not just by interest in the topic.",
+        "ru": "При бюджете $11 876 проект получил 3 733 регистрации по $3.18 — почти вдвое дешевле целевого KPI. Ключ к результату — оптимизация на конечное действие воронки и разделение аудитории по мотиву, а не только по интересу к теме."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/photography-school-webinar/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads вебінарної воронки школи фотографії",
+          "en": "Google Ads results for the photography school webinar funnel",
+          "ru": "Результаты Google Ads вебинарной воронки школы фотографии"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/photography-school-webinar.jpg",
+  "imageCard": "cases/card/photography-school-webinar.webp"
+}

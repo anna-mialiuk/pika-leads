@@ -1,0 +1,30 @@
+{
+  "order": 3,
+  "id": "meta-minus-words",
+  "topic": "advertising",
+  "level": "basic",
+  "category": {
+    "uk": "Реклама",
+    "en": "Advertising",
+    "ru": "Реклама"
+  },
+  "type": "yellow",
+  "image": "blog/meta-minus-words.webp",
+  "date": "2024-10-11",
+  "readTime": {
+    "uk": "4 хв",
+    "en": "4 min",
+    "ru": "4 мин"
+  },
+  "title": {
+    "uk": "Мінус-слова для Meta Ads: як уникнути відхилення реклами",
+    "en": "Words to avoid in Meta Ads: how to keep your ads from being rejected",
+    "ru": "Минус-слова для Meta Ads: как избежать отклонения рекламы"
+  },
+  "description": {
+    "uk": "Зібрали слова, що тригерять модерацію Meta, розбили за вертикалями та пояснили, що саме кожне з них порушує.",
+    "en": "We’ve collected the words that trigger Meta’s moderation, grouped them by vertical and explained exactly which rule each one breaks.",
+    "ru": "Собрали слова, которые триггерят модерацию Meta, разбили по вертикалям и объяснили, что именно нарушает каждое из них."
+  },
+  "href": "/blog/meta-minus-words"
+}

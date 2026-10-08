@@ -1,0 +1,30 @@
+{
+  "order": 7,
+  "id": "meta-cyclic-restrictions",
+  "topic": "advertising",
+  "level": "intermediate",
+  "category": {
+    "uk": "Реклама",
+    "en": "Advertising",
+    "ru": "Реклама"
+  },
+  "type": "blue",
+  "image": "blog/meta-cyclic-restrictions.webp",
+  "date": "2026-08-04",
+  "readTime": {
+    "uk": "12 хв",
+    "en": "12 min",
+    "ru": "12 мин"
+  },
+  "title": {
+    "uk": "Циклічні обмеження Meta: чому Facebook-сторінка стала ключовим рекламним активом",
+    "en": "Meta’s cyclical restrictions: why the Facebook Page has become a key ad asset",
+    "ru": "Циклические ограничения Meta: почему Facebook-страница стала ключевым рекламным активом"
+  },
+  "description": {
+    "uk": "Блокування в Meta виглядають випадковими лише на одному кабінеті. На десятках проєктів видно іншу картину — і головний висновок у тому, що захищати треба всю екосистему.",
+    "en": "Meta bans look random when you only see one ad account. Across dozens of projects, a different picture emerges — and the key takeaway is that you need to protect the whole ecosystem.",
+    "ru": "Блокировки в Meta выглядят случайными только на одном кабинете. На десятках проектов видна другая картина — и главный вывод в том, что защищать нужно всю экосистему."
+  },
+  "href": "/blog/meta-cyclic-restrictions"
+}

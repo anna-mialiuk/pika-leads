@@ -1,0 +1,25 @@
+{
+  "order": 67,
+  "originalId": 68,
+  "id": "uiux-design-system",
+  "number": "68",
+  "source": "uiux",
+  "niche": "design-system",
+  "category": {
+    "uk": "UI-kit",
+    "en": "UI-kit",
+    "ru": "UI-kit"
+  },
+  "categoryColor": "#8B5CF6",
+  "platform": "UI/UX",
+  "title": {
+    "uk": "Дизайн-система",
+    "en": "Design system",
+    "ru": "Дизайн-система"
+  },
+  "description": {
+    "uk": "Бібліотека компонентів, токенів і правил для команди.",
+    "en": "A library of components, tokens and rules for the team.",
+    "ru": "Библиотека компонентов, токенов и правил для команды."
+  }
+}

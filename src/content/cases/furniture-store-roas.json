@@ -1,0 +1,472 @@
+{
+  "order": 36,
+  "originalId": 37,
+  "id": "furniture-store-roas",
+  "number": "37",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "E-commerce / високий середній чек",
+    "en": "E-commerce / high average order value",
+    "ru": "E-commerce / высокий средний чек"
+  },
+  "title": {
+    "uk": "Меблі: ROAS 1201% за 90 днів",
+    "en": "Furniture: 1201% ROAS in 90 days",
+    "ru": "Мебель: ROAS 1201% за 90 дней"
+  },
+  "description": {
+    "uk": "Трафік на сайт меблевого магазину: лід від $0.55 і ROAS 1201% завдяки високій вартості товару.",
+    "en": "Traffic to a furniture store’s website: leads from $0.55 and 1201% ROAS thanks to high-priced products.",
+    "ru": "Трафик на сайт мебельного магазина: лид от $0.55 и ROAS 1201% благодаря высокой стоимости товара."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "лід $0.55–$4",
+        "en": "lead $0.55–$4",
+        "ru": "лид $0.55–$4"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "ROAS 1201%",
+        "en": "ROAS 1201%",
+        "ru": "ROAS 1201%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "90 днів",
+        "en": "90 days",
+        "ru": "90 дней"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$5 630",
+        "en": "$5,630",
+        "ru": "$5 630"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$5 630",
+          "en": "$5,630",
+          "ru": "$5 630"
+        },
+        "note": {
+          "uk": "за 90 днів",
+          "en": "over 90 days",
+          "ru": "за 90 дней"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна ліда",
+          "en": "Cost per lead",
+          "ru": "Цена лида"
+        },
+        "value": {
+          "uk": "$0.55–$4.00",
+          "en": "$0.55–$4.00",
+          "ru": "$0.55–$4.00"
+        },
+        "note": {
+          "uk": "залежить від креативу",
+          "en": "depends on the creative",
+          "ru": "зависит от креатива"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROAS",
+          "en": "ROAS",
+          "ru": "ROAS"
+        },
+        "value": {
+          "uk": "1201%",
+          "en": "1201%",
+          "ru": "1201%"
+        },
+        "note": {
+          "uk": "дані кабінету",
+          "en": "ad account data",
+          "ru": "данные кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "Період роботи",
+          "en": "Period of work",
+          "ru": "Период работы"
+        },
+        "value": {
+          "uk": "90 днів",
+          "en": "90 days",
+          "ru": "90 дней"
+        },
+        "note": {
+          "uk": "строк проєкту",
+          "en": "project duration",
+          "ru": "срок проекта"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середній денний бюджет",
+          "en": "Average daily budget",
+          "ru": "Средний дневной бюджет"
+        },
+        "value": {
+          "uk": "≈ $62.6",
+          "en": "≈ $62.6",
+          "ru": "≈ $62.6"
+        },
+        "note": {
+          "uk": "$5 630 / 90 днів",
+          "en": "$5,630 / 90 days",
+          "ru": "$5 630 / 90 дней"
+        }
+      },
+      {
+        "label": {
+          "uk": "Модельна виручка",
+          "en": "Modeled revenue",
+          "ru": "Модельная выручка"
+        },
+        "value": {
+          "uk": "≈ $67 616",
+          "en": "≈ $67,616",
+          "ru": "≈ $67 616"
+        },
+        "note": {
+          "uk": "$5 630 × 12.01",
+          "en": "$5,630 × 12.01",
+          "ru": "$5 630 × 12.01"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "—",
+        "en": "—",
+        "ru": "—"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$5 630",
+            "en": "$5,630",
+            "ru": "$5 630"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "ROAS 1201%",
+            "en": "ROAS 1201%",
+            "ru": "ROAS 1201%"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: бюджет за 90 днів",
+        "en": "Account total for the whole period · basis: 90-day budget",
+        "ru": "Итог кабинета за весь срок · основа: бюджет за 90 дней"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Меблі — покупка з високим середнім чеком і довгим циклом прийняття рішення. Розкид ціни ліда від $0.55 до $4 пояснювався різними креативами й товарними групами: широкі добірки давали дешевий вхід, конкретні дорогі позиції — дорожче, але якісніше.",
+      "en": "Furniture is a high-ticket purchase with a long decision cycle. The spread in cost per lead from $0.55 to $4 came down to different creatives and product groups: broad collections gave a cheap entry point, specific expensive items were pricier but higher quality.",
+      "ru": "Мебель — покупка с высоким средним чеком и долгим циклом принятия решения. Разброс цены лида от $0.55 до $4 объяснялся разными креативами и товарными группами: широкие подборки давали дешёвый вход, конкретные дорогие позиции — дороже, но качественнее."
+    }
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Трафік вели на сайт, а не в переписку: у меблях важливі фільтри, розміри, матеріали та розрахунок доставки. Налаштували наскрізну передачу подій із цінністю замовлення, щоб алгоритм оптимізувався на реальну виручку, а не на кількість заявок. Розклали асортимент за кімнатами та ціновими сегментами, кожен отримав свій контур з окремою звітністю.",
+      "en": "Traffic went to the website, not to messaging: with furniture, filters, dimensions, materials and delivery cost matter. We set up end-to-end event passing with order value so the algorithm optimized for real revenue, not lead count. We broke the range down by room and price segment, each with its own loop and separate reporting.",
+      "ru": "Трафик вели на сайт, а не в переписку: в мебели важны фильтры, размеры, материалы и расчёт доставки. Настроили сквозную передачу событий с ценностью заказа, чтобы алгоритм оптимизировался на реальную выручку, а не на количество заявок. Разложили ассортимент по комнатам и ценовым сегментам, каждый получил свой контур с отдельной отчётностью."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Cold broad з оптимізацією на покупку та передачею цінності замовлення.",
+        "en": "Cold broad optimized for purchases with order value passed through.",
+        "ru": "Cold broad с оптимизацией на покупку и передачей ценности заказа."
+      },
+      {
+        "uk": "Товарні контури за кімнатами: вітальня, спальня, кухня, дитяча — з окремим контролем ціни ліда.",
+        "en": "Product loops by room: living room, bedroom, kitchen, kids’ room — with separate cost-per-lead control.",
+        "ru": "Товарные контуры по комнатам: гостиная, спальня, кухня, детская — с отдельным контролем цены лида."
+      },
+      {
+        "uk": "Ретаргетинг користувачів, які переглядали картки товарів або додавали їх у кошик, з вікнами до 30 днів.",
+        "en": "Retargeting users who viewed product pages or added items to cart, with windows of up to 30 days.",
+        "ru": "Ретаргетинг пользователей, которые просматривали карточки товаров или добавляли их в корзину, с окнами до 30 дней."
+      },
+      {
+        "uk": "Окремий тестовий бюджет на нові креативи та товарні групи, щоб не залежати від однієї зв’язки.",
+        "en": "A separate test budget for new creatives and product groups so as not to depend on a single funnel.",
+        "ru": "Отдельный тестовый бюджет на новые креативы и товарные группы, чтобы не зависеть от одной связки."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Працювали два типи креативів із різною економікою: широкі добірки «меблі для вітальні» давали лід від $0.55, а конкретні дорогі позиції — до $4, але з помітно вищою конверсією в покупку. Показували меблі в готовому інтер’єрі, деталі матеріалу й фурнітури, а також габарити відносно кімнати.",
+        "en": "Two types of creatives with different economics worked: broad “living room furniture” collections gave leads from $0.55, while specific expensive items cost up to $4 per lead but converted to purchases noticeably better. We showed furniture in finished interiors, material and hardware details, and dimensions relative to the room.",
+        "ru": "Работали два типа креативов с разной экономикой: широкие подборки «мебель для гостиной» давали лид от $0.55, а конкретные дорогие позиции — до $4, но с заметно более высокой конверсией в покупку. Показывали мебель в готовом интерьере, детали материала и фурнитуры, а также габариты относительно комнаты."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Розкид ціни ліда не був проблемою: при високому середньому чеку меблів лід за $4 окупався краще, ніж лід за $0.55 із широкої добірки. Тому рішення про масштабування приймали за ROAS товарної групи, а не за вартістю заявки. За 90 днів це дало ROAS 1201% — близько $12 виручки на кожен вкладений долар.",
+        "en": "The spread in cost per lead wasn’t a problem: with furniture’s high average order value, a $4 lead paid off better than a $0.55 lead from a broad collection. So scaling decisions were based on product-group ROAS, not cost per lead. Over 90 days, this delivered a 1201% ROAS — about $12 in revenue for every dollar invested.",
+        "ru": "Разброс цены лида не был проблемой: при высоком среднем чеке мебели лид за $4 окупался лучше, чем лид за $0.55 из широкой подборки. Поэтому решения о масштабировании принимали по ROAS товарной группы, а не по стоимости заявки. За 90 дней это дало ROAS 1201% — около $12 выручки на каждый вложенный доллар."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "≈ $62.6",
+            "en": "≈ $62.6",
+            "ru": "≈ $62.6"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "≈ $1 877",
+            "en": "≈ $1,877",
+            "ru": "≈ $1 877"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "ROAS по групі",
+            "en": "Product-group ROAS",
+            "ru": "ROAS по группе"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "ROAS 1201%",
+            "en": "ROAS 1201%",
+            "ru": "ROAS 1201%"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Показники надані власником кейсу та підтверджені у відеорозборі. Модельна виручка $67 616 розрахована як бюджет × ROAS і не замінює вивантаження платежів.",
+        "en": "Figures provided by the case owner and confirmed in the video breakdown. The modeled revenue of $67,616 is calculated as budget × ROAS and doesn’t replace a payment export.",
+        "ru": "Показатели предоставлены владельцем кейса и подтверждены в видеоразборе. Модельная выручка $67 616 рассчитана как бюджет × ROAS и не заменяет выгрузку платежей."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За 90 днів роботи меблевий магазин вийшов на ROAS 1201% при бюджеті $5 630. Ключове рішення — оцінювати не вартість заявки, а виручку товарної групи: при високому середньому чеку дорожчий лід може бути вигіднішим за дешевий.",
+        "en": "Over 90 days, the furniture store reached a 1201% ROAS on a $5,630 budget. The key decision was to judge not cost per lead but product-group revenue: with a high average order value, a more expensive lead can be more profitable than a cheap one.",
+        "ru": "За 90 дней работы мебельный магазин вышел на ROAS 1201% при бюджете $5 630. Ключевое решение — оценивать не стоимость заявки, а выручку товарной группы: при высоком среднем чеке более дорогой лид может быть выгоднее дешёвого."
+      }
+    }
+  },
+  "videoReview": {
+    "title": {
+      "uk": "Відеорозбір кейсу",
+      "en": "Video case breakdown",
+      "ru": "Видеоразбор кейса"
+    },
+    "url": "https://www.youtube.com/watch?v=REOsIAvmJKQ",
+    "label": {
+      "uk": "Відеорозбір кейсу: меблі",
+      "en": "Video case breakdown: furniture",
+      "ru": "Видеоразбор кейса: мебель"
+    },
+    "eyebrow": {
+      "uk": "PIKA LEADS",
+      "en": "PIKA LEADS",
+      "ru": "PIKA LEADS"
+    },
+    "name": {
+      "uk": "МЕБЛІ",
+      "en": "FURNITURE",
+      "ru": "МЕБЕЛЬ"
+    },
+    "metric": {
+      "uk": "ROAS 1201%",
+      "en": "ROAS 1201%",
+      "ru": "ROAS 1201%"
+    },
+    "caption": {
+      "uk": "Відеорозбір кейсу: меблі",
+      "en": "Video case breakdown: furniture",
+      "ru": "Видеоразбор кейса: мебель"
+    },
+    "visual": "furniture"
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/furniture-store-roas.jpg",
+  "imageCard": "cases/card/furniture-store-roas.webp"
+}

@@ -1,0 +1,474 @@
+{
+  "order": 50,
+  "originalId": 51,
+  "id": "holycam-educational-webinar",
+  "number": "51",
+  "source": "google",
+  "niche": "webinar",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Video + Demand Gen / два кабінети / Multi-Geo",
+    "en": "Video + Demand Gen / two ad accounts / Multi-Geo",
+    "ru": "Video + Demand Gen / два кабинета / Multi-Geo"
+  },
+  "title": {
+    "uk": "Holycam: освітня вебінарна воронка",
+    "en": "Holycam: an educational webinar funnel",
+    "ru": "Holycam: образовательная вебинарная воронка"
+  },
+  "description": {
+    "uk": "4 160 реєстрацій по $2.72 із двох кабінетів і розрахункова вартість продажу $78.02.",
+    "en": "4,160 registrations at $2.72 from two ad accounts, with an estimated cost per sale of $78.02.",
+    "ru": "4 160 регистраций по $2.72 из двух кабинетов и расчётная стоимость продажи $78.02."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "4 160 реєстрацій",
+        "en": "4,160 registrations",
+        "ru": "4 160 регистраций"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL $2.72",
+        "en": "CPL $2.72",
+        "ru": "CPL $2.72"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "29% дохідність",
+        "en": "29% return",
+        "ru": "29% доходность"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$11 295,43",
+        "en": "$11,295.43",
+        "ru": "$11 295,43"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$11 295,43",
+          "en": "$11,295.43",
+          "ru": "$11 295,43"
+        },
+        "note": {
+          "uk": "два кабінети Google Ads",
+          "en": "two Google Ads accounts",
+          "ru": "два кабинета Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Реєстрації",
+          "en": "Registrations",
+          "ru": "Регистрации"
+        },
+        "value": {
+          "uk": "4 160",
+          "en": "4,160",
+          "ru": "4 160"
+        },
+        "note": {
+          "uk": "верхні зведення кабінетів",
+          "en": "account summary cards",
+          "ru": "верхние сводки кабинетов"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середній CPL",
+          "en": "Average CPL",
+          "ru": "Средний CPL"
+        },
+        "value": {
+          "uk": "$2,72",
+          "en": "$2.72",
+          "ru": "$2,72"
+        },
+        "note": {
+          "uk": "витрати / реєстрації",
+          "en": "spend / registrations",
+          "ru": "расходы / регистрации"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахункові продажі",
+          "en": "Calculated sales",
+          "ru": "Расчётные продажи"
+        },
+        "value": {
+          "uk": "≈144,8",
+          "en": "≈144.8",
+          "ru": "≈144,8"
+        },
+        "note": {
+          "uk": "29% доходимість × 12% продаж",
+          "en": "29% attendance × 12% sales",
+          "ru": "29% доходимость × 12% продаж"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "Video + Demand Gen + Search",
+        "en": "Video + Demand Gen + Search",
+        "ru": "Video + Demand Gen + Search"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$11 295,43",
+            "en": "$11,295.43",
+            "ru": "$11 295,43"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "4 160 реєстрацій",
+            "en": "4,160 registrations",
+            "ru": "4 160 регистраций"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "multi-GEO",
+            "en": "multi-GEO",
+            "ru": "multi-GEO"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "12,3 млн",
+            "en": "12.3M",
+            "ru": "12,3 млн"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: два кабінети Google Ads",
+        "en": "Account total for the whole period · basis: two Google Ads accounts",
+        "ru": "Итог кабинета за весь срок · основа: два кабинета Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Проєкт працював через вебінарну модель: холодна аудиторія реєструвалася на безкоштовну подію, отримувала прогрів і нагадування, відвідувала ефір і переходила до покупки основного продукту. Завдання — отримати великий обсяг реєстрацій, утримати CPL і не втратити економіку на етапах доходимості та продажу.",
+      "en": "The project ran on a webinar model: a cold audience registered for a free event, got warm-up content and reminders, attended the broadcast and moved on to buy the main product. The task: get a large volume of registrations, hold CPL and not lose the economics at the attendance and sales stages.",
+      "ru": "Проект работал по вебинарной модели: холодная аудитория регистрировалась на бесплатное мероприятие, получала прогрев и напоминания, посещала эфир и переходила к покупке основного продукта. Задача — получить большой объём регистраций, удержать CPL и не потерять экономику на этапах доходимости и продажи."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/holycam-webinar-funnel/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для освітньої вебінарної воронки Holycam",
+          "en": "Google Ads results for the Holycam educational webinar funnel",
+          "ru": "Результаты Google Ads для образовательной вебинарной воронки Holycam"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Video + Demand Gen / два кабінети / multi-GEO",
+          "en": "Screenshot 1 — Video + Demand Gen / two ad accounts / multi-geo",
+          "ru": "Скриншот 1 — Video + Demand Gen / два кабинета / multi-GEO"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Основний обсяг будувався через відео- та Demand-кампанії. Креативи тестувалися за темами, інтересами, аудиторіями та форматами подачі, пошукові кампанії використовувалися точково для перехоплення більш сформованого попиту. Розділення на два кабінети давало додаткову керованість і дозволяло порівнювати набори креативів, аудиторій і ставок.",
+      "en": "The bulk of volume came from video and Demand campaigns. Creatives were tested by topic, interest, audience and presentation format, while search campaigns were used selectively to capture more developed demand. Splitting into two ad accounts added control and made it possible to compare sets of creatives, audiences and bids.",
+      "ru": "Основной объём строился через видео- и Demand-кампании. Креативы тестировались по темам, интересам, аудиториям и форматам подачи, поисковые кампании использовались точечно для перехвата более сформированного спроса. Разделение на два кабинета давало дополнительную управляемость и позволяло сравнивать наборы креативов, аудиторий и ставок."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/holycam-webinar-funnel/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий рекламний кабінет Google Ads для вебінарної воронки Holycam",
+          "en": "Holycam webinar funnel — second Google Ads account",
+          "ru": "Второй рекламный кабинет Google Ads для вебинарной воронки Holycam"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Video + Demand Gen / два кабінети / multi-GEO",
+          "en": "Screenshot 2 — Video + Demand Gen / two ad accounts / multi-geo",
+          "ru": "Скриншот 2 — Video + Demand Gen / два кабинета / multi-GEO"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Video і Demand Gen — основний обсяг реєстрацій в обох кабінетах.",
+        "en": "Video and Demand Gen — the bulk of registrations in both accounts.",
+        "ru": "Video и Demand Gen — основной объём регистраций в обоих кабинетах."
+      },
+      {
+        "uk": "Search — точковий перехват сформованого попиту.",
+        "en": "Search — selectively capturing existing demand.",
+        "ru": "Search — точечный перехват сформированного спроса."
+      },
+      {
+        "uk": "Сегментація аудиторій за рівнем інтересу та мотивом участі у вебінарі.",
+        "en": "Audience segmentation by level of interest and motive for attending the webinar.",
+        "ru": "Сегментация аудиторий по уровню интереса и мотиву участия в вебинаре."
+      },
+      {
+        "uk": "Два кабінети як спосіб порівнювати набори креативів і ставок на однаковій воронці.",
+        "en": "Two ad accounts as a way to compare sets of creatives and bids on the same funnel.",
+        "ru": "Два кабинета как способ сравнивать наборы креативов и ставок на одинаковой воронке."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Готувалася серія відеокреативів, і жоден ролик не масштабувався нескінченно: бюджет переносився між версіями за реєстраціями, а потім звірявся з фактичною доходимістю. Рекламна обіцянка, сторінка реєстрації та зміст вебінару трималися синхронно — це зменшувало розрив очікувань і підтримувало доходимість 29%.",
+        "en": "A series of video creatives was prepared, and no single video was scaled indefinitely: budget moved between versions based on registrations, then was checked against actual attendance. The ad promise, the registration page and the webinar content stayed in sync — this narrowed the expectation gap and supported 29% attendance.",
+        "ru": "Готовилась серия видеокреативов, и ни один ролик не масштабировался бесконечно: бюджет переносился между версиями по регистрациям, а затем сверялся с фактической доходимостью. Рекламное обещание, страница регистрации и содержание вебинара держались синхронно — это уменьшало разрыв ожиданий и поддерживало доходимость 29%."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Оптимізували не лише CPL. Після набору статистики оцінювали вартість учасника та розрахункову вартість продажу, щоб дешевий верх воронки не приховував слабку монетизацію. Розрахунок: при 4 160 реєстраціях і 38% конверсії сторінки цільових відвідувань — близько 10 947; на вебінар при 29% доходимості приходять приблизно 1 206 людей; при 12% конверсії в покупку — близько 145 продажів. Вартість реєстрації $2.72, учасника близько $9.36, розрахункова вартість продажу — $78.02. Важливе уточнення по методиці: витрати та конверсії взяті з верхніх зведених карток двох кабінетів — нижня таблиця на першому скріні показує інший зріз через активні фільтри.",
+        "en": "We optimized more than CPL. Once stats accumulated, we evaluated cost per attendee and calculated cost per sale so a cheap top of the funnel wouldn’t hide weak monetization. Calculation: with 4,160 registrations and a 38% page conversion rate, target visits come to about 10,947; at 29% attendance, about 1,206 people attend the webinar; at a 12% purchase conversion, that’s about 145 sales. Cost per registration $2.72, per attendee about $9.36, calculated cost per sale $78.02. An important methodological note: spend and conversions are taken from the summary cards at the top of the two accounts — the lower table in the first screenshot shows a different slice due to active filters.",
+        "ru": "Оптимизировали не только CPL. После набора статистики оценивали стоимость участника и расчётную стоимость продажи, чтобы дешёвый верх воронки не скрывал слабую монетизацию. Расчёт: при 4 160 регистрациях и 38% конверсии страницы целевых посещений — около 10 947; на вебинар при 29% доходимости приходят примерно 1 206 человек; при 12% конверсии в покупку — около 145 продаж. Стоимость регистрации $2.72, участника около $9.36, расчётная стоимость продажи — $78.02. Важное уточнение по методике: расходы и конверсии взяты из верхних сводных карточек двух кабинетов — нижняя таблица на первом скрине показывает другой срез из-за активных фильтров."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$376",
+            "en": "$376",
+            "ru": "$376"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$11 300",
+            "en": "$11,300",
+            "ru": "$11 300"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$2.72",
+            "en": "$2.72",
+            "ru": "$2.72"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈4 150 реєстрацій / ≈145 продажів",
+            "en": "≈4,150 registrations / ≈145 sales",
+            "ru": "≈4 150 регистраций / ≈145 продаж"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Доходимість 29% і конверсія в продаж 12% надані командою; ≈145 продажів — розрахунок за воронкою, а не CRM-вивантаження.",
+        "en": "The 29% attendance and 12% sales conversion were provided by the team; ≈145 sales is a funnel calculation, not a CRM export.",
+        "ru": "Доходимость 29% и конверсия в продажу 12% предоставлены командой; ≈145 продаж — расчёт по воронке, а не CRM-выгрузка."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Два кабінети Google Ads дали 4 160 зафіксованих конверсій при витратах $11 295,43 — середня вартість реєстрації $2.72. Кабінет 1: 4 208 808 показів, $3 963,59 і 1 754 конверсії. Кабінет 2: 8 119 882 покази, $7 331,84 і 2 406 конверсій. Сильна економіка сформувалася не лише завдяки дешевій реєстрації, а й завдяки збереженню конверсії на наступних етапах: розрахункова вартість продажу залишалася керованою навіть при 4 160 реєстраціях.",
+        "en": "Two Google Ads accounts delivered 4,160 recorded conversions on $11,295.43 in spend — an average cost per registration of $2.72. Account 1: 4,208,808 impressions, $3,963.59 and 1,754 conversions. Account 2: 8,119,882 impressions, $7,331.84 and 2,406 conversions. The strong economics came not only from cheap registrations but from conversion holding up at the later stages: the calculated cost per sale stayed under control even at 4,160 registrations.",
+        "ru": "Два кабинета Google Ads дали 4 160 зафиксированных конверсий при расходах $11 295,43 — средняя стоимость регистрации $2.72. Кабинет 1: 4 208 808 показов, $3 963,59 и 1 754 конверсии. Кабинет 2: 8 119 882 показа, $7 331,84 и 2 406 конверсий. Сильная экономика сформировалась не только благодаря дешёвой регистрации, но и благодаря сохранению конверсии на следующих этапах: расчётная стоимость продажи оставалась управляемой даже при 4 160 регистрациях."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/holycam-webinar-funnel/screenshot-01.webp",
+        "alt": {
+          "uk": "Перший рекламний кабінет Google Ads Holycam",
+          "en": "Holycam — first Google Ads account",
+          "ru": "Первый рекламный кабинет Google Ads Holycam"
+        },
+        "caption": {
+          "uk": "1 / 2",
+          "en": "1 / 2",
+          "ru": "1 / 2"
+        }
+      },
+      {
+        "image": "cases/content/holycam-webinar-funnel/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий рекламний кабінет Google Ads Holycam",
+          "en": "Holycam — second Google Ads account",
+          "ru": "Второй рекламный кабинет Google Ads Holycam"
+        },
+        "caption": {
+          "uk": "2 / 2",
+          "en": "2 / 2",
+          "ru": "2 / 2"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/holycam-webinar-funnel.webp",
+  "imageCard": "cases/card/holycam-webinar-funnel.webp"
+}

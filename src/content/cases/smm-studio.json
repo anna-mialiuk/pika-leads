@@ -1,0 +1,450 @@
+{
+  "order": 3,
+  "originalId": 4,
+  "id": "smm-studio",
+  "number": "04",
+  "source": "meta",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Лідогенерація",
+    "en": "Lead generation",
+    "ru": "Лидогенерация"
+  },
+  "categoryColor": "#5B9BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Лідогенерація послуг",
+    "en": "Lead generation for services",
+    "ru": "Лидогенерация услуг"
+  },
+  "title": {
+    "uk": "SMM-студія",
+    "en": "SMM studio",
+    "ru": "SMM-студия"
+  },
+  "description": {
+    "uk": "Не випадкові звернення, а власники бізнесу з реальною потребою: дві точки входу — форма та повідомлення.",
+    "en": "Not random inquiries, but business owners with a real need: two entry points — a form and a message.",
+    "ru": "Не случайные обращения, а владельцы бизнеса с реальной потребностью: две точки входа — форма и сообщение."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "7 920–20 880",
+        "en": "7,920–20,880",
+        "ru": "7 920–20 880"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.09–$0.18",
+        "en": "CPC $0.09–$0.18",
+        "ru": "CPC $0.09–$0.18"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "22–58 конверсій/день",
+        "en": "22–58 conversions/day",
+        "ru": "22–58 конверсий/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$23 400",
+        "en": "$23,400",
+        "ru": "$23 400"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.09–$0.18",
+          "en": "$0.09–$0.18",
+          "ru": "$0.09–$0.18"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$1.20–$4.10",
+          "en": "$1.20–$4.10",
+          "ru": "$1.20–$4.10"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$80–$100",
+          "en": "$80–$100",
+          "ru": "$80–$100"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "22–58 конверсій",
+          "en": "22–58 conversions",
+          "ru": "22–58 конверсий"
+        },
+        "note": {
+          "uk": "у PDF помилково підписано «покупок»",
+          "en": "mislabeled as “purchases” in the PDF",
+          "ru": "в PDF ошибочно подписано «покупок»"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "4 на скринах кампаній",
+        "en": "4 in campaign screenshots",
+        "ru": "4 на скринах кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$23 400",
+            "en": "$23,400",
+            "ru": "$23 400"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "7 920–20 880 конверсій за 360 днів",
+            "en": "7,920–20,880 conversions in 360 days",
+            "ru": "7 920–20 880 конверсий за 360 дней"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа розрахунку: $65/день × 360 днів роботи",
+        "en": "Account total for the whole period · calculation basis: $65/day × 360 days of work",
+        "ru": "Итог кабинета за весь срок · основа расчёта: $65/день × 360 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Студії потрібні були не випадкові звернення, а власники бізнесу з реальною потребою у веденні соцмереж. Це означало, що креатив мав одночасно знижувати CPL і відсікати аудиторію без бюджету чи задачі.",
+      "en": "The studio didn’t need random inquiries — it needed business owners with a real need for social media management. That meant the creative had to lower CPL and filter out people with no budget or task at the same time.",
+      "ru": "Студии нужны были не случайные обращения, а владельцы бизнеса с реальной потребностью в ведении соцсетей. Это значило, что креатив должен был одновременно снижать CPL и отсекать аудиторию без бюджета или задачи."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/smm-studio/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії SMM-студії",
+          "en": "SMM studio ad campaign results",
+          "ru": "Результаты рекламной кампании SMM-студии"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Лідогенерація",
+          "en": "Screenshot 1 — Lead generation",
+          "ru": "Скриншот 1 — Лидогенерация"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Запуск почався із сегментації за типом клієнта: локальний бізнес, e-commerce та експерти. У кожній гілці використовувався свій біль і приклад результату, після чого ліди порівнювалися не лише за ціною, а й за переходом у дзвінок.",
+      "en": "The launch started with segmentation by client type: local businesses, e-commerce and experts. Each branch used its own pain point and example result, and leads were then compared not only on cost but on how many turned into a call.",
+      "ru": "Запуск начался с сегментации по типу клиента: локальный бизнес, e-commerce и эксперты. В каждой ветке использовалась своя боль и пример результата, после чего лиды сравнивались не только по цене, но и по переходу в звонок."
+    }
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Lead-кампанія з короткою формою для первинного обсягу.",
+        "en": "Lead campaign with a short form for initial volume.",
+        "ru": "Lead-кампания с короткой формой для первичного объёма."
+      },
+      {
+        "uk": "Кампанія на повідомлення для теплішої аудиторії та швидкої кваліфікації.",
+        "en": "Messages campaign for a warmer audience and fast qualification.",
+        "ru": "Кампания на сообщения для более тёплой аудитории и быстрой квалификации."
+      },
+      {
+        "uk": "Сегменти за нішами бізнесу з окремими прикладами робіт.",
+        "en": "Segments by business niche with separate work examples.",
+        "ru": "Сегменты по нишам бизнеса с отдельными примерами работ."
+      },
+      {
+        "uk": "Ретаргетинг відвідувачів сайту та залучених в експертний контент.",
+        "en": "Retargeting of website visitors and people engaged with expert content.",
+        "ru": "Ретаргетинг посетителей сайта и вовлечённых в экспертный контент."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Замість загального «просування під ключ» оголошення показували конкретні проблеми: немає системного контенту, заявки нестабільні, власник не розуміє звіти. CTA пропонував аудит або розбір, а не негайну купівлю послуги.",
+        "en": "Instead of generic “turnkey promotion”, the ads showed specific problems: no consistent content, unstable leads, an owner who doesn’t understand the reports. The CTA offered an audit or a review rather than buying the service right away.",
+        "ru": "Вместо общего «продвижения под ключ» объявления показывали конкретные проблемы: нет системного контента, заявки нестабильны, владелец не понимает отчёты. CTA предлагал аудит или разбор, а не немедленную покупку услуги."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Паралельно тестувалися цілі, форми та аудиторії. Рішення про масштабування ухвалювалося після ручної оцінки якості лідів, щоб не зафіксувати дешеву, але марну форму.",
+        "en": "Objectives, forms and audiences were tested in parallel. Scaling decisions were made after a manual review of lead quality, so as not to lock in a cheap but useless form.",
+        "ru": "Параллельно тестировались цели, формы и аудитории. Решение о масштабировании принималось после ручной оценки качества лидов, чтобы не зафиксировать дешёвую, но бесполезную форму."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$65",
+            "en": "$65",
+            "ru": "$65"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 950",
+            "en": "$1,950",
+            "ru": "$1 950"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.12–$2.95",
+            "en": "$1.12–$2.95",
+            "ru": "$1.12–$2.95"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "660–1 740 заявок",
+            "en": "660–1,740 leads",
+            "ru": "660–1 740 заявок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 660–1 740 конверсій за 30 днів по заявленому денному темпу.",
+        "en": "Cross-check with the source: 660–1,740 conversions in 30 days at the stated daily pace.",
+        "ru": "Сверка с источником: 660–1 740 конверсий за 30 дней по заявленному дневному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Діапазон CPL $1.20–$4.10 забезпечив студії масштабований потік звернень. Важлива частина результату — кілька точок входу: форма для обсягу та повідомлення для більш свідомого ліда.",
+        "en": "A CPL range of $1.20–$4.10 gave the studio a scalable flow of inquiries. An important part of the result was having several entry points: a form for volume and messages for more intentional leads.",
+        "ru": "Диапазон CPL $1.20–$4.10 обеспечил студии масштабируемый поток обращений. Важная часть результата — несколько точек входа: форма для объёма и сообщения для более осознанного лида."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/smm-studio/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії SMM-студії",
+          "en": "SMM studio ad campaign results",
+          "ru": "Результаты рекламной кампании SMM-студии"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/smm-studio.webp",
+  "imageCard": "cases/card/smm-studio.webp"
+}

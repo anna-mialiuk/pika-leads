@@ -1,0 +1,64 @@
+{
+  "order": 53,
+  "originalId": 54,
+  "id": "tiktok-aesthetic-clinic",
+  "number": "54",
+  "source": "tiktok",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Медицина",
+    "en": "Medicine",
+    "ru": "Медицина"
+  },
+  "categoryColor": "#25F4EE",
+  "platform": "TikTok",
+  "kicker": {
+    "uk": "TikTok Ads / Лідогенерація",
+    "en": "TikTok Ads / Lead generation",
+    "ru": "TikTok Ads / Лидогенерация"
+  },
+  "title": {
+    "uk": "Клініка естетики",
+    "en": "Aesthetic clinic",
+    "ru": "Клиника эстетики"
+  },
+  "description": {
+    "uk": "Потік цільових записів із TikTok зі зниженням ціни заявки.",
+    "en": "A flow of qualified bookings from TikTok with a lower cost per lead.",
+    "ru": "Поток целевых записей из TikTok со снижением цены заявки."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "CPL",
+        "en": "CPL",
+        "ru": "CPL"
+      },
+      "value": {
+        "uk": "−48%",
+        "en": "−48%",
+        "ru": "−48%"
+      },
+      "type": "pink"
+    },
+    {
+      "label": {
+        "uk": "заявок",
+        "en": "leads",
+        "ru": "заявок"
+      },
+      "value": {
+        "uk": "+210%",
+        "en": "+210%",
+        "ru": "+210%"
+      },
+      "type": "pink"
+    }
+  ],
+  "visualGradient": "linear-gradient(135deg, #25F4EE 0%, #5FD9D8 30%, #D85882 68%, #FE2C55 100%)",
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  }
+}

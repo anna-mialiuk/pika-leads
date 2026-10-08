@@ -1,0 +1,64 @@
+{
+  "order": 57,
+  "originalId": 58,
+  "id": "linkedin-infobusiness",
+  "number": "58",
+  "source": "linkedin",
+  "niche": "webinars",
+  "category": {
+    "uk": "Інфобізнес",
+    "en": "Online education",
+    "ru": "Инфобизнес"
+  },
+  "categoryColor": "#378FE9",
+  "platform": "LinkedIn",
+  "kicker": {
+    "uk": "LinkedIn Ads / Онлайн-освіта",
+    "en": "LinkedIn Ads / Online education",
+    "ru": "LinkedIn Ads / Онлайн-образование"
+  },
+  "title": {
+    "uk": "Онлайн-школа",
+    "en": "Online school",
+    "ru": "Онлайн-школа"
+  },
+  "description": {
+    "uk": "Стабільний набір заявок через тестування аудиторій, оферів і лід-форм.",
+    "en": "A steady flow of leads through testing audiences, offers and lead forms.",
+    "ru": "Стабильный набор заявок через тестирование аудиторий, офферов и лид-форм."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "за лід",
+        "en": "per lead",
+        "ru": "за лид"
+      },
+      "value": {
+        "uk": "$1.9",
+        "en": "$1.9",
+        "ru": "$1.9"
+      },
+      "type": "linkedin"
+    },
+    {
+      "label": {
+        "uk": "заявок",
+        "en": "leads",
+        "ru": "заявок"
+      },
+      "value": {
+        "uk": "8 200",
+        "en": "8,200",
+        "ru": "8 200"
+      },
+      "type": "linkedin"
+    }
+  ],
+  "visualGradient": "linear-gradient(135deg, #378FE9 0%, #00A0DC 100%)",
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  }
+}

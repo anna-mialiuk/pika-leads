@@ -1,0 +1,34 @@
+{
+  "order": 1,
+  "id": 2,
+  "initials": {
+    "uk": "T",
+    "en": "T",
+    "ru": "T"
+  },
+  "name": {
+    "uk": "Tagran",
+    "en": "Tagran",
+    "ru": "Tagran"
+  },
+  "category": {
+    "uk": "Таргетована реклама",
+    "en": "Targeted advertising",
+    "ru": "Таргетированная реклама"
+  },
+  "meta": {
+    "uk": "9 відгуків",
+    "en": "9 reviews",
+    "ru": "9 отзывов"
+  },
+  "badge": {
+    "uk": "KPI 700%+",
+    "en": "KPI 700%+",
+    "ru": "KPI 700%+"
+  },
+  "text": {
+    "uk": "«Працюємо вже понад рік, налаштування таргету на дуже високому рівні. Робить завжди все на якість, результати дуже хороші, KPI перевищив 700%!!!»",
+    "en": "“We’ve been working together for over a year, and the targeting setup is top-notch. Everything is always done with quality in mind, the results are very good — KPI exceeded by 700%!!!”",
+    "ru": "«Работаем уже больше года, настройка таргета на очень высоком уровне. Всегда делает всё на качество, результаты очень хорошие, KPI превысил 700%!!!»"
+  }
+}

@@ -1,0 +1,645 @@
+{
+  "order": 19,
+  "originalId": 20,
+  "id": "chatbots-marketer-marathons",
+  "number": "20",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Андрій Чепик / високообʼємні запуски",
+    "en": "Andrii Chepyk / high-volume launches",
+    "ru": "Андрей Чепик / высокообъёмные запуски"
+  },
+  "title": {
+    "uk": "Марафони «Чат-боти» та «Маркетолог»",
+    "en": "“Chatbots” and “Marketer” marathons",
+    "ru": "Марафоны «Чат-боты» и «Маркетолог»"
+  },
+  "description": {
+    "uk": "Основний підрядник, відповідальний за можливість масштабувати потік до 1 500 лідів на день.",
+    "en": "Main contractor, responsible for scaling the flow to 1,500 leads a day.",
+    "ru": "Основной подрядчик, отвечающий за возможность масштабировать поток до 1 500 лидов в день."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "201 584",
+        "en": "201,584",
+        "ru": "201 584"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "214.52%",
+        "en": "214.52%",
+        "ru": "214.52%"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "31.54–42.58%",
+        "en": "31.54–42.58%",
+        "ru": "31.54–42.58%"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$480 124.24",
+        "en": "$480,124.24",
+        "ru": "$480 124.24"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$480 124.24",
+          "en": "$480,124.24",
+          "ru": "$480 124.24"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "201 584",
+          "en": "201,584",
+          "ru": "201 584"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$2.38",
+          "en": "$2.38",
+          "ru": "$2.38"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Конверсія сторінки",
+          "en": "Page conversion rate",
+          "ru": "Конверсия страницы"
+        },
+        "value": {
+          "uk": "31.54–42.58%",
+          "en": "31.54–42.58%",
+          "ru": "31.54–42.58%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Потенційний ROAS",
+          "en": "Potential ROAS",
+          "ru": "Потенциальный ROAS"
+        },
+        "value": {
+          "uk": "485%",
+          "en": "485%",
+          "ru": "485%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROI до виплат",
+          "en": "ROI before payouts",
+          "ru": "ROI до выплат"
+        },
+        "value": {
+          "uk": "214.52%",
+          "en": "214.52%",
+          "ru": "214.52%"
+        },
+        "note": {
+          "uk": "підсумковий слайд джерела",
+          "en": "source summary slide",
+          "ru": "итоговый слайд источника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Додатково",
+          "en": "Additional",
+          "ru": "Дополнительно"
+        },
+        "value": {
+          "uk": "300+ технічних завдань на креативи",
+          "en": "300+ creative briefs",
+          "ru": "300+ технических заданий на креативы"
+        },
+        "note": {
+          "uk": "контекст джерела",
+          "en": "source context",
+          "ru": "контекст источника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "8 матеріалів кампаній",
+        "en": "8 campaign materials",
+        "ru": "8 материалов кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$480 124.24",
+            "en": "$480,124.24",
+            "ru": "$480 124.24"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "201 584 лідів",
+            "en": "201,584 leads",
+            "ru": "201 584 лида"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумковий слайд",
+        "en": "Account total for the whole period · basis: summary slide",
+        "ru": "Итог кабинета за весь срок · основа: итоговый слайд"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "На старті проєкт отримував приблизно 400–500 лідів на день. Креативи витрачали бюджет нерівномірно, сайти й аналітика працювали нестабільно, а зі зростанням обсягу збільшувалася вартість. Бізнесу була потрібна не локальна оптимізація, а виробнича система для великого щоденного трафіку.",
+      "en": "At the start, the project was getting about 400–500 leads a day. Creatives spent the budget unevenly, the websites and analytics were unstable, and costs rose as volume grew. The business needed not local optimization but a production system for heavy daily traffic.",
+      "ru": "На старте проект получал примерно 400–500 лидов в день. Креативы тратили бюджет неравномерно, сайты и аналитика работали нестабильно, а с ростом объёма увеличивалась стоимость. Бизнесу была нужна не локальная оптимизация, а производственная система для большого ежедневного трафика."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/marathon/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація цільових аудиторій для марафонів і чат-ботів",
+          "en": "Target audience segmentation for the marathons and chatbots",
+          "ru": "Сегментация целевых аудиторий для марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Сегментація аудиторій та опрацювання портретів клієнтів",
+          "en": "Screenshot 1 — Audience segmentation and customer personas",
+          "ru": "Скриншот 1 — Сегментация аудиторий и проработка портретов клиентов"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий матеріал стратегії марафонів і чат-ботів",
+          "en": "Marathons and chatbots strategy — second material",
+          "ru": "Второй материал стратегии марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Структура аудиторій та рекламної стратегії",
+          "en": "Screenshot 2 — Audience structure and ad strategy",
+          "ru": "Скриншот 2 — Структура аудиторий и рекламной стратегии"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Перевірили швидкість, події та маршрути реєстрації; усунули критичні розриви між рекламою і сторінками. Розділили два продукти, аудиторії та офери, щоб алгоритм не змішував різні наміри. Організували потік із 300+ креативних ТЗ: нові кути, хуки, формати й адаптації переможців. Вибудували робочі чати та регулярні контрольні точки за обсягом, CPL, конверсією і якістю оплат. Масштабували поетапно: підтвердження зв’язки, збільшення бюджету, дублювання в окремий контур та оновлення креативу.",
+      "en": "We checked speed, events and registration paths, and fixed critical gaps between the ads and the pages. We separated the two products, audiences and offers so the algorithm wouldn’t mix different intents. We organized a pipeline of 300+ creative briefs: new angles, hooks, formats and adaptations of winners. We set up work chats and regular checkpoints for volume, CPL, conversion and payment quality. Scaling went step by step: confirm the funnel, increase the budget, duplicate into a separate loop and refresh the creative.",
+      "ru": "Проверили скорость, события и маршруты регистрации; устранили критические разрывы между рекламой и страницами. Разделили два продукта, аудитории и офферы, чтобы алгоритм не смешивал разные намерения. Организовали поток из 300+ креативных ТЗ: новые углы, хуки, форматы и адаптации победителей. Выстроили рабочие чаты и регулярные контрольные точки по объёму, CPL, конверсии и качеству оплат. Масштабировали поэтапно: подтверждение связки, увеличение бюджета, дублирование в отдельный контур и обновление креатива."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/marathon/screenshot-03.webp",
+        "alt": {
+          "uk": "Робочий чат команди проєкту марафонів і чат-ботів",
+          "en": "Marathons and chatbots project team chat",
+          "ru": "Рабочий чат команды проекта марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Робоча комунікація, звітність і контроль рекламних кампаній",
+          "en": "Screenshot 1 — Team communication, reporting and ad campaign control",
+          "ru": "Скриншот 1 — Рабочая коммуникация, отчётность и контроль рекламных кампаний"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-04.webp",
+        "alt": {
+          "uk": "Другий матеріал робочого процесу марафонів і чат-ботів",
+          "en": "Marathons and chatbots workflow — second material",
+          "ru": "Второй материал рабочего процесса марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Координація команди та контроль масштабування",
+          "en": "Screenshot 2 — Team coordination and scaling control",
+          "ru": "Скриншот 2 — Координация команды и контроль масштабирования"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Окремі кампанії за марафонами та ключовими оферами.",
+        "en": "Separate campaigns for the marathons and key offers.",
+        "ru": "Отдельные кампании по марафонам и ключевым офферам."
+      },
+      {
+        "uk": "Широкі аудиторії як основне джерело масштабу; інтереси та look-alike — як контрольні сегменти.",
+        "en": "Broad audiences as the main source of scale; interests and lookalikes as control segments.",
+        "ru": "Широкие аудитории как основной источник масштаба; интересы и look-alike — как контрольные сегменты."
+      },
+      {
+        "uk": "Ретаргетинг за глибиною взаємодії: відео, сайт, реєстрація без відвідування, учасник без покупки.",
+        "en": "Retargeting by depth of engagement: video, website, registered but didn’t attend, attended but didn’t buy.",
+        "ru": "Ретаргетинг по глубине взаимодействия: видео, сайт, регистрация без посещения, участник без покупки."
+      },
+      {
+        "uk": "Окремий технічний шар для тестування посадкових сторінок і перевірки атрибуції.",
+        "en": "A separate technical layer for testing landing pages and verifying attribution.",
+        "ru": "Отдельный технический слой для тестирования посадочных страниц и проверки атрибуции."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/marathon/screenshot-05.webp",
+        "alt": {
+          "uk": "Схема рекламної стратегії марафонів і чат-ботів",
+          "en": "Marathons and chatbots ad strategy diagram",
+          "ru": "Схема рекламной стратегии марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Архітектура рекламних кампаній та сегментація трафіку",
+          "en": "Screenshot 1 — Ad campaign architecture and traffic segmentation",
+          "ru": "Скриншот 1 — Архитектура рекламных кампаний и сегментация трафика"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-06.webp",
+        "alt": {
+          "uk": "Детальна схема запуску та масштабування марафонів і чат-ботів",
+          "en": "Detailed launch and scaling diagram for the marathons and chatbots",
+          "ru": "Детальная схема запуска и масштабирования марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Стратегія запуску, ретаргетингу та масштабування",
+          "en": "Screenshot 2 — Launch, retargeting and scaling strategy",
+          "ru": "Скриншот 2 — Стратегия запуска, ретаргетинга и масштабирования"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "У масштабі вирішальним став не «найкращий креатив», а швидкість його заміни. Система ТЗ дозволяла одночасно тестувати тему доходу, зміни професії, автоматизації, економії часу та конкретного результату після марафону. Переможців не копіювали буквально: зберігали робочий мотив і оновлювали візуальні патерни.",
+        "en": "At scale, what mattered most wasn’t “the best creative” but how fast it could be replaced. The brief system made it possible to test income, career change, automation, saving time and a concrete post-marathon result all at once. Winners weren’t copied literally: we kept the working motive and refreshed the visual patterns.",
+        "ru": "На масштабе решающим стал не «лучший креатив», а скорость его замены. Система ТЗ позволяла одновременно тестировать тему дохода, смены профессии, автоматизации, экономии времени и конкретного результата после марафона. Победителей не копировали буквально: сохраняли рабочий мотив и обновляли визуальные паттерны."
+      }
+    },
+    "creativeScreenshots": [
+      {
+        "image": "cases/content/marathon/screenshot-07.webp",
+        "alt": {
+          "uk": "База технічних завдань і матеріалів для креативів марафонів та чат-ботів",
+          "en": "Library of briefs and materials for the marathons and chatbots creatives",
+          "ru": "База технических заданий и материалов для креативов марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Система технічних завдань і виробництва рекламних креативів",
+          "en": "Screenshot 1 — Creative brief and ad production system",
+          "ru": "Скриншот 1 — Система технических заданий и производства рекламных креативов"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-08.webp",
+        "alt": {
+          "uk": "Другий матеріал креативної системи марафонів та чат-ботів",
+          "en": "Marathons and chatbots creative system — second material",
+          "ru": "Второй материал креативной системы марафонов и чат-ботов"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Організація креативного виробництва та тестування гіпотез",
+          "en": "Screenshot 2 — Organizing creative production and hypothesis testing",
+          "ru": "Скриншот 2 — Организация креативного производства и тестирования гипотез"
+        }
+      }
+    ],
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Кампанії оцінювали за когортою запуску: вартість реєстрації, доходимість, продаж і повернення. Для захисту від стрибка CPL бюджет збільшували поступово, а нові зв’язки отримували обмежений тестовий ліміт. Слабкі оголошення вимикали за витратами відносно цільового CPL, а не за емоційною оцінкою.",
+        "en": "Campaigns were judged by launch cohort: cost per registration, attendance, sales and refunds. To guard against CPL spikes, the budget was increased gradually, and new funnels got a limited test cap. Weak ads were switched off based on spend relative to the target CPL, not on gut feeling.",
+        "ru": "Кампании оценивали по когорте запуска: стоимость регистрации, доходимость, продажа и возвраты. Для защиты от скачка CPL бюджет увеличивали постепенно, а новые связки получали ограниченный тестовый лимит. Слабые объявления отключали по расходам относительно целевого CPL, а не по эмоциональной оценке."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Цільовий обсяг",
+            "en": "Target volume",
+            "ru": "Целевой объём"
+          },
+          "value": {
+            "uk": "1 500 лідів/день",
+            "en": "1,500 leads/day",
+            "ru": "1 500 лидов/день"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$107 100 → $45 000",
+            "en": "$107,100 → $45,000",
+            "ru": "$107 100 → $45 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$2.38",
+            "en": "$2.38",
+            "ru": "$2.38"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "30 днів",
+            "en": "30 days",
+            "ru": "30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Перевірка даних. Підсумкові значення взято з PDF. Скріншоти рекламного кабінету показують окремі зрізи й не повинні арифметично збігатися з агрегованими даними за всіма акаунтами та періодами.",
+        "en": "Data check. Totals are taken from the PDF. Ad account screenshots show individual slices and shouldn’t be expected to add up arithmetically to the aggregated data across all accounts and periods.",
+        "ru": "Проверка данных. Итоговые значения взяты из PDF. Скриншоты рекламного кабинета показывают отдельные срезы и не должны арифметически совпадать с агрегированными данными по всем аккаунтам и периодам."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Це найбільший кейс портфеля: понад $480 тис. рекламного бюджету та 201,6 тис. лідів при середньому CPL $2.38. Масштаб став можливим завдяки зв’язці інфраструктури, креативного виробництва та дисципліни аналітики, а не одній настройці рекламного кабінету.",
+        "en": "This is the largest case in the portfolio: over $480k in ad spend and 201.6k leads at an average CPL of $2.38. The scale was made possible by infrastructure, creative production and analytical discipline working together — not by a single ad account setting.",
+        "ru": "Это самый крупный кейс портфеля: более $480 тыс. рекламного бюджета и 201,6 тыс. лидов при среднем CPL $2.38. Масштаб стал возможен благодаря связке инфраструктуры, креативного производства и дисциплины аналитики, а не одной настройке рекламного кабинета."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/marathon/screenshot-01.webp",
+        "alt": {
+          "uk": "Сегментація аудиторій марафонів і чат-ботів",
+          "en": "Marathons and chatbots audience segmentation",
+          "ru": "Сегментация аудиторий марафонов и чат-ботов"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-02.webp",
+        "alt": {
+          "uk": "Матеріали рекламної стратегії марафонів",
+          "en": "Marathons ad strategy materials",
+          "ru": "Материалы рекламной стратегии марафонов"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-03.webp",
+        "alt": {
+          "uk": "Робоча комунікація та звітність команди",
+          "en": "Team communication and reporting",
+          "ru": "Рабочая коммуникация и отчётность команды"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-04.webp",
+        "alt": {
+          "uk": "Координація команди та контроль запусків",
+          "en": "Team coordination and launch control",
+          "ru": "Координация команды и контроль запусков"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-05.webp",
+        "alt": {
+          "uk": "Архітектура рекламних кампаній",
+          "en": "Ad campaign architecture",
+          "ru": "Архитектура рекламных кампаний"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-06.webp",
+        "alt": {
+          "uk": "Стратегія запуску та масштабування",
+          "en": "Launch and scaling strategy",
+          "ru": "Стратегия запуска и масштабирования"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-07.webp",
+        "alt": {
+          "uk": "Система технічних завдань для креативів",
+          "en": "Creative brief system",
+          "ru": "Система технических заданий для креативов"
+        }
+      },
+      {
+        "image": "cases/content/marathon/screenshot-08.webp",
+        "alt": {
+          "uk": "Організація виробництва рекламних креативів",
+          "en": "Organizing ad creative production",
+          "ru": "Организация производства рекламных креативов"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/chatbots-marketer-marathons.webp",
+  "imageCard": "cases/card/chatbots-marketer-marathons.webp"
+}

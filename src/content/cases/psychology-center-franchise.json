@@ -1,0 +1,445 @@
+{
+  "order": 9,
+  "originalId": 10,
+  "id": "psychology-center-franchise",
+  "number": "10",
+  "source": "meta",
+  "niche": "b2b",
+  "category": {
+    "uk": "B2B та франшизи",
+    "en": "B2B & franchises",
+    "ru": "B2B и франшизы"
+  },
+  "categoryColor": "#FF9F43",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "B2B-лідогенерація франшизи",
+    "en": "B2B franchise lead generation",
+    "ru": "B2B-лидогенерация франшизы"
+  },
+  "title": {
+    "uk": "Франшиза центру психології",
+    "en": "Psychology center franchise",
+    "ru": "Франшиза центра психологии"
+  },
+  "description": {
+    "uk": "Зв’язка реклами й доопрацювання воронки: у B2B слабка сторінка швидко робить дорогим навіть добрий трафік.",
+    "en": "Ads plus funnel improvements: in B2B, a weak page quickly makes even good traffic expensive.",
+    "ru": "Связка рекламы и доработки воронки: в B2B слабая страница быстро делает дорогим даже хороший трафик."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "≈ 394",
+        "en": "≈ 394",
+        "ru": "≈ 394"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.14–$0.29",
+        "en": "CPC $0.14–$0.29",
+        "ru": "CPC $0.14–$0.29"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "22–25 заявок/день",
+        "en": "22–25 leads/day",
+        "ru": "22–25 заявок/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$3 728.45",
+        "en": "$3,728.45",
+        "ru": "$3 728.45"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.14–$0.29",
+          "en": "$0.14–$0.29",
+          "ru": "$0.14–$0.29"
+        },
+        "note": {
+          "uk": "11,2–22,8 RUB / 80",
+          "en": "11.2–22.8 RUB / 80",
+          "ru": "11,2–22,8 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$4.48",
+          "en": "$4.48",
+          "ru": "$4.48"
+        },
+        "note": {
+          "uk": "358 RUB / 80",
+          "en": "358 RUB / 80",
+          "ru": "358 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$58.75",
+          "en": "$58.75",
+          "ru": "$58.75"
+        },
+        "note": {
+          "uk": "4 700 RUB / 80",
+          "en": "4,700 RUB / 80",
+          "ru": "4 700 RUB / 80"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "22–25 заявок",
+          "en": "22–25 leads",
+          "ru": "22–25 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "55 кампаній",
+        "en": "55 campaigns",
+        "ru": "55 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$3 728.45",
+            "en": "$3,728.45",
+            "ru": "$3 728.45"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "8 852 кліки за посиланням",
+            "en": "8,852 link clicks",
+            "ru": "8 852 клика по ссылке"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "230 753",
+            "en": "230,753",
+            "ru": "230 753"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "638 612",
+            "en": "638,612",
+            "ru": "638 612"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: 298 275,97 ₽ / 80 — підсумок кабінету",
+        "en": "Account total for the whole period · basis: 298,275.97 ₽ / 80 — account total",
+        "ru": "Итог кабинета за весь срок · основа: 298 275,97 ₽ / 80 — итог кабинета"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Франшиза потребує глибшого прогріву, ніж звичайна послуга: потенційний партнер порівнює інвестиції, підтримку, окупність і репутаційні ризики. Тому посадкова сторінка й реклама мають працювати як єдина система.",
+      "en": "A franchise needs deeper nurturing than a regular service: a potential partner compares investment, support, payback and reputational risks. So the landing page and the ads have to work as a single system.",
+      "ru": "Франшиза требует более глубокого прогрева, чем обычная услуга: потенциальный партнёр сравнивает инвестиции, поддержку, окупаемость и репутационные риски. Поэтому посадочная страница и реклама должны работать как единая система."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/psychology-center-franchise/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній франшизи центру психології",
+          "en": "Psychology center franchise ad campaign results",
+          "ru": "Результаты рекламных кампаний франшизы центра психологии"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — B2B / франшиза",
+          "en": "Screenshot 1 — B2B / franchise",
+          "ru": "Скриншот 1 — B2B / франшиза"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Перед трафіком була перероблена логіка воронки: сильний перший екран, зрозумілий склад франшизи й наступний крок без тиску. У рекламі тестувалися підприємці, спеціалісти допомагаючих професій та аудиторії, які шукають новий бізнес.",
+      "en": "Before running traffic, we reworked the funnel logic: a strong first screen, a clear breakdown of what the franchise includes and a next step without pressure. The ads tested entrepreneurs, specialists in helping professions and audiences looking for a new business.",
+      "ru": "Перед трафиком была переделана логика воронки: сильный первый экран, понятный состав франшизы и следующий шаг без давления. В рекламе тестировались предприниматели, специалисты помогающих профессий и аудитории, ищущие новый бизнес."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Кампанія на лід-форму для первинного обсягу й дешевого тесту гіпотез.",
+        "en": "Lead form campaign for initial volume and cheap hypothesis testing.",
+        "ru": "Кампания на лид-форму для первичного объёма и дешёвого теста гипотез."
+      },
+      {
+        "uk": "Кампанія на сайт для більш свідомих кандидатів.",
+        "en": "Website campaign for more intentional candidates.",
+        "ru": "Кампания на сайт для более осознанных кандидатов."
+      },
+      {
+        "uk": "Сегменти за підприємництвом, психологією та зміною професійного напряму.",
+        "en": "Segments by entrepreneurship, psychology and career change.",
+        "ru": "Сегменты по предпринимательству, психологии и смене профессионального направления."
+      },
+      {
+        "uk": "Ретаргетинг відвідувачів сторінки з кейсами й економікою франшизи.",
+        "en": "Retargeting of visitors to the page with cases and franchise economics.",
+        "ru": "Ретаргетинг посетителей страницы с кейсами и экономикой франшизы."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Офер розкривав не «красиву франшизу», а модель запуску: що отримує партнер, яку підтримку бачить на старті й чому ніша має попит. Креативи знімали страх відсутності досвіду.",
+        "en": "The offer revealed not a “pretty franchise” but a launch model: what the partner gets, what support they see at the start and why the niche is in demand. The creatives addressed the fear of having no experience.",
+        "ru": "Оффер раскрывал не «красивую франшизу», а модель запуска: что получает партнёр, какую поддержку видит на старте и почему ниша востребована. Креативы снимали страх отсутствия опыта."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "CPL зіставлявся з якістю анкети та переходом у презентацію/дзвінок. Паралельно покращувався сайт, бо в B2B-лідогенерації слабка сторінка швидко робить дорогим навіть хороший трафік.",
+        "en": "CPL was compared with application quality and the move to a presentation or call. The website was improved in parallel, because in B2B lead generation a weak page quickly makes even good traffic expensive.",
+        "ru": "CPL сопоставлялся с качеством анкеты и переходом в презентацию/звонок. Параллельно улучшался сайт, потому что в B2B-лидогенерации слабая страница быстро делает дорогим даже хороший трафик."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$58.75",
+            "en": "$58.75",
+            "ru": "$58.75"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 762.50",
+            "en": "$1,762.50",
+            "ru": "$1 762.50"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$4.47",
+            "en": "$4.47",
+            "ru": "$4.47"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 394 заявок",
+            "en": "≈ 394 leads",
+            "ru": "≈ 394 заявки"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Є нестикування: бюджет $58.75 / CPL $4.48 дає близько 13 заявок в день, тоді як підпис заявляє 22–25. Для публічної версії бажано прикласти вивантаження за період.",
+        "en": "There is a discrepancy: a $58.75 budget at a $4.48 CPL gives about 13 leads a day, while the caption states 22–25. For the public version, it’s best to attach an export for the period.",
+        "ru": "Есть нестыковка: бюджет $58.75 / CPL $4.48 даёт около 13 заявок в день, тогда как подпись заявляет 22–25. Для публичной версии желательно приложить выгрузку за период."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Ціна заявки становила близько $4.48. Кейс демонструє зв’язку реклами та доопрацювання воронки, а не спробу вирішити весь маркетинг одним таргетингом.",
+        "en": "The cost per lead was about $4.48. The case demonstrates ads and funnel improvements working together, not an attempt to solve all of marketing with targeting alone.",
+        "ru": "Цена заявки составляла около $4.48. Кейс демонстрирует связку рекламы и доработки воронки, а не попытку решить весь маркетинг одним таргетингом."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/psychology-center-franchise/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній франшизи центру психології",
+          "en": "Psychology center franchise ad campaign results",
+          "ru": "Результаты рекламных кампаний франшизы центра психологии"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/psychology-center-franchise.webp",
+  "imageCard": "cases/card/psychology-center-franchise.webp"
+}

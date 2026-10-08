@@ -1,0 +1,34 @@
+{
+  "order": 3,
+  "id": 4,
+  "initials": {
+    "uk": "ІБ",
+    "en": "IB",
+    "ru": "ИБ"
+  },
+  "name": {
+    "uk": "Ірина Біляк",
+    "en": "Iryna Biliak",
+    "ru": "Ирина Биляк"
+  },
+  "category": {
+    "uk": "Комплексний маркетинг",
+    "en": "Integrated marketing",
+    "ru": "Комплексный маркетинг"
+  },
+  "meta": {
+    "uk": "1 відгук",
+    "en": "1 review",
+    "ru": "1 отзыв"
+  },
+  "badge": {
+    "uk": "Після фрилансерів — до системи",
+    "en": "From freelancers to a system",
+    "ru": "После фрилансеров — к системе"
+  },
+  "text": {
+    "uk": "«Агенція Pika Leads працює на найвищому рівні! Після кількох невдалих спроб співпраці з фрилансерами та іншими агенціями вирішила працювати тільки з професіоналами.»",
+    "en": "“Pika Leads works at the highest level! After several unsuccessful attempts to work with freelancers and other agencies, I decided to work only with professionals.”",
+    "ru": "«Агентство Pika Leads работает на высшем уровне! После нескольких неудачных попыток сотрудничества с фрилансерами и другими агентствами решила работать только с профессионалами.»"
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "order": 4,
+  "originalId": 5,
+  "id": "printed-tshirts-store",
+  "number": "05",
+  "source": "meta",
+  "niche": "ecommerce",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Повідомлення та продажі",
+    "en": "Messages and sales",
+    "ru": "Сообщения и продажи"
+  },
+  "title": {
+    "uk": "Футболки з принтом",
+    "en": "Printed T-shirts",
+    "ru": "Футболки с принтом"
+  },
+  "description": {
+    "uk": "Імпульсна категорія: швидке креативне тестування тем замість складного таргетингу.",
+    "en": "An impulse-buy category: fast creative testing of themes instead of complex targeting.",
+    "ru": "Импульсная категория: быстрое креативное тестирование тем вместо сложного таргетинга."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "2 700–8 640",
+        "en": "2,700–8,640",
+        "ru": "2 700–8 640"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.02–$0.06",
+        "en": "CPC $0.02–$0.06",
+        "ru": "CPC $0.02–$0.06"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "15–48 замовлень/день",
+        "en": "15–48 orders/day",
+        "ru": "15–48 заказов/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$4 500",
+        "en": "$4,500",
+        "ru": "$4 500"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.02–$0.06",
+          "en": "$0.02–$0.06",
+          "ru": "$0.02–$0.06"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна звернення",
+          "en": "Cost per inquiry",
+          "ru": "Цена обращения"
+        },
+        "value": {
+          "uk": "$0.18–$0.32",
+          "en": "$0.18–$0.32",
+          "ru": "$0.18–$0.32"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$20–$40",
+          "en": "$20–$40",
+          "ru": "$20–$40"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "15–48 покупок",
+          "en": "15–48 purchases",
+          "ru": "15–48 покупок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "3 на скринах кампаній",
+        "en": "3 in campaign screenshots",
+        "ru": "3 на скринах кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$4 500",
+            "en": "$4,500",
+            "ru": "$4 500"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "2 700–8 640 замовлень за 180 днів",
+            "en": "2,700–8,640 orders in 180 days",
+            "ru": "2 700–8 640 заказов за 180 дней"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа розрахунку: $25/день × 180 днів роботи",
+        "en": "Account total for the whole period · calculation basis: $25/day × 180 days of work",
+        "ru": "Итог кабинета за весь срок · основа расчёта: $25/день × 180 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Друк на футболках — імпульсна категорія, де рішення часто запускає не бренд, а конкретний принт. Тому ключовим завданням стало швидко знаходити теми, які викликають бажання написати й уточнити розмір або варіант нанесення.",
+      "en": "T-shirt printing is an impulse category where the decision is often triggered not by the brand but by a specific print. So the key task was to quickly find themes that make people want to message and ask about sizes or print options.",
+      "ru": "Печать на футболках — импульсная категория, где решение часто запускает не бренд, а конкретный принт. Поэтому ключевой задачей стало быстро находить темы, которые вызывают желание написать и уточнить размер или вариант нанесения."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/printed-tshirts-store/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії магазину футболок з принтами",
+          "en": "Printed T-shirt store ad campaign results",
+          "ru": "Результаты рекламной кампании магазина футболок с принтами"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / повідомлення та продажі",
+          "en": "Screenshot 1 — E-commerce / messages and sales",
+          "ru": "Скриншот 1 — E-commerce / сообщения и продажи"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "У тест одночасно заходили групи принтів за гумором, професіями, стосунками та подарунковими приводами. Через кілька днів слабкі теми вимикалися, а переможці отримували нові варіації тексту й візуалу.",
+      "en": "Print groups went into the test simultaneously: humor, professions, relationships and gift occasions. After a few days, weak themes were switched off, and the winners got new variations of copy and visuals.",
+      "ru": "В тест одновременно заходили группы принтов по юмору, профессиям, отношениям и подарочным поводам. Через несколько дней слабые темы отключались, а победители получали новые вариации текста и визуала."
+    }
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Кампанія на повідомлення з розділенням за тематикою принта.",
+        "en": "Messages campaign split by print theme.",
+        "ru": "Кампания на сообщения с разделением по тематике принта."
+      },
+      {
+        "uk": "Широка аудиторія для пошуку несподіваних зв’язок.",
+        "en": "Broad audience to find unexpected winning funnels.",
+        "ru": "Широкая аудитория для поиска неожиданных связок."
+      },
+      {
+        "uk": "Інтереси та сезонні приводи як окремі тестові групи.",
+        "en": "Interests and seasonal occasions as separate test ad sets.",
+        "ru": "Интересы и сезонные поводы как отдельные тестовые группы."
+      },
+      {
+        "uk": "Ретаргетинг залучених із добіркою популярних моделей.",
+        "en": "Retargeting engaged users with a roundup of popular designs.",
+        "ru": "Ретаргетинг вовлечённых с подборкой популярных моделей."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Головним героєм оголошення був сам принт: великий, читабельний і зрозумілий без переходу на сайт. У тексті одразу давалися варіанти розмірів, термін виготовлення та простий CTA написати для замовлення.",
+        "en": "The hero of each ad was the print itself: large, readable and understandable without visiting the website. The copy immediately listed size options, production time and a simple CTA to message to order.",
+        "ru": "Главным героем объявления был сам принт: крупный, читаемый и понятный без перехода на сайт. В тексте сразу давались варианты размеров, срок изготовления и простой CTA написать для заказа."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Креативи змінювалися частіше за аудиторії. Ціна звернення використовувалася як ранній сигнал, але фінальний бюджет розподілявся за тими зв’язками, де діалоги реально переходили в оплату.",
+        "en": "Creatives changed more often than audiences. Cost per inquiry was used as an early signal, but the final budget went to the funnels where conversations actually turned into payments.",
+        "ru": "Креативы менялись чаще, чем аудитории. Цена обращения использовалась как ранний сигнал, но финальный бюджет распределялся по тем связкам, где диалоги реально переходили в оплату."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$25",
+            "en": "$25",
+            "ru": "$25"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$750",
+            "en": "$750",
+            "ru": "$750"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.52–$1.67",
+            "en": "$0.52–$1.67",
+            "ru": "$0.52–$1.67"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "450–1 440 замовлень",
+            "en": "450–1,440 orders",
+            "ru": "450–1 440 заказов"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 450–1 440 покупок за 30 днів по заявленому денному темпу.",
+        "en": "Cross-check with the source: 450–1,440 purchases in 30 days at the stated daily pace.",
+        "ru": "Сверка с источником: 450–1 440 покупок за 30 дней по заявленному дневному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Вартість звернення утримувалася в діапазоні $0.18–$0.32, а денний обсяг продажів сягав 48 замовлень. Система працювала за рахунок швидкого креативного тестування, а не складного таргетингу.",
+        "en": "Cost per inquiry stayed at $0.18–$0.32, and daily sales reached 48 orders. The system worked thanks to fast creative testing rather than complex targeting.",
+        "ru": "Стоимость обращения удерживалась в диапазоне $0.18–$0.32, а дневной объём продаж достигал 48 заказов. Система работала за счёт быстрого креативного тестирования, а не сложного таргетинга."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/printed-tshirts-store/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламної кампанії магазину футболок з принтами",
+          "en": "Printed T-shirt store ad campaign results",
+          "ru": "Результаты рекламной кампании магазина футболок с принтами"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/printed-tshirts-store.webp",
+  "imageCard": "cases/card/printed-tshirts-store.webp"
+}

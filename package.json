@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "sitemap": "node scripts/generate-sitemap.mjs",
-    "i18n:check": "node scripts/check-i18n.mjs",
-    "export:content": "node scripts/export-content.mjs"
+    "i18n:check": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.3.0",

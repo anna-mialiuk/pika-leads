@@ -1,0 +1,502 @@
+{
+  "order": 49,
+  "originalId": 50,
+  "id": "money-fest-kazakhstan",
+  "number": "50",
+  "source": "google",
+  "niche": "webinar",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Google",
+  "kicker": {
+    "uk": "YouTube Demand Gen / вебінарна воронка / Казахстан",
+    "en": "YouTube Demand Gen / webinar funnel / Kazakhstan",
+    "ru": "YouTube Demand Gen / вебинарная воронка / Казахстан"
+  },
+  "title": {
+    "uk": "Money Fest: курс з інвестицій у Казахстані",
+    "en": "Money Fest: an investment course in Kazakhstan",
+    "ru": "Money Fest: курс по инвестициям в Казахстане"
+  },
+  "description": {
+    "uk": "1 054,76 реєстрації по $8.77 із трьох підтверджених кабінетів і розрахункова вартість продажу $313.",
+    "en": "1,054.76 registrations at $8.77 from three verified ad accounts, with an estimated cost per sale of $313.",
+    "ru": "1 054,76 регистрации по $8.77 из трёх подтверждённых кабинетов и расчётная стоимость продажи $313."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "1 054,76 реєстрації",
+        "en": "1,054.76 registrations",
+        "ru": "1 054,76 регистрации"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL $8.77",
+        "en": "CPL $8.77",
+        "ru": "CPL $8.77"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "28% дохідність",
+        "en": "28% return",
+        "ru": "28% доходность"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$9 245,16",
+        "en": "$9,245.16",
+        "ru": "$9 245,16"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Підтверджені витрати",
+          "en": "Confirmed spend",
+          "ru": "Подтверждённые расходы"
+        },
+        "value": {
+          "uk": "$9 245,16",
+          "en": "$9,245.16",
+          "ru": "$9 245,16"
+        },
+        "note": {
+          "uk": "три унікальні кабінети",
+          "en": "three unique ad accounts",
+          "ru": "три уникальных кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "Реєстрації",
+          "en": "Registrations",
+          "ru": "Регистрации"
+        },
+        "value": {
+          "uk": "1 054,76",
+          "en": "1,054.76",
+          "ru": "1 054,76"
+        },
+        "note": {
+          "uk": "конверсії Google Ads",
+          "en": "Google Ads conversions",
+          "ru": "конверсии Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середній CPL",
+          "en": "Average CPL",
+          "ru": "Средний CPL"
+        },
+        "value": {
+          "uk": "$8,77",
+          "en": "$8.77",
+          "ru": "$8,77"
+        },
+        "note": {
+          "uk": "витрати / реєстрації",
+          "en": "spend / registrations",
+          "ru": "расходы / регистрации"
+        }
+      },
+      {
+        "label": {
+          "uk": "Розрахункові продажі",
+          "en": "Calculated sales",
+          "ru": "Расчётные продажи"
+        },
+        "value": {
+          "uk": "≈29,5",
+          "en": "≈29.5",
+          "ru": "≈29,5"
+        },
+        "note": {
+          "uk": "28% доходимість × 10% продаж",
+          "en": "28% attendance × 10% sales",
+          "ru": "28% доходимость × 10% продаж"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "Demand Gen + Search + PMax",
+        "en": "Demand Gen + Search + PMax",
+        "ru": "Demand Gen + Search + PMax"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$9 245,16",
+            "en": "$9,245.16",
+            "ru": "$9 245,16"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "1 054,76 реєстрації",
+            "en": "1,054.76 registrations",
+            "ru": "1 054,76 регистрации"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "Казахстан",
+            "en": "Kazakhstan",
+            "ru": "Казахстан"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "7,45 млн+",
+            "en": "7.45M+",
+            "ru": "7,45 млн+"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: три унікальні кабінети Google Ads",
+        "en": "Account total for the whole period · basis: three unique Google Ads accounts",
+        "ru": "Итог кабинета за весь срок · основа: три уникальных кабинета Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Money Fest просував освітній продукт з інвестицій на ринку Казахстану. Воронка будувалася через безкоштовну подію: користувач бачив відеорекламу, переходив на сторінку реєстрації, залишав дані, отримував серію нагадувань, приходив на вебінар і після презентації приймав рішення про покупку курсу. Показники воронки від команди: конверсія посадкової в реєстрацію — 35%, доходимість до вебінару — 28%, конверсія учасника в продаж — 10%.",
+      "en": "Money Fest promoted an investment education product in the Kazakhstan market. The funnel ran through a free event: the user saw a video ad, went to the registration page, left their details, got a series of reminders, attended the webinar and decided whether to buy the course after the presentation. Funnel metrics from the team: landing-to-registration conversion — 35%, webinar attendance — 28%, attendee-to-sale conversion — 10%.",
+      "ru": "Money Fest продвигал образовательный продукт по инвестициям на рынке Казахстана. Воронка строилась через бесплатное мероприятие: пользователь видел видеорекламу, переходил на страницу регистрации, оставлял данные, получал серию напоминаний, приходил на вебинар и после презентации принимал решение о покупке курса. Показатели воронки от команды: конверсия посадочной в регистрацию — 35%, доходимость до вебинара — 28%, конверсия участника в продажу — 10%."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/money-fest-kazakhstan/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для Money Fest у Казахстані",
+          "en": "Google Ads results for Money Fest in Kazakhstan",
+          "ru": "Результаты Google Ads для Money Fest в Казахстане"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — YouTube Demand Gen / вебінарна воронка / Казахстан",
+          "en": "Screenshot 1 — YouTube Demand Gen / webinar funnel / Kazakhstan",
+          "ru": "Скриншот 1 — YouTube Demand Gen / вебинарная воронка / Казахстан"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Інвестиційному курсу було недостатньо короткого пошукового оголошення: аудиторії потрібно було пояснити тему, показати експерта та сформувати інтерес ще до реєстрації. Тому основний обсяг запускали через YouTube у кампаніях Demand Gen — з відеокреативами в In-Feed, In-Stream та інших доступних розміщеннях. Search і Performance Max тестувалися, але масштаб створювали кампанії формування попиту: відео працювало не лише з тими, хто вже шукав курс, а й з аудиторією, яка цікавилася інвестиціями та фінансовою грамотністю.",
+      "en": "A short search ad wasn’t enough for an investment course: the audience needed the topic explained, the expert shown and interest built before registering. So the bulk of volume ran on YouTube in Demand Gen campaigns, with video creatives in In-Feed, In-Stream and other available placements. Search and Performance Max were tested, but scale came from demand generation campaigns: video worked not only with people already looking for a course but also with an audience interested in investing and financial literacy.",
+      "ru": "Инвестиционному курсу было недостаточно короткого поискового объявления: аудитории нужно было объяснить тему, показать эксперта и сформировать интерес ещё до регистрации. Поэтому основной объём запускали через YouTube в кампаниях Demand Gen — с видеокреативами в In-Feed, In-Stream и других доступных размещениях. Search и Performance Max тестировались, но масштаб создавали кампании формирования спроса: видео работало не только с теми, кто уже искал курс, но и с аудиторией, интересующейся инвестициями и финансовой грамотностью."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/money-fest-kazakhstan/screenshot-02.webp",
+        "alt": {
+          "uk": "Demand Gen кампанії Google Ads для Money Fest у Казахстані",
+          "en": "Google Ads Demand Gen campaigns for Money Fest in Kazakhstan",
+          "ru": "Demand Gen кампании Google Ads для Money Fest в Казахстане"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — YouTube Demand Gen / вебінарна воронка / Казахстан",
+          "en": "Screenshot 2 — YouTube Demand Gen / webinar funnel / Kazakhstan",
+          "ru": "Скриншот 2 — YouTube Demand Gen / вебинарная воронка / Казахстан"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "YouTube Demand Gen — основний обсяг: In-Feed, In-Stream та інші відеорозміщення.",
+        "en": "YouTube Demand Gen — the bulk of volume: In-Feed, In-Stream and other video placements.",
+        "ru": "YouTube Demand Gen — основной объём: In-Feed, In-Stream и другие видеоразмещения."
+      },
+      {
+        "uk": "Search — точний перехват сформованого попиту.",
+        "en": "Search — precisely capturing existing demand.",
+        "ru": "Search — точный перехват сформированного спроса."
+      },
+      {
+        "uk": "Performance Max — тест додаткового охоплення.",
+        "en": "Performance Max — testing additional reach.",
+        "ru": "Performance Max — тест дополнительного охвата."
+      },
+      {
+        "uk": "Розділення за кабінетами, щоб бачити економіку кожного набору кампаній окремо.",
+        "en": "Split across ad accounts to see the economics of each campaign set separately.",
+        "ru": "Разделение по кабинетам, чтобы видеть экономику каждого набора кампаний отдельно."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/money-fest-kazakhstan/screenshot-03.webp",
+        "alt": {
+          "uk": "Архітектура Google Ads кампаній Money Fest у Казахстані",
+          "en": "Money Fest Google Ads campaign architecture in Kazakhstan",
+          "ru": "Архитектура Google Ads кампаний Money Fest в Казахстане"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Demand Gen + Search + Performance Max / Казахстан",
+          "en": "Screenshot 3 — Demand Gen + Search + Performance Max / Kazakhstan",
+          "ru": "Скриншот 3 — Demand Gen + Search + Performance Max / Казахстан"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Офер розклали на кілька креативних кутів: практичне навчання, системний підхід до інвестицій, програма вебінару та цінність участі без завищених обіцянок прибутковості. Окремі відеоверсії готувалися під холодну й більш прогріту аудиторію: перші секунди відповідали за увагу, середина — за цінність події, фінал — за зрозумілу реєстрацію.",
+        "en": "The offer was broken into several creative angles: practical training, a systematic approach to investing, the webinar program and the value of attending, without inflated profit promises. Separate video versions were made for cold and warmer audiences: the first seconds grabbed attention, the middle conveyed the event’s value and the ending made registration clear.",
+        "ru": "Оффер разложили на несколько креативных углов: практическое обучение, системный подход к инвестициям, программа вебинара и ценность участия без завышенных обещаний доходности. Отдельные видеоверсии готовились под холодную и более прогретую аудиторию: первые секунды отвечали за внимание, середина — за ценность события, финал — за понятную регистрацию."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Після запуску бюджет перерозподілявся за фактичною вартістю реєстрації, якістю реєстрацій і доходимістю, а не за переглядами чи дешевим кліком. Економіка воронки: при 1 054,76 реєстрації та конверсії сторінки 35% розрахунковий обсяг цільових відвідувань — близько 3 014; до вебінару при 28% доходимості доходять приблизно 295 людей; при 10% конверсії в покупку — близько 29,5 продажів. Вартість реєстрації $8,77, учасника вебінару близько $31,30, розрахункова вартість продажу близько $313,04. Відповідно, середня виручка з продажу вище $313,04 вже дає позитивний рекламний ROMI до операційних витрат.",
+        "en": "After launch, budget was reallocated based on actual cost per registration, registration quality and attendance, not views or cheap clicks. Funnel economics: with 1,054.76 registrations and a 35% page conversion rate, the calculated volume of target visits is about 3,014; at 28% attendance, about 295 people reach the webinar; at a 10% purchase conversion, that’s about 29.5 sales. Cost per registration $8.77, per webinar attendee about $31.30, calculated cost per sale about $313.04. Accordingly, average revenue per sale above $313.04 already yields a positive ad ROMI before operating costs.",
+        "ru": "После запуска бюджет перераспределялся по фактической стоимости регистрации, качеству регистраций и доходимости, а не по просмотрам или дешёвому клику. Экономика воронки: при 1 054,76 регистрации и конверсии страницы 35% расчётный объём целевых посещений — около 3 014; до вебинара при 28% доходимости доходят примерно 295 человек; при 10% конверсии в покупку — около 29,5 продажи. Стоимость регистрации $8,77, участника вебинара около $31,30, расчётная стоимость продажи около $313,04. Соответственно, средняя выручка с продажи выше $313,04 уже даёт положительный рекламный ROMI до операционных расходов."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$308",
+            "en": "$308",
+            "ru": "$308"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$9 250",
+            "en": "$9,250",
+            "ru": "$9 250"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$8.77",
+            "en": "$8.77",
+            "ru": "$8.77"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈1 055 реєстрацій / ≈29 продажів",
+            "en": "≈1,055 registrations / ≈29 sales",
+            "ru": "≈1 055 регистраций / ≈29 продаж"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Користувач повідомив про чотири кабінети, але два файли побайтово ідентичні та показують один CID — у підсумок включені три унікальні кабінети. Показники продажів розраховані за воронкою, а не вивантажені з CRM.",
+        "en": "The user reported four ad accounts, but two files are byte-for-byte identical and show the same CID — the total includes three unique accounts. Sales figures are calculated from the funnel, not exported from a CRM.",
+        "ru": "Пользователь сообщил о четырёх кабинетах, но два файла побайтово идентичны и показывают один CID — в итог включены три уникальных кабинета. Показатели продаж рассчитаны по воронке, а не выгружены из CRM."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За трьома унікальними кабінетами Google Ads підтверджено $9 245,16 витрат і 1 054,76 конверсії. Кабінет 1 — $908,74 і 105 конверсій; кабінет 2 — 5 287 кліків, 1 011 086 показів, $1 021,41 і 26 конверсій; кабінет 3 — 66 258 кліків, 6 442 407 показів, $7 315,01 і 923,76 конверсії. Точний ROAS без фактичної виручки не розраховується: формула для підсумку звіту — виручка / $9 245,16 × 100%, а точка беззбитковості за рекламним бюджетом — близько $313 виручки на одну розрахункову продажу.",
+        "en": "Across three unique Google Ads accounts, $9,245.16 in spend and 1,054.76 conversions are confirmed. Account 1 — $908.74 and 105 conversions; account 2 — 5,287 clicks, 1,011,086 impressions, $1,021.41 and 26 conversions; account 3 — 66,258 clicks, 6,442,407 impressions, $7,315.01 and 923.76 conversions. An exact ROAS can’t be calculated without actual revenue: the formula for the report total is revenue / $9,245.16 × 100%, and the ad-budget break-even point is about $313 in revenue per calculated sale.",
+        "ru": "По трём уникальным кабинетам Google Ads подтверждено $9 245,16 расходов и 1 054,76 конверсии. Кабинет 1 — $908,74 и 105 конверсий; кабинет 2 — 5 287 кликов, 1 011 086 показов, $1 021,41 и 26 конверсий; кабинет 3 — 66 258 кликов, 6 442 407 показов, $7 315,01 и 923,76 конверсии. Точный ROAS без фактической выручки не рассчитывается: формула для итога отчёта — выручка / $9 245,16 × 100%, а точка безубыточности по рекламному бюджету — около $313 выручки на одну расчётную продажу."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/money-fest-kazakhstan/screenshot-01.webp",
+        "alt": {
+          "uk": "Перший рекламний кабінет Google Ads Money Fest",
+          "en": "Money Fest — first Google Ads account",
+          "ru": "Первый рекламный кабинет Google Ads Money Fest"
+        },
+        "caption": {
+          "uk": "1 / 3",
+          "en": "1 / 3",
+          "ru": "1 / 3"
+        }
+      },
+      {
+        "image": "cases/content/money-fest-kazakhstan/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий рекламний кабінет Google Ads Money Fest",
+          "en": "Money Fest — second Google Ads account",
+          "ru": "Второй рекламный кабинет Google Ads Money Fest"
+        },
+        "caption": {
+          "uk": "2 / 3",
+          "en": "2 / 3",
+          "ru": "2 / 3"
+        }
+      },
+      {
+        "image": "cases/content/money-fest-kazakhstan/screenshot-03.webp",
+        "alt": {
+          "uk": "Структура та результати кампаній Money Fest",
+          "en": "Money Fest campaign structure and results",
+          "ru": "Структура и результаты кампаний Money Fest"
+        },
+        "caption": {
+          "uk": "3 / 3",
+          "en": "3 / 3",
+          "ru": "3 / 3"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/money-fest-kazakhstan.webp",
+  "imageCard": "cases/card/money-fest-kazakhstan.webp"
+}

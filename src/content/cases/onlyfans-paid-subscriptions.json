@@ -1,0 +1,570 @@
+{
+  "order": 32,
+  "originalId": 33,
+  "id": "onlyfans-paid-subscriptions",
+  "number": "33",
+  "source": "meta",
+  "niche": "social",
+  "category": {
+    "uk": "Соцмережі",
+    "en": "Social media",
+    "ru": "Соцсети"
+  },
+  "categoryColor": "#FF7AC8",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Creator Economy / Compliant Acquisition",
+    "en": "Creator Economy / Compliant Acquisition",
+    "ru": "Creator Economy / Compliant Acquisition"
+  },
+  "title": {
+    "uk": "OnlyFans-модель: чиста ціна платної підписки",
+    "en": "OnlyFans model: the clean cost of a paid subscription",
+    "ru": "OnlyFans-модель: чистая цена платной подписки"
+  },
+  "description": {
+    "uk": "170 підтверджених платних підписок по $0.53 у чистому conversion-контурі — без клоакінгу та обходу модерації.",
+    "en": "170 confirmed paid subscriptions at $0.53 in a clean conversion setup — no cloaking and no bypassing moderation.",
+    "ru": "170 подтверждённых платных подписок по $0.53 в чистом conversion-контуре — без клоакинга и обхода модерации."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього звернень",
+        "en": "Total inquiries",
+        "ru": "Всего обращений"
+      },
+      "value": {
+        "uk": "170 підписок",
+        "en": "170 subscriptions",
+        "ru": "170 подписок"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPA $0.53",
+        "en": "CPA $0.53",
+        "ru": "CPA $0.53"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "найкращий контур $0.43",
+        "en": "best setup $0.43",
+        "ru": "лучший контур $0.43"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$186.46",
+        "en": "$186.46",
+        "ru": "$186.46"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Чистий бюджет підписок",
+          "en": "Clean subscription budget",
+          "ru": "Чистый бюджет подписок"
+        },
+        "value": {
+          "uk": "$90.03",
+          "en": "$90.03",
+          "ru": "$90.03"
+        },
+        "note": {
+          "uk": "conversion-контур",
+          "en": "conversion loop",
+          "ru": "conversion-контур"
+        }
+      },
+      {
+        "label": {
+          "uk": "Підтверджені підписки",
+          "en": "Confirmed subscriptions",
+          "ru": "Подтверждённые подписки"
+        },
+        "value": {
+          "uk": "170",
+          "en": "170",
+          "ru": "170"
+        },
+        "note": {
+          "uk": "custom event",
+          "en": "custom event",
+          "ru": "custom event"
+        }
+      },
+      {
+        "label": {
+          "uk": "Фактичний CPA",
+          "en": "Actual CPA",
+          "ru": "Фактический CPA"
+        },
+        "value": {
+          "uk": "$0.53",
+          "en": "$0.53",
+          "ru": "$0.53"
+        },
+        "note": {
+          "uk": "$90.03 / 170",
+          "en": "$90.03 / 170",
+          "ru": "$90.03 / 170"
+        }
+      },
+      {
+        "label": {
+          "uk": "Охоплення чистого контуру",
+          "en": "Clean loop reach",
+          "ru": "Охват чистого контура"
+        },
+        "value": {
+          "uk": "3 498",
+          "en": "3,498",
+          "ru": "3 498"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Покази",
+          "en": "Impressions",
+          "ru": "Показы"
+        },
+        "value": {
+          "uk": "5 758",
+          "en": "5,758",
+          "ru": "5 758"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      },
+      {
+        "label": {
+          "uk": "Тестові витрати",
+          "en": "Test spend",
+          "ru": "Тестовые расходы"
+        },
+        "value": {
+          "uk": "$96.43",
+          "en": "$96.43",
+          "ru": "$96.43"
+        },
+        "note": {
+          "uk": "preliminary-контур",
+          "en": "preliminary loop",
+          "ru": "preliminary-контур"
+        }
+      },
+      {
+        "label": {
+          "uk": "Загальний бюджет",
+          "en": "Total budget",
+          "ru": "Общий бюджет"
+        },
+        "value": {
+          "uk": "$186.46",
+          "en": "$186.46",
+          "ru": "$186.46"
+        },
+        "note": {
+          "uk": "сума контурів",
+          "en": "sum of loops",
+          "ru": "сумма контуров"
+        }
+      },
+      {
+        "label": {
+          "uk": "Найкращий контур",
+          "en": "Best loop",
+          "ru": "Лучший контур"
+        },
+        "value": {
+          "uk": "145 підписок по $0.43",
+          "en": "145 subscriptions at $0.43",
+          "ru": "145 подписок по $0.43"
+        },
+        "note": {
+          "uk": "Ads Manager",
+          "en": "Ads Manager",
+          "ru": "Ads Manager"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "2 контури кампаній",
+        "en": "2 campaign loops",
+        "ru": "2 контура кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$186.46",
+            "en": "$186.46",
+            "ru": "$186.46"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "170 підтверджених підписок",
+            "en": "170 confirmed subscriptions",
+            "ru": "170 подтверждённых подписок"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "3 498",
+            "en": "3,498",
+            "ru": "3 498"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "5 758",
+            "en": "5,758",
+            "ru": "5 758"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: сума контурів",
+        "en": "Account total for the whole period · basis: sum of loops",
+        "ru": "Итог кабинета за весь срок · основа: сумма контуров"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Повнолітні чоловіки 21–45 років у США, Канаді, країнах ЄС, Австралії та частині LATAM; інтерес до creator economy, lifestyle-контенту та підписних платформ. Потрібно було вимірювати не дешевий клік, а фактичну платну підписку на платформі, дотримуючись рекламних правил, вікових обмежень і безпечної для майданчика комунікації.",
+      "en": "Adult men aged 21–45 in the USA, Canada, EU countries, Australia and parts of LATAM, interested in the creator economy, lifestyle content and subscription platforms. We had to measure not a cheap click but an actual paid subscription on the platform, while following ad policies, age restrictions and platform-safe messaging.",
+      "ru": "Совершеннолетние мужчины 21–45 лет в США, Канаде, странах ЕС, Австралии и части LATAM; интерес к creator economy, lifestyle-контенту и подписным платформам. Нужно было измерять не дешёвый клик, а фактическую платную подписку на платформе, соблюдая рекламные правила, возрастные ограничения и безопасную для площадки коммуникацию."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/onlyfans-paid-subscriptions/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет кампаній для платних підписок creator economy",
+          "en": "Ad account for creator economy paid subscription campaigns",
+          "ru": "Рекламный кабинет кампаний для платных подписок creator economy"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Creator Economy / Compliant Acquisition",
+          "en": "Screenshot 1 — Creator Economy / Compliant Acquisition",
+          "ru": "Скриншот 1 — Creator Economy / Compliant Acquisition"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Узгодили SFW-позиціонування моделі та прибрали з реклами відверті обіцянки й візуали. Розділили тест географій і подій: кліки, Direct, нейтральна проміжна сторінка та підтверджена підписка. Налаштували custom event на фінальний перехід і винесли чистий conversion-контур окремо від діагностичного трафіку. Порівняли USA, EU, Canada та Australia за фактичною ціною підписки. Масштаб в Advantage+ вмикали тільки після підтвердження коректної передачі події.",
+      "en": "We agreed on SFW positioning for the model and removed explicit promises and visuals from the ads. We split testing of geos and events: clicks, Direct, a neutral intermediate page and confirmed subscription. We set up a custom event on the final step and kept a clean conversion loop separate from diagnostic traffic. We compared the USA, EU, Canada and Australia on actual cost per subscription. Scaling in Advantage+ was switched on only after the event was confirmed to be passing correctly.",
+      "ru": "Согласовали SFW-позиционирование модели и убрали из рекламы откровенные обещания и визуалы. Разделили тест географий и событий: клики, Direct, нейтральная промежуточная страница и подтверждённая подписка. Настроили custom event на финальный переход и вынесли чистый conversion-контур отдельно от диагностического трафика. Сравнили USA, EU, Canada и Australia по фактической цене подписки. Масштаб в Advantage+ включали только после подтверждения корректной передачи события."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/onlyfans-paid-subscriptions/screenshot-02.webp",
+        "alt": {
+          "uk": "Історія запуску рекламних кампаній creator economy з оптимізацією на підтверджену підписку",
+          "en": "Launch history of creator economy campaigns optimized for confirmed subscriptions",
+          "ru": "История запуска рекламных кампаний creator economy с оптимизацией на подтверждённую подписку"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Creator Economy / Compliant Acquisition",
+          "en": "Screenshot 2 — Creator Economy / Compliant Acquisition",
+          "ru": "Скриншот 2 — Creator Economy / Compliant Acquisition"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Креатив: SFW lifestyle, особистість автора та зрозуміла причина перейти в профіль.",
+        "en": "Creative: SFW lifestyle, the creator’s personality and a clear reason to visit the profile.",
+        "ru": "Креатив: SFW lifestyle, личность автора и понятная причина перейти в профиль."
+      },
+      {
+        "uk": "Маршрут: оголошення → Instagram або нейтральна вікова сторінка → прозоре посилання → підтверджена підписка.",
+        "en": "Route: ad → Instagram or a neutral age-gated page → a transparent link → confirmed subscription.",
+        "ru": "Маршрут: объявление → Instagram или нейтральная возрастная страница → прозрачная ссылка → подтверждённая подписка."
+      },
+      {
+        "uk": "Оптимізація: custom conversion / Lead замість link click; окремі гео для контролю якості.",
+        "en": "Optimization: custom conversion / Lead instead of link click; separate geos for quality control.",
+        "ru": "Оптимизация: custom conversion / Lead вместо link click; отдельные гео для контроля качества."
+      },
+      {
+        "uk": "Ретаргетинг: тільки дозволені аудиторії залучення та compliant-матеріали.",
+        "en": "Retargeting: only permitted engagement audiences and compliant materials.",
+        "ru": "Ретаргетинг: только разрешённые аудитории вовлечения и compliant-материалы."
+      }
+    ],
+    "architectureScreenshots": [
+      {
+        "image": "cases/content/onlyfans-paid-subscriptions/screenshot-03.webp",
+        "alt": {
+          "uk": "Архітектура compliant рекламних кампаній creator economy з оптимізацією на підтверджену підписку",
+          "en": "Architecture of compliant creator economy campaigns optimized for confirmed subscriptions",
+          "ru": "Архитектура compliant рекламных кампаний creator economy с оптимизацией на подтверждённую подписку"
+        },
+        "caption": {
+          "uk": "Скріншот 3 — Creator Economy / Compliant Acquisition",
+          "en": "Screenshot 3 — Creator Economy / Compliant Acquisition",
+          "ru": "Скриншот 3 — Creator Economy / Compliant Acquisition"
+        }
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Тестували портретні lifestyle-ролики, особистий тон, короткий storytelling і social proof. Матеріали не містили відвертого контенту; задача креатива — викликати інтерес до особистості та перевести користувача в прозору підписну воронку.",
+        "en": "We tested portrait lifestyle videos, a personal tone, short storytelling and social proof. The materials contained no explicit content; the creative’s job was to spark interest in the personality and move the user into a transparent subscription funnel.",
+        "ru": "Тестировали портретные lifestyle-ролики, личный тон, короткий storytelling и social proof. Материалы не содержали откровенного контента; задача креатива — вызвать интерес к личности и перевести пользователя в прозрачную подписную воронку."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Найкращий чистий контур дав 145 підписок по $0.43, другий — 25 по $1.13. Після підтвердження коректної передачі події логічно масштабувати перший контур, але залишати окремий бюджет на нові креативи та гео, щоб не залежати від однієї зв’язки.",
+        "en": "The best clean loop delivered 145 subscriptions at $0.43, the second 25 at $1.13. Once correct event passing is confirmed, it makes sense to scale the first loop, while keeping a separate budget for new creatives and geos so as not to depend on a single funnel.",
+        "ru": "Лучший чистый контур дал 145 подписок по $0.43, второй — 25 по $1.13. После подтверждения корректной передачи события логично масштабировать первый контур, но оставлять отдельный бюджет на новые креативы и гео, чтобы не зависеть от одной связки."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$10.00",
+            "en": "$10.00",
+            "ru": "$10.00"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$300.00",
+            "en": "$300.00",
+            "ru": "$300.00"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPA $0.53",
+            "en": "CPA $0.53",
+            "ru": "CPA $0.53"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 566 підписок / 30 днів",
+            "en": "≈ 566 subscriptions / 30 days",
+            "ru": "≈ 566 подписок / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Модель: $300 на 30 днів → близько 566 підписок при збереженні CPA $0.53, або 18.9 підписки на день. CPA може змінюватися при зростанні бюджету та зміні гео.",
+        "en": "Model: $300 for 30 days → about 566 subscriptions if the $0.53 CPA holds, or 18.9 subscriptions a day. CPA may change as the budget grows and geos change.",
+        "ru": "Модель: $300 на 30 дней → около 566 подписок при сохранении CPA $0.53, или 18.9 подписки в день. CPA может меняться при росте бюджета и смене гео."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "У чистому conversion-контурі підтверджено 170 платних підписок при витраті $90.03 і CPA $0.53. Лише $90.03 пов’язані з чистою подією підписки; $96.43 додаткових витрат показують тестову інфраструктуру й не змішуються з підтвердженими підписками. Стратегія побудована на дотриманні правил рекламного майданчика.",
+        "en": "The clean conversion loop confirmed 170 paid subscriptions at $90.03 spend and a $0.53 CPA. Only $90.03 relates to the clean subscription event; the additional $96.43 in spend reflects the test infrastructure and isn’t mixed with confirmed subscriptions. The strategy is built on compliance with the ad platform’s rules.",
+        "ru": "В чистом conversion-контуре подтверждено 170 платных подписок при расходе $90.03 и CPA $0.53. Лишь $90.03 связаны с чистым событием подписки; $96.43 дополнительных расходов показывают тестовую инфраструктуру и не смешиваются с подтверждёнными подписками. Стратегия построена на соблюдении правил рекламной площадки."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/onlyfans-paid-subscriptions/screenshot-01.webp",
+        "alt": {
+          "uk": "Рекламний кабінет creator economy — скріншот 1",
+          "en": "Creator economy ad account — screenshot 1",
+          "ru": "Рекламный кабинет creator economy — скриншот 1"
+        },
+        "caption": {
+          "uk": "1 / 3",
+          "en": "1 / 3",
+          "ru": "1 / 3"
+        }
+      },
+      {
+        "image": "cases/content/onlyfans-paid-subscriptions/screenshot-02.webp",
+        "alt": {
+          "uk": "Рекламний кабінет creator economy — скріншот 2",
+          "en": "Creator economy ad account — screenshot 2",
+          "ru": "Рекламный кабинет creator economy — скриншот 2"
+        },
+        "caption": {
+          "uk": "2 / 3",
+          "en": "2 / 3",
+          "ru": "2 / 3"
+        }
+      },
+      {
+        "image": "cases/content/onlyfans-paid-subscriptions/screenshot-03.webp",
+        "alt": {
+          "uk": "Рекламний кабінет creator economy — скріншот 3",
+          "en": "Creator economy ad account — screenshot 3",
+          "ru": "Рекламный кабинет creator economy — скриншот 3"
+        },
+        "caption": {
+          "uk": "3 / 3",
+          "en": "3 / 3",
+          "ru": "3 / 3"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншоти Meta Ads Manager з початкового звіту. Підтверджено 170 платних підписок у чистому conversion-контурі при витраті $90.03 і фактичному CPA $0.53. Окремі $96.43 витрат належать до тестового контуру й не змішуються з підтвердженим результатом.",
+      "en": "Meta Ads Manager screenshots from the original report. 170 paid subscriptions confirmed in the clean conversion loop at $90.03 spend and an actual CPA of $0.53. The separate $96.43 in spend belongs to the test loop and isn’t mixed with the confirmed result.",
+      "ru": "Скриншоты Meta Ads Manager из исходного отчёта. Подтверждено 170 платных подписок в чистом conversion-контуре при расходе $90.03 и фактическом CPA $0.53. Отдельные $96.43 расходов относятся к тестовому контуру и не смешиваются с подтверждённым результатом."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/onlyfans-paid-subscriptions.webp",
+  "imageCard": "cases/card/onlyfans-paid-subscriptions.webp"
+}

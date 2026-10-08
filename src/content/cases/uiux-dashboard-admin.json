@@ -1,0 +1,25 @@
+{
+  "order": 64,
+  "originalId": 65,
+  "id": "uiux-dashboard-admin",
+  "number": "65",
+  "source": "uiux",
+  "niche": "dashboard",
+  "category": {
+    "uk": "Дашборд",
+    "en": "Dashboard",
+    "ru": "Дашборд"
+  },
+  "categoryColor": "#8B5CF6",
+  "platform": "UI/UX",
+  "title": {
+    "uk": "Дашборд / адмінка",
+    "en": "Dashboard / admin panel",
+    "ru": "Дашборд / админка"
+  },
+  "description": {
+    "uk": "Інтерфейс аналітики та управління з таблицями й графіками.",
+    "en": "An analytics and management interface with tables and charts.",
+    "ru": "Интерфейс аналитики и управления с таблицами и графиками."
+  }
+}

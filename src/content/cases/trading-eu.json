@@ -1,0 +1,446 @@
+{
+  "order": 43,
+  "originalId": 44,
+  "id": "trading-eu",
+  "number": "44",
+  "source": "google",
+  "niche": "crypto",
+  "category": {
+    "uk": "Крипта та фінанси",
+    "en": "Crypto & finance",
+    "ru": "Крипта и финансы"
+  },
+  "categoryColor": "#FFA63D",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Фінанси / Search / відновлення після блокування",
+    "en": "Finance / Search / recovery after a ban",
+    "ru": "Финансы / Search / восстановление после блокировки"
+  },
+  "title": {
+    "uk": "Трейдинг у країнах ЄС",
+    "en": "Trading in EU countries",
+    "ru": "Трейдинг в странах ЕС"
+  },
+  "description": {
+    "uk": "120 лідів по $7.57 і повернення трафіку в цільовий діапазон після блокування рекламного акаунта.",
+    "en": "120 leads at $7.57 and traffic back in the target range after the ad account was banned.",
+    "ru": "120 лидов по $7.57 и возврат трафика в целевой диапазон после блокировки рекламного аккаунта."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "120 лідів",
+        "en": "120 leads",
+        "ru": "120 лидов"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL $7.57",
+        "en": "CPL $7.57",
+        "ru": "CPL $7.57"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "повернення після бана",
+        "en": "recovery after a ban",
+        "ru": "возврат после бана"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$908.78",
+        "en": "$908.78",
+        "ru": "$908.78"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$908.78",
+          "en": "$908.78",
+          "ru": "$908.78"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "120",
+          "en": "120",
+          "ru": "120"
+        },
+        "note": {
+          "uk": "конверсії по акаунту",
+          "en": "account conversions",
+          "ru": "конверсии по аккаунту"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "$7.57",
+          "en": "$7.57",
+          "ru": "$7.57"
+        },
+        "note": {
+          "uk": "за конверсію",
+          "en": "per conversion",
+          "ru": "за конверсию"
+        }
+      },
+      {
+        "label": {
+          "uk": "Цільовий коридор",
+          "en": "Target range",
+          "ru": "Целевой коридор"
+        },
+        "value": {
+          "uk": "$7.50–$7.90",
+          "en": "$7.50–$7.90",
+          "ru": "$7.50–$7.90"
+        },
+        "note": {
+          "uk": "після відновлення",
+          "en": "after recovery",
+          "ru": "после восстановления"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "3 кампанії",
+        "en": "3 campaigns",
+        "ru": "3 кампании"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$908.78",
+            "en": "$908.78",
+            "ru": "$908.78"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "120 конверсій",
+            "en": "120 conversions",
+            "ru": "120 конверсий"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "країни ЄС",
+            "en": "EU countries",
+            "ru": "страны ЕС"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: вивантаження Google Ads",
+        "en": "Account total for the whole period · basis: Google Ads export",
+        "ru": "Итог кабинета за весь срок · основа: выгрузка Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Проєкт працював у конкурентній фінансовій тематиці на ринках Євросоюзу. У цій ніші потрібно одночасно утримувати релевантність пошукових запитів, контролювати вартість ліда та зберігати стійкість рекламної інфраструктури: фінансові оголошення проходять жорсткішу модерацію, а зупинка акаунта напряму обриває потік заявок.",
+      "en": "The project operated in a competitive finance vertical in EU markets. In this niche, you have to keep search query relevance, control cost per lead and maintain a resilient ad infrastructure all at once: finance ads face stricter moderation, and an account suspension directly cuts off the lead flow.",
+      "ru": "Проект работал в конкурентной финансовой тематике на рынках Евросоюза. В этой нише нужно одновременно удерживать релевантность поисковых запросов, контролировать стоимость лида и сохранять устойчивость рекламной инфраструктуры: финансовые объявления проходят более жёсткую модерацию, а остановка аккаунта напрямую обрывает поток заявок."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/trading-eu/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для трейдингового проєкту в країнах ЄС",
+          "en": "Google Ads results for a trading project in EU countries",
+          "ru": "Результаты Google Ads для трейдингового проекта в странах ЕС"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Фінанси / Search / відновлення після блокування",
+          "en": "Screenshot 1 — Finance / Search / recovery after a ban",
+          "ru": "Скриншот 1 — Финансы / Search / восстановление после блокировки"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Зібрали та відфільтрували семантику навколо трейдингу, інвестицій і криптовалют, розділивши її на самостійні напрями — трейдинг крипти, інвестиції в криптовалюту та арбітраж. Таке розділення дозволило оцінювати економіку різних намірів окремо, а не змішувати їх в одній кампанії. Під кластери підготували окремі повідомлення: оголошення мало точно відповідати запиту, не створювати завищених очікувань і вести на релевантну посадкову сторінку.",
+      "en": "We collected and filtered keywords around trading, investing and crypto, splitting them into independent directions — crypto trading, cryptocurrency investing and arbitrage. This split made it possible to evaluate the economics of different intents separately rather than mixing them in one campaign. We prepared separate messages for each cluster: the ad had to match the query precisely, not create inflated expectations and lead to a relevant landing page.",
+      "ru": "Собрали и отфильтровали семантику вокруг трейдинга, инвестиций и криптовалют, разделив её на самостоятельные направления — трейдинг крипты, инвестиции в криптовалюту и арбитраж. Такое разделение позволило оценивать экономику разных намерений отдельно, а не смешивать их в одной кампании. Под кластеры подготовили отдельные сообщения: объявление должно было точно соответствовать запросу, не создавать завышенных ожиданий и вести на релевантную посадочную страницу."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Search / трейдинг крипти — окремий кластер зі своєю економікою.",
+        "en": "Search / crypto trading — a separate cluster with its own economics.",
+        "ru": "Search / трейдинг крипты — отдельный кластер со своей экономикой."
+      },
+      {
+        "uk": "Search / інвестиції в криптовалюту — другий рівень наміру, окремі оголошення.",
+        "en": "Search / cryptocurrency investing — a second level of intent, separate ads.",
+        "ru": "Search / инвестиции в криптовалюту — второй уровень намерения, отдельные объявления."
+      },
+      {
+        "uk": "Search / арбітраж — третій напрям, який оцінювався незалежно від інших.",
+        "en": "Search / arbitrage — a third direction, evaluated independently of the others.",
+        "ru": "Search / арбитраж — третье направление, которое оценивалось независимо от других."
+      },
+      {
+        "uk": "Перезапуск у новому кабінеті після блокування — відновлення структури без повторного пошуку економіки з нуля.",
+        "en": "Relaunch in a new account after the ban — restoring the structure without rediscovering the economics from scratch.",
+        "ru": "Перезапуск в новом кабинете после блокировки — восстановление структуры без повторного поиска экономики с нуля."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Висока релевантність була потрібна і користувачу, і алгоритму. У фінансовій ніші це ще й питання стійкості акаунта: оголошення, яке обіцяє більше, ніж дає посадкова сторінка, підвищує ризик модерації. Тексти переписувалися після тесту — саме це привело CPL у робочий діапазон $7.50–$7.90.",
+        "en": "High relevance mattered to both the user and the algorithm. In the finance niche, it’s also a matter of account resilience: an ad that promises more than the landing page delivers raises moderation risk. Copy was rewritten after the test — and that’s what brought CPL into the working range of $7.50–$7.90.",
+        "ru": "Высокая релевантность была нужна и пользователю, и алгоритму. В финансовой нише это ещё и вопрос устойчивости аккаунта: объявление, которое обещает больше, чем даёт посадочная страница, повышает риск модерации. Тексты переписывались после теста — именно это привело CPL в рабочий диапазон $7.50–$7.90."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "На етапі масштабування рекламний акаунт отримав блокування. Замість тривалої паузи команда відновила кампанії у новому робочому контурі та повернула трафік — перші ліди після перезапуску знову прийшли в межах уже знайденої цільової вартості. Цінність кейсу не лише в CPL: він показує операційну стійкість, збережену структуру кампаній, розуміння робочих кластерів і здатність відновити керований трафік після раптової зупинки.",
+        "en": "During scaling, the ad account was banned. Instead of a long pause, the team restored the campaigns in a new working setup and brought traffic back — the first leads after the relaunch again came in within the already established target cost. The value of the case isn’t just the CPL: it shows operational resilience, a preserved campaign structure, an understanding of the working clusters and the ability to restore controlled traffic after a sudden stop.",
+        "ru": "На этапе масштабирования рекламный аккаунт получил блокировку. Вместо длительной паузы команда восстановила кампании в новом рабочем контуре и вернула трафик — первые лиды после перезапуска снова пришли в пределах уже найденной целевой стоимости. Ценность кейса не только в CPL: он показывает операционную устойчивость, сохранённую структуру кампаний, понимание рабочих кластеров и способность восстановить управляемый трафик после внезапной остановки."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$100",
+            "en": "$100",
+            "ru": "$100"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$3 000",
+            "en": "$3,000",
+            "ru": "$3 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$7.57",
+            "en": "$7.57",
+            "ru": "$7.57"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 396 лідів",
+            "en": "≈ 396 leads",
+            "ru": "≈ 396 лидов"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні CPL $7.57 із вивантаження кабінету.",
+        "en": "30-day projection at the $7.57 CPL from the account export.",
+        "ru": "Расчёт на 30 дней при сохранении CPL $7.57 из выгрузки кабинета."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "$908.78 бюджету дали 120 лідів по $7.57. Після блокування акаунта трафік був відновлений, а вартість заявки повернулася в цільовий діапазон $7.50–$7.90. Підтвердження з Google Ads: $908.78 витрат, 120 конверсій і $7.57 за конверсію по акаунту.",
+        "en": "A $908.78 budget delivered 120 leads at $7.57. After the account ban, traffic was restored and the cost per lead returned to the $7.50–$7.90 target range. Confirmation from Google Ads: $908.78 spent, 120 conversions and $7.57 per conversion for the account.",
+        "ru": "$908.78 бюджета дали 120 лидов по $7.57. После блокировки аккаунта трафик был восстановлен, а стоимость заявки вернулась в целевой диапазон $7.50–$7.90. Подтверждение из Google Ads: $908.78 расходов, 120 конверсий и $7.57 за конверсию по аккаунту."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/trading-eu/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads трейдингового проєкту в країнах ЄС",
+          "en": "Google Ads results for a trading project in EU countries",
+          "ru": "Результаты Google Ads трейдингового проекта в странах ЕС"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/trading-eu.jpg",
+  "imageCard": "cases/card/trading-eu.webp"
+}

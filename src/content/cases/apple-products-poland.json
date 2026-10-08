@@ -1,0 +1,446 @@
+{
+  "order": 41,
+  "originalId": 42,
+  "id": "apple-products-poland",
+  "number": "42",
+  "source": "google",
+  "niche": "ecom",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Google",
+  "kicker": {
+    "uk": "E-commerce / Search → PMax → Shopping / Польща",
+    "en": "E-commerce / Search → PMax → Shopping / Poland",
+    "ru": "E-commerce / Search → PMax → Shopping / Польша"
+  },
+  "title": {
+    "uk": "Apple-техніка в Польщі",
+    "en": "Apple products in Poland",
+    "ru": "Техника Apple в Польше"
+  },
+  "description": {
+    "uk": "Зв’язка Search → Performance Max → Shopping дала 8 295 цільових дій по $1.93 за бюджету $15 907.",
+    "en": "A Search → Performance Max → Shopping setup delivered 8,295 target actions at $1.93 on a $15,907 budget.",
+    "ru": "Связка Search → Performance Max → Shopping дала 8 295 целевых действий по $1.93 при бюджете $15 907."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "8 295 дій",
+        "en": "8,295 actions",
+        "ru": "8 295 действий"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPA $1.93",
+        "en": "CPA $1.93",
+        "ru": "CPA $1.93"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "59 902 PLN витрат",
+        "en": "PLN 59,902 spent",
+        "ru": "59 902 PLN расходов"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$15 907",
+        "en": "$15,907",
+        "ru": "$15 907"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$15 907",
+          "en": "$15,907",
+          "ru": "$15 907"
+        },
+        "note": {
+          "uk": "59 902,21 PLN по кабінету",
+          "en": "PLN 59,902.21 for the account",
+          "ru": "59 902,21 PLN по кабинету"
+        }
+      },
+      {
+        "label": {
+          "uk": "Цільові дії",
+          "en": "Target actions",
+          "ru": "Целевые действия"
+        },
+        "value": {
+          "uk": "8 295",
+          "en": "8,295",
+          "ru": "8 295"
+        },
+        "note": {
+          "uk": "конверсії Google Ads",
+          "en": "Google Ads conversions",
+          "ru": "конверсии Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPA",
+          "en": "CPA",
+          "ru": "CPA"
+        },
+        "value": {
+          "uk": "$1.93",
+          "en": "$1.93",
+          "ru": "$1.93"
+        },
+        "note": {
+          "uk": "7,22 PLN за конверсію",
+          "en": "PLN 7.22 per conversion",
+          "ru": "7,22 PLN за конверсию"
+        }
+      },
+      {
+        "label": {
+          "uk": "Поріг для PMax",
+          "en": "PMax threshold",
+          "ru": "Порог для PMax"
+        },
+        "value": {
+          "uk": "100 конверсій",
+          "en": "100 conversions",
+          "ru": "100 конверсий"
+        },
+        "note": {
+          "uk": "до підключення автоматики",
+          "en": "before switching on automation",
+          "ru": "до подключения автоматики"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "Search + PMax + Shopping",
+        "en": "Search + PMax + Shopping",
+        "ru": "Search + PMax + Shopping"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$15 907",
+            "en": "$15,907",
+            "ru": "$15 907"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "8 295 конверсій",
+            "en": "8,295 conversions",
+            "ru": "8 295 конверсий"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "Польща",
+            "en": "Poland",
+            "ru": "Польша"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: 59 902,21 PLN, вивантаження Google Ads",
+        "en": "Account total for the whole period · basis: PLN 59,902.21, Google Ads export",
+        "ru": "Итог кабинета за весь срок · основа: 59 902,21 PLN, выгрузка Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Просувалася продаж iPhone, MacBook та супутніх категорій на польському ринку. Завдання було не просто зібрати трафік, а побудувати систему: спочатку накопичити якісні пошукові сигнали, потім підключити алгоритмічне масштабування й утримати вартість цільової дії. Окремо важливо коректно трактувати подію оптимізації: у кабінеті конверсія названа «покупкою», але фактично це заявка, після якої відділ продажів передзвонює. Тому 8 295 — це ліди з вираженим наміром купити, а не оплачені замовлення.",
+      "en": "We promoted sales of iPhones, MacBooks and related categories in the Polish market. The task wasn’t just to gather traffic but to build a system: first accumulate quality search signals, then switch on algorithmic scaling and hold the cost per target action. It was also important to interpret the optimization event correctly: in the account, the conversion is labeled a “purchase”, but in fact it’s a lead request followed by a call from the sales team. So the 8,295 are leads with clear purchase intent, not paid orders.",
+      "ru": "Продвигалась продажа iPhone, MacBook и сопутствующих категорий на польском рынке. Задача была не просто собрать трафик, а построить систему: сначала накопить качественные поисковые сигналы, затем подключить алгоритмическое масштабирование и удержать стоимость целевого действия. Отдельно важно корректно трактовать событие оптимизации: в кабинете конверсия названа «покупкой», но фактически это заявка, после которой отдел продаж перезванивает. Поэтому 8 295 — это лиды с выраженным намерением купить, а не оплаченные заказы."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/apple-products-poland/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для продажу Apple-техніки в Польщі",
+          "en": "Google Ads results for Apple product sales in Poland",
+          "ru": "Результаты Google Ads для продажи техники Apple в Польше"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — E-commerce / Search → PMax → Shopping / Польща",
+          "en": "Screenshot 1 — E-commerce / Search → PMax → Shopping / Poland",
+          "ru": "Скриншот 1 — E-commerce / Search → PMax → Shopping / Польша"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Запуск почали з пошукових кампаній: перехопити сформований попит, перевірити якість запитів і оголошень та накопичити перші конверсійні дані без передчасного розширення охоплення. Performance Max не підключали одразу — спочатку акаунт довели до перших 100 цільових дій, щоб у автостратегії була база для навчання: історія конверсій, зрозумілі аудиторії та підтверджені зв’язки «запит → оголошення → посадкова → дія». Лише після цього додали PMax із задачею масштабувати обсяг за межами чистого пошукового попиту, а коли він стабілізувався — підключили Google Shopping.",
+      "en": "We started with Search campaigns: capture existing demand, check query and ad quality and accumulate the first conversion data without expanding reach prematurely. Performance Max wasn’t switched on right away — first the account was brought to its first 100 target actions so the auto-strategy had a base to learn from: conversion history, clear audiences and confirmed “query → ad → landing page → action” paths. Only then was PMax added to scale volume beyond pure search demand, and once it stabilized, Google Shopping was switched on.",
+      "ru": "Запуск начали с поисковых кампаний: перехватить сформированный спрос, проверить качество запросов и объявлений и накопить первые конверсионные данные без преждевременного расширения охвата. Performance Max не подключали сразу — сначала аккаунт довели до первых 100 целевых действий, чтобы у автостратегии была база для обучения: история конверсий, понятные аудитории и подтверждённые связки «запрос → объявление → посадочная → действие». Только после этого добавили PMax с задачей масштабировать объём за пределами чистого поискового спроса, а когда он стабилизировался — подключили Google Shopping."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Search — фундамент навчання: сформований попит, перевірка семантики та перші конверсійні сигнали для автостратегій.",
+        "en": "Search — the learning foundation: existing demand, keyword validation and the first conversion signals for auto-strategies.",
+        "ru": "Search — фундамент обучения: сформированный спрос, проверка семантики и первые конверсионные сигналы для автостратегий."
+      },
+      {
+        "uk": "Performance Max — підключений після 100 конверсій; окремі напрями під iPhone, AirPods і аксесуари.",
+        "en": "Performance Max — switched on after 100 conversions; separate directions for iPhone, AirPods and accessories.",
+        "ru": "Performance Max — подключён после 100 конверсий; отдельные направления под iPhone, AirPods и аксессуары."
+      },
+      {
+        "uk": "Google Shopping — товарний шар: користувач бачить модель, ціну та візуал ще до переходу на сайт.",
+        "en": "Google Shopping — the product layer: users see the model, price and visual before clicking through to the website.",
+        "ru": "Google Shopping — товарный слой: пользователь видит модель, цену и визуал ещё до перехода на сайт."
+      },
+      {
+        "uk": "Цикл оптимізації раз на 7–8 днів — достатньо часу алгоритмам і недостатньо, щоб слабка зв’язка спалила бюджет.",
+        "en": "An optimization cycle every 7–8 days — enough time for the algorithms, not enough for a weak funnel to burn the budget.",
+        "ru": "Цикл оптимизации раз в 7–8 дней — достаточно времени алгоритмам и недостаточно, чтобы слабая связка сожгла бюджет."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Товарна специфіка вирішувалася не перебором банерів, а структурою: Shopping і PMax підставляли користувачу конкретний товар із ціною, тому вигорання одного візуалу перестало бути вузьким місцем. Оголошення в Search трималися на точній відповідності запиту — у категорії, де людина шукає конкретну модель, розмите повідомлення програє завжди.",
+        "en": "Product specifics were handled not by cycling through banners but by structure: Shopping and PMax showed users a specific product with its price, so a single visual burning out stopped being a bottleneck. Search ads relied on exact query matching — in a category where people search for a specific model, a vague message always loses.",
+        "ru": "Товарная специфика решалась не перебором баннеров, а структурой: Shopping и PMax подставляли пользователю конкретный товар с ценой, поэтому выгорание одного визуала перестало быть узким местом. Объявления в Search держались на точном соответствии запросу — в категории, где человек ищет конкретную модель, размытое сообщение проигрывает всегда."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Оптимізація йшла циклами приблизно раз на 7–8 днів. Окремо контролювався пошуковий попит: перевірялася релевантність запитів і розподіл трафіку між комерційними категоріями, щоб бюджет не йшов в інформаційний або випадковий інтерес. Порядок підключення інструментів тут важливіший за їх набір — PMax на порожньому акаунті навчається на шумі, PMax на 100 конверсіях навчається на сигналі.",
+        "en": "Optimization ran in cycles of roughly every 7–8 days. Search demand was monitored separately: query relevance and traffic distribution across commercial categories were checked so the budget didn’t go to informational or random interest. The order in which tools are switched on matters more here than the set of tools — PMax on an empty account learns from noise, PMax on 100 conversions learns from signal.",
+        "ru": "Оптимизация шла циклами примерно раз в 7–8 дней. Отдельно контролировался поисковый спрос: проверялась релевантность запросов и распределение трафика между коммерческими категориями, чтобы бюджет не уходил в информационный или случайный интерес. Порядок подключения инструментов здесь важнее их набора — PMax на пустом аккаунте учится на шуме, PMax на 100 конверсиях учится на сигнале."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$530",
+            "en": "$530",
+            "ru": "$530"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$15 900",
+            "en": "$15,900",
+            "ru": "$15 900"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$1.93",
+            "en": "$1.93",
+            "ru": "$1.93"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 8 200 дій",
+            "en": "≈ 8,200 actions",
+            "ru": "≈ 8 200 действий"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні фактичної ціни цільової дії $1.93 із вивантаження кабінету.",
+        "en": "30-day projection at the actual cost per target action of $1.93 from the account export.",
+        "ru": "Расчёт на 30 дней при сохранении фактической цены целевого действия $1.93 из выгрузки кабинета."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "$15 907 бюджету принесли 8 295 цільових дій за звітної ціни $1.93 — наймасштабніший і найефективніший за CPA проєкт у добірці. Підтвердження з Google Ads: 59 902,21 PLN витрат, 8 295 конверсій, 7,22 PLN за конверсію. Ключ до результату — послідовність інструментів, а не їх кількість: Search накопичив сигнал, PMax масштабував, Shopping посилив товарну частину воронки.",
+        "en": "A $15,907 budget delivered 8,295 target actions at a reported cost of $1.93 — the largest-scale and most CPA-efficient project in this collection. Confirmation from Google Ads: PLN 59,902.21 spent, 8,295 conversions, PLN 7.22 per conversion. The key to the result is the sequence of tools, not their number: Search accumulated signal, PMax scaled, Shopping strengthened the product part of the funnel.",
+        "ru": "$15 907 бюджета принесли 8 295 целевых действий по отчётной цене $1.93 — самый масштабный и самый эффективный по CPA проект в подборке. Подтверждение из Google Ads: 59 902,21 PLN расходов, 8 295 конверсий, 7,22 PLN за конверсию. Ключ к результату — последовательность инструментов, а не их количество: Search накопил сигнал, PMax масштабировал, Shopping усилил товарную часть воронки."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/apple-products-poland/screenshot-01.webp",
+        "alt": {
+          "uk": "Вивантаження Google Ads по кампаніях Apple-техніки в Польщі",
+          "en": "Google Ads export for Apple product campaigns in Poland",
+          "ru": "Выгрузка Google Ads по кампаниям техники Apple в Польше"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/apple-products-poland.webp",
+  "imageCard": "cases/card/apple-products-poland.webp"
+}

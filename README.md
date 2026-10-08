@@ -11,7 +11,6 @@
 | `npm run preview` | перегляд зібраної версії |
 | `npm run i18n:check` | перевірка перекладів |
 | `npm run sitemap` | генерація `public/sitemap.xml` і `robots.txt` |
-| `npm run export:content` | експорт кейсів і статей у JSON для CMS |
 | `npm run lint` | ESLint |
 
 ## Структура

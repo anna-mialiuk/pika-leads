@@ -1,0 +1,547 @@
+{
+  "order": 37,
+  "originalId": 38,
+  "id": "massage-training-leads",
+  "number": "38",
+  "source": "google",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Лідогенерація",
+    "en": "Lead generation",
+    "ru": "Лидогенерация"
+  },
+  "categoryColor": "#5B9BFF",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Google Ads / міжнародна онлайн-освіта",
+    "en": "Google Ads / international online education",
+    "ru": "Google Ads / международное онлайн-образование"
+  },
+  "title": {
+    "uk": "Навчання масажу: 2 403 заявки в Європі та Ізраїлі",
+    "en": "Massage training: 2,403 leads in Europe and Israel",
+    "ru": "Обучение массажу: 2 403 заявки в Европе и Израиле"
+  },
+  "description": {
+    "uk": "Курс із шийно-комірцевої зони для російськомовних за кордоном: CPL $4.92 при бюджеті $11 834 за 186 днів.",
+    "en": "A neck-and-shoulder massage course for Russian speakers abroad: $4.92 CPL on an $11,834 budget over 186 days.",
+    "ru": "Курс по шейно-воротниковой зоне для русскоязычных за рубежом: CPL $4.92 при бюджете $11 834 за 186 дней."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "2 403 заявки",
+        "en": "2,403 leads",
+        "ru": "2 403 заявки"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL $4.92",
+        "en": "CPL $4.92",
+        "ru": "CPL $4.92"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "12.9 ліда/день",
+        "en": "12.9 leads/day",
+        "ru": "12.9 лида/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$11 834",
+        "en": "$11,834",
+        "ru": "$11 834"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Рекламний бюджет",
+          "en": "Ad budget",
+          "ru": "Рекламный бюджет"
+        },
+        "value": {
+          "uk": "$11 834",
+          "en": "$11,834",
+          "ru": "$11 834"
+        },
+        "note": {
+          "uk": "Google Ads",
+          "en": "Google Ads",
+          "ru": "Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Заявки",
+          "en": "Leads",
+          "ru": "Заявки"
+        },
+        "value": {
+          "uk": "2 403",
+          "en": "2,403",
+          "ru": "2 403"
+        },
+        "note": {
+          "uk": "два потоки",
+          "en": "two flows",
+          "ru": "два потока"
+        }
+      },
+      {
+        "label": {
+          "uk": "Підсумковий CPL",
+          "en": "Overall CPL",
+          "ru": "Итоговый CPL"
+        },
+        "value": {
+          "uk": "$4.92",
+          "en": "$4.92",
+          "ru": "$4.92"
+        },
+        "note": {
+          "uk": "бюджет / ліди",
+          "en": "budget / leads",
+          "ru": "бюджет / лиды"
+        }
+      },
+      {
+        "label": {
+          "uk": "Календарний період",
+          "en": "Calendar period",
+          "ru": "Календарный период"
+        },
+        "value": {
+          "uk": "186 днів",
+          "en": "186 days",
+          "ru": "186 дней"
+        },
+        "note": {
+          "uk": "11.04–13.10.2025",
+          "en": "11.04–13.10.2025",
+          "ru": "11.04–13.10.2025"
+        }
+      },
+      {
+        "label": {
+          "uk": "Перший потік",
+          "en": "First flow",
+          "ru": "Первый поток"
+        },
+        "value": {
+          "uk": "1 158 лідів по $4.09",
+          "en": "1,158 leads at $4.09",
+          "ru": "1 158 лидов по $4.09"
+        },
+        "note": {
+          "uk": "витрати $4 739",
+          "en": "$4,739 spent",
+          "ru": "расходы $4 739"
+        }
+      },
+      {
+        "label": {
+          "uk": "Другий потік",
+          "en": "Second flow",
+          "ru": "Второй поток"
+        },
+        "value": {
+          "uk": "1 245 лідів по $5.70",
+          "en": "1,245 leads at $5.70",
+          "ru": "1 245 лидов по $5.70"
+        },
+        "note": {
+          "uk": "витрати $7 095",
+          "en": "$7,095 spent",
+          "ru": "расходы $7 095"
+        }
+      },
+      {
+        "label": {
+          "uk": "Середні витрати на добу",
+          "en": "Average spend per day",
+          "ru": "Средние расходы в сутки"
+        },
+        "value": {
+          "uk": "$63.62",
+          "en": "$63.62",
+          "ru": "$63.62"
+        },
+        "note": {
+          "uk": "розрахунок",
+          "en": "calculated",
+          "ru": "расчёт"
+        }
+      },
+      {
+        "label": {
+          "uk": "30-денний еквівалент",
+          "en": "30-day equivalent",
+          "ru": "30-дневный эквивалент"
+        },
+        "value": {
+          "uk": "$1 909 / 388 лідів",
+          "en": "$1,909 / 388 leads",
+          "ru": "$1 909 / 388 лидов"
+        },
+        "note": {
+          "uk": "розрахунок",
+          "en": "calculated",
+          "ru": "расчёт"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "2 потоки кампаній",
+        "en": "2 campaign flows",
+        "ru": "2 потока кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$11 834",
+            "en": "$11,834",
+            "ru": "$11 834"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "2 403 заявки",
+            "en": "2,403 leads",
+            "ru": "2 403 заявки"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "—",
+            "en": "—",
+            "ru": "—"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: Google Ads",
+        "en": "Account total for the whole period · basis: Google Ads",
+        "ru": "Итог кабинета за весь срок · основа: Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Онлайн-курс з масажу шийно-комірцевої зони з прикладною обіцянкою: освоїти нову професію та отримати додатковий дохід. Географія — Німеччина, Туреччина, Франція, Італія, Велика Британія, Іспанія та Ізраїль. Аудиторія — російськомовні емігранти, яким потрібна зрозуміла прикладна професія або додатковий заробіток. Ключовий бар’єр — сумнів, чи можна почати з нуля та монетизувати навичку в новій країні. KPI — утримувати вартість заявки в діапазоні $4–6.",
+      "en": "An online course in neck-and-shoulder massage with a practical promise: master a new profession and earn extra income. Geography: Germany, Turkey, France, Italy, the UK, Spain and Israel. Audience: Russian-speaking emigrants who need a clear, practical profession or extra income. The key barrier is doubt about whether you can start from scratch and monetize the skill in a new country. KPI: keep the cost per lead within $4–6.",
+      "ru": "Онлайн-курс по массажу шейно-воротниковой зоны с прикладным обещанием: освоить новую профессию и получить дополнительный доход. География — Германия, Турция, Франция, Италия, Великобритания, Испания и Израиль. Аудитория — русскоязычные эмигранты, которым нужна понятная прикладная профессия или дополнительный заработок. Ключевой барьер — сомнение, можно ли начать с нуля и монетизировать навык в новой стране. KPI — удерживать стоимость заявки в диапазоне $4–6."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/massage-training-leads/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для онлайн-курсу з масажу шийно-комірцевої зони",
+          "en": "Google Ads results for the neck-and-shoulder massage online course",
+          "ru": "Результаты Google Ads для онлайн-курса по массажу шейно-воротниковой зоны"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Google Ads / міжнародна онлайн-освіта",
+          "en": "Screenshot 1 — Google Ads / international online education",
+          "ru": "Скриншот 1 — Google Ads / международное онлайн-образование"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Розділили кампанії за GEO, щоб країни з різною аукціонною вартістю не конкурували всередині однієї бюджетної корзини. Зібрали матрицю оферів навколо двох сильних мотивів: «нова професія з нуля» та «заробіток за кордоном». Протестували понад 15 креативів і посадкових зв’язок; оптимізацію вели за фактичною реєстрацією, а не за кліком. Після накопичення статистики перерозподілили бюджет у країни та оголошення зі стабільним CPL і достатнім обсягом.",
+      "en": "We split campaigns by geo so that countries with different auction costs wouldn’t compete within one budget pool. We built an offer matrix around two strong motives: “a new profession from scratch” and “earning abroad”. We tested 15+ creatives and landing page combinations, optimizing for actual registrations rather than clicks. Once stats accumulated, we reallocated budget to countries and ads with a stable CPL and enough volume.",
+      "ru": "Разделили кампании по GEO, чтобы страны с разной аукционной стоимостью не конкурировали внутри одной бюджетной корзины. Собрали матрицу офферов вокруг двух сильных мотивов: «новая профессия с нуля» и «заработок за границей». Протестировали более 15 креативов и посадочных связок; оптимизацию вели по фактической регистрации, а не по клику. После накопления статистики перераспределили бюджет в страны и объявления со стабильным CPL и достаточным объёмом."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/massage-training-leads/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий потік Google Ads для онлайн-курсу з масажу в Європі та Ізраїлі",
+          "en": "Second Google Ads flow for the massage online course in Europe and Israel",
+          "ru": "Второй поток Google Ads для онлайн-курса по массажу в Европе и Израиле"
+        },
+        "caption": {
+          "uk": "Скріншот 2 — Google Ads / міжнародна онлайн-освіта",
+          "en": "Screenshot 2 — Google Ads / international online education",
+          "ru": "Скриншот 2 — Google Ads / международное онлайн-образование"
+        }
+      }
+    ]
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Окрема кампанія на кожне GEO — прозоре управління ставками замість усереднення дорогих і дешевих країн.",
+        "en": "A separate campaign for each geo — transparent bid management instead of averaging expensive and cheap countries.",
+        "ru": "Отдельная кампания на каждое GEO — прозрачное управление ставками вместо усреднения дорогих и дешёвых стран."
+      },
+      {
+        "uk": "Матриця оферів: «нова професія з нуля» проти «заробіток за кордоном».",
+        "en": "Offer matrix: “a new profession from scratch” vs “earning abroad”.",
+        "ru": "Матрица офферов: «новая профессия с нуля» против «заработка за границей»."
+      },
+      {
+        "uk": "Оптимізація за фактичною реєстрацією, а не за кліком.",
+        "en": "Optimization for actual registrations, not clicks.",
+        "ru": "Оптимизация по фактической регистрации, а не по клику."
+      },
+      {
+        "uk": "Ретаргетинг на відвідувачів і тих, хто не завершив реєстрацію, з посиленням дедлайнів і обмеженням місць.",
+        "en": "Retargeting visitors and people who didn’t complete registration, with stronger deadlines and limited spots.",
+        "ru": "Ретаргетинг на посетителей и тех, кто не завершил регистрацию, с усилением дедлайнов и ограничением мест."
+      },
+      {
+        "uk": "Поступове масштабування робочих зв’язок із контролем CPL, обсягу та якості заявок за GEO.",
+        "en": "Gradual scaling of working funnels with control of CPL, volume and lead quality by geo.",
+        "ru": "Постепенное масштабирование рабочих связок с контролем CPL, объёма и качества заявок по GEO."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Протестували понад 15 креативів і посадкових зв’язок. Офер про нову професію знімав страх «у мене немає досвіду», а обіцянка заробітку пов’язувала навчання з практичною цінністю — саме ця пара мотивів дала основний обсяг.",
+        "en": "We tested 15+ creatives and landing page combinations. The new-profession offer removed the “I have no experience” fear, while the earnings promise tied the training to practical value — this pair of motives delivered the bulk of the volume.",
+        "ru": "Протестировали более 15 креативов и посадочных связок. Оффер о новой профессии снимал страх «у меня нет опыта», а обещание заработка связывало обучение с практической ценностью — именно эта пара мотивов дала основной объём."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Бюджет другого потоку виріс на 49.7%, обсяг лідів — на 7.5%, CPL піднявся на $1.61 (+39.4%), але залишився всередині цільового діапазону $4–6. Зростання ціни під час масштабування було контрольованим і прогнозованим — система зберегла KPI при збільшенні бюджету.",
+        "en": "The second flow’s budget grew by 49.7% and lead volume by 7.5%; CPL rose by $1.61 (+39.4%) but stayed within the $4–6 target range. The price increase during scaling was controlled and predictable — the system held its KPI as the budget grew.",
+        "ru": "Бюджет второго потока вырос на 49.7%, объём лидов — на 7.5%, CPL поднялся на $1.61 (+39.4%), но остался внутри целевого диапазона $4–6. Рост цены при масштабировании был контролируемым и прогнозируемым — система сохранила KPI при увеличении бюджета."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$63.62",
+            "en": "$63.62",
+            "ru": "$63.62"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 909",
+            "en": "$1,909",
+            "ru": "$1 909"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "CPL $4–6",
+            "en": "CPL $4–6",
+            "ru": "CPL $4–6"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 388 лідів / 30 днів",
+            "en": "≈ 388 leads / 30 days",
+            "ru": "≈ 388 лидов / 30 дней"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Два потоки перетиналися 26–30 червня; загальний календарний період 186 днів пораховано без подвійного обліку днів. Продажі та виручка не розраховувалися — у вихідних матеріалах немає підтверджених даних по оплатах.",
+        "en": "The two flows overlapped on June 26–30; the total calendar period of 186 days is counted without double-counting days. Sales and revenue weren’t calculated — the source materials contain no confirmed payment data.",
+        "ru": "Два потока пересекались 26–30 июня; общий календарный период 186 дней посчитан без двойного учёта дней. Продажи и выручка не рассчитывались — в исходных материалах нет подтверждённых данных по оплатам."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Зв’язка зберегла керований CPL під час масштабування: 2 403 заявки по $4.92 за 186 днів при бюджеті $11 834. Розділення GEO дало прозоре управління ставками, а оптимізація за реєстраціями замість кліка утримала якість трафіку.",
+        "en": "The setup kept CPL under control while scaling: 2,403 leads at $4.92 over 186 days on an $11,834 budget. Splitting by geo enabled transparent bid management, and optimizing for registrations instead of clicks kept traffic quality up.",
+        "ru": "Связка сохранила управляемый CPL при масштабировании: 2 403 заявки по $4.92 за 186 дней при бюджете $11 834. Разделение GEO дало прозрачное управление ставками, а оптимизация по регистрациям вместо клика удержала качество трафика."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/massage-training-leads/screenshot-01.webp",
+        "alt": {
+          "uk": "Перший потік Google Ads для навчання масажу",
+          "en": "First Google Ads flow for massage training",
+          "ru": "Первый поток Google Ads для обучения массажу"
+        },
+        "caption": {
+          "uk": "1 / 2",
+          "en": "1 / 2",
+          "ru": "1 / 2"
+        }
+      },
+      {
+        "image": "cases/content/massage-training-leads/screenshot-02.webp",
+        "alt": {
+          "uk": "Другий потік Google Ads для навчання масажу",
+          "en": "Second Google Ads flow for massage training",
+          "ru": "Второй поток Google Ads для обучения массажу"
+        },
+        "caption": {
+          "uk": "2 / 2",
+          "en": "2 / 2",
+          "ru": "2 / 2"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/massage-training-leads.jpg",
+  "imageCard": "cases/card/massage-training-leads.webp"
+}

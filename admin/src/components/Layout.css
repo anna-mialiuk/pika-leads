@@ -12,6 +12,7 @@
   padding: 22px 14px 16px;
   border-right: 1px solid var(--border);
   background: var(--surface);
+  overflow-y: auto;
 }
 
 .layout__brand {
@@ -73,6 +74,75 @@
   background: var(--accent);
   color: var(--bg);
   box-shadow: 0 8px 26px rgba(255, 198, 41, 0.28);
+}
+
+.layout__nav-title {
+  margin: 14px 14px 4px;
+  color: var(--faint);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* стан публікації сайту */
+.publish {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 18px 8px 0;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--text2);
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.publish small {
+  display: block;
+  color: var(--faint);
+  font-weight: 600;
+}
+
+.publish__dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: var(--ok);
+  box-shadow: 0 0 0 4px rgba(79, 216, 138, 0.15);
+}
+
+.publish--busy .publish__dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.publish--fail {
+  border-color: rgba(255, 125, 125, 0.35);
+  color: var(--danger);
+}
+
+.publish--fail .publish__dot,
+.publish--off .publish__dot {
+  background: var(--danger);
+  box-shadow: 0 0 0 4px var(--danger-soft);
+}
+
+.publish--off {
+  color: var(--muted);
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
 }
 
 .layout__soon {

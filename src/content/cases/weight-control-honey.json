@@ -1,0 +1,445 @@
+{
+  "order": 13,
+  "originalId": 14,
+  "id": "weight-control-honey",
+  "number": "14",
+  "source": "meta",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Лідогенерація",
+    "en": "Lead generation",
+    "ru": "Лидогенерация"
+  },
+  "categoryColor": "#5B9BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Товарна лідогенерація",
+    "en": "Product lead generation",
+    "ru": "Товарная лидогенерация"
+  },
+  "title": {
+    "uk": "Мед для контролю ваги",
+    "en": "Weight-control honey",
+    "ru": "Мёд для контроля веса"
+  },
+  "description": {
+    "uk": "Чутлива health-категорія: продуктові властивості замість обіцянок схуднення.",
+    "en": "A sensitive health category: product properties instead of weight-loss promises.",
+    "ru": "Чувствительная health-категория: свойства продукта вместо обещаний похудения."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "≈ 5 556",
+        "en": "≈ 5,556",
+        "ru": "≈ 5 556"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.05–$0.11",
+        "en": "CPC $0.05–$0.11",
+        "ru": "CPC $0.05–$0.11"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "180–185 лідів/день",
+        "en": "180–185 leads/day",
+        "ru": "180–185 лидов/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$6 944.03",
+        "en": "$6,944.03",
+        "ru": "$6 944.03"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.05–$0.11",
+          "en": "$0.05–$0.11",
+          "ru": "$0.05–$0.11"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$0.27",
+          "en": "$0.27",
+          "ru": "$0.27"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$50",
+          "en": "$50",
+          "ru": "$50"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "180–185 заявок",
+          "en": "180–185 leads",
+          "ru": "180–185 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "66 кампаній",
+        "en": "66 campaigns",
+        "ru": "66 кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$6 944.03",
+            "en": "$6,944.03",
+            "ru": "$6 944.03"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "4 933 початих переписки + ліди з сайту",
+            "en": "4,933 conversations started + website leads",
+            "ru": "4 933 начатых переписки + лиды с сайта"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "901 037",
+            "en": "901,037",
+            "ru": "901 037"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "4 452 646",
+            "en": "4,452,646",
+            "ru": "4 452 646"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумок кабінету",
+        "en": "Account total for the whole period · basis: account total",
+        "ru": "Итог кабинета за весь срок · основа: итог кабинета"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Товар належить до чутливої health-категорії. Сильна реклама має створювати інтерес, але не обіцяти гарантоване схуднення й не використовувати небезпечні персональні твердження.",
+      "en": "The product belongs to a sensitive health category. Strong ads have to spark interest without promising guaranteed weight loss or using risky personal claims.",
+      "ru": "Товар относится к чувствительной health-категории. Сильная реклама должна создавать интерес, но не обещать гарантированное похудение и не использовать опасные персональные утверждения."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/weight-control-honey/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній продукту для контролю ваги",
+          "en": "Weight-control product ad campaign results",
+          "ru": "Результаты рекламных кампаний продукта для контроля веса"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Лідогенерація та повідомлення",
+          "en": "Screenshot 1 — Lead generation and messages",
+          "ru": "Скриншот 1 — Лидогенерация и сообщения"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Замість прямих обіцянок тестувалися продуктові властивості, спосіб використання, смак і зручність включення в раціон. Форма збирала контакт для консультації, а відділ продажів уточнював запит і пояснював продукт.",
+      "en": "Instead of direct promises, we tested product properties, how to use it, taste and how easy it is to add to a diet. The form collected a contact for a consultation, and the sales team clarified the request and explained the product.",
+      "ru": "Вместо прямых обещаний тестировались свойства продукта, способ использования, вкус и удобство включения в рацион. Форма собирала контакт для консультации, а отдел продаж уточнял запрос и объяснял продукт."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Lead-кампанія з нейтральним продуктовим офером.",
+        "en": "Lead campaign with a neutral product offer.",
+        "ru": "Lead-кампания с нейтральным продуктовым оффером."
+      },
+      {
+        "uk": "Широка аудиторія та сегменти за здоровим способом життя.",
+        "en": "Broad audience plus healthy-lifestyle segments.",
+        "ru": "Широкая аудитория и сегменты по здоровому образу жизни."
+      },
+      {
+        "uk": "Креативи з демонстрацією продукту й сценарію використання.",
+        "en": "Creatives demonstrating the product and how it’s used.",
+        "ru": "Креативы с демонстрацией продукта и сценария использования."
+      },
+      {
+        "uk": "Ретаргетинг залучених без агресивних health-claims.",
+        "en": "Retargeting engaged users without aggressive health claims.",
+        "ru": "Ретаргетинг вовлечённых без агрессивных health-claims."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Візуали фокусувалися на продукті та звичці, а не на порівнянні тіла «до/після». Це робить комунікацію стійкішою й знижує ризик блокувань.",
+        "en": "The visuals focused on the product and the habit, not on “before/after” body comparisons. This makes the communication more resilient and lowers the risk of bans.",
+        "ru": "Визуалы фокусировались на продукте и привычке, а не на сравнении тела «до/после». Это делает коммуникацию устойчивее и снижает риск блокировок."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Окрім CPL контролювалися підтверджені номери, додзвон і частка замовлень. У товарній лідогенерації дешева анкета має сенс лише за нормальної конверсії кол-центру.",
+        "en": "Beyond CPL, we monitored confirmed numbers, call reach rate and the share of orders. In product lead generation, a cheap form only makes sense if the call center converts normally.",
+        "ru": "Помимо CPL контролировались подтверждённые номера, дозвон и доля заказов. В товарной лидогенерации дешёвая анкета имеет смысл только при нормальной конверсии колл-центра."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$50",
+            "en": "$50",
+            "ru": "$50"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$1 500",
+            "en": "$1,500",
+            "ru": "$1 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.27",
+            "en": "$0.27",
+            "ru": "$0.27"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 5 556 заявок",
+            "en": "≈ 5,556 leads",
+            "ru": "≈ 5 556 заявок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 5 400–5 550 заявок за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 5,400–5,550 leads in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 5 400–5 550 заявок за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Заявка коштувала близько $0.27, а денний обсяг становив 180–185 лідів при бюджеті $50. Розрахунок за бюджетом майже точно збігається із зазначеним результатом.",
+        "en": "A lead cost about $0.27, and daily volume was 180–185 leads on a $50 budget. The budget-based calculation almost exactly matches the stated result.",
+        "ru": "Заявка стоила около $0.27, а дневной объём составлял 180–185 лидов при бюджете $50. Расчёт по бюджету почти точно совпадает с указанным результатом."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/weight-control-honey/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній продукту для контролю ваги",
+          "en": "Weight-control product ad campaign results",
+          "ru": "Результаты рекламных кампаний продукта для контроля веса"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/weight-control-honey.webp",
+  "imageCard": "cases/card/weight-control-honey.webp"
+}

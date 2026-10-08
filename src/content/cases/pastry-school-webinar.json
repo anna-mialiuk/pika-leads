@@ -1,0 +1,450 @@
+{
+  "order": 7,
+  "originalId": 8,
+  "id": "pastry-school-webinar",
+  "number": "08",
+  "source": "meta",
+  "niche": "webinars",
+  "category": {
+    "uk": "Вебінари та навчання",
+    "en": "Webinars & education",
+    "ru": "Вебинары и обучение"
+  },
+  "categoryColor": "#C69BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Реєстрації на вебінар",
+    "en": "Webinar registrations",
+    "ru": "Регистрации на вебинар"
+  },
+  "title": {
+    "uk": "Вебінар школи кондитерів",
+    "en": "Pastry school webinar",
+    "ru": "Вебинар школы кондитеров"
+  },
+  "description": {
+    "uk": "Конкретний десерт і навичка замість загальної обіцянки навчання — реєстрація $0.20.",
+    "en": "A specific dessert and skill instead of a generic promise of training — $0.20 per registration.",
+    "ru": "Конкретный десерт и навык вместо общего обещания обучения — регистрация $0.20."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього реєстрацій",
+        "en": "Total registrations",
+        "ru": "Всего регистраций"
+      },
+      "value": {
+        "uk": "≈ 4 500",
+        "en": "≈ 4,500",
+        "ru": "≈ 4 500"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.03–$0.12",
+        "en": "CPC $0.03–$0.12",
+        "ru": "CPC $0.03–$0.12"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "125–165 реєстр./день",
+        "en": "125–165 sign-ups/day",
+        "ru": "125–165 регистр./день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$2 500",
+        "en": "$2,500",
+        "ru": "$2 500"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.03–$0.12",
+          "en": "$0.03–$0.12",
+          "ru": "$0.03–$0.12"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна реєстрації",
+          "en": "Cost per registration",
+          "ru": "Цена регистрации"
+        },
+        "value": {
+          "uk": "$0.20",
+          "en": "$0.20",
+          "ru": "$0.20"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$30",
+          "en": "$30",
+          "ru": "$30"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "125–165 заявок",
+          "en": "125–165 leads",
+          "ru": "125–165 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "4 кампанії",
+        "en": "4 campaigns",
+        "ru": "4 кампании"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$2 500",
+            "en": "$2,500",
+            "ru": "$2 500"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "1 167 реєстрацій · $0.20 за реєстрацію",
+            "en": "1,167 registrations · $0.20 per registration",
+            "ru": "1 167 регистраций · $0.20 за регистрацию"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "50 175",
+            "en": "50,175",
+            "ru": "50 175"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "83 720",
+            "en": "83,720",
+            "ru": "83 720"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: бюджет за 30 днів роботи",
+        "en": "Account total for the whole period · basis: budget for 30 days of work",
+        "ru": "Итог кабинета за весь срок · основа: бюджет за 30 дней работы"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Школі потрібно було швидко заповнити вебінар, зберігши низьку ціну реєстрації. Основний бар’єр — користувач любить контент про десерти, але не завжди готовий залишити контакт заради навчання.",
+      "en": "The school needed to fill a webinar fast while keeping the cost per registration low. The main barrier: people love dessert content but aren’t always ready to leave their contact details for training.",
+      "ru": "Школе нужно было быстро заполнить вебинар, сохранив низкую цену регистрации. Основной барьер — пользователь любит контент о десертах, но не всегда готов оставить контакт ради обучения."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/pastry-school-webinar/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній вебінару школи кондитерів",
+          "en": "Pastry school webinar ad campaign results",
+          "ru": "Результаты рекламных кампаний вебинара школы кондитеров"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Реєстрації на вебінар",
+          "en": "Screenshot 1 — Webinar registrations",
+          "ru": "Скриншот 1 — Регистрации на вебинар"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Протягом тижня тестувалися візуали готового результату, програма вебінару та бонус за реєстрацію. Спершу збирався широкий обсяг, потім ретаргетинг повертав тих, хто взаємодіяв із відео, але не заповнив форму.",
+      "en": "Over a week, we tested visuals of the finished result, the webinar program and a sign-up bonus. First we gathered broad volume, then retargeting brought back those who engaged with the video but didn’t fill in the form.",
+      "ru": "В течение недели тестировались визуалы готового результата, программа вебинара и бонус за регистрацию. Сначала собирался широкий объём, затем ретаргетинг возвращал тех, кто взаимодействовал с видео, но не заполнил форму."
+    }
+  },
+  "strategy": {
+    "title": {
+      "uk": "Стратегія",
+      "en": "Strategy",
+      "ru": "Стратегия"
+    },
+    "architecture": [
+      {
+        "uk": "Lead-кампанія на реєстрацію з короткою формою.",
+        "en": "Lead campaign for registrations with a short form.",
+        "ru": "Lead-кампания на регистрацию с короткой формой."
+      },
+      {
+        "uk": "Групи за інтересами: випічка, домашні кондитери, професійне навчання.",
+        "en": "Interest ad sets: baking, home pastry chefs, professional training.",
+        "ru": "Группы по интересам: выпечка, домашние кондитеры, профессиональное обучение."
+      },
+      {
+        "uk": "Широка аудиторія для пошуку дешевих реєстрацій.",
+        "en": "Broad audience to find cheap registrations.",
+        "ru": "Широкая аудитория для поиска дешёвых регистраций."
+      },
+      {
+        "uk": "Ретаргетинг залучених і відвідувачів лендингу перед датою вебінару.",
+        "en": "Retargeting of engaged users and landing page visitors before the webinar date.",
+        "ru": "Ретаргетинг вовлечённых и посетителей лендинга перед датой вебинара."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Креатив показував конкретний десерт і навичку, яку учасник забере після ефіру. Цінність підсилювали програма, обмежена дата та бонусний матеріал.",
+        "en": "The creative showed a specific dessert and a skill the participant would take away after the broadcast. The value was reinforced by the program, a fixed date and bonus material.",
+        "ru": "Креатив показывал конкретный десерт и навык, который участник заберёт после эфира. Ценность усиливали программа, ограниченная дата и бонусный материал."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Головний KPI — реєстрація, але додатково контролювалася доходимість. У сильній версії воронки оголошення й нагадування синхронізуються, щоб дешеві ліди не перетворювалися на порожній список.",
+        "en": "The main KPI was registration, but attendance was also monitored. In a strong funnel, ads and reminders are synced so cheap leads don’t turn into an empty list.",
+        "ru": "Главный KPI — регистрация, но дополнительно контролировалась доходимость. В сильной версии воронки объявления и напоминания синхронизируются, чтобы дешёвые лиды не превращались в пустой список."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$83",
+            "en": "$83",
+            "ru": "$83"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$2 500",
+            "en": "$2,500",
+            "ru": "$2 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.55–$0.67",
+            "en": "$0.55–$0.67",
+            "ru": "$0.55–$0.67"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "3 750–4 950 реєстрацій",
+            "en": "3,750–4,950 registrations",
+            "ru": "3 750–4 950 регистраций"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 3 750–4 950 реєстрацій за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 3,750–4,950 registrations in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 3 750–4 950 регистраций за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Ціна заявки $0.20 дозволяла отримувати 125–165 реєстрацій на день на бюджеті $30. Арифметика джерела узгоджується з розрахунковою моделлю й підтверджує стабільність зв’язки.",
+        "en": "A $0.20 cost per lead brought in 125–165 registrations a day on a $30 budget. The source arithmetic matches the projection model and confirms the funnel was stable.",
+        "ru": "Цена заявки $0.20 позволяла получать 125–165 регистраций в день на бюджете $30. Арифметика источника согласуется с расчётной моделью и подтверждает стабильность связки."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/pastry-school-webinar/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній вебінару школи кондитерів",
+          "en": "Pastry school webinar ad campaign results",
+          "ru": "Результаты рекламных кампаний вебинара школы кондитеров"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/pastry-school-webinar.webp",
+  "imageCard": "cases/card/pastry-school-webinar.webp"
+}

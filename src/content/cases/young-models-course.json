@@ -1,0 +1,445 @@
+{
+  "order": 12,
+  "originalId": 13,
+  "id": "young-models-course",
+  "number": "13",
+  "source": "meta",
+  "niche": "leadgen",
+  "category": {
+    "uk": "Лідогенерація",
+    "en": "Lead generation",
+    "ru": "Лидогенерация"
+  },
+  "categoryColor": "#5B9BFF",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "Локальна лідогенерація",
+    "en": "Local lead generation",
+    "ru": "Локальная лидогенерация"
+  },
+  "title": {
+    "uk": "Курс юних моделей",
+    "en": "Young models course",
+    "ru": "Курс юных моделей"
+  },
+  "description": {
+    "uk": "Рішення ухвалює батько: безпечна та зрозуміла програма з конкретним розкладом.",
+    "en": "The parent makes the decision: a safe, clear program with a specific schedule.",
+    "ru": "Решение принимает родитель: безопасная и понятная программа с конкретным расписанием."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "≈ 2 368",
+        "en": "≈ 2,368",
+        "ru": "≈ 2 368"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPC $0.09–$0.12",
+        "en": "CPC $0.09–$0.12",
+        "ru": "CPC $0.09–$0.12"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "75–78 заявок/день",
+        "en": "75–78 leads/day",
+        "ru": "75–78 заявок/день"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$1 942.88",
+        "en": "$1,942.88",
+        "ru": "$1 942.88"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Середній CPC",
+          "en": "Average CPC",
+          "ru": "Средний CPC"
+        },
+        "value": {
+          "uk": "$0.09–$0.12",
+          "en": "$0.09–$0.12",
+          "ru": "$0.09–$0.12"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна заявки",
+          "en": "Cost per lead",
+          "ru": "Цена заявки"
+        },
+        "value": {
+          "uk": "$0.38",
+          "en": "$0.38",
+          "ru": "$0.38"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний бюджет",
+          "en": "Daily budget",
+          "ru": "Дневной бюджет"
+        },
+        "value": {
+          "uk": "$30",
+          "en": "$30",
+          "ru": "$30"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      },
+      {
+        "label": {
+          "uk": "Денний результат",
+          "en": "Daily result",
+          "ru": "Дневной результат"
+        },
+        "value": {
+          "uk": "75–78 заявок",
+          "en": "75–78 leads",
+          "ru": "75–78 заявок"
+        },
+        "note": {
+          "uk": "дані першоджерела",
+          "en": "source data",
+          "ru": "данные первоисточника"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "44 кампанії",
+        "en": "44 campaigns",
+        "ru": "44 кампании"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$1 942.88",
+            "en": "$1,942.88",
+            "ru": "$1 942.88"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "1 945 лідів (лід-форма)",
+            "en": "1,945 leads (lead form)",
+            "ru": "1 945 лидов (лид-форма)"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "501 460",
+            "en": "501,460",
+            "ru": "501 460"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "1 802 038",
+            "en": "1,802,038",
+            "ru": "1 802 038"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: підсумок кабінету",
+        "en": "Account total for the whole period · basis: account total",
+        "ru": "Итог кабинета за весь срок · основа: итог кабинета"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Для дитячого курсу рішення ухвалює батько, тому реклама має продавати не «модельну кар’єру», а безпечну, зрозумілу й розвивальну програму з конкретним розкладом.",
+      "en": "For a children’s course, the parent makes the decision, so the ads have to sell not a “modeling career” but a safe, clear and developmental program with a specific schedule.",
+      "ru": "Для детского курса решение принимает родитель, поэтому реклама должна продавать не «модельную карьеру», а безопасную, понятную и развивающую программу с конкретным расписанием."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/young-models-course/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній курсу юних моделей",
+          "en": "Young models course ad campaign results",
+          "ru": "Результаты рекламных кампаний курса юных моделей"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Лідогенерація на курс юних моделей",
+          "en": "Screenshot 1 — Lead generation for the young models course",
+          "ru": "Скриншот 1 — Лидогенерация на курс юных моделей"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Спершу тестувалися три мотиви: впевненість дитини, творчий розвиток і професійна фотосесія/подіумний досвід. Географія звужувалася до реальної зони доїзду, щоб не купувати ліди, які фізично не зможуть відвідувати заняття.",
+      "en": "First we tested three motives: the child’s confidence, creative development and a professional photo shoot/runway experience. The geography was narrowed to a realistic travel radius so we wouldn’t buy leads who physically couldn’t attend classes.",
+      "ru": "Сначала тестировались три мотива: уверенность ребёнка, творческое развитие и профессиональная фотосессия/подиумный опыт. География сужалась до реальной зоны доезда, чтобы не покупать лиды, которые физически не смогут посещать занятия."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Lead-кампанія на батьків у локальному радіусі.",
+        "en": "Lead campaign for parents within a local radius.",
+        "ru": "Lead-кампания на родителей в локальном радиусе."
+      },
+      {
+        "uk": "Розділення за віковими групами дітей і розкладом.",
+        "en": "Split by children’s age groups and schedule.",
+        "ru": "Разделение по возрастным группам детей и расписанию."
+      },
+      {
+        "uk": "Креативи з атмосферою занять і зрозумілим складом курсу.",
+        "en": "Creatives showing the atmosphere of classes and a clear course outline.",
+        "ru": "Креативы с атмосферой занятий и понятным составом курса."
+      },
+      {
+        "uk": "Ретаргетинг залучених на пробне заняття чи консультацію.",
+        "en": "Retargeting engaged users to a trial class or consultation.",
+        "ru": "Ретаргетинг вовлечённых на пробное занятие или консультацию."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Оголошення показували процес, а не лише постановочні фото. У тексті одразу вказувалися вік, місто, формат і наступний крок — це знижувало кількість нерелевантних заявок.",
+        "en": "The ads showed the process, not just staged photos. The copy immediately stated the age, city, format and next step — which cut down irrelevant leads.",
+        "ru": "Объявления показывали процесс, а не только постановочные фото. В тексте сразу указывались возраст, город, формат и следующий шаг — это снижало количество нерелевантных заявок."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "CPL перевірявся разом із додзвоном і відповідністю географії. Аудиторії, які давали дешеві, але далекі заявки, виключалися.",
+        "en": "CPL was checked together with call reach rate and location fit. Audiences that delivered cheap but distant leads were excluded.",
+        "ru": "CPL проверялся вместе с дозвоном и соответствием географии. Аудитории, которые давали дешёвые, но далёкие заявки, исключались."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$30",
+            "en": "$30",
+            "ru": "$30"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$900",
+            "en": "$900",
+            "ru": "$900"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$0.38",
+            "en": "$0.38",
+            "ru": "$0.38"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 2 368 заявок",
+            "en": "≈ 2,368 leads",
+            "ru": "≈ 2 368 заявок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Звірка з джерелом: 2 250–2 340 заявок за 30 днів по заявленому темпу.",
+        "en": "Cross-check with the source: 2,250–2,340 leads in 30 days at the stated pace.",
+        "ru": "Сверка с источником: 2 250–2 340 заявок за 30 дней по заявленному темпу."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Проєкт отримував 75–78 заявок на день по $0.38 на бюджеті $30. Результат підтверджує силу локального офера з чіткими умовами.",
+        "en": "The project got 75–78 leads a day at $0.38 on a $30 budget. The result confirms the strength of a local offer with clear terms.",
+        "ru": "Проект получал 75–78 заявок в день по $0.38 на бюджете $30. Результат подтверждает силу локального оффера с чёткими условиями."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/young-models-course/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати рекламних кампаній курсу юних моделей",
+          "en": "Young models course ad campaign results",
+          "ru": "Результаты рекламных кампаний курса юных моделей"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonLabel": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    }
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/young-models-course.webp",
+  "imageCard": "cases/card/young-models-course.webp"
+}

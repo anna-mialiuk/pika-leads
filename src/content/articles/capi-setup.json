@@ -1,0 +1,31 @@
+{
+  "order": 0,
+  "id": "capi-setup",
+  "featured": true,
+  "topic": "analytics",
+  "level": "advanced",
+  "category": {
+    "uk": "Аналітика",
+    "en": "Analytics",
+    "ru": "Аналитика"
+  },
+  "type": "blue",
+  "image": "blog/blog-capi.webp",
+  "date": "2024-10-08",
+  "readTime": {
+    "uk": "11 хв",
+    "en": "11 min",
+    "ru": "11 мин"
+  },
+  "title": {
+    "uk": "Налаштування CAPI Meta Pixel: повний розбір, помилки та рішення",
+    "en": "Setting up CAPI for Meta Pixel: a complete guide, errors and fixes",
+    "ru": "Настройка CAPI Meta Pixel: полный разбор, ошибки и решения"
+  },
+  "description": {
+    "uk": "Meta переводить трекінг на серверний бік. Розбираємо налаштування Conversions API від створення пікселя до дедуплікації подій.",
+    "en": "Meta is moving tracking to the server side. We walk through setting up the Conversions API, from creating a pixel to event deduplication.",
+    "ru": "Meta переводит трекинг на серверную сторону. Разбираем настройку Conversions API от создания пикселя до дедупликации событий."
+  },
+  "href": "/blog/capi-setup"
+}

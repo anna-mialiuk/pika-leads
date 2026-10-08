@@ -1,0 +1,443 @@
+{
+  "order": 40,
+  "originalId": 41,
+  "id": "dihelen-lingerie-store",
+  "number": "41",
+  "source": "meta",
+  "niche": "ecom",
+  "category": {
+    "uk": "E-commerce",
+    "en": "E-commerce",
+    "ru": "E-commerce"
+  },
+  "categoryColor": "#4FD88A",
+  "platform": "Meta",
+  "kicker": {
+    "uk": "E-commerce / каталог + ретаргет / Україна",
+    "en": "E-commerce / catalog + retargeting / Ukraine",
+    "ru": "E-commerce / каталог + ретаргет / Украина"
+  },
+  "title": {
+    "uk": "DiHelen — інтернет-магазин нижньої білизни",
+    "en": "DiHelen — online lingerie store",
+    "ru": "DiHelen — интернет-магазин нижнего белья"
+  },
+  "description": {
+    "uk": "Три місяці по $100 на день: товарний каталог на холодну аудиторію та ретаргет — 1 040 покупок за ціною $5.63 і ROAS до 7.01.",
+    "en": "Three months at $100 a day: a product catalog for cold audiences plus retargeting — 1,040 purchases at $5.63 and ROAS up to 7.01.",
+    "ru": "Три месяца по $100 в день: товарный каталог на холодную аудиторию и ретаргет — 1 040 покупок по цене $5.63 и ROAS до 7.01."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього покупок",
+        "en": "Total purchases",
+        "ru": "Всего покупок"
+      },
+      "value": {
+        "uk": "1 040 покупок",
+        "en": "1,040 purchases",
+        "ru": "1 040 покупок"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "ROAS до 7.01",
+        "en": "ROAS up to 7.01",
+        "ru": "ROAS до 7.01"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "CPA $5.63",
+        "en": "CPA $5.63",
+        "ru": "CPA $5.63"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "$9 000",
+        "en": "$9,000",
+        "ru": "$9 000"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "$9 000",
+          "en": "$9,000",
+          "ru": "$9 000"
+        },
+        "note": {
+          "uk": "90 днів по $100/день",
+          "en": "90 days at $100/day",
+          "ru": "90 дней по $100/день"
+        }
+      },
+      {
+        "label": {
+          "uk": "Покупки",
+          "en": "Purchases",
+          "ru": "Покупки"
+        },
+        "value": {
+          "uk": "1 040",
+          "en": "1,040",
+          "ru": "1 040"
+        },
+        "note": {
+          "uk": "продажний шар, $5 850",
+          "en": "sales layer, $5,850",
+          "ru": "продающий слой, $5 850"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ціна покупки",
+          "en": "Cost per purchase",
+          "ru": "Цена покупки"
+        },
+        "value": {
+          "uk": "$5.63",
+          "en": "$5.63",
+          "ru": "$5.63"
+        },
+        "note": {
+          "uk": "блендед за період",
+          "en": "blended over the period",
+          "ru": "blended за период"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROAS ретаргету",
+          "en": "Retargeting ROAS",
+          "ru": "ROAS ретаргета"
+        },
+        "value": {
+          "uk": "7.01",
+          "en": "7.01",
+          "ru": "7.01"
+        },
+        "note": {
+          "uk": "вивантаження кабінету",
+          "en": "ad account export",
+          "ru": "выгрузка кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "ROAS холодної",
+          "en": "Cold ROAS",
+          "ru": "ROAS холодной"
+        },
+        "value": {
+          "uk": "4.94",
+          "en": "4.94",
+          "ru": "4.94"
+        },
+        "note": {
+          "uk": "вивантаження кабінету",
+          "en": "ad account export",
+          "ru": "выгрузка кабинета"
+        }
+      },
+      {
+        "label": {
+          "uk": "Переходи в профіль",
+          "en": "Profile visits",
+          "ru": "Переходы в профиль"
+        },
+        "value": {
+          "uk": "≈ 72 000",
+          "en": "≈ 72,000",
+          "ru": "≈ 72 000"
+        },
+        "note": {
+          "uk": "CPC $0.04, трафіковий шар",
+          "en": "CPC $0.04, traffic layer",
+          "ru": "CPC $0.04, трафиковый слой"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "12 активних зв’язок кампаній",
+        "en": "12 active campaign funnels",
+        "ru": "12 активных связок кампаний"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "$9 000",
+            "en": "$9,000",
+            "ru": "$9 000"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "≈ 1 040 покупок + ≈ 72 000 переходів",
+            "en": "≈ 1,040 purchases + ≈ 72,000 visits",
+            "ru": "≈ 1 040 покупок + ≈ 72 000 переходов"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "≈ 470 000 (продажні кампанії)",
+            "en": "≈ 470,000 (sales campaigns)",
+            "ru": "≈ 470 000 (продающие кампании)"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "≈ 5.3 млн",
+            "en": "≈ 5.3M",
+            "ru": "≈ 5.3 млн"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: 90 днів рівного відкруту по $100 на день",
+        "en": "Account total for the whole period · basis: 90 days of even delivery at $100 a day",
+        "ru": "Итог кабинета за весь срок · основа: 90 дней равномерного открута по $100 в день"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "DiHelen — інтернет-магазин нижньої білизни з продажами на українському ринку. Категорія складна для реклами: покупка залежить від моделі, розміру та посадки, тому єдиний універсальний креатив вигорає за лічені дні, а аудиторія потребує кількох дотиків перед замовленням. Завдання полягало не в разовому сплеску продажів, а в тому, щоб знайти повторювану зв’язку та три місяці утримувати її на рівному відкруті $100 на день.",
+      "en": "DiHelen is an online lingerie store selling in the Ukrainian market. The category is tricky for advertising: the purchase depends on model, size and fit, so a single universal creative burns out in days, and the audience needs several touches before ordering. The task wasn’t a one-off sales spike but finding a repeatable funnel and holding it for three months at an even $100 a day.",
+      "ru": "DiHelen — интернет-магазин нижнего белья с продажами на украинском рынке. Категория сложная для рекламы: покупка зависит от модели, размера и посадки, поэтому единый универсальный креатив выгорает за считанные дни, а аудитории нужно несколько касаний перед заказом. Задача состояла не в разовом всплеске продаж, а в том, чтобы найти повторяемую связку и три месяца удерживать её на равномерном откруте $100 в день."
+    }
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Замість перебору окремих креативів ставку зробили на товарний каталог: алгоритм сам підбирав користувачу релевантні позиції з асортименту й не впирався у вигорання одного візуалу. Структура розділила бюджет на три незалежні шари — продажі через каталог, дешевий трафік в Instagram-профіль і роботу з Direct. Кожен шар мав власну метрику успіху й не змішувався з іншими під час оцінки результату. За 90 днів у продажний шар пішло $5 850, у трафіковий — $3 150; таке співвідношення сформувалося після першого місяця, коли стало видно, що каталог утримує ціну покупки при зростанні бюджету.",
+      "en": "Instead of cycling through individual creatives, we bet on the product catalog: the algorithm picked relevant items from the range for each user and wasn’t held back by a single visual burning out. The structure split the budget into three independent layers — catalog sales, cheap traffic to the Instagram profile and Direct. Each layer had its own success metric and wasn’t mixed with the others when evaluating results. Over 90 days, $5,850 went into the sales layer and $3,150 into the traffic layer; this ratio took shape after the first month, once it was clear the catalog held cost per purchase as the budget grew.",
+      "ru": "Вместо перебора отдельных креативов ставку сделали на товарный каталог: алгоритм сам подбирал пользователю релевантные позиции из ассортимента и не упирался в выгорание одного визуала. Структура разделила бюджет на три независимых слоя — продажи через каталог, дешёвый трафик в Instagram-профиль и работа с Direct. Каждый слой имел собственную метрику успеха и не смешивался с другими при оценке результата. За 90 дней в продающий слой ушло $5 850, в трафиковый — $3 150; такое соотношение сложилось после первого месяца, когда стало видно, что каталог удерживает цену покупки при росте бюджета."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Sales / каталог, холодна аудиторія (fb&inst) — основний обсяг продажів: ROAS 4.94 при ціні покупки $4.01 на старті; за 90 днів шар приніс близько 780 замовлень.",
+        "en": "Sales / catalog, cold audience (FB & IG) — the bulk of sales: ROAS 4.94 at a $4.01 cost per purchase at the start; over 90 days, the layer brought in about 780 orders.",
+        "ru": "Sales / каталог, холодная аудитория (fb&inst) — основной объём продаж: ROAS 4.94 при цене покупки $4.01 на старте; за 90 дней слой принёс около 780 заказов."
+      },
+      {
+        "uk": "Sales / каталог, ретаргет (fb&inst) — найприбутковіша зв’язка періоду: ROAS 7.01 при ціні покупки $4.86, близько 260 замовлень на вузькому сегменті.",
+        "en": "Sales / catalog, retargeting (FB & IG) — the most profitable funnel of the period: ROAS 7.01 at a $4.86 cost per purchase, about 260 orders from a narrow segment.",
+        "ru": "Sales / каталог, ретаргет (fb&inst) — самая прибыльная связка периода: ROAS 7.01 при цене покупки $4.86, около 260 заказов на узком сегменте."
+      },
+      {
+        "uk": "Sales / додаткові аудиторії — тестові групи на мінімальному відкруті до накопичення сигналу; частину з них докрутили у другому місяці.",
+        "en": "Sales / additional audiences — test ad sets on minimal delivery until enough signal accumulated; some were scaled up in the second month.",
+        "ru": "Sales / дополнительные аудитории — тестовые группы на минимальном откруте до накопления сигнала; часть из них докрутили во втором месяце."
+      },
+      {
+        "uk": "Traffic ×5 на Instagram-профіль — близько 72 000 переходів за період при CPC $0.03–$0.06 і CTR 4.35–6.15%, наповнення бази для ретаргету.",
+        "en": "Traffic ×5 to the Instagram profile — about 72,000 visits over the period at a CPC of $0.03–$0.06 and a CTR of 4.35–6.15%, building the retargeting base.",
+        "ru": "Traffic ×5 на Instagram-профиль — около 72 000 переходов за период при CPC $0.03–$0.06 и CTR 4.35–6.15%, наполнение базы для ретаргета."
+      },
+      {
+        "uk": "Direct ×2 — тест переписок в Instagram, згорнутий як нерентабельний при CPC $1.71–$2.23.",
+        "en": "Direct ×2 — a test of Instagram conversations, shut down as unprofitable at a CPC of $1.71–$2.23.",
+        "ru": "Direct ×2 — тест переписок в Instagram, свёрнутый как нерентабельный при CPC $1.71–$2.23."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Основою продажного шару став динамічний каталог: товарна стрічка підставляла користувачу конкретні моделі замість іміджевого банера, що зняло головну проблему ніші — швидке вигорання. Трафікові кампанії працювали на контент профілю та вели не на сайт, а в Instagram, формуючи теплу базу. Пряме порівняння шарів показало, де закінчується імідж і починається продаж: CTR трафікових кампаній доходив до 6.15% проти 0.85% у продажних, але виручку приносив саме каталог. За три місяці стрічку доводилося оновлювати двічі — під сезон і під зміну акційної механіки.",
+        "en": "The dynamic catalog became the core of the sales layer: the product feed showed users specific models instead of an image banner, which solved the niche’s main problem — fast burnout. Traffic campaigns promoted the profile’s content and led to Instagram, not the website, building a warm base. A direct comparison of the layers showed where image ends and sales begin: traffic campaigns reached a CTR of 6.15% versus 0.85% for sales campaigns, but it was the catalog that brought in revenue. Over three months, the feed had to be refreshed twice — for the season and for a change in promo mechanics.",
+        "ru": "Основой продающего слоя стал динамический каталог: товарная лента подставляла пользователю конкретные модели вместо имиджевого баннера, что сняло главную проблему ниши — быстрое выгорание. Трафиковые кампании работали на контент профиля и вели не на сайт, а в Instagram, формируя тёплую базу. Прямое сравнение слоёв показало, где заканчивается имидж и начинается продажа: CTR трафиковых кампаний доходил до 6.15% против 0.85% у продающих, но выручку приносил именно каталог. За три месяца ленту пришлось обновлять дважды — под сезон и под смену акционной механики."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Рішення ухвалювали за ціною покупки та ROAS, а не за кліками. Аудиторії з нульовими продажами не глушили одразу, а тримали на мінімальному бюджеті — цього вистачало, щоб зібрати сигнал, але недостатньо, щоб спалити бюджет. Direct-кампанію зупинили за фактом: клік по $1.71–$2.23 проти $0.03 у трафіку не виправдовував канал. Ретаргет при частоті 7.46 не розширювали — у вузькому сегменті це давало потрібну щільність дотиків без перевитрати показів. Головним обмеженням на дистанції виявилася не ціна кліка, а місткість ретаргету: він дає кращий ROAS, але його обсяг обмежує розмір прогрітої бази, тому трафіковий шар тримали постійно увімкненим.",
+        "en": "Decisions were made on cost per purchase and ROAS, not clicks. Audiences with zero sales weren’t killed immediately but kept on a minimal budget — enough to gather signal, not enough to burn money. The Direct campaign was stopped on the facts: a $1.71–$2.23 click versus $0.03 in traffic didn’t justify the channel. Retargeting at a frequency of 7.46 wasn’t expanded — in a narrow segment, that gave the right density of touches without overspending on impressions. The main long-term constraint turned out to be not click cost but retargeting capacity: it delivers better ROAS, but its volume is limited by the size of the warm base, so the traffic layer was kept on constantly.",
+        "ru": "Решения принимали по цене покупки и ROAS, а не по кликам. Аудитории с нулевыми продажами не глушили сразу, а держали на минимальном бюджете — этого хватало, чтобы собрать сигнал, но недостаточно, чтобы сжечь бюджет. Direct-кампанию остановили по факту: клик по $1.71–$2.23 против $0.03 в трафике не оправдывал канал. Ретаргет при частоте 7.46 не расширяли — в узком сегменте это давало нужную плотность касаний без перерасхода показов. Главным ограничением на дистанции оказалась не цена клика, а ёмкость ретаргета: он даёт лучший ROAS, но его объём ограничен размером прогретой базы, поэтому трафиковый слой держали постоянно включённым."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "$150",
+            "en": "$150",
+            "ru": "$150"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "$4 500",
+            "en": "$4,500",
+            "ru": "$4 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "$5.63",
+            "en": "$5.63",
+            "ru": "$5.63"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 800 покупок",
+            "en": "≈ 800 purchases",
+            "ru": "≈ 800 покупок"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні blended-ціни покупки $5.63, зафіксованої за 90 днів роботи.",
+        "en": "30-day projection at the blended cost per purchase of $5.63 recorded over 90 days of work.",
+        "ru": "Расчёт на 30 дней при сохранении blended-цены покупки $5.63, зафиксированной за 90 дней работы."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "За 90 днів при витратах $9 000 ($100 на день) отримано близько 1 040 покупок при blended-ціні $5.63. Продажний шар витратив $5 850 і повернув близько $29 900 виручки — ROAS 5.11 усередині шару та 3.32 на весь бюджет з урахуванням трафіку й тестів. Найприбутковішою зв’язкою весь період залишався ретаргет каталогу з ROAS 7.01, наймісткішою — холодний каталог із 4.94. Паралельно зібрано близько 72 000 переходів у профіль по $0.04, що сформувало базу для наступного циклу ретаргетингу. Ціна покупки за квартал зросла з $4.43 до $5.63 — це нормальна плата за зростання обсягу в 25 разів, і вона залишалася всередині рентабельності. Наступний план — каруселі й фото-, відеокреативи з ціною та воронка «трафік у профіль → ретаргет на сайт» для подальшого зниження вартості покупки на прогрітій аудиторії.",
+        "en": "Over 90 days, with $9,000 in spend ($100 a day), about 1,040 purchases came in at a blended $5.63. The sales layer spent $5,850 and returned about $29,900 in revenue — a ROAS of 5.11 within the layer and 3.32 on the whole budget including traffic and tests. Catalog retargeting remained the most profitable funnel throughout, at a ROAS of 7.01, and the cold catalog the highest-volume one, at 4.94. In parallel, about 72,000 profile visits were collected at $0.04, building a base for the next retargeting cycle. Cost per purchase rose from $4.43 to $5.63 over the quarter — a normal price for 25× volume growth, and it stayed within profitability. The next plan: carousels and photo and video creatives with prices, plus a “traffic to profile → retargeting to website” funnel to further lower the cost per purchase on warm audiences.",
+        "ru": "За 90 дней при расходах $9 000 ($100 в день) получено около 1 040 покупок при blended-цене $5.63. Продающий слой потратил $5 850 и вернул около $29 900 выручки — ROAS 5.11 внутри слоя и 3.32 на весь бюджет с учётом трафика и тестов. Самой прибыльной связкой весь период оставался ретаргет каталога с ROAS 7.01, самой ёмкой — холодный каталог с 4.94. Параллельно собрано около 72 000 переходов в профиль по $0.04, что сформировало базу для следующего цикла ретаргетинга. Цена покупки за квартал выросла с $4.43 до $5.63 — это нормальная плата за рост объёма в 25 раз, и она оставалась в пределах рентабельности. Следующий план — карусели и фото-, видеокреативы с ценой и воронка «трафик в профиль → ретаргет на сайт» для дальнейшего снижения стоимости покупки на прогретой аудитории."
+      }
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/dihelen-lingerie-store.jpg",
+  "imageCard": "cases/card/dihelen-lingerie-store.webp"
+}

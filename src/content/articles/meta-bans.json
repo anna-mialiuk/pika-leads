@@ -1,0 +1,31 @@
+{
+  "order": 2,
+  "id": "meta-bans",
+  "featured": true,
+  "topic": "advertising",
+  "level": "intermediate",
+  "category": {
+    "uk": "Реклама",
+    "en": "Advertising",
+    "ru": "Реклама"
+  },
+  "type": "purple",
+  "image": "blog/blog-bans.webp",
+  "date": "2024-10-04",
+  "readTime": {
+    "uk": "2 хв",
+    "en": "2 min",
+    "ru": "2 мин"
+  },
+  "title": {
+    "uk": "Як обійти бани в Meta Ads: креативи, тексти та посадкові",
+    "en": "How to get around Meta Ads bans: creatives, copy and landing pages",
+    "ru": "Как обойти баны в Meta Ads: креативы, тексты и посадочные"
+  },
+  "description": {
+    "uk": "Відхилення оголошень, реджекти та бани за креативи. Розбираємо три джерела проблем і що з кожним робити.",
+    "en": "Disapproved ads, rejections and bans over creatives. We look at three sources of problems and what to do about each.",
+    "ru": "Отклонения объявлений, реджекты и баны за креативы. Разбираем три источника проблем и что делать с каждым."
+  },
+  "href": "/blog/meta-bans"
+}

@@ -1,0 +1,446 @@
+{
+  "order": 48,
+  "originalId": 49,
+  "id": "sales-manager-dnipro",
+  "number": "49",
+  "source": "google",
+  "niche": "hr",
+  "category": {
+    "uk": "HR та рекрутинг",
+    "en": "HR & recruiting",
+    "ru": "HR и рекрутинг"
+  },
+  "categoryColor": "#8BE1CA",
+  "platform": "Google",
+  "kicker": {
+    "uk": "Рекрутинг / посадкова + Search + PMax / Дніпро",
+    "en": "Recruitment / landing page + Search + PMax / Dnipro",
+    "ru": "Рекрутинг / посадочная + Search + PMax / Днепр"
+  },
+  "title": {
+    "uk": "Вакансія Sales Manager у Дніпрі",
+    "en": "Sales Manager vacancy in Dnipro",
+    "ru": "Вакансия Sales Manager в Днепре"
+  },
+  "description": {
+    "uk": "146 лідів по ₴291.83 і 40% кваліфікованих кандидатів — із сайтом, що працював першим рекрутером.",
+    "en": "146 leads at ₴291.83 and 40% qualified candidates — with a website that acted as the first recruiter.",
+    "ru": "146 лидов по ₴291.83 и 40% квалифицированных кандидатов — с сайтом, который работал первым рекрутером."
+  },
+  "metrics": [
+    {
+      "label": {
+        "uk": "Всього заявок",
+        "en": "Total leads",
+        "ru": "Всего заявок"
+      },
+      "value": {
+        "uk": "146 лідів",
+        "en": "146 leads",
+        "ru": "146 лидов"
+      },
+      "type": "green"
+    },
+    {
+      "label": {
+        "uk": "Клік",
+        "en": "Click",
+        "ru": "Клик"
+      },
+      "value": {
+        "uk": "CPL ₴291.83",
+        "en": "CPL ₴291.83",
+        "ru": "CPL ₴291.83"
+      },
+      "type": "yellow"
+    },
+    {
+      "label": {
+        "uk": "Темп",
+        "en": "Pace",
+        "ru": "Темп"
+      },
+      "value": {
+        "uk": "40% кваліфікації",
+        "en": "40% qualified",
+        "ru": "40% квалификации"
+      },
+      "type": "blue"
+    },
+    {
+      "label": {
+        "uk": "Витрачено всього",
+        "en": "Total spent",
+        "ru": "Потрачено всего"
+      },
+      "value": {
+        "uk": "₴42 607,22",
+        "en": "₴42,607.22",
+        "ru": "₴42 607,22"
+      },
+      "type": "yellow",
+      "accent": true
+    }
+  ],
+  "results": {
+    "title": {
+      "uk": "Результати з кабінету",
+      "en": "Results from the ad account",
+      "ru": "Результаты из кабинета"
+    },
+    "rows": [
+      {
+        "label": {
+          "uk": "Бюджет",
+          "en": "Budget",
+          "ru": "Бюджет"
+        },
+        "value": {
+          "uk": "₴42 607,22",
+          "en": "₴42,607.22",
+          "ru": "₴42 607,22"
+        },
+        "note": {
+          "uk": "вивантаження Google Ads",
+          "en": "Google Ads export",
+          "ru": "выгрузка Google Ads"
+        }
+      },
+      {
+        "label": {
+          "uk": "Ліди",
+          "en": "Leads",
+          "ru": "Лиды"
+        },
+        "value": {
+          "uk": "146",
+          "en": "146",
+          "ru": "146"
+        },
+        "note": {
+          "uk": "конверсії форми",
+          "en": "form conversions",
+          "ru": "конверсии формы"
+        }
+      },
+      {
+        "label": {
+          "uk": "CPL",
+          "en": "CPL",
+          "ru": "CPL"
+        },
+        "value": {
+          "uk": "₴291,83",
+          "en": "₴291.83",
+          "ru": "₴291,83"
+        },
+        "note": {
+          "uk": "за конверсію",
+          "en": "per conversion",
+          "ru": "за конверсию"
+        }
+      },
+      {
+        "label": {
+          "uk": "Кваліфікація",
+          "en": "Qualification",
+          "ru": "Квалификация"
+        },
+        "value": {
+          "uk": "40% / ≈58 лідів",
+          "en": "40% / ≈58 leads",
+          "ru": "40% / ≈58 лидов"
+        },
+        "note": {
+          "uk": "CPQL ₴729,57",
+          "en": "CPQL ₴729.57",
+          "ru": "CPQL ₴729,57"
+        }
+      }
+    ],
+    "summary": {
+      "title": {
+        "uk": "Підсумок за весь термін",
+        "en": "Total for the whole period",
+        "ru": "Итог за весь срок"
+      },
+      "badge": {
+        "uk": "Search + Performance Max",
+        "en": "Search + Performance Max",
+        "ru": "Search + Performance Max"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Витрачено",
+            "en": "Spent",
+            "ru": "Потрачено"
+          },
+          "value": {
+            "uk": "₴42 607,22",
+            "en": "₴42,607.22",
+            "ru": "₴42 607,22"
+          },
+          "type": "yellow"
+        },
+        {
+          "label": {
+            "uk": "Результат",
+            "en": "Result",
+            "ru": "Результат"
+          },
+          "value": {
+            "uk": "146 лідів, ≈58 кваліфікованих",
+            "en": "146 leads, ≈58 qualified",
+            "ru": "146 лидов, ≈58 квалифицированных"
+          },
+          "type": "green"
+        },
+        {
+          "label": {
+            "uk": "Охоплення",
+            "en": "Reach",
+            "ru": "Охват"
+          },
+          "value": {
+            "uk": "Дніпро",
+            "en": "Dnipro",
+            "ru": "Днепр"
+          },
+          "type": "blue"
+        },
+        {
+          "label": {
+            "uk": "Покази",
+            "en": "Impressions",
+            "ru": "Показы"
+          },
+          "value": {
+            "uk": "84 864",
+            "en": "84,864",
+            "ru": "84 864"
+          }
+        }
+      ],
+      "note": {
+        "uk": "Підсумок кабінету за весь термін дії · основа: вивантаження Google Ads",
+        "en": "Account total for the whole period · basis: Google Ads export",
+        "ru": "Итог кабинета за весь срок · основа: выгрузка Google Ads"
+      }
+    }
+  },
+  "context": {
+    "title": {
+      "uk": "Контекст і задача",
+      "en": "Context and task",
+      "ru": "Контекст и задача"
+    },
+    "description": {
+      "uk": "Компанія шукала менеджерів з продажу в Дніпрі. До запуску не було окремої посадкової сторінки, яка одночасно продавала б вакансію, знімала заперечення та відсікала кандидатів, які не підходять за форматом роботи. Завдання PikaLeads — побудувати всю воронку: від сайту та аналітики до рекламних кампаній і первинної кваліфікації.",
+      "en": "The company was looking for sales managers in Dnipro. Before launch, there was no dedicated landing page that would sell the vacancy, address objections and screen out candidates unsuited to the work format. PikaLeads’ task was to build the entire funnel: from the website and analytics to ad campaigns and initial qualification.",
+      "ru": "Компания искала менеджеров по продажам в Днепре. До запуска не было отдельной посадочной страницы, которая одновременно продавала бы вакансию, снимала возражения и отсекала кандидатов, не подходящих по формату работы. Задача PikaLeads — построить всю воронку: от сайта и аналитики до рекламных кампаний и первичной квалификации."
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/sales-manager-dnipro/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для вакансії Sales Manager у Дніпрі",
+          "en": "Google Ads results for a Sales Manager vacancy in Dnipro",
+          "ru": "Результаты Google Ads для вакансии Sales Manager в Днепре"
+        },
+        "caption": {
+          "uk": "Скріншот 1 — Рекрутинг / Search + Performance Max / Дніпро",
+          "en": "Screenshot 1 — Recruitment / Search + Performance Max / Dnipro",
+          "ru": "Скриншот 1 — Рекрутинг / Search + Performance Max / Днепр"
+        }
+      }
+    ]
+  },
+  "history": {
+    "title": {
+      "uk": "Історія запуску",
+      "en": "Launch history",
+      "ru": "История запуска"
+    },
+    "description": {
+      "uk": "Розробили посадкову сторінку під вакансію: на першому екрані — посада, формат роботи, ключові умови та зрозумілий заклик залишити заявку; далі — обов’язки, очікування, етапи відбору та відповіді на часті питання. Форму скоротили до полів, необхідних для першого контакту, але додали кваліфікуючі питання: менше тертя для кандидата й водночас мінімальний контекст для рекрутера ще до дзвінка. Налаштували конверсію форми та перевірили передачу даних — Google Ads оптимізувався за фактичним відправленням заявки, а не за відвідуванням сторінки.",
+      "en": "We built a landing page for the vacancy: the first screen showed the position, work format, key terms and a clear call to apply; then came responsibilities, expectations, selection stages and FAQs. The form was cut down to the fields needed for first contact, but qualifying questions were added: less friction for the candidate and minimal context for the recruiter before the call. We set up form conversion tracking and checked data passing — Google Ads optimized for actual form submissions, not page visits.",
+      "ru": "Разработали посадочную страницу под вакансию: на первом экране — должность, формат работы, ключевые условия и понятный призыв оставить заявку; далее — обязанности, ожидания, этапы отбора и ответы на частые вопросы. Форму сократили до полей, необходимых для первого контакта, но добавили квалифицирующие вопросы: меньше трения для кандидата и при этом минимальный контекст для рекрутера ещё до звонка. Настроили конверсию формы и проверили передачу данных — Google Ads оптимизировался по фактической отправке заявки, а не по посещению страницы."
+    }
+  },
+  "strategy": {
+    "architecture": [
+      {
+        "uk": "Search за сформованим попитом на вакансії у продажах, роботу менеджером і суміжні комерційні ролі — ядро обсягу.",
+        "en": "Search on existing demand for sales vacancies, manager jobs and related commercial roles — the core volume.",
+        "ru": "Search по сформированному спросу на вакансии в продажах, работу менеджером и смежные коммерческие роли — ядро объёма."
+      },
+      {
+        "uk": "Performance Max — розширення охоплення за межами точних запитів і збір додаткових сигналів про аудиторію.",
+        "en": "Performance Max — expanding reach beyond exact queries and gathering additional audience signals.",
+        "ru": "Performance Max — расширение охвата за пределами точных запросов и сбор дополнительных сигналов об аудитории."
+      },
+      {
+        "uk": "Розділення кампаній за температурою запиту: гарячі формулювання отримували окремі оголошення та посадкове повідомлення.",
+        "en": "Splitting campaigns by query temperature: hot phrasings got separate ads and landing messages.",
+        "ru": "Разделение кампаний по температуре запроса: горячие формулировки получали отдельные объявления и посадочное сообщение."
+      },
+      {
+        "uk": "Контроль широких запитів через мінус-слова, звіт за пошуковими запитами та якість заявок після дзвінка.",
+        "en": "Controlling broad queries through negative keywords, the search terms report and lead quality after calls.",
+        "ru": "Контроль широких запросов через минус-слова, отчёт по поисковым запросам и качество заявок после звонка."
+      }
+    ],
+    "creative": {
+      "title": {
+        "uk": "Креативна стратегія",
+        "en": "Creative strategy",
+        "ru": "Креативная стратегия"
+      },
+      "description": {
+        "uk": "Сайт не був формальною сторінкою під рекламу — він виконував роль першого рекрутера: заздалегідь пояснював умови та формат, тому до форми доходили ті, кого умови справді влаштовували. Саме це дало 40% релевантних заявок, а не додаткове звуження таргетингу.",
+        "en": "The website wasn’t a formal page made for ads — it acted as the first recruiter: it explained the terms and format upfront, so the people who reached the form were those genuinely fine with the conditions. That’s what produced 40% relevant applications, not extra narrowing of targeting.",
+        "ru": "Сайт не был формальной страницей под рекламу — он выполнял роль первого рекрутера: заранее объяснял условия и формат, поэтому до формы доходили те, кого условия действительно устраивали. Именно это дало 40% релевантных заявок, а не дополнительное сужение таргетинга."
+      }
+    },
+    "optimization": {
+      "title": {
+        "uk": "Оптимізація та масштабування",
+        "en": "Optimization and scaling",
+        "ru": "Оптимизация и масштабирование"
+      },
+      "description": {
+        "uk": "Із 146 заявок приблизно 58 пройшли первинну кваліфікацію — 40% якісних лідів і розрахункова вартість кваліфікованого кандидата ₴729,57. Інші могли не відповідати досвіду, умовам, локації або очікуванням щодо вакансії: саме тому в кейсі показано не лише CPL із кабінету, а й якість після форми. Важливе уточнення: 40% кваліфікації надано командою, ≈58 лідів і ₴729,57 CPQL розраховані математично; даних про кількість найнятих співробітників у вихідних матеріалах немає.",
+        "en": "Of 146 applications, about 58 passed initial qualification — 40% quality leads and a calculated cost per qualified candidate of ₴729.57. Others may not have matched the experience, terms, location or expectations for the vacancy — which is why the case shows not just CPL from the account but quality after the form. An important note: the 40% qualification rate was provided by the team, while ≈58 leads and the ₴729.57 CPQL are calculated; the source materials contain no data on the number of people hired.",
+        "ru": "Из 146 заявок примерно 58 прошли первичную квалификацию — 40% качественных лидов и расчётная стоимость квалифицированного кандидата ₴729,57. Остальные могли не соответствовать опыту, условиям, локации или ожиданиям по вакансии: именно поэтому в кейсе показан не только CPL из кабинета, но и качество после формы. Важное уточнение: 40% квалификации предоставлено командой, ≈58 лидов и ₴729,57 CPQL рассчитаны математически; данных о количестве нанятых сотрудников в исходных материалах нет."
+      }
+    },
+    "mediaPlan": {
+      "title": {
+        "uk": "Медіаплан на 30 днів",
+        "en": "30-day media plan",
+        "ru": "Медиаплан на 30 дней"
+      },
+      "items": [
+        {
+          "label": {
+            "uk": "Бюджет / день",
+            "en": "Budget / day",
+            "ru": "Бюджет / день"
+          },
+          "value": {
+            "uk": "₴1 500",
+            "en": "₴1,500",
+            "ru": "₴1 500"
+          }
+        },
+        {
+          "label": {
+            "uk": "Бюджет / 30 днів",
+            "en": "Budget / 30 days",
+            "ru": "Бюджет / 30 дней"
+          },
+          "value": {
+            "uk": "₴45 000",
+            "en": "₴45,000",
+            "ru": "₴45 000"
+          }
+        },
+        {
+          "label": {
+            "uk": "Цільова вартість",
+            "en": "Target cost",
+            "ru": "Целевая стоимость"
+          },
+          "value": {
+            "uk": "₴291.83",
+            "en": "₴291.83",
+            "ru": "₴291.83"
+          }
+        },
+        {
+          "label": {
+            "uk": "Розрахунковий результат",
+            "en": "Projected result",
+            "ru": "Расчётный результат"
+          },
+          "value": {
+            "uk": "≈ 154 ліди / ≈ 62 кваліфікованих",
+            "en": "≈ 154 leads / ≈ 62 qualified",
+            "ru": "≈ 154 лида / ≈ 62 квалифицированных"
+          },
+          "type": "green"
+        }
+      ],
+      "note": {
+        "uk": "Розрахунок на 30 днів при збереженні CPL ₴291,83 і частки кваліфікації 40%.",
+        "en": "30-day projection at a CPL of ₴291.83 and a 40% qualification rate.",
+        "ru": "Расчёт на 30 дней при сохранении CPL ₴291,83 и доли квалификации 40%."
+      }
+    },
+    "summary": {
+      "title": {
+        "uk": "Підсумок",
+        "en": "Summary",
+        "ru": "Итог"
+      },
+      "description": {
+        "uk": "Google Ads зафіксував 146 конверсій при витратах ₴42 607,22 — вартість заявки ₴291,83. Після перевірки лідів 40% відповідали базовим вимогам вакансії: розрахунково близько 58 кваліфікованих кандидатів по ₴729,57. Підтвердження з кабінету: 84 864 покази, 7 759 взаємодій, ₴42 607,22 витрат і 146 конверсій.",
+        "en": "Google Ads recorded 146 conversions on ₴42,607.22 in spend — a cost per lead of ₴291.83. After lead review, 40% met the vacancy’s basic requirements: an estimated 58 qualified candidates at ₴729.57 each. Confirmation from the account: 84,864 impressions, 7,759 interactions, ₴42,607.22 in spend and 146 conversions.",
+        "ru": "Google Ads зафиксировал 146 конверсий при расходах ₴42 607,22 — стоимость заявки ₴291,83. После проверки лидов 40% соответствовали базовым требованиям вакансии: расчётно около 58 квалифицированных кандидатов по ₴729,57. Подтверждение из кабинета: 84 864 показа, 7 759 взаимодействий, ₴42 607,22 расходов и 146 конверсий."
+      }
+    }
+  },
+  "evidence": {
+    "title": {
+      "uk": "Доказова база",
+      "en": "Evidence",
+      "ru": "Доказательная база"
+    },
+    "screenshots": [
+      {
+        "image": "cases/content/sales-manager-dnipro/screenshot-01.webp",
+        "alt": {
+          "uk": "Результати Google Ads для вакансії Sales Manager у Дніпрі",
+          "en": "Google Ads results for a Sales Manager vacancy in Dnipro",
+          "ru": "Результаты Google Ads для вакансии Sales Manager в Днепре"
+        },
+        "caption": {
+          "uk": "1 / 1",
+          "en": "1 / 1",
+          "ru": "1 / 1"
+        }
+      }
+    ],
+    "description": {
+      "uk": "Скріншот рекламного кабінету з початкового звіту. Виконано збільшення роздільної здатності, корекцію локального контрасту та різкості без домальовування даних. Стратегію запуску реконструйовано; підтверджені цифри відокремлено від розрахункової моделі.",
+      "en": "Ad account screenshot from the original report. Resolution was upscaled and local contrast and sharpness corrected, with no data added. The launch strategy has been reconstructed; confirmed figures are kept separate from the projection model.",
+      "ru": "Скриншот рекламного кабинета из исходного отчёта. Выполнено увеличение разрешения, коррекция локального контраста и резкости без дорисовки данных. Стратегия запуска реконструирована; подтверждённые цифры отделены от расчётной модели."
+    }
+  },
+  "cta": {
+    "title": {
+      "uk": "Хочете такий самий результат у своїй ніші?",
+      "en": "Want the same result in your niche?",
+      "ru": "Хотите такой же результат в своей нише?"
+    },
+    "description": {
+      "uk": "Розберемо вашу рекламу, покажемо точки зростання й дамо план запуску — безкоштовно.",
+      "en": "We’ll review your ads, show you where you can grow and give you a launch plan — free of charge.",
+      "ru": "Разберём вашу рекламу, покажем точки роста и дадим план запуска — бесплатно."
+    },
+    "buttonText": {
+      "uk": "Отримати розбір",
+      "en": "Get a free review",
+      "ru": "Получить разбор"
+    },
+    "buttonLink": "#consultation"
+  },
+  "linkLabel": {
+    "uk": "Читати кейс",
+    "en": "Read the case",
+    "ru": "Читать кейс"
+  },
+  "image": "cases/sales-manager-dnipro.webp",
+  "imageCard": "cases/card/sales-manager-dnipro.webp"
+}

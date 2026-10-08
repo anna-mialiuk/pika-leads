@@ -1,0 +1,34 @@
+{
+  "order": 8,
+  "id": 9,
+  "initials": {
+    "uk": "ДП",
+    "en": "DP",
+    "ru": "ДП"
+  },
+  "name": {
+    "uk": "Даніїл Прудников",
+    "en": "Daniil Prudnykov",
+    "ru": "Даниил Прудников"
+  },
+  "category": {
+    "uk": "Супровід проекту",
+    "en": "Project support",
+    "ru": "Сопровождение проекта"
+  },
+  "meta": {
+    "uk": "9 відгуків",
+    "en": "9 reviews",
+    "ru": "9 отзывов"
+  },
+  "badge": {
+    "uk": "Завжди на зв'язку",
+    "en": "Always in touch",
+    "ru": "Всегда на связи"
+  },
+  "text": {
+    "uk": "«Все супер! Завжди на зв'язку і готові допомогти!»",
+    "en": "“Everything is great! Always in touch and ready to help!”",
+    "ru": "«Всё супер! Всегда на связи и готовы помочь!»"
+  }
+}
