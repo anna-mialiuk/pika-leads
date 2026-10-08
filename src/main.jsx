@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import { captureAttribution } from "./services/leads";
@@ -13,10 +13,17 @@ import "./styles/index.sass";
 
 captureAttribution();
 
-createRoot(document.getElementById("root")).render(
+const app = (
   <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );
+
+const container = document.getElementById("root");
+
+// сторінка пререндерена (scripts/prerender.mjs) — «оживляємо» готовий HTML,
+// інакше (npm run dev) — звичайний рендер
+if (container.hasChildNodes()) hydrateRoot(container, app);
+else createRoot(container).render(app);

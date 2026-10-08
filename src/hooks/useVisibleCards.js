@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
  */
 export function useVisibleCards(breakpoints, fallback, onChange) {
   const getVisibleCards = () => {
-    if (typeof window === "undefined") return fallback;
-
     const match = breakpoints.find(
       ({ maxWidth }) => window.innerWidth <= maxWidth,
     );
@@ -15,7 +13,8 @@ export function useVisibleCards(breakpoints, fallback, onChange) {
     return match ? match.cards : fallback;
   };
 
-  const [visibleCards, setVisibleCards] = useState(getVisibleCards);
+  // перший рендер — як на сервері (пререндер), реальна ширина — одразу після гідратації
+  const [visibleCards, setVisibleCards] = useState(fallback);
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,6 +27,7 @@ export function useVisibleCards(breakpoints, fallback, onChange) {
       });
     };
 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);

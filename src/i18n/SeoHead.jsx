@@ -1,12 +1,9 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import { LANGUAGES, DEFAULT_LANGUAGE } from "./config";
-import { localizePath, stripLanguagePrefix } from "./paths";
-import { OG_LOCALES, SITE_NAME, absoluteUrl } from "./seoConfig.js";
+import { buildSeo } from "./seoTags";
+import { SsrHeadContext } from "./SsrHeadContext";
 import { useLanguage } from "./useLanguage";
-
-import defaultImage from "../assets/images/pika-hero.webp";
 
 const MANAGED = "data-seo";
 
@@ -25,10 +22,27 @@ function upsert(tag, selector, attributes) {
   );
 }
 
+/** Перестворює групу повторюваних тегів (hreflang, og:locale:alternate) */
+function replaceAll(selector, tag, attributesList) {
+  document.head
+    .querySelectorAll(`${selector}[${MANAGED}]`)
+    .forEach((element) => element.remove());
+
+  attributesList.forEach((attributes) => {
+    const element = document.createElement(tag);
+    element.setAttribute(MANAGED, "");
+    Object.entries(attributes).forEach(([name, value]) =>
+      element.setAttribute(name, value),
+    );
+    document.head.appendChild(element);
+  });
+}
+
 /**
  * Мета-теги сторінки для поточної мови:
  * title, description, canonical, hreflang (uk/ru/en + x-default), Open Graph, Twitter.
  * Використання: <Seo title="..." description="..." image={img} type="article" />
+ * Під час пререндеру ті самі теги потрапляють у статичний HTML (scripts/prerender.mjs).
  */
 function SeoHead({
   title,
@@ -39,83 +53,65 @@ function SeoHead({
 }) {
   const { lang } = useLanguage();
   const { pathname } = useLocation();
+  const ssrHead = useContext(SsrHeadContext);
+
+  const seo = buildSeo({
+    title,
+    description,
+    image,
+    type,
+    noindex,
+    lang,
+    pathname,
+  });
+
+  // пререндер: передаємо теги назовні, щоб вписати їх у <head> HTML-файлу
+  ssrHead?.collect(seo);
 
   useEffect(() => {
-    const basePath = stripLanguagePrefix(pathname);
-    const canonical = absoluteUrl(localizePath(basePath, lang));
-    const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
-    const imageUrl = absoluteUrl(image || defaultImage);
-
-    document.title = fullTitle;
+    document.title = seo.title;
 
     upsert("meta", 'meta[name="description"]', {
       name: "description",
-      content: description || "",
+      content: seo.description,
     });
-
     upsert("meta", 'meta[name="robots"]', {
       name: "robots",
-      content: noindex ? "noindex, nofollow" : "index, follow",
+      content: seo.robots,
     });
-
     upsert("link", 'link[rel="canonical"]', {
       rel: "canonical",
-      href: canonical,
+      href: seo.canonical,
     });
 
-    // hreflang: та сама сторінка всіма мовами + x-default (українська)
-    document.head
-      .querySelectorAll(`link[rel="alternate"][hreflang][${MANAGED}]`)
-      .forEach((link) => link.remove());
+    replaceAll(
+      'link[rel="alternate"][hreflang]',
+      "link",
+      seo.alternates.map(({ hreflang, href }) => ({
+        rel: "alternate",
+        hreflang,
+        href,
+      })),
+    );
 
-    [
-      ...LANGUAGES.map(({ code, htmlLang }) => [htmlLang, code]),
-      ["x-default", DEFAULT_LANGUAGE],
-    ].forEach(([hreflang, code]) => {
-      const link = document.createElement("link");
-      link.setAttribute(MANAGED, "");
-      link.rel = "alternate";
-      link.hreflang = hreflang;
-      link.href = absoluteUrl(localizePath(basePath, code));
-      document.head.appendChild(link);
-    });
-
-    const og = {
-      "og:site_name": SITE_NAME,
-      "og:type": type,
-      "og:title": fullTitle,
-      "og:description": description || "",
-      "og:url": canonical,
-      "og:image": imageUrl,
-      "og:locale": OG_LOCALES[lang],
-    };
-
-    Object.entries(og).forEach(([property, content]) =>
+    Object.entries(seo.og).forEach(([property, content]) =>
       upsert("meta", `meta[property="${property}"]`, { property, content }),
     );
 
-    document.head
-      .querySelectorAll(`meta[property="og:locale:alternate"][${MANAGED}]`)
-      .forEach((meta) => meta.remove());
+    replaceAll(
+      'meta[property="og:locale:alternate"]',
+      "meta",
+      seo.ogAlternates.map((content) => ({
+        property: "og:locale:alternate",
+        content,
+      })),
+    );
 
-    LANGUAGES.filter(({ code }) => code !== lang).forEach(({ code }) => {
-      const meta = document.createElement("meta");
-      meta.setAttribute(MANAGED, "");
-      meta.setAttribute("property", "og:locale:alternate");
-      meta.setAttribute("content", OG_LOCALES[code]);
-      document.head.appendChild(meta);
-    });
-
-    const twitter = {
-      "twitter:card": "summary_large_image",
-      "twitter:title": fullTitle,
-      "twitter:description": description || "",
-      "twitter:image": imageUrl,
-    };
-
-    Object.entries(twitter).forEach(([name, content]) =>
+    Object.entries(seo.twitter).forEach(([name, content]) =>
       upsert("meta", `meta[name="${name}"]`, { name, content }),
     );
+    // seo перераховується з цих значень
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang, pathname, title, description, image, type, noindex]);
 
   return null;
