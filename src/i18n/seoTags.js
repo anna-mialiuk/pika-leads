@@ -2,7 +2,8 @@ import { LANGUAGES, DEFAULT_LANGUAGE } from "./config";
 import { localizePath, stripLanguagePrefix } from "./paths";
 import { OG_LOCALES, SITE_NAME, absoluteUrl } from "./seoConfig.js";
 
-import defaultImage from "../assets/images/pika-hero.webp";
+/** Картинка для прев'ю посилань (Telegram, Facebook, Viber…) — 1200×630, своя для кожної мови */
+const defaultImage = (lang) => `/og/og-${lang}.jpg`;
 
 /**
  * Усі SEO-теги сторінки одним об'єктом.
@@ -21,7 +22,10 @@ export function buildSeo({
   const basePath = stripLanguagePrefix(pathname);
   const canonical = absoluteUrl(localizePath(basePath, lang));
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
-  const imageUrl = absoluteUrl(image || defaultImage);
+  const imageUrl = absoluteUrl(image || defaultImage(lang || DEFAULT_LANGUAGE));
+  const imageMeta = image
+    ? {}
+    : { "og:image:width": "1200", "og:image:height": "630", "og:image:type": "image/jpeg", "og:image:alt": fullTitle };
 
   return {
     title: fullTitle,
@@ -42,6 +46,7 @@ export function buildSeo({
       "og:description": description,
       "og:url": canonical,
       "og:image": imageUrl,
+      ...imageMeta,
       "og:locale": OG_LOCALES[lang],
     },
     ogAlternates: LANGUAGES.filter(({ code }) => code !== lang).map(
