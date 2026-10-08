@@ -15,6 +15,23 @@ import "./styles/index.sass";
 captureAttribution();
 initConsent();
 
+// Після деплою старі файли сторінок (assets/*.js) можуть зникнути, поки сайт відкритий.
+// Тоді перехід на іншу сторінку не вантажиться — перезавантажуємо на нову версію
+// (не частіше ніж раз на 10 секунд, щоб не зациклитись).
+window.addEventListener("vite:preloadError", (event) => {
+  let last = 0;
+  try {
+    last = Number(sessionStorage.getItem("pl-chunk-reload")) || 0;
+    sessionStorage.setItem("pl-chunk-reload", String(Date.now()));
+  } catch {
+    /* сховище недоступне */
+  }
+  if (Date.now() - last > 10_000) {
+    event.preventDefault();
+    window.location.reload();
+  }
+});
+
 const app = (
   <StrictMode>
     <BrowserRouter>

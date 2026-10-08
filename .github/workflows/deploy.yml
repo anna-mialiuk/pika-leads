@@ -63,9 +63,16 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
-          rsync -az --delete \
+          # старі assets/* не видаляємо одразу: у відкритих вкладках сторінки ще
+          # підвантажують їх; прибираємо ті, що старші за 7 днів
+          rsync -az --delete --exclude "/assets/" \
             -e "ssh -i ~/.ssh/deploy_key" \
             dist/ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
+          rsync -az \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            dist/assets/ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/assets/"
+          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" \
+            "find '$DEPLOY_PATH/assets' -type f -mtime +7 -delete"
 
       - name: Upload admin
         env:
