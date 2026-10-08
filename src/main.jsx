@@ -3,6 +3,7 @@ import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import { captureAttribution } from "./services/leads";
+import { initConsent } from "./services/consent";
 import App from "./App";
 
 // шрифти з власного домену (без запитів до Google Fonts)
@@ -12,6 +13,7 @@ import "@fontsource-variable/unbounded";
 import "./styles/index.sass";
 
 captureAttribution();
+initConsent();
 
 const app = (
   <StrictMode>

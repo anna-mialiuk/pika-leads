@@ -22,6 +22,35 @@ const en = {
     chooseLanguage: "Choose language",
   },
 
+  cookie: {
+    title: "We use cookies",
+    text: "Cookies keep the site working properly and help us understand which pages and ads are useful. Analytics and advertising cookies are enabled only with your consent.",
+    policy: "Cookie Policy",
+    accept: "Accept all",
+    reject: "Reject",
+    settings: "Customize",
+    save: "Save choices",
+    settingsTitle: "Cookie settings",
+    alwaysOn: "Always on",
+    settingsLink: "Cookie settings",
+    necessary: {
+      title: "Necessary",
+      text: "Site operation, form security and remembering your choice.",
+    },
+    functional: {
+      title: "Functional",
+      text: "Remember your language and other preferences for convenience.",
+    },
+    analytics: {
+      title: "Analytics",
+      text: "Anonymous visit statistics (Google Analytics) to improve the site.",
+    },
+    marketing: {
+      title: "Advertising",
+      text: "Measuring ad performance and retargeting (Google Ads, Meta, TikTok).",
+    },
+  },
+
   footer: {
     description:
       "Full-cycle traffic agency. Leads for businesses that are ready to grow.",

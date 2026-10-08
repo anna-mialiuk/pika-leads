@@ -8,6 +8,36 @@
     <meta name="theme-color" content="#0b0a09" />
 
 
+    <!-- Google Consent Mode v2: до вибору користувача все заборонено (див. src/services/consent.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+      });
+      try {
+        var c = JSON.parse(localStorage.getItem("pika-consent"));
+        if (c && c.version === 1) {
+          var s = function (v) { return v ? "granted" : "denied"; };
+          gtag("consent", "update", {
+            functionality_storage: s(c.functional),
+            personalization_storage: s(c.functional),
+            analytics_storage: s(c.analytics),
+            ad_storage: s(c.marketing),
+            ad_user_data: s(c.marketing),
+            ad_personalization: s(c.marketing),
+          });
+        }
+      } catch (e) {}
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta

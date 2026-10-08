@@ -10,6 +10,9 @@ import ConsultationProvider from "../components/ConsultationModal/ConsultationPr
 const SupportWidget = lazy(
   () => import("../components/SupportWidget/SupportWidget"),
 );
+const CookieConsent = lazy(
+  () => import("../components/CookieConsent/CookieConsent"),
+);
 
 /** true через ~1,5 с після завантаження (або коли браузер вільний) */
 function useAfterLoad() {
@@ -52,6 +55,7 @@ function LanguageLayout({ lang }) {
         {widgetReady && (
           <Suspense fallback={null}>
             <SupportWidget />
+            <CookieConsent />
           </Suspense>
         )}
       </ConsultationProvider>

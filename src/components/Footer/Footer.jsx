@@ -1,5 +1,6 @@
 import Icon from "../../components/Icon/Icon";
 import logoMark from "../../assets/images/brand/logo-mark.svg";
+import { openCookieSettings } from "../../services/consent";
 
 import { LocalizedLink, useLanguage, useData } from "../../i18n";
 
@@ -79,6 +80,18 @@ function Footer() {
                       <LocalizedLink to={link.href}>{link.label}</LocalizedLink>
                     </li>
                   ))}
+
+                  {section.id === "documents" && (
+                    <li>
+                      <button
+                        className="footer__cookie-settings"
+                        type="button"
+                        onClick={openCookieSettings}
+                      >
+                        {t("cookie.settingsLink")}
+                      </button>
+                    </li>
+                  )}
                 </ul>
               </div>
             ))}
