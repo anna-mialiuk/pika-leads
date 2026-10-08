@@ -107,6 +107,7 @@ const PATHS = {
       <circle cx="15" cy="18" r="1" />
     </>
   ),
+  chart: <path d="M3 3v18h18M7 15l4-4 3 3 6-6" />,
   sort: <path d="M7 4v16M3 8l4-4 4 4M17 20V4M13 16l4 4 4-4" />,
   text: <path d="M4 6h16M4 12h16M4 18h10" />,
   heading: <path d="M6 4v16M18 4v16M6 12h12" />,

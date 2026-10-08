@@ -8,6 +8,7 @@ import Team from "./pages/Team";
 import ContentList from "./pages/ContentList";
 import ContentEditor from "./pages/ContentEditor";
 import Reviews from "./pages/Reviews";
+import Analytics from "./pages/Analytics";
 import { PublishProvider } from "./lib/publish";
 import { useAuth } from "./lib/auth";
 import { MetaProvider } from "./lib/meta";
@@ -53,6 +54,7 @@ function App() {
             </Protected>
           }
         />
+        <Route path="/analytics" element={<Analytics />} />
         <Route path="/profile" element={<Profile />} />
         {[
           ["/cases", <ContentList collection="cases" key="cases" />],

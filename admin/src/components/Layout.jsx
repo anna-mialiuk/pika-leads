@@ -70,6 +70,7 @@ function Layout() {
   const isAdmin = user.role === "admin";
   const nav = [
     { to: "/leads", icon: "leads", label: "Заявки (CRM)" },
+    { to: "/analytics", icon: "chart", label: "Аналитика" },
     ...(isAdmin ? [{ to: "/team", icon: "team", label: "Команда" }] : []),
     { to: "/profile", icon: "user", label: "Профиль" },
   ];
@@ -123,7 +124,7 @@ function Layout() {
 
         <div className="layout__soon">
           <span>Скоро</span>
-          Задачи · Аналитика · SEO
+          Задачи · SEO
         </div>
 
         <div className="layout__user">
