@@ -1,0 +1,276 @@
+/* SEO сторінок */
+.content-loading {
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.seo-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.seo-summary .card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+}
+
+.seo-summary b {
+  font-family: var(--font-title);
+  font-size: 22px;
+}
+
+.seo-summary span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.seo-summary .is-warn {
+  color: var(--accent);
+}
+
+.seo-summary .is-ok {
+  color: var(--ok);
+}
+
+.seo-list {
+  overflow: hidden;
+}
+
+.seo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 18px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.seo-row:last-child {
+  border-bottom: 0;
+}
+
+.seo-row:hover {
+  background: var(--card);
+}
+
+.seo-row__main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.seo-row__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.seo-row__path {
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.seo-row__langs {
+  display: flex;
+  flex: none;
+  gap: 6px;
+}
+
+.seo-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  padding: 3px 6px;
+  border-radius: 7px;
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+.seo-dot--ok {
+  background: rgba(79, 216, 138, 0.14);
+  color: var(--ok);
+}
+
+.seo-dot--warn {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.seo-dot--bad {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.seo-dot--info {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+}
+
+.seo-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.seo-legend .seo-dot {
+  margin-left: 8px;
+}
+
+/* вікно */
+.seo-modal__path {
+  margin: -8px 0 14px;
+  color: var(--faint);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.seo-modal__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+}
+
+.seo-modal__label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.counter {
+  color: var(--faint);
+  font-family: var(--mono);
+  font-weight: 600;
+}
+
+.counter--ok {
+  color: var(--ok);
+}
+
+.counter--warn {
+  color: var(--accent);
+}
+
+.counter--bad {
+  color: var(--danger);
+}
+
+/* прев'ю в Google (світле, як у пошуку) */
+.serp {
+  margin: 7px 0 14px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #fff;
+  color: #4d5156;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.serp__site {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.serp__site b {
+  display: block;
+  color: #202124;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.serp__site small {
+  display: block;
+  color: #4d5156;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.serp__favicon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #121110;
+  color: #ffc629;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.serp__title {
+  margin-bottom: 3px;
+  color: #1a0dab;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.serp__desc {
+  overflow-wrap: anywhere;
+}
+
+.seo-issues {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  font-size: 12.5px;
+}
+
+.seo-issues__bad {
+  color: var(--danger);
+}
+
+.seo-issues__warn {
+  color: var(--accent);
+}
+
+.seo-issues__info {
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .seo-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seo-modal__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .seo-row {
+    padding: 12px 14px;
+  }
+
+  .seo-row__langs {
+    gap: 3px;
+  }
+
+  .seo-dot {
+    min-width: 26px;
+    padding: 3px 4px;
+  }
+}

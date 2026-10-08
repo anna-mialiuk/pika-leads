@@ -479,3 +479,128 @@ export async function contentStatus() {
   const { sha } = await snapshot();
   return { configured: true, head: sha, siteUrl: SITE_URL, deploy: await deployStatus() };
 }
+
+// ---------- SEO сторінок (src/content/seo.json) ----------
+
+const SEO_FILE = "src/content/seo.json";
+const SEO_PAGE = /^\/[a-z0-9/-]{0,200}$/;
+const SEO_MAX = { title: 200, description: 500 };
+
+export async function getSeo() {
+  const { tree } = await snapshot();
+  const file = await readJsonFile(SEO_FILE, tree);
+  return { data: isPlainObject(file?.data) ? file.data : {}, sha: file?.sha ?? null };
+}
+
+function cleanSeoEntry(entry) {
+  if (entry === null) return null;
+  if (!isPlainObject(entry)) throw new HttpError(400, "Некорректные данные SEO");
+  const result = {};
+  for (const key of ["title", "description"]) {
+    const value = entry[key];
+    if (value === undefined || value === null) continue;
+    if (!isPlainObject(value)) throw new HttpError(400, `SEO: ${key} — ожидается текст по языкам`);
+    const texts = {};
+    for (const lang of LANGS) {
+      const text = value[lang];
+      if (text === undefined || text === null || text === "") continue;
+      if (typeof text !== "string" || text.length > SEO_MAX[key]) throw new HttpError(400, `SEO: слишком длинный ${key === "title" ? "заголовок" : "текст описания"}`);
+      texts[lang] = text.trim();
+    }
+    if (Object.keys(texts).length) result[key] = texts;
+  }
+  if (entry.noindex === true) result.noindex = true;
+  return Object.keys(result).length ? result : null;
+}
+
+/** Змінює SEO однієї сторінки; before — запис, який бачив користувач (для перевірки конфлікту) */
+export async function saveSeoPage(body, user) {
+  if (!isPlainObject(body)) throw new HttpError(400, "Нет данных");
+  const page = String(body.path || "");
+  if (!SEO_PAGE.test(page) || page.includes("//")) throw new HttpError(400, "Некорректный адрес страницы");
+  const entry = cleanSeoEntry(body.entry ?? null);
+
+  await snapshot({ force: true });
+  const { data, sha } = await getSeo();
+  const current = Object.hasOwn(data, page) ? data[page] : null;
+  if (JSON.stringify(current ?? null) !== JSON.stringify(body.before ?? null)) {
+    throw new HttpError(409, "SEO этой страницы уже изменили. Обновите страницу");
+  }
+  const next = { ...data };
+  if (entry) next[page] = entry;
+  else delete next[page];
+  const sorted = Object.fromEntries(Object.keys(next).sort().map((key) => [key, next[key]]));
+
+  const commit = await commitFiles({
+    changes: [{ path: SEO_FILE, content: toJson(sorted) }],
+    expect: { [SEO_FILE]: sha },
+    message: `Админка: SEO ${page} — ${entry ? "изменено" : "сброшено"}\n\n${user.name}`,
+    author: authorOf(user),
+  });
+  return { entry, commit };
+}
+
+// ---------- перевірка сторінок сайту (як їх бачить Google) ----------
+
+const decodeHtml = (text) =>
+  String(text || "")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .trim();
+
+const metaContent = (html, attr, name) => {
+  const tag = html.match(new RegExp(`<meta[^>]*${attr}="${name}"[^>]*>`, "i"))?.[0];
+  return tag ? decodeHtml(tag.match(/content="([^"]*)"/i)?.[1]) : null;
+};
+
+function parsePage(html) {
+  return {
+    title: decodeHtml(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]),
+    description: metaContent(html, "name", "description"),
+    robots: metaContent(html, "name", "robots"),
+    ogImage: metaContent(html, "property", "og:image"),
+    canonical: decodeHtml(html.match(/<link[^>]*rel="canonical"[^>]*href="([^"]*)"/i)?.[1]),
+    h1: (html.match(/<h1[\s>]/gi) || []).length,
+  };
+}
+
+let auditCache = null;
+let auditRunning = null;
+
+export async function seoAudit({ refresh = false } = {}) {
+  if (auditCache && !refresh && Date.now() - auditCache.at < 10 * 60 * 1000) return auditCache;
+  if (auditRunning) return auditRunning;
+
+  auditRunning = (async () => {
+    const get = async (url) => {
+      const response = await fetch(url, { headers: { "User-Agent": "PikaleadsSeoCheck/1.0" }, signal: AbortSignal.timeout(15_000) });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.text();
+    };
+    let sitemap;
+    try {
+      sitemap = await get(`${SITE_URL}/sitemap.xml`);
+    } catch (error) {
+      throw new HttpError(502, `Не удалось открыть ${SITE_URL}/sitemap.xml (${error.message})`);
+    }
+    const urls = [...new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim()))]
+      .filter((url) => url.startsWith(SITE_URL))
+      .slice(0, 1000);
+
+    const pages = await mapLimit(urls, 6, async (url) => {
+      try {
+        return { url, ...parsePage(await get(url)) };
+      } catch (error) {
+        return { url, error: error.message };
+      }
+    });
+    auditCache = { at: Date.now(), siteUrl: SITE_URL, pages };
+    return auditCache;
+  })().finally(() => {
+    auditRunning = null;
+  });
+  return auditRunning;
+}

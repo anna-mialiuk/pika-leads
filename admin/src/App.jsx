@@ -9,6 +9,7 @@ import ContentList from "./pages/ContentList";
 import ContentEditor from "./pages/ContentEditor";
 import Reviews from "./pages/Reviews";
 import Analytics from "./pages/Analytics";
+import Seo from "./pages/Seo";
 import { PublishProvider } from "./lib/publish";
 import { useAuth } from "./lib/auth";
 import { MetaProvider } from "./lib/meta";
@@ -62,6 +63,7 @@ function App() {
           ["/blog", <ContentList collection="articles" key="articles" />],
           ["/blog/:id", <ContentEditor collection="articles" key="article" />],
           ["/reviews", <Reviews key="reviews" />],
+          ["/seo", <Seo key="seo" />],
         ].map(([path, element]) => (
           <Route key={path} path={path} element={<Protected admin>{element}</Protected>} />
         ))}

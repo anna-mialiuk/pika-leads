@@ -441,6 +441,9 @@ function ContentEditor({ collection }) {
                       <Icon name="external" /> Открыть на сайте
                     </a>
                   )}
+                  <Link className="btn btn--sm btn--ghost" to={`/seo?path=${encodeURIComponent(config.sitePath(routeId))}`}>
+                    <Icon name="search" /> SEO в Google
+                  </Link>
                 </div>
               )}
               <div className="schema-field__hint">

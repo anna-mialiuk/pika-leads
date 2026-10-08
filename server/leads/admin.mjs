@@ -43,6 +43,9 @@ import {
   readImage,
   reorderContent,
   saveContent,
+  getSeo,
+  saveSeoPage,
+  seoAudit,
 } from "./content.mjs";
 
 const routes = [];
@@ -405,6 +408,14 @@ route("GET", "/content/image", { admin: true, image: true }, async ({ req, res, 
   });
   res.end(buffer);
 });
+
+route("GET", "/content/seo", { admin: true }, async ({ res }) => send(res, 200, await getSeo()));
+
+route("PUT", "/content/seo", { admin: true }, async ({ res, body, user }) => send(res, 200, await saveSeoPage(body, user)));
+
+route("GET", "/content/seo/audit", { admin: true }, async ({ res, query }) =>
+  send(res, 200, await seoAudit({ refresh: query.get("refresh") === "1" })),
+);
 
 route("GET", `/content/${COLLECTION}`, { admin: true }, async ({ res, params }) =>
   send(res, 200, await listContent(params[0])),

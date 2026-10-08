@@ -59,9 +59,13 @@ try {
       .map(({ id }) => ({ path: `/blog/${id}`, priority: "0.6" })),
   ];
 
+  // сторінки, закриті від індексації в адмінці (SEO → noindex), у sitemap не потрапляють
+  const seoOverrides = JSON.parse(fs.readFileSync(path.join(root, "src/content/seo.json"), "utf8"));
+  const indexable = (pagePath) => !(Object.hasOwn(seoOverrides, pagePath) && seoOverrides[pagePath]?.noindex === true);
+
   const url = (pagePath, code) => `${SITE_URL}${localizePath(pagePath, code)}`;
 
-  const entries = pages.flatMap(({ path: pagePath, priority }) =>
+  const entries = pages.filter(({ path: pagePath }) => indexable(pagePath)).flatMap(({ path: pagePath, priority }) =>
     LANGUAGES.map(({ code }) => {
       const alternates = [
         ...LANGUAGES.map(

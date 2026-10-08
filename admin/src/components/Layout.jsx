@@ -79,6 +79,7 @@ function Layout() {
         { to: "/cases", icon: "cases", label: "Кейсы" },
         { to: "/blog", icon: "blog", label: "Блог" },
         { to: "/reviews", icon: "reviews", label: "Отзывы" },
+        { to: "/seo", icon: "search", label: "SEO" },
       ]
     : [];
 
@@ -124,7 +125,7 @@ function Layout() {
 
         <div className="layout__soon">
           <span>Скоро</span>
-          Задачи · SEO
+          Задачи по заявкам
         </div>
 
         <div className="layout__user">

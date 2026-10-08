@@ -2,6 +2,19 @@ import { LANGUAGES, DEFAULT_LANGUAGE } from "./config";
 import { localizePath, stripLanguagePrefix } from "./paths";
 import { OG_LOCALES, SITE_NAME, absoluteUrl } from "./seoConfig.js";
 
+import seoOverrides from "../content/seo.json";
+
+/**
+ * SEO з адмінки (src/content/seo.json): { "/cases": { title: {uk,en,ru}, description: {…}, noindex } }.
+ * Заголовок з адмінки — повний (без « | Pika Leads»). Немає перекладу — лишається звичайний текст сторінки.
+ */
+export function seoOverride(basePath, lang) {
+  const entry = Object.hasOwn(seoOverrides, basePath) ? seoOverrides[basePath] : null;
+  if (!entry) return {};
+  const text = (value) => (value && typeof value[lang] === "string" && value[lang].trim() ? value[lang].trim() : undefined);
+  return { title: text(entry.title), description: text(entry.description), noindex: entry.noindex === true };
+}
+
 /** Картинка для прев'ю посилань (Telegram, Facebook, Viber…) — 1200×630, своя для кожної мови */
 const defaultImage = (lang) => `/og/og-${lang}.jpg`;
 
@@ -21,7 +34,10 @@ export function buildSeo({
 }) {
   const basePath = stripLanguagePrefix(pathname);
   const canonical = absoluteUrl(localizePath(basePath, lang));
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+  const override = seoOverride(basePath, lang);
+  if (override.description) description = override.description;
+  if (override.noindex) noindex = true;
+  const fullTitle = override.title || (title ? `${title} | ${SITE_NAME}` : SITE_NAME);
   const imageUrl = absoluteUrl(image || defaultImage(lang || DEFAULT_LANGUAGE));
   const imageMeta = image
     ? {}
