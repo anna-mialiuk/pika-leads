@@ -75,7 +75,7 @@ function Hero() {
             className="hero__image"
             src={pikaHero}
             srcSet={`${pikaHero480} 480w, ${pikaHeroSmall} 660w, ${pikaHero880} 880w, ${pikaHero} 1320w`}
-            sizes="(max-width: 576px) 90vw, (max-width: 1024px) 55vw, 660px"
+            sizes="(max-width: 576px) 62vw, (max-width: 1024px) 55vw, 660px"
             width="1320"
             height="1320"
             fetchPriority="high"

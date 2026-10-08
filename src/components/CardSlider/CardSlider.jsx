@@ -27,7 +27,8 @@ function CardSlider({ children, trackClassName = "", className = "" }) {
     const track = trackRef.current;
     if (!track) return undefined;
 
-    updateEdges();
+    // без прямого виклику тут: ResizeObserver спрацює одразу після розкладки
+    // і прочитає розміри без примусового перерахунку (forced reflow)
     track.addEventListener("scroll", updateEdges, { passive: true });
 
     const observer = new ResizeObserver(updateEdges);
