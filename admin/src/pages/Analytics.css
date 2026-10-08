@@ -464,4 +464,9 @@
     width: 100%;
     overflow-x: auto;
   }
+
+  .page-head .segmented button {
+    flex: 1;
+    white-space: nowrap;
+  }
 }

@@ -272,9 +272,25 @@
 
   .lead-card__top {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
     gap: 10px;
+  }
+
+  /* вузький екран: статус переноситься під ім'я, а не вилазить за картку */
+  .lead-card__top > div:first-child {
+    flex: 1 1 130px;
+    min-width: 0;
+  }
+
+  .lead-card__top .leads-table__meta {
+    white-space: nowrap;
+  }
+
+  .lead-card__top .status-select {
+    flex: none;
+    max-width: 100%;
   }
 
   .leads__filters .select {

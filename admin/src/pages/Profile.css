@@ -1,6 +1,6 @@
 .profile__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 16px;
   align-items: start;
 }
@@ -29,6 +29,7 @@
 
 .profile__dl div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px;
   padding: 10px 0;
@@ -44,7 +45,8 @@
 }
 
 .profile__dl dd {
-  margin: 0;
+  min-width: 0;
+  margin: 0 0 0 auto;
   font-weight: 700;
   text-align: right;
   word-break: break-all;
