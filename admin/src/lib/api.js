@@ -3,9 +3,10 @@
  * Сесія — у httpOnly-cookie; заголовок X-Requested-With обов'язковий (захист від CSRF).
  */
 export class ApiError extends Error {
-  constructor(status, message) {
+  constructor(status, message, data = null) {
     super(message);
     this.status = status;
+    this.data = data; // тіло відповіді (напр. свіжа версія при конфлікті 409)
   }
 }
 
@@ -33,7 +34,7 @@ export async function api(path, { method = "GET", body } = {}) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     if (response.status === 401 && !path.startsWith("/auth/")) onUnauthorized();
-    throw new ApiError(response.status, data.error || "Ошибка запроса");
+    throw new ApiError(response.status, data.error || "Ошибка запроса", data);
   }
   return data;
 }

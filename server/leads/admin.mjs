@@ -52,6 +52,7 @@ import {
 } from "./tasks.mjs";
 import { allFiles, createLink, removeFile, removeLink, saveUpload, sendFile } from "./files.mjs";
 import { getTaskSettings, saveTaskSettings } from "./task-settings.mjs";
+import { activeMaps, createMap, deleteMap, saveMap } from "./mindmaps.mjs";
 import { activeMeetings, createMeeting, deleteMeeting, updateMeeting } from "./meetings.mjs";
 import {
   projectExists,
@@ -573,6 +574,26 @@ route("POST", "/links", {}, ({ res, body, user }) => send(res, 201, { link: crea
 
 route("DELETE", "/links/(\\d+)", {}, ({ res, user, params }) => {
   removeLink(Number(params[0]), user);
+  return send(res, 200, { ok: true });
+});
+
+// ---------- майнд-карти ----------
+route("GET", "/mindmaps", {}, ({ res }) => send(res, 200, { maps: activeMaps() }));
+
+route("POST", "/mindmaps", { bodyLimit: 512 * 1024 }, ({ res, body, user }) => send(res, 201, { map: createMap(body, user) }));
+
+route("PUT", "/mindmaps/(\\d+)", { bodyLimit: 512 * 1024 }, ({ res, body, user, params }) => {
+  try {
+    return send(res, 200, { map: saveMap(Number(params[0]), body, user) });
+  } catch (error) {
+    // конфлікт: віддаємо свіжу версію, щоб клієнт її показав
+    if (error.status === 409) return send(res, 409, { error: error.message, map: error.map });
+    throw error;
+  }
+});
+
+route("DELETE", "/mindmaps/(\\d+)", {}, ({ res, user, params }) => {
+  deleteMap(Number(params[0]), user);
   return send(res, 200, { ok: true });
 });
 

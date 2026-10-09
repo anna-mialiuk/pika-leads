@@ -1,0 +1,633 @@
+/* Майнд-карти — дошка як у макеті */
+.mm-maps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mm-maps__list {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mm-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text2);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mm-tab.is-active {
+  border-color: #b98bff;
+  background: rgba(185, 139, 255, 0.16);
+  color: #b98bff;
+}
+
+.mm-tab__count {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.mm-tab__del {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+.mm-tab__del:hover {
+  color: #ff7d7d;
+  opacity: 1;
+}
+
+.mm-tab--add {
+  border-style: dashed;
+  border-color: var(--border2);
+  background: transparent;
+  color: var(--muted);
+}
+
+.mm-tab--add:hover {
+  border-color: #b98bff;
+  color: #b98bff;
+}
+
+.mm-save {
+  color: var(--faint);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.mm-save.is-error {
+  color: #ff7d7d;
+}
+
+.mm-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.mm-meta label {
+  flex: 1;
+  min-width: 160px;
+}
+
+.mm-meta span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--faint);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.mm-meta input,
+.mm-meta select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 11px;
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+}
+
+.mm-meta input {
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.mm-meta input:focus,
+.mm-meta select:focus {
+  border-color: #b98bff;
+}
+
+.mm-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.mm-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.mm-tool {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mm-tool:hover {
+  background: var(--bg);
+}
+
+.mm-tool i {
+  display: inline-block;
+  font-style: normal;
+}
+
+.mm-tool--card i {
+  width: 13px;
+  height: 11px;
+  border: 1.5px solid currentColor;
+  border-top-width: 3px;
+  border-radius: 2px;
+}
+
+.mm-tool--card:hover {
+  color: #b98bff;
+}
+
+.mm-tool--sticky i {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #ffc629;
+}
+
+.mm-tool--sticky:hover {
+  color: #ffc629;
+}
+
+.mm-tool--rect i {
+  width: 13px;
+  height: 11px;
+  border: 2px solid #6fa8ff;
+  border-radius: 2px;
+}
+
+.mm-tool--rect:hover {
+  color: #6fa8ff;
+}
+
+.mm-tool--ellipse i {
+  width: 13px;
+  height: 12px;
+  border: 2px solid #4fd88a;
+  border-radius: 50%;
+}
+
+.mm-tool--ellipse:hover {
+  color: #4fd88a;
+}
+
+.mm-tool--diamond i {
+  width: 12px;
+  height: 12px;
+  background: #f0a83e;
+  transform: rotate(45deg) scale(0.8);
+}
+
+.mm-tool--diamond:hover {
+  color: #f0a83e;
+}
+
+.mm-tool--text i {
+  width: 13px;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.mm-tool--text:hover {
+  color: var(--text);
+}
+
+.mm-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text2);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mm-icon:hover:not(:disabled) {
+  background: var(--bg);
+  color: #b98bff;
+}
+
+.mm-icon:disabled {
+  color: var(--faint);
+  cursor: default;
+}
+
+.mm-icon.is-on {
+  background: rgba(185, 139, 255, 0.18);
+  color: #b98bff;
+}
+
+.mm-sep {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+}
+
+.mm-text-btn {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text2);
+  font-size: 11.5px;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.mm-text-btn:hover {
+  background: var(--bg);
+  color: #b98bff;
+}
+
+.mm-hand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--card);
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mm-hand.is-on {
+  border-color: #b98bff;
+  background: rgba(185, 139, 255, 0.16);
+  color: #b98bff;
+}
+
+.mm-zoom {
+  margin-left: auto;
+}
+
+.mm-zoom__pct {
+  min-width: 46px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mm-hint {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 11.5px;
+}
+
+.mm-viewport {
+  position: relative;
+  height: 540px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+  cursor: grab;
+  touch-action: none;
+}
+
+.mm-viewport:active {
+  cursor: grabbing;
+}
+
+.mm-viewport.is-hand .mm-node {
+  cursor: grab;
+}
+
+.mm-viewport.is-connecting {
+  cursor: crosshair;
+}
+
+.mm-world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4000px;
+  height: 3000px;
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+  transform-origin: 0 0;
+}
+
+.mm-edges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.mm-edge-hit {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 18;
+  cursor: pointer;
+  pointer-events: stroke;
+}
+
+.mm-edge-hit:hover + .mm-edge {
+  stroke: #ff7d7d;
+}
+
+.mm-edge {
+  fill: none;
+  stroke: rgba(185, 139, 255, 0.75);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.mm-link {
+  stroke: #ffc629;
+  stroke-width: 2.5;
+  stroke-dasharray: 6 5;
+  stroke-linecap: round;
+}
+
+.mm-node {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+}
+
+.mm-node__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.mm-node__diamond {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  clip-path: polygon(50% 1%, 99% 50%, 50% 99%, 1% 50%);
+}
+
+.mm-node__body input {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: var(--font);
+  outline: none;
+  cursor: text;
+}
+
+.mm-node__task {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 3px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: inherit;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.mm-node__task:hover {
+  color: #b98bff;
+}
+
+.mm-node__handle {
+  position: absolute;
+  right: -8px;
+  z-index: 8;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+  background: #6fa8ff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  cursor: crosshair;
+}
+
+.mm-node__resize {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  z-index: 8;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #b98bff;
+  border-radius: 4px;
+  background: var(--card);
+  cursor: nwse-resize;
+}
+
+.mm-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9;
+  width: 210px;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid var(--border2);
+  border-radius: 11px;
+  background: var(--card);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  cursor: default;
+}
+
+.mm-panel__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.mm-panel__swatches button {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mm-panel select {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 7px 8px;
+  border: 1px solid var(--border2);
+  border-radius: 7px;
+  background: var(--bg);
+  color: var(--text2);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.mm-panel__row {
+  display: flex;
+  gap: 6px;
+}
+
+.mm-panel__row button {
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mm-panel__connect {
+  flex: 1;
+  background: rgba(185, 139, 255, 0.16);
+  color: #b98bff;
+}
+
+.mm-panel__connect.is-on {
+  background: #ffc629;
+  color: #121110;
+}
+
+.mm-panel__dup {
+  border: 1px solid var(--border2) !important;
+  background: var(--bg);
+  color: var(--text2);
+  font-size: 12px !important;
+}
+
+.mm-panel__dup:hover {
+  border-color: #b98bff !important;
+  color: #b98bff;
+}
+
+.mm-panel__del {
+  background: rgba(255, 125, 125, 0.14);
+  color: #ff7d7d;
+  font-size: 12px !important;
+}
+
+.mm-connect-hint {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 6;
+  padding: 7px 14px;
+  border-radius: 100px;
+  background: #ffc629;
+  color: #121110;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.mm-mini {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 5;
+  box-sizing: border-box;
+  width: 152px;
+  height: 104px;
+  padding: 6px;
+  border: 1px solid var(--border2);
+  border-radius: 9px;
+  background: rgba(20, 18, 22, 0.7);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+.mm-mini div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mm-mini i {
+  position: absolute;
+  height: 6px;
+  border-radius: 2px;
+}
+
+@media (max-width: 760px) {
+  .mm-viewport {
+    height: 62vh;
+  }
+
+  .mm-zoom {
+    margin-left: 0;
+  }
+
+  .mm-group {
+    flex-wrap: wrap;
+  }
+
+  .mm-hint {
+    display: none;
+  }
+
+  .mm-mini {
+    display: none;
+  }
+}
