@@ -10,6 +10,7 @@ import ContentEditor from "./pages/ContentEditor";
 import Reviews from "./pages/Reviews";
 import Analytics from "./pages/Analytics";
 import Seo from "./pages/Seo";
+import Integrations from "./pages/Integrations";
 import { PublishProvider } from "./lib/publish";
 import { useAuth } from "./lib/auth";
 import { MetaProvider } from "./lib/meta";
@@ -64,6 +65,7 @@ function App() {
           ["/blog/:id", <ContentEditor collection="articles" key="article" />],
           ["/reviews", <Reviews key="reviews" />],
           ["/seo", <Seo key="seo" />],
+          ["/integrations", <Integrations key="integrations" />],
         ].map(([path, element]) => (
           <Route key={path} path={path} element={<Protected admin>{element}</Protected>} />
         ))}

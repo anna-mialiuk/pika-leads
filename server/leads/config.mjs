@@ -43,3 +43,12 @@ export const SMTP_USER = env.SMTP_USER || "";
 export const SMTP_PASS = env.SMTP_PASS || "";
 export const MAIL_FROM = env.MAIL_FROM || "";
 export const MAIL_FROM_NAME = env.MAIL_FROM_NAME || "Pikaleads";
+
+// Реклама й аналітика на сервері (див. tracking.mjs)
+export const META_PIXEL_ID = env.META_PIXEL_ID || "";
+export const META_CAPI_TOKEN = env.META_CAPI_TOKEN || "";
+export const META_API_VERSION = env.META_API_VERSION || "v21.0";
+export const META_API_URL = (env.META_API_URL || "https://graph.facebook.com").replace(/\/$/, "");
+export const GA4_API_URL = (env.GA4_API_URL || "https://www.google-analytics.com").replace(/\/$/, "");
+export const GA4_MEASUREMENT_ID = env.GA4_MEASUREMENT_ID || "";
+export const GA4_API_SECRET = env.GA4_API_SECRET || "";

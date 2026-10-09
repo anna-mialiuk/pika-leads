@@ -44,6 +44,32 @@ const ATTRIBUTION_LABELS = {
   referrer: "Реферер",
 };
 
+const PLATFORMS = { meta: "Meta", ga4: "GA4" };
+
+/** Сума угоди: зберігається при виході з поля або Enter */
+function AmountField({ lead, onSave }) {
+  const [value, setValue] = useState(lead.amount ?? "");
+  const save = () => {
+    const next = value === "" ? null : Number(String(value).replace(",", "."));
+    if (next !== null && !(next >= 0)) return;
+    if (next !== (lead.amount ?? null)) onSave(next);
+  };
+  return (
+    <div className="lead-amount">
+      <input
+        className="input"
+        inputMode="decimal"
+        placeholder="0"
+        value={value}
+        onChange={(event) => setValue(event.target.value.replace(/[^\d.,]/g, ""))}
+        onBlur={save}
+        onKeyDown={(event) => event.key === "Enter" && event.currentTarget.blur()}
+      />
+      <span className="lead-amount__currency">{lead.currency}</span>
+    </div>
+  );
+}
+
 const label = (map, key) => (Object.hasOwn(map, key) ? map[key] : key);
 
 /** Посилання на сторінку сайту — лише в межах pika-leads.com */
@@ -61,6 +87,7 @@ const HISTORY_TEXT = {
   status: (h, s) => `Статус: ${s[h.from]?.label || h.from} → ${s[h.to]?.label || h.to}`,
   manager: (h, s, u) => `Менеджер: ${u[h.to]?.name || "не назначен"}`,
   deleted: () => "Заявка удалена",
+  amount: (h) => (h.to === null ? "Сумма сделки убрана" : `Сумма сделки: ${h.to} ${h.currency || ""}`),
 };
 
 function LeadModal({ lead, onChange, onDeleted, onClose }) {
@@ -148,6 +175,14 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
             <ManagerSelect value={lead.managerId} onChange={(managerId) => patch({ managerId })} className="select" />
           </section>
 
+          <section className="lead-modal__section lead-modal__manager">
+            <h3>Сумма сделки</h3>
+            <AmountField key={lead.id} lead={lead} onSave={(amount) => patch({ amount })} />
+            {lead.awaitingAmount && (
+              <p className="lead-modal__hint lead-modal__hint--warn">Укажите сумму — событие «Покупка» уйдёт в рекламу после этого.</p>
+            )}
+          </section>
+
           <section className="lead-modal__section">
             <h3>Данные заявки</h3>
             <dl className="lead-modal__dl">
@@ -193,6 +228,32 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
                   </div>
                 ))}
               </dl>
+            </section>
+          )}
+
+          {(lead.events?.length > 0 || lead.tracking) && (
+            <section className="lead-modal__section">
+              <h3>Реклама и аналитика</h3>
+              {lead.tracking && (
+                <p className="lead-modal__hint">
+                  Cookie: аналитика {lead.tracking.consent?.analytics ? "✓" : "—"} · маркетинг{" "}
+                  {lead.tracking.consent?.marketing ? "✓" : "—"}
+                  {lead.tracking.meta ? " · клик Meta сохранён" : ""}
+                  {lead.tracking.ga ? " · Google Analytics связан" : ""}
+                </p>
+              )}
+              <ul className="lead-events">
+                {(lead.events || []).map((e, index) => (
+                  <li key={index} className={e.ok ? "is-ok" : e.skipped ? "is-skip" : "is-error"}>
+                    <span>
+                      {e.ok ? "✓" : e.skipped ? "–" : "⚠"} {PLATFORMS[e.platform] || e.platform}: <b>{e.event}</b>
+                      {e.error && <small> — {e.error}</small>}
+                      {e.skipped && <small> — {e.skipped}</small>}
+                    </span>
+                    <span className="lead-history__meta">{formatDate(e.at)}</span>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 

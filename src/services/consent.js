@@ -2,7 +2,7 @@
  * Згода на cookie + Google Consent Mode v2 + завантаження GTM.
  *
  * Типова згода «все заборонено» задається ще в index.html (до будь-яких тегів).
- * Тут: збереження вибору користувача, оновлення Consent Mode і запуск GTM.
+ * Тут: збереження вибору користувача й оновлення Consent Mode (GTM, GA4, піксель — services/tracking.js).
  *
  * Категорії (як у Політиці cookie):
  *   necessary  — завжди увімкнені (робота сайту, збереження самої згоди)
@@ -10,7 +10,6 @@
  *   analytics  — GA4 тощо (analytics_storage)
  *   marketing  — Meta Pixel, Google Ads, TikTok… (ad_storage, ad_user_data, ad_personalization)
  */
-import { GTM_ID } from "../config/analytics";
 
 export const CONSENT_KEY = "pika-consent";
 // підвищіть версію, якщо зміниться склад категорій — банер покажеться знову
@@ -47,33 +46,6 @@ const toConsentMode = ({ functional, analytics, marketing }) => {
   };
 };
 
-let gtmLoaded = false;
-
-/**
- * GTM вантажимо, коли браузер вільний (не гальмує перший екран).
- * До згоди теги працюють в обмеженому режимі Consent Mode v2 (без cookie),
- * після згоди — повністю. Теги без підтримки Consent Mode (Meta Pixel, TikTok)
- * у GTM треба обмежити «Additional consent checks» → ad_storage.
- */
-function loadGtm() {
-  if (gtmLoaded || !GTM_ID || typeof window === "undefined") return;
-  gtmLoaded = true;
-
-  const start = () => {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
-    document.head.appendChild(script);
-  };
-
-  if ("requestIdleCallback" in window)
-    window.requestIdleCallback(start, { timeout: 3000 });
-  else window.setTimeout(start, 1500);
-}
-
 export function saveConsent(choice) {
   const consent = {
     version: CONSENT_VERSION,
@@ -102,10 +74,8 @@ export function saveConsent(choice) {
   return consent;
 }
 
-/** Запуск при старті сайту (main.jsx) */
-export function initConsent() {
-  loadGtm();
-}
+/** Запуск при старті сайту (main.jsx); скрипти аналітики — services/tracking.js */
+export function initConsent() {}
 
 export function onConsentChange(listener) {
   listeners.add(listener);

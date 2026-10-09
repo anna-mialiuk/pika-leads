@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import { captureAttribution } from "./services/leads";
 import { initConsent } from "./services/consent";
+import { initTracking } from "./services/tracking";
+import RouteTracker from "./components/RouteTracker/RouteTracker";
 import App from "./App";
 
 // шрифти з власного домену (без запитів до Google Fonts)
@@ -14,6 +16,7 @@ import "./styles/index.sass";
 
 captureAttribution();
 initConsent();
+initTracking();
 
 // Після деплою старі файли сторінок (assets/*.js) можуть зникнути, поки сайт відкритий.
 // Тоді перехід на іншу сторінку не вантажиться — перезавантажуємо на нову версію
@@ -35,6 +38,7 @@ window.addEventListener("vite:preloadError", (event) => {
 const app = (
   <StrictMode>
     <BrowserRouter>
+      <RouteTracker />
       <App />
     </BrowserRouter>
   </StrictMode>

@@ -11,8 +11,10 @@
  *   lang, page, title, referrer
  *   attribution — utm_*, gclid, fbclid, ttclid і сторінка входу (перший візит у сесії)
  *   createdAt
- * Після успіху в dataLayer пушиться подія lead_submit — для GTM / GA4 / пікселів.
+ * Після успіху — події GA4 / Meta Pixel / dataLayer (services/tracking.js).
  */
+import { trackLead, trackingData } from "./tracking";
+
 // На продакшені за замовчуванням — власний приймач на тому ж домені (server/leads)
 const ENDPOINT =
   import.meta.env.VITE_LEADS_ENDPOINT ||
@@ -78,6 +80,9 @@ export function formToObject(form) {
 }
 
 export async function sendLead({ type, source = "", data = {} }) {
+  const attribution = readStorage();
+  // event_id + cookie реклами: сервер відправить таку ж подію через Meta Conversions API
+  const tracking = trackingData(attribution);
   const payload = {
     type,
     source,
@@ -85,7 +90,8 @@ export async function sendLead({ type, source = "", data = {} }) {
     lang: document.documentElement.lang,
     page: window.location.pathname,
     title: document.title,
-    attribution: readStorage(),
+    attribution,
+    tracking,
     createdAt: new Date().toISOString(),
   };
 
@@ -102,12 +108,7 @@ export async function sendLead({ type, source = "", data = {} }) {
     console.info("[lead] VITE_LEADS_ENDPOINT не задано, заявка:", payload);
   }
 
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "lead_submit",
-    lead_type: type,
-    lead_source: source,
-  });
+  trackLead({ type, source, eventId: tracking.eventId });
 
   return payload;
 }

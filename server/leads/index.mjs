@@ -64,6 +64,26 @@ const safePage = (page) => {
   return value.startsWith("/") && !value.startsWith("//") && !value.includes("\\") ? value : "";
 };
 
+/** Дані для реклами: лише значення очікуваного формату */
+function sanitizeTracking(lead) {
+  const t = plainObject(lead.tracking);
+  const pick = (value, pattern, max) => {
+    const text = clean(value, max);
+    return pattern.test(text) ? text : undefined;
+  };
+  const consent = plainObject(t.consent);
+  const result = {
+    eventId: pick(t.eventId, /^[\w-]{8,64}$/, 64),
+    fbp: pick(t.fbp, /^fb\.\d\.\d+\.\d+$/, 100),
+    fbc: pick(t.fbc, /^fb\.\d\.\d+\.[\w-]+$/, 400),
+    gaClientId: pick(t.gaClientId, /^\d+\.\d+$/, 60),
+    gaSessionId: pick(t.gaSessionId, /^\d+$/, 30),
+    consent: { analytics: consent.analytics === true, marketing: consent.marketing === true },
+  };
+  for (const key of Object.keys(result)) if (result[key] === undefined) delete result[key];
+  return result;
+}
+
 /** Лише очікувані поля, обрізані за довжиною */
 function sanitize(lead) {
   const data = {};
@@ -82,6 +102,7 @@ function sanitize(lead) {
   }
   return {
     type: lead.type,
+    tracking: sanitizeTracking(lead),
     source: clean(lead.source, 60),
     page: safePage(lead.page),
     lang: clean(lead.lang, 10),
@@ -108,7 +129,9 @@ async function handlePublicLead(req, res) {
   if (error) return send(res, 400, { error });
 
   try {
-    await createLead(sanitize(lead), { ip });
+    const record = sanitize(lead);
+    record.tracking.userAgent = String(req.headers["user-agent"] || "").slice(0, 400);
+    await createLead(record, { ip });
   } catch (createError) {
     console.error("[leads] не вдалося зберегти заявку:", createError);
   }

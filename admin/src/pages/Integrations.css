@@ -1,0 +1,102 @@
+/* Інтеграції */
+.int-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.int-card {
+  padding: 18px 20px;
+}
+
+.int-card h2 {
+  margin: 10px 0 6px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.int-card p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.int-card__status {
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 11.5px;
+  font-weight: 800;
+}
+
+.int-card__status.is-on {
+  background: rgba(79, 216, 138, 0.12);
+  color: var(--ok);
+}
+
+.int-text {
+  margin: 0 0 14px;
+  font-size: 13px;
+}
+
+.int-rules__head,
+.int-rules__row {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.int-rules__head {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.int-rules__row {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.int-rules__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.int-rules__status i {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.int-rules .select {
+  width: 100%;
+}
+
+.event-custom {
+  display: flex;
+  gap: 6px;
+}
+
+.int-log {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .int-rules__head {
+    display: none;
+  }
+
+  .int-rules__row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 12px 0;
+  }
+}

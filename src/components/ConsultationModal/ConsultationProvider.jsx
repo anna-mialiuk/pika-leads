@@ -2,6 +2,7 @@ import { useCallback, useMemo, useRef, useState } from "react";
 
 import ConsultationModal from "./ConsultationModal";
 import { ConsultationContext } from "./ConsultationContext";
+import { trackEvent } from "../../services/tracking";
 
 /**
  * Глобальний попап «Отримати консультацію».
@@ -14,6 +15,7 @@ function ConsultationProvider({ children }) {
   const open = useCallback((source = "") => {
     triggerRef.current = document.activeElement;
     setState({ isOpen: true, source });
+    trackEvent("form_open", { form_type: "consultation", form_location: source || "page" });
   }, []);
 
   const close = useCallback(() => {

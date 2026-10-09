@@ -6,6 +6,7 @@ import { ChatIcon, CloseIcon } from "./icons";
 
 import { useLanguage } from "../../i18n";
 import { sendLead } from "../../services/leads";
+import { trackEvent } from "../../services/tracking";
 import { useConsultation } from "../ConsultationModal/ConsultationContext";
 
 import "./SupportWidget.sass";
@@ -78,6 +79,7 @@ function SupportWidget() {
     sendLead({ type, source: "chat", data }).catch(console.error);
 
   const toggleChat = () => {
+    if (!isChatOpen) trackEvent("chat_open", {});
     setIsChatOpen((open) => !open);
     setHasUnread(false);
     if (callback === "visible") closeCallback();

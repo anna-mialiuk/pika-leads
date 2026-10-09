@@ -15,8 +15,10 @@ import {
   statusFromHtml,
   withStatus,
 } from "./telegram.mjs";
+import { attachLeads, getTracking, pendingValue, trackNewLead, trackStatus } from "./tracking.mjs";
 
 export const leads = createCollection("leads.json");
+attachLeads(leads);
 
 const now = () => new Date().toISOString();
 
@@ -45,6 +47,10 @@ export async function createLead(payload, { ip, user } = {}) {
     comments: [],
     history: [],
     telegram: null,
+    // для реклами: event_id пікселя, _fbp/_fbc, client_id GA4, браузер, згода на cookie
+    tracking: payload.tracking || null,
+    amount: null,
+    events: [],
   };
 
   // резервний журнал — як і раніше, рядок на кожну заявку
@@ -56,6 +62,9 @@ export async function createLead(payload, { ip, user } = {}) {
 
   const lead = leads.insert(record);
   leads.update(lead.id, (l) => addHistory(l, { action: "created", by: actorOf(user) }));
+
+  // Meta Conversions API — у фоні, відповідь сайту не чекає
+  trackNewLead(leads.get(lead.id)).catch((error) => console.error("[tracking]", error.message));
 
   // ручні заявки з адмінки в Telegram не надсилаємо
   if (payload.type !== "manual") {
@@ -107,7 +116,25 @@ export async function setStatus(id, status, { user, telegramUser } = {}) {
   });
 
   await syncTelegram(lead, by.name);
+  trackStatus(leads.get(id)).catch((error) => console.error("[tracking]", error.message));
   return lead;
+}
+
+/** Сума угоди (для події «Покупка» в Meta / GA4) */
+export function setAmount(id, amount, { user } = {}) {
+  const lead = leads.get(id);
+  if (!lead || lead.deleted) return null;
+  const value = amount === null || amount === "" ? null : Math.round(Number(amount) * 100) / 100;
+  if (value !== null && !(value >= 0 && value < 1e9)) throw Object.assign(new Error("Некорректная сумма"), { status: 400 });
+  if (lead.amount === value) return lead;
+  const updated = leads.update(id, (l) => {
+    l.amount = value;
+    l.currency = l.currency || getTracking().currency;
+    l.updatedAt = now();
+    addHistory(l, { action: "amount", to: value, currency: l.currency, by: actorOf(user) });
+  });
+  trackStatus(updated).catch((error) => console.error("[tracking]", error.message));
+  return updated;
 }
 
 export function setManager(id, managerId, { user } = {}) {
@@ -263,6 +290,15 @@ export function migrateLegacyLeads() {
 
 /** Заявка для відповіді API */
 export const publicLead = (lead) => {
-  const { deleted, ...rest } = lead;
-  return { ...rest, telegram: lead.telegram ? { messages: lead.telegram.messages.length } : null };
+  const { deleted, tracking, ...rest } = lead;
+  return {
+    ...rest,
+    telegram: lead.telegram ? { messages: lead.telegram.messages.length } : null,
+    // технічні дані для реклами не показуємо — лише що є
+    tracking: tracking
+      ? { consent: tracking.consent || null, meta: Boolean(tracking.fbp || tracking.fbc), ga: Boolean(tracking.gaClientId) }
+      : null,
+    currency: lead.currency || getTracking().currency,
+    awaitingAmount: pendingValue(lead),
+  };
 };

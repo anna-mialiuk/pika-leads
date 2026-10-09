@@ -232,3 +232,59 @@
     grid-template-columns: 1fr;
   }
 }
+
+.lead-amount {
+  position: relative;
+  max-width: 260px;
+}
+
+.lead-amount .input {
+  padding-right: 56px;
+}
+
+.lead-amount__currency {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  transform: translateY(-50%);
+}
+
+.lead-modal__hint--warn {
+  color: var(--accent);
+}
+
+.lead-events {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12.5px;
+}
+
+.lead-events li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+
+.lead-events .is-ok {
+  color: var(--ok);
+}
+
+.lead-events .is-skip {
+  color: var(--muted);
+}
+
+.lead-events .is-error {
+  color: var(--danger);
+}
+
+.lead-events small {
+  color: var(--muted);
+}

@@ -31,7 +31,8 @@ import {
   verifyTotp,
 } from "./auth.mjs";
 import { HttpError, clientIp, cookieHeader, parseCookies, readBody, send } from "./http.mjs";
-import { addComment, createLead, deleteLead, leads, publicLead, setManager, setStatus } from "./leads.mjs";
+import { addComment, createLead, deleteLead, leads, publicLead, setAmount, setManager, setStatus } from "./leads.mjs";
+import { saveTracking, trackingInfo } from "./tracking.mjs";
 import { LEAD_TYPES, STATUSES, isStatus } from "./statuses.mjs";
 import { clean } from "./telegram.mjs";
 import { requestReset, resetAvailable, resetPassword } from "./reset.mjs";
@@ -298,6 +299,7 @@ route("POST", "/leads", {}, async ({ res, body, user, req }) => {
 route("PATCH", "/leads/(\\d+)", {}, async ({ res, body, user, params }) => {
   const lead = leadOr404(params[0]);
   if ("managerId" in body) setManager(lead.id, validManager(body.managerId === null ? null : Number(body.managerId)), { user });
+  if ("amount" in body) setAmount(lead.id, body.amount, { user });
   if ("status" in body) {
     if (!isStatus(body.status)) throw new HttpError(400, "Неизвестный статус");
     await setStatus(lead.id, body.status, { user });
@@ -454,6 +456,33 @@ route("PUT", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true, bodyLimit: 40 *
 route("DELETE", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true }, async ({ res, params, query, user }) =>
   send(res, 200, { commit: await deleteContent(params[0], params[1], query.get("sha"), user) }),
 );
+
+// ---------- інтеграції: Meta Conversions API, GA4 Measurement Protocol ----------
+const CURRENCIES = ["USD", "EUR", "UAH", "PLN"];
+
+route("GET", "/integrations", { admin: true }, ({ res }) => send(res, 200, trackingInfo()));
+
+route("PUT", "/integrations", { admin: true }, ({ res, body }) => {
+  const rules = {};
+  for (const status of STATUSES) {
+    if (status.code === "new") continue;
+    const rule = body.rules?.[status.code] || {};
+    const meta = String(rule.meta || "").trim();
+    const ga4 = String(rule.ga4 || "").trim();
+    if (meta && !/^[A-Za-z][A-Za-z0-9_]{0,39}$/.test(meta)) throw new HttpError(400, `Событие Meta «${meta}»: только латиница, цифры и _`);
+    if (ga4 && !/^[a-z][a-z0-9_]{0,39}$/.test(ga4)) throw new HttpError(400, `Событие GA4 «${ga4}»: маленькие латинские буквы, цифры и _`);
+    rules[status.code] = { meta, ga4 };
+  }
+  const testEventCode = String(body.testEventCode || "").trim();
+  if (testEventCode && !/^[A-Za-z0-9]{1,30}$/.test(testEventCode)) throw new HttpError(400, "Некорректный тестовый код событий");
+  saveTracking({
+    currency: CURRENCIES.includes(body.currency) ? body.currency : "USD",
+    requireConsent: body.requireConsent !== false,
+    testEventCode,
+    rules,
+  });
+  return send(res, 200, trackingInfo());
+});
 
 // ---------- обробник ----------
 export async function handleAdmin(req, res) {

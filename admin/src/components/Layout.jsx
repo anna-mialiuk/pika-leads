@@ -71,7 +71,12 @@ function Layout() {
   const nav = [
     { to: "/leads", icon: "leads", label: "Заявки (CRM)" },
     { to: "/analytics", icon: "chart", label: "Аналитика" },
-    ...(isAdmin ? [{ to: "/team", icon: "team", label: "Команда" }] : []),
+    ...(isAdmin
+      ? [
+          { to: "/team", icon: "team", label: "Команда" },
+          { to: "/integrations", icon: "link", label: "Интеграции" },
+        ]
+      : []),
     { to: "/profile", icon: "user", label: "Профиль" },
   ];
   const siteNav = isAdmin
