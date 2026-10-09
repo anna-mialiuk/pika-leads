@@ -46,7 +46,8 @@ export function TasksProvider({ children }) {
 
   const update = useCallback(
     async (id, body) => {
-      setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, ...body } : t)));
+      const optimistic = "status" in body ? { ...body, done: body.status === "done" || body.status === "rejected" } : body;
+      setTasks((prev) => prev.map((t) => (t.id === id ? { ...t, ...optimistic } : t)));
       try {
         const { task } = await api(`/tasks/${id}`, { method: "PATCH", body });
         replace(task);
@@ -135,23 +136,62 @@ export function formatDue(iso) {
 
 export const isOverdue = (task) => !task.done && new Date(task.dueAt) < new Date();
 
-/** Групи для сторінки задач */
-export function groupTasks(list) {
-  const today = startOfDay(Date.now());
-  const groups = { overdue: [], today: [], tomorrow: [], later: [], done: [] };
-  for (const task of list) {
-    if (task.done) {
-      if (Date.now() - new Date(task.doneAt || task.dueAt) < 7 * DAY) groups.done.push(task);
-      continue;
+/** «04.07» для картки */
+export const formatShort = (iso) => {
+  const d = new Date(iso);
+  return `${pad(d.getDate())}.${pad(d.getMonth() + 1)}`;
+};
+
+// ---------- колонки й пріоритети (як у макеті) ----------
+export const TASK_COLUMNS = [
+  { key: "todo", label: "To Do", color: "#8a8f98" },
+  { key: "inprogress", label: "В работе", color: "#FFC629" },
+  { key: "review", label: "На проверке", color: "#5b9bff" },
+  { key: "consideration", label: "На рассмотрении", color: "#b98bff" },
+  { key: "done", label: "Готово", color: "#4fd88a" },
+  { key: "rejected", label: "Отклонено", color: "#ff7d7d" },
+];
+export const COLUMN_BY_KEY = Object.fromEntries(TASK_COLUMNS.map((c) => [c.key, c]));
+
+export const PRIORITIES = [
+  { key: "low", label: "Низкий", color: "#5ac878", bg: "rgba(90,200,120,.15)" },
+  { key: "medium", label: "Средний", color: "#FFC629", bg: "rgba(255,198,41,.15)" },
+  { key: "high", label: "Высокий", color: "#ff7d7d", bg: "rgba(255,90,90,.15)" },
+];
+export const PRIORITY_BY_KEY = Object.fromEntries(PRIORITIES.map((p) => [p.key, p]));
+
+// ---------- опис задачі: тільки дозволені теги (те саме робить сервер) ----------
+const RICH_TAGS = new Set(["B", "STRONG", "I", "EM", "U", "H3", "P", "DIV", "BR", "UL", "OL", "LI", "BLOCKQUOTE", "A", "SPAN"]);
+const DROP_WITH_CONTENT = new Set(["SCRIPT", "STYLE", "IFRAME", "OBJECT", "EMBED", "SVG", "MATH", "TEMPLATE", "NOSCRIPT", "TEXTAREA", "TITLE"]);
+
+export function sanitizeHtml(html) {
+  const doc = new DOMParser().parseFromString(`<body>${html || ""}</body>`, "text/html");
+  const walk = (node) => {
+    for (const child of [...node.childNodes]) {
+      if (child.nodeType === Node.TEXT_NODE) continue;
+      if (child.nodeType !== Node.ELEMENT_NODE || DROP_WITH_CONTENT.has(child.tagName)) {
+        child.remove();
+        continue;
+      }
+      walk(child);
+      if (!RICH_TAGS.has(child.tagName)) {
+        child.replaceWith(...child.childNodes);
+        continue;
+      }
+      const keep = {};
+      if (child.tagName === "A") {
+        const href = (child.getAttribute("href") || "").trim();
+        if (/^(https?:\/\/|mailto:|tel:)/i.test(href)) Object.assign(keep, { href, target: "_blank", rel: "noopener noreferrer" });
+      }
+      if ((child.tagName === "UL" || child.tagName === "LI") && child.getAttribute("class") === "rte-check") keep.class = "rte-check";
+      if (child.tagName === "LI" && child.getAttribute("data-done") === "1") keep["data-done"] = "1";
+      for (const attr of [...child.attributes]) child.removeAttribute(attr.name);
+      for (const [name, value] of Object.entries(keep)) child.setAttribute(name, value);
     }
-    const due = new Date(task.dueAt);
-    if (due < new Date()) groups.overdue.push(task);
-    else if (startOfDay(due) === today) groups.today.push(task);
-    else if (startOfDay(due) === today + DAY) groups.tomorrow.push(task);
-    else groups.later.push(task);
-  }
-  const byDue = (a, b) => new Date(a.dueAt) - new Date(b.dueAt);
-  Object.values(groups).forEach((g) => g.sort(byDue));
-  groups.done.sort((a, b) => new Date(b.doneAt) - new Date(a.doneAt));
-  return groups;
+  };
+  walk(doc.body);
+  return doc.body.innerHTML;
 }
+
+/** Порожній опис редактора («<br>», «<p></p>») → "" */
+export const isBlankHtml = (html) => !String(html || "").replace(/<br\s*\/?>|<\/?(p|div)>|&nbsp;|\s/gi, "");

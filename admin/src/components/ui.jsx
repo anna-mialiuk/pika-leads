@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import { useEffect, useRef, useState } from "react";
 import QRCode from "qrcode";
 
@@ -86,11 +87,17 @@ export function QrCode({ text, size = 176 }) {
 }
 
 /** Модальне вікно: Esc і клік по фону закривають */
-export function Modal({ title, onClose, wide = false, children }) {
+export function Modal({ title, onClose, wide = false, className = "", children }) {
   const panelRef = useRef(null);
+  const overlayRef = useRef(null);
 
   useEffect(() => {
-    const onKey = (event) => event.key === "Escape" && onClose();
+    // Escape закриває лише верхнє вікно (задача поверх картки заявки)
+    const onKey = (event) => {
+      if (event.key !== "Escape") return;
+      const open = document.querySelectorAll(".modal");
+      if (open[open.length - 1] === overlayRef.current) onClose();
+    };
     document.addEventListener("keydown", onKey);
     const { overflow } = document.body.style;
     document.body.style.overflow = "hidden";
@@ -100,24 +107,28 @@ export function Modal({ title, onClose, wide = false, children }) {
     };
   }, [onClose]);
 
-  return (
+  return createPortal(
     <div
+      ref={overlayRef}
       className="modal"
       role="dialog"
       aria-modal="true"
       aria-label={title}
       onMouseDown={(event) => {
+        // події з вкладеного вікна (портал) сюди теж спливають — їх ігноруємо
+        if (!overlayRef.current?.contains(event.target)) return;
         if (!panelRef.current?.contains(event.target)) onClose();
       }}
     >
-      <div className={`modal__panel ${wide ? "modal__panel--wide" : ""}`} ref={panelRef}>
+      <div className={`modal__panel ${wide ? "modal__panel--wide" : ""} ${className}`} ref={panelRef}>
         <button type="button" className="icon-btn modal__close" onClick={onClose} aria-label="Закрыть">
           <Icon name="close" />
         </button>
         {title && <h2 className="modal__title">{title}</h2>}
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 

@@ -26,17 +26,31 @@ const formatTime = (iso) =>
 
 const leadLabel = (lead) => lead?.data?.name || lead?.data?.phone_full || lead?.data?.email || (lead ? `Заявка #${lead.id}` : "");
 
+// Колонки дошки (як у макеті): done / rejected — закриті, нагадувань немає
+export const TASK_STATUSES = ["todo", "inprogress", "review", "consideration", "done", "rejected"];
+const CLOSED = new Set(["done", "rejected"]);
+const PRIORITIES = ["low", "medium", "high"];
+
+const statusOf = (task) => (TASK_STATUSES.includes(task.status) ? task.status : task.done ? "done" : "todo");
+
 export function publicTask(task) {
   const lead = task.leadId ? leads.get(task.leadId) : null;
+  const status = statusOf(task);
   return {
     id: task.id,
     leadId: task.leadId || null,
     lead: lead && !lead.deleted ? { id: lead.id, name: leadLabel(lead), status: lead.status } : null,
     title: task.title,
-    notes: task.notes || "",
+    subtitle: task.subtitle || task.notes || "",
+    description: task.description || "",
+    status,
+    priority: PRIORITIES.includes(task.priority) ? task.priority : "medium",
+    startAt: task.startAt || null,
     dueAt: task.dueAt,
     assigneeId: task.assigneeId ?? null,
-    done: Boolean(task.done),
+    watchers: Array.isArray(task.watchers) ? task.watchers : [],
+    subtasks: Array.isArray(task.subtasks) ? task.subtasks : [],
+    done: CLOSED.has(status),
     doneAt: task.doneAt || null,
     doneBy: task.doneBy || null,
     createdBy: task.createdBy || null,
@@ -53,11 +67,66 @@ function parseDue(value) {
   return new Date(time).toISOString();
 }
 
+const parseDay = (value) => {
+  if (value === null || value === "" || value === undefined) return null;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value))) throw new HttpError(400, "Некорректная дата старта");
+  return String(value);
+};
+
 function validAssignee(id) {
   if (id === null || id === undefined || id === "") return null;
   const user = users.get(Number(id));
   if (!user || user.disabled) throw new HttpError(400, "Сотрудник не найден");
   return user.id;
+}
+
+const validWatchers = (list) =>
+  Array.isArray(list) ? [...new Set(list.slice(0, 20).map((id) => validAssignee(id)).filter((id) => id !== null))] : [];
+
+/** Опис — HTML з редактора: лише прості теги, без скриптів та атрибутів-обробників */
+// опис задачі — HTML з редактора; лишаємо тільки дозволені теги й атрибути
+const RICH_TAGS = new Set(["b", "strong", "i", "em", "u", "h3", "p", "div", "br", "ul", "ol", "li", "blockquote", "a", "span"]);
+const escapeAttr = (value) => value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+function richAttrs(tag, raw) {
+  const attrs = {};
+  for (const m of raw.matchAll(/([a-z-]+)\s*=\s*("([^"]*)"|'([^']*)'|([^\s"'>]+))/gi)) attrs[m[1].toLowerCase()] = m[3] ?? m[4] ?? m[5] ?? "";
+  let out = "";
+  if (tag === "a") {
+    const href = attrs.href?.trim() || "";
+    if (/^(https?:\/\/|mailto:|tel:)/i.test(href)) out += ` href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer"`;
+  }
+  if ((tag === "ul" || tag === "li") && attrs.class === "rte-check") out += ' class="rte-check"';
+  if (tag === "li" && attrs["data-done"] === "1") out += ' data-done="1"';
+  return out;
+}
+
+const cleanDescription = (html) =>
+  String(html || "")
+    .slice(0, 20000)
+    .replace(/<(script|style|iframe|object|embed|svg|math|template|noscript|textarea|title)\b[\s\S]*?<\/\1\s*>/gi, "")
+    .replace(/<!--[\s\S]*?-->|<[!?][^>]*>/g, "")
+    .replace(/<(\/?)([a-z][a-z0-9]*)\b([^>]*)>/gi, (_, close, name, rest) => {
+      const tag = name.toLowerCase();
+      if (!RICH_TAGS.has(tag)) return "";
+      return close ? `</${tag}>` : `<${tag}${richAttrs(tag, rest)}>`;
+    })
+    // незакритий «<тег…» у кінці — прибираємо
+    .replace(/<[a-z/][^>]*$/i, "");
+
+function cleanSubtasks(list) {
+  if (!Array.isArray(list)) return [];
+  return list.slice(0, 50).map((item, index) => {
+    const title = clean(item?.title, 200);
+    if (!title) throw new HttpError(400, "Пустая подзадача");
+    return {
+      id: clean(item.id, 20) || `s${Date.now().toString(36)}${index}`,
+      title,
+      done: Boolean(item.done),
+      assigneeId: validAssignee(item.assigneeId),
+      date: parseDay(item.date),
+    };
+  });
 }
 
 function leadHistory(leadId, entry, user) {
@@ -68,23 +137,32 @@ function leadHistory(leadId, entry, user) {
   });
 }
 
+function validLead(id) {
+  if (!id) return null;
+  const lead = leads.get(Number(id));
+  if (!lead || lead.deleted) throw new HttpError(400, "Заявка не найдена");
+  return lead.id;
+}
+
 // ---------- CRUD ----------
 export function createTask(body, user) {
   const title = clean(body.title, 200);
   if (!title) throw new HttpError(400, "Напишите, что сделать");
-  let leadId = null;
-  if (body.leadId) {
-    const lead = leads.get(Number(body.leadId));
-    if (!lead || lead.deleted) throw new HttpError(400, "Заявка не найдена");
-    leadId = lead.id;
-  }
+  const status = TASK_STATUSES.includes(body.status) ? body.status : "todo";
+  const leadId = validLead(body.leadId);
   const task = tasks.insert({
     leadId,
     title,
-    notes: clean(body.notes, 2000),
+    subtitle: clean(body.subtitle ?? body.notes, 300),
+    description: cleanDescription(body.description),
+    status,
+    priority: PRIORITIES.includes(body.priority) ? body.priority : "medium",
+    startAt: parseDay(body.startAt),
     dueAt: parseDue(body.dueAt),
     assigneeId: validAssignee(body.assigneeId ?? user.id),
-    done: false,
+    watchers: validWatchers(body.watchers),
+    subtasks: cleanSubtasks(body.subtasks),
+    done: CLOSED.has(status),
     createdBy: { userId: user.id, name: user.name },
     createdAt: now(),
     remindedAt: null,
@@ -101,24 +179,40 @@ export function updateTask(id, body, user) {
     patch.title = clean(body.title, 200);
     if (!patch.title) throw new HttpError(400, "Напишите, что сделать");
   }
-  if ("notes" in body) patch.notes = clean(body.notes, 2000);
+  if ("subtitle" in body) patch.subtitle = clean(body.subtitle, 300);
+  if ("description" in body) patch.description = cleanDescription(body.description);
+  if ("priority" in body && PRIORITIES.includes(body.priority)) patch.priority = body.priority;
+  if ("startAt" in body) patch.startAt = parseDay(body.startAt);
   if ("dueAt" in body) patch.dueAt = parseDue(body.dueAt);
   if ("assigneeId" in body) patch.assigneeId = validAssignee(body.assigneeId);
+  if ("watchers" in body) patch.watchers = validWatchers(body.watchers);
+  if ("subtasks" in body) patch.subtasks = cleanSubtasks(body.subtasks);
+  if ("leadId" in body) patch.leadId = validLead(body.leadId);
+  // старий спосіб: done → колонка «Готово» / «To Do»
+  let status = "status" in body ? body.status : "done" in body ? (body.done ? "done" : "todo") : undefined;
+  if (status !== undefined && !TASK_STATUSES.includes(status)) throw new HttpError(400, "Неизвестный статус задачи");
 
-  const wasDone = Boolean(task.done);
+  const wasDone = CLOSED.has(statusOf(task));
   const previousDue = task.dueAt; // task — той самий об'єкт, що й t нижче
   const updated = tasks.update(id, (t) => {
     Object.assign(t, patch);
     // новий час — нагадаємо ще раз
     if ("dueAt" in patch && patch.dueAt !== previousDue) t.remindedAt = null;
-    if ("done" in body) {
-      t.done = Boolean(body.done);
-      t.doneAt = t.done ? now() : null;
-      t.doneBy = t.done ? { userId: user?.id, name: user?.name || "Telegram" } : null;
+    if (status !== undefined) {
+      t.status = status;
+      t.done = CLOSED.has(status);
+      if (t.done && !wasDone) {
+        t.doneAt = now();
+        t.doneBy = { userId: user?.id, name: user?.name || "Telegram" };
+      }
+      if (!t.done) {
+        t.doneAt = null;
+        t.doneBy = null;
+      }
     }
     t.updatedAt = now();
   });
-  if (!wasDone && updated.done) leadHistory(updated.leadId, { title: updated.title, done: true }, user);
+  if (!wasDone && updated.status === "done") leadHistory(updated.leadId, { title: updated.title, done: true }, user);
   return updated;
 }
 
@@ -213,24 +307,28 @@ function reminderText(task) {
     const phone = lead.data?.phone_full || lead.data?.phone || "";
     lines.push(`Заявка #${lead.id}: ${escapeHtml(leadLabel(lead))}${phone && phone !== leadLabel(lead) ? ` · ${escapeHtml(phone)}` : ""}`);
   }
-  if (task.notes) lines.push(escapeHtml(task.notes));
+  if (task.subtitle || task.notes) lines.push(escapeHtml(task.subtitle || task.notes));
   if (assignee && !assignee.telegramChatId) lines.push(`Для: ${escapeHtml(assignee.name)}`);
   lines.push(`<a href="${ADMIN_URL}/${lead ? `leads/${lead.id}` : "tasks"}">Открыть в панели</a>`);
   return lines.join("\n");
 }
 
 async function remind(task) {
-  const assignee = task.assigneeId ? users.get(task.assigneeId) : null;
-  const chatId = assignee?.telegramChatId || CHAT_IDS[0];
-  if (!chatId || !BOT_TOKEN) return false;
-  await telegram("sendMessage", {
-    chat_id: chatId,
-    text: reminderText(task),
-    parse_mode: "HTML",
-    disable_web_page_preview: true,
-    reply_markup: taskKeyboard(task.id),
-  });
-  return true;
+  if (!BOT_TOKEN) return false;
+  // відповідальний + додаткові відповідальні з підключеним Telegram; нікого — загальний чат
+  const people = [task.assigneeId, ...(task.watchers || [])].map((id) => (id ? users.get(id) : null)).filter(Boolean);
+  const chats = [...new Set(people.map((u) => u.telegramChatId).filter(Boolean))];
+  if (!chats.length && CHAT_IDS[0]) chats.push(CHAT_IDS[0]);
+  for (const chatId of chats) {
+    await telegram("sendMessage", {
+      chat_id: chatId,
+      text: reminderText(task),
+      parse_mode: "HTML",
+      disable_web_page_preview: true,
+      reply_markup: taskKeyboard(task.id),
+    }).catch((error) => console.error(`[tasks] напоминание #${task.id} → ${chatId}:`, error.message));
+  }
+  return chats.length > 0;
 }
 
 let checking = false;
@@ -238,7 +336,7 @@ async function checkReminders() {
   if (checking) return;
   checking = true;
   try {
-    const due = tasks.filter((t) => !t.deleted && !t.done && !t.remindedAt && Date.parse(t.dueAt) <= Date.now());
+    const due = tasks.filter((t) => !t.deleted && !CLOSED.has(statusOf(t)) && !t.remindedAt && Date.parse(t.dueAt) <= Date.now());
     for (const task of due) {
       // відмічаємо одразу — навіть якщо Telegram недоступний, не спамимо повторами
       tasks.update(task.id, (t) => {
@@ -269,7 +367,7 @@ export async function handleTaskCallback(query) {
   }
   let note;
   if (action === "done") {
-    updateTask(task.id, { done: true }, user || { name: who });
+    updateTask(task.id, { status: "done" }, user || { name: who });
     note = `✅ Выполнено · ${escapeHtml(user?.name || who)}`;
     await answerCallback(query.id, "Готово!");
   } else if (action === "snooze") {
