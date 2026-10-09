@@ -107,6 +107,13 @@ const PATHS = {
       <circle cx="15" cy="18" r="1" />
     </>
   ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </>
+  ),
+  tasks: <path d="M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />,
   chart: <path d="M3 3v18h18M7 15l4-4 3 3 6-6" />,
   sort: <path d="M7 4v16M3 8l4-4 4 4M17 20V4M13 16l4 4 4-4" />,
   text: <path d="M4 6h16M4 12h16M4 18h10" />,

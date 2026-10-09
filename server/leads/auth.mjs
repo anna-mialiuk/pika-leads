@@ -264,6 +264,7 @@ export const publicUser = (user) => ({
   mustChangePassword: Boolean(user.mustChangePassword),
   createdAt: user.createdAt,
   lastLoginAt: user.lastLoginAt || null,
+  telegram: Boolean(user.telegramChatId),
 });
 
 export async function createUser({ email, name, role = "manager", password }) {

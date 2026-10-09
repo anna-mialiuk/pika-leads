@@ -180,15 +180,15 @@ export const answerCallback = (id, text) =>
     console.error("[leads] answerCallbackQuery:", error.message),
   );
 
-/** Long polling натискань кнопок статусу */
-export async function startPolling(onCallback) {
+/** Long polling: натискання кнопок (статуси, задачі) і /start у особистому чаті (підключення нагадувань) */
+export async function startPolling(onCallback, onMessage = async () => {}) {
   let offset = 0;
   for (;;) {
     try {
       const updates = await telegram("getUpdates", {
         offset,
         timeout: 50,
-        allowed_updates: ["callback_query"],
+        allowed_updates: ["callback_query", "message"],
       });
       for (const update of updates) {
         offset = update.update_id + 1;
@@ -196,6 +196,8 @@ export async function startPolling(onCallback) {
           await onCallback(update.callback_query).catch((error) =>
             console.error("[leads] кнопка статуса:", error.message),
           );
+        } else if (update.message) {
+          await onMessage(update.message).catch((error) => console.error("[leads] сообщение боту:", error.message));
         }
       }
     } catch (error) {

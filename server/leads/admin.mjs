@@ -33,6 +33,7 @@ import {
 import { HttpError, clientIp, cookieHeader, parseCookies, readBody, send } from "./http.mjs";
 import { addComment, createLead, deleteLead, leads, publicLead, setAmount, setManager, setStatus } from "./leads.mjs";
 import { saveTracking, trackingInfo } from "./tracking.mjs";
+import { activeTasks, createTask, deleteTask, publicTask, telegramLink, telegramUnlink, updateTask } from "./tasks.mjs";
 import { LEAD_TYPES, STATUSES, isStatus } from "./statuses.mjs";
 import { clean } from "./telegram.mjs";
 import { requestReset, resetAvailable, resetPassword } from "./reset.mjs";
@@ -456,6 +457,26 @@ route("PUT", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true, bodyLimit: 40 *
 route("DELETE", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true }, async ({ res, params, query, user }) =>
   send(res, 200, { commit: await deleteContent(params[0], params[1], query.get("sha"), user) }),
 );
+
+// ---------- задачі ----------
+route("GET", "/tasks", {}, ({ res }) => send(res, 200, { tasks: activeTasks() }));
+
+route("POST", "/tasks", {}, ({ res, body, user }) => send(res, 201, { task: publicTask(createTask(body, user)) }));
+
+route("PATCH", "/tasks/(\\d+)", {}, ({ res, body, user, params }) => send(res, 200, { task: publicTask(updateTask(Number(params[0]), body, user)) }));
+
+route("DELETE", "/tasks/(\\d+)", {}, ({ res, user, params }) => {
+  deleteTask(Number(params[0]), user);
+  return send(res, 200, { ok: true });
+});
+
+// Telegram для нагадувань: посилання на бота з одноразовим кодом
+route("POST", "/me/telegram", {}, async ({ res, user }) => send(res, 200, await telegramLink(user)));
+
+route("DELETE", "/me/telegram", {}, ({ res, user }) => {
+  telegramUnlink(user);
+  return send(res, 200, { user: publicUser(users.get(user.id)) });
+});
 
 // ---------- інтеграції: Meta Conversions API, GA4 Measurement Protocol ----------
 const CURRENCIES = ["USD", "EUR", "UAH", "PLN"];

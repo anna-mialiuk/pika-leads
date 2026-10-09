@@ -52,3 +52,6 @@ export const META_API_URL = (env.META_API_URL || "https://graph.facebook.com").r
 export const GA4_API_URL = (env.GA4_API_URL || "https://www.google-analytics.com").replace(/\/$/, "");
 export const GA4_MEASUREMENT_ID = env.GA4_MEASUREMENT_ID || "";
 export const GA4_API_SECRET = env.GA4_API_SECRET || "";
+
+// Часовий пояс для нагадувань у Telegram
+export const TIMEZONE = env.TIMEZONE || "Europe/Kyiv";

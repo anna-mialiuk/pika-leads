@@ -5,6 +5,7 @@ import Icon from "../components/Icon";
 import LeadModal from "../components/LeadModal";
 import NewLeadModal from "../components/NewLeadModal";
 import { ContactButtons, ManagerSelect, StatusSelect } from "../components/LeadParts";
+import { NextTaskBadge } from "../components/Tasks";
 import { api } from "../lib/api";
 import { formatDate, leadName, matchesSearch, sourceOf, timeAgo } from "../lib/format";
 import { useMeta } from "../lib/meta";
@@ -185,11 +186,7 @@ function Leads() {
 
   // ---------- рендер ----------
   if (!leads) {
-    return (
-      <div className="leads-loading">
-        {error ? <div className="alert">⚠ {error}</div> : <div className="spinner" />}
-      </div>
-    );
+    return <div className="leads-loading">{error ? <div className="alert">⚠ {error}</div> : <div className="spinner" />}</div>;
   }
 
   return (
@@ -276,7 +273,12 @@ function Leads() {
       {view === "table" && selected.size > 0 && (
         <div className="bulk-bar">
           <strong>Выбрано: {selected.size}</strong>
-          <select className="select select--sm" value="" onChange={(e) => e.target.value && bulk({ status: e.target.value })} aria-label="Статус для выбранных">
+          <select
+            className="select select--sm"
+            value=""
+            onChange={(e) => e.target.value && bulk({ status: e.target.value })}
+            aria-label="Статус для выбранных"
+          >
             <option value="">Сменить статус…</option>
             {statuses.map((s) => (
               <option key={s.code} value={s.code}>
@@ -327,10 +329,16 @@ function Leads() {
                   return (
                     <tr key={lead.id} className={fresh.has(lead.id) ? "is-fresh" : ""} onClick={() => open(lead.id)}>
                       <td className="leads-table__check" onClick={(e) => e.stopPropagation()}>
-                        <input type="checkbox" checked={selected.has(lead.id)} onChange={() => toggle(lead.id)} aria-label={`Выбрать #${lead.id}`} />
+                        <input
+                          type="checkbox"
+                          checked={selected.has(lead.id)}
+                          onChange={() => toggle(lead.id)}
+                          aria-label={`Выбрать #${lead.id}`}
+                        />
                       </td>
                       <td>
                         <div className="leads-table__name">{leadName(lead)}</div>
+                        <NextTaskBadge leadId={lead.id} />
                         <div className="leads-table__meta mono">
                           #{lead.id} · {formatDate(lead.createdAt)}
                         </div>
@@ -367,6 +375,7 @@ function Leads() {
                 <div className="lead-card__top">
                   <div>
                     <div className="leads-table__name">{leadName(lead)}</div>
+                    <NextTaskBadge leadId={lead.id} />
                     <div className="leads-table__meta mono">
                       #{lead.id} · {timeAgo(lead.createdAt)}
                     </div>
@@ -425,6 +434,7 @@ function Leads() {
                       onClick={() => open(lead.id)}
                     >
                       <div className="leads-table__name">{leadName(lead)}</div>
+                      <NextTaskBadge leadId={lead.id} />
                       <div className="leads-table__meta">
                         #{lead.id} · {timeAgo(lead.createdAt)}
                       </div>

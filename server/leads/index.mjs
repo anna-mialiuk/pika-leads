@@ -16,6 +16,7 @@ import { clientIp, readBody, send } from "./http.mjs";
 import { createLead, handleTelegramCallback, migrateLegacyLeads } from "./leads.mjs";
 import { isLeadType } from "./statuses.mjs";
 import { clean, startPolling } from "./telegram.mjs";
+import { handleTaskCallback, handleTelegramMessage, startReminders } from "./tasks.mjs";
 
 // ---------- антиспам: не більше N заявок з одного IP за вікно ----------
 const RATE_LIMIT = 5;
@@ -152,5 +153,11 @@ migrateLegacyLeads();
 
 server.listen(PORT, "127.0.0.1", () => {
   console.log(`[leads] слушаю http://127.0.0.1:${PORT} (/api/leads, /api/admin)`);
-  if (BOT_TOKEN && POLLING) startPolling(handleTelegramCallback);
+  if (BOT_TOKEN && POLLING) {
+    startPolling(
+      (query) => (String(query.data || "").startsWith("task:") ? handleTaskCallback(query) : handleTelegramCallback(query)),
+      handleTelegramMessage,
+    );
+  }
+  startReminders();
 });

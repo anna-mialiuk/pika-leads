@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Icon from "./Icon";
 import { ContactButtons, ManagerSelect } from "./LeadParts";
+import { LeadTasks } from "./Tasks";
 import { Modal } from "./ui";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
@@ -87,6 +88,7 @@ const HISTORY_TEXT = {
   status: (h, s) => `Статус: ${s[h.from]?.label || h.from} → ${s[h.to]?.label || h.to}`,
   manager: (h, s, u) => `Менеджер: ${u[h.to]?.name || "не назначен"}`,
   deleted: () => "Заявка удалена",
+  task: (h) => (h.done ? `Задача выполнена: ${h.title}` : `Задача: ${h.title}`),
   amount: (h) => (h.to === null ? "Сумма сделки убрана" : `Сумма сделки: ${h.to} ${h.currency || ""}`),
 };
 
@@ -181,6 +183,11 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
             {lead.awaitingAmount && (
               <p className="lead-modal__hint lead-modal__hint--warn">Укажите сумму — событие «Покупка» уйдёт в рекламу после этого.</p>
             )}
+          </section>
+
+          <section className="lead-modal__section">
+            <h3>Задачи</h3>
+            <LeadTasks lead={lead} />
           </section>
 
           <section className="lead-modal__section">

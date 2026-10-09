@@ -57,6 +57,7 @@ function Profile() {
 
         <PasswordCard />
         <TwoFactorCard user={user} required={require2fa} onChange={setUser} />
+        <TelegramCard user={user} onChange={setUser} />
       </div>
     </div>
   );
@@ -200,6 +201,81 @@ function TwoFactorCard({ user, required, onChange }) {
           <ErrorAlert error={error} />
           <button type="button" className="btn btn--primary" onClick={startSetup}>
             Подключить 2FA
+          </button>
+        </>
+      )}
+    </section>
+  );
+}
+
+/** Telegram для нагадувань про задачі */
+function TelegramCard({ user, onChange }) {
+  const [error, setError] = useState("");
+  const [waiting, setWaiting] = useState(false);
+
+  // чекаємо, поки людина натисне Start у боті
+  useEffect(() => {
+    if (!waiting || user.telegram) return undefined;
+    const started = Date.now();
+    const timer = setInterval(async () => {
+      try {
+        const data = await api("/auth/me");
+        if (data.user.telegram || Date.now() - started > 3 * 60_000) {
+          onChange(data.user);
+          setWaiting(false);
+        }
+      } catch {
+        /* спробуємо ще */
+      }
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [waiting, user.telegram, onChange]);
+
+  const connect = async () => {
+    setError("");
+    const tab = window.open("", "_blank");
+    try {
+      const { url } = await api("/me/telegram", { method: "POST" });
+      if (tab) tab.location.href = url;
+      else window.location.href = url;
+      setWaiting(true);
+    } catch (connectError) {
+      tab?.close();
+      setError(connectError.message);
+    }
+  };
+
+  const disconnect = async () => {
+    try {
+      const { user: updated } = await api("/me/telegram", { method: "DELETE" });
+      onChange(updated);
+    } catch (disconnectError) {
+      setError(disconnectError.message);
+    }
+  };
+
+  return (
+    <section className="card profile__card">
+      <h2>
+        <Icon name="send" size={18} /> Напоминания в Telegram
+      </h2>
+      {user.telegram ? (
+        <>
+          <p className="profile__status profile__status--ok">● Подключён</p>
+          <p className="profile__note muted">Напоминания о ваших задачах приходят в личный чат с ботом — с кнопками «Готово» и «+1 час».</p>
+          <button type="button" className="btn btn--sm" onClick={disconnect}>
+            Отключить
+          </button>
+        </>
+      ) : (
+        <>
+          <p className="profile__status">● Не подключён</p>
+          <p className="profile__note muted">
+            Пока не подключено, напоминания приходят в общий чат заявок. Нажмите кнопку — откроется бот, нажмите в нём «Start».
+          </p>
+          <ErrorAlert error={error} />
+          <button type="button" className="btn btn--primary" onClick={connect} disabled={waiting}>
+            {waiting ? "Ждём нажатия Start в боте…" : "Подключить Telegram"}
           </button>
         </>
       )}

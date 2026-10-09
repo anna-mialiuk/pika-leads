@@ -5,6 +5,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import Icon from "./Icon";
 import { useAuth } from "../lib/auth";
 import { usePublish } from "../lib/publish";
+import { useTasks } from "../lib/tasks";
 import logoMark from "../assets/logo-mark.svg";
 
 import "./Layout.css";
@@ -68,8 +69,10 @@ function Layout() {
   useEffect(() => setOpen(false), [location.pathname]);
 
   const isAdmin = user.role === "admin";
+  const { myDueCount } = useTasks();
   const nav = [
     { to: "/leads", icon: "leads", label: "Заявки (CRM)" },
+    { to: "/tasks", icon: "tasks", label: "Задачи", badge: myDueCount },
     { to: "/analytics", icon: "chart", label: "Аналитика" },
     ...(isAdmin
       ? [
@@ -92,6 +95,7 @@ function Layout() {
     <NavLink key={item.to} to={item.to} className={({ isActive }) => `layout__link ${isActive ? "layout__link--active" : ""}`}>
       <Icon name={item.icon} size={18} />
       {item.label}
+      {item.badge > 0 && <span className="layout__badge">{item.badge}</span>}
     </NavLink>
   );
 
@@ -127,11 +131,6 @@ function Layout() {
         </nav>
 
         {isAdmin && <PublishStatus />}
-
-        <div className="layout__soon">
-          <span>Скоро</span>
-          Задачи по заявкам
-        </div>
 
         <div className="layout__user">
           <div className="layout__avatar">{user.name.slice(0, 1).toUpperCase()}</div>

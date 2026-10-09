@@ -11,6 +11,8 @@ import Reviews from "./pages/Reviews";
 import Analytics from "./pages/Analytics";
 import Seo from "./pages/Seo";
 import Integrations from "./pages/Integrations";
+import TasksPage from "./pages/TasksPage";
+import { TasksProvider } from "./lib/tasks";
 import { PublishProvider } from "./lib/publish";
 import { useAuth } from "./lib/auth";
 import { MetaProvider } from "./lib/meta";
@@ -40,7 +42,9 @@ function App() {
           <Protected>
             <MetaProvider>
               <PublishProvider>
-                <Layout />
+                <TasksProvider>
+                  <Layout />
+                </TasksProvider>
               </PublishProvider>
             </MetaProvider>
           </Protected>
@@ -57,6 +61,7 @@ function App() {
           }
         />
         <Route path="/analytics" element={<Analytics />} />
+        <Route path="/tasks" element={<TasksPage />} />
         <Route path="/profile" element={<Profile />} />
         {[
           ["/cases", <ContentList collection="cases" key="cases" />],
