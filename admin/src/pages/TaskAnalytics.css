@@ -472,3 +472,71 @@
     font-size: 16px;
   }
 }
+
+/* вузькі екрани (320 px): нічого не виходить за край */
+.ta-split > *,
+.ta-kpis > *,
+.ta-ach > *,
+.ta-hang > * {
+  min-width: 0;
+}
+
+.ta-goal__input {
+  flex-wrap: wrap;
+}
+
+.ta-tips__head {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 380px) {
+  .ta-kpis {
+    gap: 10px;
+  }
+
+  .ta-kpis > div {
+    padding: 14px 12px;
+  }
+
+  .ta-kpis span {
+    font-size: 11px;
+  }
+
+  .ta-goal {
+    gap: 12px;
+    padding: 14px 12px;
+  }
+
+  .ta-goal__value {
+    font-size: 20px;
+  }
+
+  .ta-goal__ring {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ta-goal__ring div {
+    width: 54px;
+    height: 54px;
+    font-size: 14px;
+  }
+
+  .ta-card,
+  .ta-split .ta-card {
+    padding: 16px 12px;
+  }
+
+  .ta-tips__head .ta-yellow {
+    width: 100%;
+  }
+
+  .ta-lb__row {
+    grid-template-columns: 28px minmax(0, 1fr) 64px;
+    column-gap: 8px;
+  }
+
+  .ta-lb__extra {
+    gap: 10px;
+  }
+}
