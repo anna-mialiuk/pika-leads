@@ -16,7 +16,7 @@ const FILES_DIR = path.join(DATA_DIR, "files");
 fs.mkdirSync(FILES_DIR, { recursive: true, mode: 0o700 });
 
 export const MAX_FILE = 25 * 1024 * 1024;
-const OWNER_TYPES = new Set(["task", "project", "library"]);
+const OWNER_TYPES = new Set(["task", "project", "library", "chat"]);
 
 const cleanName = (raw) => {
   let name = "";
@@ -116,7 +116,25 @@ export function removeFilesOf(ownerType, ownerId) {
   }
 }
 
-export function sendFile(res, id) {
+// показ у браузері — лише безпечні типи медіа (без SVG/HTML)
+const INLINE_TYPES = {
+  png: "image/png",
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  gif: "image/gif",
+  webp: "image/webp",
+  mp4: "video/mp4",
+  webm: "video/webm",
+  mov: "video/quicktime",
+};
+export const inlineType = (name) => INLINE_TYPES[String(name).split(".").pop().toLowerCase()] || null;
+
+export const fileRecord = (id) => {
+  const record = files.get(id);
+  return record && !record.deleted ? record : null;
+};
+
+export function sendFile(res, id, { inline = false } = {}) {
   const record = files.get(id);
   if (!record || record.deleted) throw new HttpError(404, "Файл не найден");
   const file = path.join(FILES_DIR, record.key);
@@ -127,11 +145,12 @@ export function sendFile(res, id) {
     throw new HttpError(404, "Файл не найден");
   }
   const ascii = record.name.replace(/[^\x20-\x7e]/g, "_").replace(/["\\]/g, "_");
+  const type = inline ? inlineType(record.name) : null;
   res.writeHead(200, {
-    "Content-Type": "application/octet-stream",
+    "Content-Type": type || "application/octet-stream",
     "Content-Length": stat.size,
-    "Content-Disposition": `attachment; filename="${ascii}"; filename*=UTF-8''${encodeURIComponent(record.name)}`,
-    "Cache-Control": "private, no-store",
+    "Content-Disposition": `${type ? "inline" : "attachment"}; filename="${ascii}"; filename*=UTF-8''${encodeURIComponent(record.name)}`,
+    "Cache-Control": type ? "private, max-age=86400" : "private, no-store",
     "X-Content-Type-Options": "nosniff",
     "Content-Security-Policy": "default-src 'none'; sandbox",
   });
@@ -183,7 +202,7 @@ export function removeLink(id, user) {
 /** Усі файли для розділу «Файлы»: завантажені (задачі, проекти, бібліотека) + посилання */
 export function allFiles({ taskById, projectExists }) {
   const uploaded = files
-    .filter((f) => !f.deleted)
+    .filter((f) => !f.deleted && f.ownerType !== "chat") // вкладення чату — лише в самому чаті
     .map((f) => {
       let projectId = null;
       let taskId = null;

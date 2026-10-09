@@ -18,6 +18,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import FilesPage from "./pages/FilesPage";
 import CallsPage from "./pages/CallsPage";
 import MindmapsPage from "./pages/MindmapsPage";
+import ChatPage from "./pages/ChatPage";
 import TaskAnalytics from "./pages/TaskAnalytics";
 import TaskSettings from "./pages/TaskSettings";
 import { ProjectsProvider } from "./lib/projects";
@@ -79,6 +80,7 @@ function App() {
         <Route path="/tasks/files" element={<FilesPage />} />
         <Route path="/tasks/calls" element={<CallsPage />} />
         <Route path="/tasks/mindmaps" element={<MindmapsPage />} />
+        <Route path="/tasks/chat" element={<ChatPage />} />
         <Route path="/tasks/analytics" element={<TaskAnalytics />} />
         <Route path="/tasks/settings" element={<TaskSettings />} />
         <Route path="/profile" element={<Profile />} />

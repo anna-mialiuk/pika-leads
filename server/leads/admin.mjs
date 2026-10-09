@@ -50,7 +50,22 @@ import {
   telegramUnlink,
   updateTask,
 } from "./tasks.mjs";
-import { allFiles, createLink, removeFile, removeLink, saveUpload, sendFile } from "./files.mjs";
+import { allFiles, createLink, fileRecord, removeFile, removeLink, saveUpload, sendFile } from "./files.mjs";
+import {
+  canSeeChatFile,
+  chatChannelFor,
+  chatOverview,
+  createChannel,
+  deleteChannel,
+  deleteMessage,
+  listMessages,
+  pinMessage,
+  postMessage,
+  reactMessage,
+  requestDelete,
+  updateChannel,
+  voicePresence,
+} from "./chat.mjs";
 import { getTaskSettings, saveTaskSettings } from "./task-settings.mjs";
 import { activeMaps, createMap, deleteMap, saveMap } from "./mindmaps.mjs";
 import { activeMeetings, createMeeting, deleteMeeting, updateMeeting } from "./meetings.mjs";
@@ -541,7 +556,11 @@ route("POST", "/projects/(\\d+)/files", { raw: true }, async ({ req, res, user, 
 });
 
 // завантаження за посиланням <a download> — без X-Requested-With (нічого не змінює; cookie SameSite=Strict)
-route("GET", "/files/(\\d+)", { image: true }, ({ res, params }) => sendFile(res, Number(params[0])));
+route("GET", "/files/(\\d+)", { image: true }, ({ res, params, user, query }) => {
+  const record = fileRecord(Number(params[0]));
+  if (record && !canSeeChatFile(record, user)) throw new HttpError(404, "Файл не найден");
+  return sendFile(res, Number(params[0]), { inline: query.get("inline") === "1" });
+});
 
 route("DELETE", "/files/(\\d+)", {}, ({ res, user, params }) => {
   const record = removeFile(Number(params[0]), user, (f) => {
@@ -574,6 +593,60 @@ route("POST", "/links", {}, ({ res, body, user }) => send(res, 201, { link: crea
 
 route("DELETE", "/links/(\\d+)", {}, ({ res, user, params }) => {
   removeLink(Number(params[0]), user);
+  return send(res, 200, { ok: true });
+});
+
+// ---------- робочий чат ----------
+const CH = "/chat/channels/(\\d+)";
+const MSG = `${CH}/messages/(\\d+)`;
+
+route("GET", "/chat", {}, ({ res, user }) => send(res, 200, chatOverview(user)));
+
+route("POST", "/chat/channels", {}, ({ res, body, user }) => send(res, 201, { channel: createChannel(body, user) }));
+
+route("PATCH", CH, {}, ({ res, body, user, params }) => send(res, 200, { channel: updateChannel(Number(params[0]), body, user) }));
+
+route("DELETE", CH, {}, ({ res, user, params }) => {
+  deleteChannel(Number(params[0]), user);
+  return send(res, 200, { ok: true });
+});
+
+route("POST", `${CH}/delete-request`, {}, ({ res, user, params }) =>
+  send(res, 200, { channel: requestDelete(Number(params[0]), user) }),
+);
+
+route("DELETE", `${CH}/delete-request`, {}, ({ res, user, params }) =>
+  send(res, 200, { channel: requestDelete(Number(params[0]), user, true) }),
+);
+
+route("POST", `${CH}/voice`, {}, ({ res, body, user, params }) =>
+  send(res, 200, { channel: voicePresence(Number(params[0]), user, body.join !== false) }),
+);
+
+route("GET", `${CH}/messages`, {}, ({ res, user, params, query }) =>
+  send(res, 200, listMessages(Number(params[0]), user, {
+      after: Number(query.get("after")) || 0,
+      before: Number(query.get("before")) || 0,
+      since: String(query.get("since") || "").slice(0, 30),
+    })),
+);
+
+route("POST", `${CH}/messages`, {}, ({ res, body, user, params }) => send(res, 201, { message: postMessage(Number(params[0]), body, user) }));
+
+route("POST", `${CH}/files`, { raw: true }, async ({ req, res, user, params }) => {
+  const channel = chatChannelFor(Number(params[0]), user);
+  const file = await saveUpload(req, { ownerType: "chat", ownerId: channel.id, user });
+  return send(res, 201, { file });
+});
+
+route("POST", `${MSG}/react`, {}, ({ res, body, user, params }) =>
+  send(res, 200, { message: reactMessage(Number(params[0]), Number(params[1]), body.emoji, user) }),
+);
+
+route("POST", `${MSG}/pin`, {}, ({ res, user, params }) => send(res, 200, { message: pinMessage(Number(params[0]), Number(params[1]), user) }));
+
+route("DELETE", MSG, {}, ({ res, user, params }) => {
+  deleteMessage(Number(params[0]), Number(params[1]), user);
   return send(res, 200, { ok: true });
 });
 

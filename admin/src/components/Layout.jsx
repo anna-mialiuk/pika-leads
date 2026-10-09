@@ -86,6 +86,7 @@ function Layout() {
         { to: "/tasks/files", label: "Файлы", dot: "#f0883e" },
         { to: "/tasks/calls", label: "Звонки", dot: "#b98bff" },
         { to: "/tasks/analytics", label: "Аналитика", dot: "#4fd8c8" },
+        { to: "/tasks/chat", label: "Рабочий чат", dot: "#ff7d7d" },
         { to: "/tasks/settings", label: "Настройки", dot: "#8a8f98" },
       ],
     },
