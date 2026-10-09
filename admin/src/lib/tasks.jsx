@@ -14,13 +14,27 @@ export function TasksProvider({ children }) {
   const [tasks, setTasks] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [tick, setTick] = useState(() => Date.now());
+  const [columns, setColumns] = useState(TASK_COLUMNS);
+  const [settings, setSettings] = useState(null);
 
   const reload = useCallback(
     () =>
       api("/tasks")
-        .then(({ tasks: list }) => {
+        .then(({ tasks: list, columns: cols }) => {
           setTasks(list);
+          if (Array.isArray(cols) && cols.length) setColumns(cols);
           setLoaded(true);
+        })
+        .catch(() => {}),
+    [],
+  );
+
+  const reloadSettings = useCallback(
+    () =>
+      api("/tasks/settings")
+        .then((data) => {
+          setSettings(data);
+          setColumns(data.settings.columns);
         })
         .catch(() => {}),
     [],
@@ -28,12 +42,13 @@ export function TasksProvider({ children }) {
 
   useEffect(() => {
     reload();
+    reloadSettings();
     const timer = setInterval(() => {
       if (document.visibilityState === "visible") reload();
       setTick(Date.now());
     }, 60_000);
     return () => clearInterval(timer);
-  }, [reload]);
+  }, [reload, reloadSettings]);
 
   const replace = (task) =>
     setTasks((prev) => (prev.some((t) => t.id === task.id) ? prev.map((t) => (t.id === task.id ? task : t)) : [...prev, task]));
@@ -87,10 +102,17 @@ export function TasksProvider({ children }) {
     return tasks.filter((t) => !t.done && t.assigneeId === user?.id && new Date(t.dueAt) <= endOfDay).length;
   }, [tasks, user, tick]);
 
-  return <TasksContext.Provider value={{ tasks, loaded, reload, create, update, remove, myDueCount, timer, comment, deleteComment, addFile, removeFile }}>{children}</TasksContext.Provider>;
+  return <TasksContext.Provider value={{ tasks, loaded, reload, create, update, remove, myDueCount, timer, comment, deleteComment, addFile, removeFile, columns, settings, setSettings, setColumns, reloadSettings }}>{children}</TasksContext.Provider>;
 }
 
 export const useTasks = () => useContext(TasksContext);
+
+/** Колонки канбана з налаштувань (за замовчуванням — як у макеті) */
+export function useColumns() {
+  const { columns } = useContext(TasksContext);
+  const byKey = useMemo(() => Object.fromEntries(columns.map((c) => [c.key, c])), [columns]);
+  return { columns, byKey };
+}
 
 // ---------- дати ----------
 const pad = (n) => String(n).padStart(2, "0");

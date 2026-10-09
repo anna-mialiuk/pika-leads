@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 
 import { TasksHeader, useTaskModal, useTaskScope } from "../components/TasksShell";
-import { COLUMN_BY_KEY, localDay } from "../lib/tasks";
+import { localDay, useColumns } from "../lib/tasks";
 import { todayIso } from "../lib/projects";
 import { useMeta } from "../lib/meta";
 
@@ -14,6 +14,7 @@ function TaskCalendar() {
   const { scope, setScope, list } = useTaskScope();
   const { modal, openTask, openNew } = useTaskModal();
   const { userById } = useMeta();
+  const { byKey: COLUMN_BY_KEY } = useColumns();
   const [month, setMonth] = useState(() => {
     const d = new Date();
     return { y: d.getFullYear(), m: d.getMonth() };

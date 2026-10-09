@@ -14,7 +14,8 @@ import { leads } from "./leads.mjs";
 import { answerCallback, clean, escapeHtml, telegram } from "./telegram.mjs";
 import { createCollection } from "./store.mjs";
 import { filesOf, removeFilesOf } from "./files.mjs";
-import { projectExists } from "./projects.mjs";
+import { activeProjects, projectExists } from "./projects.mjs";
+import { columnKeys, columnLabel, getTaskSettings, isClosedStatus, notifyOn } from "./task-settings.mjs";
 
 export const tasks = createCollection("tasks.json");
 
@@ -29,11 +30,11 @@ const formatTime = (iso) =>
 const leadLabel = (lead) => lead?.data?.name || lead?.data?.phone_full || lead?.data?.email || (lead ? `Заявка #${lead.id}` : "");
 
 // Колонки дошки (як у макеті): done / rejected — закриті, нагадувань немає
-export const TASK_STATUSES = ["todo", "inprogress", "review", "consideration", "done", "rejected"];
-const CLOSED = new Set(["done", "rejected"]);
+// колонки налаштовуються в «Задачи → Настройки»; «done» / «rejected» — закриті
+const CLOSED = { has: (key) => isClosedStatus(key) };
 const PRIORITIES = ["low", "medium", "high"];
 
-const statusOf = (task) => (TASK_STATUSES.includes(task.status) ? task.status : task.done ? "done" : "todo");
+const statusOf = (task) => (columnKeys().includes(task.status) ? task.status : task.done ? "done" : "todo");
 
 export function publicTask(task) {
   const lead = task.leadId ? leads.get(task.leadId) : null;
@@ -60,6 +61,7 @@ export function publicTask(task) {
     timerStartedAt: task.timerStartedAt || null,
     timerBy: task.timerBy || null,
     files: filesOf("task", task.id),
+    postponed: task.postponed || 0,
     done: CLOSED.has(status),
     doneAt: task.doneAt || null,
     doneBy: task.doneBy || null,
@@ -164,7 +166,7 @@ function validLead(id) {
 export function createTask(body, user) {
   const title = clean(body.title, 200);
   if (!title) throw new HttpError(400, "Напишите, что сделать");
-  const status = TASK_STATUSES.includes(body.status) ? body.status : "todo";
+  const status = columnKeys().includes(body.status) ? body.status : "todo";
   const leadId = validLead(body.leadId);
   const task = tasks.insert({
     leadId,
@@ -190,6 +192,7 @@ export function createTask(body, user) {
     remindedAt: null,
   });
   leadHistory(leadId, { title, due: task.dueAt }, user);
+  if (task.assigneeId && task.assigneeId !== user.id) notifyAssigned(task, user);
   return task;
 }
 
@@ -215,14 +218,20 @@ export function updateTask(id, body, user) {
   if ("call" in body) patch.call = Boolean(body.call);
   // старий спосіб: done → колонка «Готово» / «To Do»
   let status = "status" in body ? body.status : "done" in body ? (body.done ? "done" : "todo") : undefined;
-  if (status !== undefined && !TASK_STATUSES.includes(status)) throw new HttpError(400, "Неизвестный статус задачи");
+  if (status !== undefined && !columnKeys().includes(status)) throw new HttpError(400, "Неизвестный статус задачи");
 
   const wasDone = CLOSED.has(statusOf(task));
   const previousDue = task.dueAt; // task — той самий об'єкт, що й t нижче
+  const previousAssignee = task.assigneeId;
   const updated = tasks.update(id, (t) => {
     Object.assign(t, patch);
     // новий час — нагадаємо ще раз
-    if ("dueAt" in patch && patch.dueAt !== previousDue) t.remindedAt = null;
+    if ("dueAt" in patch && patch.dueAt !== previousDue) {
+      t.remindedAt = null;
+      t.remindedDayAt = null;
+      // перенос дедлайну пізніше — рахуємо для аналітики («📉 Потеря»)
+      if (Date.parse(patch.dueAt) > Date.parse(previousDue)) t.postponed = (t.postponed || 0) + 1;
+    }
     if (status !== undefined) {
       t.status = status;
       t.done = CLOSED.has(status);
@@ -238,6 +247,7 @@ export function updateTask(id, body, user) {
     t.updatedAt = now();
   });
   if (!wasDone && updated.status === "done") leadHistory(updated.leadId, { title: updated.title, done: true }, user);
+  if (updated.assigneeId && updated.assigneeId !== previousAssignee && updated.assigneeId !== user?.id) notifyAssigned(updated, user);
   return updated;
 }
 
@@ -256,6 +266,38 @@ export function getTask(id) {
   const task = tasks.get(id);
   if (!task || task.deleted) throw new HttpError(404, "Задача не найдена");
   return task;
+}
+
+// ---------- особисті сповіщення ----------
+function sendToUser(uid, text, extra = {}) {
+  const chatId = users.get(uid)?.telegramChatId;
+  if (!BOT_TOKEN || !chatId) return;
+  telegram("sendMessage", { chat_id: chatId, text, parse_mode: "HTML", disable_web_page_preview: true, ...extra }).catch((error) =>
+    console.error(`[tasks] сообщение → ${uid}:`, error.message),
+  );
+}
+
+function notifyAssigned(task, by) {
+  if (!notifyOn("assign")) return;
+  sendToUser(
+    task.assigneeId,
+    `📌 <b>Новая задача</b> от ${escapeHtml(by?.name || "Telegram")}:\n<b>${escapeHtml(task.title)}</b>\nСрок: ${formatTime(task.dueAt)}\n<a href="${ADMIN_URL}/tasks?task=${task.id}">Открыть задачу</a>`,
+    { reply_markup: taskKeyboard(task.id) },
+  );
+}
+
+/** Задачі видалених колонок → «To Do» */
+export function moveTasksFromColumns(keys) {
+  if (!keys.length) return 0;
+  let moved = 0;
+  for (const t of tasks.filter((x) => !x.deleted && keys.includes(x.status))) {
+    tasks.update(t.id, (x) => {
+      x.status = "todo";
+      x.done = false;
+    });
+    moved++;
+  }
+  return moved;
 }
 
 // ---------- таймер ----------
@@ -316,6 +358,15 @@ export async function addComment(id, body, user) {
       }).catch((error) => console.error(`[tasks] упоминание #${task.id} → ${uid}:`, error.message));
     }
   }
+  // решта учасників задачі — якщо увімкнено «Комментарии»
+  if (BOT_TOKEN && notifyOn("comment")) {
+    const others = [task.assigneeId, ...(task.watchers || []), task.pmId, task.createdBy?.userId].filter(
+      (uid) => uid && uid !== user.id && !mentions.includes(uid),
+    );
+    for (const uid of new Set(others)) {
+      sendToUser(uid, `💬 <b>${escapeHtml(user.name)}</b> в задаче «${escapeHtml(task.title)}»:\n${escapeHtml(text.slice(0, 1000))}\n<a href="${ADMIN_URL}/tasks?task=${task.id}">Открыть задачу</a>`);
+    }
+  }
   return updated;
 }
 
@@ -365,6 +416,7 @@ export function telegramUnlink(user) {
 /** /start <код> в особистому чаті з ботом */
 export async function handleTelegramMessage(message) {
   if (message?.chat?.type !== "private") return;
+  if (await handleCreateDialog(message)) return;
   const match = /^\/start\s+([\w-]{8,40})$/.exec(String(message.text || "").trim());
   if (!match) {
     if (/^\/start/.test(message.text || "")) {
@@ -439,7 +491,32 @@ async function checkReminders() {
   if (checking) return;
   checking = true;
   try {
+    // за добу до дедлайну (якщо задачу ставили раніше, ніж за добу)
+    if (notifyOn("deadline")) {
+      const soon = tasks.filter(
+        (t) =>
+          !t.deleted &&
+          !CLOSED.has(statusOf(t)) &&
+          !t.remindedDayAt &&
+          Date.parse(t.dueAt) - Date.now() <= 864e5 &&
+          Date.parse(t.dueAt) - Date.now() > 60 * 60_000 &&
+          Date.parse(t.dueAt) - Date.parse(t.createdAt) > 864e5,
+      );
+      for (const task of soon) {
+        tasks.update(task.id, (t) => {
+          t.remindedDayAt = now();
+        });
+        for (const uid of new Set([task.assigneeId, ...(task.watchers || [])].filter(Boolean))) {
+          sendToUser(uid, `🔔 Завтра дедлайн: <b>${escapeHtml(task.title)}</b>\nСрок: ${formatTime(task.dueAt)}\n<a href="${ADMIN_URL}/tasks?task=${task.id}">Открыть задачу</a>`);
+        }
+      }
+    }
     const due = tasks.filter((t) => !t.deleted && !CLOSED.has(statusOf(t)) && !t.remindedAt && Date.parse(t.dueAt) <= Date.now());
+    // «Просроченные задачи» вимкнено — лише відмічаємо, без повідомлень
+    if (!notifyOn("overdue")) {
+      for (const task of due) tasks.update(task.id, (t) => (t.remindedAt = now()));
+      return;
+    }
     for (const task of due) {
       // відмічаємо одразу — навіть якщо Telegram недоступний, не спамимо повторами
       tasks.update(task.id, (t) => {
@@ -455,10 +532,28 @@ async function checkReminders() {
 export function startReminders() {
   setInterval(checkReminders, 30_000).unref();
   checkReminders();
+  // команда /task у меню бота (особисті чати)
+  if (BOT_TOKEN) {
+    telegram("setMyCommands", {
+      commands: [{ command: "task", description: "Новая задача" }],
+      scope: { type: "all_private_chats" },
+    }).catch(() => {});
+  }
+}
+
+/** Ім'я бота для сторінки налаштувань */
+export async function botInfo() {
+  if (!BOT_TOKEN) return { configured: false, username: null };
+  try {
+    return { configured: true, username: await getBotUsername() };
+  } catch {
+    return { configured: true, username: null };
+  }
 }
 
 /** Кнопки під нагадуванням */
 export async function handleTaskCallback(query) {
+  if (String(query.data || "").startsWith("task:new:")) return handleCreateCallback(query);
   const [, action, rawId] = String(query.data || "").split(":");
   const task = tasks.get(Number(rawId));
   const who = query.from?.username || query.from?.first_name || "Telegram";
@@ -493,3 +588,245 @@ export async function handleTaskCallback(query) {
     }).catch(() => {});
   }
 }
+
+// ---------- постановка задачі з Telegram: /task ----------
+// Кроки: назва → дедлайн → проект → відповідальний. Стан — у пам'яті, 15 хвилин.
+const dialogs = new Map(); // chatId → { step, data, exp, userId }
+const DIALOG_TTL = 15 * 60_000;
+
+/** Зсув часового поясу TIMEZONE (мс) для моменту date */
+function tzOffset(date) {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-US", { timeZone: TIMEZONE, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" })
+      .formatToParts(date)
+      .map((x) => [x.type, x.value]),
+  );
+  return Date.UTC(+parts.year, +parts.month - 1, +parts.day, +parts.hour, +parts.minute, +parts.second) - Math.floor(date.getTime() / 1000) * 1000;
+}
+
+/** Місцевий час (TIMEZONE) → Date */
+function zoned(y, m, d, h, min) {
+  const guess = Date.UTC(y, m, d, h, min);
+  return new Date(guess - tzOffset(new Date(guess)));
+}
+
+function todayParts(shiftDays = 0) {
+  const nowLocal = new Date(Date.now() + tzOffset(new Date()));
+  const d = new Date(Date.UTC(nowLocal.getUTCFullYear(), nowLocal.getUTCMonth(), nowLocal.getUTCDate() + shiftDays));
+  return { y: d.getUTCFullYear(), m: d.getUTCMonth(), d: d.getUTCDate(), wd: d.getUTCDay() };
+}
+
+const DUE_BUTTONS = [
+  { key: "t18", text: "Сегодня 18:00", get: () => ({ ...todayParts(0), h: 18 }) },
+  { key: "m10", text: "Завтра 10:00", get: () => ({ ...todayParts(1), h: 10 }) },
+  { key: "m15", text: "Завтра 15:00", get: () => ({ ...todayParts(1), h: 15 }) },
+  { key: "d3", text: "Через 3 дня", get: () => ({ ...todayParts(3), h: 10 }) },
+  {
+    key: "mon",
+    text: "В понедельник",
+    get: () => {
+      const wd = todayParts(0).wd;
+      return { ...todayParts((8 - wd) % 7 || 7), h: 10 };
+    },
+  },
+];
+
+/** «08.07 15:00», «8.7.2026», «08.07» (10:00) */
+function parseUserDate(text) {
+  const m = /^(\d{1,2})[./](\d{1,2})(?:[./](\d{2,4}))?(?:\s+(\d{1,2})[:.](\d{2}))?$/.exec(text.trim());
+  if (!m) return null;
+  const today = todayParts(0);
+  let year = m[3] ? Number(m[3].length === 2 ? `20${m[3]}` : m[3]) : today.y;
+  const month = Number(m[2]) - 1;
+  const day = Number(m[1]);
+  const hour = m[4] ? Number(m[4]) : 10;
+  const minute = m[5] ? Number(m[5]) : 0;
+  if (month > 11 || day < 1 || day > 31 || hour > 23 || minute > 59) return null;
+  let date = zoned(year, month, day, hour, minute);
+  if (!m[3] && date < Date.now() - 864e5) date = zoned(++year, month, day, hour, minute);
+  return date;
+}
+
+const send = (chatId, text, keyboard) =>
+  telegram("sendMessage", {
+    chat_id: chatId,
+    text,
+    parse_mode: "HTML",
+    disable_web_page_preview: true,
+    ...(keyboard ? { reply_markup: { inline_keyboard: keyboard } } : {}),
+  }).catch((error) => console.error("[tasks] /task:", error.message));
+
+const rows = (buttons, perRow = 2) => {
+  const out = [];
+  for (let i = 0; i < buttons.length; i += perRow) out.push(buttons.slice(i, i + perRow));
+  return out;
+};
+
+async function askDue(chatId) {
+  await send(
+    chatId,
+    "🤖 Дедлайн? Выберите или напишите дату: <code>08.07 15:00</code>",
+    rows(DUE_BUTTONS.map((b) => ({ text: b.text, callback_data: `task:new:due:${b.key}` }))),
+  );
+}
+
+async function askProject(chatId) {
+  const list = activeProjects()
+    .filter((p) => p.status !== "done")
+    .slice(0, 10);
+  if (!list.length) return false;
+  await send(chatId, "🤖 Проект?", [
+    ...rows(list.map((p) => ({ text: `${p.icon} ${p.name}`.slice(0, 60), callback_data: `task:new:proj:${p.id}` }))),
+    [{ text: "Без проекта", callback_data: "task:new:proj:0" }],
+  ]);
+  return true;
+}
+
+async function askAssignee(chatId, user) {
+  const team = users
+    .filter((u) => !u.disabled)
+    .slice(0, 16)
+    .map((u) => ({ text: u.id === user.id ? `${u.name} (я)` : u.name, callback_data: `task:new:who:${u.id}` }));
+  await send(chatId, "🤖 Ответственный?", rows(team));
+}
+
+async function finishCreate(chatId, dialog, user) {
+  dialogs.delete(chatId);
+  try {
+    const task = createTask(
+      {
+        title: dialog.data.title,
+        dueAt: dialog.data.dueAt,
+        projectId: dialog.data.projectId || null,
+        assigneeId: dialog.data.assigneeId ?? user.id,
+        status: "todo",
+      },
+      user,
+    );
+    const project = task.projectId ? activeProjects().find((p) => p.id === task.projectId) : null;
+    const assignee = users.get(task.assigneeId);
+    await send(
+      chatId,
+      [
+        `✅ Задача создана в колонке «${escapeHtml(columnLabel("todo"))}»`,
+        `<b>${escapeHtml(task.title)}</b>`,
+        `Срок: ${formatTime(task.dueAt)}`,
+        project ? `Проект: ${escapeHtml(project.name)}` : "",
+        assignee ? `Ответственный: ${escapeHtml(assignee.name)}` : "",
+        `<a href="${ADMIN_URL}/tasks?task=${task.id}">Открыть в панели</a>`,
+      ]
+        .filter(Boolean)
+        .join("\n"),
+    );
+  } catch (error) {
+    await send(chatId, `⚠ Не удалось создать задачу: ${escapeHtml(error.message)}`);
+  }
+}
+
+const linkedUser = (chatId) => users.find((u) => !u.disabled && u.telegramChatId && String(u.telegramChatId) === String(chatId)) || null;
+
+/** Повертає true, якщо повідомлення оброблене діалогом */
+async function handleCreateDialog(message) {
+  const chatId = message.chat.id;
+  const text = String(message.text || "").trim();
+  if (!text) return false;
+  const command = /^\/task(?:@\w+)?(?:\s+([\s\S]+))?$/i.exec(text);
+  const dialog = dialogs.get(chatId);
+
+  if (/^\/cancel/i.test(text) && dialog) {
+    dialogs.delete(chatId);
+    await send(chatId, "Отменено.");
+    return true;
+  }
+  if (command) {
+    const user = linkedUser(chatId);
+    if (!getTaskSettings().telegramCreate) {
+      await send(chatId, "Создание задач из Telegram выключено в настройках панели.");
+      return true;
+    }
+    if (!user) {
+      await send(chatId, "Сначала подключите Telegram в профиле панели Pikaleads (кнопка «Подключить Telegram»).");
+      return true;
+    }
+    const title = clean(command[1], 200);
+    const next = { step: title ? "due" : "title", data: { title }, exp: Date.now() + DIALOG_TTL, userId: user.id };
+    dialogs.set(chatId, next);
+    if (title) await askDue(chatId);
+    else await send(chatId, "🤖 Введите название задачи\n<i>/cancel — отменить</i>");
+    return true;
+  }
+  if (!dialog || dialog.exp < Date.now() || text.startsWith("/")) {
+    if (dialog) dialogs.delete(chatId);
+    return false;
+  }
+  dialog.exp = Date.now() + DIALOG_TTL;
+  const user = users.get(dialog.userId);
+  if (dialog.step === "title") {
+    dialog.data.title = clean(text, 200);
+    dialog.step = "due";
+    await askDue(chatId);
+    return true;
+  }
+  if (dialog.step === "due") {
+    const date = parseUserDate(text);
+    if (!date) {
+      await send(chatId, "Не понял дату. Напишите, например, <code>08.07 15:00</code> или нажмите кнопку.");
+      return true;
+    }
+    dialog.data.dueAt = date.toISOString();
+    dialog.step = "proj";
+    if (!(await askProject(chatId))) {
+      dialog.step = "who";
+      await askAssignee(chatId, user);
+    }
+    return true;
+  }
+  // на кроках з кнопками текст не чекаємо
+  await send(chatId, "Выберите вариант кнопкой выше или /cancel.");
+  return true;
+}
+
+async function handleCreateCallback(query) {
+  const [, , step, value] = String(query.data).split(":");
+  const chatId = query.message?.chat?.id ?? query.from?.id;
+  const dialog = dialogs.get(chatId);
+  if (!dialog || dialog.exp < Date.now() || dialog.step !== step) {
+    await answerCallback(query.id, "Начните заново: /task");
+    return;
+  }
+  const user = users.get(dialog.userId);
+  dialog.exp = Date.now() + DIALOG_TTL;
+  // прибираємо кнопки з попереднього питання
+  if (query.message) {
+    telegram("editMessageReplyMarkup", { chat_id: chatId, message_id: query.message.message_id, reply_markup: { inline_keyboard: [] } }).catch(() => {});
+  }
+  if (step === "due") {
+    const preset = DUE_BUTTONS.find((b) => b.key === value);
+    if (!preset) return answerCallback(query.id, "");
+    const p = preset.get();
+    dialog.data.dueAt = zoned(p.y, p.m, p.d, p.h, 0).toISOString();
+    await answerCallback(query.id, preset.text);
+    dialog.step = "proj";
+    if (!(await askProject(chatId))) {
+      dialog.step = "who";
+      await askAssignee(chatId, user);
+    }
+    return;
+  }
+  if (step === "proj") {
+    dialog.data.projectId = Number(value) || null;
+    await answerCallback(query.id, "");
+    dialog.step = "who";
+    await askAssignee(chatId, user);
+    return;
+  }
+  if (step === "who") {
+    dialog.data.assigneeId = Number(value) || user.id;
+    await answerCallback(query.id, "Создаю…");
+    await finishCreate(chatId, dialog, user);
+  }
+}
+
+setInterval(() => {
+  for (const [chatId, d] of dialogs) if (d.exp < Date.now()) dialogs.delete(chatId);
+}, 5 * 60_000).unref();

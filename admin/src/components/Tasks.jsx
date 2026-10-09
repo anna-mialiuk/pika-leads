@@ -7,11 +7,9 @@ import { initials, useProjects } from "../lib/projects";
 import { useAuth } from "../lib/auth";
 import { useMeta } from "../lib/meta";
 import {
-  COLUMN_BY_KEY,
   DUE_PRESETS,
   PRIORITIES,
   PRIORITY_BY_KEY,
-  TASK_COLUMNS,
   TITLE_PRESETS,
   formatDue,
   formatHMS,
@@ -20,6 +18,7 @@ import {
   isOverdue,
   sanitizeHtml,
   toLocalInput,
+  useColumns,
   useTasks,
 } from "../lib/tasks";
 
@@ -30,7 +29,8 @@ import "./Tasks.css";
 export function TaskCard({ task, onOpen, draggable = false, onDragStart, onDragEnd, showLead = true }) {
   const { userById, statusByCode } = useMeta();
   const { byId: projectById } = useProjects();
-  const column = COLUMN_BY_KEY[task.status] || TASK_COLUMNS[0];
+  const { columns, byKey } = useColumns();
+  const column = byKey[task.status] || columns[0];
   const priority = PRIORITY_BY_KEY[task.priority] || PRIORITY_BY_KEY.medium;
   const overdue = isOverdue(task);
   const assignee = task.assigneeId ? userById[task.assigneeId] : null;
@@ -452,6 +452,7 @@ export function TaskModal({ task: initialTask = null, defaults = {}, onClose }) 
   const { users, userById } = useMeta();
   const { tasks, create, update, remove, comment, addFile } = useTasks();
   const { projects, byId: projectById } = useProjects();
+  const { columns } = useColumns();
   const editorRef = useRef(null);
   // свіжа версія задачі (коментарі, файли, таймер оновлюються одразу)
   const task = initialTask ? tasks.find((t) => t.id === initialTask.id) || initialTask : null;
@@ -605,7 +606,7 @@ export function TaskModal({ task: initialTask = null, defaults = {}, onClose }) 
         <label className="tm-field">
           <span className="tm-label">Статус</span>
           <select className="tm-input" value={form.status} onChange={(e) => set({ status: e.target.value })}>
-            {TASK_COLUMNS.map((c) => (
+            {columns.map((c) => (
               <option key={c.key} value={c.key}>
                 {c.label}
               </option>

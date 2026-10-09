@@ -6,6 +6,7 @@ import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { useMeta } from "../lib/meta";
 import { useProjects } from "../lib/projects";
+import { useTasks } from "../lib/tasks";
 
 import "../components/Projects.css";
 import "./CallsPage.css";
@@ -65,6 +66,10 @@ const rememberLink = (video, link) => {
 
 function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
   const { user } = useAuth();
+  const { settings: taskSettings } = useTasks();
+  // кімната команди з «Настроек» (автоссылка), інакше — остання в цьому браузері
+  const roomLink = (video) =>
+    (taskSettings?.settings.autoLink !== false && taskSettings?.settings.video?.[video]?.link) || savedLink(video);
   const { users } = useMeta();
   const { projects } = useProjects();
   const team = users.filter((u) => !u.disabled);
@@ -83,7 +88,7 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
       duration: meeting?.duration ?? 60,
       type: meeting?.type ?? "meeting",
       video,
-      link: meeting ? meeting.link : savedLink(video),
+      link: meeting ? meeting.link : roomLink(video),
       attendees: meeting?.attendees ?? [user.id],
       projectId: meeting?.projectId ?? "",
     };
@@ -198,7 +203,7 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
           <select
             className="tm-input"
             value={form.video}
-            onChange={(e) => set({ video: e.target.value, link: e.target.value ? savedLink(e.target.value) : "" })}
+            onChange={(e) => set({ video: e.target.value, link: e.target.value ? roomLink(e.target.value) : "" })}
           >
             <option value="zoom">Zoom</option>
             <option value="googlemeet">Google Meet</option>

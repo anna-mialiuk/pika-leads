@@ -38,6 +38,8 @@ import {
   activeTasks,
   tasks,
   addComment as addTaskComment,
+  botInfo,
+  moveTasksFromColumns,
   createTask,
   deleteComment,
   deleteTask,
@@ -49,6 +51,7 @@ import {
   updateTask,
 } from "./tasks.mjs";
 import { allFiles, createLink, removeFile, removeLink, saveUpload, sendFile } from "./files.mjs";
+import { getTaskSettings, saveTaskSettings } from "./task-settings.mjs";
 import { activeMeetings, createMeeting, deleteMeeting, updateMeeting } from "./meetings.mjs";
 import {
   projectExists,
@@ -491,7 +494,16 @@ route("DELETE", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true }, async ({ r
 );
 
 // ---------- задачі ----------
-route("GET", "/tasks", {}, ({ res }) => send(res, 200, { tasks: activeTasks() }));
+route("GET", "/tasks", {}, ({ res }) => send(res, 200, { tasks: activeTasks(), columns: getTaskSettings().columns }));
+
+// налаштування розділу «Задачи»: бачать усі (колонки, автоссилки), змінює адміністратор
+route("GET", "/tasks/settings", {}, async ({ res }) => send(res, 200, { settings: getTaskSettings(), bot: await botInfo() }));
+
+route("PUT", "/tasks/settings", { admin: true }, async ({ res, body }) => {
+  const { settings, removed } = saveTaskSettings(body);
+  const moved = moveTasksFromColumns(removed);
+  return send(res, 200, { settings, moved, bot: await botInfo() });
+});
 
 route("POST", "/tasks", {}, ({ res, body, user }) => send(res, 201, { task: publicTask(createTask(body, user)) }));
 

@@ -14,7 +14,7 @@ import {
   todayIso,
   useProjects,
 } from "../lib/projects";
-import { COLUMN_BY_KEY, TASK_COLUMNS, formatShort, isOverdue, useTasks } from "../lib/tasks";
+import { formatShort, isOverdue, useColumns, useTasks } from "../lib/tasks";
 
 import "./Projects.css";
 
@@ -366,6 +366,7 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
   const { userById } = useMeta();
   const { byId, addFile, removeFile } = useProjects();
   const { tasks } = useTasks();
+  const { columns: TASK_COLUMNS, byKey: COLUMN_BY_KEY } = useColumns();
   const [callForm, setCallForm] = useState(false);
   const [uploading, setUploading] = useState(0);
   const [error, setError] = useState("");
@@ -377,7 +378,7 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
   const pTasks = tasks.filter((t) => t.projectId === p.id).sort((a, b) => Number(a.done) - Number(b.done) || new Date(a.dueAt) - new Date(b.dueAt));
   const count = (key) => pTasks.filter((t) => t.status === key).length;
   const done = count("done");
-  const active = pTasks.length - done - count("rejected");
+  const active = pTasks.filter((t) => !t.done).length;
   const overdue = pTasks.filter(isOverdue).length;
   const progress = pTasks.length ? Math.round((done / pTasks.length) * 100) : 0;
   const canManage = canManageProject(p, user);

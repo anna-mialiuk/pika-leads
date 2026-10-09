@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { TasksHeader, useTaskModal, useTaskScope } from "../components/TasksShell";
-import { COLUMN_BY_KEY, isOverdue, localDay } from "../lib/tasks";
+import { isOverdue, localDay, useColumns } from "../lib/tasks";
 import { useMeta } from "../lib/meta";
 import { useProjects } from "../lib/projects";
 
@@ -10,7 +10,6 @@ const DAY = 864e5;
 const WEEKDAYS = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 const MONTHS = ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"];
 const PRI_DOT = { high: "#ff7d7d", medium: "#f0883e", low: "#5b9bff" };
-const LEGEND = ["todo", "inprogress", "review", "done"];
 
 const parse = (iso) => {
   const [y, m, d] = iso.split("-").map(Number);
@@ -25,6 +24,9 @@ function TaskGantt() {
   const { modal, openTask } = useTaskModal();
   const { userById } = useMeta();
   const { byId: projectById } = useProjects();
+  const { columns, byKey: COLUMN_BY_KEY } = useColumns();
+  const LEGEND = ["todo", "inprogress", "review", "done"].filter((k) => COLUMN_BY_KEY[k]);
+  if (LEGEND.length < 2) LEGEND.splice(0, LEGEND.length, ...columns.slice(0, 4).map((c) => c.key));
   const scrollRef = useRef(null);
   const [now] = useState(() => Date.now());
 
@@ -83,7 +85,7 @@ function TaskGantt() {
     // проекти — першими, «Без проекта» — в кінці
     const sorted = [...groups.values()].sort((a, b) => (a.key === 0) - (b.key === 0) || a.name.localeCompare(b.name, "ru"));
     return { days, groups: sorted, width: total * COL, todayLeft: idx(today, min) * COL + COL / 2 };
-  }, [list, projectById, now]);
+  }, [list, projectById, now, COLUMN_BY_KEY]);
 
   // одразу показуємо сьогоднішній день
   useEffect(() => {

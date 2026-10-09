@@ -17,6 +17,8 @@ import TaskCalendar from "./pages/TaskCalendar";
 import ProjectsPage from "./pages/ProjectsPage";
 import FilesPage from "./pages/FilesPage";
 import CallsPage from "./pages/CallsPage";
+import TaskAnalytics from "./pages/TaskAnalytics";
+import TaskSettings from "./pages/TaskSettings";
 import { ProjectsProvider } from "./lib/projects";
 import { TasksProvider } from "./lib/tasks";
 import { PublishProvider } from "./lib/publish";
@@ -75,6 +77,8 @@ function App() {
         <Route path="/tasks/projects" element={<ProjectsPage />} />
         <Route path="/tasks/files" element={<FilesPage />} />
         <Route path="/tasks/calls" element={<CallsPage />} />
+        <Route path="/tasks/analytics" element={<TaskAnalytics />} />
+        <Route path="/tasks/settings" element={<TaskSettings />} />
         <Route path="/profile" element={<Profile />} />
         {[
           ["/cases", <ContentList collection="cases" key="cases" />],
