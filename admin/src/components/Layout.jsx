@@ -11,8 +11,8 @@ import logoMark from "../assets/logo-mark.svg";
 
 import "./Layout.css";
 import { t, tt, LOCALE } from "../lib/i18n";
+import { ROLE_LABELS, can } from "../lib/roles";
 
-const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 
 const ago = (iso) => {
   const minutes = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 60000));
@@ -70,9 +70,11 @@ function Layout() {
   useEffect(() => setOpen(false), [location.pathname]);
 
   const isAdmin = user.role === "admin";
+  const canLeads = can(user, "leads");
+  const canContent = can(user, "content");
   const { myDueCount } = useTasks();
   const nav = [
-    { to: "/leads", icon: "leads", label: t("Заявки (CRM)") },
+    ...(canLeads ? [{ to: "/leads", icon: "leads", label: t("Заявки (CRM)") }] : []),
     {
       to: "/tasks",
       icon: "tasks",
@@ -91,7 +93,7 @@ function Layout() {
         { to: "/tasks/settings", label: t("Настройки"), dot: "#8a8f98" },
       ],
     },
-    { to: "/analytics", icon: "chart", label: t("Аналитика") },
+    ...(canLeads ? [{ to: "/analytics", icon: "chart", label: t("Аналитика") }] : []),
     ...(isAdmin
       ? [
           { to: "/team", icon: "team", label: t("Команда") },
@@ -100,7 +102,7 @@ function Layout() {
       : []),
     { to: "/profile", icon: "user", label: t("Профиль") },
   ];
-  const siteNav = isAdmin
+  const siteNav = canContent
     ? [
         { to: "/cases", icon: "cases", label: t("Кейсы") },
         { to: "/blog", icon: "blog", label: t("Блог") },
@@ -195,7 +197,7 @@ function Layout() {
           {siteNav.map(link)}
         </nav>
 
-        {isAdmin && <PublishStatus />}
+        {canContent && <PublishStatus />}
 
         <LangSwitch className="layout__lang" />
 

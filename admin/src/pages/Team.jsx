@@ -9,12 +9,7 @@ import { useMeta } from "../lib/meta";
 
 import "./Team.css";
 import { t, tt } from "../lib/i18n";
-
-const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
-const ROLE_HINTS = {
-  admin: t("Все заявки, удаление, управление командой"),
-  manager: t("Все заявки: статусы, менеджеры, комментарии"),
-};
+import { ROLE_HINTS, ROLE_LABELS } from "../lib/roles";
 
 /** Команда: співробітники, ролі, тимчасові паролі, скидання 2FA */
 function Team() {
@@ -145,7 +140,7 @@ function Team() {
                     </option>
                   ))}
                 </select>
-                {u.position === "Байер" && (
+                {(u.role === "buyer" || u.position === "Байер") && (
                   <input
                     className="input input--sm"
                     defaultValue={u.platform}

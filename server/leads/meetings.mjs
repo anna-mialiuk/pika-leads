@@ -3,7 +3,7 @@
  * Учасникам із підключеним Telegram приходить запрошення, а за 15 хвилин до початку — нагадування з посиланням.
  */
 import { ADMIN_URL, BOT_TOKEN, TIMEZONE } from "./config.mjs";
-import { users } from "./auth.mjs";
+import { can, users } from "./auth.mjs";
 import { HttpError } from "./http.mjs";
 import { projectExists } from "./projects.mjs";
 import { createCollection } from "./store.mjs";
@@ -129,7 +129,7 @@ function getMeeting(id) {
   return m;
 }
 
-const canEdit = (m, user) => user.role === "admin" || m.createdBy?.userId === user.id || (m.attendees || []).includes(user.id);
+const canEdit = (m, user) => can(user, "manage") || m.createdBy?.userId === user.id || (m.attendees || []).includes(user.id);
 
 export function updateMeeting(id, body, user) {
   const m = getMeeting(id);
@@ -152,7 +152,7 @@ export function updateMeeting(id, body, user) {
 
 export function deleteMeeting(id, user) {
   const m = getMeeting(id);
-  if (user.role !== "admin" && m.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
+  if (!can(user, "manage") && m.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
   meetings.update(m.id, (x) => {
     x.deleted = true;
     x.updatedAt = now();

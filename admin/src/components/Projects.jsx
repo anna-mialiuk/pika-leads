@@ -18,10 +18,10 @@ import { formatShort, isOverdue, useColumns, useTasks } from "../lib/tasks";
 
 import "./Projects.css";
 import { t, tt, LOCALE } from "../lib/i18n";
+import { ROLE_LABELS, can } from "../lib/roles";
 
-const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 
-export const canManageProject = (p, user) => user.role === "admin" || p.pmId === user.id || p.createdBy?.userId === user.id;
+export const canManageProject = (p, user) => can(user, "manage") || p.pmId === user.id || p.createdBy?.userId === user.id;
 
 /* ================= створення / редагування проекту ================= */
 
@@ -69,8 +69,9 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
   const set = (patch) => setForm((prev) => ({ ...prev, ...patch }));
   const toggle = (key, id) => set({ [key]: form[key].includes(id) ? form[key].filter((x) => x !== id) : [...form[key], id] });
 
-  const buyers = team.filter((u) => u.position === "Байер");
-  const others = team.filter((u) => u.position !== "Байер");
+  const isBuyer = (u) => u.role === "buyer" || u.position === "Байер";
+  const buyers = team.filter(isBuyer);
+  const others = team.filter((u) => !isBuyer(u));
 
   const save = async () => {
     if (!form.name.trim()) return setError(t("Укажите название проекта"));
@@ -367,7 +368,7 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
   const overdue = pTasks.filter(isOverdue).length;
   const progress = pTasks.length ? Math.round((done / pTasks.length) * 100) : 0;
   const canManage = canManageProject(p, user);
-  const canDelete = user.role === "admin";
+  const canDelete = can(user, "manage");
 
   let tlPct = 0;
   let tlLabel = "—";

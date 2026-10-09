@@ -8,7 +8,7 @@
 import crypto from "node:crypto";
 
 import { ADMIN_URL, BOT_TOKEN, CHAT_IDS, TIMEZONE } from "./config.mjs";
-import { users } from "./auth.mjs";
+import { can, users } from "./auth.mjs";
 import { HttpError } from "./http.mjs";
 import { leads } from "./leads.mjs";
 import { answerCallback, clean, escapeHtml, telegram } from "./telegram.mjs";
@@ -254,7 +254,7 @@ export function updateTask(id, body, user) {
 export function deleteTask(id, user) {
   const task = tasks.get(id);
   if (!task || task.deleted) throw new HttpError(404, "Задача не найдена");
-  if (user.role !== "admin" && task.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор задачи или администратор");
+  if (!can(user, "manage") && task.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор задачи или администратор");
   tasks.update(id, (t) => {
     t.deleted = true;
     t.updatedAt = now();
@@ -374,7 +374,7 @@ export function deleteComment(id, commentId, user) {
   const task = getTask(id);
   const comment = (task.comments || []).find((c) => c.id === commentId);
   if (!comment) throw new HttpError(404, "Комментарий не найден");
-  if (user.role !== "admin" && comment.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
+  if (!can(user, "manage") && comment.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
   return tasks.update(task.id, (t) => {
     t.comments = t.comments.filter((c) => c.id !== commentId);
   });

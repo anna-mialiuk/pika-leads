@@ -8,6 +8,7 @@ import { useTasks } from "../lib/tasks";
 
 import "./TaskSettings.css";
 import { t, tt } from "../lib/i18n";
+import { can } from "../lib/roles";
 
 const SWATCHES = ["#8a8f98", "#5b9bff", "#FFC629", "#f0883e", "#4fd88a", "#ff7d7d", "#b98bff", "#4fd8c8"];
 const REQUIRED = { todo: t("в неё попадают новые задачи"), done: t("её ставит кнопка «✅ Готово» в Telegram") };
@@ -51,7 +52,7 @@ const TelegramMark = () => (
 function TaskSettings() {
   const { user } = useAuth();
   const { settings: data, setSettings, setColumns, tasks, reload } = useTasks();
-  const isAdmin = user.role === "admin";
+  const isAdmin = can(user, "manage");
   const [draft, setDraft] = useState(null); // колонки, що редагуються
   const [rooms, setRooms] = useState({}); // відкриті поля «посилання на кімнату»
   const [busy, setBusy] = useState(false);

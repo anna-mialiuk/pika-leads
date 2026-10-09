@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 
 import { api } from "./api";
 import { useAuth } from "./auth";
+import { can } from "./roles";
 
 /**
  * Стан публікації сайту: після збереження в адмінці GitHub Actions
@@ -23,7 +24,7 @@ export function PublishProvider({ children }) {
     }
   }, []);
 
-  const isAdmin = user?.role === "admin";
+  const isAdmin = can(user, "content");
   const runs = useMemo(() => status?.deploy?.runs || [], [status]);
   const latest = runs[0] || null;
   const busy = Boolean(waiting) || runs.some((run) => run.status !== "completed");

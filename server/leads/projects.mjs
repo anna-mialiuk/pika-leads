@@ -4,7 +4,7 @@
  */
 import crypto from "node:crypto";
 
-import { users } from "./auth.mjs";
+import { can, users } from "./auth.mjs";
 import { filesOf, removeFilesOf } from "./files.mjs";
 import { HttpError } from "./http.mjs";
 import { createCollection } from "./store.mjs";
@@ -71,7 +71,7 @@ function getProject(id) {
 }
 
 /** Хто може змінювати проект: адміністратор, PM, автор */
-export const canManageProject = (p, user) => user.role === "admin" || p.pmId === user.id || p.createdBy?.userId === user.id;
+export const canManageProject = (p, user) => can(user, "manage") || p.pmId === user.id || p.createdBy?.userId === user.id;
 
 function fields(body, partial) {
   const out = {};
@@ -130,7 +130,7 @@ export function updateProject(id, body, user) {
 
 export function deleteProject(id, user) {
   const p = getProject(id);
-  if (user.role !== "admin" && p.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор проекта или администратор");
+  if (!can(user, "manage") && p.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор проекта или администратор");
   projects.update(p.id, (x) => {
     x.deleted = true;
     x.deletedAt = now();
@@ -197,7 +197,7 @@ export function deleteCall(projectId, callId, user) {
   const p = getProject(projectId);
   const call = (p.calls || []).find((c) => c.id === callId);
   if (!call) throw new HttpError(404, "Созвон не найден");
-  if (user.role !== "admin" && call.by?.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
+  if (!can(user, "manage") && call.by?.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
   return publicProject(
     projects.update(p.id, (x) => {
       x.calls = x.calls.filter((c) => c.id !== callId);

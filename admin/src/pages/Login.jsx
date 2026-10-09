@@ -10,6 +10,7 @@ import logoMark from "../assets/logo-mark.svg";
 
 import "./Login.css";
 import { t } from "../lib/i18n";
+import { homePath } from "../lib/roles";
 
 const validEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 
@@ -57,7 +58,7 @@ function Login() {
       .catch(() => setForgotAvailable(false));
   }, [screen, forgotAvailable]);
 
-  if (user && screen !== "success") return <Navigate to={location.state?.from || "/leads"} replace />;
+  if (user && screen !== "success") return <Navigate to={location.state?.from || homePath(user)} replace />;
 
   const go = (next) => {
     setError("");
@@ -72,7 +73,7 @@ function Login() {
       setScreen("success");
       setTimeout(() => {
         setUser(response.user);
-        navigate(location.state?.from || "/leads", { replace: true });
+        navigate(location.state?.from || homePath(response.user), { replace: true });
       }, 900);
       return;
     }

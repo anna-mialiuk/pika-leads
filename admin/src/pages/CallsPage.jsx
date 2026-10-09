@@ -11,6 +11,7 @@ import { useTasks } from "../lib/tasks";
 import "../components/Projects.css";
 import "./CallsPage.css";
 import { t, tt } from "../lib/i18n";
+import { can } from "../lib/roles";
 
 const START_H = 8;
 const END_H = 21;
@@ -98,7 +99,7 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const set = (patch) => setForm((prev) => ({ ...prev, ...patch }));
-  const canDelete = meeting && (user.role === "admin" || meeting.createdBy?.userId === user.id);
+  const canDelete = meeting && (can(user, "manage") || meeting.createdBy?.userId === user.id);
 
   const save = async () => {
     setError("");

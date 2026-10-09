@@ -5,6 +5,7 @@
 import { HttpError } from "./http.mjs";
 import { projectExists } from "./projects.mjs";
 import { createCollection } from "./store.mjs";
+import { can } from "./auth.mjs";
 
 export const mindmaps = createCollection("mindmaps.json");
 
@@ -137,7 +138,7 @@ export function saveMap(id, body, user) {
 
 export function deleteMap(id, user) {
   const m = getMap(id);
-  if (user.role !== "admin" && m.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор карты или администратор");
+  if (!can(user, "manage") && m.createdBy?.userId !== user.id) throw new HttpError(403, "Удалить может автор карты или администратор");
   mindmaps.update(m.id, (x) => {
     x.deleted = true;
     x.updatedAt = now();

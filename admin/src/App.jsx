@@ -26,8 +26,9 @@ import { TasksProvider } from "./lib/tasks";
 import { PublishProvider } from "./lib/publish";
 import { useAuth } from "./lib/auth";
 import { MetaProvider } from "./lib/meta";
+import { can, homePath } from "./lib/roles";
 
-function Protected({ children, admin = false }) {
+function Protected({ children, admin = false, perm = null }) {
   const { user, loading } = useAuth();
   const location = useLocation();
 
@@ -39,8 +40,14 @@ function Protected({ children, admin = false }) {
     );
   }
   if (!user) return <Navigate to="/login" replace state={{ from: location.pathname }} />;
-  if (admin && user.role !== "admin") return <Navigate to="/leads" replace />;
+  if ((admin && user.role !== "admin") || (perm && !can(user, perm))) return <Navigate to={homePath(user)} replace />;
   return children;
+}
+
+/** Невідома адреса → стартова сторінка за роллю */
+function HomeRedirect() {
+  const { user } = useAuth();
+  return <Navigate to={user ? homePath(user) : "/login"} replace />;
 }
 
 function App() {
@@ -62,8 +69,8 @@ function App() {
           </Protected>
         }
       >
-        <Route path="/leads" element={<Leads />} />
-        <Route path="/leads/:id" element={<Leads />} />
+        <Route path="/leads" element={<Protected perm="leads"><Leads /></Protected>} />
+        <Route path="/leads/:id" element={<Protected perm="leads"><Leads /></Protected>} />
         <Route
           path="/team"
           element={
@@ -72,7 +79,7 @@ function App() {
             </Protected>
           }
         />
-        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/analytics" element={<Protected perm="leads"><Analytics /></Protected>} />
         <Route path="/tasks" element={<TasksPage />} />
         <Route path="/tasks/gantt" element={<TaskGantt />} />
         <Route path="/tasks/calendar" element={<TaskCalendar />} />
@@ -93,10 +100,10 @@ function App() {
           ["/seo", <Seo key="seo" />],
           ["/integrations", <Integrations key="integrations" />],
         ].map(([path, element]) => (
-          <Route key={path} path={path} element={<Protected admin>{element}</Protected>} />
+          <Route key={path} path={path} element={path === "/integrations" ? <Protected admin>{element}</Protected> : <Protected perm="content">{element}</Protected>} />
         ))}
       </Route>
-      <Route path="*" element={<Navigate to="/leads" replace />} />
+      <Route path="*" element={<HomeRedirect />} />
     </Routes>
   );
 }

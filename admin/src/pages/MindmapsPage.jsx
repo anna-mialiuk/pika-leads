@@ -8,6 +8,7 @@ import { useTasks } from "../lib/tasks";
 
 import "./MindmapsPage.css";
 import { t, tt } from "../lib/i18n";
+import { can } from "../lib/roles";
 
 const WORLD_W = 4000;
 const WORLD_H = 3000;
@@ -613,7 +614,7 @@ function MindmapsPage() {
               >
                 <span>{active ? map.name : m.name}</span>
                 <span className="mm-tab__count">{active ? map.nodes.length : m.nodes.length}</span>
-                {(user.role === "admin" || m.createdBy?.userId === user.id) && (
+                {(can(user, "manage") || m.createdBy?.userId === user.id) && (
                   <button
                     type="button"
                     className="mm-tab__del"

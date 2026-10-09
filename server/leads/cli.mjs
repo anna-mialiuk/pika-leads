@@ -4,6 +4,7 @@
  *
  *   cd /home/deploy/leads-server
  *   sudo -u deploy node --env-file=.env cli.mjs create-user --email you@mail.com --name "Анна" --role admin
+ *     (ролі: admin, pm, manager, buyer, developer)
  *   sudo -u deploy node --env-file=.env cli.mjs reset-password --email you@mail.com
  *   sudo -u deploy node --env-file=.env cli.mjs reset-2fa --email you@mail.com
  *   sudo -u deploy node --env-file=.env cli.mjs list
@@ -69,7 +70,7 @@ switch (command) {
   case "list": {
     for (const user of users.all().map(publicUser)) {
       console.log(
-        `${String(user.id).padStart(3)}  ${user.email.padEnd(32)} ${user.role.padEnd(8)} ${user.totpEnabled ? "2FA" : "   "} ${user.disabled ? "заблокирован" : ""}`,
+        `${String(user.id).padStart(3)}  ${user.email.padEnd(32)} ${user.role.padEnd(9)} ${user.totpEnabled ? "2FA" : "   "} ${user.disabled ? "заблокирован" : ""}`,
       );
     }
     break;

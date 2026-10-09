@@ -11,11 +11,11 @@ import { useTasks } from "../lib/tasks";
 import "../components/Projects.css";
 import "./ChatPage.css";
 import { t, tt } from "../lib/i18n";
+import { ROLE_LABELS } from "../lib/roles";
 
 const AVATARS = ["#FFC629", "#5b9bff", "#f0883e", "#4fd88a", "#b98bff", "#4fd8c8", "#ff7d7d"];
 const EMOJIS = ["😀", "😂", "🔥", "👍", "✅", "🎉", "💰", "📈", "🚀", "👀", "🙏", "💪", "❤️", "⚡", "🎯", "✍️"];
 const QUICK = ["🔥", "👍", "✅"];
-const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 const VIDEO_LABEL = { googlemeet: "Google Meet", zoom: "Zoom", loom: "Loom" };
 
 const avatarBg = (id) => AVATARS[(Number(id) || 0) % AVATARS.length];

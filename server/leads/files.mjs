@@ -5,6 +5,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { can } from "./auth.mjs";
 
 import { DATA_DIR } from "./config.mjs";
 import { HttpError } from "./http.mjs";
@@ -96,7 +97,7 @@ export function saveUpload(req, { ownerType, ownerId, user }) {
 export function removeFile(id, user, canManageOwner) {
   const record = files.get(id);
   if (!record || record.deleted) throw new HttpError(404, "Файл не найден");
-  if (user.role !== "admin" && record.by?.userId !== user.id && !canManageOwner?.(record)) {
+  if (!can(user, "manage") && record.by?.userId !== user.id && !canManageOwner?.(record)) {
     throw new HttpError(403, "Удалить может автор файла или администратор");
   }
   files.update(record.id, (f) => {
@@ -193,7 +194,7 @@ export function createLink(body, user, projectExists) {
 export function removeLink(id, user) {
   const record = links.get(id);
   if (!record || record.deleted) throw new HttpError(404, "Ссылка не найдена");
-  if (user.role !== "admin" && record.by?.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
+  if (!can(user, "manage") && record.by?.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
   links.update(record.id, (l) => {
     l.deleted = true;
   });

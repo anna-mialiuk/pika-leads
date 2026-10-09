@@ -9,6 +9,7 @@ import { useTasks } from "../lib/tasks";
 
 import "../components/Projects.css";
 import { t, tt } from "../lib/i18n";
+import { can } from "../lib/roles";
 
 /** Проекти (як у макеті): картки з прогресом, клік — повна картка проекту */
 function ProjectsPage() {
@@ -79,7 +80,7 @@ function ProjectsPage() {
                         ✎
                       </button>
                     )}
-                    {(user.role === "admin" || p.createdBy?.userId === user.id) && (
+                    {(can(user, "manage") || p.createdBy?.userId === user.id) && (
                       <button
                         type="button"
                         title={t("Удалить")}

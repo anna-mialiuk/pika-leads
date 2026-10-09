@@ -24,6 +24,7 @@ import {
 
 import "./Tasks.css";
 import { t, tt, LOCALE } from "../lib/i18n";
+import { can } from "../lib/roles";
 
 /* ================= картка на дошці ================= */
 
@@ -309,7 +310,7 @@ function TaskComments({ task, drafts, setDrafts }) {
                 <div className="tm-comment__head">
                   <span className="tm-comment__author">{c.name}</span>
                   <span className="tm-comment__time">{c.draft ? t("отправится при сохранении") : timeOf(c.at)}</span>
-                  {(c.userId === user.id || user.role === "admin") && (
+                  {(c.userId === user.id || can(user, "manage")) && (
                     <button type="button" className="tm-comment__del" aria-label={t("Удалить комментарий")} onClick={() => remove(c)}>
                       ✕
                     </button>
@@ -479,10 +480,11 @@ export function TaskModal({ task: initialTask = null, defaults = {}, onClose }) 
   const set = (patch) => setForm((prev) => ({ ...prev, ...patch }));
 
   useEffect(() => {
+    if (!can(user, "leads")) return undefined;
     api("/leads")
       .then(({ leads: list }) => setLeads(list))
       .catch(() => setLeads([]));
-  }, []);
+  }, [user]);
 
   const leadOptions = useMemo(() => {
     const list = (leads || []).slice().sort((a, b) => b.id - a.id).slice(0, 300);
@@ -548,7 +550,7 @@ export function TaskModal({ task: initialTask = null, defaults = {}, onClose }) 
     }
   };
 
-  const canDelete = task && (user.role === "admin" || task.createdBy?.userId === user.id);
+  const canDelete = task && (can(user, "manage") || task.createdBy?.userId === user.id);
   const del = async () => {
     if (!window.confirm(t("Удалить задачу? Файлы задачи тоже удалятся."))) return;
     try {
@@ -657,17 +659,19 @@ export function TaskModal({ task: initialTask = null, defaults = {}, onClose }) 
           ))}
         </div>
 
-        <label className="tm-field">
-          <span className="tm-label">{t("Заявка из CRM")}</span>
-          <select className="tm-input" value={form.leadId ?? ""} onChange={(e) => set({ leadId: e.target.value ? Number(e.target.value) : null })}>
-            <option value="">{t("— без заявки —")}</option>
-            {leadOptions.map((lead) => (
-              <option key={lead.id} value={lead.id}>
-                #{lead.id} {leadName(lead)}
-              </option>
-            ))}
-          </select>
-        </label>
+        {can(user, "leads") && (
+          <label className="tm-field">
+            <span className="tm-label">{t("Заявка из CRM")}</span>
+            <select className="tm-input" value={form.leadId ?? ""} onChange={(e) => set({ leadId: e.target.value ? Number(e.target.value) : null })}>
+              <option value="">{t("— без заявки —")}</option>
+              {leadOptions.map((lead) => (
+                <option key={lead.id} value={lead.id}>
+                  #{lead.id} {leadName(lead)}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
 
         <div className="tm-label">{t("Доп. ответственные")}</div>
         <div className="tm-chips">

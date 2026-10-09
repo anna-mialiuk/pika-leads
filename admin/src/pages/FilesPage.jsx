@@ -10,6 +10,7 @@ import { useTasks } from "../lib/tasks";
 import "../components/Projects.css";
 import "./FilesPage.css";
 import { t, tt } from "../lib/i18n";
+import { can } from "../lib/roles";
 
 const TYPES = {
   doc: { icon: "📄", label: "Google Docs", color: "#5b9bff", create: "https://docs.new", hint: t("Новый документ открылся в соседней вкладке. Назовите его и вставьте сюда ссылку.") },
@@ -221,7 +222,7 @@ function FilesPage() {
           const meta = TYPES[kind] || TYPES.upload;
           const project = f.projectId ? projectById[f.projectId] : null;
           const task = f.taskId ? tasks.find((t) => t.id === f.taskId) : null;
-          const canDelete = f.kind !== "attach" && (user.role === "admin" || f.byId === user.id);
+          const canDelete = f.kind !== "attach" && (can(user, "manage") || f.byId === user.id);
           return (
             <div key={`${f.kind}${f.id}`} className="fl-row">
               <div className="fl-name">

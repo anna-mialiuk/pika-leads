@@ -28,6 +28,7 @@ import {
   userFromSession,
   userFromTicket,
   users,
+  can,
   verifyPassword,
   verifyTotp,
 } from "./auth.mjs";
@@ -325,11 +326,11 @@ const validManager = (managerId) => {
   return manager.id;
 };
 
-route("GET", "/leads", {}, ({ res }) => send(res, 200, { leads: activeLeads() }));
+route("GET", "/leads", { perm: "leads" }, ({ res }) => send(res, 200, { leads: activeLeads() }));
 
-route("GET", "/leads/(\\d+)", {}, ({ res, params }) => send(res, 200, { lead: publicLead(leadOr404(params[0])) }));
+route("GET", "/leads/(\\d+)", { perm: "leads" }, ({ res, params }) => send(res, 200, { lead: publicLead(leadOr404(params[0])) }));
 
-route("POST", "/leads", {}, async ({ res, body, user, req }) => {
+route("POST", "/leads", { perm: "leads" }, async ({ res, body, user, req }) => {
   const data = {};
   for (const key of ["name", "phone_full", "email", "telegram", "niche", "message"]) {
     const value = clean(body[key], key === "message" ? 2000 : 200);
@@ -346,7 +347,7 @@ route("POST", "/leads", {}, async ({ res, body, user, req }) => {
   return send(res, 201, { lead: publicLead(leads.get(lead.id)) });
 });
 
-route("PATCH", "/leads/(\\d+)", {}, async ({ res, body, user, params }) => {
+route("PATCH", "/leads/(\\d+)", { perm: "leads" }, async ({ res, body, user, params }) => {
   const lead = leadOr404(params[0]);
   if ("managerId" in body) setManager(lead.id, validManager(body.managerId === null ? null : Number(body.managerId)), { user });
   if ("amount" in body) setAmount(lead.id, body.amount, { user });
@@ -357,7 +358,7 @@ route("PATCH", "/leads/(\\d+)", {}, async ({ res, body, user, params }) => {
   return send(res, 200, { lead: publicLead(leads.get(lead.id)) });
 });
 
-route("POST", "/leads/bulk", {}, async ({ res, body, user }) => {
+route("POST", "/leads/bulk", { perm: "leads" }, async ({ res, body, user }) => {
   const ids = Array.isArray(body.ids) ? body.ids.map(Number).slice(0, 500) : [];
   if (!ids.length) throw new HttpError(400, "Не выбраны заявки");
   if (body.status !== undefined && !isStatus(body.status)) throw new HttpError(400, "Неизвестный статус");
@@ -372,7 +373,7 @@ route("POST", "/leads/bulk", {}, async ({ res, body, user }) => {
   return send(res, 200, { leads: activeLeads() });
 });
 
-route("POST", "/leads/(\\d+)/comments", {}, ({ res, body, user, params }) => {
+route("POST", "/leads/(\\d+)/comments", { perm: "leads" }, ({ res, body, user, params }) => {
   const text = clean(body.text, 4000);
   if (!text) throw new HttpError(400, "Пустой комментарий");
   leadOr404(params[0]);
@@ -457,10 +458,10 @@ route("POST", "/users/(\\d+)/reset-2fa", { admin: true }, ({ res, params }) => {
 const COLLECTION = "(cases|articles|reviews)";
 const ITEM_ID = "([a-z0-9-]{1,80})";
 
-route("GET", "/content/status", { admin: true }, async ({ res }) => send(res, 200, await contentStatus()));
+route("GET", "/content/status", { perm: "content" }, async ({ res }) => send(res, 200, await contentStatus()));
 
 // картинка з репозиторію для <img> (браузер не додає X-Requested-With; cookie SameSite=Strict)
-route("GET", "/content/image", { admin: true, image: true }, async ({ req, res, query }) => {
+route("GET", "/content/image", { perm: "content", image: true }, async ({ req, res, query }) => {
   const { buffer, type, etag } = await readImage(String(query.get("path") || ""));
   if (req.headers["if-none-match"] === etag) {
     res.writeHead(304, { ETag: etag });
@@ -477,35 +478,35 @@ route("GET", "/content/image", { admin: true, image: true }, async ({ req, res, 
   res.end(buffer);
 });
 
-route("GET", "/content/seo", { admin: true }, async ({ res }) => send(res, 200, await getSeo()));
+route("GET", "/content/seo", { perm: "content" }, async ({ res }) => send(res, 200, await getSeo()));
 
-route("PUT", "/content/seo", { admin: true }, async ({ res, body, user }) => send(res, 200, await saveSeoPage(body, user)));
+route("PUT", "/content/seo", { perm: "content" }, async ({ res, body, user }) => send(res, 200, await saveSeoPage(body, user)));
 
-route("GET", "/content/seo/audit", { admin: true }, async ({ res, query }) =>
+route("GET", "/content/seo/audit", { perm: "content" }, async ({ res, query }) =>
   send(res, 200, await seoAudit({ refresh: query.get("refresh") === "1" })),
 );
 
-route("GET", `/content/${COLLECTION}`, { admin: true }, async ({ res, params }) =>
+route("GET", `/content/${COLLECTION}`, { perm: "content" }, async ({ res, params }) =>
   send(res, 200, await listContent(params[0])),
 );
 
-route("GET", `/content/${COLLECTION}/new`, { admin: true }, async ({ res, params }) =>
+route("GET", `/content/${COLLECTION}/new`, { perm: "content" }, async ({ res, params }) =>
   send(res, 200, { next: await nextNumbers(params[0]) }),
 );
 
-route("POST", `/content/${COLLECTION}/order`, { admin: true }, async ({ res, params, body, user }) =>
+route("POST", `/content/${COLLECTION}/order`, { perm: "content" }, async ({ res, params, body, user }) =>
   send(res, 200, { commit: await reorderContent(params[0], body.ids, user) }),
 );
 
-route("GET", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true }, async ({ res, params }) =>
+route("GET", `/content/${COLLECTION}/${ITEM_ID}`, { perm: "content" }, async ({ res, params }) =>
   send(res, 200, await getContent(params[0], params[1])),
 );
 
-route("PUT", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true, bodyLimit: 40 * 1024 * 1024 }, async ({ res, params, body, user }) =>
+route("PUT", `/content/${COLLECTION}/${ITEM_ID}`, { perm: "content", bodyLimit: 40 * 1024 * 1024 }, async ({ res, params, body, user }) =>
   send(res, 200, await saveContent(params[0], params[1], body, user)),
 );
 
-route("DELETE", `/content/${COLLECTION}/${ITEM_ID}`, { admin: true }, async ({ res, params, query, user }) =>
+route("DELETE", `/content/${COLLECTION}/${ITEM_ID}`, { perm: "content" }, async ({ res, params, query, user }) =>
   send(res, 200, { commit: await deleteContent(params[0], params[1], query.get("sha"), user) }),
 );
 
@@ -515,7 +516,7 @@ route("GET", "/tasks", {}, ({ res }) => send(res, 200, { tasks: activeTasks(), c
 // налаштування розділу «Задачи»: бачать усі (колонки, автоссилки), змінює адміністратор
 route("GET", "/tasks/settings", {}, async ({ res }) => send(res, 200, { settings: getTaskSettings(), bot: await botInfo() }));
 
-route("PUT", "/tasks/settings", { admin: true }, async ({ res, body }) => {
+route("PUT", "/tasks/settings", { perm: "manage" }, async ({ res, body }) => {
   const { settings, removed } = saveTaskSettings(body);
   const moved = moveTasksFromColumns(removed);
   return send(res, 200, { settings, moved, bot: await botInfo() });
@@ -766,6 +767,7 @@ export async function handleAdmin(req, res) {
       user = userFromSession(parseCookies(req)[COOKIE_NAME]);
       if (!user) return send(res, 401, { error: "Требуется вход" });
       if (r.admin && user.role !== "admin") return send(res, 403, { error: "Недостаточно прав" });
+      if (r.perm && !can(user, r.perm)) return send(res, 403, { error: "Недостаточно прав" });
     }
     // raw — тіло читає сам обробник (завантаження файлів)
     const body = r.raw ? {} : ["POST", "PATCH", "PUT"].includes(req.method) ? await readBody(req, r.bodyLimit) : {};

@@ -8,8 +8,8 @@ import { formatDate, passwordScore } from "../lib/format";
 
 import "./Profile.css";
 import { t } from "../lib/i18n";
+import { ROLE_LABELS } from "../lib/roles";
 
-const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 
 function Profile() {
   const { user, setUser } = useAuth();

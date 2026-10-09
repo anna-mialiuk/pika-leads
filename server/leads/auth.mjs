@@ -12,7 +12,15 @@ import { REMEMBER_DAYS, SESSION_HOURS, TOTP_ISSUER } from "./config.mjs";
 import { createCollection, dataPath } from "./store.mjs";
 
 export const users = createCollection("users.json");
-export const ROLES = ["admin", "manager"];
+export const ROLES = ["admin", "pm", "manager", "buyer", "developer"];
+
+/** Права ролей. admin може все; решта — за списком */
+const PERMS = {
+  leads: ["admin", "pm", "manager", "buyer"], // CRM і аналітика заявок
+  content: ["admin", "developer"], // розділ «Сайт»: кейси, блог, відгуки, SEO
+  manage: ["admin", "pm"], // керування задачами, проєктами, зустрічами, налаштуваннями задач
+};
+export const can = (user, perm) => Boolean(user) && (PERMS[perm] || []).includes(user.role);
 
 // ---------- секрет для підпису токенів ----------
 function loadSecret() {
