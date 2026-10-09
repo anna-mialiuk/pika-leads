@@ -153,3 +153,9 @@
     grid-column: 1 / -1;
   }
 }
+
+.team-member__role {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

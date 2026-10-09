@@ -12,6 +12,10 @@ import Analytics from "./pages/Analytics";
 import Seo from "./pages/Seo";
 import Integrations from "./pages/Integrations";
 import TasksPage from "./pages/TasksPage";
+import TaskGantt from "./pages/TaskGantt";
+import TaskCalendar from "./pages/TaskCalendar";
+import ProjectsPage from "./pages/ProjectsPage";
+import { ProjectsProvider } from "./lib/projects";
 import { TasksProvider } from "./lib/tasks";
 import { PublishProvider } from "./lib/publish";
 import { useAuth } from "./lib/auth";
@@ -42,9 +46,11 @@ function App() {
           <Protected>
             <MetaProvider>
               <PublishProvider>
-                <TasksProvider>
-                  <Layout />
-                </TasksProvider>
+                <ProjectsProvider>
+                  <TasksProvider>
+                    <Layout />
+                  </TasksProvider>
+                </ProjectsProvider>
               </PublishProvider>
             </MetaProvider>
           </Protected>
@@ -62,6 +68,9 @@ function App() {
         />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/tasks" element={<TasksPage />} />
+        <Route path="/tasks/gantt" element={<TaskGantt />} />
+        <Route path="/tasks/calendar" element={<TaskCalendar />} />
+        <Route path="/tasks/projects" element={<ProjectsPage />} />
         <Route path="/profile" element={<Profile />} />
         {[
           ["/cases", <ContentList collection="cases" key="cases" />],

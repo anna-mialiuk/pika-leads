@@ -18,7 +18,7 @@ const ROLE_HINTS = {
 /** Команда: співробітники, ролі, тимчасові паролі, скидання 2FA */
 function Team() {
   const { user: me } = useAuth();
-  const { reloadUsers } = useMeta();
+  const { reloadUsers, positions = [] } = useMeta();
   const [users, setUsers] = useState(null);
   const [error, setError] = useState("");
   const [creating, setCreating] = useState(false);
@@ -119,18 +119,42 @@ function Team() {
 
               <div className="team-member__login faint">Вход: {u.lastLoginAt ? formatDate(u.lastLoginAt) : "ещё не входил"}</div>
 
-              <select
-                className="select select--sm team-member__role"
-                value={u.role}
-                onChange={(event) => update(u.id, { role: event.target.value })}
-                aria-label="Роль"
-              >
-                {Object.entries(ROLE_LABELS).map(([role, label]) => (
-                  <option key={role} value={role}>
-                    {label}
-                  </option>
-                ))}
-              </select>
+              <div className="team-member__role">
+                <select
+                  className="select select--sm"
+                  value={u.role}
+                  onChange={(event) => update(u.id, { role: event.target.value })}
+                  aria-label="Роль"
+                >
+                  {Object.entries(ROLE_LABELS).map(([role, label]) => (
+                    <option key={role} value={role}>
+                      {label}
+                    </option>
+                  ))}
+                </select>
+                <select
+                  className="select select--sm"
+                  value={u.position || ""}
+                  onChange={(event) => update(u.id, { position: event.target.value })}
+                  aria-label="Должность"
+                >
+                  <option value="">Должность…</option>
+                  {positions.map((p) => (
+                    <option key={p} value={p}>
+                      {p}
+                    </option>
+                  ))}
+                </select>
+                {u.position === "Байер" && (
+                  <input
+                    className="input input--sm"
+                    defaultValue={u.platform}
+                    placeholder="Платформа: Meta, Google…"
+                    aria-label="Платформа байера"
+                    onBlur={(event) => event.target.value.trim() !== (u.platform || "") && update(u.id, { platform: event.target.value.trim() })}
+                  />
+                )}
+              </div>
 
               <div className="team-member__actions">
                 <button type="button" className="btn btn--sm" onClick={() => resetPassword(u)}>

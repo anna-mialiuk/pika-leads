@@ -1,41 +1,21 @@
 import { useState } from "react";
 
-import { TaskCard, TaskModal } from "../components/Tasks";
-import { useAuth } from "../lib/auth";
+import { TaskCard } from "../components/Tasks";
+import { TasksHeader, useTaskModal, useTaskScope } from "../components/TasksShell";
 import { TASK_COLUMNS, isOverdue, useTasks } from "../lib/tasks";
-
-import "../components/Tasks.css";
 
 const CLOSED_DAYS = 30; // у «Готово» / «Отклонено» показуємо закриті за останній місяць
 
 /** Задачі — канбан як у макеті: 6 колонок, перетягування, швидке додавання */
 function TasksPage() {
-  const { user } = useAuth();
   const { tasks, loaded, update } = useTasks();
-  const [scope, setScope] = useState(() => {
-    try {
-      return localStorage.getItem("tasks-scope") || "all";
-    } catch {
-      return "all";
-    }
-  });
-  const [modal, setModal] = useState(null);
+  const { scope, setScope, list } = useTaskScope();
+  const { modal, openTask, openNew } = useTaskModal();
   const [dragId, setDragId] = useState(null);
   const [overCol, setOverCol] = useState(null);
   const [error, setError] = useState("");
   const [since] = useState(() => Date.now() - CLOSED_DAYS * 864e5);
 
-  const chooseScope = (value) => {
-    setScope(value);
-    try {
-      localStorage.setItem("tasks-scope", value);
-    } catch {
-      /* приватний режим */
-    }
-  };
-
-  const mine = (t) => t.assigneeId === user.id || t.watchers.includes(user.id);
-  const list = scope === "mine" ? tasks.filter(mine) : tasks;
   const overdueCount = list.filter(isOverdue).length;
 
   const columnTasks = (key) => {
@@ -57,22 +37,7 @@ function TasksPage() {
 
   return (
     <div className="tboard-page">
-      <div className="tboard-head">
-        <h1 className="tboard-head__title">Задачи</h1>
-        <div className="tboard-head__actions">
-          <div className="segmented">
-            <button type="button" className={scope === "mine" ? "is-active" : ""} onClick={() => chooseScope("mine")}>
-              Мои
-            </button>
-            <button type="button" className={scope === "all" ? "is-active" : ""} onClick={() => chooseScope("all")}>
-              Все
-            </button>
-          </div>
-          <button type="button" className="tboard-add" onClick={() => setModal({ defaults: {} })}>
-            + Новая задача
-          </button>
-        </div>
-      </div>
+      <TasksHeader scope={scope} onScope={setScope} action={{ label: "+ Новая задача", onClick: () => openNew() }} />
 
       {overdueCount > 0 && <div className="tboard-overdue">⚠ Просрочено задач: {overdueCount}</div>}
       {error && <div className="alert">⚠ {error}</div>}
@@ -117,7 +82,7 @@ function TasksPage() {
                       key={task.id}
                       task={task}
                       draggable
-                      onOpen={(t) => setModal({ task: t })}
+                      onOpen={openTask}
                       onDragStart={(e) => {
                         e.dataTransfer.effectAllowed = "move";
                         e.dataTransfer.setData("text/plain", String(task.id));
@@ -129,7 +94,7 @@ function TasksPage() {
                       }}
                     />
                   ))}
-                  <button type="button" className="tboard__quick" onClick={() => setModal({ defaults: { status: col.key } })}>
+                  <button type="button" className="tboard__quick" onClick={() => openNew({ status: col.key })}>
                     <span>+</span>Задача
                   </button>
                 </div>
@@ -139,11 +104,9 @@ function TasksPage() {
         </div>
       )}
 
-      <div className="tboard-note">
-        Перетаскивайте карточки между колонками. Клик по карточке — редактирование. Напоминание о дедлайне приходит в Telegram.
-      </div>
+      <div className="tboard-note">Перетаскивайте карточки между колонками. Клик по карточке — редактирование.</div>
 
-      {modal && <TaskModal task={modal.task} defaults={modal.defaults} onClose={() => setModal(null)} />}
+      {modal}
     </div>
   );
 }

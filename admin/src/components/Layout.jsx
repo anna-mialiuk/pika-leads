@@ -72,7 +72,18 @@ function Layout() {
   const { myDueCount } = useTasks();
   const nav = [
     { to: "/leads", icon: "leads", label: "Заявки (CRM)" },
-    { to: "/tasks", icon: "tasks", label: "Задачи", badge: myDueCount },
+    {
+      to: "/tasks",
+      icon: "tasks",
+      label: "Задачи",
+      badge: myDueCount,
+      subs: [
+        { to: "/tasks", label: "Задачи", dot: "#FFC629" },
+        { to: "/tasks/gantt", label: "Диаграмма Ганта", dot: "#f0a53e" },
+        { to: "/tasks/calendar", label: "Календарь", dot: "#5b9bff" },
+        { to: "/tasks/projects", label: "Проекты", dot: "#4fd88a" },
+      ],
+    },
     { to: "/analytics", icon: "chart", label: "Аналитика" },
     ...(isAdmin
       ? [
@@ -91,13 +102,60 @@ function Layout() {
       ]
     : [];
 
-  const link = (item) => (
-    <NavLink key={item.to} to={item.to} className={({ isActive }) => `layout__link ${isActive ? "layout__link--active" : ""}`}>
-      <Icon name={item.icon} size={18} />
-      {item.label}
-      {item.badge > 0 && <span className="layout__badge">{item.badge}</span>}
-    </NavLink>
-  );
+  const inTasks = location.pathname === "/tasks" || location.pathname.startsWith("/tasks/");
+  // підменю «Задачи»: відкрите в розділі задач, кнопкою можна згорнути/розгорнути
+  const [tasksToggle, setTasksToggle] = useState(null);
+  const tasksOpen = tasksToggle ?? inTasks;
+  const setTasksOpen = setTasksToggle;
+
+  const link = (item) => {
+    if (item.subs) {
+      const open = tasksOpen;
+      return (
+        <div key={item.to}>
+          <div className={`layout__link layout__link--group ${inTasks ? "layout__link--active" : ""}`}>
+            <NavLink to={item.to} end className="layout__link-main" onClick={() => setTasksOpen(true)}>
+              <Icon name={item.icon} size={18} />
+              {item.label}
+              {item.badge > 0 && <span className="layout__badge">{item.badge}</span>}
+            </NavLink>
+            <button
+              type="button"
+              className={`layout__caret ${open ? "is-open" : ""}`}
+              aria-label={open ? "Свернуть" : "Развернуть"}
+              aria-expanded={open}
+              onClick={() => setTasksOpen(!open)}
+            >
+              ▾
+            </button>
+          </div>
+          {open && (
+            <div className="layout__subnav">
+              {item.subs.map((sub) => (
+                <NavLink
+                  key={sub.to}
+                  to={sub.to}
+                  end
+                  className={({ isActive }) => `layout__sublink ${isActive ? "is-active" : ""}`}
+                  style={{ "--dot": sub.dot }}
+                >
+                  <i />
+                  {sub.label}
+                </NavLink>
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    }
+    return (
+      <NavLink key={item.to} to={item.to} className={({ isActive }) => `layout__link ${isActive ? "layout__link--active" : ""}`}>
+        <Icon name={item.icon} size={18} />
+        {item.label}
+        {item.badge > 0 && <span className="layout__badge">{item.badge}</span>}
+      </NavLink>
+    );
+  };
 
   return (
     <div className="layout">

@@ -13,6 +13,8 @@ import { HttpError } from "./http.mjs";
 import { leads } from "./leads.mjs";
 import { answerCallback, clean, escapeHtml, telegram } from "./telegram.mjs";
 import { createCollection } from "./store.mjs";
+import { filesOf, removeFilesOf } from "./files.mjs";
+import { projectExists } from "./projects.mjs";
 
 export const tasks = createCollection("tasks.json");
 
@@ -50,6 +52,14 @@ export function publicTask(task) {
     assigneeId: task.assigneeId ?? null,
     watchers: Array.isArray(task.watchers) ? task.watchers : [],
     subtasks: Array.isArray(task.subtasks) ? task.subtasks : [],
+    projectId: task.projectId && projectExists(task.projectId) ? task.projectId : null,
+    pmId: task.pmId ?? null,
+    call: Boolean(task.call),
+    comments: Array.isArray(task.comments) ? task.comments : [],
+    timeSpent: task.timeSpent || 0,
+    timerStartedAt: task.timerStartedAt || null,
+    timerBy: task.timerBy || null,
+    files: filesOf("task", task.id),
     done: CLOSED.has(status),
     doneAt: task.doneAt || null,
     doneBy: task.doneBy || null,
@@ -137,6 +147,12 @@ function leadHistory(leadId, entry, user) {
   });
 }
 
+function validProject(id) {
+  if (!id) return null;
+  if (!projectExists(Number(id))) throw new HttpError(400, "Проект не найден");
+  return Number(id);
+}
+
 function validLead(id) {
   if (!id) return null;
   const lead = leads.get(Number(id));
@@ -162,6 +178,12 @@ export function createTask(body, user) {
     assigneeId: validAssignee(body.assigneeId ?? user.id),
     watchers: validWatchers(body.watchers),
     subtasks: cleanSubtasks(body.subtasks),
+    projectId: validProject(body.projectId),
+    pmId: validAssignee(body.pmId),
+    call: Boolean(body.call),
+    comments: [],
+    // таймер, запущений у чернетці нової задачі
+    timeSpent: Math.max(0, Math.min(Math.floor(Number(body.timeSpent) || 0), 1000 * 3600)),
     done: CLOSED.has(status),
     createdBy: { userId: user.id, name: user.name },
     createdAt: now(),
@@ -188,6 +210,9 @@ export function updateTask(id, body, user) {
   if ("watchers" in body) patch.watchers = validWatchers(body.watchers);
   if ("subtasks" in body) patch.subtasks = cleanSubtasks(body.subtasks);
   if ("leadId" in body) patch.leadId = validLead(body.leadId);
+  if ("projectId" in body) patch.projectId = validProject(body.projectId);
+  if ("pmId" in body) patch.pmId = validAssignee(body.pmId);
+  if ("call" in body) patch.call = Boolean(body.call);
   // старий спосіб: done → колонка «Готово» / «To Do»
   let status = "status" in body ? body.status : "done" in body ? (body.done ? "done" : "todo") : undefined;
   if (status !== undefined && !TASK_STATUSES.includes(status)) throw new HttpError(400, "Неизвестный статус задачи");
@@ -223,6 +248,84 @@ export function deleteTask(id, user) {
   tasks.update(id, (t) => {
     t.deleted = true;
     t.updatedAt = now();
+  });
+  removeFilesOf("task", task.id);
+}
+
+export function getTask(id) {
+  const task = tasks.get(id);
+  if (!task || task.deleted) throw new HttpError(404, "Задача не найдена");
+  return task;
+}
+
+// ---------- таймер ----------
+const elapsed = (task) => (task.timerStartedAt ? Math.max(0, Math.floor((Date.now() - Date.parse(task.timerStartedAt)) / 1000)) : 0);
+
+export function taskTimer(id, action, user) {
+  const task = getTask(id);
+  if (!["start", "stop", "reset"].includes(action)) throw new HttpError(400, "Неизвестное действие таймера");
+  return tasks.update(task.id, (t) => {
+    if (action === "start" && !t.timerStartedAt) {
+      t.timerStartedAt = now();
+      t.timerBy = { userId: user.id, name: user.name };
+    }
+    if (action === "stop" && t.timerStartedAt) {
+      t.timeSpent = (t.timeSpent || 0) + elapsed(t);
+      t.timerStartedAt = null;
+      t.timerBy = null;
+    }
+    if (action === "reset") {
+      t.timeSpent = 0;
+      t.timerStartedAt = null;
+      t.timerBy = null;
+    }
+  });
+}
+
+// ---------- коментарі з @згадками ----------
+export async function addComment(id, body, user) {
+  const task = getTask(id);
+  const text = clean(body.text, 4000);
+  if (!text) throw new HttpError(400, "Пустой комментарий");
+  const mentions = (Array.isArray(body.mentions) ? body.mentions : [])
+    .map(Number)
+    .filter((uid, i, arr) => arr.indexOf(uid) === i && users.get(uid) && !users.get(uid).disabled)
+    .slice(0, 20);
+  const comment = {
+    id: crypto.randomBytes(6).toString("hex"),
+    userId: user.id,
+    name: user.name,
+    text,
+    mentions,
+    at: now(),
+  };
+  const updated = tasks.update(task.id, (t) => {
+    t.comments = [...(t.comments || []), comment].slice(-300);
+  });
+  // повідомлення в Telegram тим, кого відмітили
+  if (BOT_TOKEN) {
+    for (const uid of mentions) {
+      if (uid === user.id) continue;
+      const chatId = users.get(uid)?.telegramChatId;
+      if (!chatId) continue;
+      telegram("sendMessage", {
+        chat_id: chatId,
+        text: `💬 <b>${escapeHtml(user.name)}</b> отметил(а) вас в задаче «${escapeHtml(task.title)}»:\n${escapeHtml(text.slice(0, 1000))}\n<a href="${ADMIN_URL}/tasks?task=${task.id}">Открыть задачу</a>`,
+        parse_mode: "HTML",
+        disable_web_page_preview: true,
+      }).catch((error) => console.error(`[tasks] упоминание #${task.id} → ${uid}:`, error.message));
+    }
+  }
+  return updated;
+}
+
+export function deleteComment(id, commentId, user) {
+  const task = getTask(id);
+  const comment = (task.comments || []).find((c) => c.id === commentId);
+  if (!comment) throw new HttpError(404, "Комментарий не найден");
+  if (user.role !== "admin" && comment.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
+  return tasks.update(task.id, (t) => {
+    t.comments = t.comments.filter((c) => c.id !== commentId);
   });
 }
 
@@ -309,7 +412,7 @@ function reminderText(task) {
   }
   if (task.subtitle || task.notes) lines.push(escapeHtml(task.subtitle || task.notes));
   if (assignee && !assignee.telegramChatId) lines.push(`Для: ${escapeHtml(assignee.name)}`);
-  lines.push(`<a href="${ADMIN_URL}/${lead ? `leads/${lead.id}` : "tasks"}">Открыть в панели</a>`);
+  lines.push(`<a href="${ADMIN_URL}/tasks?task=${task.id}">Открыть задачу</a>${lead ? ` · <a href="${ADMIN_URL}/leads/${lead.id}">заявку</a>` : ""}`);
   return lines.join("\n");
 }
 

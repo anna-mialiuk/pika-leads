@@ -23,6 +23,7 @@ import {
   otpauthUrl,
   passwordProblem,
   publicUser,
+  POSITIONS,
   revokeSession,
   userFromSession,
   userFromTicket,
@@ -33,7 +34,32 @@ import {
 import { HttpError, clientIp, cookieHeader, parseCookies, readBody, send } from "./http.mjs";
 import { addComment, createLead, deleteLead, leads, publicLead, setAmount, setManager, setStatus } from "./leads.mjs";
 import { saveTracking, trackingInfo } from "./tracking.mjs";
-import { activeTasks, createTask, deleteTask, publicTask, telegramLink, telegramUnlink, updateTask } from "./tasks.mjs";
+import {
+  activeTasks,
+  addComment as addTaskComment,
+  createTask,
+  deleteComment,
+  deleteTask,
+  getTask,
+  publicTask,
+  taskTimer,
+  telegramLink,
+  telegramUnlink,
+  updateTask,
+} from "./tasks.mjs";
+import { removeFile, saveUpload, sendFile } from "./files.mjs";
+import {
+  activeProjects,
+  addCall,
+  canManageProject,
+  createProject,
+  deleteCall,
+  deleteProject,
+  getProject,
+  publicProject,
+  updateCall,
+  updateProject,
+} from "./projects.mjs";
 import { LEAD_TYPES, STATUSES, isStatus } from "./statuses.mjs";
 import { clean } from "./telegram.mjs";
 import { requestReset, resetAvailable, resetPassword } from "./reset.mjs";
@@ -253,6 +279,7 @@ route("GET", "/meta", {}, ({ res }) =>
     statuses: STATUSES.map(({ code, label, emoji, color, final }) => ({ code, label, emoji, color, final })),
     types: LEAD_TYPES,
     roles: ROLES,
+    positions: POSITIONS,
   }),
 );
 
@@ -369,6 +396,8 @@ route("PATCH", "/users/(\\d+)", { admin: true }, ({ res, body, user, params }) =
   const updated = users.update(target.id, (u) => {
     if (typeof body.name === "string" && body.name.trim()) u.name = clean(body.name, 80);
     if (body.role) u.role = body.role;
+    if ("position" in body) u.position = POSITIONS.includes(body.position) ? body.position : "";
+    if ("platform" in body) u.platform = clean(body.platform, 30);
     if (typeof body.disabled === "boolean") {
       u.disabled = body.disabled;
       if (body.disabled) u.tokenVersion = (u.tokenVersion || 0) + 1;
@@ -470,6 +499,73 @@ route("DELETE", "/tasks/(\\d+)", {}, ({ res, user, params }) => {
   return send(res, 200, { ok: true });
 });
 
+route("POST", "/tasks/(\\d+)/timer", {}, ({ res, body, user, params }) =>
+  send(res, 200, { task: publicTask(taskTimer(Number(params[0]), body.action, user)) }),
+);
+
+route("POST", "/tasks/(\\d+)/comments", {}, async ({ res, body, user, params }) =>
+  send(res, 201, { task: publicTask(await addTaskComment(Number(params[0]), body, user)) }),
+);
+
+route("DELETE", "/tasks/(\\d+)/comments/([a-f0-9]{6,20})", {}, ({ res, user, params }) =>
+  send(res, 200, { task: publicTask(deleteComment(Number(params[0]), params[1], user)) }),
+);
+
+// ---------- файли задач і проектів ----------
+route("POST", "/tasks/(\\d+)/files", { raw: true }, async ({ req, res, user, params }) => {
+  const task = getTask(Number(params[0]));
+  await saveUpload(req, { ownerType: "task", ownerId: task.id, user });
+  return send(res, 201, { task: publicTask(getTask(task.id)) });
+});
+
+route("POST", "/projects/(\\d+)/files", { raw: true }, async ({ req, res, user, params }) => {
+  const project = getProject(Number(params[0]));
+  await saveUpload(req, { ownerType: "project", ownerId: project.id, user });
+  return send(res, 201, { project: publicProject(getProject(project.id)) });
+});
+
+// завантаження за посиланням <a download> — без X-Requested-With (нічого не змінює; cookie SameSite=Strict)
+route("GET", "/files/(\\d+)", { image: true }, ({ res, params }) => sendFile(res, Number(params[0])));
+
+route("DELETE", "/files/(\\d+)", {}, ({ res, user, params }) => {
+  const record = removeFile(Number(params[0]), user, (f) => {
+    if (f.ownerType !== "project") return false;
+    try {
+      return canManageProject(getProject(f.ownerId), user);
+    } catch {
+      return false;
+    }
+  });
+  if (record.ownerType === "task") return send(res, 200, { task: publicTask(getTask(record.ownerId)) });
+  return send(res, 200, { project: publicProject(getProject(record.ownerId)) });
+});
+
+// ---------- проекти ----------
+route("GET", "/projects", {}, ({ res }) => send(res, 200, { projects: activeProjects() }));
+
+route("POST", "/projects", {}, ({ res, body, user }) => send(res, 201, { project: createProject(body, user) }));
+
+route("PATCH", "/projects/(\\d+)", {}, ({ res, body, user, params }) =>
+  send(res, 200, { project: updateProject(Number(params[0]), body, user) }),
+);
+
+route("DELETE", "/projects/(\\d+)", {}, ({ res, user, params }) => {
+  deleteProject(Number(params[0]), user);
+  return send(res, 200, { ok: true });
+});
+
+route("POST", "/projects/(\\d+)/calls", {}, ({ res, body, user, params }) =>
+  send(res, 201, { project: addCall(Number(params[0]), body, user) }),
+);
+
+route("PATCH", "/projects/(\\d+)/calls/([a-f0-9]{6,20})", {}, ({ res, body, user, params }) =>
+  send(res, 200, { project: updateCall(Number(params[0]), params[1], body, user) }),
+);
+
+route("DELETE", "/projects/(\\d+)/calls/([a-f0-9]{6,20})", {}, ({ res, user, params }) =>
+  send(res, 200, { project: deleteCall(Number(params[0]), params[1], user) }),
+);
+
 // Telegram для нагадувань: посилання на бота з одноразовим кодом
 route("POST", "/me/telegram", {}, async ({ res, user }) => send(res, 200, await telegramLink(user)));
 
@@ -527,7 +623,8 @@ export async function handleAdmin(req, res) {
       if (!user) return send(res, 401, { error: "Требуется вход" });
       if (r.admin && user.role !== "admin") return send(res, 403, { error: "Недостаточно прав" });
     }
-    const body = ["POST", "PATCH", "PUT"].includes(req.method) ? await readBody(req, r.bodyLimit) : {};
+    // raw — тіло читає сам обробник (завантаження файлів)
+    const body = r.raw ? {} : ["POST", "PATCH", "PUT"].includes(req.method) ? await readBody(req, r.bodyLimit) : {};
     await r.handler({ req, res, body, user, params: m.slice(1), query: url.searchParams });
   } catch (error) {
     const status = error.status || 500;

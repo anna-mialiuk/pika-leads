@@ -254,6 +254,9 @@ export const normalizeEmail = (email) => String(email || "").trim().toLowerCase(
 
 export const findUserByEmail = (email) => users.find((u) => u.email === normalizeEmail(email));
 
+// посада в команді (для проектів: байєри окремо від решти команди)
+export const POSITIONS = ["Руководитель", "Проект-менеджер", "Байер", "Менеджер", "Дизайнер", "Разработчик", "SEO", "Другое"];
+
 export const publicUser = (user) => ({
   id: user.id,
   email: user.email,
@@ -265,6 +268,8 @@ export const publicUser = (user) => ({
   createdAt: user.createdAt,
   lastLoginAt: user.lastLoginAt || null,
   telegram: Boolean(user.telegramChatId),
+  position: user.position || "",
+  platform: user.platform || "",
 });
 
 export async function createUser({ email, name, role = "manager", password }) {

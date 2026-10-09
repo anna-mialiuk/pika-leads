@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
-import { api } from "./api";
+import { api, upload } from "./api";
 import { useAuth } from "./auth";
 
 /**
@@ -65,6 +65,21 @@ export function TasksProvider({ children }) {
     setTasks((prev) => prev.filter((t) => t.id !== id));
   }, []);
 
+  const act = useCallback(async (path, options) => {
+    const { task } = await api(path, options);
+    replace(task);
+    return task;
+  }, []);
+  const timer = useCallback((id, action) => act(`/tasks/${id}/timer`, { method: "POST", body: { action } }), [act]);
+  const comment = useCallback((id, text, mentions) => act(`/tasks/${id}/comments`, { method: "POST", body: { text, mentions } }), [act]);
+  const deleteComment = useCallback((id, commentId) => act(`/tasks/${id}/comments/${commentId}`, { method: "DELETE" }), [act]);
+  const removeFile = useCallback((fileId) => act(`/files/${fileId}`, { method: "DELETE" }), [act]);
+  const addFile = useCallback(async (id, file) => {
+    const { task } = await upload(`/tasks/${id}/files`, file);
+    replace(task);
+    return task;
+  }, []);
+
   // лічильник у меню: мої невиконані з терміном до кінця сьогодні
   const myDueCount = useMemo(() => {
     const endOfDay = new Date(tick);
@@ -72,7 +87,7 @@ export function TasksProvider({ children }) {
     return tasks.filter((t) => !t.done && t.assigneeId === user?.id && new Date(t.dueAt) <= endOfDay).length;
   }, [tasks, user, tick]);
 
-  return <TasksContext.Provider value={{ tasks, loaded, reload, create, update, remove, myDueCount }}>{children}</TasksContext.Provider>;
+  return <TasksContext.Provider value={{ tasks, loaded, reload, create, update, remove, myDueCount, timer, comment, deleteComment, addFile, removeFile }}>{children}</TasksContext.Provider>;
 }
 
 export const useTasks = () => useContext(TasksContext);
@@ -195,3 +210,15 @@ export function sanitizeHtml(html) {
 
 /** Порожній опис редактора («<br>», «<p></p>») → "" */
 export const isBlankHtml = (html) => !String(html || "").replace(/<br\s*\/?>|<\/?(p|div)>|&nbsp;|\s/gi, "");
+
+/** «01:02:03» */
+export const formatHMS = (seconds) => {
+  const s = Math.max(0, Math.floor(seconds));
+  return `${pad(Math.floor(s / 3600))}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
+};
+
+/** Дата задачі для календаря / Ганта: «YYYY-MM-DD» за місцевим часом */
+export const localDay = (iso) => {
+  const d = new Date(iso);
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+};

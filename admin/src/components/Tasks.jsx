@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import Icon from "./Icon";
 import { Modal } from "./ui";
-import { api } from "../lib/api";
+import { api, fileIcon, fileUrl, formatSize } from "../lib/api";
+import { initials, useProjects } from "../lib/projects";
 import { useAuth } from "../lib/auth";
 import { useMeta } from "../lib/meta";
 import {
@@ -13,6 +14,7 @@ import {
   TASK_COLUMNS,
   TITLE_PRESETS,
   formatDue,
+  formatHMS,
   formatShort,
   isBlankHtml,
   isOverdue,
@@ -27,11 +29,13 @@ import "./Tasks.css";
 
 export function TaskCard({ task, onOpen, draggable = false, onDragStart, onDragEnd, showLead = true }) {
   const { userById, statusByCode } = useMeta();
+  const { byId: projectById } = useProjects();
   const column = COLUMN_BY_KEY[task.status] || TASK_COLUMNS[0];
   const priority = PRIORITY_BY_KEY[task.priority] || PRIORITY_BY_KEY.medium;
   const overdue = isOverdue(task);
   const assignee = task.assigneeId ? userById[task.assigneeId] : null;
   const subsDone = task.subtasks.filter((s) => s.done).length;
+  const project = task.projectId ? projectById[task.projectId] : null;
 
   return (
     <div
@@ -53,6 +57,12 @@ export function TaskCard({ task, onOpen, draggable = false, onDragStart, onDragE
         </span>
       </div>
       {overdue && <div className="tcard__overdue">⚠ Просрочено</div>}
+      {project && (
+        <div className="tcard__project">
+          <i style={{ background: project.color }} />
+          {project.name}
+        </div>
+      )}
       {showLead && task.lead && (
         <div className="tcard__project">
           <i style={{ background: statusByCode[task.lead.status]?.color || "#8a8f98" }} />#{task.lead.id} {task.lead.name}
@@ -175,32 +185,301 @@ function RichEditor({ initial, ref: editorRef }) {
 /* ================= вікно задачі ================= */
 
 const newSubId = () => `s${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+const timeOf = (iso) => new Date(iso).toLocaleString("ru-RU", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+const dayDispShort = (iso) => (iso ? iso.split("-").reverse().join(".") : "—");
 
-/**
- * Створення / редагування задачі — як у макеті.
- * task — існуюча задача; defaults — початкові значення нової (status, leadId, assigneeId).
- */
-export function TaskModal({ task = null, defaults = {}, onClose }) {
+/** Таймер задачі: у збереженої — на сервері (видно всім), у нової — локально до збереження */
+const draftTotal = (draft) => draft.seconds + (draft.start ? Math.floor((Date.now() - draft.start) / 1000) : 0);
+
+function TaskTimer({ task, draft, setDraft }) {
+  const { user } = useAuth();
+  const { timer } = useTasks();
+  const [now, setNow] = useState(() => Date.now());
+  const [error, setError] = useState("");
+  const running = task ? Boolean(task.timerStartedAt) : Boolean(draft.start);
+
+  useEffect(() => {
+    if (!running) return undefined;
+    const id = setInterval(() => setNow(Date.now()), 500);
+    return () => clearInterval(id);
+  }, [running]);
+
+  const seconds = task
+    ? task.timeSpent + (task.timerStartedAt ? Math.max(0, (now - Date.parse(task.timerStartedAt)) / 1000) : 0)
+    : draft.seconds + (draft.start ? Math.max(0, (now - draft.start) / 1000) : 0);
+
+  const run = (action) => {
+    setError("");
+    if (task) return timer(task.id, action).catch((e) => setError(e.message));
+    if (action === "start") {
+      setNow(Date.now());
+      setDraft((d) => ({ ...d, start: Date.now() }));
+    }
+    if (action === "stop") setDraft((d) => ({ seconds: draftTotal(d), start: null }));
+    if (action === "reset") setDraft({ seconds: 0, start: null });
+    return null;
+  };
+
+  return (
+    <>
+      <div className="tm-timer">
+        <div className="tm-timer__time">{formatHMS(seconds)}</div>
+        {task?.timerBy && task.timerBy.userId !== user.id && <div className="tm-timer__who">идёт · {task.timerBy.name}</div>}
+        <div className="tm-timer__btns">
+          {running ? (
+            <button type="button" className="tm-timer__btn is-stop" onClick={() => run("stop")}>
+              ⏸ Пауза
+            </button>
+          ) : (
+            <button type="button" className="tm-timer__btn is-start" onClick={() => run("start")}>
+              ▶ Старт
+            </button>
+          )}
+          <button
+            type="button"
+            className="tm-timer__btn is-reset"
+            onClick={() => (seconds < 60 || window.confirm("Сбросить учтённое время?")) && run("reset")}
+          >
+            Сброс
+          </button>
+        </div>
+      </div>
+      {error && <div className="field-error">⚠ {error}</div>}
+    </>
+  );
+}
+
+/** Коментарі: @згадка надсилає повідомлення в Telegram */
+function TaskComments({ task, drafts, setDrafts }) {
   const { user } = useAuth();
   const { users, userById } = useMeta();
-  const { create, update, remove } = useTasks();
+  const { comment, deleteComment } = useTasks();
+  const [text, setText] = useState("");
+  const [mentions, setMentions] = useState([]);
+  const inputRef = useRef(null);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const team = users.filter((u) => !u.disabled);
+  const list = task ? task.comments : drafts;
+
+  const mention = (u) => {
+    const next = `${text.replace(/\s*$/, "")}${text.trim() ? " " : ""}@${u.name} `;
+    setText(next);
+    setMentions((prev) => (prev.includes(u.id) ? prev : [...prev, u.id]));
+    // курсор — у кінець, щоб одразу писати далі
+    inputRef.current?.focus();
+    requestAnimationFrame(() => inputRef.current?.setSelectionRange(next.length, next.length));
+  };
+
+  const send = async () => {
+    const value = text.trim();
+    if (!value) return;
+    // згадка лишається, лише якщо «@Ім'я» досі в тексті
+    const ids = [...new Set([...mentions, ...team.filter((u) => value.includes(`@${u.name}`)).map((u) => u.id)])].filter((id) =>
+      value.includes(`@${userById[id]?.name}`),
+    );
+    setError("");
+    if (!task) {
+      setDrafts((prev) => [...prev, { id: newSubId(), userId: user.id, name: user.name, text: value, mentions: ids, at: new Date().toISOString(), draft: true }]);
+      setText("");
+      setMentions([]);
+      return;
+    }
+    setBusy(true);
+    try {
+      await comment(task.id, value, ids);
+      setText("");
+      setMentions([]);
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const remove = (c) => {
+    if (!task) return setDrafts((prev) => prev.filter((x) => x.id !== c.id));
+    if (!window.confirm("Удалить комментарий?")) return null;
+    return deleteComment(task.id, c.id).catch((e) => setError(e.message));
+  };
+
+  return (
+    <>
+      {list.length > 0 && (
+        <div className="tm-comments">
+          {list.map((c) => (
+            <div key={c.id} className="tm-comment">
+              <div className="tm-comment__av">{initials(c.name)}</div>
+              <div className="tm-comment__body">
+                <div className="tm-comment__head">
+                  <span className="tm-comment__author">{c.name}</span>
+                  <span className="tm-comment__time">{c.draft ? "отправится при сохранении" : timeOf(c.at)}</span>
+                  {(c.userId === user.id || user.role === "admin") && (
+                    <button type="button" className="tm-comment__del" aria-label="Удалить комментарий" onClick={() => remove(c)}>
+                      ✕
+                    </button>
+                  )}
+                </div>
+                <div className="tm-comment__text">{c.text}</div>
+                {c.mentions?.length > 0 && (
+                  <div className="tm-comment__mentions">
+                    {c.mentions.map((id) => (
+                      <span key={id}>🔔 {userById[id]?.name || "сотрудник"} уведомлён</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="tm-mention">
+        <span>Отметить:</span>
+        {team
+          .filter((u) => u.id !== user.id)
+          .map((u) => (
+            <button key={u.id} type="button" className="tm-mention__chip" onClick={() => mention(u)}>
+              @{u.name}
+            </button>
+          ))}
+      </div>
+      <div className="tm-addsub tm-addsub--comment">
+        <input
+          ref={inputRef}
+          className="tm-input"
+          placeholder="Комментарий… (@имя чтобы отметить)"
+          value={text}
+          disabled={busy}
+          onChange={(e) => setText(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault();
+              send();
+            }
+          }}
+        />
+        <button type="button" className="tm-send" onClick={send} disabled={busy}>
+          Отправить
+        </button>
+      </div>
+      {error && <div className="field-error">⚠ {error}</div>}
+    </>
+  );
+}
+
+/** Вкладення: у збереженої — одразу на сервер, у нової — після збереження */
+function TaskFiles({ task, drafts, setDrafts, call, onToggleCall }) {
+  const { addFile, removeFile } = useTasks();
+  const [busy, setBusy] = useState(0);
+  const [error, setError] = useState("");
+
+  const pick = async (event) => {
+    const picked = [...(event.target.files || [])];
+    event.target.value = "";
+    if (!picked.length) return;
+    setError("");
+    const tooBig = picked.find((f) => f.size > 25 * 1024 * 1024);
+    if (tooBig) return setError(`«${tooBig.name}» больше 25 МБ`);
+    if (!task) return setDrafts((prev) => [...prev, ...picked]);
+    for (const file of picked) {
+      setBusy((n) => n + 1);
+      try {
+        await addFile(task.id, file);
+      } catch (e) {
+        setError(e.message);
+      } finally {
+        setBusy((n) => n - 1);
+      }
+    }
+    return null;
+  };
+
+  const files = task ? task.files : drafts.map((f, index) => ({ id: `d${index}`, name: f.name, size: f.size, draft: index }));
+
+  return (
+    <>
+      <div className="tm-actions-row">
+        <label className="tm-attach">
+          <span>📎</span>
+          {busy ? "Загружаем…" : "Прикрепить файл"}
+          <input type="file" multiple onChange={pick} hidden />
+        </label>
+        <button type="button" className={`tm-callbtn ${call ? "is-on" : ""}`} onClick={onToggleCall} aria-pressed={call}>
+          <Icon name="phone" size={15} />
+          {call ? "✓ Звонок запланирован" : "Запланировать звонок"}
+        </button>
+      </div>
+      {files.length > 0 && (
+        <div className="tm-files">
+          {files.map((f) => (
+            <div key={f.id} className="tm-file">
+              <span className="tm-file__icon">{fileIcon(f.name)}</span>
+              {f.draft === undefined ? (
+                <a className="tm-file__name" href={fileUrl(f.id)} download={f.name}>
+                  {f.name}
+                </a>
+              ) : (
+                <span className="tm-file__name">{f.name}</span>
+              )}
+              <span className="tm-file__size">{formatSize(f.size)}</span>
+              <button
+                type="button"
+                className="tm-file__del"
+                aria-label="Удалить файл"
+                onClick={() =>
+                  f.draft !== undefined
+                    ? setDrafts((prev) => prev.filter((_, i) => i !== f.draft))
+                    : window.confirm(`Удалить «${f.name}»?`) && removeFile(f.id).catch((e) => setError(e.message))
+                }
+              >
+                ✕
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+      {error && <div className="field-error">⚠ {error}</div>}
+    </>
+  );
+}
+
+/**
+ * Створення / редагування задачі — повністю як у макеті.
+ * task — існуюча задача; defaults — початкові значення нової (status, leadId, projectId, assigneeId, title).
+ */
+export function TaskModal({ task: initialTask = null, defaults = {}, onClose }) {
+  const { user } = useAuth();
+  const { users, userById } = useMeta();
+  const { tasks, create, update, remove, comment, addFile } = useTasks();
+  const { projects, byId: projectById } = useProjects();
   const editorRef = useRef(null);
+  // свіжа версія задачі (коментарі, файли, таймер оновлюються одразу)
+  const task = initialTask ? tasks.find((t) => t.id === initialTask.id) || initialTask : null;
   const team = users.filter((u) => !u.disabled || u.id === task?.assigneeId);
 
-  const [form, setForm] = useState(() => ({
-    title: task?.title ?? defaults.title ?? "",
-    subtitle: task?.subtitle ?? "",
-    status: task?.status ?? defaults.status ?? "todo",
-    leadId: task?.leadId ?? defaults.leadId ?? null,
-    assigneeId: task?.assigneeId ?? defaults.assigneeId ?? user.id,
-    priority: task?.priority ?? "medium",
-    startAt: task?.startAt ?? "",
-    due: toLocalInput(task ? new Date(task.dueAt) : DUE_PRESETS[2].get()),
-    watchers: task?.watchers ?? [],
-    subtasks: task?.subtasks ?? [],
-  }));
+  const [form, setForm] = useState(() => {
+    const projectId = initialTask?.projectId ?? defaults.projectId ?? null;
+    return {
+      title: initialTask?.title ?? defaults.title ?? "",
+      subtitle: initialTask?.subtitle ?? "",
+      status: initialTask?.status ?? defaults.status ?? "todo",
+      projectId,
+      pmId: initialTask?.pmId ?? (projectId ? projectById[projectId]?.pmId : null) ?? null,
+      leadId: initialTask?.leadId ?? defaults.leadId ?? null,
+      assigneeId: initialTask?.assigneeId ?? defaults.assigneeId ?? user.id,
+      priority: initialTask?.priority ?? "medium",
+      startAt: initialTask?.startAt ?? "",
+      due: toLocalInput(initialTask ? new Date(initialTask.dueAt) : defaults.due || DUE_PRESETS[2].get()),
+      watchers: initialTask?.watchers ?? [],
+      subtasks: initialTask?.subtasks ?? [],
+      call: initialTask?.call ?? false,
+    };
+  });
   const [newSub, setNewSub] = useState("");
   const [leads, setLeads] = useState(null);
+  const [draftComments, setDraftComments] = useState([]);
+  const [draftFiles, setDraftFiles] = useState([]);
+  const [draftTimer, setDraftTimer] = useState({ seconds: 0, start: null });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const set = (patch) => setForm((prev) => ({ ...prev, ...patch }));
@@ -220,6 +499,7 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
   }, [leads, form.leadId, task]);
 
   const leadName = (lead) => lead.data?.name || lead.data?.phone_full || lead.data?.email || lead.name || "Без имени";
+  const projectOptions = projects.filter((p) => p.status !== "done" || p.id === form.projectId);
 
   const addSub = () => {
     const title = newSub.trim();
@@ -229,16 +509,25 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
   };
   const patchSub = (id, patch) => set({ subtasks: form.subtasks.map((s) => (s.id === id ? { ...s, ...patch } : s)) });
 
+  // проект → підставляємо його PM, якщо PM ще не вибрано
+  const pickProject = (value) => {
+    const projectId = value ? Number(value) : null;
+    set({ projectId, pmId: form.pmId ?? (projectId ? projectById[projectId]?.pmId ?? null : null) });
+  };
+
   const save = async () => {
     if (!form.title.trim()) return setError("Напишите название задачи");
     const due = new Date(form.due);
     if (!form.due || Number.isNaN(due.getTime())) return setError("Укажите дедлайн");
+    if (form.startAt && form.startAt > form.due.slice(0, 10)) return setError("Дата старта позже дедлайна");
     const html = editorRef.current.innerHTML;
     const body = {
       title: form.title.trim(),
       subtitle: form.subtitle.trim(),
       description: isBlankHtml(html) ? "" : sanitizeHtml(html),
       status: form.status,
+      projectId: form.projectId,
+      pmId: form.pmId,
       leadId: form.leadId,
       assigneeId: form.assigneeId,
       priority: form.priority,
@@ -246,12 +535,18 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
       dueAt: due.toISOString(),
       watchers: form.watchers.filter((id) => id !== form.assigneeId),
       subtasks: form.subtasks,
+      call: form.call,
     };
     setBusy(true);
     setError("");
     try {
-      if (task) await update(task.id, body);
-      else await create(body);
+      if (task) {
+        await update(task.id, body);
+      } else {
+        const created = await create({ ...body, timeSpent: draftTotal(draftTimer) });
+        for (const c of draftComments) await comment(created.id, c.text, c.mentions);
+        for (const file of draftFiles) await addFile(created.id, file);
+      }
       onClose();
     } catch (saveError) {
       setError(saveError.message);
@@ -261,7 +556,7 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
 
   const canDelete = task && (user.role === "admin" || task.createdBy?.userId === user.id);
   const del = async () => {
-    if (!window.confirm("Удалить задачу?")) return;
+    if (!window.confirm("Удалить задачу? Файлы задачи тоже удалятся.")) return;
     try {
       await remove(task.id);
       onClose();
@@ -269,6 +564,17 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
       setError(deleteError.message);
     }
   };
+
+  const userSelect = (value, onChange, { empty = null, self = true } = {}) => (
+    <select className="tm-input" value={value ?? ""} onChange={(e) => onChange(e.target.value ? Number(e.target.value) : null)}>
+      {empty && <option value="">{empty}</option>}
+      {team.map((u) => (
+        <option key={u.id} value={u.id}>
+          {self && u.id === user.id ? `${u.name} (я)` : u.name}
+        </option>
+      ))}
+    </select>
+  );
 
   return (
     <Modal title={task ? "Редактирование задачи" : "Новая задача"} onClose={onClose} className="task-modal">
@@ -309,29 +615,23 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
 
         <div className="tm-grid">
           <label className="tm-field">
-            <span className="tm-label">Заявка</span>
-            <select
-              className="tm-input"
-              value={form.leadId ?? ""}
-              onChange={(e) => set({ leadId: e.target.value ? Number(e.target.value) : null })}
-            >
-              <option value="">— без заявки —</option>
-              {leadOptions.map((lead) => (
-                <option key={lead.id} value={lead.id}>
-                  #{lead.id} {leadName(lead)}
+            <span className="tm-label">Проект</span>
+            <select className="tm-input" value={form.projectId ?? ""} onChange={(e) => pickProject(e.target.value)}>
+              <option value="">— без проекта —</option>
+              {projectOptions.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.icon} {p.name}
                 </option>
               ))}
             </select>
           </label>
           <label className="tm-field">
+            <span className="tm-label">Проект-менеджер</span>
+            {userSelect(form.pmId, (pmId) => set({ pmId }), { empty: "— не назначен —", self: false })}
+          </label>
+          <label className="tm-field">
             <span className="tm-label">Ответственный</span>
-            <select className="tm-input" value={form.assigneeId ?? ""} onChange={(e) => set({ assigneeId: Number(e.target.value) })}>
-              {team.map((u) => (
-                <option key={u.id} value={u.id}>
-                  {u.id === user.id ? `${u.name} (я)` : u.name}
-                </option>
-              ))}
-            </select>
+            {userSelect(form.assigneeId, (assigneeId) => set({ assigneeId }))}
           </label>
           <label className="tm-field">
             <span className="tm-label">Приоритет</span>
@@ -347,10 +647,14 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
             <span className="tm-label">Дата старта</span>
             <input className="tm-input" type="date" value={form.startAt || ""} onChange={(e) => set({ startAt: e.target.value })} />
           </label>
-          <label className="tm-field tm-field--wide">
-            <span className="tm-label">Дедлайн · напоминание в Telegram</span>
+          <label className="tm-field">
+            <span className="tm-label">Дедлайн</span>
             <input className="tm-input" type="datetime-local" value={form.due} onChange={(e) => set({ due: e.target.value })} />
           </label>
+        </div>
+        <div className="tm-term">
+          Срок: <b>{dayDispShort(form.startAt)}</b> — <b>{form.due ? `${dayDispShort(form.due.slice(0, 10))} ${form.due.slice(11, 16)}` : "—"}</b>
+          <span className="faint"> · в дедлайн придёт напоминание в Telegram</span>
         </div>
         <div className="tm-presets">
           {DUE_PRESETS.map((preset) => (
@@ -359,6 +663,18 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
             </button>
           ))}
         </div>
+
+        <label className="tm-field">
+          <span className="tm-label">Заявка из CRM</span>
+          <select className="tm-input" value={form.leadId ?? ""} onChange={(e) => set({ leadId: e.target.value ? Number(e.target.value) : null })}>
+            <option value="">— без заявки —</option>
+            {leadOptions.map((lead) => (
+              <option key={lead.id} value={lead.id}>
+                #{lead.id} {leadName(lead)}
+              </option>
+            ))}
+          </select>
+        </label>
 
         <div className="tm-label">Доп. ответственные</div>
         <div className="tm-chips">
@@ -440,9 +756,18 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
           </button>
         </div>
 
+        <div className="tm-label">Таймер задачи</div>
+        <TaskTimer task={task} draft={draftTimer} setDraft={setDraftTimer} />
+
+        <div className="tm-label">Вложения и действия</div>
+        <TaskFiles task={task} drafts={draftFiles} setDrafts={setDraftFiles} call={form.call} onToggleCall={() => set({ call: !form.call })} />
+
+        <div className="tm-label">Комментарии</div>
+        <TaskComments task={task} drafts={draftComments} setDrafts={setDraftComments} />
+
         {task && (
           <div className="tm-info">
-            Создал(а) {task.createdBy?.name || "—"} · {new Date(task.createdAt).toLocaleString("ru-RU", { dateStyle: "short", timeStyle: "short" })}
+            Создал(а) {task.createdBy?.name || "—"} · {timeOf(task.createdAt)}
             {task.doneBy && ` · закрыл(а) ${task.doneBy.name}`}
             {task.assigneeId && !userById[task.assigneeId]?.telegram && " · у ответственного не подключён Telegram"}
           </div>
@@ -452,7 +777,7 @@ export function TaskModal({ task = null, defaults = {}, onClose }) {
 
         <div className="tm-actions">
           <button type="button" className="tm-save" onClick={save}>
-            {busy ? "Сохраняем…" : task ? "Сохранить" : "Создать задачу"}
+            {busy ? "Сохраняем…" : task ? "Сохранить" : "Создать"}
           </button>
           <button type="button" className="tm-btn" onClick={onClose}>
             Отмена

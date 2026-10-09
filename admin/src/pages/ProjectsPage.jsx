@@ -1,0 +1,141 @@
+import { useState } from "react";
+
+import { ProjectDetail, ProjectModal, canManageProject } from "../components/Projects";
+import { TasksHeader, useTaskModal } from "../components/TasksShell";
+import { useAuth } from "../lib/auth";
+import { useMeta } from "../lib/meta";
+import { PROJECT_STATUS, dayDisp, useProjects } from "../lib/projects";
+import { useTasks } from "../lib/tasks";
+
+import "../components/Projects.css";
+
+/** Проекти (як у макеті): картки з прогресом, клік — повна картка проекту */
+function ProjectsPage() {
+  const { user } = useAuth();
+  const { userById } = useMeta();
+  const { projects, loaded, remove } = useProjects();
+  const { tasks } = useTasks();
+  const { modal: taskModal, openTask, openNew } = useTaskModal();
+  const [editing, setEditing] = useState(null); // {project} | {} для нового
+  const [detailId, setDetailId] = useState(null);
+  const [error, setError] = useState("");
+
+  const del = (p) => {
+    if (!window.confirm(`Удалить проект «${p.name}»? Задачи останутся, файлы проекта удалятся.`)) return;
+    setError("");
+    remove(p.id).catch((e) => setError(e.message));
+  };
+
+  const sorted = projects
+    .slice()
+    .sort((a, b) => ["active", "paused", "done"].indexOf(a.status) - ["active", "paused", "done"].indexOf(b.status) || b.id - a.id);
+
+  return (
+    <div className="tboard-page">
+      <TasksHeader action={{ label: "+ Проект", onClick: () => setEditing({}) }} />
+      {error && <div className="alert">⚠ {error}</div>}
+
+      {!loaded ? (
+        <div className="content-loading">
+          <div className="spinner" />
+        </div>
+      ) : sorted.length === 0 ? (
+        <div className="pd-empty pd-empty--page">Проектов пока нет. Создайте первый — задачи можно будет группировать по проектам.</div>
+      ) : (
+        <div className="proj-grid">
+          {sorted.map((p) => {
+            const pTasks = tasks.filter((t) => t.projectId === p.id);
+            const doneCount = pTasks.filter((t) => t.status === "done").length;
+            const progress = pTasks.length ? Math.round((doneCount / pTasks.length) * 100) : 0;
+            const status = PROJECT_STATUS[p.status] || PROJECT_STATUS.active;
+            return (
+              <div
+                key={p.id}
+                className="proj-card"
+                role="button"
+                tabIndex={0}
+                onClick={() => setDetailId(p.id)}
+                onKeyDown={(e) => e.key === "Enter" && setDetailId(p.id)}
+              >
+                <div className="proj-card__head">
+                  <div className="proj-card__name">
+                    <i style={{ background: p.color, boxShadow: `0 0 10px ${p.color}` }} />
+                    {p.name}
+                  </div>
+                  <div className="proj-card__tools">
+                    <span className="proj-card__status" style={{ background: status.bg, color: status.color }}>
+                      {status.label}
+                    </span>
+                    {canManageProject(p, user) && (
+                      <button
+                        type="button"
+                        title="Редактировать"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setEditing({ project: p });
+                        }}
+                      >
+                        ✎
+                      </button>
+                    )}
+                    {(user.role === "admin" || p.createdBy?.userId === user.id) && (
+                      <button
+                        type="button"
+                        title="Удалить"
+                        className="is-del"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          del(p);
+                        }}
+                      >
+                        ✕
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <div className="proj-card__meta">
+                  <span>
+                    Ниша: <b>{p.client || "—"}</b>
+                  </span>
+                  <span>
+                    PM: <b>{userById[p.pmId]?.name || "—"}</b>
+                  </span>
+                  <span>
+                    Срок:{" "}
+                    <b className="mono">
+                      {dayDisp(p.startAt)} — {dayDisp(p.endAt)}
+                    </b>
+                  </span>
+                </div>
+                <div className="proj-card__progress-label">
+                  <span>
+                    {doneCount} из {pTasks.length} задач
+                  </span>
+                  <b>{progress}%</b>
+                </div>
+                <div className="proj-card__bar">
+                  <div style={{ width: `${progress}%`, background: p.color }} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      <div className="tboard-note">Кликните по проекту для полного управления.</div>
+
+      {detailId && (
+        <ProjectDetail
+          projectId={detailId}
+          onClose={() => setDetailId(null)}
+          onEdit={() => setEditing({ project: projects.find((p) => p.id === detailId) })}
+          onOpenTask={openTask}
+          onNewTask={() => openNew({ projectId: detailId })}
+        />
+      )}
+      {editing && <ProjectModal project={editing.project} onClose={() => setEditing(null)} />}
+      {taskModal}
+    </div>
+  );
+}
+
+export default ProjectsPage;
