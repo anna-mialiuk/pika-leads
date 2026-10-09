@@ -82,6 +82,8 @@ function Layout() {
         { to: "/tasks/gantt", label: "Диаграмма Ганта", dot: "#f0a53e" },
         { to: "/tasks/calendar", label: "Календарь", dot: "#5b9bff" },
         { to: "/tasks/projects", label: "Проекты", dot: "#4fd88a" },
+        { to: "/tasks/files", label: "Файлы", dot: "#f0883e" },
+        { to: "/tasks/calls", label: "Звонки", dot: "#b98bff" },
       ],
     },
     { to: "/analytics", icon: "chart", label: "Аналитика" },

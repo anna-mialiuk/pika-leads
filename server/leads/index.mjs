@@ -17,6 +17,7 @@ import { createLead, handleTelegramCallback, migrateLegacyLeads } from "./leads.
 import { isLeadType } from "./statuses.mjs";
 import { clean, startPolling } from "./telegram.mjs";
 import { handleTaskCallback, handleTelegramMessage, startReminders } from "./tasks.mjs";
+import { startMeetingReminders } from "./meetings.mjs";
 
 // ---------- антиспам: не більше N заявок з одного IP за вікно ----------
 const RATE_LIMIT = 5;
@@ -160,4 +161,5 @@ server.listen(PORT, "127.0.0.1", () => {
     );
   }
   startReminders();
+  startMeetingReminders();
 });

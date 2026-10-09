@@ -16,7 +16,7 @@ const FILES_DIR = path.join(DATA_DIR, "files");
 fs.mkdirSync(FILES_DIR, { recursive: true, mode: 0o700 });
 
 export const MAX_FILE = 25 * 1024 * 1024;
-const OWNER_TYPES = new Set(["task", "project"]);
+const OWNER_TYPES = new Set(["task", "project", "library"]);
 
 const cleanName = (raw) => {
   let name = "";
@@ -136,4 +136,75 @@ export function sendFile(res, id) {
     "Content-Security-Policy": "default-src 'none'; sandbox",
   });
   fs.createReadStream(file).pipe(res);
+}
+
+// ---------- посилання на Google Docs / Sheets / папки (розділ «Файлы») ----------
+export const links = createCollection("links.json");
+export const LINK_TYPES = ["doc", "sheet", "folder", "drive"];
+
+export const publicLink = (l) => ({
+  id: l.id,
+  type: l.type,
+  name: l.name,
+  url: l.url,
+  projectId: l.projectId ?? null,
+  by: l.by?.name || "",
+  byId: l.by?.userId ?? null,
+  at: l.at,
+});
+
+export function createLink(body, user, projectExists) {
+  const name = String(body.name ?? "").trim().slice(0, 160);
+  const url = String(body.url ?? "").trim().slice(0, 1000);
+  if (!name) throw new HttpError(400, "Укажите название");
+  if (!/^https:\/\/[^\s"'<>]+$/i.test(url)) throw new HttpError(400, "Вставьте ссылку, начинающуюся с https://");
+  const projectId = body.projectId ? Number(body.projectId) : null;
+  if (projectId && !projectExists(projectId)) throw new HttpError(400, "Проект не найден");
+  const record = links.insert({
+    type: LINK_TYPES.includes(body.type) ? body.type : "drive",
+    name,
+    url,
+    projectId,
+    by: { userId: user.id, name: user.name },
+    at: new Date().toISOString(),
+  });
+  return publicLink(record);
+}
+
+export function removeLink(id, user) {
+  const record = links.get(id);
+  if (!record || record.deleted) throw new HttpError(404, "Ссылка не найдена");
+  if (user.role !== "admin" && record.by?.userId !== user.id) throw new HttpError(403, "Удалить может автор или администратор");
+  links.update(record.id, (l) => {
+    l.deleted = true;
+  });
+}
+
+/** Усі файли для розділу «Файлы»: завантажені (задачі, проекти, бібліотека) + посилання */
+export function allFiles({ taskById, projectExists }) {
+  const uploaded = files
+    .filter((f) => !f.deleted)
+    .map((f) => {
+      let projectId = null;
+      let taskId = null;
+      let taskTitle = "";
+      if (f.ownerType === "project") projectId = f.ownerId;
+      if (f.ownerType === "task") {
+        const task = taskById(f.ownerId);
+        if (!task || task.deleted) return null;
+        taskId = task.id;
+        taskTitle = task.title;
+        projectId = task.projectId || null;
+      }
+      if (projectId && !projectExists(projectId)) {
+        if (f.ownerType === "project") return null;
+        projectId = null;
+      }
+      return { ...publicFile(f), kind: f.ownerType === "task" ? "attach" : "upload", projectId, taskId, taskTitle };
+    })
+    .filter(Boolean);
+  const linked = links
+    .filter((l) => !l.deleted)
+    .map((l) => ({ ...publicLink(l), kind: "link", projectId: l.projectId && projectExists(l.projectId) ? l.projectId : null }));
+  return [...uploaded, ...linked].sort((a, b) => (a.at < b.at ? 1 : -1));
 }

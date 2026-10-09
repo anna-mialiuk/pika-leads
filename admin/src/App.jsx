@@ -15,6 +15,8 @@ import TasksPage from "./pages/TasksPage";
 import TaskGantt from "./pages/TaskGantt";
 import TaskCalendar from "./pages/TaskCalendar";
 import ProjectsPage from "./pages/ProjectsPage";
+import FilesPage from "./pages/FilesPage";
+import CallsPage from "./pages/CallsPage";
 import { ProjectsProvider } from "./lib/projects";
 import { TasksProvider } from "./lib/tasks";
 import { PublishProvider } from "./lib/publish";
@@ -71,6 +73,8 @@ function App() {
         <Route path="/tasks/gantt" element={<TaskGantt />} />
         <Route path="/tasks/calendar" element={<TaskCalendar />} />
         <Route path="/tasks/projects" element={<ProjectsPage />} />
+        <Route path="/tasks/files" element={<FilesPage />} />
+        <Route path="/tasks/calls" element={<CallsPage />} />
         <Route path="/profile" element={<Profile />} />
         {[
           ["/cases", <ContentList collection="cases" key="cases" />],

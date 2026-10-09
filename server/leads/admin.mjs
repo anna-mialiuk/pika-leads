@@ -36,6 +36,7 @@ import { addComment, createLead, deleteLead, leads, publicLead, setAmount, setMa
 import { saveTracking, trackingInfo } from "./tracking.mjs";
 import {
   activeTasks,
+  tasks,
   addComment as addTaskComment,
   createTask,
   deleteComment,
@@ -47,8 +48,10 @@ import {
   telegramUnlink,
   updateTask,
 } from "./tasks.mjs";
-import { removeFile, saveUpload, sendFile } from "./files.mjs";
+import { allFiles, createLink, removeFile, removeLink, saveUpload, sendFile } from "./files.mjs";
+import { activeMeetings, createMeeting, deleteMeeting, updateMeeting } from "./meetings.mjs";
 import {
+  projectExists,
   activeProjects,
   addCall,
   canManageProject,
@@ -537,7 +540,42 @@ route("DELETE", "/files/(\\d+)", {}, ({ res, user, params }) => {
     }
   });
   if (record.ownerType === "task") return send(res, 200, { task: publicTask(getTask(record.ownerId)) });
-  return send(res, 200, { project: publicProject(getProject(record.ownerId)) });
+  if (record.ownerType === "project") return send(res, 200, { project: publicProject(getProject(record.ownerId)) });
+  return send(res, 200, { ok: true });
+});
+
+// ---------- розділ «Файлы» ----------
+route("GET", "/files", {}, ({ res }) =>
+  send(res, 200, { files: allFiles({ taskById: (id) => tasks.get(id), projectExists }) }),
+);
+
+// файл без задачі: у проект (?project=ID) або в загальну бібліотеку
+route("POST", "/files", { raw: true }, async ({ req, res, user, query }) => {
+  const projectId = Number(query.get("project")) || null;
+  if (projectId && !projectExists(projectId)) throw new HttpError(400, "Проект не найден");
+  const file = await saveUpload(req, { ownerType: projectId ? "project" : "library", ownerId: projectId || 0, user });
+  return send(res, 201, { file });
+});
+
+route("POST", "/links", {}, ({ res, body, user }) => send(res, 201, { link: createLink(body, user, projectExists) }));
+
+route("DELETE", "/links/(\\d+)", {}, ({ res, user, params }) => {
+  removeLink(Number(params[0]), user);
+  return send(res, 200, { ok: true });
+});
+
+// ---------- звонки / митинги ----------
+route("GET", "/meetings", {}, ({ res }) => send(res, 200, { meetings: activeMeetings() }));
+
+route("POST", "/meetings", {}, ({ res, body, user }) => send(res, 201, { meeting: createMeeting(body, user) }));
+
+route("PATCH", "/meetings/(\\d+)", {}, ({ res, body, user, params }) =>
+  send(res, 200, { meeting: updateMeeting(Number(params[0]), body, user) }),
+);
+
+route("DELETE", "/meetings/(\\d+)", {}, ({ res, user, params }) => {
+  deleteMeeting(Number(params[0]), user);
+  return send(res, 200, { ok: true });
 });
 
 // ---------- проекти ----------
