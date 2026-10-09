@@ -18,6 +18,8 @@ import { isLeadType } from "./statuses.mjs";
 import { clean, startPolling } from "./telegram.mjs";
 import { handleTaskCallback, handleTelegramMessage, startReminders } from "./tasks.mjs";
 import { startMeetingReminders } from "./meetings.mjs";
+import { startAnalytics } from "./analytics.mjs";
+import { handleShortLink } from "./links.mjs";
 
 // ---------- антиспам: не більше N заявок з одного IP за вікно ----------
 const RATE_LIMIT = 5;
@@ -146,6 +148,8 @@ const server = http.createServer((req, res) => {
   if (pathname.startsWith("/api/admin/")) return handleAdmin(req, res);
   if (req.method === "GET" && pathname === "/api/leads/health") return send(res, 200, { ok: true });
   if (req.method === "POST" && pathname === "/api/leads") return handlePublicLead(req, res);
+  // короткі посилання з UTM-конструктора (Nginx сайту проксіює /go/)
+  if ((req.method === "GET" || req.method === "HEAD") && pathname.startsWith("/go/")) return handleShortLink(req, res);
 
   return send(res, 404, { error: "Not found" });
 });
@@ -162,4 +166,5 @@ server.listen(PORT, "127.0.0.1", () => {
   }
   startReminders();
   startMeetingReminders();
+  startAnalytics();
 });

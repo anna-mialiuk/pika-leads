@@ -35,6 +35,7 @@ import {
 import { HttpError, clientIp, cookieHeader, parseCookies, readBody, send } from "./http.mjs";
 import { addComment, createLead, deleteLead, leads, publicLead, setAmount, setManager, setStatus } from "./leads.mjs";
 import { saveTracking, trackingInfo } from "./tracking.mjs";
+import { registerAnalyticsRoutes } from "./analytics.mjs";
 import {
   activeTasks,
   tasks,
@@ -747,6 +748,9 @@ route("PUT", "/integrations", { admin: true }, ({ res, body }) => {
 });
 
 // ---------- обробник ----------
+// ---------- аналітика (analytics.mjs) ----------
+registerAnalyticsRoutes(route);
+
 export async function handleAdmin(req, res) {
   const url = new URL(req.url, "http://localhost");
   const match = routes

@@ -8,7 +8,8 @@ import Team from "./pages/Team";
 import ContentList from "./pages/ContentList";
 import ContentEditor from "./pages/ContentEditor";
 import Reviews from "./pages/Reviews";
-import Analytics from "./pages/Analytics";
+import AnalyticsPage from "./pages/AnalyticsPage";
+import SharePage from "./pages/SharePage";
 import Seo from "./pages/Seo";
 import Integrations from "./pages/Integrations";
 import TasksPage from "./pages/TasksPage";
@@ -54,6 +55,7 @@ function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/share/:token" element={<SharePage />} />
       <Route
         element={
           <Protected>
@@ -79,7 +81,7 @@ function App() {
             </Protected>
           }
         />
-        <Route path="/analytics" element={<Protected perm="leads"><Analytics /></Protected>} />
+        <Route path="/analytics" element={<Protected perm="leads"><AnalyticsPage /></Protected>} />
         <Route path="/tasks" element={<TasksPage />} />
         <Route path="/tasks/gantt" element={<TaskGantt />} />
         <Route path="/tasks/calendar" element={<TaskCalendar />} />

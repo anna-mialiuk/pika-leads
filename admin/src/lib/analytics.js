@@ -65,6 +65,11 @@ export const pct = (part, total) => (total ? Math.round((part / total) * 100) : 
 
 /** Межі періоду [from, to) і такого ж попереднього (для порівняння) */
 export function periodRange(period, leads, now = Date.now()) {
+  // довільний період: { from, to } — мітки часу, to не включно
+  if (period.from && period.to) {
+    const span = period.to - period.from;
+    return { from: period.from, to: period.to, prev: { from: period.from - span, to: period.from } };
+  }
   const to = startOfDay(now) + DAY;
   if (!period.days) {
     const first = leads.reduce((min, l) => Math.min(min, new Date(l.createdAt).getTime()), now);
