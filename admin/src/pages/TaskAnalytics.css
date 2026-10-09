@@ -96,7 +96,7 @@
 
 .ta-goal__sub {
   margin-bottom: 10px;
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 12px;
   font-weight: 700;
 }
@@ -298,11 +298,11 @@
 }
 
 .ta-green {
-  color: #4fd88a;
+  color: var(--green-ink);
 }
 
 .ta-red {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .ta-ach {
@@ -368,7 +368,7 @@
 }
 
 .ta-ach__item.is-got .ta-ach__status {
-  color: #4fd88a;
+  color: var(--green-ink);
 }
 
 .ta-hang {

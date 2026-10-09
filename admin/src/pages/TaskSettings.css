@@ -177,7 +177,7 @@
 
 .ts-col__del:hover {
   border-color: #ff7d7d;
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .ts-col__lock {
@@ -341,7 +341,7 @@
 }
 
 .ts-bot a {
-  color: var(--accent);
+  color: var(--accent-ink);
   font-weight: 700;
 }
 
@@ -407,7 +407,7 @@
 }
 
 .ts-vcard.is-on .ts-vcard__status {
-  color: #4fd88a;
+  color: var(--green-ink);
 }
 
 .ts-vcard__desc {

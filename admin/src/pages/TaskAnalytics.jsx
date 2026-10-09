@@ -187,17 +187,17 @@ function TaskAnalytics() {
             </div>
             <div>
               <span>{t("Выполнено")}</span>
-              <b style={{ color: "#4fd88a" }}>{stats.done}</b>
+              <b style={{ color: "var(--green-ink)" }}>{stats.done}</b>
               <small>{stats.donePct}{t("% от всех")}</small>
             </div>
             <div>
               <span>{t("Просрочено")}</span>
-              <b style={{ color: stats.overdue ? "#ff7d7d" : "var(--text)" }}>{stats.overdue}</b>
+              <b style={{ color: stats.overdue ? "var(--red-ink)" : "var(--text)" }}>{stats.overdue}</b>
               <small>{stats.overdue ? t("требуют внимания") : t("всё в срок")}</small>
             </div>
             <div>
               <span>{t("Ср. время задачи")}</span>
-              <b style={{ color: "#5b9bff" }}>{stats.avgMinutes ? tt("{0} мин", stats.avgMinutes) : "—"}</b>
+              <b style={{ color: "var(--blue-ink)" }}>{stats.avgMinutes ? tt("{0} мин", stats.avgMinutes) : "—"}</b>
               <small>{t("по таймеру")}</small>
             </div>
           </div>
@@ -332,16 +332,16 @@ function TaskAnalytics() {
               <div className="pd-empty">{t("Зависших задач нет 🎉")}</div>
             ) : (
               <div className="ta-hang">
-                {stats.hanging.map((t) => {
-                  const over = isOverdue(t);
+                {stats.hanging.map((task) => {
+                  const over = isOverdue(task);
                   return (
-                    <button key={t.id} type="button" className="ta-hang__item" onClick={() => openTask(t)}>
+                    <button key={task.id} type="button" className="ta-hang__item" onClick={() => openTask(task)}>
                       <div className="ta-hang__top">
-                        <span>{t.title}</span>
-                        <b style={{ color: over ? "#ff7d7d" : "#FFC629" }}>{over ? t("Просрочена") : t("Высокий приоритет")}</b>
+                        <span>{task.title}</span>
+                        <b style={{ color: over ? "var(--red-ink)" : "var(--accent-ink)" }}>{over ? t("Просрочена") : t("Высокий приоритет")}</b>
                       </div>
                       <div className="ta-hang__sub">
-                        {userById[t.assigneeId]?.name || "—"}{" "}{t("· дедлайн")}{" "}{formatShort(t.dueAt)}
+                        {userById[task.assigneeId]?.name || "—"}{" "}{t("· дедлайн")}{" "}{formatShort(task.dueAt)}
                       </div>
                     </button>
                   );

@@ -10,6 +10,7 @@ import { useTasks } from "../lib/tasks";
 import "../components/Projects.css";
 import { t, tt } from "../lib/i18n";
 import { can } from "../lib/roles";
+import { ink } from "../lib/theme";
 
 /** Проекти (як у макеті): картки з прогресом, клік — повна картка проекту */
 function ProjectsPage() {
@@ -65,7 +66,7 @@ function ProjectsPage() {
                     {p.name}
                   </div>
                   <div className="proj-card__tools">
-                    <span className="proj-card__status" style={{ background: status.bg, color: status.color }}>
+                    <span className="proj-card__status" style={{ background: status.bg, color: ink(status.color) }}>
                       {status.label}
                     </span>
                     {canManageProject(p, user) && (

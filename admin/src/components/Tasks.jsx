@@ -25,6 +25,7 @@ import {
 import "./Tasks.css";
 import { t, tt, LOCALE } from "../lib/i18n";
 import { can } from "../lib/roles";
+import { ink } from "../lib/theme";
 
 /* ================= картка на дошці ================= */
 
@@ -54,7 +55,7 @@ export function TaskCard({ task, onOpen, draggable = false, onDragStart, onDragE
       <span className="tcard__bar" />
       <div className="tcard__head">
         <div className="tcard__title">{task.title}</div>
-        <span className="tcard__pri" style={{ color: priority.color, background: priority.bg }}>
+        <span className="tcard__pri" style={{ color: ink(priority.color), background: priority.bg }}>
           {priority.label}
         </span>
       </div>

@@ -11,6 +11,7 @@ import "../components/Projects.css";
 import "./FilesPage.css";
 import { t, tt } from "../lib/i18n";
 import { can } from "../lib/roles";
+import { ink } from "../lib/theme";
 
 const TYPES = {
   doc: { icon: "📄", label: "Google Docs", color: "#5b9bff", create: "https://docs.new", hint: t("Новый документ открылся в соседней вкладке. Назовите его и вставьте сюда ссылку.") },
@@ -250,7 +251,7 @@ function FilesPage() {
                   </div>
                 </div>
               </div>
-              <div className="fl-type" style={{ color: meta.color }}>
+              <div className="fl-type" style={{ color: ink(meta.color) }}>
                 {meta.label}
               </div>
               <div className="fl-muted">{f.by || "—"}</div>

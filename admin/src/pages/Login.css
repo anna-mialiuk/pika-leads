@@ -13,7 +13,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, var(--wash-2) 1px, transparent 0);
   background-size: 26px 26px;
   pointer-events: none;
 }
@@ -28,7 +28,7 @@
   border: 1px solid var(--border2);
   border-radius: 22px;
   background: var(--surface);
-  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 40px 120px var(--shadow);
 }
 
 .auth__brand {
@@ -72,7 +72,7 @@
 }
 
 .auth__logo span {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .auth__headline {
@@ -118,7 +118,7 @@
   height: 24px;
   border-radius: 7px;
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .auth__copy {
@@ -166,7 +166,7 @@
   margin-bottom: 18px;
   border-radius: 14px;
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .auth__back,
@@ -190,7 +190,7 @@
 
 .auth__back:hover,
 .auth__link:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .auth__row {

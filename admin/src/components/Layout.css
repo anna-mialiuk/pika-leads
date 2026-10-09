@@ -33,7 +33,7 @@
 }
 
 .layout__brand span {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .layout__brand small {
@@ -72,7 +72,7 @@
 .layout__link--active,
 .layout__link--active:hover {
   background: var(--accent);
-  color: var(--bg);
+  color: #121110;
   box-shadow: 0 8px 26px rgba(255, 198, 41, 0.28);
 }
 
@@ -266,7 +266,7 @@
   height: 34px;
   border-radius: 10px;
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--accent-ink);
   font-weight: 800;
 }
 
@@ -351,7 +351,7 @@
 
   .layout__sidebar--open {
     transform: none;
-    box-shadow: 30px 0 80px rgba(0, 0, 0, 0.5);
+    box-shadow: 30px 0 80px var(--shadow);
   }
 
   .layout__scrim {
@@ -359,7 +359,7 @@
     inset: 0;
     z-index: 45;
     display: block;
-    background: rgba(0, 0, 0, 0.55);
+    background: var(--shadow);
   }
 
   .layout__content {
@@ -378,7 +378,7 @@
   padding: 1px 6px;
   border-radius: 100px;
   background: var(--danger);
-  color: var(--bg);
+  color: var(--on-danger);
   font-size: 11px;
   font-weight: 800;
   text-align: center;

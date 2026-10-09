@@ -3,6 +3,7 @@ import { CopyButton } from "./ui";
 import { contactsOf } from "../lib/format";
 import { useMeta } from "../lib/meta";
 import { t, tt } from "../lib/i18n";
+import { ink } from "../lib/theme";
 
 /** Кнопки швидкого зв'язку з лідом */
 export function ContactButtons({ lead, compact = false }) {
@@ -67,7 +68,7 @@ export function StatusBadge({ code }) {
   const status = statusByCode[code];
   if (!status) return null;
   return (
-    <span className="badge" style={{ background: `${status.color}22`, color: status.color }}>
+    <span className="badge" style={{ background: `${status.color}22`, color: ink(status.color) }}>
       {status.emoji} {status.label}
     </span>
   );

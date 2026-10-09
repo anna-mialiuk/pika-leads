@@ -116,7 +116,7 @@
 }
 
 .lead-modal__dl a {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .lead-history {
@@ -253,7 +253,7 @@
 }
 
 .lead-modal__hint--warn {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .lead-events {

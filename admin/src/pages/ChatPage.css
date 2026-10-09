@@ -40,7 +40,7 @@
   border: 0;
   border-radius: 7px;
   background: var(--card);
-  color: #ffc629;
+  color: var(--accent-ink);
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
@@ -111,7 +111,7 @@
   padding: 2px 5px;
   border-radius: 5px;
   background: rgba(240, 136, 62, 0.15);
-  color: #f0883e;
+  color: var(--orange-ink);
   font-size: 9px;
   font-weight: 800;
   white-space: nowrap;
@@ -157,7 +157,7 @@
 }
 
 .wc-chan__actions button:hover {
-  color: #ffc629;
+  color: var(--accent-ink);
 }
 
 .wc-newchan {
@@ -176,7 +176,7 @@
 
 .wc-newchan:hover {
   border-color: #ffc629;
-  color: #ffc629;
+  color: var(--accent-ink);
 }
 
 .wc-delreq {
@@ -204,7 +204,7 @@
 
 .wc-delreq__head b {
   flex: 1;
-  color: #f0883e;
+  color: var(--orange-ink);
   font-size: 11.5px;
   text-align: left;
 }
@@ -272,7 +272,7 @@
 }
 
 .wc-me__status {
-  color: #4fd88a;
+  color: var(--green-ink);
   font-size: 10px;
 }
 
@@ -341,7 +341,7 @@
 
 .wc-head__priv {
   margin-left: 6px;
-  color: #4fd88a;
+  color: var(--green-ink);
   font-size: 11px;
   white-space: nowrap;
 }
@@ -387,7 +387,7 @@
 
 .wc-pins__title {
   margin-bottom: 8px;
-  color: #ffc629;
+  color: var(--accent-ink);
   font-size: 11px;
   font-weight: 800;
 }
@@ -428,7 +428,7 @@
 }
 
 .wc-pin button:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .wc-list {
@@ -500,7 +500,7 @@
 }
 
 .wc-msg__pinned {
-  color: #ffc629;
+  color: var(--accent-ink);
   font-size: 10px;
 }
 
@@ -521,11 +521,11 @@
 }
 
 .wc-msg__text a {
-  color: #6fa8ff;
+  color: var(--blue-ink);
 }
 
 .wc-mention {
-  color: #ffc629;
+  color: var(--accent-ink);
   font-weight: 700;
 }
 
@@ -770,7 +770,7 @@
   border: 1px solid var(--border2);
   border-radius: 12px;
   background: var(--surface);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px var(--shadow);
 }
 
 .wc-pop--emoji {

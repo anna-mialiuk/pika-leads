@@ -12,6 +12,7 @@ import "../components/Projects.css";
 import "./ChatPage.css";
 import { t, tt } from "../lib/i18n";
 import { ROLE_LABELS } from "../lib/roles";
+import { ink } from "../lib/theme";
 
 const AVATARS = ["#FFC629", "#5b9bff", "#f0883e", "#4fd88a", "#b98bff", "#4fd8c8", "#ff7d7d"];
 const EMOJIS = ["😀", "😂", "🔥", "👍", "✅", "🎉", "💰", "📈", "🚀", "👀", "🙏", "💪", "❤️", "⚡", "🎯", "✍️"];
@@ -691,7 +692,7 @@ function ChatPage() {
                         </div>
                         <div className="wc-msg__body">
                           <div className="wc-msg__head">
-                            <b style={{ color: avatarBg(m.userId) }}>{m.name}</b>
+                            <b style={{ color: ink(avatarBg(m.userId)) }}>{m.name}</b>
                             <small>{when(m.at)}</small>
                             {m.pinned && <span className="wc-msg__pinned">{t("📌 закреплено")}</span>}
                           </div>

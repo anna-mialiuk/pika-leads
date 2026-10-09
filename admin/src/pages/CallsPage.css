@@ -343,7 +343,7 @@
 
 .cl-up__link button.is-copied {
   border-color: #4fd88a;
-  color: #4fd88a;
+  color: var(--green-ink);
 }
 
 .cl-up__link a {
@@ -412,7 +412,7 @@
 
 .mm-link__head a {
   flex: none;
-  color: #ffc629;
+  color: var(--accent-ink);
   font-size: 11px;
   font-weight: 700;
   text-decoration: none;

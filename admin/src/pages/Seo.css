@@ -30,7 +30,7 @@
 }
 
 .seo-summary .is-warn {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .seo-summary .is-ok {
@@ -109,7 +109,7 @@
 
 .seo-dot--warn {
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .seo-dot--bad {
@@ -118,7 +118,7 @@
 }
 
 .seo-dot--info {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--wash-3);
   color: var(--muted);
 }
 
@@ -165,7 +165,7 @@
 }
 
 .counter--warn {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .counter--bad {
@@ -216,7 +216,7 @@
   height: 26px;
   border-radius: 50%;
   background: #121110;
-  color: #ffc629;
+  color: var(--accent-ink);
   font-size: 13px;
   font-weight: 800;
 }
@@ -243,7 +243,7 @@
 }
 
 .seo-issues__warn {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .seo-issues__info {

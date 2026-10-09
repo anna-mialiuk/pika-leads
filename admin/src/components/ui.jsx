@@ -5,6 +5,7 @@ import QRCode from "qrcode";
 import Icon from "./Icon";
 import { passwordScore } from "../lib/format";
 import { t, tt, LANG, LANGS, setLang } from "../lib/i18n";
+import { getTheme, ink, setTheme } from "../lib/theme";
 
 /** Поле пароля з кнопкою «показати» */
 export function PasswordInput({ value, onChange, placeholder = "••••••••", autoComplete, autoFocus, onEnter }) {
@@ -52,7 +53,7 @@ export function StrengthMeter({ password }) {
           <span key={i} style={{ background: score >= i ? color : "var(--border2)" }} />
         ))}
       </div>
-      <div className="strength__label" style={{ color: password ? color : "var(--faint)" }}>
+      <div className="strength__label" style={{ color: password ? ink(color) : "var(--faint)" }}>
         {password ? tt("Надёжность: {0}", label) : t("Минимум 10 символов: буквы разного регистра, цифры, символы")}
       </div>
     </div>
@@ -183,6 +184,47 @@ export function LangSwitch({ className = "" }) {
           {l.label}
         </button>
       ))}
+    </div>
+  );
+}
+
+/** Перемикач теми: темна / світла */
+export function ThemeSwitch({ className = "" }) {
+  const [theme, setLocal] = useState(getTheme);
+  useEffect(() => {
+    const sync = () => setLocal(getTheme());
+    window.addEventListener("admin-theme", sync);
+    return () => window.removeEventListener("admin-theme", sync);
+  }, []);
+  const options = [
+    { code: "dark", icon: "☾", name: t("Тёмная тема") },
+    { code: "light", icon: "☀", name: t("Светлая тема") },
+  ];
+  return (
+    <div className={`lang-switch theme-switch ${className}`} role="group" aria-label={t("Тема")}>
+      {options.map((o) => (
+        <button
+          key={o.code}
+          type="button"
+          className={o.code === theme ? "is-active" : ""}
+          aria-pressed={o.code === theme}
+          title={o.name}
+          aria-label={o.name}
+          onClick={() => setTheme(o.code)}
+        >
+          {o.icon}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** Мова + тема в одному рядку */
+export function Prefs({ className = "" }) {
+  return (
+    <div className={`prefs ${className}`}>
+      <LangSwitch />
+      <ThemeSwitch />
     </div>
   );
 }

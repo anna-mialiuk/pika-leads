@@ -90,7 +90,7 @@
 }
 
 .proj-card__tools button.is-del:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .proj-card__meta,
@@ -117,7 +117,7 @@
 }
 
 .proj-card__progress-label b {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .proj-card__bar {
@@ -211,12 +211,12 @@
 
 .pm-person__av--buyer {
   background: rgba(91, 155, 255, 0.14);
-  color: #5b9bff;
+  color: var(--blue-ink);
 }
 
 .pm-person__av--member {
   background: rgba(185, 139, 255, 0.14);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .pm-person__name {
@@ -470,7 +470,7 @@
 }
 
 .pd-tl-label {
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 12px;
   font-weight: 700;
 }
@@ -532,12 +532,12 @@
 
 .pd-team__item--buyer .pd-team__av {
   background: rgba(91, 155, 255, 0.14);
-  color: #5b9bff;
+  color: var(--blue-ink);
 }
 
 .pd-team__item--member .pd-team__av {
   background: rgba(185, 139, 255, 0.14);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .pd-team__name {
@@ -554,11 +554,11 @@
 }
 
 .pd-team__item--buyer .pd-team__tag {
-  color: #5b9bff;
+  color: var(--blue-ink);
 }
 
 .pd-team__item--member .pd-team__tag {
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .pd-muted {
@@ -588,7 +588,7 @@
   border: 1px solid var(--border2);
   border-radius: 8px;
   background: transparent;
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
@@ -695,7 +695,7 @@
 }
 
 .pd-task > span.is-overdue {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .pd-section {
@@ -836,7 +836,7 @@
 }
 
 .pd-call__tools button.is-del:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .pd-call__rec {
@@ -903,7 +903,7 @@
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 11.5px;
   font-weight: 700;
   cursor: pointer;
@@ -955,7 +955,7 @@
 }
 
 .pd-file__name:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
   text-decoration: underline;
 }
 
@@ -980,7 +980,7 @@
 }
 
 .pd-file button:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 @media (max-width: 900px) {

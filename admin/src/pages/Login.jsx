@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 import Icon from "../components/Icon";
-import { CodeInput, CopyButton, ErrorAlert, LangSwitch, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
+import { CodeInput, CopyButton, ErrorAlert, Prefs, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { passwordScore } from "../lib/format";
@@ -158,7 +158,7 @@ function Login() {
 
   return (
     <div className="auth">
-      <LangSwitch className="auth__lang" />
+      <Prefs className="auth__lang" />
       <div className="auth__card">
         <aside className="auth__brand">
           <div className="auth__glow" />

@@ -3,7 +3,7 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 import ErrorBoundary from "./ErrorBoundary";
 import Icon from "./Icon";
-import { LangSwitch } from "./ui";
+import { Prefs } from "./ui";
 import { useAuth } from "../lib/auth";
 import { usePublish } from "../lib/publish";
 import { useTasks } from "../lib/tasks";
@@ -199,7 +199,7 @@ function Layout() {
 
         {canContent && <PublishStatus />}
 
-        <LangSwitch className="layout__lang" />
+        <Prefs className="layout__lang" />
 
         <div className="layout__user">
           <div className="layout__avatar">{user.name.slice(0, 1).toUpperCase()}</div>

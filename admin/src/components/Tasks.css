@@ -58,7 +58,7 @@
   border: 1px solid rgba(255, 125, 125, 0.35);
   border-radius: 100px;
   background: rgba(255, 125, 125, 0.12);
-  color: #ff7d7d;
+  color: var(--red-ink);
   font-size: 12px;
   font-weight: 700;
 }
@@ -238,7 +238,7 @@
   padding: 2px 8px;
   border-radius: 100px;
   background: rgba(255, 125, 125, 0.12);
-  color: #ff7d7d;
+  color: var(--red-ink);
   font-size: 10px;
   font-weight: 800;
 }
@@ -295,7 +295,7 @@
 }
 
 .tcard.is-overdue .tcard__due {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 /* ---------- задачі в картці заявки ---------- */
@@ -317,7 +317,7 @@
   padding: 2px 8px;
   border-radius: 100px;
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
@@ -664,7 +664,7 @@
 }
 
 .tm-sub__del:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .tm-sub__meta {
@@ -724,7 +724,7 @@
 }
 
 .tm-btn--danger {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .tm-btn--danger:hover {
@@ -774,7 +774,7 @@
 }
 
 .tm-term b {
-  color: var(--accent);
+  color: var(--accent-ink);
   font-family: var(--mono);
 }
 
@@ -791,7 +791,7 @@
 }
 
 .tm-timer__time {
-  color: var(--accent);
+  color: var(--accent-ink);
   font-family: var(--mono);
   font-size: 26px;
   font-weight: 800;
@@ -879,7 +879,7 @@
 
 .tm-callbtn.is-on {
   background: rgba(255, 198, 41, 0.15);
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .tm-files {
@@ -915,7 +915,7 @@
 }
 
 a.tm-file__name:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
   text-decoration: underline;
 }
 
@@ -936,7 +936,7 @@ a.tm-file__name:hover {
 
 .tm-file__del:hover,
 .tm-comment__del:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .tm-comments {
@@ -1020,7 +1020,7 @@ a.tm-file__name:hover {
   padding: 2px 8px;
   border-radius: 100px;
   background: rgba(255, 198, 41, 0.13);
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 10.5px;
   font-weight: 700;
 }
@@ -1161,7 +1161,7 @@ a.tm-file__name:hover {
 }
 
 .tcal-count b {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .tcal-week,
@@ -1217,7 +1217,7 @@ a.tm-file__name:hover {
 }
 
 .tcal-cell.is-today .tcal-cell__day {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .tcal-cell__count {
@@ -1577,7 +1577,7 @@ a.tm-file__name:hover {
 
 .tgantt__day.is-weekend,
 .tgantt__vline.is-weekend {
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--wash-1);
 }
 
 .tgantt__dow {
@@ -1612,7 +1612,7 @@ a.tm-file__name:hover {
   top: 5px;
   z-index: 1;
   padding-left: 7px;
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 9.5px;
   font-weight: 800;
   letter-spacing: 0.03em;

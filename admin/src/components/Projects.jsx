@@ -19,6 +19,7 @@ import { formatShort, isOverdue, useColumns, useTasks } from "../lib/tasks";
 import "./Projects.css";
 import { t, tt, LOCALE } from "../lib/i18n";
 import { ROLE_LABELS, can } from "../lib/roles";
+import { ink } from "../lib/theme";
 
 
 export const canManageProject = (p, user) => can(user, "manage") || p.pmId === user.id || p.createdBy?.userId === user.id;
@@ -407,7 +408,7 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
         <div className="pd-head__row">
           <span className="pd-head__color" style={{ background: p.color, boxShadow: `0 0 12px ${p.color}` }} />
           <div className="pd-head__name">{p.name}</div>
-          <span className="pd-status" style={{ background: status.bg, color: status.color }}>
+          <span className="pd-status" style={{ background: status.bg, color: ink(status.color) }}>
             {status.label}
           </span>
           {canManage && (
@@ -439,15 +440,15 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
           </div>
           <div>
             <span>{t("Готово")}</span>
-            <b style={{ color: "#4fd88a" }}>{done}</b>
+            <b style={{ color: "var(--green-ink)" }}>{done}</b>
           </div>
           <div>
             <span>{t("В работе")}</span>
-            <b style={{ color: "#FFC629" }}>{active}</b>
+            <b style={{ color: "var(--accent-ink)" }}>{active}</b>
           </div>
           <div>
             <span>{t("Просрочено")}</span>
-            <b style={{ color: "#ff7d7d" }}>{overdue}</b>
+            <b style={{ color: "var(--red-ink)" }}>{overdue}</b>
           </div>
           <div>
             <span>{t("Прогресс")}</span>
@@ -473,8 +474,8 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
           <div className="pd-card__head">
             <div className="pd-card__title">{t("Команда проекта")}</div>
             <div className="pd-badges">
-              <span style={{ color: p.hasChat ? "#4fd88a" : "var(--muted)" }}>{p.hasChat ? t("💬 Чат создан") : t("💬 Без чата")}</span>
-              <span style={{ color: p.hasFolder ? "#4fd88a" : "var(--muted)" }}>{p.hasFolder ? t("📁 Папка создана") : t("📁 Без папки")}</span>
+              <span style={{ color: p.hasChat ? "var(--green-ink)" : "var(--muted)" }}>{p.hasChat ? t("💬 Чат создан") : t("💬 Без чата")}</span>
+              <span style={{ color: p.hasFolder ? "var(--green-ink)" : "var(--muted)" }}>{p.hasFolder ? t("📁 Папка создана") : t("📁 Без папки")}</span>
             </div>
           </div>
           {team.length ? (

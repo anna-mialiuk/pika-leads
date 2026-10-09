@@ -154,7 +154,7 @@
 }
 
 .fl-name a:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
   text-decoration: underline;
 }
 
@@ -180,7 +180,7 @@
 }
 
 .fl-name__sub button:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .fl-mobile-only {
@@ -227,7 +227,7 @@
 }
 
 .fl-del button:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .fl-empty {

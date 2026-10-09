@@ -32,7 +32,7 @@
 .mm-tab.is-active {
   border-color: #b98bff;
   background: rgba(185, 139, 255, 0.16);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-tab__count {
@@ -51,7 +51,7 @@
 }
 
 .mm-tab__del:hover {
-  color: #ff7d7d;
+  color: var(--red-ink);
   opacity: 1;
 }
 
@@ -64,7 +64,7 @@
 
 .mm-tab--add:hover {
   border-color: #b98bff;
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-save {
@@ -74,7 +74,7 @@
 }
 
 .mm-save.is-error {
-  color: #ff7d7d;
+  color: var(--red-ink);
 }
 
 .mm-meta {
@@ -177,7 +177,7 @@
 }
 
 .mm-tool--card:hover {
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-tool--sticky i {
@@ -188,7 +188,7 @@
 }
 
 .mm-tool--sticky:hover {
-  color: #ffc629;
+  color: var(--accent-ink);
 }
 
 .mm-tool--rect i {
@@ -199,7 +199,7 @@
 }
 
 .mm-tool--rect:hover {
-  color: #6fa8ff;
+  color: var(--blue-ink);
 }
 
 .mm-tool--ellipse i {
@@ -210,7 +210,7 @@
 }
 
 .mm-tool--ellipse:hover {
-  color: #4fd88a;
+  color: var(--green-ink);
 }
 
 .mm-tool--diamond i {
@@ -221,7 +221,7 @@
 }
 
 .mm-tool--diamond:hover {
-  color: #f0a83e;
+  color: var(--orange-ink);
 }
 
 .mm-tool--text i {
@@ -253,7 +253,7 @@
 
 .mm-icon:hover:not(:disabled) {
   background: var(--bg);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-icon:disabled {
@@ -263,7 +263,7 @@
 
 .mm-icon.is-on {
   background: rgba(185, 139, 255, 0.18);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-sep {
@@ -286,7 +286,7 @@
 
 .mm-text-btn:hover {
   background: var(--bg);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-hand {
@@ -306,7 +306,7 @@
 .mm-hand.is-on {
   border-color: #b98bff;
   background: rgba(185, 139, 255, 0.16);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-zoom {
@@ -450,7 +450,7 @@
 }
 
 .mm-node__task:hover {
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-node__handle {
@@ -462,7 +462,7 @@
   border: 2px solid var(--card);
   border-radius: 50%;
   background: #6fa8ff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px var(--shadow);
   cursor: crosshair;
 }
 
@@ -490,7 +490,7 @@
   border: 1px solid var(--border2);
   border-radius: 11px;
   background: var(--card);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 32px var(--shadow);
   cursor: default;
 }
 
@@ -540,7 +540,7 @@
 .mm-panel__connect {
   flex: 1;
   background: rgba(185, 139, 255, 0.16);
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-panel__connect.is-on {
@@ -557,12 +557,12 @@
 
 .mm-panel__dup:hover {
   border-color: #b98bff !important;
-  color: #b98bff;
+  color: var(--violet-ink);
 }
 
 .mm-panel__del {
   background: rgba(255, 125, 125, 0.14);
-  color: #ff7d7d;
+  color: var(--red-ink);
   font-size: 12px !important;
 }
 
@@ -593,7 +593,7 @@
   padding: 6px;
   border: 1px solid var(--border2);
   border-radius: 9px;
-  background: rgba(20, 18, 22, 0.7);
+  background: var(--minimap);
   backdrop-filter: blur(6px);
   pointer-events: none;
 }

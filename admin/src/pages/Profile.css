@@ -20,7 +20,7 @@
 }
 
 .profile__card h2 svg {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .profile__dl {

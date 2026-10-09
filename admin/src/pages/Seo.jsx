@@ -47,11 +47,11 @@ function issuesOf(page, duplicates) {
   if (!page) return [{ level: "bad", text: t("Нет в sitemap") }];
   if (page.error) return [{ level: "bad", text: tt("Не открылась: {0}", page.error) }];
   const list = [];
-  const t = page.title?.length || 0;
+  const len = page.title?.length || 0;
   const d = page.description?.length || 0;
-  if (!t) list.push({ level: "bad", text: t("Нет заголовка") });
-  else if (t > TITLE.max) list.push({ level: "warn", text: tt("Заголовок длинный ({0}) — Google обрежет", t) });
-  else if (t < TITLE.min) list.push({ level: "warn", text: tt("Заголовок короткий ({0})", t) });
+  if (!len) list.push({ level: "bad", text: t("Нет заголовка") });
+  else if (len > TITLE.max) list.push({ level: "warn", text: tt("Заголовок длинный ({0}) — Google обрежет", len) });
+  else if (len < TITLE.min) list.push({ level: "warn", text: tt("Заголовок короткий ({0})", len) });
   if (!d) list.push({ level: "bad", text: t("Нет описания") });
   else if (d > DESC.max) list.push({ level: "warn", text: tt("Описание длинное ({0}) — Google обрежет", d) });
   else if (d < DESC.min) list.push({ level: "warn", text: tt("Описание короткое ({0})", d) });

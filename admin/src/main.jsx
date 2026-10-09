@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "@fontsource-variable/manrope";
 import "@fontsource-variable/unbounded";
+import "./lib/theme";
 import "./styles.css";
 
 import App from "./App";

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Icon from "../components/Icon";
-import { CodeInput, ErrorAlert, Field, LangSwitch, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
+import { CodeInput, ErrorAlert, Field, Prefs, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { formatDate, passwordScore } from "../lib/format";
@@ -31,7 +31,7 @@ function Profile() {
           <h1 className="page-title">{t("Профиль")}</h1>
           <p className="page-text">{t("Ваш доступ к панели и безопасность входа.")}</p>
         </div>
-        <LangSwitch />
+        <Prefs />
       </div>
 
       <div className="profile__grid">

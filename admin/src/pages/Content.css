@@ -19,7 +19,7 @@
 }
 
 .back-link:hover {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 /* ---------- чипи ---------- */
@@ -37,8 +37,8 @@
 }
 
 .chip--draft {
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--wash-5);
+  background: var(--wash-3);
   color: var(--text);
 }
 
@@ -49,7 +49,7 @@
 
 .chip--accent {
   border-color: rgba(255, 198, 41, 0.4);
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .chip--ok {
@@ -314,7 +314,7 @@ a.btn {
 
 .lang-tabs button.is-active {
   background: var(--accent);
-  color: var(--bg);
+  color: #121110;
 }
 
 .lang-tabs__count {
@@ -329,7 +329,7 @@ a.btn {
 
 .lang-tabs button.is-active .lang-tabs__count {
   background: rgba(0, 0, 0, 0.18);
-  color: var(--bg);
+  color: #121110;
 }
 
 .lang-hint {
@@ -363,7 +363,7 @@ a.btn {
   width: 14px;
   height: 14px;
   border-color: rgba(0, 0, 0, 0.2);
-  border-top-color: var(--bg);
+  border-top-color: #121110;
 }
 
 .form-section {
@@ -439,7 +439,7 @@ a.btn {
 }
 
 .field__label .req {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .field-error {
@@ -846,7 +846,7 @@ a.btn {
 
 .rich-text__bar button:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .add-block__toggle {
@@ -865,7 +865,7 @@ a.btn {
 
 .add-block__toggle:hover,
 .add-block__toggle:focus-visible {
-  color: var(--accent);
+  color: var(--accent-ink);
   background: linear-gradient(var(--accent-soft), var(--accent-soft)) center / 100% 1px no-repeat;
 }
 
@@ -907,7 +907,7 @@ a.btn {
 }
 
 .article-preview a {
-  color: var(--accent);
+  color: var(--accent-ink);
 }
 
 .article-preview code {
@@ -995,7 +995,7 @@ a.btn {
   height: 38px;
   border-radius: 50%;
   background: var(--accent-soft);
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 13px;
   font-weight: 800;
 }
