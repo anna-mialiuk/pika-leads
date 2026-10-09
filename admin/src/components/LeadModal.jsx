@@ -10,39 +10,40 @@ import { formatDate, leadName, timeAgo } from "../lib/format";
 import { useMeta } from "../lib/meta";
 
 import "./LeadModal.css";
+import { t, tt } from "../lib/i18n";
 
 const FIELD_LABELS = {
-  name: "Имя",
-  phone_full: "Телефон",
-  phone: "Телефон (без кода)",
+  name: t("Имя"),
+  phone_full: t("Телефон"),
+  phone: t("Телефон (без кода)"),
   email: "Email",
   telegram: "Telegram",
   messenger: "Telegram / WhatsApp",
-  niche: "Ниша",
-  business: "Направление бизнеса",
-  platforms: "Реклама",
-  budget: "Бюджет",
-  site: "Сайт",
-  message: "Сообщение",
-  prize: "Приз (колесо)",
+  niche: t("Ниша"),
+  business: t("Направление бизнеса"),
+  platforms: t("Реклама"),
+  budget: t("Бюджет"),
+  site: t("Сайт"),
+  message: t("Сообщение"),
+  prize: t("Приз (колесо)"),
 };
 
 const ATTRIBUTION_LABELS = {
-  utm_source: "Источник (utm_source)",
-  utm_medium: "Канал (utm_medium)",
-  utm_campaign: "Кампания (utm_campaign)",
-  utm_content: "Ключ / объявление (utm_content)",
+  utm_source: t("Источник (utm_source)"),
+  utm_medium: t("Канал (utm_medium)"),
+  utm_campaign: t("Кампания (utm_campaign)"),
+  utm_content: t("Ключ / объявление (utm_content)"),
   utm_term: "utm_term",
   utm_id: "utm_id",
   campaign_id: "Campaign ID",
   adset_id: "Adset ID",
   ad_id: "Ad ID",
-  placement: "Место размещения",
+  placement: t("Место размещения"),
   gclid: "gclid",
   fbclid: "fbclid",
   ttclid: "ttclid",
-  landingPage: "Страница входа",
-  referrer: "Реферер",
+  landingPage: t("Страница входа"),
+  referrer: t("Реферер"),
 };
 
 const PLATFORMS = { meta: "Meta", ga4: "GA4" };
@@ -84,12 +85,12 @@ function siteUrl(page) {
 }
 
 const HISTORY_TEXT = {
-  created: () => "Заявка создана",
-  status: (h, s) => `Статус: ${s[h.from]?.label || h.from} → ${s[h.to]?.label || h.to}`,
-  manager: (h, s, u) => `Менеджер: ${u[h.to]?.name || "не назначен"}`,
-  deleted: () => "Заявка удалена",
-  task: (h) => (h.done ? `Задача выполнена: ${h.title}` : `Задача: ${h.title}`),
-  amount: (h) => (h.to === null ? "Сумма сделки убрана" : `Сумма сделки: ${h.to} ${h.currency || ""}`),
+  created: () => t("Заявка создана"),
+  status: (h, s) => tt("Статус: {0} → {1}", s[h.from]?.label || h.from, s[h.to]?.label || h.to),
+  manager: (h, s, u) => tt("Менеджер: {0}", u[h.to]?.name || t("не назначен")),
+  deleted: () => t("Заявка удалена"),
+  task: (h) => (h.done ? tt("Задача выполнена: {0}", h.title) : tt("Задача: {0}", h.title)),
+  amount: (h) => (h.to === null ? t("Сумма сделки убрана") : tt("Сумма сделки: {0} {1}", h.to, h.currency || "")),
 };
 
 function LeadModal({ lead, onChange, onDeleted, onClose }) {
@@ -128,7 +129,7 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
   };
 
   const remove = async () => {
-    if (!window.confirm(`Удалить заявку #${lead.id}? Она исчезнет из CRM (журнал на сервере сохранится).`)) return;
+    if (!window.confirm(tt("Удалить заявку #{0}? Она исчезнет из CRM (журнал на сервере сохранится).", lead.id))) return;
     try {
       await api(`/leads/${lead.id}`, { method: "DELETE" });
       onDeleted(lead.id);
@@ -155,7 +156,7 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
           {error && <div className="alert">⚠ {error}</div>}
 
           <section className="lead-modal__section">
-            <h3>Статус</h3>
+            <h3>{t("Статус")}</h3>
             <div className="status-chips">
               {statuses.map((s) => (
                 <button
@@ -169,29 +170,29 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
                 </button>
               ))}
             </div>
-            {lead.telegram && <p className="lead-modal__hint">Статус обновится и в сообщении в Telegram.</p>}
+            {lead.telegram && <p className="lead-modal__hint">{t("Статус обновится и в сообщении в Telegram.")}</p>}
           </section>
 
           <section className="lead-modal__section lead-modal__manager">
-            <h3>Менеджер</h3>
+            <h3>{t("Менеджер")}</h3>
             <ManagerSelect value={lead.managerId} onChange={(managerId) => patch({ managerId })} className="select" />
           </section>
 
           <section className="lead-modal__section lead-modal__manager">
-            <h3>Сумма сделки</h3>
+            <h3>{t("Сумма сделки")}</h3>
             <AmountField key={lead.id} lead={lead} onSave={(amount) => patch({ amount })} />
             {lead.awaitingAmount && (
-              <p className="lead-modal__hint lead-modal__hint--warn">Укажите сумму — событие «Покупка» уйдёт в рекламу после этого.</p>
+              <p className="lead-modal__hint lead-modal__hint--warn">{t("Укажите сумму — событие «Покупка» уйдёт в рекламу после этого.")}</p>
             )}
           </section>
 
           <section className="lead-modal__section">
-            <h3>Задачи</h3>
+            <h3>{t("Задачи")}</h3>
             <LeadTasks lead={lead} />
           </section>
 
           <section className="lead-modal__section">
-            <h3>Данные заявки</h3>
+            <h3>{t("Данные заявки")}</h3>
             <dl className="lead-modal__dl">
               {data.map(([key, value]) => (
                 <div key={key}>
@@ -200,15 +201,15 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
                 </div>
               ))}
               <div>
-                <dt>Форма</dt>
+                <dt>{t("Форма")}</dt>
                 <dd>
                   {types[lead.type] || lead.type}
-                  {lead.source ? ` · кнопка «${lead.source}»` : ""}
+                  {lead.source ? tt(" · кнопка «{0}»", lead.source) : ""}
                 </dd>
               </div>
               {lead.page && (
                 <div>
-                  <dt>Страница</dt>
+                  <dt>{t("Страница")}</dt>
                   <dd>
                     {siteUrl(lead.page) ? (
                       <a href={siteUrl(lead.page)} target="_blank" rel="noreferrer noopener">
@@ -226,7 +227,7 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
 
           {attribution.length > 0 && (
             <section className="lead-modal__section">
-              <h3>Реклама и UTM</h3>
+              <h3>{t("Реклама и UTM")}</h3>
               <dl className="lead-modal__dl lead-modal__dl--mono">
                 {attribution.map(([key, value]) => (
                   <div key={key}>
@@ -240,13 +241,12 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
 
           {(lead.events?.length > 0 || lead.tracking) && (
             <section className="lead-modal__section">
-              <h3>Реклама и аналитика</h3>
+              <h3>{t("Реклама и аналитика")}</h3>
               {lead.tracking && (
-                <p className="lead-modal__hint">
-                  Cookie: аналитика {lead.tracking.consent?.analytics ? "✓" : "—"} · маркетинг{" "}
+                <p className="lead-modal__hint">{t("Cookie: аналитика")}{" "}{lead.tracking.consent?.analytics ? "✓" : "—"}{" "}{t("· маркетинг")}{" "}
                   {lead.tracking.consent?.marketing ? "✓" : "—"}
-                  {lead.tracking.meta ? " · клик Meta сохранён" : ""}
-                  {lead.tracking.ga ? " · Google Analytics связан" : ""}
+                  {lead.tracking.meta ? t(" · клик Meta сохранён") : ""}
+                  {lead.tracking.ga ? t(" · Google Analytics связан") : ""}
                 </p>
               )}
               <ul className="lead-events">
@@ -265,7 +265,7 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
           )}
 
           <section className="lead-modal__section">
-            <h3>История</h3>
+            <h3>{t("История")}</h3>
             <ol className="lead-history">
               {[...(lead.history || [])].reverse().map((h, index) => (
                 <li key={index}>
@@ -283,15 +283,14 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
 
           {user.role === "admin" && (
             <button type="button" className="btn btn--danger btn--sm" onClick={remove}>
-              <Icon name="trash" /> Удалить заявку
-            </button>
+              <Icon name="trash" />{" "}{t("Удалить заявку")}</button>
           )}
         </div>
 
         <aside className="lead-modal__side">
-          <h3>Комментарии команды</h3>
+          <h3>{t("Комментарии команды")}</h3>
           <div className="comments">
-            {(lead.comments || []).length === 0 && <p className="comments__empty">Пока пусто. Заметки видят только сотрудники.</p>}
+            {(lead.comments || []).length === 0 && <p className="comments__empty">{t("Пока пусто. Заметки видят только сотрудники.")}</p>}
             {(lead.comments || []).map((c) => (
               <div key={c.id} className={`comment ${c.userId === user.id ? "comment--own" : ""}`}>
                 <div className="comment__meta">
@@ -304,7 +303,7 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
           <div className="comments__form">
             <textarea
               className="textarea"
-              placeholder="Заметка: о чём договорились, когда перезвонить…"
+              placeholder={t("Заметка: о чём договорились, когда перезвонить…")}
               value={comment}
               onChange={(event) => setComment(event.target.value)}
               onKeyDown={(event) => {
@@ -312,8 +311,7 @@ function LeadModal({ lead, onChange, onDeleted, onClose }) {
               }}
             />
             <button type="button" className="btn btn--primary btn--sm" onClick={sendComment} disabled={busy || !comment.trim()}>
-              <Icon name="send" /> Отправить
-            </button>
+              <Icon name="send" />{" "}{t("Отправить")}</button>
           </div>
         </aside>
       </div>

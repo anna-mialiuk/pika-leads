@@ -10,18 +10,19 @@ import { useTasks } from "../lib/tasks";
 
 import "../components/Projects.css";
 import "./CallsPage.css";
+import { t, tt } from "../lib/i18n";
 
 const START_H = 8;
 const END_H = 21;
 const ROW = 56; // px на годину
-const WEEK_NAMES = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
-const MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
-const MONTHS_SHORT = ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"];
+const WEEK_NAMES = [t("Пн"), t("Вт"), t("Ср"), t("Чт"), t("Пт"), t("Сб"), t("Вс")];
+const MONTHS_GEN = [t("января"), t("февраля"), t("марта"), t("апреля"), t("мая"), t("июня"), t("июля"), t("августа"), t("сентября"), t("октября"), t("ноября"), t("декабря")];
+const MONTHS_SHORT = [t("янв"), t("фев"), t("мар"), t("апр"), t("май"), t("июн"), t("июл"), t("авг"), t("сен"), t("окт"), t("ноя"), t("дек")];
 
 export const VIDEO = {
-  zoom: { label: "Zoom", color: "#2D8CFF", create: "https://zoom.us/meeting/schedule", hint: "Запланируйте встречу в Zoom и вставьте ссылку" },
-  googlemeet: { label: "Meet", color: "#00AC47", create: "https://meet.google.com/new", hint: "Откроется новая встреча Google Meet — скопируйте её ссылку сюда" },
-  loom: { label: "Loom", color: "#625DF5", create: "https://www.loom.com/looms/videos", hint: "Вставьте ссылку на Loom" },
+  zoom: { label: "Zoom", color: "#2D8CFF", create: "https://zoom.us/meeting/schedule", hint: t("Запланируйте встречу в Zoom и вставьте ссылку") },
+  googlemeet: { label: "Meet", color: "#00AC47", create: "https://meet.google.com/new", hint: t("Откроется новая встреча Google Meet — скопируйте её ссылку сюда") },
+  loom: { label: "Loom", color: "#625DF5", create: "https://www.loom.com/looms/videos", hint: t("Вставьте ссылку на Loom") },
 };
 const DURATIONS = [15, 30, 45, 60, 90, 120];
 const MINUTES = ["00", "15", "30", "45"];
@@ -101,11 +102,11 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
 
   const save = async () => {
     setError("");
-    if (!form.title.trim()) return setError("Укажите название встречи");
-    if (form.link && !/^https:\/\//i.test(form.link.trim())) return setError("Ссылка должна начинаться с https://");
+    if (!form.title.trim()) return setError(t("Укажите название встречи"));
+    if (form.link && !/^https:\/\//i.test(form.link.trim())) return setError(t("Ссылка должна начинаться с https://"));
     const [y, mo, d] = form.day.split("-").map(Number);
     const start = new Date(y, mo - 1, d, Number(form.hour), Number(form.minute));
-    if (Number.isNaN(start.getTime())) return setError("Укажите день");
+    if (Number.isNaN(start.getTime())) return setError(t("Укажите день"));
     const body = {
       title: form.title.trim(),
       startAt: start.toISOString(),
@@ -130,7 +131,7 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
   };
 
   const del = async () => {
-    if (!window.confirm("Удалить встречу? Участники получат уведомление об отмене.")) return;
+    if (!window.confirm(t("Удалить встречу? Участники получат уведомление об отмене."))) return;
     try {
       await api(`/meetings/${meeting.id}`, { method: "DELETE" });
       onSaved();
@@ -148,30 +149,30 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
   };
 
   return (
-    <Modal title={meeting ? "Редактировать встречу" : "Запланировать встречу"} onClose={onClose} className="task-modal proj-modal">
+    <Modal title={meeting ? t("Редактировать встречу") : t("Запланировать встречу")} onClose={onClose} className="task-modal proj-modal">
       <fieldset className="task-modal__body" disabled={busy}>
         <input
           className="tm-input tm-input--top pm-big"
-          placeholder="Название встречи"
+          placeholder={t("Название встречи")}
           value={form.title}
           autoFocus={!meeting}
           onChange={(e) => set({ title: e.target.value })}
         />
         <div className="mm-grid mm-grid--day">
           <label className="tm-field">
-            <span className="tm-label">День</span>
+            <span className="tm-label">{t("День")}</span>
             <input className="tm-input" type="date" value={form.day} onChange={(e) => set({ day: e.target.value })} />
           </label>
           <div className="tm-field">
-            <span className="tm-label">Начало</span>
+            <span className="tm-label">{t("Начало")}</span>
             <div className="mm-time">
-              <select className="tm-input" value={form.hour} onChange={(e) => set({ hour: e.target.value })} aria-label="Час">
+              <select className="tm-input" value={form.hour} onChange={(e) => set({ hour: e.target.value })} aria-label={t("Час")}>
                 {HOURS.map((h) => (
                   <option key={h}>{h}</option>
                 ))}
               </select>
               <b>:</b>
-              <select className="tm-input" value={form.minute} onChange={(e) => set({ minute: e.target.value })} aria-label="Минуты">
+              <select className="tm-input" value={form.minute} onChange={(e) => set({ minute: e.target.value })} aria-label={t("Минуты")}>
                 {MINUTES.map((m) => (
                   <option key={m}>{m}</option>
                 ))}
@@ -181,25 +182,25 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
         </div>
         <div className="mm-grid">
           <label className="tm-field">
-            <span className="tm-label">Длительность</span>
+            <span className="tm-label">{t("Длительность")}</span>
             <select className="tm-input" value={form.duration} onChange={(e) => set({ duration: Number(e.target.value) })}>
               {DURATIONS.map((d) => (
                 <option key={d} value={d}>
-                  {d < 60 ? `${d} мин` : d === 60 ? "1 час" : `${d / 60} ч`.replace(".5", ",5")}
+                  {d < 60 ? tt("{0} мин", d) : d === 60 ? t("1 час") : tt("{0} ч", d / 60).replace(".5", ",5")}
                 </option>
               ))}
             </select>
           </label>
           <label className="tm-field">
-            <span className="tm-label">Тип</span>
+            <span className="tm-label">{t("Тип")}</span>
             <select className="tm-input" value={form.type} onChange={(e) => set({ type: e.target.value })}>
-              <option value="meeting">Митинг</option>
-              <option value="call">Звонок</option>
+              <option value="meeting">{t("Митинг")}</option>
+              <option value="call">{t("Звонок")}</option>
             </select>
           </label>
         </div>
         <label className="tm-field">
-          <span className="tm-label">Сервис видеосвязи</span>
+          <span className="tm-label">{t("Сервис видеосвязи")}</span>
           <select
             className="tm-input"
             value={form.video}
@@ -208,16 +209,14 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
             <option value="zoom">Zoom</option>
             <option value="googlemeet">Google Meet</option>
             <option value="loom">Loom</option>
-            <option value="">Без видео</option>
+            <option value="">{t("Без видео")}</option>
           </select>
         </label>
         {form.video && (
           <div className="mm-link">
             <div className="mm-link__head">
               <span>🔗 {VIDEO[form.video].hint}</span>
-              <a href={VIDEO[form.video].create} target="_blank" rel="noopener noreferrer">
-                ↗ Создать
-              </a>
+              <a href={VIDEO[form.video].create} target="_blank" rel="noopener noreferrer">{t("↗ Создать")}</a>
             </div>
             <div className="mm-link__row">
               <input
@@ -225,20 +224,20 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
                 value={form.link}
                 placeholder="https://…"
                 onChange={(e) => set({ link: e.target.value })}
-                aria-label="Ссылка на звонок"
+                aria-label={t("Ссылка на звонок")}
               />
               {form.link && (
                 <button type="button" onClick={copy}>
-                  {copied ? "✓ Скоп." : "⧉ Копир."}
+                  {copied ? t("✓ Скоп.") : t("⧉ Копир.")}
                 </button>
               )}
             </div>
           </div>
         )}
         <label className="tm-field">
-          <span className="tm-label">Проект</span>
+          <span className="tm-label">{t("Проект")}</span>
           <select className="tm-input" value={form.projectId} onChange={(e) => set({ projectId: e.target.value ? Number(e.target.value) : "" })}>
-            <option value="">— без проекта —</option>
+            <option value="">{t("— без проекта —")}</option>
             {projects.map((p) => (
               <option key={p.id} value={p.id}>
                 {p.name}
@@ -246,7 +245,7 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
             ))}
           </select>
         </label>
-        <div className="tm-label">Участники</div>
+        <div className="tm-label">{t("Участники")}</div>
         <div className="tm-chips mm-chips">
           {team.map((u) => {
             const on = form.attendees.includes(u.id);
@@ -263,17 +262,15 @@ function MeetModal({ meeting, defaults = {}, onClose, onSaved }) {
             );
           })}
         </div>
-        <p className="mm-note">Участникам с подключённым Telegram придёт приглашение, а за 15 минут — напоминание со ссылкой.</p>
+        <p className="mm-note">{t("Участникам с подключённым Telegram придёт приглашение, а за 15 минут — напоминание со ссылкой.")}</p>
         {error && <div className="alert">⚠ {error}</div>}
         <div className="tm-actions">
           <button type="button" className="tm-save pm-save" onClick={save}>
-            {busy ? "Сохраняем…" : meeting ? "Сохранить" : "Создать встречу"}
+            {busy ? t("Сохраняем…") : meeting ? t("Сохранить") : t("Создать встречу")}
           </button>
-          <button type="button" className="tm-btn" onClick={onClose}>
-            Отмена
-          </button>
+          <button type="button" className="tm-btn" onClick={onClose}>{t("Отмена")}</button>
           {canDelete && (
-            <button type="button" className="tm-btn tm-btn--danger" onClick={del} title="Удалить" aria-label="Удалить встречу">
+            <button type="button" className="tm-btn tm-btn--danger" onClick={del} title={t("Удалить")} aria-label={t("Удалить встречу")}>
               ✕
             </button>
           )}
@@ -331,7 +328,7 @@ function CallsPage() {
     .sort((a, b) => (a.startAt < b.startAt ? -1 : 1))
     .slice(0, 12);
 
-  const att = (m) => `${m.attendees.length} уч.`;
+  const att = (m) => tt("{0} уч.", m.attendees.length);
   const names = (m) =>
     m.attendees
       .map((id) => userById[id]?.name)
@@ -352,32 +349,26 @@ function CallsPage() {
 
   return (
     <div className="tboard-page">
-      <TasksHeader action={{ label: "+ Встреча", onClick: () => setModal({}) }} />
+      <TasksHeader action={{ label: t("+ Встреча"), onClick: () => setModal({}) }} />
 
       <div className="cl-bar">
         <div className="cl-bar__week">
-          <button type="button" onClick={() => setWeek(addDays(week, -7))} aria-label="Предыдущая неделя">
+          <button type="button" onClick={() => setWeek(addDays(week, -7))} aria-label={t("Предыдущая неделя")}>
             ‹
           </button>
-          <button type="button" onClick={() => setWeek(addDays(week, 7))} aria-label="Следующая неделя">
+          <button type="button" onClick={() => setWeek(addDays(week, 7))} aria-label={t("Следующая неделя")}>
             ›
           </button>
           {isoDay(week) !== isoDay(mondayOf(new Date(now))) && (
-            <button type="button" className="cl-bar__today" onClick={() => setWeek(mondayOf(new Date()))}>
-              Сегодня
-            </button>
+            <button type="button" className="cl-bar__today" onClick={() => setWeek(mondayOf(new Date()))}>{t("Сегодня")}</button>
           )}
-          <span>Неделя {label} · планирование звонков и митингов команды</span>
+          <span>{t("Неделя")}{" "}{label}{" "}{t("· планирование звонков и митингов команды")}</span>
         </div>
         <div className="cl-legend">
           <span>
-            <i style={{ background: "#FFC629" }} />
-            Митинг
-          </span>
+            <i style={{ background: "#FFC629" }} />{t("Митинг")}</span>
           <span>
-            <i style={{ background: "#5b9bff" }} />
-            Звонок
-          </span>
+            <i style={{ background: "#5b9bff" }} />{t("Звонок")}</span>
         </div>
       </div>
 
@@ -415,7 +406,7 @@ function CallsPage() {
                   type="button"
                   className="cl-week__slot"
                   style={{ height: ROW }}
-                  aria-label={`Новая встреча ${dayLabel(d)} ${pad(START_H + i)}:00`}
+                  aria-label={tt("Новая встреча {0} {1}:00", dayLabel(d), pad(START_H + i))}
                   onClick={() => setModal({ defaults: { start: new Date(d.getFullYear(), d.getMonth(), d.getDate(), START_H + i) } })}
                 />
               ))}
@@ -457,7 +448,7 @@ function CallsPage() {
 
       {/* телефон: список днів тижня */}
       <div className="cl-agenda">
-        {weekMeetings.length === 0 && <div className="cl-agenda__empty">На этой неделе встреч нет</div>}
+        {weekMeetings.length === 0 && <div className="cl-agenda__empty">{t("На этой неделе встреч нет")}</div>}
         {days
           .filter((d) => byDay[isoDay(d)]?.length)
           .map((d) => (
@@ -489,12 +480,10 @@ function CallsPage() {
                       </div>
                       <div className="cl-agenda__title">{m.title}</div>
                       <div className="cl-agenda__sub">
-                        {m.duration} мин · {att(m)}
+                        {m.duration}{" "}{t("мин ·")}{" "}{att(m)}
                       </div>
                       {m.link && (
-                        <a className="cl-join" href={m.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                          Войти в звонок
-                        </a>
+                        <a className="cl-join" href={m.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>{t("Войти в звонок")}</a>
                       )}
                     </div>
                   );
@@ -505,8 +494,8 @@ function CallsPage() {
       </div>
 
       <div className="cl-upcoming">
-        <div className="pd-section-title">Ближайшие встречи · ссылки для подключения</div>
-        {meetings && upcoming.length === 0 && <div className="pd-empty">Встреч пока нет — нажмите «+ Встреча» или кликните по времени в сетке.</div>}
+        <div className="pd-section-title">{t("Ближайшие встречи · ссылки для подключения")}</div>
+        {meetings && upcoming.length === 0 && <div className="pd-empty">{t("Встреч пока нет — нажмите «+ Встреча» или кликните по времени в сетке.")}</div>}
         <div className="cl-upcoming__list">
           {upcoming.map((m) => {
             const video = VIDEO[m.video];
@@ -516,8 +505,7 @@ function CallsPage() {
                 <button type="button" className="cl-up__main" onClick={() => setModal({ meeting: m })}>
                   <div className="cl-up__title">{m.title}</div>
                   <div className="cl-up__sub">
-                    {dayLabel(start)} · {range(m)} · {m.duration} мин · {m.attendees.length} участн.
-                  </div>
+                    {dayLabel(start)} · {range(m)} · {m.duration}{" "}{t("мин ·")}{" "}{m.attendees.length}{" "}{t("участн.")}</div>
                 </button>
                 {m.link ? (
                   <div className="cl-up__link">
@@ -528,14 +516,12 @@ function CallsPage() {
                     )}
                     <span className="cl-up__url mono">{m.link}</span>
                     <button type="button" className={copiedId === m.id ? "is-copied" : ""} onClick={() => copy(m)}>
-                      {copiedId === m.id ? "✓ Скопировано" : "⧉ Копировать"}
+                      {copiedId === m.id ? t("✓ Скопировано") : t("⧉ Копировать")}
                     </button>
-                    <a href={m.link} target="_blank" rel="noopener noreferrer">
-                      Войти
-                    </a>
+                    <a href={m.link} target="_blank" rel="noopener noreferrer">{t("Войти")}</a>
                   </div>
                 ) : (
-                  <span className="cl-up__novideo">без видео</span>
+                  <span className="cl-up__novideo">{t("без видео")}</span>
                 )}
               </div>
             );

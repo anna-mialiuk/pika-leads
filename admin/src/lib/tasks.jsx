@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 
 import { api, upload } from "./api";
 import { useAuth } from "./auth";
+import { t, tt } from "./i18n";
 
 /**
  * Задачі по заявках: один список на всю панель (CRM, картка заявки, сторінка «Задачи», лічильник у меню).
@@ -109,7 +110,8 @@ export const useTasks = () => useContext(TasksContext);
 
 /** Колонки канбана з налаштувань (за замовчуванням — як у макеті) */
 export function useColumns() {
-  const { columns } = useContext(TasksContext);
+  const { columns: raw } = useContext(TasksContext);
+  const columns = useMemo(() => raw.map((c) => ({ ...c, label: t(c.label) })), [raw]);
   const byKey = useMemo(() => Object.fromEntries(columns.map((c) => [c.key, c])), [columns]);
   return { columns, byKey };
 }
@@ -143,14 +145,14 @@ const nextMonday = () => {
 };
 
 export const DUE_PRESETS = [
-  { label: "Через час", get: () => inMinutes(60) },
-  { label: "Через 3 часа", get: () => inMinutes(180) },
-  { label: "Завтра 10:00", get: () => at(1, 10) },
-  { label: "Завтра 15:00", get: () => at(1, 15) },
-  { label: "В понедельник", get: nextMonday },
+  { label: t("Через час"), get: () => inMinutes(60) },
+  { label: t("Через 3 часа"), get: () => inMinutes(180) },
+  { label: t("Завтра 10:00"), get: () => at(1, 10) },
+  { label: t("Завтра 15:00"), get: () => at(1, 15) },
+  { label: t("В понедельник"), get: nextMonday },
 ];
 
-export const TITLE_PRESETS = ["Перезвонить", "Отправить КП", "Написать в Telegram", "Встреча / созвон", "Уточнить бюджет"];
+export const TITLE_PRESETS = [t("Перезвонить"), t("Отправить КП"), t("Написать в Telegram"), t("Встреча / созвон"), t("Уточнить бюджет")];
 
 const DAY = 864e5;
 const startOfDay = (d) => {
@@ -164,10 +166,10 @@ export function formatDue(iso) {
   const d = new Date(iso);
   const time = `${pad(d.getHours())}:${pad(d.getMinutes())}`;
   const diff = Math.round((startOfDay(d) - startOfDay(Date.now())) / DAY);
-  if (diff === 0) return `Сегодня ${time}`;
-  if (diff === 1) return `Завтра ${time}`;
-  if (diff === -1) return `Вчера ${time}`;
-  const day = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"][d.getDay()];
+  if (diff === 0) return tt("Сегодня {0}", time);
+  if (diff === 1) return tt("Завтра {0}", time);
+  if (diff === -1) return tt("Вчера {0}", time);
+  const day = [t("вс"), t("пн"), t("вт"), t("ср"), t("чт"), t("пт"), t("сб")][d.getDay()];
   return `${day}, ${pad(d.getDate())}.${pad(d.getMonth() + 1)} ${time}`;
 }
 
@@ -182,18 +184,18 @@ export const formatShort = (iso) => {
 // ---------- колонки й пріоритети (як у макеті) ----------
 export const TASK_COLUMNS = [
   { key: "todo", label: "To Do", color: "#8a8f98" },
-  { key: "inprogress", label: "В работе", color: "#FFC629" },
-  { key: "review", label: "На проверке", color: "#5b9bff" },
-  { key: "consideration", label: "На рассмотрении", color: "#b98bff" },
-  { key: "done", label: "Готово", color: "#4fd88a" },
-  { key: "rejected", label: "Отклонено", color: "#ff7d7d" },
+  { key: "inprogress", label: t("В работе"), color: "#FFC629" },
+  { key: "review", label: t("На проверке"), color: "#5b9bff" },
+  { key: "consideration", label: t("На рассмотрении"), color: "#b98bff" },
+  { key: "done", label: t("Готово"), color: "#4fd88a" },
+  { key: "rejected", label: t("Отклонено"), color: "#ff7d7d" },
 ];
 export const COLUMN_BY_KEY = Object.fromEntries(TASK_COLUMNS.map((c) => [c.key, c]));
 
 export const PRIORITIES = [
-  { key: "low", label: "Низкий", color: "#5ac878", bg: "rgba(90,200,120,.15)" },
-  { key: "medium", label: "Средний", color: "#FFC629", bg: "rgba(255,198,41,.15)" },
-  { key: "high", label: "Высокий", color: "#ff7d7d", bg: "rgba(255,90,90,.15)" },
+  { key: "low", label: t("Низкий"), color: "#5ac878", bg: "rgba(90,200,120,.15)" },
+  { key: "medium", label: t("Средний"), color: "#FFC629", bg: "rgba(255,198,41,.15)" },
+  { key: "high", label: t("Высокий"), color: "#ff7d7d", bg: "rgba(255,90,90,.15)" },
 ];
 export const PRIORITY_BY_KEY = Object.fromEntries(PRIORITIES.map((p) => [p.key, p]));
 

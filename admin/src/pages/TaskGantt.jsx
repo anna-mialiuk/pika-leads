@@ -4,11 +4,12 @@ import { TasksHeader, useTaskModal, useTaskScope } from "../components/TasksShel
 import { isOverdue, localDay, useColumns } from "../lib/tasks";
 import { useMeta } from "../lib/meta";
 import { useProjects } from "../lib/projects";
+import { t } from "../lib/i18n";
 
 const COL = 40; // px на день
 const DAY = 864e5;
-const WEEKDAYS = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
-const MONTHS = ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"];
+const WEEKDAYS = [t("Вс"), t("Пн"), t("Вт"), t("Ср"), t("Чт"), t("Пт"), t("Сб")];
+const MONTHS = [t("янв"), t("фев"), t("мар"), t("апр"), t("май"), t("июн"), t("июл"), t("авг"), t("сен"), t("окт"), t("ноя"), t("дек")];
 const PRI_DOT = { high: "#ff7d7d", medium: "#f0883e", low: "#5b9bff" };
 
 const parse = (iso) => {
@@ -67,7 +68,7 @@ function TaskGantt() {
       .forEach((r) => {
         const p = r.t.projectId ? projectById[r.t.projectId] : null;
         const key = p ? p.id : 0;
-        if (!groups.has(key)) groups.set(key, { key, name: p ? p.name : "Без проекта", color: p ? p.color : "#8a8f98", rows: [] });
+        if (!groups.has(key)) groups.set(key, { key, name: p ? p.name : t("Без проекта"), color: p ? p.color : "#8a8f98", rows: [] });
         const si = idx(r.start, min);
         const ei = idx(r.end, min);
         const length = ei - si + 1;
@@ -97,7 +98,7 @@ function TaskGantt() {
       <TasksHeader scope={scope} onScope={setScope} />
 
       {!data ? (
-        <div className="tgantt-empty">Задач пока нет — создайте первую, и она появится на диаграмме.</div>
+        <div className="tgantt-empty">{t("Задач пока нет — создайте первую, и она появится на диаграмме.")}</div>
       ) : (
         <>
           <div className="tgantt">
@@ -109,13 +110,11 @@ function TaskGantt() {
                 </div>
               ))}
               <div className="tgantt__legend-today">
-                <b />
-                Сегодня
-              </div>
+                <b />{t("Сегодня")}</div>
             </div>
             <div className="tgantt__body">
               <div className="tgantt__left">
-                <div className="tgantt__left-head">Задача</div>
+                <div className="tgantt__left-head">{t("Задача")}</div>
                 {data.groups.map((g) => (
                   <div key={g.key}>
                     <div className="tgantt__group">
@@ -180,10 +179,7 @@ function TaskGantt() {
               </div>
             </div>
           </div>
-          <div className="tboard-note tgantt-note">
-            Полоса — период задачи (старт → дедлайн), цвет — статус, точка слева — приоритет. Клик по задаче открывает карточку. Прокручивайте
-            таймлайн вправо.
-          </div>
+          <div className="tboard-note tgantt-note">{t("Полоса — период задачи (старт → дедлайн), цвет — статус, точка слева — приоритет. Клик по задаче открывает карточку. Прокручивайте таймлайн вправо.")}</div>
 
           {/* телефон: список по проектах з міні-смугами */}
           <div className="tgantt-mobile">

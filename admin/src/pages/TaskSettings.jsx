@@ -7,21 +7,22 @@ import { useAuth } from "../lib/auth";
 import { useTasks } from "../lib/tasks";
 
 import "./TaskSettings.css";
+import { t, tt } from "../lib/i18n";
 
 const SWATCHES = ["#8a8f98", "#5b9bff", "#FFC629", "#f0883e", "#4fd88a", "#ff7d7d", "#b98bff", "#4fd8c8"];
-const REQUIRED = { todo: "в неё попадают новые задачи", done: "её ставит кнопка «✅ Готово» в Telegram" };
+const REQUIRED = { todo: t("в неё попадают новые задачи"), done: t("её ставит кнопка «✅ Готово» в Telegram") };
 
 const VIDEO = [
-  { key: "zoom", label: "Zoom", mark: "Z", markBg: "#2D8CFF", desc: "Ссылка на постоянную комнату Zoom подставляется в звонки и планёрки", placeholder: "https://us02web.zoom.us/j/…" },
-  { key: "googlemeet", label: "Google Meet", mark: "M", markBg: "#00AC47", desc: "Ссылка на Meet подставляется при создании звонка", placeholder: "https://meet.google.com/abc-defg-hij" },
-  { key: "loom", label: "Loom", mark: "L", markBg: "#625DF5", desc: "Асинхронные видео-записи: ссылка на ваше пространство Loom", placeholder: "https://www.loom.com/…" },
+  { key: "zoom", label: "Zoom", mark: "Z", markBg: "#2D8CFF", desc: t("Ссылка на постоянную комнату Zoom подставляется в звонки и планёрки"), placeholder: "https://us02web.zoom.us/j/…" },
+  { key: "googlemeet", label: "Google Meet", mark: "M", markBg: "#00AC47", desc: t("Ссылка на Meet подставляется при создании звонка"), placeholder: "https://meet.google.com/abc-defg-hij" },
+  { key: "loom", label: "Loom", mark: "L", markBg: "#625DF5", desc: t("Асинхронные видео-записи: ссылка на ваше пространство Loom"), placeholder: "https://www.loom.com/…" },
 ];
 
 const NOTIFY = [
-  { key: "assign", label: "Назначение задачи", desc: "Исполнитель получает уведомление, когда на него ставят задачу" },
-  { key: "deadline", label: "Приближение дедлайна", desc: "Напоминание за день до срока" },
-  { key: "overdue", label: "Наступление дедлайна", desc: "Напоминание в момент дедлайна с кнопками «✅ Готово» и «⏰ +1 час»" },
-  { key: "comment", label: "Комментарии", desc: "Уведомление о новом комментарии в задаче (отмеченные через @ получают всегда)" },
+  { key: "assign", label: t("Назначение задачи"), desc: t("Исполнитель получает уведомление, когда на него ставят задачу") },
+  { key: "deadline", label: t("Приближение дедлайна"), desc: t("Напоминание за день до срока") },
+  { key: "overdue", label: t("Наступление дедлайна"), desc: t("Напоминание в момент дедлайна с кнопками «✅ Готово» и «⏰ +1 час»") },
+  { key: "comment", label: t("Комментарии"), desc: t("Уведомление о новом комментарии в задаче (отмеченные через @ получают всегда)") },
 ];
 
 function Switch({ on, onChange, disabled, label }) {
@@ -68,7 +69,7 @@ function TaskSettings() {
     );
   }
   const settings = data.settings;
-  const columns = draft || settings.columns;
+  const columns = draft || settings.columns.map((c) => ({ ...c, label: t(c.label) }));
   const dirty = draft !== null;
 
   const save = async (body, message = "") => {
@@ -81,7 +82,7 @@ function TaskSettings() {
       setColumns(result.settings.columns);
       if (result.moved) {
         reload();
-        setNotice(`Сохранено. Задачи из удалённых колонок (${result.moved}) перенесены в «${result.settings.columns[0].label}».`);
+        setNotice(tt("Сохранено. Задачи из удалённых колонок ({0}) перенесены в «{1}».", result.moved, result.settings.columns[0].label));
       } else if (message) setNotice(message);
       return true;
     } catch (e) {
@@ -103,13 +104,13 @@ function TaskSettings() {
   const removeCol = (index) => {
     const col = columns[index];
     const count = tasks.filter((t) => t.status === col.key).length;
-    if (count && !window.confirm(`В колонке «${col.label}» ${count} задач — они перейдут в «${columns.find((c) => c.key === "todo")?.label}». Удалить?`)) return;
+    if (count && !window.confirm(tt("В колонке «{0}» {1} задач — они перейдут в «{2}». Удалить?", col.label, count, columns.find((c) => c.key === "todo")?.label))) return;
     setDraft(columns.filter((_, i) => i !== index));
   };
-  const addCol = () => setDraft([...columns.slice(0, -2), { label: "Новый статус", color: "#4fd8c8" }, ...columns.slice(-2)]);
+  const addCol = () => setDraft([...columns.slice(0, -2), { label: t("Новый статус"), color: "#4fd8c8" }, ...columns.slice(-2)]);
 
   const saveColumns = async () => {
-    if (await save({ columns: draft }, "Колонки сохранены — доска уже обновилась.")) setDraft(null);
+    if (await save({ columns: draft }, t("Колонки сохранены — доска уже обновилась."))) setDraft(null);
   };
 
   const notify = settings.notify;
@@ -119,29 +120,27 @@ function TaskSettings() {
     <div className="tboard-page">
       <TasksHeader />
       <div className="ts">
-        {!isAdmin && <div className="ts-readonly">Изменять настройки может администратор.</div>}
+        {!isAdmin && <div className="ts-readonly">{t("Изменять настройки может администратор.")}</div>}
         {error && <div className="alert">⚠ {error}</div>}
         {notice && <div className="alert alert--ok">✓ {notice}</div>}
 
         {/* колонки */}
         <section className="ts-card">
           <div className="ts-card__head">
-            <div className="ts-card__title">Статусы задач (колонки)</div>
+            <div className="ts-card__title">{t("Статусы задач (колонки)")}</div>
             {isAdmin && (
-              <button type="button" className="ts-yellow" onClick={addCol} disabled={columns.length >= 12}>
-                + Добавить статус
-              </button>
+              <button type="button" className="ts-yellow" onClick={addCol} disabled={columns.length >= 12}>{t("+ Добавить статус")}</button>
             )}
           </div>
-          <div className="ts-card__text">Переименуйте колонки канбана, назначьте цвета и порядок.</div>
+          <div className="ts-card__text">{t("Переименуйте колонки канбана, назначьте цвета и порядок.")}</div>
           <div className="ts-cols">
             {columns.map((c, i) => (
               <div key={c.key || `new${i}`} className="ts-col">
                 <div className="ts-col__arrows">
-                  <button type="button" disabled={!isAdmin || i === 0} onClick={() => move(i, -1)} aria-label="Выше">
+                  <button type="button" disabled={!isAdmin || i === 0} onClick={() => move(i, -1)} aria-label={t("Выше")}>
                     ▲
                   </button>
-                  <button type="button" disabled={!isAdmin || i === columns.length - 1} onClick={() => move(i, 1)} aria-label="Ниже">
+                  <button type="button" disabled={!isAdmin || i === columns.length - 1} onClick={() => move(i, 1)} aria-label={t("Ниже")}>
                     ▼
                   </button>
                 </div>
@@ -152,96 +151,90 @@ function TaskSettings() {
                   maxLength={40}
                   disabled={!isAdmin}
                   onChange={(e) => editCol(i, { label: e.target.value })}
-                  aria-label="Название колонки"
+                  aria-label={t("Название колонки")}
                 />
-                {c.closed && <span className="ts-col__closed">закрытая</span>}
+                {c.closed && <span className="ts-col__closed">{t("закрытая")}</span>}
                 <div className="ts-col__swatches">
                   {SWATCHES.map((col) => (
                     <button
                       key={col}
                       type="button"
                       disabled={!isAdmin}
-                      aria-label={`Цвет ${col}`}
+                      aria-label={tt("Цвет {0}", col)}
                       style={{ background: col, boxShadow: col === c.color ? `0 0 0 2px var(--surface), 0 0 0 4px ${col}` : "none" }}
                       onClick={() => editCol(i, { color: col })}
                     />
                   ))}
                 </div>
                 {isAdmin && columns.length > 2 && !REQUIRED[c.key] && (
-                  <button type="button" className="ts-col__del" title="Удалить" aria-label="Удалить колонку" onClick={() => removeCol(i)}>
+                  <button type="button" className="ts-col__del" title={t("Удалить")} aria-label={t("Удалить колонку")} onClick={() => removeCol(i)}>
                     ×
                   </button>
                 )}
-                {REQUIRED[c.key] && <span className="ts-col__lock" title={`Нельзя удалить: ${REQUIRED[c.key]}`}>🔒</span>}
+                {REQUIRED[c.key] && <span className="ts-col__lock" title={tt("Нельзя удалить: {0}", REQUIRED[c.key])}>🔒</span>}
               </div>
             ))}
           </div>
           {dirty && (
             <div className="ts-save-row">
               <button type="button" className="ts-yellow" onClick={saveColumns} disabled={busy}>
-                {busy ? "Сохраняем…" : "Сохранить колонки"}
+                {busy ? t("Сохраняем…") : t("Сохранить колонки")}
               </button>
-              <button type="button" className="tm-btn" onClick={() => setDraft(null)}>
-                Отменить
-              </button>
+              <button type="button" className="tm-btn" onClick={() => setDraft(null)}>{t("Отменить")}</button>
             </div>
           )}
         </section>
 
         {/* Telegram: /task */}
         <section className="ts-card">
-          <div className="ts-card__title">Постановка задач через Telegram</div>
-          <div className="ts-card__text">Бот задаёт вопросы по задаче в чате и создаёт её в системе автоматически.</div>
+          <div className="ts-card__title">{t("Постановка задач через Telegram")}</div>
+          <div className="ts-card__text">{t("Бот задаёт вопросы по задаче в чате и создаёт её в системе автоматически.")}</div>
           <div className="ts-row ts-row--box">
             <div className="ts-row__info">
               <TelegramMark />
               <div>
-                <div className="ts-row__title">Создание задач из Telegram</div>
-                <div className="ts-row__desc">Команда /task запускает пошаговую форму</div>
+                <div className="ts-row__title">{t("Создание задач из Telegram")}</div>
+                <div className="ts-row__desc">{t("Команда /task запускает пошаговую форму")}</div>
               </div>
             </div>
             <Switch
-              label="Создание задач из Telegram"
+              label={t("Создание задач из Telegram")}
               on={settings.telegramCreate}
               disabled={!isAdmin || busy}
               onChange={(v) => save({ telegramCreate: v })}
             />
           </div>
           <div className="ts-chat">
-            <div className="ts-chat__label">Пример диалога бота</div>
+            <div className="ts-chat__label">{t("Пример диалога бота")}</div>
             <div className="ts-chat__list">
-              <div className="ts-bubble">🤖 Введите название задачи</div>
-              <div className="ts-bubble is-me">Настроить ретаргет для клиники</div>
-              <div className="ts-bubble">🤖 Дедлайн? · Проект? · Ответственный? — выбор кнопками</div>
-              <div className="ts-bubble is-me">Завтра 10:00 · Клиника · Олег</div>
-              <div className="ts-bubble">✅ Задача создана в колонке «{settings.columns.find((c) => c.key === "todo")?.label}»</div>
+              <div className="ts-bubble">{t("🤖 Введите название задачи")}</div>
+              <div className="ts-bubble is-me">{t("Настроить ретаргет для клиники")}</div>
+              <div className="ts-bubble">{t("🤖 Дедлайн? · Проект? · Ответственный? — выбор кнопками")}</div>
+              <div className="ts-bubble is-me">{t("Завтра 10:00 · Клиника · Олег")}</div>
+              <div className="ts-bubble">{t("✅ Задача создана в колонке «")}{settings.columns.find((c) => c.key === "todo")?.label}»</div>
             </div>
           </div>
           <div className="ts-bot">
             {bot?.configured ? (
-              <>
-                Бот:{" "}
+              <>{t("Бот:")}{" "}
                 {bot.username ? (
                   <a href={`https://t.me/${bot.username}`} target="_blank" rel="noopener noreferrer">
                     @{bot.username}
                   </a>
                 ) : (
-                  "подключён"
-                )}{" "}
-                · чтобы бот узнал сотрудника, тот подключает Telegram в своём профиле панели, затем пишет боту <code>/task</code>.
+                  t("подключён")
+                )}{" "}{t("· чтобы бот узнал сотрудника, тот подключает Telegram в своём профиле панели, затем пишет боту")}{" "}<code>/task</code>.
               </>
             ) : (
-              <>Telegram-бот не настроен на сервере (TELEGRAM_BOT_TOKEN).</>
+              <>{t("Telegram-бот не настроен на сервере (TELEGRAM_BOT_TOKEN).")}</>
             )}
           </div>
         </section>
 
         {/* відеозв'язок */}
         <section className="ts-card">
-          <div className="ts-card__title">Видеозвонки и конференции</div>
-          <div className="ts-card__text">
-            Сохраните ссылку на постоянную комнату — при создании звонка в разделе «Звонки» она подставится автоматически.
-          </div>
+          <div className="ts-card__title">{t("Видеозвонки и конференции")}</div>
+          <div className="ts-card__text">{t("Сохраните ссылку на постоянную комнату — при создании звонка в разделе «Звонки» она подставится автоматически.")}</div>
           <div className="ts-video">
             {VIDEO.map((v) => {
               const link = settings.video?.[v.key]?.link || "";
@@ -255,7 +248,7 @@ function TaskSettings() {
                     </div>
                     <div>
                       <div className="ts-vcard__label">{v.label}</div>
-                      <div className="ts-vcard__status">● {on ? "Подключён" : "Не подключён"}</div>
+                      <div className="ts-vcard__status">● {on ? t("Подключён") : t("Не подключён")}</div>
                     </div>
                   </div>
                   <div className="ts-vcard__desc">{on && !editing ? <span className="mono">{link}</span> : v.desc}</div>
@@ -274,15 +267,13 @@ function TaskSettings() {
                           className="ts-yellow"
                           disabled={busy}
                           onClick={async () => {
-                            if (await save({ video: { [v.key]: { link: rooms[v.key].trim() } } }, `${v.label} подключён.`)) {
+                            if (await save({ video: { [v.key]: { link: rooms[v.key].trim() } } }, tt("{0} подключён.", v.label))) {
                               const next = { ...rooms };
                               delete next[v.key];
                               setRooms(next);
                             }
                           }}
-                        >
-                          Сохранить
-                        </button>
+                        >{t("Сохранить")}</button>
                         <button
                           type="button"
                           className="tm-btn"
@@ -291,9 +282,7 @@ function TaskSettings() {
                             delete next[v.key];
                             setRooms(next);
                           }}
-                        >
-                          Отмена
-                        </button>
+                        >{t("Отмена")}</button>
                       </div>
                     </>
                   ) : (
@@ -304,11 +293,11 @@ function TaskSettings() {
                         disabled={busy}
                         onClick={() =>
                           on
-                            ? window.confirm(`Отключить ${v.label}?`) && save({ video: { [v.key]: { link: "" } } })
+                            ? window.confirm(tt("Отключить {0}?", v.label)) && save({ video: { [v.key]: { link: "" } } })
                             : setRooms({ ...rooms, [v.key]: "" })
                         }
                       >
-                        {on ? "Отключить" : "Подключить"}
+                        {on ? t("Отключить") : t("Подключить")}
                       </button>
                     )
                   )}
@@ -318,27 +307,27 @@ function TaskSettings() {
           </div>
           <div className="ts-row ts-row--box">
             <div>
-              <div className="ts-row__title">Автоссылка на встречу</div>
-              <div className="ts-row__desc">Подставлять ссылку подключённого сервиса при создании звонка</div>
+              <div className="ts-row__title">{t("Автоссылка на встречу")}</div>
+              <div className="ts-row__desc">{t("Подставлять ссылку подключённого сервиса при создании звонка")}</div>
             </div>
-            <Switch label="Автоссылка на встречу" on={settings.autoLink} disabled={!isAdmin || busy} onChange={(v) => save({ autoLink: v })} />
+            <Switch label={t("Автоссылка на встречу")} on={settings.autoLink} disabled={!isAdmin || busy} onChange={(v) => save({ autoLink: v })} />
           </div>
         </section>
 
         {/* сповіщення */}
         <section className="ts-card">
-          <div className="ts-card__title">Уведомления о задачах</div>
-          <div className="ts-card__text">Бот присылает сотруднику оповещения о его задачах в Telegram.</div>
+          <div className="ts-card__title">{t("Уведомления о задачах")}</div>
+          <div className="ts-card__text">{t("Бот присылает сотруднику оповещения о его задачах в Telegram.")}</div>
           <div className="ts-row ts-row--box">
             <div className="ts-row__info">
               <TelegramMark />
               <div>
-                <div className="ts-row__title">Оповещения в Telegram</div>
-                <div className="ts-row__desc">Личные уведомления каждому сотруднику</div>
+                <div className="ts-row__title">{t("Оповещения в Telegram")}</div>
+                <div className="ts-row__desc">{t("Личные уведомления каждому сотруднику")}</div>
               </div>
             </div>
             <Switch
-              label="Оповещения в Telegram"
+              label={t("Оповещения в Telegram")}
               on={notify.enabled}
               disabled={!isAdmin || busy}
               onChange={(v) => save({ notify: { enabled: v } })}

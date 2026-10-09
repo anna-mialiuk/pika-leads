@@ -3,21 +3,22 @@
  * що й CRM (заявок сотні — це миттєво й не потребує окремого API).
  */
 import { sourceOf } from "./format";
+import { t, tt } from "./i18n";
 
 const DAY = 24 * 60 * 60 * 1000;
 
 /** Етапи воронки: заявка «дійшла» до етапу, якщо колись мала один зі статусів */
 export const FUNNEL = [
-  { key: "all", label: "Заявки", statuses: null },
+  { key: "all", label: t("Заявки"), statuses: null },
   {
     key: "work",
-    label: "Взяли в работу",
+    label: t("Взяли в работу"),
     statuses: ["call", "scheduled", "no_answer", "no_pickup", "qualified", "proposal", "sale", "unqualified", "refused"],
   },
-  { key: "contact", label: "Связались", statuses: ["scheduled", "qualified", "proposal", "sale", "unqualified", "refused"] },
-  { key: "qualified", label: "Квалифицирован", statuses: ["qualified", "proposal", "sale"] },
-  { key: "proposal", label: "Отправили КП", statuses: ["proposal", "sale"] },
-  { key: "sale", label: "Продажа", statuses: ["sale"] },
+  { key: "contact", label: t("Связались"), statuses: ["scheduled", "qualified", "proposal", "sale", "unqualified", "refused"] },
+  { key: "qualified", label: t("Квалифицирован"), statuses: ["qualified", "proposal", "sale"] },
+  { key: "proposal", label: t("Отправили КП"), statuses: ["proposal", "sale"] },
+  { key: "sale", label: t("Продажа"), statuses: ["sale"] },
 ];
 
 /** Куди «зникають» заявки: поточний статус */
@@ -26,10 +27,10 @@ export const LOSSES = ["no_answer", "no_pickup", "unqualified", "refused"];
 const OPEN = new Set(["new", "call", "scheduled", "no_answer", "no_pickup", "qualified", "proposal"]);
 
 export const PERIODS = [
-  { key: "7", label: "7 дней", days: 7 },
-  { key: "30", label: "30 дней", days: 30 },
-  { key: "90", label: "90 дней", days: 90 },
-  { key: "all", label: "Всё время", days: null },
+  { key: "7", label: t("7 дней"), days: 7 },
+  { key: "30", label: t("30 дней"), days: 30 },
+  { key: "90", label: t("90 дней"), days: 90 },
+  { key: "all", label: t("Всё время"), days: null },
 ];
 
 const startOfDay = (time) => {
@@ -94,52 +95,52 @@ function kpis(list) {
 
 // ---------- країна за кодом телефону ----------
 const COUNTRIES = [
-  ["380", "🇺🇦", "Украина"],
-  ["48", "🇵🇱", "Польша"],
-  ["77", "🇰🇿", "Казахстан"],
-  ["7", "🇷🇺", "Россия"],
-  ["49", "🇩🇪", "Германия"],
-  ["40", "🇷🇴", "Румыния"],
-  ["370", "🇱🇹", "Литва"],
-  ["371", "🇱🇻", "Латвия"],
-  ["372", "🇪🇪", "Эстония"],
-  ["373", "🇲🇩", "Молдова"],
-  ["375", "🇧🇾", "Беларусь"],
-  ["420", "🇨🇿", "Чехия"],
-  ["421", "🇸🇰", "Словакия"],
-  ["36", "🇭🇺", "Венгрия"],
-  ["359", "🇧🇬", "Болгария"],
-  ["43", "🇦🇹", "Австрия"],
-  ["41", "🇨🇭", "Швейцария"],
-  ["31", "🇳🇱", "Нидерланды"],
-  ["32", "🇧🇪", "Бельгия"],
-  ["33", "🇫🇷", "Франция"],
-  ["34", "🇪🇸", "Испания"],
-  ["39", "🇮🇹", "Италия"],
-  ["351", "🇵🇹", "Португалия"],
-  ["44", "🇬🇧", "Великобритания"],
-  ["353", "🇮🇪", "Ирландия"],
-  ["45", "🇩🇰", "Дания"],
-  ["46", "🇸🇪", "Швеция"],
-  ["47", "🇳🇴", "Норвегия"],
-  ["358", "🇫🇮", "Финляндия"],
-  ["30", "🇬🇷", "Греция"],
-  ["90", "🇹🇷", "Турция"],
-  ["972", "🇮🇱", "Израиль"],
-  ["971", "🇦🇪", "ОАЭ"],
-  ["995", "🇬🇪", "Грузия"],
-  ["374", "🇦🇲", "Армения"],
-  ["994", "🇦🇿", "Азербайджан"],
-  ["998", "🇺🇿", "Узбекистан"],
-  ["1", "🇺🇸", "США / Канада"],
-  ["61", "🇦🇺", "Австралия"],
+  ["380", "🇺🇦", t("Украина")],
+  ["48", "🇵🇱", t("Польша")],
+  ["77", "🇰🇿", t("Казахстан")],
+  ["7", "🇷🇺", t("Россия")],
+  ["49", "🇩🇪", t("Германия")],
+  ["40", "🇷🇴", t("Румыния")],
+  ["370", "🇱🇹", t("Литва")],
+  ["371", "🇱🇻", t("Латвия")],
+  ["372", "🇪🇪", t("Эстония")],
+  ["373", "🇲🇩", t("Молдова")],
+  ["375", "🇧🇾", t("Беларусь")],
+  ["420", "🇨🇿", t("Чехия")],
+  ["421", "🇸🇰", t("Словакия")],
+  ["36", "🇭🇺", t("Венгрия")],
+  ["359", "🇧🇬", t("Болгария")],
+  ["43", "🇦🇹", t("Австрия")],
+  ["41", "🇨🇭", t("Швейцария")],
+  ["31", "🇳🇱", t("Нидерланды")],
+  ["32", "🇧🇪", t("Бельгия")],
+  ["33", "🇫🇷", t("Франция")],
+  ["34", "🇪🇸", t("Испания")],
+  ["39", "🇮🇹", t("Италия")],
+  ["351", "🇵🇹", t("Португалия")],
+  ["44", "🇬🇧", t("Великобритания")],
+  ["353", "🇮🇪", t("Ирландия")],
+  ["45", "🇩🇰", t("Дания")],
+  ["46", "🇸🇪", t("Швеция")],
+  ["47", "🇳🇴", t("Норвегия")],
+  ["358", "🇫🇮", t("Финляндия")],
+  ["30", "🇬🇷", t("Греция")],
+  ["90", "🇹🇷", t("Турция")],
+  ["972", "🇮🇱", t("Израиль")],
+  ["971", "🇦🇪", t("ОАЭ")],
+  ["995", "🇬🇪", t("Грузия")],
+  ["374", "🇦🇲", t("Армения")],
+  ["994", "🇦🇿", t("Азербайджан")],
+  ["998", "🇺🇿", t("Узбекистан")],
+  ["1", "🇺🇸", t("США / Канада")],
+  ["61", "🇦🇺", t("Австралия")],
 ].sort((a, b) => b[0].length - a[0].length);
 
 export function countryOf(lead) {
   const digits = String(lead.data?.phone_full || "").replace(/\D/g, "");
   if (digits.length < 8) return null;
   const found = COUNTRIES.find(([code]) => digits.startsWith(code));
-  return found ? { code: found[0], flag: found[1], name: found[2] } : { code: "?", flag: "🌐", name: "Другие" };
+  return found ? { code: found[0], flag: found[1], name: found[2] } : { code: "?", flag: "🌐", name: t("Другие") };
 }
 
 /** Групування: [{ key, label, leads, sales, conversion }] за спаданням кількості */
@@ -197,7 +198,7 @@ export function analyze(allLeads, period, { users = [], types = {} } = {}) {
   const userName = (id) => users.find((u) => u.id === id)?.name;
   const managers = groupBy(list, (l) => ({
     key: l.managerId ?? "none",
-    label: l.managerId ? userName(l.managerId) || `#${l.managerId}` : "Не назначен",
+    label: l.managerId ? userName(l.managerId) || `#${l.managerId}` : t("Не назначен"),
     unassigned: !l.managerId,
   })).map((row) => {
     const own = list.filter((l) => (l.managerId ?? "none") === row.key);
@@ -238,8 +239,8 @@ export function analyze(allLeads, period, { users = [], types = {} } = {}) {
 /** «12 мин», «3,5 ч», «2 дн» */
 export function formatMinutes(minutes) {
   if (minutes === null || minutes === undefined) return "—";
-  if (minutes < 1) return "< 1 мин";
-  if (minutes < 60) return `${Math.round(minutes)} мин`;
-  if (minutes < 60 * 24) return `${(minutes / 60).toFixed(minutes < 600 ? 1 : 0).replace(".", ",")} ч`;
-  return `${Math.round(minutes / 60 / 24)} дн`;
+  if (minutes < 1) return t("< 1 мин");
+  if (minutes < 60) return tt("{0} мин", Math.round(minutes));
+  if (minutes < 60 * 24) return tt("{0} ч", (minutes / 60).toFixed(minutes < 600 ? 1 : 0).replace(".", ","));
+  return tt("{0} дн", Math.round(minutes / 60 / 24));
 }

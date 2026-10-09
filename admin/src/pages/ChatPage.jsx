@@ -10,11 +10,12 @@ import { useTasks } from "../lib/tasks";
 
 import "../components/Projects.css";
 import "./ChatPage.css";
+import { t, tt } from "../lib/i18n";
 
 const AVATARS = ["#FFC629", "#5b9bff", "#f0883e", "#4fd88a", "#b98bff", "#4fd8c8", "#ff7d7d"];
 const EMOJIS = ["😀", "😂", "🔥", "👍", "✅", "🎉", "💰", "📈", "🚀", "👀", "🙏", "💪", "❤️", "⚡", "🎯", "✍️"];
 const QUICK = ["🔥", "👍", "✅"];
-const ROLE_LABELS = { admin: "Администратор", manager: "Менеджер" };
+const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 const VIDEO_LABEL = { googlemeet: "Google Meet", zoom: "Zoom", loom: "Loom" };
 
 const avatarBg = (id) => AVATARS[(Number(id) || 0) % AVATARS.length];
@@ -28,9 +29,9 @@ function when(iso) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const diff = Math.round((today - day) / 864e5);
-  if (diff === 0) return `сегодня в ${time}`;
-  if (diff === 1) return `вчера в ${time}`;
-  return `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${d.getFullYear()} в ${time}`;
+  if (diff === 0) return tt("сегодня в {0}", time);
+  if (diff === 1) return tt("вчера в {0}", time);
+  return tt("{0}.{1}.{2} в {3}", pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear(), time);
 }
 
 /** Текст повідомлення: @згадки жовтим, посилання https:// клікабельні */
@@ -60,7 +61,7 @@ function Attachment({ file }) {
   if (!file) return null;
   if (file.media === "image") {
     return (
-      <a href={fileUrl(file.id)} download={file.name} className="wc-media" title="Скачать">
+      <a href={fileUrl(file.id)} download={file.name} className="wc-media" title={t("Скачать")}>
         <img src={`${fileUrl(file.id)}?inline=1`} alt={file.name} loading="lazy" />
       </a>
     );
@@ -105,7 +106,7 @@ function ChannelModal({ channel, icons, members, onClose, onSaved }) {
   const isProject = Boolean(channel?.projectId);
 
   const save = async () => {
-    if (!form.name.trim()) return setError("Укажите название канала");
+    if (!form.name.trim()) return setError(t("Укажите название канала"));
     setBusy(true);
     setError("");
     try {
@@ -126,21 +127,17 @@ function ChannelModal({ channel, icons, members, onClose, onSaved }) {
   };
 
   return (
-    <Modal title={channel ? "Редактировать канал" : "Создать канал"} onClose={onClose} className="task-modal proj-modal">
+    <Modal title={channel ? t("Редактировать канал") : t("Создать канал")} onClose={onClose} className="task-modal proj-modal">
       <fieldset className="task-modal__body" disabled={busy}>
-        <div className="tm-label">Тип канала</div>
+        <div className="tm-label">{t("Тип канала")}</div>
         <div className="wc-types">
-          <button type="button" className={form.type === "text" ? "is-on" : ""} onClick={() => set({ type: "text", icon: form.icon === "🔊" ? "#" : form.icon })}>
-            # Текстовый
-          </button>
-          <button type="button" className={form.type === "voice" ? "is-on" : ""} onClick={() => set({ type: "voice", icon: form.icon === "#" ? "🔊" : form.icon })}>
-            🔊 Голосовой
-          </button>
+          <button type="button" className={form.type === "text" ? "is-on" : ""} onClick={() => set({ type: "text", icon: form.icon === "🔊" ? "#" : form.icon })}>{t("# Текстовый")}</button>
+          <button type="button" className={form.type === "voice" ? "is-on" : ""} onClick={() => set({ type: "voice", icon: form.icon === "#" ? "🔊" : form.icon })}>{t("🔊 Голосовой")}</button>
         </div>
-        <div className="tm-label">Название канала</div>
-        <input className="tm-input tm-input--top pm-big" placeholder="напр. крео-гемблинг" value={form.name} maxLength={40} autoFocus onChange={(e) => set({ name: e.target.value })} />
-        <input className="tm-input tm-input--top" placeholder="Описание (необязательно)" value={form.topic} maxLength={120} onChange={(e) => set({ topic: e.target.value })} />
-        <div className="tm-label">Иконка канала</div>
+        <div className="tm-label">{t("Название канала")}</div>
+        <input className="tm-input tm-input--top pm-big" placeholder={t("напр. крео-гемблинг")} value={form.name} maxLength={40} autoFocus onChange={(e) => set({ name: e.target.value })} />
+        <input className="tm-input tm-input--top" placeholder={t("Описание (необязательно)")} value={form.topic} maxLength={120} onChange={(e) => set({ topic: e.target.value })} />
+        <div className="tm-label">{t("Иконка канала")}</div>
         <div className="pm-icons wc-icons">
           {icons.map((ic) => (
             <button key={ic} type="button" className={form.icon === ic ? "is-on" : ""} onClick={() => set({ icon: ic })}>
@@ -149,19 +146,19 @@ function ChannelModal({ channel, icons, members, onClose, onSaved }) {
           ))}
         </div>
         {isProject ? (
-          <p className="wc-note">Доступ к каналу проекта — у команды проекта (PM, байеры, участники) и администраторов.</p>
+          <p className="wc-note">{t("Доступ к каналу проекта — у команды проекта (PM, байеры, участники) и администраторов.")}</p>
         ) : (
           <>
             <div className="wc-private">
               <div>
-                <div className="wc-private__title">🔒 Приватный канал</div>
-                <div className="wc-private__desc">Доступ только по приглашению</div>
+                <div className="wc-private__title">{t("🔒 Приватный канал")}</div>
+                <div className="wc-private__desc">{t("Доступ только по приглашению")}</div>
               </div>
-              <Toggle label="Приватный канал" on={form.private} onChange={(v) => set({ private: v })} />
+              <Toggle label={t("Приватный канал")} on={form.private} onChange={(v) => set({ private: v })} />
             </div>
             {form.private && (
               <>
-                <div className="tm-label">Участники</div>
+                <div className="tm-label">{t("Участники")}</div>
                 <div className="tm-chips">
                   {members.map((m) => {
                     const on = form.members.includes(m.id);
@@ -185,11 +182,9 @@ function ChannelModal({ channel, icons, members, onClose, onSaved }) {
         {error && <div className="alert">⚠ {error}</div>}
         <div className="tm-actions">
           <button type="button" className="tm-save pm-save" onClick={save}>
-            {busy ? "Сохраняем…" : channel ? "Сохранить" : "Создать канал"}
+            {busy ? t("Сохраняем…") : channel ? t("Сохранить") : t("Создать канал")}
           </button>
-          <button type="button" className="tm-btn" onClick={onClose}>
-            Отмена
-          </button>
+          <button type="button" className="tm-btn" onClick={onClose}>{t("Отмена")}</button>
         </div>
       </fieldset>
     </Modal>
@@ -242,7 +237,8 @@ function ChatPage() {
     return () => clearInterval(id);
   }, [loadOverview]);
 
-  const channels = useMemo(() => overview?.channels || [], [overview]);
+  // назви й описи стандартних каналів приходять російською — перекладаємо на мову панелі
+  const channels = useMemo(() => (overview?.channels || []).map((c) => ({ ...c, name: t(c.name), topic: c.topic && t(c.topic).replace(/^Чат проекта · /, `${t("Чат проекта")} · `) })), [overview]);
   const active = channels.find((c) => c.id === activeId) || channels.find((c) => c.type === "text") || null;
   const members = useMemo(() => overview?.members || [], [overview]);
   const memberNames = useMemo(() => members.map((m) => m.name), [members]);
@@ -369,7 +365,7 @@ function ChatPage() {
       .catch((e) => setError(e.message));
 
   const removeMessage = (m) => {
-    if (!window.confirm("Удалить сообщение?")) return;
+    if (!window.confirm(t("Удалить сообщение?"))) return;
     api(`/chat/channels/${active.id}/messages/${m.id}`, { method: "DELETE" })
       .then(() => {
         setMessages((prev) => prev.filter((x) => x.id !== m.id));
@@ -379,8 +375,8 @@ function ChatPage() {
   };
 
   const copy = (m) => {
-    if (active.protect.noForward) return flash("В этом канале запрещено копирование");
-    navigator.clipboard?.writeText(m.text || m.file?.name || "").then(() => flash("Скопировано"));
+    if (active.protect.noForward) return flash(t("В этом канале запрещено копирование"));
+    navigator.clipboard?.writeText(m.text || m.file?.name || "").then(() => flash(t("Скопировано")));
     return null;
   };
 
@@ -391,7 +387,7 @@ function ChatPage() {
         body: { forward: { channelId: active.id, messageId: modal.message.id } },
       });
       setModal(null);
-      flash(`Переслано в #${target.name}`);
+      flash(tt("Переслано в #{0}", target.name));
       loadOverview();
     } catch (e) {
       setError(e.message);
@@ -414,13 +410,13 @@ function ChatPage() {
   const deleteChannel = async (c) => {
     try {
       if (user.role === "admin") {
-        if (!window.confirm(`Удалить канал #${c.name} вместе с историей?`)) return;
+        if (!window.confirm(tt("Удалить канал #{0} вместе с историей?", c.name))) return;
         await api(`/chat/channels/${c.id}`, { method: "DELETE" });
         if (c.id === active?.id) setActiveId(null);
       } else {
-        if (!window.confirm(`Отправить администратору заявку на удаление #${c.name}?`)) return;
+        if (!window.confirm(tt("Отправить администратору заявку на удаление #{0}?", c.name))) return;
         await api(`/chat/channels/${c.id}/delete-request`, { method: "POST" });
-        flash("Заявка отправлена администратору");
+        flash(t("Заявка отправлена администратору"));
       }
       loadOverview();
     } catch (e) {
@@ -438,9 +434,9 @@ function ChatPage() {
   };
 
   const groups = [
-    { label: "Текстовые каналы", items: channels.filter((c) => c.type === "text" && !c.projectId) },
-    { label: "Каналы проектов", items: channels.filter((c) => c.projectId) },
-    { label: "Голосовые каналы", items: channels.filter((c) => c.type === "voice" && !c.projectId) },
+    { label: t("Текстовые каналы"), items: channels.filter((c) => c.type === "text" && !c.projectId) },
+    { label: t("Каналы проектов"), items: channels.filter((c) => c.projectId) },
+    { label: t("Голосовые каналы"), items: channels.filter((c) => c.type === "voice" && !c.projectId) },
   ].filter((g) => g.items.length);
   const delReqs = channels.filter((c) => c.deleteRequest);
   const online = members.filter((m) => m.online);
@@ -473,7 +469,7 @@ function ChatPage() {
       {error && (
         <div className="alert" role="alert">
           ⚠ {error}{" "}
-          <button type="button" className="wc-x" onClick={() => setError("")} aria-label="Скрыть">
+          <button type="button" className="wc-x" onClick={() => setError("")} aria-label={t("Скрыть")}>
             ✕
           </button>
         </div>
@@ -484,7 +480,7 @@ function ChatPage() {
         <aside className="wc-channels">
           <div className="wc-channels__head">
             PIKALEADS
-            <button type="button" title="Создать канал" onClick={() => setModal({ type: "channel" })}>
+            <button type="button" title={t("Создать канал")} onClick={() => setModal({ type: "channel" })}>
               +
             </button>
           </div>
@@ -504,13 +500,13 @@ function ChatPage() {
                     <span className="wc-chan__icon">{c.icon}</span>
                     <span className="wc-chan__name">{c.name}</span>
                     {c.private && !c.projectId && <span className="wc-chan__lock">🔒</span>}
-                    {c.deleteRequest && <span className="wc-chan__pending">на удаление</span>}
+                    {c.deleteRequest && <span className="wc-chan__pending">{t("на удаление")}</span>}
                     {c.unread > 0 && active?.id !== c.id && <span className="wc-chan__unread">{c.unread > 99 ? "99+" : c.unread}</span>}
                     {(c.canModerate || user.role === "admin") && (
                       <span className="wc-chan__actions">
                         <button
                           type="button"
-                          title="Редактировать канал"
+                          title={t("Редактировать канал")}
                           onClick={(e) => {
                             e.stopPropagation();
                             setModal({ type: "channel", channel: c });
@@ -520,7 +516,7 @@ function ChatPage() {
                         </button>
                         <button
                           type="button"
-                          title={user.role === "admin" ? "Удалить канал" : "Запросить удаление у админа"}
+                          title={user.role === "admin" ? t("Удалить канал") : t("Запросить удаление у админа")}
                           onClick={(e) => {
                             e.stopPropagation();
                             deleteChannel(c);
@@ -534,15 +530,13 @@ function ChatPage() {
                 ))}
               </div>
             ))}
-            <button type="button" className="wc-newchan" onClick={() => setModal({ type: "channel" })}>
-              + Создать канал
-            </button>
+            <button type="button" className="wc-newchan" onClick={() => setModal({ type: "channel" })}>{t("+ Создать канал")}</button>
           </div>
           {delReqs.length > 0 && (
             <div className="wc-delreq">
               <button type="button" className="wc-delreq__head" onClick={() => setDelOpen(!delOpen)}>
                 <span>⌦</span>
-                <b>Заявки на удаление · {delReqs.length}</b>
+                <b>{t("Заявки на удаление ·")}{" "}{delReqs.length}</b>
                 <span>▾</span>
               </button>
               {delOpen &&
@@ -561,18 +555,14 @@ function ChatPage() {
                             await api(`/chat/channels/${c.id}`, { method: "DELETE" }).catch((e) => setError(e.message));
                             loadOverview();
                           }}
-                        >
-                          Удалить
-                        </button>
+                        >{t("Удалить")}</button>
                         <button
                           type="button"
                           onClick={async () => {
                             await api(`/chat/channels/${c.id}/delete-request`, { method: "DELETE" }).catch((e) => setError(e.message));
                             loadOverview();
                           }}
-                        >
-                          Отклонить
-                        </button>
+                        >{t("Отклонить")}</button>
                       </div>
                     ) : (
                       c.deleteRequest.userId === user.id && (
@@ -583,9 +573,7 @@ function ChatPage() {
                             await api(`/chat/channels/${c.id}/delete-request`, { method: "DELETE" }).catch((e) => setError(e.message));
                             loadOverview();
                           }}
-                        >
-                          Отменить заявку
-                        </button>
+                        >{t("Отменить заявку")}</button>
                       )
                     )}
                   </div>
@@ -598,7 +586,7 @@ function ChatPage() {
             </div>
             <div>
               <div className="wc-me__name">{user.name}</div>
-              <div className="wc-me__status">● {me?.position || ROLE_LABELS[user.role]}</div>
+              <div className="wc-me__status">● {me?.position ? t(me.position) : ROLE_LABELS[user.role]}</div>
             </div>
           </div>
         </aside>
@@ -608,20 +596,20 @@ function ChatPage() {
           {active ? (
             <>
               <div className="wc-head">
-                <button type="button" className="wc-back" onClick={() => setMobileOpen(false)} aria-label="К каналам">
+                <button type="button" className="wc-back" onClick={() => setMobileOpen(false)} aria-label={t("К каналам")}>
                   ‹
                 </button>
                 <span className="wc-head__icon">{active.icon}</span>
                 <span className="wc-head__name">{active.name}</span>
-                {active.private && <span className="wc-head__priv">🔒 Приватный</span>}
+                {active.private && <span className="wc-head__priv">{t("🔒 Приватный")}</span>}
                 <span className="wc-head__topic">{active.topic}</span>
                 {pinned.length > 0 && (
-                  <button type="button" className="wc-head__btn wc-head__pins" title="Закреплённые" onClick={() => setShowPinned(!showPinned)}>
+                  <button type="button" className="wc-head__btn wc-head__pins" title={t("Закреплённые")} onClick={() => setShowPinned(!showPinned)}>
                     📌 {pinned.length}
                   </button>
                 )}
                 {active.type !== "voice" && (
-                  <button type="button" className="wc-head__btn" title="Защита и настройки канала" onClick={() => setModal({ type: "protect" })}>
+                  <button type="button" className="wc-head__btn" title={t("Защита и настройки канала")} onClick={() => setModal({ type: "protect" })}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z" />
                     </svg>
@@ -631,7 +619,7 @@ function ChatPage() {
 
               {showPinned && (
                 <div className="wc-pins">
-                  <div className="wc-pins__title">ЗАКРЕПЛЁННЫЕ СООБЩЕНИЯ</div>
+                  <div className="wc-pins__title">{t("ЗАКРЕПЛЁННЫЕ СООБЩЕНИЯ")}</div>
                   {pinned.map((p) => (
                     <div key={p.id} className="wc-pin">
                       <span>📌</span>
@@ -640,9 +628,7 @@ function ChatPage() {
                         <small>{when(p.at)}</small>
                         <div>{p.text || p.file?.name}</div>
                       </div>
-                      <button type="button" onClick={() => togglePin(p)}>
-                        открепить
-                      </button>
+                      <button type="button" onClick={() => togglePin(p)}>{t("открепить")}</button>
                     </div>
                   ))}
                 </div>
@@ -652,7 +638,7 @@ function ChatPage() {
                 <div className="wc-voice">
                   <div className="wc-voice__icon">🔊</div>
                   <div className="wc-voice__title">{active.name}</div>
-                  <div className="wc-voice__sub">{active.topic || "Голосовой канал команды"}</div>
+                  <div className="wc-voice__sub">{active.topic || t("Голосовой канал команды")}</div>
                   {active.voice.length > 0 && (
                     <div className="wc-voice__people">
                       {active.voice.map((v) => (
@@ -665,19 +651,14 @@ function ChatPage() {
                   )}
                   {room ? (
                     <div className="wc-voice__btns">
-                      <a href={room.link} target="_blank" rel="noopener noreferrer" className="wc-voice__join" onClick={() => voice(true)}>
-                        Войти в звонок · {room.label}
+                      <a href={room.link} target="_blank" rel="noopener noreferrer" className="wc-voice__join" onClick={() => voice(true)}>{t("Войти в звонок ·")}{" "}{room.label}
                       </a>
                       {active.voice.some((v) => v.userId === user.id) && (
-                        <button type="button" className="tm-btn" onClick={() => voice(false)}>
-                          Выйти
-                        </button>
+                        <button type="button" className="tm-btn" onClick={() => voice(false)}>{t("Выйти")}</button>
                       )}
                     </div>
                   ) : (
-                    <p className="wc-note">
-                      Подключите комнату Google Meet или Zoom в «Задачи → Настройки → Видеозвонки» — здесь появится кнопка входа в звонок.
-                    </p>
+                    <p className="wc-note">{t("Подключите комнату Google Meet или Zoom в «Задачи → Настройки → Видеозвонки» — здесь появится кнопка входа в звонок.")}</p>
                   )}
                 </div>
               ) : (
@@ -690,11 +671,9 @@ function ChatPage() {
                   }}
                 >
                   {hasMore && (
-                    <button type="button" className="wc-older" onClick={loadOlder}>
-                      Показать более ранние
-                    </button>
+                    <button type="button" className="wc-older" onClick={loadOlder}>{t("Показать более ранние")}</button>
                   )}
-                  {messages.length === 0 && <div className="wc-empty">Сообщений пока нет — напишите первым 👋</div>}
+                  {messages.length === 0 && <div className="wc-empty">{t("Сообщений пока нет — напишите первым 👋")}</div>}
                   {messages.map((m) => {
                     const mine = m.userId === user.id;
                     const reacts = Object.entries(m.reactions || {});
@@ -714,11 +693,10 @@ function ChatPage() {
                           <div className="wc-msg__head">
                             <b style={{ color: avatarBg(m.userId) }}>{m.name}</b>
                             <small>{when(m.at)}</small>
-                            {m.pinned && <span className="wc-msg__pinned">📌 закреплено</span>}
+                            {m.pinned && <span className="wc-msg__pinned">{t("📌 закреплено")}</span>}
                           </div>
                           {m.fwd && (
-                            <div className="wc-msg__fwd">
-                              ↪ переслано от {m.fwd.name} из #{m.fwd.channel}
+                            <div className="wc-msg__fwd">{t("↪ переслано от")}{" "}{m.fwd.name}{" "}{t("из #")}{m.fwd.channel}
                             </div>
                           )}
                           {m.text && (
@@ -745,25 +723,25 @@ function ChatPage() {
                         </div>
                         <div className="wc-msg__actions">
                           {QUICK.map((emoji) => (
-                            <button key={emoji} type="button" title="Реакция" onClick={() => react(m, emoji)}>
+                            <button key={emoji} type="button" title={t("Реакция")} onClick={() => react(m, emoji)}>
                               {emoji}
                             </button>
                           ))}
                           {!active.protect.noForward && (
-                            <button type="button" title="Переслать" onClick={() => setModal({ type: "forward", message: m })}>
+                            <button type="button" title={t("Переслать")} onClick={() => setModal({ type: "forward", message: m })}>
                               ↪
                             </button>
                           )}
-                          <button type="button" title={m.pinned ? "Открепить" : "Закрепить"} onClick={() => togglePin(m)}>
+                          <button type="button" title={m.pinned ? t("Открепить") : t("Закрепить")} onClick={() => togglePin(m)}>
                             {m.pinned ? "📌" : "📍"}
                           </button>
                           {!active.protect.noForward && (
-                            <button type="button" title="Копировать" onClick={() => copy(m)}>
+                            <button type="button" title={t("Копировать")} onClick={() => copy(m)}>
                               ⧉
                             </button>
                           )}
                           {(mine || active.canModerate) && (
-                            <button type="button" title="Удалить" className="is-del" onClick={() => removeMessage(m)}>
+                            <button type="button" title={t("Удалить")} className="is-del" onClick={() => removeMessage(m)}>
                               🗑
                             </button>
                           )}
@@ -782,7 +760,7 @@ function ChatPage() {
                       <b>{attach.name}</b>
                       <small>{formatSize(attach.size)}</small>
                     </div>
-                    <button type="button" onClick={() => setAttach(null)} aria-label="Убрать файл">
+                    <button type="button" onClick={() => setAttach(null)} aria-label={t("Убрать файл")}>
                       ✕
                     </button>
                   </div>
@@ -792,14 +770,14 @@ function ChatPage() {
               {active.type !== "voice" &&
                 (active.canWrite ? (
                   <div className="wc-compose">
-                    <label className="wc-btn wc-hide-mobile" title="Фото или видео">
+                    <label className="wc-btn wc-hide-mobile" title={t("Фото или видео")}>
                       🖼
                       <input type="file" accept="image/png,image/jpeg,image/gif,image/webp,video/mp4,video/webm,video/quicktime" hidden onChange={(e) => {
                         setAttach(e.target.files[0] || null);
                         e.target.value = "";
                       }} />
                     </label>
-                    <label className="wc-btn" title="Документ">
+                    <label className="wc-btn" title={t("Документ")}>
                       📎
                       <input type="file" hidden onChange={(e) => {
                         setAttach(e.target.files[0] || null);
@@ -810,7 +788,7 @@ function ChatPage() {
                       ref={inputRef}
                       className="wc-input"
                       value={text}
-                      placeholder={`Сообщение в #${active.name}… (@ — упомянуть)`}
+                      placeholder={tt("Сообщение в #{0}… (@ — упомянуть)", active.name)}
                       maxLength={4000}
                       onChange={(e) => {
                         setText(e.target.value);
@@ -834,13 +812,13 @@ function ChatPage() {
                         }
                       }}
                     />
-                    <button type="button" className="wc-btn wc-btn--at wc-hide-mobile" title="Упомянуть" onClick={() => setMentionOpen(!mentionOpen)}>
+                    <button type="button" className="wc-btn wc-btn--at wc-hide-mobile" title={t("Упомянуть")} onClick={() => setMentionOpen(!mentionOpen)}>
                       @
                     </button>
-                    <button type="button" className="wc-btn" title="Эмодзи" onClick={() => setEmojiOpen(!emojiOpen)}>
+                    <button type="button" className="wc-btn" title={t("Эмодзи")} onClick={() => setEmojiOpen(!emojiOpen)}>
                       😊
                     </button>
-                    <button type="button" className="wc-send" title="Отправить" onClick={send} disabled={busy}>
+                    <button type="button" className="wc-send" title={t("Отправить")} onClick={send} disabled={busy}>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 2 11 13" />
                         <path d="M22 2 15 22l-4-9-9-4 20-7z" />
@@ -864,7 +842,7 @@ function ChatPage() {
                     )}
                     {mentionOpen && (
                       <div className="wc-pop wc-pop--mention">
-                        <div className="wc-pop__title">УПОМЯНУТЬ</div>
+                        <div className="wc-pop__title">{t("УПОМЯНУТЬ")}</div>
                         {members
                           .filter((m) => m.id !== user.id)
                           .map((m) => (
@@ -884,19 +862,19 @@ function ChatPage() {
                     )}
                   </div>
                 ) : (
-                  <div className="wc-readonly">🔒 В этом канале пишут только модераторы</div>
+                  <div className="wc-readonly">{t("🔒 В этом канале пишут только модераторы")}</div>
                 ))}
             </>
           ) : (
-            <div className="wc-empty wc-empty--page">Создайте первый канал — кнопка «+» слева.</div>
+            <div className="wc-empty wc-empty--page">{t("Создайте первый канал — кнопка «+» слева.")}</div>
           )}
         </section>
 
         {/* учасники */}
         <aside className="wc-members">
           {[
-            { label: "В сети", list: online },
-            { label: "Не в сети", list: offline },
+            { label: t("В сети"), list: online },
+            { label: t("Не в сети"), list: offline },
           ].map((g) =>
             g.list.length ? (
               <div key={g.label}>
@@ -913,7 +891,7 @@ function ChatPage() {
                     </div>
                     <div>
                       <div className="wc-member__name">{m.name}</div>
-                      <div className="wc-member__role">{m.position || ROLE_LABELS[m.role]}</div>
+                      <div className="wc-member__role">{m.position ? t(m.position) : ROLE_LABELS[m.role]}</div>
                     </div>
                   </div>
                 ))}
@@ -939,9 +917,9 @@ function ChatPage() {
       )}
 
       {modal?.type === "forward" && (
-        <Modal title="Переслать сообщение" onClose={() => setModal(null)} className="task-modal proj-modal">
+        <Modal title={t("Переслать сообщение")} onClose={() => setModal(null)} className="task-modal proj-modal">
           <div className="wc-fwd-preview">{modal.message.text || modal.message.file?.name}</div>
-          <div className="tm-label">Выберите канал</div>
+          <div className="tm-label">{t("Выберите канал")}</div>
           <div className="wc-fwd-list">
             {channels
               .filter((c) => c.type === "text" && c.id !== active.id && c.canWrite)
@@ -952,20 +930,18 @@ function ChatPage() {
                 </button>
               ))}
           </div>
-          <button type="button" className="tm-btn wc-fwd-cancel" onClick={() => setModal(null)}>
-            Отмена
-          </button>
+          <button type="button" className="tm-btn wc-fwd-cancel" onClick={() => setModal(null)}>{t("Отмена")}</button>
         </Modal>
       )}
 
       {modal?.type === "protect" && active && (
-        <Modal title="Защита канала" onClose={() => setModal(null)} className="task-modal proj-modal">
-          <p className="wc-note">Канал «{active.name}»</p>
+        <Modal title={t("Защита канала")} onClose={() => setModal(null)} className="task-modal proj-modal">
+          <p className="wc-note">{t("Канал «")}{active.name}»</p>
           <div className="wc-protect">
             {[
-              { key: "onlyMods", label: "Пишут только модераторы", desc: "Остальные — только чтение" },
-              { key: "noForward", label: "Запрет пересылки", desc: "Нельзя пересылать и копировать" },
-              { key: "slowmode", label: "Медленный режим", desc: "1 сообщение в 30 секунд" },
+              { key: "onlyMods", label: t("Пишут только модераторы"), desc: t("Остальные — только чтение") },
+              { key: "noForward", label: t("Запрет пересылки"), desc: t("Нельзя пересылать и копировать") },
+              { key: "slowmode", label: t("Медленный режим"), desc: t("1 сообщение в 30 секунд") },
             ].map((r) => (
               <div key={r.key} className="wc-private">
                 <div>
@@ -976,13 +952,9 @@ function ChatPage() {
               </div>
             ))}
           </div>
-          {!active.canModerate && <p className="wc-note">Менять защиту может администратор или автор канала.</p>}
-          <p className="wc-note">
-            Сообщения хранятся на сервере панели и видны только участникам канала (для приватных — по приглашению).
-          </p>
-          <button type="button" className="tm-save pm-save wc-done" onClick={() => setModal(null)}>
-            Готово
-          </button>
+          {!active.canModerate && <p className="wc-note">{t("Менять защиту может администратор или автор канала.")}</p>}
+          <p className="wc-note">{t("Сообщения хранятся на сервере панели и видны только участникам канала (для приватных — по приглашению).")}</p>
+          <button type="button" className="tm-save pm-save wc-done" onClick={() => setModal(null)}>{t("Готово")}</button>
         </Modal>
       )}
     </div>

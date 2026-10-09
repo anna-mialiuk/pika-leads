@@ -4,9 +4,10 @@ import { TasksHeader, useTaskModal, useTaskScope } from "../components/TasksShel
 import { localDay, useColumns } from "../lib/tasks";
 import { todayIso } from "../lib/projects";
 import { useMeta } from "../lib/meta";
+import { t } from "../lib/i18n";
 
-const MONTHS = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-const WEEK = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+const MONTHS = [t("Январь"), t("Февраль"), t("Март"), t("Апрель"), t("Май"), t("Июнь"), t("Июль"), t("Август"), t("Сентябрь"), t("Октябрь"), t("Ноябрь"), t("Декабрь")];
+const WEEK = [t("Пн"), t("Вт"), t("Ср"), t("Чт"), t("Пт"), t("Сб"), t("Вс")];
 const pad = (n) => String(n).padStart(2, "0");
 
 /** Календар дедлайнів (як у макеті): місяць сіткою, на телефоні — список днів */
@@ -51,18 +52,17 @@ function TaskCalendar() {
 
       <div className="tcal-head">
         <div className="tcal-nav">
-          <button type="button" className="tcal-nav__btn" onClick={() => shift(-1)} aria-label="Предыдущий месяц">
+          <button type="button" className="tcal-nav__btn" onClick={() => shift(-1)} aria-label={t("Предыдущий месяц")}>
             ‹
           </button>
           <div className="tcal-nav__label">
             {MONTHS[month.m]} {month.y}
           </div>
-          <button type="button" className="tcal-nav__btn" onClick={() => shift(1)} aria-label="Следующий месяц">
+          <button type="button" className="tcal-nav__btn" onClick={() => shift(1)} aria-label={t("Следующий месяц")}>
             ›
           </button>
         </div>
-        <div className="tcal-count">
-          Дедлайнов в месяце: <b>{monthCount}</b>
+        <div className="tcal-count">{t("Дедлайнов в месяце:")}{" "}<b>{monthCount}</b>
         </div>
       </div>
 
@@ -99,7 +99,7 @@ function TaskCalendar() {
                       <span>{t.title}</span>
                     </button>
                   ))}
-                  {items.length > 3 && <div className="tcal-more">+{items.length - 3} ещё</div>}
+                  {items.length > 3 && <div className="tcal-more">+{items.length - 3}{" "}{t("ещё")}</div>}
                 </div>
               </div>
             );
@@ -109,7 +109,7 @@ function TaskCalendar() {
 
       {/* телефон: тільки дні з дедлайнами */}
       <div className="tcal-agenda">
-        {agenda.length === 0 && <div className="tcal-agenda__empty">В этом месяце дедлайнов нет</div>}
+        {agenda.length === 0 && <div className="tcal-agenda__empty">{t("В этом месяце дедлайнов нет")}</div>}
         {agenda.map((day) => {
           const key = iso(day);
           return (
@@ -135,7 +135,7 @@ function TaskCalendar() {
         })}
       </div>
 
-      <div className="tboard-note">Цвет точки — статус задачи. Двойной клик по дню — новая задача с дедлайном на этот день.</div>
+      <div className="tboard-note">{t("Цвет точки — статус задачи. Двойной клик по дню — новая задача с дедлайном на этот день.")}</div>
       {modal}
     </div>
   );

@@ -11,15 +11,16 @@ import { formatDate, leadName, matchesSearch, sourceOf, timeAgo } from "../lib/f
 import { useMeta } from "../lib/meta";
 
 import "./Leads.css";
+import { t, tt } from "../lib/i18n";
 
 const POLL_MS = 15_000;
 const VIEW_KEY = "pika-admin-leads-view";
 
 const PERIODS = [
-  ["all", "Весь период"],
-  ["today", "Сегодня"],
-  ["7d", "7 дней"],
-  ["30d", "30 дней"],
+  ["all", t("Весь период")],
+  ["today", t("Сегодня")],
+  ["7d", t("7 дней")],
+  ["30d", t("30 дней")],
 ];
 
 function inPeriod(lead, period) {
@@ -98,7 +99,7 @@ function Leads() {
   // лічильник нових у вкладці браузера
   const newCount = leads?.filter((l) => l.status === "new").length || 0;
   useEffect(() => {
-    document.title = newCount ? `(${newCount}) Заявки · Pikaleads` : "Заявки · Pikaleads";
+    document.title = newCount ? tt("({0}) Заявки · Pikaleads", newCount) : t("Заявки · Pikaleads");
   }, [newCount]);
 
   useEffect(() => {
@@ -193,29 +194,24 @@ function Leads() {
     <div className="leads">
       <div className="page-head">
         <div>
-          <h1 className="page-title">Заявки (CRM)</h1>
-          <p className="page-text">
-            Все заявки с сайта. Статусы синхронизируются с кнопками в Telegram.
-            {newCount > 0 && <b className="leads__new-count"> Новых: {newCount}</b>}
+          <h1 className="page-title">{t("Заявки (CRM)")}</h1>
+          <p className="page-text">{t("Все заявки с сайта. Статусы синхронизируются с кнопками в Telegram.")}{newCount > 0 && <b className="leads__new-count">{" "}{t("Новых:")}{" "}{newCount}</b>}
           </p>
         </div>
         <div className="leads__head-actions">
-          <div className="segmented" role="tablist" aria-label="Вид">
+          <div className="segmented" role="tablist" aria-label={t("Вид")}>
             <button type="button" className={view === "table" ? "is-active" : ""} onClick={() => setView("table")}>
-              <Icon name="table" /> Таблица
-            </button>
+              <Icon name="table" />{" "}{t("Таблица")}</button>
             <button type="button" className={view === "kanban" ? "is-active" : ""} onClick={() => setView("kanban")}>
-              <Icon name="kanban" /> Воронка
-            </button>
+              <Icon name="kanban" />{" "}{t("Воронка")}</button>
           </div>
           <button type="button" className="btn btn--primary" onClick={() => setCreating(true)}>
-            <Icon name="plus" /> Лид
-          </button>
+            <Icon name="plus" />{" "}{t("Лид")}</button>
         </div>
       </div>
 
       <div className="leads__filters">
-        <select className="select select--sm" value={filters.period} onChange={setFilter("period")} aria-label="Период">
+        <select className="select select--sm" value={filters.period} onChange={setFilter("period")} aria-label={t("Период")}>
           {PERIODS.map(([value, label]) => (
             <option key={value} value={value}>
               {label}
@@ -223,9 +219,9 @@ function Leads() {
           ))}
         </select>
         {view === "table" && (
-          <select className="select select--sm" value={filters.status} onChange={setFilter("status")} aria-label="Статус">
-            <option value="all">Все статусы</option>
-            <option value="active">В работе (не закрытые)</option>
+          <select className="select select--sm" value={filters.status} onChange={setFilter("status")} aria-label={t("Статус")}>
+            <option value="all">{t("Все статусы")}</option>
+            <option value="active">{t("В работе (не закрытые)")}</option>
             {statuses.map((s) => (
               <option key={s.code} value={s.code}>
                 {s.emoji} {s.label} ({counts[s.code] || 0})
@@ -233,17 +229,17 @@ function Leads() {
             ))}
           </select>
         )}
-        <select className="select select--sm" value={filters.type} onChange={setFilter("type")} aria-label="Форма">
-          <option value="all">Все формы</option>
+        <select className="select select--sm" value={filters.type} onChange={setFilter("type")} aria-label={t("Форма")}>
+          <option value="all">{t("Все формы")}</option>
           {usedTypes.map((type) => (
             <option key={type} value={type}>
               {types[type] || type}
             </option>
           ))}
         </select>
-        <select className="select select--sm" value={filters.manager} onChange={setFilter("manager")} aria-label="Менеджер">
-          <option value="all">Все менеджеры</option>
-          <option value="none">Не назначен</option>
+        <select className="select select--sm" value={filters.manager} onChange={setFilter("manager")} aria-label={t("Менеджер")}>
+          <option value="all">{t("Все менеджеры")}</option>
+          <option value="none">{t("Не назначен")}</option>
           {meta.users.map((u) => (
             <option key={u.id} value={u.id}>
               {u.name}
@@ -254,7 +250,7 @@ function Leads() {
           <Icon name="search" />
           <input
             className="input input--sm"
-            placeholder="Имя, телефон, email, #номер…"
+            placeholder={t("Имя, телефон, email, #номер…")}
             value={filters.search}
             onChange={setFilter("search")}
           />
@@ -264,22 +260,20 @@ function Leads() {
       {error && (
         <div className="alert">
           ⚠ {error}
-          <button type="button" className="auth__link" style={{ marginLeft: "auto" }} onClick={() => setError("")}>
-            скрыть
-          </button>
+          <button type="button" className="auth__link" style={{ marginLeft: "auto" }} onClick={() => setError("")}>{t("скрыть")}</button>
         </div>
       )}
 
       {view === "table" && selected.size > 0 && (
         <div className="bulk-bar">
-          <strong>Выбрано: {selected.size}</strong>
+          <strong>{t("Выбрано:")}{" "}{selected.size}</strong>
           <select
             className="select select--sm"
             value=""
             onChange={(e) => e.target.value && bulk({ status: e.target.value })}
-            aria-label="Статус для выбранных"
+            aria-label={t("Статус для выбранных")}
           >
-            <option value="">Сменить статус…</option>
+            <option value="">{t("Сменить статус…")}</option>
             {statuses.map((s) => (
               <option key={s.code} value={s.code}>
                 {s.emoji} {s.label}
@@ -290,19 +284,17 @@ function Leads() {
             className="select select--sm"
             value=""
             onChange={(e) => e.target.value && bulk({ managerId: e.target.value === "none" ? null : Number(e.target.value) })}
-            aria-label="Менеджер для выбранных"
+            aria-label={t("Менеджер для выбранных")}
           >
-            <option value="">Назначить менеджера…</option>
-            <option value="none">— снять менеджера —</option>
+            <option value="">{t("Назначить менеджера…")}</option>
+            <option value="none">{t("— снять менеджера —")}</option>
             {meta.users.map((u) => (
               <option key={u.id} value={u.id}>
                 {u.name}
               </option>
             ))}
           </select>
-          <button type="button" className="btn btn--ghost btn--sm" onClick={() => setSelected(new Set())}>
-            Снять выделение
-          </button>
+          <button type="button" className="btn btn--ghost btn--sm" onClick={() => setSelected(new Set())}>{t("Снять выделение")}</button>
         </div>
       )}
 
@@ -313,14 +305,14 @@ function Leads() {
               <thead>
                 <tr>
                   <th className="leads-table__check">
-                    <input type="checkbox" checked={allChecked} onChange={toggleAll} aria-label="Выбрать все" />
+                    <input type="checkbox" checked={allChecked} onChange={toggleAll} aria-label={t("Выбрать все")} />
                   </th>
-                  <th>Заявка</th>
-                  <th>Контакт / связь</th>
-                  <th>Ниша / форма</th>
-                  <th>Источник</th>
-                  <th>Менеджер</th>
-                  <th>Статус</th>
+                  <th>{t("Заявка")}</th>
+                  <th>{t("Контакт / связь")}</th>
+                  <th>{t("Ниша / форма")}</th>
+                  <th>{t("Источник")}</th>
+                  <th>{t("Менеджер")}</th>
+                  <th>{t("Статус")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -333,7 +325,7 @@ function Leads() {
                           type="checkbox"
                           checked={selected.has(lead.id)}
                           onChange={() => toggle(lead.id)}
-                          aria-label={`Выбрать #${lead.id}`}
+                          aria-label={tt("Выбрать #{0}", lead.id)}
                         />
                       </td>
                       <td>
@@ -365,7 +357,7 @@ function Leads() {
                 })}
               </tbody>
             </table>
-            {!tableRows.length && <div className="leads__empty">Заявок по этим фильтрам нет</div>}
+            {!tableRows.length && <div className="leads__empty">{t("Заявок по этим фильтрам нет")}</div>}
           </div>
 
           {/* телефон: картки замість таблиці */}
@@ -389,7 +381,7 @@ function Leads() {
                 <ContactButtons lead={lead} />
               </article>
             ))}
-            {!tableRows.length && <div className="leads__empty">Заявок по этим фильтрам нет</div>}
+            {!tableRows.length && <div className="leads__empty">{t("Заявок по этим фильтрам нет")}</div>}
           </div>
         </>
       ) : (
@@ -451,7 +443,7 @@ function Leads() {
                       </div>
                     </article>
                   ))}
-                  {!items.length && <div className="kanban__empty">Перетащите сюда</div>}
+                  {!items.length && <div className="kanban__empty">{t("Перетащите сюда")}</div>}
                 </div>
               </section>
             );
@@ -493,7 +485,7 @@ function Leads() {
               open(toast.id);
             }}
           >
-            <strong>🔥 Новая заявка #{toast.id}</strong>
+            <strong>{t("🔥 Новая заявка #")}{toast.id}</strong>
             {toast.name} · {toast.type}
           </div>
         ))}
@@ -509,7 +501,7 @@ function NotFound({ onClose }) {
   }, [onClose]);
   return (
     <div className="toasts">
-      <div className="toast">Заявка не найдена</div>
+      <div className="toast">{t("Заявка не найдена")}</div>
     </div>
   );
 }

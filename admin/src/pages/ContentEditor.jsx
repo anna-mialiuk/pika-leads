@@ -23,6 +23,7 @@ import { usePublish } from "../lib/publish";
 import { articleSchema, caseSchema, emptyArticle, emptyCase } from "../content/schemas";
 
 import "./Content.css";
+import { t, tt } from "../lib/i18n";
 
 const EDITORS = {
   cases: {
@@ -30,16 +31,16 @@ const EDITORS = {
     empty: emptyCase,
     listPath: "/cases",
     sitePath: (id) => `/cases/${id}`,
-    noun: "кейс",
-    newTitle: "Новый кейс",
+    noun: t("кейс"),
+    newTitle: t("Новый кейс"),
   },
   articles: {
     schema: articleSchema,
     empty: emptyArticle,
     listPath: "/blog",
     sitePath: (id) => `/blog/${id}`,
-    noun: "статью",
-    newTitle: "Новая статья",
+    noun: t("статью"),
+    newTitle: t("Новая статья"),
     bodies: true,
   },
 };
@@ -172,7 +173,7 @@ function ContentEditor({ collection }) {
     setDraft(null);
     if (checkedItem.dropped + checkedBodies.dropped > 0) {
       setNotice("");
-      setError("Часть новых картинок не сохранилась в черновике (слишком большие) — загрузите их ещё раз.");
+      setError(t("Часть новых картинок не сохранилась в черновике (слишком большие) — загрузите их ещё раз."));
     }
   };
 
@@ -212,7 +213,7 @@ function ContentEditor({ collection }) {
   };
 
   const removeBody = (language) => {
-    if (!window.confirm(`Удалить ${language.toUpperCase()}-текст статьи? На сайте будет показан украинский текст с пометкой.`)) return;
+    if (!window.confirm(tt("Удалить {0}-текст статьи? На сайте будет показан украинский текст с пометкой.", language.toUpperCase()))) return;
     setBodies((prev) => ({ ...prev, [language]: prev[language]?.sha ? { sha: prev[language].sha, deleted: true } : null }));
     setChangedBodies((prev) => (prev.includes(language) ? prev : [...prev, language]));
     setDirty(true);
@@ -243,11 +244,11 @@ function ContentEditor({ collection }) {
     const id = isNew ? newSlug : routeId;
     if (!titleOf(item).trim()) {
       setLang("uk");
-      setError(collection === "cases" ? "Заполните название кейса (UA)" : "Заполните заголовок (UA)");
+      setError(collection === "cases" ? t("Заполните название кейса (UA)") : t("Заполните заголовок (UA)"));
       return;
     }
     if (isNew && !SLUG.test(id)) {
-      setError("Адрес страницы: латиница в нижнем регистре, цифры и дефисы (например, shoe-store-meta)");
+      setError(t("Адрес страницы: латиница в нижнем регистре, цифры и дефисы (например, shoe-store-meta)"));
       return;
     }
 
@@ -276,10 +277,10 @@ function ContentEditor({ collection }) {
       published(data.commit);
       setNotice(
         data.commit?.unchanged
-          ? "Изменений нет — сохранять нечего."
+          ? t("Изменений нет — сохранять нечего.")
           : data.item.status === "draft"
-            ? "Сохранено как черновик. На сайте не показывается."
-            : "Сохранено. Сайт обновится через 2–3 минуты.",
+            ? t("Сохранено как черновик. На сайте не показывается.")
+            : t("Сохранено. Сайт обновится через 2–3 минуты."),
       );
       if (isNew) navigate(`${config.listPath}/${id}`, { replace: true });
     } catch (saveError) {
@@ -292,14 +293,14 @@ function ContentEditor({ collection }) {
 
   const remove = async () => {
     const name = titleOf(item) || routeId;
-    if (!window.confirm(`Удалить ${config.noun} «${name}» с сайта? Его можно будет восстановить только из истории GitHub.`)) return;
+    if (!window.confirm(tt("Удалить {0} «{1}» с сайта? Его можно будет восстановить только из истории GitHub.", config.noun, name))) return;
     setSaving(true);
     try {
       const { commit } = await api(`/content/${collection}/${routeId}?sha=${sha}`, { method: "DELETE" });
       clearDraft(collection, draftId);
       setDirty(false);
       published(commit);
-      navigate(config.listPath, { replace: true, state: { notice: `Удалено: «${name}». Сайт обновится через 2–3 минуты.` } });
+      navigate(config.listPath, { replace: true, state: { notice: tt("Удалено: «{0}». Сайт обновится через 2–3 минуты.", name) } });
     } catch (deleteError) {
       setError(deleteError.message);
       setSaving(false);
@@ -317,13 +318,9 @@ function ContentEditor({ collection }) {
   if (loadError) {
     return (
       <div className="content-page">
-        <Link to={config.listPath} className="back-link">
-          ← Назад
-        </Link>
+        <Link to={config.listPath} className="back-link">{t("← Назад")}</Link>
         <ErrorAlert error={loadError} />
-        <button type="button" className="btn" onClick={load}>
-          Повторить
-        </button>
+        <button type="button" className="btn" onClick={load}>{t("Повторить")}</button>
       </div>
     );
   }
@@ -336,7 +333,7 @@ function ContentEditor({ collection }) {
       <div className="editor__bar">
         <div className="editor__bar-main">
           <Link to={config.listPath} className="back-link">
-            ← {collection === "cases" ? "Кейсы" : "Блог"}
+            ← {collection === "cases" ? t("Кейсы") : t("Блог")}
           </Link>
           <h1 className="editor__title">{titleOf(item) || config.newTitle}</h1>
         </div>
@@ -352,7 +349,7 @@ function ContentEditor({ collection }) {
                   aria-selected={lang === code}
                   className={lang === code ? "is-active" : ""}
                   onClick={() => setLang(code)}
-                  title={count ? `Не переведено: ${count}` : ""}
+                  title={count ? tt("Не переведено: {0}", count) : ""}
                 >
                   {label}
                   {count > 0 && <span className="lang-tabs__count">{count}</span>}
@@ -363,28 +360,23 @@ function ContentEditor({ collection }) {
           <Toggle
             checked={!isDraft}
             onChange={(checked) => change((prev) => ({ ...prev, status: checked ? undefined : "draft" }))}
-            label={isDraft ? "Черновик" : "Опубликован"}
+            label={isDraft ? t("Черновик") : t("Опубликован")}
           />
           <button type="button" className="btn btn--primary" onClick={save} disabled={saving || (!dirty && !isNew)}>
             {saving ? <span className="spinner spinner--dark" /> : <Icon name="check" />}
-            {saving ? "Сохраняем…" : dirty || isNew ? "Сохранить" : "Сохранено"}
+            {saving ? t("Сохраняем…") : dirty || isNew ? t("Сохранить") : t("Сохранено")}
           </button>
         </div>
       </div>
 
       {draft && (
         <div className="alert alert--info">
-          <span>
-            Есть несохранённые правки от {formatDate(new Date(draft.savedAt).toISOString())}
-            {draft.baseSha !== sha && !isNew ? " (запись с тех пор изменили — проверьте после восстановления)" : ""}.
+          <span>{t("Есть несохранённые правки от")}{" "}{formatDate(new Date(draft.savedAt).toISOString())}
+            {draft.baseSha !== sha && !isNew ? t(" (запись с тех пор изменили — проверьте после восстановления)") : ""}.
           </span>
           <span className="alert__actions">
-            <button type="button" className="btn btn--sm" onClick={restoreDraft}>
-              Восстановить
-            </button>
-            <button type="button" className="btn btn--sm btn--ghost" onClick={discardDraft}>
-              Отбросить
-            </button>
+            <button type="button" className="btn btn--sm" onClick={restoreDraft}>{t("Восстановить")}</button>
+            <button type="button" className="btn btn--sm btn--ghost" onClick={discardDraft}>{t("Отбросить")}</button>
           </span>
         </div>
       )}
@@ -394,19 +386,14 @@ function ContentEditor({ collection }) {
           <span>⚠ {error}</span>
           {conflict && (
             <span className="alert__actions">
-              <button type="button" className="btn btn--sm" onClick={load}>
-                Загрузить свежую версию
-              </button>
+              <button type="button" className="btn btn--sm" onClick={load}>{t("Загрузить свежую версию")}</button>
             </span>
           )}
         </div>
       )}
 
       {lang !== "uk" && (
-        <div className="lang-hint">
-          Режим перевода {lang.toUpperCase()}: пустые поля на сайте показываются на украинском. Подсказка в поле — украинский текст, кнопка
-          «UA → {lang.toUpperCase()}» копирует его. Картинки, цвета и настройки — общие для всех языков.
-        </div>
+        <div className="lang-hint">{t("Режим перевода")}{" "}{lang.toUpperCase()}{t(": пустые поля на сайте показываются на украинском. Подсказка в поле — украинский текст, кнопка «UA →")}{" "}{lang.toUpperCase()}{t("» копирует его. Картинки, цвета и настройки — общие для всех языков.")}</div>
       )}
 
       {/* поки йде збереження — форма лише для читання (інакше правки загубились би) */}
@@ -414,7 +401,7 @@ function ContentEditor({ collection }) {
         <section className="form-section card">
           <div className="form-section__body">
             <div className="schema-field">
-              <div className="field__label">Адрес страницы</div>
+              <div className="field__label">{t("Адрес страницы")}</div>
               {isNew ? (
                 <div className="slug-field">
                   <span className="mono faint">{config.sitePath("")}</span>
@@ -438,16 +425,14 @@ function ContentEditor({ collection }) {
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <Icon name="external" /> Открыть на сайте
-                    </a>
+                      <Icon name="external" />{" "}{t("Открыть на сайте")}</a>
                   )}
                   <Link className="btn btn--sm btn--ghost" to={`/seo?path=${encodeURIComponent(config.sitePath(routeId))}`}>
-                    <Icon name="search" /> SEO в Google
-                  </Link>
+                    <Icon name="search" />{" "}{t("SEO в Google")}</Link>
                 </div>
               )}
               <div className="schema-field__hint">
-                {isNew ? "Создаётся из названия. После сохранения изменить нельзя." : "Адрес не меняется, чтобы не ломать ссылки."}
+                {isNew ? t("Создаётся из названия. После сохранения изменить нельзя.") : t("Адрес не меняется, чтобы не ломать ссылки.")}
               </div>
             </div>
           </div>
@@ -458,11 +443,9 @@ function ContentEditor({ collection }) {
         {config.bodies && (
           <section className="form-section card">
             <div className="form-section__head form-section__head--static">
-              <h2>Текст статьи · {lang === "uk" ? "UA" : lang.toUpperCase()}</h2>
+              <h2>{t("Текст статьи ·")}{" "}{lang === "uk" ? "UA" : lang.toUpperCase()}</h2>
               {lang !== "uk" && currentBody && (
-                <button type="button" className="btn btn--sm btn--ghost" onClick={() => removeBody(lang)}>
-                  Удалить перевод
-                </button>
+                <button type="button" className="btn btn--sm btn--ghost" onClick={() => removeBody(lang)}>{t("Удалить перевод")}</button>
               )}
             </div>
             <div className="form-section__body">
@@ -475,18 +458,14 @@ function ContentEditor({ collection }) {
                 />
               ) : (
                 <div className="empty-body">
-                  <p>Перевода текста нет — на сайте показывается украинский текст с пометкой «статья пока не переведена».</p>
+                  <p>{t("Перевода текста нет — на сайте показывается украинский текст с пометкой «статья пока не переведена».")}</p>
                   <div className="empty-body__actions">
                     <button
                       type="button"
                       className="btn btn--sm"
                       onClick={() => changeBody(lang, () => JSON.parse(JSON.stringify(bodies.uk?.blocks || [])))}
-                    >
-                      Скопировать украинский текст и перевести
-                    </button>
-                    <button type="button" className="btn btn--sm btn--ghost" onClick={() => changeBody(lang, () => [])}>
-                      Начать с пустого
-                    </button>
+                    >{t("Скопировать украинский текст и перевести")}</button>
+                    <button type="button" className="btn btn--sm btn--ghost" onClick={() => changeBody(lang, () => [])}>{t("Начать с пустого")}</button>
                   </div>
                 </div>
               )}
@@ -498,7 +477,7 @@ function ContentEditor({ collection }) {
       {!isNew && (
         <div className="editor__danger">
           <button type="button" className="btn btn--danger btn--sm" onClick={remove} disabled={saving}>
-            <Icon name="trash" /> Удалить {config.noun}
+            <Icon name="trash" />{" "}{t("Удалить")}{" "}{config.noun}
           </button>
         </div>
       )}

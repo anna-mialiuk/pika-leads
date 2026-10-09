@@ -7,6 +7,7 @@ import { useProjects } from "../lib/projects";
 import { useTasks } from "../lib/tasks";
 
 import "./MindmapsPage.css";
+import { t, tt } from "../lib/i18n";
 
 const WORLD_W = 4000;
 const WORLD_H = 3000;
@@ -15,12 +16,12 @@ const ZOOM_MIN = 0.35;
 const ZOOM_MAX = 2;
 
 const KINDS = {
-  card: { kind: "card", text: "Новый узел", color: "#6fa8ff" },
-  sticky: { kind: "sticky", text: "Заметка", color: "#FFC629" },
-  shape: { kind: "shape", shape: "rect", text: "Блок", color: "#6fa8ff" },
-  ellipse: { kind: "shape", shape: "ellipse", text: "Овал", color: "#4fd88a" },
-  diamond: { kind: "shape", shape: "diamond", text: "Решение?", color: "#f0a83e" },
-  text: { kind: "text", text: "Текст", color: "#e8e6ea" },
+  card: { kind: "card", text: t("Новый узел"), color: "#6fa8ff" },
+  sticky: { kind: "sticky", text: t("Заметка"), color: "#FFC629" },
+  shape: { kind: "shape", shape: "rect", text: t("Блок"), color: "#6fa8ff" },
+  ellipse: { kind: "shape", shape: "ellipse", text: t("Овал"), color: "#4fd88a" },
+  diamond: { kind: "shape", shape: "diamond", text: t("Решение?"), color: "#f0a83e" },
+  text: { kind: "text", text: t("Текст"), color: "#e8e6ea" },
 };
 
 const hexA = (hex, a) => {
@@ -542,7 +543,7 @@ function MindmapsPage() {
   const addMap = async () => {
     setError("");
     try {
-      const { map: created } = await api("/mindmaps", { method: "POST", body: { name: "Новая карта" } });
+      const { map: created } = await api("/mindmaps", { method: "POST", body: { name: t("Новая карта"), rootText: t("Центральная идея") } });
       setMaps((list) => [...list, created]);
       selectMap(created);
       setSelectId(created.nodes[0]?.id || null);
@@ -552,7 +553,7 @@ function MindmapsPage() {
   };
 
   const removeMap = async (m) => {
-    if (!window.confirm(`Удалить карту «${m.name}»?`)) return;
+    if (!window.confirm(tt("Удалить карту «{0}»?", m.name))) return;
     try {
       await api(`/mindmaps/${m.id}`, { method: "DELETE" });
       const rest = maps.filter((x) => x.id !== m.id);
@@ -591,7 +592,7 @@ function MindmapsPage() {
     </button>
   );
 
-  const saveLabel = saveState === "saving" || dirty ? "Сохраняем…" : saveState === "error" ? "⚠ Не сохранено" : "✓ Сохранено";
+  const saveLabel = saveState === "saving" || dirty ? t("Сохраняем…") : saveState === "error" ? t("⚠ Не сохранено") : t("✓ Сохранено");
 
   return (
     <div className="tboard-page">
@@ -616,8 +617,8 @@ function MindmapsPage() {
                   <button
                     type="button"
                     className="mm-tab__del"
-                    title="Удалить карту"
-                    aria-label="Удалить карту"
+                    title={t("Удалить карту")}
+                    aria-label={t("Удалить карту")}
                     onClick={(e) => {
                       e.stopPropagation();
                       removeMap(m);
@@ -629,9 +630,7 @@ function MindmapsPage() {
               </div>
             );
           })}
-          <button type="button" className="mm-tab mm-tab--add" onClick={addMap}>
-            + Карта
-          </button>
+          <button type="button" className="mm-tab mm-tab--add" onClick={addMap}>{t("+ Карта")}</button>
         </div>
         {map && <span className={`mm-save ${saveState === "error" ? "is-error" : ""}`}>{saveLabel}</span>}
       </div>
@@ -644,11 +643,8 @@ function MindmapsPage() {
       )}
 
       {maps && !map && (
-        <div className="pd-empty pd-empty--page">
-          Майнд-карт пока нет.{" "}
-          <button type="button" className="pd-link" onClick={addMap}>
-            + Создать первую карту
-          </button>
+        <div className="pd-empty pd-empty--page">{t("Майнд-карт пока нет.")}{" "}
+          <button type="button" className="pd-link" onClick={addMap}>{t("+ Создать первую карту")}</button>
         </div>
       )}
 
@@ -656,16 +652,16 @@ function MindmapsPage() {
         <>
           <div className="mm-meta">
             <label>
-              <span>Название карты</span>
+              <span>{t("Название карты")}</span>
               <input value={map.name} maxLength={120} onChange={(e) => change(() => ({ name: e.target.value }), { history: false })} />
             </label>
             <label>
-              <span>Привязка к проекту</span>
+              <span>{t("Привязка к проекту")}</span>
               <select
                 value={map.projectId ?? ""}
                 onChange={(e) => change(() => ({ projectId: e.target.value ? Number(e.target.value) : null }), { history: false })}
               >
-                <option value="">— без проекта —</option>
+                <option value="">{t("— без проекта —")}</option>
                 {projects.map((p) => (
                   <option key={p.id} value={p.id}>
                     {p.name}
@@ -678,79 +674,58 @@ function MindmapsPage() {
           <div className="mm-toolbar">
             <div className="mm-group">
               <button type="button" className="mm-tool mm-tool--card" onClick={() => addKind("card")}>
-                <i />
-                Карточка
-              </button>
+                <i />{t("Карточка")}</button>
               <button type="button" className="mm-tool mm-tool--sticky" onClick={() => addKind("sticky")}>
-                <i />
-                Стикер
-              </button>
+                <i />{t("Стикер")}</button>
               <button type="button" className="mm-tool mm-tool--rect" onClick={() => addKind("shape")}>
-                <i />
-                Блок
-              </button>
+                <i />{t("Блок")}</button>
               <button type="button" className="mm-tool mm-tool--ellipse" onClick={() => addKind("ellipse")}>
-                <i />
-                Овал
-              </button>
+                <i />{t("Овал")}</button>
               <button type="button" className="mm-tool mm-tool--diamond" onClick={() => addKind("diamond")}>
-                <i />
-                Ромб
-              </button>
+                <i />{t("Ромб")}</button>
               <button type="button" className="mm-tool mm-tool--text" onClick={() => addKind("text")}>
-                <i>T</i>
-                Текст
-              </button>
+                <i>T</i>{t("Текст")}</button>
             </div>
             <div className="mm-group">
-              <button type="button" className="mm-icon" title="Отменить (Ctrl+Z)" disabled={!hist.past.length} onClick={undo}>
+              <button type="button" className="mm-icon" title={t("Отменить (Ctrl+Z)")} disabled={!hist.past.length} onClick={undo}>
                 ↶
               </button>
-              <button type="button" className="mm-icon" title="Повторить (Ctrl+Shift+Z)" disabled={!hist.future.length} onClick={redo}>
+              <button type="button" className="mm-icon" title={t("Повторить (Ctrl+Shift+Z)")} disabled={!hist.future.length} onClick={redo}>
                 ↷
               </button>
             </div>
             <div className="mm-group">
-              {dirBtn("TB", "↓", "Сверху вниз")}
-              {dirBtn("LR", "→", "Слева направо")}
-              {dirBtn("RL", "←", "Справа налево")}
+              {dirBtn("TB", "↓", t("Сверху вниз"))}
+              {dirBtn("LR", "→", t("Слева направо"))}
+              {dirBtn("RL", "←", t("Справа налево"))}
               <span className="mm-sep" />
               <button
                 type="button"
                 className="mm-text-btn"
-                title="Разложить дерево"
+                title={t("Разложить дерево")}
                 onClick={() => {
                   change((m) => ({ nodes: arrange(m, m.dir || "TB") }));
                   requestAnimationFrame(fit);
                 }}
-              >
-                ⤢ Разложить
-              </button>
+              >{t("⤢ Разложить")}</button>
             </div>
-            <button type="button" className={`mm-hand ${tool === "hand" ? "is-on" : ""}`} onClick={() => setTool(tool === "hand" ? "select" : "hand")}>
-              ✋ Рука
-            </button>
+            <button type="button" className={`mm-hand ${tool === "hand" ? "is-on" : ""}`} onClick={() => setTool(tool === "hand" ? "select" : "hand")}>{t("✋ Рука")}</button>
             <div className="mm-group mm-zoom">
-              <button type="button" className="mm-icon" title="Отдалить" onClick={() => zoomAt(0.9, viewportRef.current.clientWidth / 2, viewportRef.current.clientHeight / 2)}>
+              <button type="button" className="mm-icon" title={t("Отдалить")} onClick={() => zoomAt(0.9, viewportRef.current.clientWidth / 2, viewportRef.current.clientHeight / 2)}>
                 −
               </button>
-              <button type="button" className="mm-zoom__pct" title="Сбросить масштаб" onClick={() => setView({ zoom: 1, x: 0, y: 0 })}>
+              <button type="button" className="mm-zoom__pct" title={t("Сбросить масштаб")} onClick={() => setView({ zoom: 1, x: 0, y: 0 })}>
                 {Math.round(view.zoom * 100)}%
               </button>
-              <button type="button" className="mm-icon" title="Приблизить" onClick={() => zoomAt(1.1, viewportRef.current.clientWidth / 2, viewportRef.current.clientHeight / 2)}>
+              <button type="button" className="mm-icon" title={t("Приблизить")} onClick={() => zoomAt(1.1, viewportRef.current.clientWidth / 2, viewportRef.current.clientHeight / 2)}>
                 +
               </button>
               <span className="mm-sep" />
-              <button type="button" className="mm-text-btn" title="Показать всё" onClick={fit}>
-                Вписать
-              </button>
+              <button type="button" className="mm-text-btn" title={t("Показать всё")} onClick={fit}>{t("Вписать")}</button>
             </div>
           </div>
 
-          <div className="mm-hint">
-            Двойной клик по холсту — новый элемент · тяните узлы мышью · пустой холст/«Рука» — панорама · синяя точка справа у выбранного узла — тяните к
-            другому, чтобы соединить · клик по линии удаляет связь · Del — удалить, Ctrl+D — дублировать, Ctrl+колёсико — масштаб.
-          </div>
+          <div className="mm-hint">{t("Двойной клик по холсту — новый элемент · тяните узлы мышью · пустой холст/«Рука» — панорама · синяя точка справа у выбранного узла — тяните к другому, чтобы соединить · клик по линии удаляет связь · Del — удалить, Ctrl+D — дублировать, Ctrl+колёсико — масштаб.")}</div>
 
           <div
             ref={viewportRef}
@@ -785,7 +760,7 @@ function MindmapsPage() {
                         onPointerDown={(ev) => ev.stopPropagation()}
                         onClick={() => change((m) => ({ edges: m.edges.filter((x) => !(x.from === e.from && x.to === e.to)) }))}
                       >
-                        <title>Удалить связь</title>
+                        <title>{t("Удалить связь")}</title>
                       </path>
                       <path d={d} className="mm-edge" markerEnd="url(#mmArrow)" />
                     </g>
@@ -839,7 +814,7 @@ function MindmapsPage() {
                       <input
                         value={n.text}
                         maxLength={300}
-                        aria-label="Текст элемента"
+                        aria-label={t("Текст элемента")}
                         onFocus={() => pushHist()}
                         onChange={(e) => updNode(n.id, { text: e.target.value })}
                         style={{ color: l.textColor, fontSize: l.size, fontWeight: l.weight, textAlign: l.align }}
@@ -854,18 +829,18 @@ function MindmapsPage() {
                       <>
                         <div
                           className="mm-node__handle"
-                          title="Тяните, чтобы соединить"
+                          title={t("Тяните, чтобы соединить")}
                           style={{ top: l.cy - 8 }}
                           onPointerDown={(e) => handleDown(e, n.id)}
                         />
-                        <div className="mm-node__resize" title="Изменить размер" onPointerDown={(e) => resizeDown(e, n.id)} />
+                        <div className="mm-node__resize" title={t("Изменить размер")} onPointerDown={(e) => resizeDown(e, n.id)} />
                         <div className="mm-panel" onPointerDown={(e) => e.stopPropagation()}>
                           <div className="mm-panel__swatches">
                             {SWATCHES.map((col) => (
                               <button
                                 key={col}
                                 type="button"
-                                aria-label={`Цвет ${col}`}
+                                aria-label={tt("Цвет {0}", col)}
                                 style={{ background: col, boxShadow: col === n.color ? `0 0 0 2px var(--card), 0 0 0 4px ${col}` : "none" }}
                                 onClick={() => change((m) => ({ nodes: m.nodes.map((x) => (x.id === n.id ? { ...x, color: col } : x)) }))}
                               />
@@ -879,7 +854,7 @@ function MindmapsPage() {
                               }))
                             }
                           >
-                            <option value="">— привязать задачу —</option>
+                            <option value="">{t("— привязать задачу —")}</option>
                             {taskChoices.map((t) => (
                               <option key={t.id} value={t.id}>
                                 {t.title.length > 40 ? `${t.title.slice(0, 40)}…` : t.title}
@@ -892,12 +867,12 @@ function MindmapsPage() {
                               className={`mm-panel__connect ${isFrom ? "is-on" : ""}`}
                               onClick={() => setConnectFrom(isFrom ? null : n.id)}
                             >
-                              {isFrom ? "Отмена связи" : "Стрелкой"}
+                              {isFrom ? t("Отмена связи") : t("Стрелкой")}
                             </button>
-                            <button type="button" className="mm-panel__dup" title="Дублировать (Ctrl+D)" onClick={() => duplicate(n.id)}>
+                            <button type="button" className="mm-panel__dup" title={t("Дублировать (Ctrl+D)")} onClick={() => duplicate(n.id)}>
                               ⧉
                             </button>
-                            <button type="button" className="mm-panel__del" title="Удалить (Del)" onClick={() => removeNode(n.id)}>
+                            <button type="button" className="mm-panel__del" title={t("Удалить (Del)")} onClick={() => removeNode(n.id)}>
                               ✕
                             </button>
                           </div>
@@ -909,7 +884,7 @@ function MindmapsPage() {
               })}
             </div>
 
-            {connectFrom && <div className="mm-connect-hint">Кликните по узлу, с которым соединить · Esc — отмена</div>}
+            {connectFrom && <div className="mm-connect-hint">{t("Кликните по узлу, с которым соединить · Esc — отмена")}</div>}
 
             {mini && (
               <div className="mm-mini" aria-hidden="true">

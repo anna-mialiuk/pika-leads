@@ -8,6 +8,7 @@ import { PROJECT_STATUS, dayDisp, useProjects } from "../lib/projects";
 import { useTasks } from "../lib/tasks";
 
 import "../components/Projects.css";
+import { t, tt } from "../lib/i18n";
 
 /** Проекти (як у макеті): картки з прогресом, клік — повна картка проекту */
 function ProjectsPage() {
@@ -21,7 +22,7 @@ function ProjectsPage() {
   const [error, setError] = useState("");
 
   const del = (p) => {
-    if (!window.confirm(`Удалить проект «${p.name}»? Задачи останутся, файлы проекта удалятся.`)) return;
+    if (!window.confirm(tt("Удалить проект «{0}»? Задачи останутся, файлы проекта удалятся.", p.name))) return;
     setError("");
     remove(p.id).catch((e) => setError(e.message));
   };
@@ -32,7 +33,7 @@ function ProjectsPage() {
 
   return (
     <div className="tboard-page">
-      <TasksHeader action={{ label: "+ Проект", onClick: () => setEditing({}) }} />
+      <TasksHeader action={{ label: t("+ Проект"), onClick: () => setEditing({}) }} />
       {error && <div className="alert">⚠ {error}</div>}
 
       {!loaded ? (
@@ -40,7 +41,7 @@ function ProjectsPage() {
           <div className="spinner" />
         </div>
       ) : sorted.length === 0 ? (
-        <div className="pd-empty pd-empty--page">Проектов пока нет. Создайте первый — задачи можно будет группировать по проектам.</div>
+        <div className="pd-empty pd-empty--page">{t("Проектов пока нет. Создайте первый — задачи можно будет группировать по проектам.")}</div>
       ) : (
         <div className="proj-grid">
           {sorted.map((p) => {
@@ -69,7 +70,7 @@ function ProjectsPage() {
                     {canManageProject(p, user) && (
                       <button
                         type="button"
-                        title="Редактировать"
+                        title={t("Редактировать")}
                         onClick={(e) => {
                           e.stopPropagation();
                           setEditing({ project: p });
@@ -81,7 +82,7 @@ function ProjectsPage() {
                     {(user.role === "admin" || p.createdBy?.userId === user.id) && (
                       <button
                         type="button"
-                        title="Удалить"
+                        title={t("Удалить")}
                         className="is-del"
                         onClick={(e) => {
                           e.stopPropagation();
@@ -94,14 +95,12 @@ function ProjectsPage() {
                   </div>
                 </div>
                 <div className="proj-card__meta">
-                  <span>
-                    Ниша: <b>{p.client || "—"}</b>
+                  <span>{t("Ниша:")}{" "}<b>{p.client || "—"}</b>
                   </span>
                   <span>
                     PM: <b>{userById[p.pmId]?.name || "—"}</b>
                   </span>
-                  <span>
-                    Срок:{" "}
+                  <span>{t("Срок:")}{" "}
                     <b className="mono">
                       {dayDisp(p.startAt)} — {dayDisp(p.endAt)}
                     </b>
@@ -109,8 +108,7 @@ function ProjectsPage() {
                 </div>
                 <div className="proj-card__progress-label">
                   <span>
-                    {doneCount} из {pTasks.length} задач
-                  </span>
+                    {doneCount}{" "}{t("из")}{" "}{pTasks.length}{" "}{t("задач")}</span>
                   <b>{progress}%</b>
                 </div>
                 <div className="proj-card__bar">
@@ -121,7 +119,7 @@ function ProjectsPage() {
           })}
         </div>
       )}
-      <div className="tboard-note">Кликните по проекту для полного управления.</div>
+      <div className="tboard-note">{t("Кликните по проекту для полного управления.")}</div>
 
       {detailId && (
         <ProjectDetail

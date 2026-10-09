@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 
 import Icon from "../components/Icon";
-import { CodeInput, ErrorAlert, Field, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
+import { CodeInput, ErrorAlert, Field, LangSwitch, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { formatDate, passwordScore } from "../lib/format";
 
 import "./Profile.css";
+import { t } from "../lib/i18n";
 
-const ROLE_LABELS = { admin: "Администратор", manager: "Менеджер" };
+const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 
 function Profile() {
   const { user, setUser } = useAuth();
@@ -27,17 +28,18 @@ function Profile() {
     <div className="profile">
       <div className="page-head">
         <div>
-          <h1 className="page-title">Профиль</h1>
-          <p className="page-text">Ваш доступ к панели и безопасность входа.</p>
+          <h1 className="page-title">{t("Профиль")}</h1>
+          <p className="page-text">{t("Ваш доступ к панели и безопасность входа.")}</p>
         </div>
+        <LangSwitch />
       </div>
 
       <div className="profile__grid">
         <section className="card profile__card">
-          <h2>Учётная запись</h2>
+          <h2>{t("Учётная запись")}</h2>
           <dl className="profile__dl">
             <div>
-              <dt>Имя</dt>
+              <dt>{t("Имя")}</dt>
               <dd>{user.name}</dd>
             </div>
             <div>
@@ -45,11 +47,11 @@ function Profile() {
               <dd>{user.email}</dd>
             </div>
             <div>
-              <dt>Роль</dt>
+              <dt>{t("Роль")}</dt>
               <dd>{ROLE_LABELS[user.role]}</dd>
             </div>
             <div>
-              <dt>Последний вход</dt>
+              <dt>{t("Последний вход")}</dt>
               <dd>{formatDate(user.lastLoginAt)}</dd>
             </div>
           </dl>
@@ -74,9 +76,9 @@ function PasswordCard() {
   const submit = async () => {
     setError("");
     setDone(false);
-    if (next.length < 10) return setError("Минимум 10 символов");
-    if (passwordScore(next) < 3) return setError("Пароль слишком простой — добавьте цифры, заглавные буквы или символы");
-    if (next !== confirm) return setError("Пароли не совпадают");
+    if (next.length < 10) return setError(t("Минимум 10 символов"));
+    if (passwordScore(next) < 3) return setError(t("Пароль слишком простой — добавьте цифры, заглавные буквы или символы"));
+    if (next !== confirm) return setError(t("Пароли не совпадают"));
     setBusy(true);
     try {
       await api("/me/password", { method: "POST", body: { current, password: next } });
@@ -94,24 +96,21 @@ function PasswordCard() {
   return (
     <section className="card profile__card">
       <h2>
-        <Icon name="lock" /> Смена пароля
-      </h2>
-      <Field label="Текущий пароль">
+        <Icon name="lock" />{" "}{t("Смена пароля")}</h2>
+      <Field label={t("Текущий пароль")}>
         <PasswordInput value={current} onChange={setCurrent} autoComplete="current-password" />
       </Field>
-      <span className="field__label">Новый пароль</span>
+      <span className="field__label">{t("Новый пароль")}</span>
       <div style={{ marginTop: 7 }}>
-        <PasswordInput value={next} onChange={setNext} autoComplete="new-password" placeholder="Минимум 10 символов" />
+        <PasswordInput value={next} onChange={setNext} autoComplete="new-password" placeholder={t("Минимум 10 символов")} />
       </div>
       <StrengthMeter password={next} />
-      <Field label="Повторите новый пароль">
+      <Field label={t("Повторите новый пароль")}>
         <input className="input" type="password" autoComplete="new-password" value={confirm} onChange={(e) => setConfirm(e.target.value)} />
       </Field>
       <ErrorAlert error={error} />
-      {done && <div className="alert alert--ok">✓ Пароль изменён. На других устройствах нужно будет войти заново.</div>}
-      <button type="button" className="btn btn--primary" onClick={submit} disabled={busy}>
-        Сохранить пароль
-      </button>
+      {done && <div className="alert alert--ok">{t("✓ Пароль изменён. На других устройствах нужно будет войти заново.")}</div>}
+      <button type="button" className="btn btn--primary" onClick={submit} disabled={busy}>{t("Сохранить пароль")}</button>
     </section>
   );
 }
@@ -154,32 +153,25 @@ function TwoFactorCard({ user, required, onChange }) {
   return (
     <section className="card profile__card">
       <h2>
-        <Icon name="shield" /> Двухфакторная защита
-      </h2>
+        <Icon name="shield" />{" "}{t("Двухфакторная защита")}</h2>
       {user.totpEnabled ? (
         <>
-          <p className="profile__status profile__status--ok">● Включена — при входе нужен код из приложения-аутентификатора.</p>
-          <p className="muted profile__note">
-            Сменили телефон? Попросите администратора сбросить 2FA — при следующем входе вы подключите новое устройство.
-          </p>
+          <p className="profile__status profile__status--ok">{t("● Включена — при входе нужен код из приложения-аутентификатора.")}</p>
+          <p className="muted profile__note">{t("Сменили телефон? Попросите администратора сбросить 2FA — при следующем входе вы подключите новое устройство.")}</p>
           {!required && !disabling && (
-            <button type="button" className="btn btn--danger btn--sm" onClick={() => setDisabling(true)}>
-              Отключить 2FA
-            </button>
+            <button type="button" className="btn btn--danger btn--sm" onClick={() => setDisabling(true)}>{t("Отключить 2FA")}</button>
           )}
           {disabling && (
             <>
-              <Field label="Пароль">
+              <Field label={t("Пароль")}>
                 <PasswordInput value={password} onChange={setPassword} autoComplete="current-password" />
               </Field>
-              <span className="field__label">Код из приложения</span>
+              <span className="field__label">{t("Код из приложения")}</span>
               <div style={{ marginTop: 7 }}>
                 <CodeInput value={code} onChange={setCode} autoFocus={false} />
               </div>
               <ErrorAlert error={error} />
-              <button type="button" className="btn btn--danger" onClick={disable}>
-                Отключить
-              </button>
+              <button type="button" className="btn btn--danger" onClick={disable}>{t("Отключить")}</button>
             </>
           )}
         </>
@@ -187,21 +179,17 @@ function TwoFactorCard({ user, required, onChange }) {
         <>
           <div className="profile__qr">
             <QrCode text={setup.otpauth} size={150} />
-            <p className="muted">Отсканируйте QR-код в Google Authenticator, 1Password или Authy и введите код.</p>
+            <p className="muted">{t("Отсканируйте QR-код в Google Authenticator, 1Password или Authy и введите код.")}</p>
           </div>
           <CodeInput value={code} onChange={setCode} onEnter={enable} />
           <ErrorAlert error={error} />
-          <button type="button" className="btn btn--primary" onClick={enable}>
-            Включить 2FA
-          </button>
+          <button type="button" className="btn btn--primary" onClick={enable}>{t("Включить 2FA")}</button>
         </>
       ) : (
         <>
-          <p className="profile__status">● Не подключена</p>
+          <p className="profile__status">{t("● Не подключена")}</p>
           <ErrorAlert error={error} />
-          <button type="button" className="btn btn--primary" onClick={startSetup}>
-            Подключить 2FA
-          </button>
+          <button type="button" className="btn btn--primary" onClick={startSetup}>{t("Подключить 2FA")}</button>
         </>
       )}
     </section>
@@ -257,25 +245,20 @@ function TelegramCard({ user, onChange }) {
   return (
     <section className="card profile__card">
       <h2>
-        <Icon name="send" size={18} /> Напоминания в Telegram
-      </h2>
+        <Icon name="send" size={18} />{" "}{t("Напоминания в Telegram")}</h2>
       {user.telegram ? (
         <>
-          <p className="profile__status profile__status--ok">● Подключён</p>
-          <p className="profile__note muted">Напоминания о ваших задачах приходят в личный чат с ботом — с кнопками «Готово» и «+1 час».</p>
-          <button type="button" className="btn btn--sm" onClick={disconnect}>
-            Отключить
-          </button>
+          <p className="profile__status profile__status--ok">{t("● Подключён")}</p>
+          <p className="profile__note muted">{t("Напоминания о ваших задачах приходят в личный чат с ботом — с кнопками «Готово» и «+1 час».")}</p>
+          <button type="button" className="btn btn--sm" onClick={disconnect}>{t("Отключить")}</button>
         </>
       ) : (
         <>
-          <p className="profile__status">● Не подключён</p>
-          <p className="profile__note muted">
-            Пока не подключено, напоминания приходят в общий чат заявок. Нажмите кнопку — откроется бот, нажмите в нём «Start».
-          </p>
+          <p className="profile__status">{t("● Не подключён")}</p>
+          <p className="profile__note muted">{t("Пока не подключено, напоминания приходят в общий чат заявок. Нажмите кнопку — откроется бот, нажмите в нём «Start».")}</p>
           <ErrorAlert error={error} />
           <button type="button" className="btn btn--primary" onClick={connect} disabled={waiting}>
-            {waiting ? "Ждём нажатия Start в боте…" : "Подключить Telegram"}
+            {waiting ? t("Ждём нажатия Start в боте…") : t("Подключить Telegram")}
           </button>
         </>
       )}

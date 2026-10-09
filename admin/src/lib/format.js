@@ -1,3 +1,4 @@
+import { t, tt } from "./i18n";
 const pad = (n) => String(n).padStart(2, "0");
 
 export function formatDate(iso, { time = true } = {}) {
@@ -9,10 +10,10 @@ export function formatDate(iso, { time = true } = {}) {
 
 export function timeAgo(iso) {
   const diff = (Date.now() - new Date(iso).getTime()) / 1000;
-  if (diff < 60) return "только что";
-  if (diff < 3600) return `${Math.floor(diff / 60)} мин назад`;
-  if (diff < 86400) return `${Math.floor(diff / 3600)} ч назад`;
-  if (diff < 86400 * 7) return `${Math.floor(diff / 86400)} дн назад`;
+  if (diff < 60) return t("только что");
+  if (diff < 3600) return tt("{0} мин назад", Math.floor(diff / 60));
+  if (diff < 86400) return tt("{0} ч назад", Math.floor(diff / 3600));
+  if (diff < 86400 * 7) return tt("{0} дн назад", Math.floor(diff / 86400));
   return formatDate(iso, { time: false });
 }
 
@@ -39,14 +40,14 @@ export function contactsOf(lead) {
 }
 
 export const leadName = (lead) =>
-  lead.data?.name || lead.data?.phone_full || lead.data?.phone || lead.data?.email || lead.data?.telegram || `Заявка #${lead.id}`;
+  lead.data?.name || lead.data?.phone_full || lead.data?.phone || lead.data?.email || lead.data?.telegram || tt("Заявка #{0}", lead.id);
 
 /** Джерело для таблиці: utm_source → «Сайт» */
 export function sourceOf(lead) {
   const a = lead.attribution || {};
-  if (lead.type === "manual") return { main: lead.source || "Вручную", sub: "добавлен вручную" };
+  if (lead.type === "manual") return { main: lead.source || t("Вручную"), sub: t("добавлен вручную") };
   return {
-    main: a.utm_source || (a.gclid ? "Google Ads" : a.fbclid ? "Meta" : a.ttclid ? "TikTok" : "Сайт"),
+    main: a.utm_source || (a.gclid ? "Google Ads" : a.fbclid ? "Meta" : a.ttclid ? "TikTok" : t("Сайт")),
     sub: a.utm_campaign || lead.page || "",
   };
 }

@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 import Icon from "../components/Icon";
-import { CodeInput, CopyButton, ErrorAlert, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
+import { CodeInput, CopyButton, ErrorAlert, LangSwitch, PasswordInput, QrCode, StrengthMeter } from "../components/ui";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { passwordScore } from "../lib/format";
 import logoMark from "../assets/logo-mark.svg";
 
 import "./Login.css";
+import { t } from "../lib/i18n";
 
 const validEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 
@@ -95,25 +96,25 @@ function Login() {
   };
 
   const submitLogin = () => {
-    if (!validEmail(email)) return setError("Введите корректный email");
-    if (!password) return setError("Введите пароль");
+    if (!validEmail(email)) return setError(t("Введите корректный email"));
+    if (!password) return setError(t("Введите пароль"));
     run(() => api("/auth/login", { method: "POST", body: { email, password, remember } }));
   };
 
   const submitCode = (path) => {
-    if (code.length !== 6) return setError("Введите 6-значный код");
+    if (code.length !== 6) return setError(t("Введите 6-значный код"));
     run(() => api(path, { method: "POST", body: { ticket: step.ticket, code } }));
   };
 
   const submitNewPassword = () => {
-    if (newPass.length < 10) return setError("Минимум 10 символов");
-    if (passwordScore(newPass) < 3) return setError("Пароль слишком простой — добавьте цифры, заглавные буквы или символы");
-    if (newPass !== confirmPass) return setError("Пароли не совпадают");
+    if (newPass.length < 10) return setError(t("Минимум 10 символов"));
+    if (passwordScore(newPass) < 3) return setError(t("Пароль слишком простой — добавьте цифры, заглавные буквы или символы"));
+    if (newPass !== confirmPass) return setError(t("Пароли не совпадают"));
     run(() => api("/auth/change-password", { method: "POST", body: { ticket: step.ticket, password: newPass } }));
   };
 
   const submitForgot = async () => {
-    if (!validEmail(email)) return setError("Введите корректный email");
+    if (!validEmail(email)) return setError(t("Введите корректный email"));
     setBusy(true);
     setError("");
     try {
@@ -127,9 +128,9 @@ function Login() {
   };
 
   const submitReset = async () => {
-    if (newPass.length < 10) return setError("Минимум 10 символов");
-    if (passwordScore(newPass) < 3) return setError("Пароль слишком простой — добавьте цифры, заглавные буквы или символы");
-    if (newPass !== confirmPass) return setError("Пароли не совпадают");
+    if (newPass.length < 10) return setError(t("Минимум 10 символов"));
+    if (passwordScore(newPass) < 3) return setError(t("Пароль слишком простой — добавьте цифры, заглавные буквы или символы"));
+    if (newPass !== confirmPass) return setError(t("Пароли не совпадают"));
     setBusy(true);
     setError("");
     try {
@@ -156,6 +157,7 @@ function Login() {
 
   return (
     <div className="auth">
+      <LangSwitch className="auth__lang" />
       <div className="auth__card">
         <aside className="auth__brand">
           <div className="auth__glow" />
@@ -166,22 +168,15 @@ function Login() {
             </div>
           </div>
           <div>
-            <h1 className="auth__headline">
-              Панель управления
-              <br />
-              агентством
-            </h1>
-            <p className="auth__lead">Заявки с сайта, статусы и команда — в одном защищённом рабочем пространстве.</p>
+            <h1 className="auth__headline">{t("Панель управления")}<br />{t("агентством")}</h1>
+            <p className="auth__lead">{t("Заявки с сайта, статусы и команда — в одном защищённом рабочем пространстве.")}</p>
             <ul className="auth__features">
               <li>
-                <span>✓</span>Все заявки сайта с UTM-метками
-              </li>
+                <span>✓</span>{t("Все заявки сайта с UTM-метками")}</li>
               <li>
-                <span>✓</span>Статусы синхронизированы с Telegram
-              </li>
+                <span>✓</span>{t("Статусы синхронизированы с Telegram")}</li>
               <li>
-                <span>✓</span>Ролевой доступ и 2FA
-              </li>
+                <span>✓</span>{t("Ролевой доступ и 2FA")}</li>
             </ul>
           </div>
           <div className="auth__copy">© {new Date().getFullYear()} Pikaleads · app.pika-leads.com</div>
@@ -190,8 +185,8 @@ function Login() {
         <main className="auth__form">
           {screen === "login" && (
             <div className="auth__screen">
-              <h2 className="auth__title">Вход в панель</h2>
-              <p className="auth__text">Введите данные учётной записи</p>
+              <h2 className="auth__title">{t("Вход в панель")}</h2>
+              <p className="auth__text">{t("Введите данные учётной записи")}</p>
 
               <label className="field">
                 <span className="field__label">Email</span>
@@ -208,10 +203,8 @@ function Login() {
               </label>
 
               <div className="auth__row">
-                <span className="field__label">Пароль</span>
-                <button type="button" className="auth__link" onClick={() => go("forgot")}>
-                  Забыли пароль?
-                </button>
+                <span className="field__label">{t("Пароль")}</span>
+                <button type="button" className="auth__link" onClick={() => go("forgot")}>{t("Забыли пароль?")}</button>
               </div>
               <div style={{ marginBottom: 14 }}>
                 <PasswordInput value={password} onChange={setPassword} autoComplete="current-password" onEnter={submitLogin} />
@@ -220,67 +213,56 @@ function Login() {
               <ErrorAlert error={error} />
 
               <label className="auth__remember">
-                <input type="checkbox" checked={remember} onChange={(event) => setRemember(event.target.checked)} />
-                Запомнить меня на этом устройстве
-              </label>
+                <input type="checkbox" checked={remember} onChange={(event) => setRemember(event.target.checked)} />{t("Запомнить меня на этом устройстве")}</label>
 
               <button type="button" className="btn btn--primary btn--block" onClick={submitLogin} disabled={busy}>
-                {busy ? <span className="spinner" /> : "Войти"}
+                {busy ? <span className="spinner" /> : t("Войти")}
               </button>
 
               <div className="auth__secure">
-                <i />
-                Двухфакторная защита включена
-              </div>
+                <i />{t("Двухфакторная защита включена")}</div>
             </div>
           )}
 
           {screen === "twofa" && (
             <div className="auth__screen">
-              <button type="button" className="auth__back" onClick={backToLogin}>
-                ← Назад ко входу
-              </button>
+              <button type="button" className="auth__back" onClick={backToLogin}>{t("← Назад ко входу")}</button>
               <div className="auth__icon">
                 <Icon name="shield" size={24} />
               </div>
-              <h2 className="auth__title">Подтверждение входа</h2>
-              <p className="auth__text">
-                Введите 6-значный код из приложения-аутентификатора для <b>{step.email}</b>
+              <h2 className="auth__title">{t("Подтверждение входа")}</h2>
+              <p className="auth__text">{t("Введите 6-значный код из приложения-аутентификатора для")}{" "}<b>{step.email}</b>
               </p>
               <CodeInput value={code} onChange={setCode} onEnter={() => submitCode("/auth/2fa")} />
               <ErrorAlert error={error} />
               <button type="button" className="btn btn--primary btn--block" onClick={() => submitCode("/auth/2fa")} disabled={busy}>
-                {busy ? <span className="spinner" /> : "Подтвердить и войти"}
+                {busy ? <span className="spinner" /> : t("Подтвердить и войти")}
               </button>
-              <p className="auth__text" style={{ marginTop: 18, marginBottom: 0, fontSize: 12 }}>
-                Нет доступа к телефону? Попросите администратора сбросить 2FA.
-              </p>
+              <p className="auth__text" style={{ marginTop: 18, marginBottom: 0, fontSize: 12 }}>{t("Нет доступа к телефону? Попросите администратора сбросить 2FA.")}</p>
             </div>
           )}
 
           {screen === "setup" && (
             <div className="auth__screen">
-              <button type="button" className="auth__back" onClick={backToLogin}>
-                ← Назад ко входу
-              </button>
-              <h2 className="auth__title">Подключите 2FA</h2>
-              <p className="auth__text">Для доступа к панели нужна двухфакторная защита. Это займёт минуту.</p>
+              <button type="button" className="auth__back" onClick={backToLogin}>{t("← Назад ко входу")}</button>
+              <h2 className="auth__title">{t("Подключите 2FA")}</h2>
+              <p className="auth__text">{t("Для доступа к панели нужна двухфакторная защита. Это займёт минуту.")}</p>
               <div className="auth__setup">
                 <QrCode text={step.otpauth} size={150} />
                 <ol className="auth__steps">
-                  <li>Установите Google Authenticator, 1Password или Authy</li>
-                  <li>Отсканируйте QR-код (или введите ключ ниже)</li>
-                  <li>Введите 6-значный код из приложения</li>
+                  <li>{t("Установите Google Authenticator, 1Password или Authy")}</li>
+                  <li>{t("Отсканируйте QR-код (или введите ключ ниже)")}</li>
+                  <li>{t("Введите 6-значный код из приложения")}</li>
                 </ol>
               </div>
               <div className="auth__secret">
                 <span>{step.secret?.match(/.{1,4}/g)?.join(" ")}</span>
-                <CopyButton value={step.secret || ""} label="Скопировать ключ" />
+                <CopyButton value={step.secret || ""} label={t("Скопировать ключ")} />
               </div>
               <CodeInput value={code} onChange={setCode} onEnter={() => submitCode("/auth/2fa-setup")} autoFocus={false} />
               <ErrorAlert error={error} />
               <button type="button" className="btn btn--primary btn--block" onClick={() => submitCode("/auth/2fa-setup")} disabled={busy}>
-                {busy ? <span className="spinner" /> : "Включить 2FA и войти"}
+                {busy ? <span className="spinner" /> : t("Включить 2FA и войти")}
               </button>
             </div>
           )}
@@ -290,15 +272,15 @@ function Login() {
               <div className="auth__icon">
                 <Icon name="lock" size={24} />
               </div>
-              <h2 className="auth__title">Новый пароль</h2>
-              <p className="auth__text">Вы вошли с временным паролем. Придумайте свой — его будете знать только вы.</p>
+              <h2 className="auth__title">{t("Новый пароль")}</h2>
+              <p className="auth__text">{t("Вы вошли с временным паролем. Придумайте свой — его будете знать только вы.")}</p>
 
-              <span className="field__label">Новый пароль</span>
+              <span className="field__label">{t("Новый пароль")}</span>
               <div style={{ marginTop: 7 }}>
                 <PasswordInput
                   value={newPass}
                   onChange={setNewPass}
-                  placeholder="Минимум 10 символов"
+                  placeholder={t("Минимум 10 символов")}
                   autoComplete="new-password"
                   autoFocus
                 />
@@ -306,12 +288,12 @@ function Login() {
               <StrengthMeter password={newPass} />
 
               <label className="field">
-                <span className="field__label">Повторите пароль</span>
+                <span className="field__label">{t("Повторите пароль")}</span>
                 <input
                   className="input"
                   type="password"
                   autoComplete="new-password"
-                  placeholder="Повторите пароль"
+                  placeholder={t("Повторите пароль")}
                   value={confirmPass}
                   onChange={(event) => setConfirmPass(event.target.value)}
                   onKeyDown={(event) => event.key === "Enter" && submitNewPassword()}
@@ -320,35 +302,28 @@ function Login() {
 
               <ErrorAlert error={error} />
               <button type="button" className="btn btn--primary btn--block" onClick={submitNewPassword} disabled={busy}>
-                {busy ? <span className="spinner" /> : "Сохранить пароль"}
+                {busy ? <span className="spinner" /> : t("Сохранить пароль")}
               </button>
             </div>
           )}
 
           {screen === "forgot" && (
             <div className="auth__screen">
-              <button type="button" className="auth__back" onClick={backToLogin}>
-                ← Назад ко входу
-              </button>
+              <button type="button" className="auth__back" onClick={backToLogin}>{t("← Назад ко входу")}</button>
               <div className="auth__icon">
                 <Icon name="key" size={24} />
               </div>
-              <h2 className="auth__title">Сброс пароля</h2>
+              <h2 className="auth__title">{t("Сброс пароля")}</h2>
               {forgotAvailable === null && <div className="spinner" />}
               {forgotAvailable === false && (
                 <>
-                  <p className="auth__text">
-                    Напишите администратору панели — он выдаст временный пароль в разделе «Команда». При входе с ним вы сразу зададите новый
-                    пароль.
-                  </p>
-                  <button type="button" className="btn btn--block" onClick={backToLogin}>
-                    Вернуться ко входу
-                  </button>
+                  <p className="auth__text">{t("Напишите администратору панели — он выдаст временный пароль в разделе «Команда». При входе с ним вы сразу зададите новый пароль.")}</p>
+                  <button type="button" className="btn btn--block" onClick={backToLogin}>{t("Вернуться ко входу")}</button>
                 </>
               )}
               {forgotAvailable && (
                 <>
-                  <p className="auth__text">Введите email, с которым входите в панель, — пришлём ссылку для нового пароля.</p>
+                  <p className="auth__text">{t("Введите email, с которым входите в панель, — пришлём ссылку для нового пароля.")}</p>
                   <label className="field">
                     <span className="field__label">Email</span>
                     <input
@@ -364,7 +339,7 @@ function Login() {
                   </label>
                   <ErrorAlert error={error} />
                   <button type="button" className="btn btn--primary btn--block" onClick={submitForgot} disabled={busy}>
-                    {busy ? <span className="spinner" /> : "Отправить ссылку"}
+                    {busy ? <span className="spinner" /> : t("Отправить ссылку")}
                   </button>
                 </>
               )}
@@ -376,14 +351,9 @@ function Login() {
               <div className="auth__icon">
                 <Icon name="mail" size={24} />
               </div>
-              <h2 className="auth__title">Проверьте почту</h2>
-              <p className="auth__text">
-                Если <b>{email.trim()}</b> есть в панели, на него придёт письмо со ссылкой. Она действует 30 минут. Письма нет — загляните в
-                «Спам».
-              </p>
-              <button type="button" className="btn btn--block" onClick={backToLogin}>
-                Вернуться ко входу
-              </button>
+              <h2 className="auth__title">{t("Проверьте почту")}</h2>
+              <p className="auth__text">{t("Если")}{" "}<b>{email.trim()}</b>{" "}{t("есть в панели, на него придёт письмо со ссылкой. Она действует 30 минут. Письма нет — загляните в «Спам».")}</p>
+              <button type="button" className="btn btn--block" onClick={backToLogin}>{t("Вернуться ко входу")}</button>
             </div>
           )}
 
@@ -392,15 +362,15 @@ function Login() {
               <div className="auth__icon">
                 <Icon name="lock" size={24} />
               </div>
-              <h2 className="auth__title">Новый пароль</h2>
-              <p className="auth__text">Придумайте новый пароль. После сохранения все устройства выйдут из панели.</p>
+              <h2 className="auth__title">{t("Новый пароль")}</h2>
+              <p className="auth__text">{t("Придумайте новый пароль. После сохранения все устройства выйдут из панели.")}</p>
 
-              <span className="field__label">Новый пароль</span>
+              <span className="field__label">{t("Новый пароль")}</span>
               <div style={{ marginTop: 7 }}>
                 <PasswordInput
                   value={newPass}
                   onChange={setNewPass}
-                  placeholder="Минимум 10 символов"
+                  placeholder={t("Минимум 10 символов")}
                   autoComplete="new-password"
                   autoFocus
                 />
@@ -408,12 +378,12 @@ function Login() {
               <StrengthMeter password={newPass} />
 
               <label className="field">
-                <span className="field__label">Повторите пароль</span>
+                <span className="field__label">{t("Повторите пароль")}</span>
                 <input
                   className="input"
                   type="password"
                   autoComplete="new-password"
-                  placeholder="Повторите пароль"
+                  placeholder={t("Повторите пароль")}
                   value={confirmPass}
                   onChange={(event) => setConfirmPass(event.target.value)}
                   onKeyDown={(event) => event.key === "Enter" && submitReset()}
@@ -422,11 +392,9 @@ function Login() {
 
               <ErrorAlert error={error} />
               <button type="button" className="btn btn--primary btn--block" onClick={submitReset} disabled={busy}>
-                {busy ? <span className="spinner" /> : "Сохранить пароль"}
+                {busy ? <span className="spinner" /> : t("Сохранить пароль")}
               </button>
-              <button type="button" className="auth__link auth__reset-back" onClick={backToLogin}>
-                Вспомнили пароль? Войти
-              </button>
+              <button type="button" className="auth__link auth__reset-back" onClick={backToLogin}>{t("Вспомнили пароль? Войти")}</button>
             </div>
           )}
 
@@ -435,11 +403,9 @@ function Login() {
               <div className="auth__done-icon">
                 <Icon name="check" size={34} strokeWidth="2.6" />
               </div>
-              <h2 className="auth__title">Пароль изменён</h2>
-              <p className="auth__text">Войдите с новым паролем. Код 2FA понадобится как обычно.</p>
-              <button type="button" className="btn btn--primary btn--block" onClick={backToLogin}>
-                Войти
-              </button>
+              <h2 className="auth__title">{t("Пароль изменён")}</h2>
+              <p className="auth__text">{t("Войдите с новым паролем. Код 2FA понадобится как обычно.")}</p>
+              <button type="button" className="btn btn--primary btn--block" onClick={backToLogin}>{t("Войти")}</button>
             </div>
           )}
 
@@ -448,8 +414,8 @@ function Login() {
               <div className="auth__done-icon">
                 <Icon name="check" size={34} strokeWidth="2.6" />
               </div>
-              <h2 className="auth__title">Вход выполнен</h2>
-              <p className="auth__text">Добро пожаловать, {step.user?.name}. Открываем панель…</p>
+              <h2 className="auth__title">{t("Вход выполнен")}</h2>
+              <p className="auth__text">{t("Добро пожаловать,")}{" "}{step.user?.name}{t(". Открываем панель…")}</p>
             </div>
           )}
         </main>

@@ -2,6 +2,7 @@ import Icon from "./Icon";
 import { CopyButton } from "./ui";
 import { contactsOf } from "../lib/format";
 import { useMeta } from "../lib/meta";
+import { t, tt } from "../lib/i18n";
 
 /** Кнопки швидкого зв'язку з лідом */
 export function ContactButtons({ lead, compact = false }) {
@@ -9,9 +10,9 @@ export function ContactButtons({ lead, compact = false }) {
   const stop = (event) => event.stopPropagation();
   return (
     <div className={`contact-buttons ${compact ? "contact-buttons--compact" : ""}`} onClick={stop}>
-      {c.phone && <CopyButton value={c.phone} label={`Скопировать ${c.phone}`} />}
+      {c.phone && <CopyButton value={c.phone} label={tt("Скопировать {0}", c.phone)} />}
       {c.call && (
-        <a className="icon-btn icon-btn--call" href={c.call} title="Позвонить" aria-label="Позвонить">
+        <a className="icon-btn icon-btn--call" href={c.call} title={t("Позвонить")} aria-label={t("Позвонить")}>
           <Icon name="phone" />
         </a>
       )}
@@ -50,7 +51,7 @@ export function StatusSelect({ value, onChange, size = "md" }) {
       style={{ "--status": status.color }}
       onClick={(event) => event.stopPropagation()}
       onChange={(event) => onChange(event.target.value)}
-      aria-label="Статус"
+      aria-label={t("Статус")}
     >
       {statuses.map((s) => (
         <option key={s.code} value={s.code}>
@@ -81,9 +82,9 @@ export function ManagerSelect({ value, onChange, className = "select select--sm"
       value={value ?? ""}
       onClick={(event) => event.stopPropagation()}
       onChange={(event) => onChange(event.target.value ? Number(event.target.value) : null)}
-      aria-label="Менеджер"
+      aria-label={t("Менеджер")}
     >
-      <option value="">— не назначен —</option>
+      <option value="">{t("— не назначен —")}</option>
       {users
         .filter((u) => !u.disabled || u.id === value)
         .map((u) => (

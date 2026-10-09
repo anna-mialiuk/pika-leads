@@ -13,6 +13,7 @@ import {
   setLocText,
   uploadKey,
 } from "../../lib/content";
+import { t, tt } from "../../lib/i18n";
 
 const splitKey = (key) => key.split(".");
 
@@ -56,7 +57,7 @@ function LocalizedField({ field, value, lang, onChange }) {
         <button
           type="button"
           className="loc-field__copy"
-          title="Скопировать украинский текст"
+          title={t("Скопировать украинский текст")}
           onClick={() => onChange(setLocText(value, lang, uk))}
         >
           UA → {lang.toUpperCase()}
@@ -71,8 +72,8 @@ function SelectField({ field, value, onChange }) {
   const known = options.some((option) => option.value === value);
   return (
     <select className="select" value={value ?? ""} onChange={(event) => onChange(event.target.value || undefined)}>
-      {(field.empty || !value) && <option value="">{field.empty || "— выберите —"}</option>}
-      {!known && value && <option value={value}>{value} (нестандартное значение)</option>}
+      {(field.empty || !value) && <option value="">{field.empty || t("— выберите —")}</option>}
+      {!known && value && <option value={value}>{value}{" "}{t("(нестандартное значение)")}</option>}
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
@@ -146,22 +147,20 @@ export function ImageUpload({ value, uploads, onUpload, onChange, preset = "scre
       }}
     >
       <div className="image-field__preview" onClick={() => input.current?.click()}>
-        {busy ? <div className="spinner" /> : src ? <img src={src} alt="" /> : <span>Перетащите картинку или нажмите</span>}
+        {busy ? <div className="spinner" /> : src ? <img src={src} alt="" /> : <span>{t("Перетащите картинку или нажмите")}</span>}
       </div>
       <div className="image-field__side">
         <div className="image-field__actions">
           <button type="button" className="btn btn--sm" onClick={() => input.current?.click()} disabled={busy}>
-            <Icon name="upload" /> {value ? "Заменить" : "Загрузить"}
+            <Icon name="upload" /> {value ? t("Заменить") : t("Загрузить")}
           </button>
           {value && (
-            <button type="button" className="btn btn--sm btn--ghost" onClick={() => onChange("")} disabled={busy}>
-              Убрать
-            </button>
+            <button type="button" className="btn btn--sm btn--ghost" onClick={() => onChange("")} disabled={busy}>{t("Убрать")}</button>
           )}
         </div>
         <div className="image-field__info">
           {uploadMatch && uploads[uploadMatch[1]]
-            ? `Новая · WebP · ${dataUrlSize(uploads[uploadMatch[1]])} КБ · сохранится вместе с записью`
+            ? tt("Новая · WebP · {0} КБ · сохранится вместе с записью", dataUrlSize(uploads[uploadMatch[1]]))
             : value
               ? value.split("/").pop()
               : ""}
@@ -200,8 +199,8 @@ function ListControls({ index, length, onMove, onRemove }) {
         className="icon-btn icon-btn--sm"
         onClick={() => onMove(-1)}
         disabled={index === 0}
-        title="Выше"
-        aria-label="Выше"
+        title={t("Выше")}
+        aria-label={t("Выше")}
       >
         <Icon name="up" />
       </button>
@@ -210,12 +209,12 @@ function ListControls({ index, length, onMove, onRemove }) {
         className="icon-btn icon-btn--sm"
         onClick={() => onMove(1)}
         disabled={index === length - 1}
-        title="Ниже"
-        aria-label="Ниже"
+        title={t("Ниже")}
+        aria-label={t("Ниже")}
       >
         <Icon name="down" />
       </button>
-      <button type="button" className="icon-btn icon-btn--sm icon-btn--danger" onClick={onRemove} title="Удалить" aria-label="Удалить">
+      <button type="button" className="icon-btn icon-btn--sm icon-btn--danger" onClick={onRemove} title={t("Удалить")} aria-label={t("Удалить")}>
         <Icon name="trash" />
       </button>
     </div>
@@ -244,13 +243,13 @@ function ListField({ field, value, ctx, onChange }) {
       {list.map((entry, index) => (
         <div className={`list-item ${field.inline ? "list-item--inline" : ""}`} key={index}>
           <div className="list-item__head">
-            <span className="list-item__num">{field.inline ? index + 1 : `${field.itemLabel || "Элемент"} ${index + 1}`}</span>
+            <span className="list-item__num">{field.inline ? index + 1 : `${field.itemLabel || t("Элемент")} ${index + 1}`}</span>
             <ListControls
               index={index}
               length={list.length}
               onMove={(delta) => update((prev) => move(prev, index, delta))}
               onRemove={() => {
-                if (window.confirm(`Удалить «${field.itemLabel || "элемент"} ${index + 1}»?`)) {
+                if (window.confirm(tt("Удалить «{0} {1}»?", field.itemLabel || t("элемент"), index + 1))) {
                   update((prev) => prev.filter((_, i) => i !== index));
                 }
               }}
@@ -270,7 +269,7 @@ function ListField({ field, value, ctx, onChange }) {
         </div>
       ))}
       <button type="button" className="btn btn--sm list-field__add" onClick={() => update((prev) => [...prev, emptyOf(field.fields)])}>
-        <Icon name="plus" /> {field.itemLabel || "Добавить"}
+        <Icon name="plus" /> {field.itemLabel || t("Добавить")}
       </button>
     </div>
   );
@@ -298,7 +297,7 @@ function TextListField({ field, value, ctx, onChange }) {
         </div>
       ))}
       <button type="button" className="btn btn--sm list-field__add" onClick={() => update((prev) => [...prev, { uk: "" }])}>
-        <Icon name="plus" /> {field.itemLabel || "Добавить"}
+        <Icon name="plus" /> {field.itemLabel || t("Добавить")}
       </button>
     </div>
   );
@@ -392,7 +391,7 @@ export function SchemaField({ field, item, ctx, onChange }) {
       control = <TextListField field={field} value={value} ctx={ctx} onChange={update} />;
       break;
     default:
-      control = <div className="faint">Неизвестный тип поля</div>;
+      control = <div className="faint">{t("Неизвестный тип поля")}</div>;
   }
 
   return (

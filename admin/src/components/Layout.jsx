@@ -3,21 +3,23 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 import ErrorBoundary from "./ErrorBoundary";
 import Icon from "./Icon";
+import { LangSwitch } from "./ui";
 import { useAuth } from "../lib/auth";
 import { usePublish } from "../lib/publish";
 import { useTasks } from "../lib/tasks";
 import logoMark from "../assets/logo-mark.svg";
 
 import "./Layout.css";
+import { t, tt, LOCALE } from "../lib/i18n";
 
-const ROLE_LABELS = { admin: "Администратор", manager: "Менеджер" };
+const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 
 const ago = (iso) => {
   const minutes = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 60000));
-  if (minutes < 1) return "только что";
-  if (minutes < 60) return `${minutes} мин назад`;
+  if (minutes < 1) return t("только что");
+  if (minutes < 60) return tt("{0} мин назад", minutes);
   const hours = Math.round(minutes / 60);
-  return hours < 24 ? `${hours} ч назад` : new Date(iso).toLocaleDateString("ru-RU");
+  return hours < 24 ? tt("{0} ч назад", hours) : new Date(iso).toLocaleDateString(LOCALE);
 };
 
 /** Стан публікації сайту (GitHub Actions) */
@@ -26,34 +28,33 @@ function PublishStatus() {
   if (!status) return null;
   if (status.configured === false) {
     return (
-      <div className="publish publish--off" title="Нет GITHUB_TOKEN в настройках сервера">
-        <span className="publish__dot" /> Публикация не настроена
-      </div>
+      <div className="publish publish--off" title={t("Нет GITHUB_TOKEN в настройках сервера")}>
+        <span className="publish__dot" />{" "}{t("Публикация не настроена")}</div>
     );
   }
   let state = "ok";
-  let text = "Сайт обновлён";
+  let text = t("Сайт обновлён");
   if (waiting && (!run || run.status !== "completed")) {
     state = "busy";
-    text = run?.status === "in_progress" ? "Сайт обновляется…" : "Ждём сборку…";
+    text = run?.status === "in_progress" ? t("Сайт обновляется…") : t("Ждём сборку…");
   } else if (run && run.status !== "completed") {
     state = "busy";
-    text = "Сайт обновляется…";
+    text = t("Сайт обновляется…");
   } else if (run && run.conclusion && run.conclusion !== "success") {
     state = "fail";
-    text = "Ошибка обновления сайта";
+    text = t("Ошибка обновления сайта");
   }
   const body = (
     <>
       <span className="publish__dot" />
       <span>
         {text}
-        {run?.updatedAt && <small>{state === "busy" ? "обычно 2–3 минуты" : ago(run.updatedAt)}</small>}
+        {run?.updatedAt && <small>{state === "busy" ? t("обычно 2–3 минуты") : ago(run.updatedAt)}</small>}
       </span>
     </>
   );
   return run?.url ? (
-    <a className={`publish publish--${state}`} href={run.url} target="_blank" rel="noreferrer noopener" title="Открыть сборку в GitHub">
+    <a className={`publish publish--${state}`} href={run.url} target="_blank" rel="noreferrer noopener" title={t("Открыть сборку в GitHub")}>
       {body}
     </a>
   ) : (
@@ -71,39 +72,39 @@ function Layout() {
   const isAdmin = user.role === "admin";
   const { myDueCount } = useTasks();
   const nav = [
-    { to: "/leads", icon: "leads", label: "Заявки (CRM)" },
+    { to: "/leads", icon: "leads", label: t("Заявки (CRM)") },
     {
       to: "/tasks",
       icon: "tasks",
-      label: "Задачи",
+      label: t("Задачи"),
       badge: myDueCount,
       subs: [
-        { to: "/tasks", label: "Задачи", dot: "#FFC629" },
-        { to: "/tasks/gantt", label: "Диаграмма Ганта", dot: "#f0a53e" },
-        { to: "/tasks/calendar", label: "Календарь", dot: "#5b9bff" },
-        { to: "/tasks/projects", label: "Проекты", dot: "#4fd88a" },
-        { to: "/tasks/mindmaps", label: "Майнд-карты", dot: "#b98bff" },
-        { to: "/tasks/files", label: "Файлы", dot: "#f0883e" },
-        { to: "/tasks/calls", label: "Звонки", dot: "#b98bff" },
-        { to: "/tasks/analytics", label: "Аналитика", dot: "#4fd8c8" },
-        { to: "/tasks/chat", label: "Рабочий чат", dot: "#ff7d7d" },
-        { to: "/tasks/settings", label: "Настройки", dot: "#8a8f98" },
+        { to: "/tasks", label: t("Задачи"), dot: "#FFC629" },
+        { to: "/tasks/gantt", label: t("Диаграмма Ганта"), dot: "#f0a53e" },
+        { to: "/tasks/calendar", label: t("Календарь"), dot: "#5b9bff" },
+        { to: "/tasks/projects", label: t("Проекты"), dot: "#4fd88a" },
+        { to: "/tasks/mindmaps", label: t("Майнд-карты"), dot: "#b98bff" },
+        { to: "/tasks/files", label: t("Файлы"), dot: "#f0883e" },
+        { to: "/tasks/calls", label: t("Звонки"), dot: "#b98bff" },
+        { to: "/tasks/analytics", label: t("Аналитика"), dot: "#4fd8c8" },
+        { to: "/tasks/chat", label: t("Рабочий чат"), dot: "#ff7d7d" },
+        { to: "/tasks/settings", label: t("Настройки"), dot: "#8a8f98" },
       ],
     },
-    { to: "/analytics", icon: "chart", label: "Аналитика" },
+    { to: "/analytics", icon: "chart", label: t("Аналитика") },
     ...(isAdmin
       ? [
-          { to: "/team", icon: "team", label: "Команда" },
-          { to: "/integrations", icon: "link", label: "Интеграции" },
+          { to: "/team", icon: "team", label: t("Команда") },
+          { to: "/integrations", icon: "link", label: t("Интеграции") },
         ]
       : []),
-    { to: "/profile", icon: "user", label: "Профиль" },
+    { to: "/profile", icon: "user", label: t("Профиль") },
   ];
   const siteNav = isAdmin
     ? [
-        { to: "/cases", icon: "cases", label: "Кейсы" },
-        { to: "/blog", icon: "blog", label: "Блог" },
-        { to: "/reviews", icon: "reviews", label: "Отзывы" },
+        { to: "/cases", icon: "cases", label: t("Кейсы") },
+        { to: "/blog", icon: "blog", label: t("Блог") },
+        { to: "/reviews", icon: "reviews", label: t("Отзывы") },
         { to: "/seo", icon: "search", label: "SEO" },
       ]
     : [];
@@ -128,7 +129,7 @@ function Layout() {
             <button
               type="button"
               className={`layout__caret ${open ? "is-open" : ""}`}
-              aria-label={open ? "Свернуть" : "Развернуть"}
+              aria-label={open ? t("Свернуть") : t("Развернуть")}
               aria-expanded={open}
               onClick={() => setTasksOpen(!open)}
             >
@@ -166,7 +167,7 @@ function Layout() {
   return (
     <div className="layout">
       <header className="layout__topbar">
-        <button type="button" className="icon-btn" onClick={() => setOpen(true)} aria-label="Меню">
+        <button type="button" className="icon-btn" onClick={() => setOpen(true)} aria-label={t("Меню")}>
           <Icon name="menu" />
         </button>
         <div className="layout__brand layout__brand--top">
@@ -190,11 +191,13 @@ function Layout() {
 
         <nav className="layout__nav">
           {nav.map(link)}
-          {siteNav.length > 0 && <div className="layout__nav-title">Сайт</div>}
+          {siteNav.length > 0 && <div className="layout__nav-title">{t("Сайт")}</div>}
           {siteNav.map(link)}
         </nav>
 
         {isAdmin && <PublishStatus />}
+
+        <LangSwitch className="layout__lang" />
 
         <div className="layout__user">
           <div className="layout__avatar">{user.name.slice(0, 1).toUpperCase()}</div>
@@ -202,7 +205,7 @@ function Layout() {
             <strong>{user.name}</strong>
             <small>{ROLE_LABELS[user.role]}</small>
           </div>
-          <button type="button" className="icon-btn" onClick={logout} title="Выйти" aria-label="Выйти">
+          <button type="button" className="icon-btn" onClick={logout} title={t("Выйти")} aria-label={t("Выйти")}>
             <Icon name="logout" />
           </button>
         </div>

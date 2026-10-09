@@ -4,6 +4,7 @@ import QRCode from "qrcode";
 
 import Icon from "./Icon";
 import { passwordScore } from "../lib/format";
+import { t, tt, LANG, LANGS, setLang } from "../lib/i18n";
 
 /** Поле пароля з кнопкою «показати» */
 export function PasswordInput({ value, onChange, placeholder = "••••••••", autoComplete, autoFocus, onEnter }) {
@@ -24,7 +25,7 @@ export function PasswordInput({ value, onChange, placeholder = "•••••�
         type="button"
         className="password-input__eye"
         onClick={() => setVisible((v) => !v)}
-        aria-label={visible ? "Скрыть пароль" : "Показать пароль"}
+        aria-label={visible ? t("Скрыть пароль") : t("Показать пароль")}
       >
         <Icon name={visible ? "eyeOff" : "eye"} size={17} />
       </button>
@@ -33,11 +34,11 @@ export function PasswordInput({ value, onChange, placeholder = "•••••�
 }
 
 const STRENGTH = [
-  ["#ff7d7d", "Очень слабый"],
-  ["#ff7d7d", "Слабый"],
-  ["#f0b429", "Средний"],
-  ["#8bd450", "Надёжный"],
-  ["#4fd88a", "Отличный"],
+  ["#ff7d7d", t("Очень слабый")],
+  ["#ff7d7d", t("Слабый")],
+  ["#f0b429", t("Средний")],
+  ["#8bd450", t("Надёжный")],
+  ["#4fd88a", t("Отличный")],
 ];
 
 /** Індикатор надійності (як у макеті) */
@@ -52,7 +53,7 @@ export function StrengthMeter({ password }) {
         ))}
       </div>
       <div className="strength__label" style={{ color: password ? color : "var(--faint)" }}>
-        {password ? `Надёжность: ${label}` : "Минимум 10 символов: буквы разного регистра, цифры, символы"}
+        {password ? tt("Надёжность: {0}", label) : t("Минимум 10 символов: буквы разного регистра, цифры, символы")}
       </div>
     </div>
   );
@@ -83,7 +84,7 @@ export function QrCode({ text, size = 176 }) {
       .then(setSrc)
       .catch(() => setSrc(""));
   }, [text, size]);
-  return src ? <img className="qr" src={src} width={size} height={size} alt="QR-код для приложения-аутентификатора" /> : null;
+  return src ? <img className="qr" src={src} width={size} height={size} alt={t("QR-код для приложения-аутентификатора")} /> : null;
 }
 
 /** Модальне вікно: Esc і клік по фону закривають */
@@ -121,7 +122,7 @@ export function Modal({ title, onClose, wide = false, className = "", children }
       }}
     >
       <div className={`modal__panel ${wide ? "modal__panel--wide" : ""} ${className}`} ref={panelRef}>
-        <button type="button" className="icon-btn modal__close" onClick={onClose} aria-label="Закрыть">
+        <button type="button" className="icon-btn modal__close" onClick={onClose} aria-label={t("Закрыть")}>
           <Icon name="close" />
         </button>
         {title && <h2 className="modal__title">{title}</h2>}
@@ -133,7 +134,7 @@ export function Modal({ title, onClose, wide = false, className = "", children }
 }
 
 /** Кнопка «копіювати» з підтвердженням */
-export function CopyButton({ value, label = "Копировать", className = "icon-btn", children }) {
+export function CopyButton({ value, label = t("Копировать"), className = "icon-btn", children }) {
   const [done, setDone] = useState(false);
   return (
     <button
@@ -150,7 +151,7 @@ export function CopyButton({ value, label = "Копировать", className = 
       }}
     >
       <Icon name={done ? "check" : "copy"} />
-      {children && (done ? "Скопировано" : children)}
+      {children && (done ? t("Скопировано") : children)}
     </button>
   );
 }
@@ -165,3 +166,23 @@ export function Field({ label, children }) {
 }
 
 export const ErrorAlert = ({ error }) => (error ? <div className="alert">⚠ {error}</div> : null);
+
+/** Перемикач мови панелі RU / UA (вибір запам'ятовується в браузері) */
+export function LangSwitch({ className = "" }) {
+  return (
+    <div className={`lang-switch ${className}`} role="group" aria-label={t("Язык панели")}>
+      {LANGS.map((l) => (
+        <button
+          key={l.code}
+          type="button"
+          className={l.code === LANG ? "is-active" : ""}
+          aria-pressed={l.code === LANG}
+          title={l.name}
+          onClick={() => l.code !== LANG && setLang(l.code)}
+        >
+          {l.label}
+        </button>
+      ))}
+    </div>
+  );
+}

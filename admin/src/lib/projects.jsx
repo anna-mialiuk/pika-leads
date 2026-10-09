@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 import { api, upload } from "./api";
+import { t } from "./i18n";
 
 /** Проекти: список для дошки задач, Ганта, сторінки «Проекты» і вікна задачі */
 const ProjectsContext = createContext(null);
@@ -75,9 +76,9 @@ export const useProjects = () => useContext(ProjectsContext);
 
 // ---------- довідники (як у макеті) ----------
 export const PROJECT_STATUS = {
-  active: { label: "Активен", color: "#5ac878", bg: "rgba(90,200,120,.15)" },
-  paused: { label: "На паузе", color: "#f0883e", bg: "rgba(240,136,62,.15)" },
-  done: { label: "Завершён", color: "#5b9bff", bg: "rgba(91,155,255,.15)" },
+  active: { label: t("Активен"), color: "#5ac878", bg: "rgba(90,200,120,.15)" },
+  paused: { label: t("На паузе"), color: "#f0883e", bg: "rgba(240,136,62,.15)" },
+  done: { label: t("Завершён"), color: "#5b9bff", bg: "rgba(91,155,255,.15)" },
 };
 export const PROJECT_COLORS = ["#5b9bff", "#4fd88a", "#FFC629", "#f0883e", "#b98bff", "#ff7d7d"];
 export const PROJECT_ICONS = ["◈", "🏥", "🎰", "📣", "📱", "💊", "🛒", "🎮", "💰", "📊", "🚀", "🎨", "🏦", "🍔", "🏠", "⚽"];
@@ -85,7 +86,7 @@ export const CALL_SERVICES = {
   zoom: { label: "Zoom", color: "#2D8CFF" },
   googlemeet: { label: "Google Meet", color: "#00AC47" },
   loom: { label: "Loom", color: "#625DF5" },
-  phone: { label: "Телефон", color: "#4fd88a" },
+  phone: { label: t("Телефон"), color: "#4fd88a" },
 };
 
 const pad = (n) => String(n).padStart(2, "0");

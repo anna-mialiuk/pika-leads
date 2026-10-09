@@ -11,6 +11,7 @@ import { usePublish } from "../lib/publish";
 
 import "./Content.css";
 import "./Seo.css";
+import { t, tt } from "../lib/i18n";
 
 // Рекомендовані довжини (Google обрізає довше)
 const TITLE = { min: 20, max: 60 };
@@ -32,32 +33,32 @@ function splitUrl(url, siteUrl) {
 }
 
 const TYPES = [
-  { key: "main", label: "Основные", test: (p) => !/^\/(cases|blog|services)\/./.test(p) && !LEGAL.has(p) },
-  { key: "services", label: "Услуги", test: (p) => p.startsWith("/services/") },
-  { key: "cases", label: "Кейсы", test: (p) => p.startsWith("/cases/") },
-  { key: "blog", label: "Блог", test: (p) => p.startsWith("/blog/") },
-  { key: "legal", label: "Юридические", test: (p) => LEGAL.has(p) },
+  { key: "main", label: t("Основные"), test: (p) => !/^\/(cases|blog|services)\/./.test(p) && !LEGAL.has(p) },
+  { key: "services", label: t("Услуги"), test: (p) => p.startsWith("/services/") },
+  { key: "cases", label: t("Кейсы"), test: (p) => p.startsWith("/cases/") },
+  { key: "blog", label: t("Блог"), test: (p) => p.startsWith("/blog/") },
+  { key: "legal", label: t("Юридические"), test: (p) => LEGAL.has(p) },
 ];
 const LEGAL = new Set(["/privacy-policy", "/cookies-policy", "/disclaimer", "/personal-data"]);
-const PAGE_NAMES = { "/": "Главная", "/cases": "Кейсы (список)", "/blog": "Блог (список)", "/team": "Команда", "/contacts": "Контакты" };
+const PAGE_NAMES = { "/": t("Главная"), "/cases": t("Кейсы (список)"), "/blog": t("Блог (список)"), "/team": t("Команда"), "/contacts": t("Контакты") };
 
 /** Проблеми сторінки однією мовою */
 function issuesOf(page, duplicates) {
-  if (!page) return [{ level: "bad", text: "Нет в sitemap" }];
-  if (page.error) return [{ level: "bad", text: `Не открылась: ${page.error}` }];
+  if (!page) return [{ level: "bad", text: t("Нет в sitemap") }];
+  if (page.error) return [{ level: "bad", text: tt("Не открылась: {0}", page.error) }];
   const list = [];
   const t = page.title?.length || 0;
   const d = page.description?.length || 0;
-  if (!t) list.push({ level: "bad", text: "Нет заголовка" });
-  else if (t > TITLE.max) list.push({ level: "warn", text: `Заголовок длинный (${t}) — Google обрежет` });
-  else if (t < TITLE.min) list.push({ level: "warn", text: `Заголовок короткий (${t})` });
-  if (!d) list.push({ level: "bad", text: "Нет описания" });
-  else if (d > DESC.max) list.push({ level: "warn", text: `Описание длинное (${d}) — Google обрежет` });
-  else if (d < DESC.min) list.push({ level: "warn", text: `Описание короткое (${d})` });
-  if (page.title && duplicates.has(page.title)) list.push({ level: "warn", text: "Такой же заголовок у другой страницы" });
-  if (page.h1 === 0) list.push({ level: "warn", text: "Нет заголовка H1" });
-  if (page.h1 > 1) list.push({ level: "warn", text: `Несколько H1 (${page.h1})` });
-  if (/noindex/.test(page.robots || "")) list.push({ level: "info", text: "Закрыта от индексации" });
+  if (!t) list.push({ level: "bad", text: t("Нет заголовка") });
+  else if (t > TITLE.max) list.push({ level: "warn", text: tt("Заголовок длинный ({0}) — Google обрежет", t) });
+  else if (t < TITLE.min) list.push({ level: "warn", text: tt("Заголовок короткий ({0})", t) });
+  if (!d) list.push({ level: "bad", text: t("Нет описания") });
+  else if (d > DESC.max) list.push({ level: "warn", text: tt("Описание длинное ({0}) — Google обрежет", d) });
+  else if (d < DESC.min) list.push({ level: "warn", text: tt("Описание короткое ({0})", d) });
+  if (page.title && duplicates.has(page.title)) list.push({ level: "warn", text: t("Такой же заголовок у другой страницы") });
+  if (page.h1 === 0) list.push({ level: "warn", text: t("Нет заголовка H1") });
+  if (page.h1 > 1) list.push({ level: "warn", text: tt("Несколько H1 ({0})", page.h1) });
+  if (/noindex/.test(page.robots || "")) list.push({ level: "info", text: t("Закрыта от индексации") });
   return list;
 }
 
@@ -76,8 +77,8 @@ function GooglePreview({ url, title, description }) {
           <small>{url.replace(/^https?:\/\//, "")}</small>
         </span>
       </div>
-      <div className="serp__title">{cut(title || "Без заголовка", 62)}</div>
-      <div className="serp__desc">{cut(description || "Описания нет — Google возьмёт случайный кусок текста со страницы.", 160)}</div>
+      <div className="serp__title">{cut(title || t("Без заголовка"), 62)}</div>
+      <div className="serp__desc">{cut(description || t("Описания нет — Google возьмёт случайный кусок текста со страницы."), 160)}</div>
     </div>
   );
 }
@@ -141,17 +142,13 @@ function SeoModal({ row, siteUrl, override, onClose, onSaved }) {
       <div className="seo-modal__grid">
         <div>
           <div className="schema-field">
-            <div className="field__label seo-modal__label">
-              Заголовок в Google <Counter value={text("title") || live?.title || ""} limits={TITLE} />
+            <div className="field__label seo-modal__label">{t("Заголовок в Google")}{" "}<Counter value={text("title") || live?.title || ""} limits={TITLE} />
             </div>
             <input className="input" value={text("title")} placeholder={live?.title || ""} onChange={(e) => set("title", e.target.value)} />
-            <div className="schema-field__hint">
-              Пусто — как сейчас на сайте (серым). Пишется целиком, «| Pika Leads» само не добавляется.
-            </div>
+            <div className="schema-field__hint">{t("Пусто — как сейчас на сайте (серым). Пишется целиком, «| Pika Leads» само не добавляется.")}</div>
           </div>
           <div className="schema-field">
-            <div className="field__label seo-modal__label">
-              Описание <Counter value={text("description") || live?.description || ""} limits={DESC} />
+            <div className="field__label seo-modal__label">{t("Описание")}{" "}<Counter value={text("description") || live?.description || ""} limits={DESC} />
             </div>
             <textarea
               className="textarea"
@@ -164,11 +161,11 @@ function SeoModal({ row, siteUrl, override, onClose, onSaved }) {
           <Toggle
             checked={entry.noindex}
             onChange={(checked) => setEntry((prev) => ({ ...prev, noindex: checked || undefined }))}
-            label="Скрыть от поисковиков (noindex, все языки)"
+            label={t("Скрыть от поисковиков (noindex, все языки)")}
           />
         </div>
         <div>
-          <div className="field__label">Так будет в Google</div>
+          <div className="field__label">{t("Так будет в Google")}</div>
           <GooglePreview url={pageUrl} title={text("title") || live?.title} description={text("description") || live?.description} />
           {live?.issues?.length > 0 && (
             <ul className="seo-issues">
@@ -180,23 +177,18 @@ function SeoModal({ row, siteUrl, override, onClose, onSaved }) {
             </ul>
           )}
           <a className="btn btn--sm btn--ghost" href={pageUrl} target="_blank" rel="noreferrer noopener">
-            <Icon name="external" /> Открыть страницу
-          </a>
+            <Icon name="external" />{" "}{t("Открыть страницу")}</a>
         </div>
       </div>
 
       <div className="modal__actions">
         {override && (
-          <button type="button" className="btn btn--sm btn--ghost" onClick={() => save(true)} disabled={saving}>
-            Сбросить к тексту сайта
-          </button>
+          <button type="button" className="btn btn--sm btn--ghost" onClick={() => save(true)} disabled={saving}>{t("Сбросить к тексту сайта")}</button>
         )}
         <span style={{ flex: 1 }} />
-        <button type="button" className="btn btn--ghost" onClick={onClose} disabled={saving}>
-          Отмена
-        </button>
+        <button type="button" className="btn btn--ghost" onClick={onClose} disabled={saving}>{t("Отмена")}</button>
         <button type="button" className="btn btn--primary" onClick={() => save(false)} disabled={saving}>
-          {saving ? "Сохраняем…" : "Сохранить"}
+          {saving ? t("Сохраняем…") : t("Сохранить")}
         </button>
       </div>
     </Modal>
@@ -287,18 +279,17 @@ function Seo() {
       <div className="page-head">
         <div>
           <h1 className="page-title">SEO</h1>
-          <p className="page-text">Заголовки и описания страниц в Google. Проверка — по живому сайту.</p>
+          <p className="page-text">{t("Заголовки и описания страниц в Google. Проверка — по живому сайту.")}</p>
         </div>
         <button type="button" className="btn" onClick={() => load(true)} disabled={loading}>
-          {loading ? <span className="spinner" /> : <Icon name="refresh" />} Проверить заново
-        </button>
+          {loading ? <span className="spinner" /> : <Icon name="refresh" />}{" "}{t("Проверить заново")}</button>
       </div>
 
       <ErrorAlert error={error} />
       {!audit && !error && (
         <div className="content-loading">
           <div className="spinner" />
-          <span className="faint">Проверяем страницы сайта…</span>
+          <span className="faint">{t("Проверяем страницы сайта…")}</span>
         </div>
       )}
 
@@ -307,19 +298,19 @@ function Seo() {
           <div className="seo-summary">
             <div className="card">
               <b>{rows.length}</b>
-              <span>страниц × 3 языка</span>
+              <span>{t("страниц × 3 языка")}</span>
             </div>
             <div className="card">
               <b className={withIssues ? "is-warn" : "is-ok"}>{withIssues}</b>
-              <span>с замечаниями</span>
+              <span>{t("с замечаниями")}</span>
             </div>
             <div className="card">
               <b>{Object.keys(overrides).length}</b>
-              <span>изменено в админке</span>
+              <span>{t("изменено в админке")}</span>
             </div>
             <div className="card">
               <b>{timeAgo(new Date(audit.at).toISOString())}</b>
-              <span>последняя проверка</span>
+              <span>{t("последняя проверка")}</span>
             </div>
           </div>
 
@@ -328,20 +319,20 @@ function Seo() {
               <Icon name="search" />
               <input
                 className="input input--sm"
-                placeholder="Адрес или название"
+                placeholder={t("Адрес или название")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
             <select className="select select--sm" value={type} onChange={(e) => setType(e.target.value)}>
-              <option value="all">Все страницы</option>
+              <option value="all">{t("Все страницы")}</option>
               {TYPES.map((t) => (
                 <option key={t.key} value={t.key}>
                   {t.label}
                 </option>
               ))}
             </select>
-            <Toggle checked={onlyIssues} onChange={setOnlyIssues} label="Только с замечаниями" />
+            <Toggle checked={onlyIssues} onChange={setOnlyIssues} label={t("Только с замечаниями")} />
           </div>
 
           <div className="card seo-list">
@@ -350,8 +341,8 @@ function Seo() {
                 <span className="seo-row__main">
                   <span className="seo-row__name">
                     {row.name}
-                    {overrides[row.path] && <span className="chip chip--accent">изменено</span>}
-                    {changed.has(row.path) && <span className="chip">обновится после публикации</span>}
+                    {overrides[row.path] && <span className="chip chip--accent">{t("изменено")}</span>}
+                    {changed.has(row.path) && <span className="chip">{t("обновится после публикации")}</span>}
                   </span>
                   <span className="seo-row__path mono faint">{row.path}</span>
                 </span>
@@ -362,7 +353,7 @@ function Seo() {
                       <span
                         key={code}
                         className={`seo-dot seo-dot--${level}`}
-                        title={row.langs[code].issues.map((i) => i.text).join("\n") || "Всё хорошо"}
+                        title={row.langs[code].issues.map((i) => i.text).join("\n") || t("Всё хорошо")}
                       >
                         {label}
                       </span>
@@ -371,12 +362,11 @@ function Seo() {
                 </span>
               </button>
             ))}
-            {!filtered.length && <div className="leads__empty">Ничего не найдено</div>}
+            {!filtered.length && <div className="leads__empty">{t("Ничего не найдено")}</div>}
           </div>
           <p className="schema-field__hint seo-legend">
-            <span className="seo-dot seo-dot--ok">UA</span> всё хорошо <span className="seo-dot seo-dot--warn">UA</span> есть замечания{" "}
-            <span className="seo-dot seo-dot--bad">UA</span> ошибка <span className="seo-dot seo-dot--info">UA</span> скрыта от поисковиков
-          </p>
+            <span className="seo-dot seo-dot--ok">UA</span>{" "}{t("всё хорошо")}{" "}<span className="seo-dot seo-dot--warn">UA</span>{" "}{t("есть замечания")}{" "}
+            <span className="seo-dot seo-dot--bad">UA</span>{" "}{t("ошибка")}{" "}<span className="seo-dot seo-dot--info">UA</span>{" "}{t("скрыта от поисковиков")}</p>
         </>
       )}
 

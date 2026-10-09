@@ -6,21 +6,18 @@ import { useAuth } from "../lib/auth";
 import { useTasks } from "../lib/tasks";
 
 import "./Tasks.css";
+import { t } from "../lib/i18n";
 
 /** Шапка розділу «Задачи» (як у макеті): заголовок, фільтр «Мои / Все», жовта кнопка дії */
 export function TasksHeader({ scope, onScope, action }) {
   return (
     <div className="tboard-head">
-      <h1 className="tboard-head__title">Задачи</h1>
+      <h1 className="tboard-head__title">{t("Задачи")}</h1>
       <div className="tboard-head__actions">
         {onScope && (
           <div className="segmented">
-            <button type="button" className={scope === "mine" ? "is-active" : ""} onClick={() => onScope("mine")}>
-              Мои
-            </button>
-            <button type="button" className={scope === "all" ? "is-active" : ""} onClick={() => onScope("all")}>
-              Все
-            </button>
+            <button type="button" className={scope === "mine" ? "is-active" : ""} onClick={() => onScope("mine")}>{t("Мои")}</button>
+            <button type="button" className={scope === "all" ? "is-active" : ""} onClick={() => onScope("all")}>{t("Все")}</button>
           </div>
         )}
         {action && (

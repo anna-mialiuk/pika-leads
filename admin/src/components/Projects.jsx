@@ -17,8 +17,9 @@ import {
 import { formatShort, isOverdue, useColumns, useTasks } from "../lib/tasks";
 
 import "./Projects.css";
+import { t, tt, LOCALE } from "../lib/i18n";
 
-const ROLE_LABELS = { admin: "Администратор", manager: "Менеджер" };
+const ROLE_LABELS = { admin: t("Администратор"), manager: t("Менеджер") };
 
 export const canManageProject = (p, user) => user.role === "admin" || p.pmId === user.id || p.createdBy?.userId === user.id;
 
@@ -38,12 +39,8 @@ function PersonRow({ user: u, on, tag, tone, onToggle }) {
 function YesNo({ value, onChange }) {
   return (
     <div className="pm-yesno">
-      <button type="button" className={value ? "is-yes" : ""} onClick={() => onChange(true)}>
-        Да
-      </button>
-      <button type="button" className={!value ? "is-no" : ""} onClick={() => onChange(false)}>
-        Нет
-      </button>
+      <button type="button" className={value ? "is-yes" : ""} onClick={() => onChange(true)}>{t("Да")}</button>
+      <button type="button" className={!value ? "is-no" : ""} onClick={() => onChange(false)}>{t("Нет")}</button>
     </div>
   );
 }
@@ -76,8 +73,8 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
   const others = team.filter((u) => u.position !== "Байер");
 
   const save = async () => {
-    if (!form.name.trim()) return setError("Укажите название проекта");
-    if (form.startAt && form.endAt && form.endAt < form.startAt) return setError("Завершение раньше старта");
+    if (!form.name.trim()) return setError(t("Укажите название проекта"));
+    if (form.startAt && form.endAt && form.endAt < form.startAt) return setError(t("Завершение раньше старта"));
     setBusy(true);
     setError("");
     try {
@@ -92,21 +89,21 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
   };
 
   return (
-    <Modal title={project ? "Редактирование проекта" : "Новый проект"} onClose={onClose} className="task-modal proj-modal">
+    <Modal title={project ? t("Редактирование проекта") : t("Новый проект")} onClose={onClose} className="task-modal proj-modal">
       <fieldset className="task-modal__body" disabled={busy}>
         <input
           className="tm-input tm-input--top pm-big"
-          placeholder="Название проекта"
+          placeholder={t("Название проекта")}
           value={form.name}
           autoFocus={!project}
           onChange={(e) => set({ name: e.target.value })}
         />
-        <input className="tm-input tm-input--top pm-big" placeholder="Ниша / клиент" value={form.client} onChange={(e) => set({ client: e.target.value })} />
+        <input className="tm-input tm-input--top pm-big" placeholder={t("Ниша / клиент")} value={form.client} onChange={(e) => set({ client: e.target.value })} />
 
         <label className="tm-field">
-          <span className="tm-label">Проект-менеджер</span>
+          <span className="tm-label">{t("Проект-менеджер")}</span>
           <select className="tm-input" value={form.pmId ?? ""} onChange={(e) => set({ pmId: e.target.value ? Number(e.target.value) : null })}>
-            <option value="">— не назначен —</option>
+            <option value="">{t("— не назначен —")}</option>
             {team.map((u) => (
               <option key={u.id} value={u.id}>
                 {u.name}
@@ -115,22 +112,22 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
           </select>
         </label>
 
-        <div className="tm-label">Байеры на проекте</div>
+        <div className="tm-label">{t("Байеры на проекте")}</div>
         <div className="pm-people">
-          {buyers.length === 0 && <div className="pm-hint">Нет сотрудников с должностью «Байер» — укажите её в разделе «Команда».</div>}
+          {buyers.length === 0 && <div className="pm-hint">{t("Нет сотрудников с должностью «Байер» — укажите её в разделе «Команда».")}</div>}
           {buyers.map((u) => (
             <PersonRow key={u.id} user={u} tone="buyer" tag={u.platform} on={form.buyers.includes(u.id)} onToggle={() => toggle("buyers", u.id)} />
           ))}
         </div>
 
-        <div className="tm-label">Команда проекта</div>
+        <div className="tm-label">{t("Команда проекта")}</div>
         <div className="pm-people">
           {others.map((u) => (
             <PersonRow
               key={u.id}
               user={u}
               tone="member"
-              tag={u.position || ROLE_LABELS[u.role]}
+              tag={u.position ? t(u.position) : ROLE_LABELS[u.role]}
               on={form.members.includes(u.id)}
               onToggle={() => toggle("members", u.id)}
             />
@@ -139,24 +136,24 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
 
         <div className="tm-grid">
           <div className="tm-field">
-            <span className="tm-label">💬 Чат проекта</span>
+            <span className="tm-label">{t("💬 Чат проекта")}</span>
             <YesNo value={form.hasChat} onChange={(hasChat) => set({ hasChat })} />
           </div>
           <div className="tm-field">
-            <span className="tm-label">📁 Папка проекта</span>
+            <span className="tm-label">{t("📁 Папка проекта")}</span>
             <YesNo value={form.hasFolder} onChange={(hasFolder) => set({ hasFolder })} />
           </div>
           <label className="tm-field">
-            <span className="tm-label">Старт</span>
+            <span className="tm-label">{t("Старт")}</span>
             <input className="tm-input" type="date" value={form.startAt || ""} onChange={(e) => set({ startAt: e.target.value })} />
           </label>
           <label className="tm-field">
-            <span className="tm-label">Завершение</span>
+            <span className="tm-label">{t("Завершение")}</span>
             <input className="tm-input" type="date" value={form.endAt || ""} onChange={(e) => set({ endAt: e.target.value })} />
           </label>
         </div>
 
-        <div className="tm-label pm-gap">Статус</div>
+        <div className="tm-label pm-gap">{t("Статус")}</div>
         <div className="pm-pills">
           {Object.entries(PROJECT_STATUS).map(([key, s]) => (
             <button key={key} type="button" className={form.status === key ? "is-on" : ""} onClick={() => set({ status: key })}>
@@ -165,13 +162,13 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
           ))}
         </div>
 
-        <div className="tm-label">Цвет проекта</div>
+        <div className="tm-label">{t("Цвет проекта")}</div>
         <div className="pm-colors">
           {PROJECT_COLORS.map((c) => (
             <button
               key={c}
               type="button"
-              aria-label={`Цвет ${c}`}
+              aria-label={tt("Цвет {0}", c)}
               aria-pressed={form.color === c}
               style={{ background: c, boxShadow: form.color === c ? `0 0 0 2px var(--surface), 0 0 0 4px ${c}` : "none" }}
               onClick={() => set({ color: c })}
@@ -179,7 +176,7 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
           ))}
         </div>
 
-        <div className="tm-label">Иконка проекта</div>
+        <div className="tm-label">{t("Иконка проекта")}</div>
         <div className="pm-icons">
           {PROJECT_ICONS.map((ic) => (
             <button key={ic} type="button" className={form.icon === ic ? "is-on" : ""} onClick={() => set({ icon: ic })}>
@@ -192,11 +189,9 @@ export function ProjectModal({ project = null, onClose, onSaved }) {
 
         <div className="tm-actions">
           <button type="button" className="tm-save pm-save" onClick={save}>
-            {busy ? "Сохраняем…" : project ? "Сохранить" : "Создать"}
+            {busy ? t("Сохраняем…") : project ? t("Сохранить") : t("Создать")}
           </button>
-          <button type="button" className="tm-btn" onClick={onClose}>
-            Отмена
-          </button>
+          <button type="button" className="tm-btn" onClick={onClose}>{t("Отмена")}</button>
         </div>
       </fieldset>
     </Modal>
@@ -240,7 +235,7 @@ function CallCard({ project, call, canManage, canDelete }) {
         <div className="pd-call__tools">
           <button
             type="button"
-            title={call.pinned ? "Открепить" : "Закрепить"}
+            title={call.pinned ? t("Открепить") : t("Закрепить")}
             onClick={() => updateCall(project.id, call.id, { pinned: !call.pinned }).catch((e) => setError(e.message))}
           >
             {call.pinned ? "📌" : "📍"}
@@ -248,9 +243,9 @@ function CallCard({ project, call, canManage, canDelete }) {
           {canDelete && (
             <button
               type="button"
-              title="Удалить"
+              title={t("Удалить")}
               className="is-del"
-              onClick={() => window.confirm("Удалить созвон?") && removeCall(project.id, call.id).catch((e) => setError(e.message))}
+              onClick={() => window.confirm(t("Удалить созвон?")) && removeCall(project.id, call.id).catch((e) => setError(e.message))}
             >
               ✕
             </button>
@@ -259,30 +254,26 @@ function CallCard({ project, call, canManage, canDelete }) {
       </div>
 
       {call.recording && !editing && (
-        <a className="pd-call__rec" href={call.recording} target="_blank" rel="noopener noreferrer">
-          📹 Запись созвона
-        </a>
+        <a className="pd-call__rec" href={call.recording} target="_blank" rel="noopener noreferrer">{t("📹 Запись созвона")}</a>
       )}
 
       {editing ? (
         <div>
-          <div className="pd-call__label">Саммери созвона</div>
+          <div className="pd-call__label">{t("Саммери созвона")}</div>
           <textarea
             className="tm-input pd-call__textarea"
             value={summary}
-            placeholder="О чём договорились, задачи, ответственные, следующие шаги…"
+            placeholder={t("О чём договорились, задачи, ответственные, следующие шаги…")}
             onChange={(e) => setSummary(e.target.value)}
           />
           <input
             className="tm-input pd-call__recinput"
             value={recording}
-            placeholder="Ссылка на запись (Zoom / Google Drive / Loom)"
+            placeholder={t("Ссылка на запись (Zoom / Google Drive / Loom)")}
             onChange={(e) => setRecording(e.target.value)}
           />
           <div className="pd-row-btns">
-            <button type="button" className="pd-btn-yellow" onClick={save}>
-              Сохранить
-            </button>
+            <button type="button" className="pd-btn-yellow" onClick={save}>{t("Сохранить")}</button>
             <button
               type="button"
               className="tm-btn"
@@ -291,17 +282,15 @@ function CallCard({ project, call, canManage, canDelete }) {
                 setSummary(call.summary);
                 setRecording(call.recording);
               }}
-            >
-              Отмена
-            </button>
+            >{t("Отмена")}</button>
           </div>
         </div>
       ) : (
         <div className="pd-call__summary">
-          <div className={call.summary ? "" : "is-empty"}>{call.summary || "Саммери ещё не заполнено"}</div>
+          <div className={call.summary ? "" : "is-empty"}>{call.summary || t("Саммери ещё не заполнено")}</div>
           {canManage && (
             <button type="button" onClick={() => setEditing(true)}>
-              {call.summary ? "✎ Редактировать саммери" : "✎ Написать саммери"}
+              {call.summary ? t("✎ Редактировать саммери") : t("✎ Написать саммери")}
             </button>
           )}
         </div>
@@ -317,7 +306,7 @@ function CallForm({ project, onDone }) {
   const [error, setError] = useState("");
   const set = (patch) => setForm((prev) => ({ ...prev, ...patch }));
   const save = async () => {
-    if (!form.title.trim()) return setError("Укажите тему созвона");
+    if (!form.title.trim()) return setError(t("Укажите тему созвона"));
     setError("");
     try {
       await addCall(project.id, form);
@@ -328,7 +317,7 @@ function CallForm({ project, onDone }) {
   };
   return (
     <div className="pd-callform">
-      <input className="tm-input" placeholder="Тема созвона" value={form.title} autoFocus onChange={(e) => set({ title: e.target.value })} />
+      <input className="tm-input" placeholder={t("Тема созвона")} value={form.title} autoFocus onChange={(e) => set({ title: e.target.value })} />
       <div className="pd-callform__grid">
         <input className="tm-input" type="date" value={form.date} onChange={(e) => set({ date: e.target.value })} />
         <select className="tm-input" value={form.service} onChange={(e) => set({ service: e.target.value })}>
@@ -338,22 +327,18 @@ function CallForm({ project, onDone }) {
             </option>
           ))}
         </select>
-        <input className="tm-input" placeholder="Длит. (35 мин)" value={form.duration} onChange={(e) => set({ duration: e.target.value })} />
+        <input className="tm-input" placeholder={t("Длит. (35 мин)")} value={form.duration} onChange={(e) => set({ duration: e.target.value })} />
       </div>
       <input
         className="tm-input"
-        placeholder="Ссылка на запись (необязательно)"
+        placeholder={t("Ссылка на запись (необязательно)")}
         value={form.recording}
         onChange={(e) => set({ recording: e.target.value })}
       />
       {error && <div className="field-error">⚠ {error}</div>}
       <div className="pd-row-btns">
-        <button type="button" className="pd-btn-yellow" onClick={save}>
-          Добавить
-        </button>
-        <button type="button" className="tm-btn" onClick={onDone}>
-          Отмена
-        </button>
+        <button type="button" className="pd-btn-yellow" onClick={save}>{t("Добавить")}</button>
+        <button type="button" className="tm-btn" onClick={onDone}>{t("Отмена")}</button>
       </div>
     </div>
   );
@@ -391,12 +376,12 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
     const en = new Date(`${p.endAt}T00:00`).getTime();
     tlPct = en > st ? Math.max(0, Math.min(100, Math.round(((now - st) / (en - st)) * 100))) : 100;
     const daysLeft = Math.ceil((en - now) / 864e5);
-    tlLabel = daysLeft > 0 ? `осталось ${daysLeft} дн.` : daysLeft === 0 ? "дедлайн сегодня" : `просрочен на ${-daysLeft} дн.`;
+    tlLabel = daysLeft > 0 ? tt("осталось {0} дн.", daysLeft) : daysLeft === 0 ? t("дедлайн сегодня") : tt("просрочен на {0} дн.", -daysLeft);
   }
 
   const team = [
-    ...p.buyers.map((id) => ({ id, tag: userById[id]?.platform || "Байер", tone: "buyer" })),
-    ...p.members.map((id) => ({ id, tag: userById[id]?.position || ROLE_LABELS[userById[id]?.role] || "", tone: "member" })),
+    ...p.buyers.map((id) => ({ id, tag: userById[id]?.platform || t("Байер"), tone: "buyer" })),
+    ...p.members.map((id) => ({ id, tag: (userById[id]?.position && t(userById[id].position)) || ROLE_LABELS[userById[id]?.role] || "", tone: "member" })),
   ].filter((m) => userById[m.id]);
 
   const upload = async (event) => {
@@ -427,19 +412,17 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
           {canManage && (
             <button type="button" className="pd-edit" onClick={onEdit}>
               <span>✎</span>
-              <span className="pd-edit__label">Редактировать</span>
+              <span className="pd-edit__label">{t("Редактировать")}</span>
             </button>
           )}
         </div>
         <div className="pd-head__meta">
-          <span>
-            Ниша: <b>{p.client || "—"}</b>
+          <span>{t("Ниша:")}{" "}<b>{p.client || "—"}</b>
           </span>
           <span>
             PM: <b>{userById[p.pmId]?.name || "—"}</b>
           </span>
-          <span>
-            Срок:{" "}
+          <span>{t("Срок:")}{" "}
             <b className="mono">
               {dayDisp(p.startAt)} — {dayDisp(p.endAt)}
             </b>
@@ -450,30 +433,30 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
       <div className="pd-body">
         <div className="pd-kpis">
           <div>
-            <span>Всего задач</span>
+            <span>{t("Всего задач")}</span>
             <b>{pTasks.length}</b>
           </div>
           <div>
-            <span>Готово</span>
+            <span>{t("Готово")}</span>
             <b style={{ color: "#4fd88a" }}>{done}</b>
           </div>
           <div>
-            <span>В работе</span>
+            <span>{t("В работе")}</span>
             <b style={{ color: "#FFC629" }}>{active}</b>
           </div>
           <div>
-            <span>Просрочено</span>
+            <span>{t("Просрочено")}</span>
             <b style={{ color: "#ff7d7d" }}>{overdue}</b>
           </div>
           <div>
-            <span>Прогресс</span>
+            <span>{t("Прогресс")}</span>
             <b style={{ color: "var(--accent)" }}>{progress}%</b>
           </div>
         </div>
 
         <div className="pd-card">
           <div className="pd-card__head">
-            <div className="pd-card__title">Таймлайн проекта</div>
+            <div className="pd-card__title">{t("Таймлайн проекта")}</div>
             <div className="pd-tl-label">{tlLabel}</div>
           </div>
           <div className="pd-tl">
@@ -487,10 +470,10 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
 
         <div className="pd-card">
           <div className="pd-card__head">
-            <div className="pd-card__title">Команда проекта</div>
+            <div className="pd-card__title">{t("Команда проекта")}</div>
             <div className="pd-badges">
-              <span style={{ color: p.hasChat ? "#4fd88a" : "var(--muted)" }}>{p.hasChat ? "💬 Чат создан" : "💬 Без чата"}</span>
-              <span style={{ color: p.hasFolder ? "#4fd88a" : "var(--muted)" }}>{p.hasFolder ? "📁 Папка создана" : "📁 Без папки"}</span>
+              <span style={{ color: p.hasChat ? "#4fd88a" : "var(--muted)" }}>{p.hasChat ? t("💬 Чат создан") : t("💬 Без чата")}</span>
+              <span style={{ color: p.hasFolder ? "#4fd88a" : "var(--muted)" }}>{p.hasFolder ? t("📁 Папка создана") : t("📁 Без папки")}</span>
             </div>
           </div>
           {team.length ? (
@@ -504,13 +487,13 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
               ))}
             </div>
           ) : (
-            <div className="pd-muted">Команда не назначена — откройте «Редактировать», чтобы добавить байеров и участников.</div>
+            <div className="pd-muted">{t("Команда не назначена — откройте «Редактировать», чтобы добавить байеров и участников.")}</div>
           )}
         </div>
 
         <div className="pd-split">
           <div>
-            <div className="pd-section-title">Задачи по статусам</div>
+            <div className="pd-section-title">{t("Задачи по статусам")}</div>
             <div className="pd-stats">
               {TASK_COLUMNS.map((c) => {
                 const n = count(c.key);
@@ -532,14 +515,10 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
             </div>
           </div>
           <div>
-            <div className="pd-section-title pd-section-title--row">
-              Задачи проекта
-              <button type="button" className="pd-link" onClick={onNewTask}>
-                ＋ Задача
-              </button>
+            <div className="pd-section-title pd-section-title--row">{t("Задачи проекта")}<button type="button" className="pd-link" onClick={onNewTask}>{t("＋ Задача")}</button>
             </div>
             <div className="pd-tasks">
-              {pTasks.length === 0 && <div className="pd-empty">Задач в проекте пока нет.</div>}
+              {pTasks.length === 0 && <div className="pd-empty">{t("Задач в проекте пока нет.")}</div>}
               {pTasks.map((t) => (
                 <button key={t.id} type="button" className="pd-task" onClick={() => onOpenTask(t)}>
                   <i style={{ background: COLUMN_BY_KEY[t.status]?.color }} />
@@ -557,11 +536,7 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
         </div>
 
         <div className="pd-section">
-          <div className="pd-section-title pd-section-title--row">
-            История созвонов
-            <button type="button" className="pd-link" onClick={() => setCallForm(true)}>
-              ＋ Добавить созвон
-            </button>
+          <div className="pd-section-title pd-section-title--row">{t("История созвонов")}<button type="button" className="pd-link" onClick={() => setCallForm(true)}>{t("＋ Добавить созвон")}</button>
           </div>
           {callForm && <CallForm project={p} onDone={() => setCallForm(false)} />}
           {p.calls.length ? (
@@ -571,15 +546,13 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
               ))}
             </div>
           ) : (
-            !callForm && <div className="pd-empty">Созвонов пока нет. Добавьте первый и запишите саммери.</div>
+            !callForm && <div className="pd-empty">{t("Созвонов пока нет. Добавьте первый и запишите саммери.")}</div>
           )}
         </div>
 
         <div className="pd-section">
-          <div className="pd-section-title pd-section-title--row">
-            Файлы проекта
-            <label className="pd-link">
-              {uploading ? "Загружаем…" : "＋ Добавить файл"}
+          <div className="pd-section-title pd-section-title--row">{t("Файлы проекта")}<label className="pd-link">
+              {uploading ? t("Загружаем…") : t("＋ Добавить файл")}
               <input type="file" multiple hidden onChange={upload} />
             </label>
           </div>
@@ -594,14 +567,14 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
                       {f.name}
                     </a>
                     <div className="pd-file__meta">
-                      {formatSize(f.size)} · {f.by} · {new Date(f.at).toLocaleDateString("ru-RU")}
+                      {formatSize(f.size)} · {f.by} · {new Date(f.at).toLocaleDateString(LOCALE)}
                     </div>
                   </div>
                   {(canManage || f.byId === user.id) && (
                     <button
                       type="button"
-                      title="Удалить"
-                      onClick={() => window.confirm(`Удалить «${f.name}»?`) && removeFile(f.id).catch((e) => setError(e.message))}
+                      title={t("Удалить")}
+                      onClick={() => window.confirm(tt("Удалить «{0}»?", f.name)) && removeFile(f.id).catch((e) => setError(e.message))}
                     >
                       ✕
                     </button>
@@ -610,7 +583,7 @@ export function ProjectDetail({ projectId, onClose, onEdit, onOpenTask, onNewTas
               ))}
             </div>
           ) : (
-            <div className="pd-empty">Файлов пока нет. Прикрепите брифы, медиапланы, макеты.</div>
+            <div className="pd-empty">{t("Файлов пока нет. Прикрепите брифы, медиапланы, макеты.")}</div>
           )}
         </div>
       </div>

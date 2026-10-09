@@ -98,7 +98,7 @@ export function createMap(body, user) {
     name,
     projectId: validProject(body.projectId),
     dir: DIRS.includes(body.dir) ? body.dir : "TB",
-    nodes: nodes.length ? nodes : [{ id: "root", kind: "card", x: 560, y: 60, text: "Центральная идея", color: "#FFC629" }],
+    nodes: nodes.length ? nodes : [{ id: "root", kind: "card", x: 560, y: 60, text: String(body.rootText ?? "").trim().slice(0, 200) || "Центральная идея", color: "#FFC629" }],
     edges: cleanEdges(body.edges, nodes),
     version: 1,
     createdBy: { userId: user.id, name: user.name },

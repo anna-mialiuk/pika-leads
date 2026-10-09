@@ -4,6 +4,7 @@ import Icon from "../Icon";
 import { AutoTextarea, ImageUpload } from "./fields";
 import { renderInline } from "../../lib/inline";
 import { previewOf, slugify } from "../../lib/content";
+import { t } from "../../lib/i18n";
 
 /**
  * Редактор тексту статті блоками (формат src/content/blog/<мова>/<id>.json):
@@ -12,12 +13,12 @@ import { previewOf, slugify } from "../../lib/content";
  * У тексті дозволено <strong>, <em>, <a href>, <code>, <br> — кнопки над полем.
  */
 const BLOCK_TYPES = [
-  { type: "paragraph", label: "Абзац", icon: "text" },
-  { type: "heading", label: "Подзаголовок", icon: "heading" },
-  { type: "list", label: "Список", icon: "list" },
-  { type: "note", label: "Врезка", icon: "note" },
-  { type: "image", label: "Картинка", icon: "image" },
-  { type: "code", label: "Код", icon: "code" },
+  { type: "paragraph", label: t("Абзац"), icon: "text" },
+  { type: "heading", label: t("Подзаголовок"), icon: "heading" },
+  { type: "list", label: t("Список"), icon: "list" },
+  { type: "note", label: t("Врезка"), icon: "note" },
+  { type: "image", label: t("Картинка"), icon: "image" },
+  { type: "code", label: t("Код"), icon: "code" },
 ];
 
 const LABELS = Object.fromEntries(BLOCK_TYPES.map((b) => [b.type, b.label]));
@@ -47,10 +48,10 @@ function RichText({ value, onChange, rows = 3, placeholder }) {
     });
   };
   const link = () => {
-    const url = window.prompt("Адрес ссылки (https://… или /blog/…)", "https://");
+    const url = window.prompt(t("Адрес ссылки (https://… или /blog/…)"), "https://");
     if (!url || url === "https://") return;
     if (!/^(https?:|mailto:|tel:|\/|#)/i.test(url)) {
-      window.alert("Ссылка должна начинаться с https://, / или #");
+      window.alert(t("Ссылка должна начинаться с https://, / или #"));
       return;
     }
     wrap(`<a href="${url.replace(/"/g, "%22")}">`, "</a>");
@@ -58,19 +59,19 @@ function RichText({ value, onChange, rows = 3, placeholder }) {
   return (
     <div className="rich-text" ref={ref}>
       <div className="rich-text__bar">
-        <button type="button" onClick={() => wrap("<strong>", "</strong>")} title="Жирный">
+        <button type="button" onClick={() => wrap("<strong>", "</strong>")} title={t("Жирный")}>
           <b>B</b>
         </button>
-        <button type="button" onClick={() => wrap("<em>", "</em>")} title="Курсив">
+        <button type="button" onClick={() => wrap("<em>", "</em>")} title={t("Курсив")}>
           <i>I</i>
         </button>
-        <button type="button" onClick={link} title="Ссылка">
+        <button type="button" onClick={link} title={t("Ссылка")}>
           <Icon name="link" size={14} />
         </button>
-        <button type="button" onClick={() => wrap("<code>", "</code>")} title="Код">
+        <button type="button" onClick={() => wrap("<code>", "</code>")} title={t("Код")}>
           <Icon name="code" size={14} />
         </button>
-        <button type="button" onClick={() => wrap("<br>", "")} title="Перенос строки">
+        <button type="button" onClick={() => wrap("<br>", "")} title={t("Перенос строки")}>
           ↵
         </button>
       </div>
@@ -87,19 +88,19 @@ function BlockBody({ block, onChange, uploads, onUpload }) {
       return (
         <div className="block-heading">
           <select className="select select--sm" value={block.level} onChange={(e) => set({ level: Number(e.target.value) })}>
-            <option value={2}>H2 — раздел</option>
-            <option value={3}>H3 — подраздел</option>
+            <option value={2}>{t("H2 — раздел")}</option>
+            <option value={3}>{t("H3 — подраздел")}</option>
           </select>
           <input
             className="input block-heading__text"
             value={block.text}
-            placeholder="Текст подзаголовка"
+            placeholder={t("Текст подзаголовка")}
             onChange={(e) => set({ text: e.target.value })}
             onBlur={() => block.level === 2 && !block.id && block.text && set({ id: slugify(block.text) })}
           />
           {block.level === 2 && (
             <label className="block-heading__anchor">
-              <span>Якорь для содержания</span>
+              <span>{t("Якорь для содержания")}</span>
               <input
                 className="input input--sm mono"
                 value={block.id || ""}
@@ -111,7 +112,7 @@ function BlockBody({ block, onChange, uploads, onUpload }) {
         </div>
       );
     case "paragraph":
-      return <RichText value={block.text} onChange={(text) => set({ text })} placeholder="Текст абзаца" />;
+      return <RichText value={block.text} onChange={(text) => set({ text })} placeholder={t("Текст абзаца")} />;
     case "note":
       return (
         <>
@@ -120,30 +121,30 @@ function BlockBody({ block, onChange, uploads, onUpload }) {
             value={block.variant || ""}
             onChange={(e) => set({ variant: e.target.value || undefined })}
           >
-            <option value="">Обычная врезка</option>
-            <option value="warning">Предупреждение</option>
+            <option value="">{t("Обычная врезка")}</option>
+            <option value="warning">{t("Предупреждение")}</option>
           </select>
-          <RichText value={block.text} onChange={(text) => set({ text })} rows={2} placeholder="Текст врезки" />
+          <RichText value={block.text} onChange={(text) => set({ text })} rows={2} placeholder={t("Текст врезки")} />
         </>
       );
     case "list":
       return (
         <>
           <select className="select select--sm block-note__variant" value={block.style} onChange={(e) => set({ style: e.target.value })}>
-            <option value="unordered">• Маркированный</option>
-            <option value="ordered">1. Нумерованный</option>
+            <option value="unordered">{t("• Маркированный")}</option>
+            <option value="ordered">{t("1. Нумерованный")}</option>
           </select>
-          <div className="schema-field__hint">Каждый пункт — с новой строки</div>
+          <div className="schema-field__hint">{t("Каждый пункт — с новой строки")}</div>
           <RichText
             value={block.items.join("\n")}
             onChange={(text) => set({ items: text.split("\n") })}
             rows={Math.max(2, block.items.length)}
-            placeholder="Пункт 1&#10;Пункт 2"
+            placeholder={t("Пункт 1\nПункт 2")}
           />
         </>
       );
     case "code":
-      return <AutoTextarea className="textarea mono" value={block.code} onChange={(code) => set({ code })} rows={4} placeholder="Код" />;
+      return <AutoTextarea className="textarea mono" value={block.code} onChange={(code) => set({ code })} rows={4} placeholder={t("Код")} />;
     case "image":
       return (
         <div className="block-image">
@@ -151,19 +152,19 @@ function BlockBody({ block, onChange, uploads, onUpload }) {
           <input
             className="input input--sm"
             value={block.alt || ""}
-            placeholder="Описание для поисковиков (alt)"
+            placeholder={t("Описание для поисковиков (alt)")}
             onChange={(e) => set({ alt: e.target.value })}
           />
           <input
             className="input input--sm"
             value={block.caption || ""}
-            placeholder="Подпись под картинкой"
+            placeholder={t("Подпись под картинкой")}
             onChange={(e) => set({ caption: e.target.value })}
           />
         </div>
       );
     default:
-      return <div className="faint">Неизвестный блок</div>;
+      return <div className="faint">{t("Неизвестный блок")}</div>;
   }
 }
 
@@ -171,7 +172,7 @@ function AddBlock({ onAdd, open: initiallyOpen = false }) {
   const [open, setOpen] = useState(initiallyOpen);
   if (!open) {
     return (
-      <button type="button" className="add-block__toggle" onClick={() => setOpen(true)} title="Вставить блок">
+      <button type="button" className="add-block__toggle" onClick={() => setOpen(true)} title={t("Вставить блок")}>
         <Icon name="plus" size={14} />
       </button>
     );
@@ -254,12 +255,8 @@ function BlockEditor({ blocks, onChange, uploads, onUpload }) {
   return (
     <div className="block-editor">
       <div className="block-editor__mode segmented">
-        <button type="button" className={!preview ? "is-active" : ""} onClick={() => setPreview(false)}>
-          Редактор
-        </button>
-        <button type="button" className={preview ? "is-active" : ""} onClick={() => setPreview(true)}>
-          Предпросмотр
-        </button>
+        <button type="button" className={!preview ? "is-active" : ""} onClick={() => setPreview(false)}>{t("Редактор")}</button>
+        <button type="button" className={preview ? "is-active" : ""} onClick={() => setPreview(true)}>{t("Предпросмотр")}</button>
       </div>
 
       {preview ? (
@@ -281,7 +278,7 @@ function BlockEditor({ blocks, onChange, uploads, onUpload }) {
                       className="icon-btn icon-btn--sm"
                       onClick={() => moveBlock(index, -1)}
                       disabled={index === 0}
-                      aria-label="Выше"
+                      aria-label={t("Выше")}
                     >
                       <Icon name="up" />
                     </button>
@@ -290,17 +287,17 @@ function BlockEditor({ blocks, onChange, uploads, onUpload }) {
                       className="icon-btn icon-btn--sm"
                       onClick={() => moveBlock(index, 1)}
                       disabled={index === blocks.length - 1}
-                      aria-label="Ниже"
+                      aria-label={t("Ниже")}
                     >
                       <Icon name="down" />
                     </button>
                     <button
                       type="button"
                       className="icon-btn icon-btn--sm icon-btn--danger"
-                      aria-label="Удалить блок"
+                      aria-label={t("Удалить блок")}
                       onClick={() => {
                         const empty = !(block.text || block.code || block.src || block.items?.some(Boolean));
-                        if (empty || window.confirm("Удалить блок?")) onChange((prev) => prev.filter((_, i) => i !== index));
+                        if (empty || window.confirm(t("Удалить блок?"))) onChange((prev) => prev.filter((_, i) => i !== index));
                       }}
                     >
                       <Icon name="trash" />
@@ -312,7 +309,7 @@ function BlockEditor({ blocks, onChange, uploads, onUpload }) {
             </div>
           ))}
           <div className="block-editor__end">
-            <div className="field__label">Добавить в конец</div>
+            <div className="field__label">{t("Добавить в конец")}</div>
             <AddBlock onAdd={(b) => insert(blocks.length, b)} open />
           </div>
         </>

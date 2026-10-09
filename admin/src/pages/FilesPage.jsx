@@ -9,20 +9,21 @@ import { useTasks } from "../lib/tasks";
 
 import "../components/Projects.css";
 import "./FilesPage.css";
+import { t, tt } from "../lib/i18n";
 
 const TYPES = {
-  doc: { icon: "📄", label: "Google Docs", color: "#5b9bff", create: "https://docs.new", hint: "Новый документ открылся в соседней вкладке. Назовите его и вставьте сюда ссылку." },
-  sheet: { icon: "📊", label: "Google Sheets", color: "#4fd88a", create: "https://sheets.new", hint: "Новая таблица открылась в соседней вкладке. Назовите её и вставьте сюда ссылку." },
+  doc: { icon: "📄", label: "Google Docs", color: "#5b9bff", create: "https://docs.new", hint: t("Новый документ открылся в соседней вкладке. Назовите его и вставьте сюда ссылку.") },
+  sheet: { icon: "📊", label: "Google Sheets", color: "#4fd88a", create: "https://sheets.new", hint: t("Новая таблица открылась в соседней вкладке. Назовите её и вставьте сюда ссылку.") },
   folder: {
     icon: "📁",
-    label: "Папка",
+    label: t("Папка"),
     color: "#FFC629",
     create: "https://drive.google.com/drive/my-drive",
-    hint: "Google Drive открылся в соседней вкладке: создайте папку («Создать → Папка»), откройте её и вставьте сюда ссылку.",
+    hint: t("Google Drive открылся в соседней вкладке: создайте папку («Создать → Папка»), откройте её и вставьте сюда ссылку."),
   },
-  drive: { icon: "💾", label: "Google Drive", color: "#b98bff", create: null, hint: "Вставьте ссылку на файл или папку в Google Drive." },
-  attach: { icon: "📎", label: "Из задачи", color: "#f0883e" },
-  upload: { icon: null, label: "Файл", color: "#4fd8c8" },
+  drive: { icon: "💾", label: "Google Drive", color: "#b98bff", create: null, hint: t("Вставьте ссылку на файл или папку в Google Drive.") },
+  attach: { icon: "📎", label: t("Из задачи"), color: "#f0883e" },
+  upload: { icon: null, label: t("Файл"), color: "#4fd8c8" },
 };
 
 /** Тип посилання за адресою (якщо вставили не з тієї кнопки) */
@@ -43,8 +44,8 @@ function LinkModal({ type: initialType, projectId, onClose, onSaved }) {
 
   const save = async () => {
     setError("");
-    if (!form.name.trim()) return setError("Укажите название");
-    if (!/^https:\/\//i.test(form.url.trim())) return setError("Вставьте ссылку, начинающуюся с https://");
+    if (!form.name.trim()) return setError(t("Укажите название"));
+    if (!/^https:\/\//i.test(form.url.trim())) return setError(t("Вставьте ссылку, начинающуюся с https://"));
     setBusy(true);
     try {
       await api("/links", {
@@ -63,7 +64,7 @@ function LinkModal({ type: initialType, projectId, onClose, onSaved }) {
     <Modal title={`${meta.icon} ${meta.label}`} onClose={onClose} className="task-modal proj-modal">
       <fieldset className="task-modal__body" disabled={busy}>
         <p className="fl-hint">{meta.hint}</p>
-        <input className="tm-input tm-input--top pm-big" placeholder="Название" value={form.name} autoFocus onChange={(e) => set({ name: e.target.value })} />
+        <input className="tm-input tm-input--top pm-big" placeholder={t("Название")} value={form.name} autoFocus onChange={(e) => set({ name: e.target.value })} />
         <input
           className="tm-input tm-input--top mono"
           placeholder="https://docs.google.com/…"
@@ -71,9 +72,9 @@ function LinkModal({ type: initialType, projectId, onClose, onSaved }) {
           onChange={(e) => set({ url: e.target.value })}
         />
         <label className="tm-field">
-          <span className="tm-label">Проект</span>
+          <span className="tm-label">{t("Проект")}</span>
           <select className="tm-input" value={form.projectId} onChange={(e) => set({ projectId: e.target.value ? Number(e.target.value) : "" })}>
-            <option value="">— без проекта —</option>
+            <option value="">{t("— без проекта —")}</option>
             {projects.map((p) => (
               <option key={p.id} value={p.id}>
                 {p.name}
@@ -84,11 +85,9 @@ function LinkModal({ type: initialType, projectId, onClose, onSaved }) {
         {error && <div className="alert">⚠ {error}</div>}
         <div className="tm-actions">
           <button type="button" className="tm-save pm-save" onClick={save}>
-            {busy ? "Сохраняем…" : "Добавить"}
+            {busy ? t("Сохраняем…") : t("Добавить")}
           </button>
-          <button type="button" className="tm-btn" onClick={onClose}>
-            Отмена
-          </button>
+          <button type="button" className="tm-btn" onClick={onClose}>{t("Отмена")}</button>
         </div>
       </fieldset>
     </Modal>
@@ -145,7 +144,7 @@ function FilesPage() {
   };
 
   const remove = async (f) => {
-    if (!window.confirm(`Удалить «${f.name}»?`)) return;
+    if (!window.confirm(tt("Удалить «{0}»?", f.name))) return;
     setError("");
     try {
       await api(f.kind === "link" ? `/links/${f.id}` : `/files/${f.id}`, { method: "DELETE" });
@@ -167,13 +166,11 @@ function FilesPage() {
         <div className="fl-gbar__info">
           <span>💾</span>
           <div>
-            <div className="fl-gbar__title">Интеграция с Google Workspace</div>
-            <div className="fl-gbar__status">● Документы создаются в вашем Google-аккаунте и хранятся там</div>
+            <div className="fl-gbar__title">{t("Интеграция с Google Workspace")}</div>
+            <div className="fl-gbar__status">{t("● Документы создаются в вашем Google-аккаунте и хранятся там")}</div>
           </div>
         </div>
-        <a className="fl-gbar__btn" href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener noreferrer">
-          Открыть Google Drive
-        </a>
+        <a className="fl-gbar__btn" href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener noreferrer">{t("Открыть Google Drive")}</a>
       </div>
 
       <div className="fl-tools">
@@ -183,26 +180,22 @@ function FilesPage() {
         <button type="button" onClick={() => create("sheet")}>
           📊 Google Sheets
         </button>
-        <button type="button" onClick={() => create("folder")}>
-          📁 Папка
-        </button>
-        <button type="button" onClick={() => setLinkModal({ type: "drive" })}>
-          🔗 Ссылка
-        </button>
+        <button type="button" onClick={() => create("folder")}>{t("📁 Папка")}</button>
+        <button type="button" onClick={() => setLinkModal({ type: "drive" })}>{t("🔗 Ссылка")}</button>
         <label className="fl-tools__upload">
-          {uploading ? "Загружаем…" : "⬆ Загрузить файл"}
+          {uploading ? t("Загружаем…") : t("⬆ Загрузить файл")}
           <input type="file" multiple hidden onChange={pick} />
         </label>
         <div className="fl-tools__filter">
-          <span>Проект:</span>
+          <span>{t("Проект:")}</span>
           <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-            <option value="all">Все проекты</option>
+            <option value="all">{t("Все проекты")}</option>
             {projects.map((p) => (
               <option key={p.id} value={p.id}>
                 {p.name}
               </option>
             ))}
-            <option value="none">Без проекта</option>
+            <option value="none">{t("Без проекта")}</option>
           </select>
         </div>
       </div>
@@ -211,10 +204,10 @@ function FilesPage() {
 
       <div className="fl-table">
         <div className="fl-row fl-row--head">
-          <div>Название</div>
-          <div>Тип</div>
-          <div>Владелец</div>
-          <div>Проект</div>
+          <div>{t("Название")}</div>
+          <div>{t("Тип")}</div>
+          <div>{t("Владелец")}</div>
+          <div>{t("Проект")}</div>
           <div />
         </div>
         {files === null && (
@@ -222,7 +215,7 @@ function FilesPage() {
             <div className="spinner" />
           </div>
         )}
-        {files && list.length === 0 && <div className="fl-empty">Файлов пока нет. Создайте документ, таблицу или загрузите файл.</div>}
+        {files && list.length === 0 && <div className="fl-empty">{t("Файлов пока нет. Создайте документ, таблицу или загрузите файл.")}</div>}
         {list.map((f) => {
           const kind = f.kind === "link" ? f.type : f.kind;
           const meta = TYPES[kind] || TYPES.upload;
@@ -245,8 +238,7 @@ function FilesPage() {
                   )}
                   <div className="fl-name__sub">
                     {f.kind === "attach" && (
-                      <button type="button" onClick={() => task && openTask(task)}>
-                        задача: {f.taskTitle}
+                      <button type="button" onClick={() => task && openTask(task)}>{t("задача:")}{" "}{f.taskTitle}
                       </button>
                     )}
                     {f.size ? <span>{formatSize(f.size)}</span> : null}
@@ -273,7 +265,7 @@ function FilesPage() {
               </div>
               <div className="fl-del">
                 {canDelete && (
-                  <button type="button" title="Удалить" aria-label="Удалить" onClick={() => remove(f)}>
+                  <button type="button" title={t("Удалить")} aria-label={t("Удалить")} onClick={() => remove(f)}>
                     ✕
                   </button>
                 )}
@@ -282,9 +274,7 @@ function FilesPage() {
           );
         })}
       </div>
-      <div className="tboard-note">
-        Здесь всё вместе: вложения задач, файлы проектов и ссылки на Google-документы. Файл с выбранным проектом попадает в «Файлы проекта».
-      </div>
+      <div className="tboard-note">{t("Здесь всё вместе: вложения задач, файлы проектов и ссылки на Google-документы. Файл с выбранным проектом попадает в «Файлы проекта».")}</div>
 
       {linkModal && (
         <LinkModal type={linkModal.type} projectId={Number(filter) || null} onClose={() => setLinkModal(null)} onSaved={load} />

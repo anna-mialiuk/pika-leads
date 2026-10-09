@@ -7,10 +7,11 @@ import { PERIODS, analyze, formatMinutes, pct } from "../lib/analytics";
 import { useMeta } from "../lib/meta";
 
 import "./Analytics.css";
+import { t, tt } from "../lib/i18n";
 
 const PERIOD_KEY = "pika-analytics-period";
-const DAY_NAMES = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
-const MONTHS = ["янв", "фев", "мар", "апр", "мая", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"];
+const DAY_NAMES = [t("вс"), t("пн"), t("вт"), t("ср"), t("чт"), t("пт"), t("сб")];
+const MONTHS = [t("янв"), t("фев"), t("мар"), t("апр"), t("мая"), t("июн"), t("июл"), t("авг"), t("сен"), t("окт"), t("ноя"), t("дек")];
 
 const fmtDay = (time) => {
   const d = new Date(time);
@@ -21,12 +22,12 @@ const fmtDay = (time) => {
 function Delta({ now, prev, better = "up", suffix = "%", absolute = false }) {
   if (prev === null || prev === undefined || now === null || now === undefined) return null;
   // мало даних у минулому періоді — відсотки безглузді («▲ 3000%»), показуємо як було
-  if (!absolute && prev < 5) return <span className="delta delta--flat">было {prev}</span>;
+  if (!absolute && prev < 5) return <span className="delta delta--flat">{t("было")}{" "}{prev}</span>;
   const diff = absolute ? now - prev : Math.round(((now - prev) / prev) * 100);
-  if (!diff) return <span className="delta delta--flat">без изменений</span>;
+  if (!diff) return <span className="delta delta--flat">{t("без изменений")}</span>;
   const good = better === "up" ? diff > 0 : diff < 0;
   return (
-    <span className={`delta ${good ? "delta--good" : "delta--bad"}`} title="К предыдущему такому же периоду">
+    <span className={`delta ${good ? "delta--good" : "delta--bad"}`} title={t("К предыдущему такому же периоду")}>
       {diff > 0 ? "▲" : "▼"} {Math.abs(diff)}
       {suffix}
     </span>
@@ -92,11 +93,9 @@ function DailyChart({ buckets, step }) {
         {active && (
           <div className="daily__tip" style={{ left: `${((hover + 0.5) / buckets.length) * 100}%` }}>
             <b>{step === 1 ? fmtDay(active.from) : `${fmtDay(active.from)} — ${fmtDay(active.to - 1)}`}</b>
-            <span>
-              Заявок: <b>{active.leads}</b>
+            <span>{t("Заявок:")}{" "}<b>{active.leads}</b>
             </span>
-            <span>
-              Продаж: <b>{active.sales}</b>
+            <span>{t("Продаж:")}{" "}<b>{active.sales}</b>
             </span>
           </div>
         )}
@@ -114,7 +113,7 @@ function Bar({ value, max, color }) {
 }
 
 /** Таблиця груп (джерела, кампанії, менеджери…) */
-function GroupTable({ rows, label, extra = [], empty = "Нет данных за период" }) {
+function GroupTable({ rows, label, extra = [], empty = t("Нет данных за период") }) {
   if (!rows.length) return <div className="an-empty">{empty}</div>;
   const max = Math.max(...rows.map((r) => r.leads));
   return (
@@ -123,15 +122,15 @@ function GroupTable({ rows, label, extra = [], empty = "Нет данных за
         <thead>
           <tr>
             <th>{label}</th>
-            <th className="num">Заявки</th>
-            <th className="num">Продажи</th>
-            <th className="num">Конверсия</th>
+            <th className="num">{t("Заявки")}</th>
+            <th className="num">{t("Продажи")}</th>
+            <th className="num">{t("Конверсия")}</th>
             {extra.map((c) => (
               <th key={c.label} className="num">
                 {c.label}
               </th>
             ))}
-            <th className="an-table__bar" aria-label="Доля" />
+            <th className="an-table__bar" aria-label={t("Доля")} />
           </tr>
         </thead>
         <tbody>
@@ -197,10 +196,10 @@ function Analytics() {
     <div className="analytics">
       <div className="page-head">
         <div>
-          <h1 className="page-title">Аналитика</h1>
-          <p className="page-text">Заявки с сайта: динамика, воронка, источники и работа менеджеров.</p>
+          <h1 className="page-title">{t("Аналитика")}</h1>
+          <p className="page-text">{t("Заявки с сайта: динамика, воронка, источники и работа менеджеров.")}</p>
         </div>
-        <div className="segmented" role="tablist" aria-label="Период">
+        <div className="segmented" role="tablist" aria-label={t("Период")}>
           {PERIODS.map((p) => (
             <button key={p.key} type="button" className={p.key === period.key ? "is-active" : ""} onClick={() => choose(p.key)}>
               {p.label}
@@ -220,58 +219,56 @@ function Analytics() {
         <>
           <div className="kpis">
             <Kpi
-              label="Заявки"
+              label={t("Заявки")}
               value={data.kpi.total}
               delta={<Delta now={data.kpi.total} prev={data.prevKpi?.total} />}
-              sub={data.prevKpi ? "к прошлому периоду" : "за всё время"}
+              sub={data.prevKpi ? t("к прошлому периоду") : t("за всё время")}
             />
             <Kpi
-              label="Продажи"
+              label={t("Продажи")}
               value={data.kpi.sales}
-              delta={<Delta now={data.kpi.conversion} prev={data.prevKpi?.conversion} absolute suffix=" п.п." />}
-              sub={`конверсия ${data.kpi.conversion}%`}
+              delta={<Delta now={data.kpi.conversion} prev={data.prevKpi?.conversion} absolute suffix={t(" п.п.")} />}
+              sub={tt("конверсия {0}%", data.kpi.conversion)}
             />
             <Kpi
-              label="В работе"
+              label={t("В работе")}
               value={data.kpi.open}
-              sub={data.kpi.untouched ? `из них не обработано: ${data.kpi.untouched}` : "все заявки обработаны"}
+              sub={data.kpi.untouched ? tt("из них не обработано: {0}", data.kpi.untouched) : t("все заявки обработаны")}
             />
             <Kpi
-              label="Скорость реакции"
+              label={t("Скорость реакции")}
               value={formatMinutes(data.kpi.reaction)}
               delta={
                 data.kpi.reaction !== null && data.prevKpi?.reaction != null ? (
                   <Delta now={Math.round(data.kpi.reaction)} prev={Math.round(data.prevKpi.reaction)} better="down" />
                 ) : null
               }
-              sub="медиана: от заявки до первого статуса"
+              sub={t("медиана: от заявки до первого статуса")}
             />
           </div>
 
           <section className="card an-card">
             <div className="an-card__head">
-              <h2>Заявки по {data.step === 1 ? "дням" : "неделям"}</h2>
+              <h2>{t("Заявки по")}{" "}{data.step === 1 ? t("дням") : t("неделям")}</h2>
               <div className="an-legend">
                 <span>
-                  <i className="an-legend__lead" /> Заявки
-                </span>
+                  <i className="an-legend__lead" />{" "}{t("Заявки")}</span>
                 <span>
-                  <i className="an-legend__sale" /> Из них продажи
-                </span>
+                  <i className="an-legend__sale" />{" "}{t("Из них продажи")}</span>
               </div>
             </div>
             {data.kpi.total ? (
               <DailyChart buckets={data.buckets} step={data.step} />
             ) : (
-              <div className="an-empty">За этот период заявок нет</div>
+              <div className="an-empty">{t("За этот период заявок нет")}</div>
             )}
           </section>
 
           <div className="an-grid an-grid--funnel">
             <section className="card an-card">
               <div className="an-card__head">
-                <h2>Воронка</h2>
-                <span className="faint">сколько заявок дошли до этапа</span>
+                <h2>{t("Воронка")}</h2>
+                <span className="faint">{t("сколько заявок дошли до этапа")}</span>
               </div>
               <div className="funnel">
                 {data.funnel.map((stage, i) => (
@@ -289,8 +286,7 @@ function Analytics() {
                     />
                     {stage.toNext !== null && stage.count > 0 && (
                       <div className="funnel__step">
-                        ↓ {stage.toNext}% дальше
-                        {stage.lost > 0 && <span> · теряется {stage.lost}</span>}
+                        ↓ {stage.toNext}{t("% дальше")}{stage.lost > 0 && <span>{" "}{t("· теряется")}{" "}{stage.lost}</span>}
                       </div>
                     )}
                   </div>
@@ -300,24 +296,22 @@ function Analytics() {
 
             <div className="an-stack">
               <section className="card an-card an-card--alert">
-                <div className="an-card__eyebrow">⚠ Узкое место</div>
+                <div className="an-card__eyebrow">{t("⚠ Узкое место")}</div>
                 {data.bottleneck && data.bottleneck.toNext < 100 ? (
                   <>
                     <h2>
                       {data.bottleneck.label} → {data.funnel[data.funnel.indexOf(data.bottleneck) + 1].label}
                     </h2>
-                    <p>
-                      Здесь теряется {100 - data.bottleneck.toNext}% заявок ({data.bottleneck.lost}) — самая большая потеря в воронке.
-                    </p>
+                    <p>{t("Здесь теряется")}{" "}{100 - data.bottleneck.toNext}{t("% заявок (")}{data.bottleneck.lost}{t(") — самая большая потеря в воронке.")}</p>
                   </>
                 ) : (
-                  <p>Пока недостаточно данных.</p>
+                  <p>{t("Пока недостаточно данных.")}</p>
                 )}
               </section>
               <section className="card an-card">
                 <div className="an-card__head">
-                  <h2>Где теряем</h2>
-                  <span className="faint">текущий статус</span>
+                  <h2>{t("Где теряем")}</h2>
+                  <span className="faint">{t("текущий статус")}</span>
                 </div>
                 {data.losses.map(({ code, count }) => (
                   <div key={code} className="loss">
@@ -339,35 +333,33 @@ function Analytics() {
 
           <section className="card an-card">
             <div className="an-card__head">
-              <h2>Источники</h2>
-              <span className="faint">utm_source; без меток — по gclid / fbclid, иначе «Сайт»</span>
+              <h2>{t("Источники")}</h2>
+              <span className="faint">{t("utm_source; без меток — по gclid / fbclid, иначе «Сайт»")}</span>
             </div>
-            <GroupTable rows={data.sources} label="Источник" />
+            <GroupTable rows={data.sources} label={t("Источник")} />
           </section>
 
           {data.campaigns.length > 0 && (
             <section className="card an-card">
               <div className="an-card__head">
-                <h2>Кампании</h2>
-                <span className="faint">топ-10 по utm_campaign</span>
+                <h2>{t("Кампании")}</h2>
+                <span className="faint">{t("топ-10 по utm_campaign")}</span>
               </div>
-              <GroupTable rows={data.campaigns} label="Кампания" />
+              <GroupTable rows={data.campaigns} label={t("Кампания")} />
             </section>
           )}
 
           <section className="card an-card">
             <div className="an-card__head">
-              <h2>Менеджеры</h2>
-              <Link to="/leads" className="faint">
-                Открыть CRM →
-              </Link>
+              <h2>{t("Менеджеры")}</h2>
+              <Link to="/leads" className="faint">{t("Открыть CRM →")}</Link>
             </div>
             <GroupTable
               rows={data.managers}
-              label="Менеджер"
+              label={t("Менеджер")}
               extra={[
-                { label: "В работе", value: (r) => r.open },
-                { label: "Реакция", value: (r) => formatMinutes(r.reaction) },
+                { label: t("В работе"), value: (r) => r.open },
+                { label: t("Реакция"), value: (r) => formatMinutes(r.reaction) },
               ]}
             />
           </section>
@@ -375,20 +367,20 @@ function Analytics() {
           <div className="an-grid an-grid--three">
             <section className="card an-card">
               <div className="an-card__head">
-                <h2>Страны</h2>
-                <span className="faint">по коду телефона</span>
+                <h2>{t("Страны")}</h2>
+                <span className="faint">{t("по коду телефона")}</span>
               </div>
               <ShareList rows={data.countries} />
             </section>
             <section className="card an-card">
               <div className="an-card__head">
-                <h2>Формы на сайте</h2>
+                <h2>{t("Формы на сайте")}</h2>
               </div>
               <ShareList rows={data.forms} />
             </section>
             <section className="card an-card">
               <div className="an-card__head">
-                <h2>Язык сайта</h2>
+                <h2>{t("Язык сайта")}</h2>
               </div>
               <ShareList rows={data.languages} />
             </section>
@@ -400,7 +392,7 @@ function Analytics() {
 }
 
 function ShareList({ rows }) {
-  if (!rows.length) return <div className="an-empty">Нет данных за период</div>;
+  if (!rows.length) return <div className="an-empty">{t("Нет данных за период")}</div>;
   const max = Math.max(...rows.map((r) => r.leads));
   return (
     <div className="share-list">
@@ -413,7 +405,7 @@ function ShareList({ rows }) {
             </span>
             <span>
               <b>{row.leads}</b> <span className="faint">{row.share}%</span>
-              {row.sales > 0 && <span className="share-list__sales"> · {row.sales} прод.</span>}
+              {row.sales > 0 && <span className="share-list__sales"> · {row.sales}{" "}{t("прод.")}</span>}
             </span>
           </div>
           <Bar value={row.leads} max={max} color="var(--accent)" />

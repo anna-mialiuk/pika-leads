@@ -1,3 +1,4 @@
+import { t, tt } from "./i18n";
 /**
  * Запити до бекенда адмінки (/api/admin/*).
  * Сесія — у httpOnly-cookie; заголовок X-Requested-With обов'язковий (захист від CSRF).
@@ -28,20 +29,20 @@ export async function api(path, { method = "GET", body } = {}) {
       body: body ? JSON.stringify(body) : undefined,
     });
   } catch {
-    throw new ApiError(0, "Нет связи с сервером. Проверьте интернет");
+    throw new ApiError(0, t("Нет связи с сервером. Проверьте интернет"));
   }
 
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     if (response.status === 401 && !path.startsWith("/auth/")) onUnauthorized();
-    throw new ApiError(response.status, data.error || "Ошибка запроса", data);
+    throw new ApiError(response.status, (data.error && t(data.error)) || t("Ошибка запроса"), data);
   }
   return data;
 }
 
 /** Завантаження файлу (тіло — сам файл, ім'я — у заголовку) */
 export async function upload(path, file) {
-  if (file.size > 25 * 1024 * 1024) throw new ApiError(413, `«${file.name}» больше 25 МБ`);
+  if (file.size > 25 * 1024 * 1024) throw new ApiError(413, tt("«{0}» больше 25 МБ", file.name));
   let response;
   try {
     response = await fetch(`/api/admin${path}`, {
@@ -55,12 +56,12 @@ export async function upload(path, file) {
       body: file,
     });
   } catch {
-    throw new ApiError(0, "Нет связи с сервером. Проверьте интернет");
+    throw new ApiError(0, t("Нет связи с сервером. Проверьте интернет"));
   }
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     if (response.status === 401) onUnauthorized();
-    throw new ApiError(response.status, data.error || "Не удалось загрузить файл");
+    throw new ApiError(response.status, (data.error && t(data.error)) || t("Не удалось загрузить файл"));
   }
   return data;
 }

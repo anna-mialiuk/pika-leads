@@ -383,3 +383,12 @@
   font-weight: 800;
   text-align: center;
 }
+
+.layout__lang {
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.layout__lang + .layout__user {
+  margin-top: 0;
+}

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { TaskCard } from "../components/Tasks";
 import { TasksHeader, useTaskModal, useTaskScope } from "../components/TasksShell";
 import { isOverdue, useColumns, useTasks } from "../lib/tasks";
+import { t } from "../lib/i18n";
 
 const CLOSED_DAYS = 30; // у «Готово» / «Отклонено» показуємо закриті за останній місяць
 
@@ -38,9 +39,9 @@ function TasksPage() {
 
   return (
     <div className="tboard-page">
-      <TasksHeader scope={scope} onScope={setScope} action={{ label: "+ Новая задача", onClick: () => openNew() }} />
+      <TasksHeader scope={scope} onScope={setScope} action={{ label: t("+ Новая задача"), onClick: () => openNew() }} />
 
-      {overdueCount > 0 && <div className="tboard-overdue">⚠ Просрочено задач: {overdueCount}</div>}
+      {overdueCount > 0 && <div className="tboard-overdue">{t("⚠ Просрочено задач:")}{" "}{overdueCount}</div>}
       {error && <div className="alert">⚠ {error}</div>}
 
       {!loaded ? (
@@ -96,8 +97,7 @@ function TasksPage() {
                     />
                   ))}
                   <button type="button" className="tboard__quick" onClick={() => openNew({ status: col.key })}>
-                    <span>+</span>Задача
-                  </button>
+                    <span>+</span>{t("Задача")}</button>
                 </div>
               </div>
             );
@@ -105,7 +105,7 @@ function TasksPage() {
         </div>
       )}
 
-      <div className="tboard-note">Перетаскивайте карточки между колонками. Клик по карточке — редактирование.</div>
+      <div className="tboard-note">{t("Перетаскивайте карточки между колонками. Клик по карточке — редактирование.")}</div>
 
       {modal}
     </div>

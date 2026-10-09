@@ -10,6 +10,7 @@ import { usePublish } from "../lib/publish";
 import { emptyReview, reviewSchema } from "../content/schemas";
 
 import "./Content.css";
+import { t } from "../lib/i18n";
 
 /** Редагування одного відгуку у вікні */
 function ReviewModal({ entry, onClose, onSaved, onDeleted }) {
@@ -24,14 +25,14 @@ function ReviewModal({ entry, onClose, onSaved, onDeleted }) {
   const ctx = useMemo(() => ({ lang, uploads: {}, onUpload: () => {} }), [lang]);
 
   const close = () => {
-    if (dirty && !window.confirm("Закрыть без сохранения?")) return;
+    if (dirty && !window.confirm(t("Закрыть без сохранения?"))) return;
     onClose();
   };
 
   const save = async () => {
     if (!locText(item.text, "uk").trim() || !locText(item.name, "uk").trim()) {
       setLang("uk");
-      setError("Заполните имя и текст отзыва (UA)");
+      setError(t("Заполните имя и текст отзыва (UA)"));
       return;
     }
     setSaving(true);
@@ -39,7 +40,7 @@ function ReviewModal({ entry, onClose, onSaved, onDeleted }) {
     try {
       const data = await api(`/content/reviews/${entry.id}`, { method: "PUT", body: { item, sha: entry.sha || null } });
       published(data.commit);
-      onSaved(data.item.status === "draft" ? "Отзыв сохранён как черновик." : "Отзыв сохранён. Сайт обновится через 2–3 минуты.");
+      onSaved(data.item.status === "draft" ? t("Отзыв сохранён как черновик.") : t("Отзыв сохранён. Сайт обновится через 2–3 минуты."));
     } catch (saveError) {
       setError(saveError.message);
       setSaving(false);
@@ -47,7 +48,7 @@ function ReviewModal({ entry, onClose, onSaved, onDeleted }) {
   };
 
   const remove = async () => {
-    if (!window.confirm("Удалить отзыв с сайта?")) return;
+    if (!window.confirm(t("Удалить отзыв с сайта?"))) return;
     setSaving(true);
     try {
       const { commit } = await api(`/content/reviews/${entry.id}?sha=${entry.sha}`, { method: "DELETE" });
@@ -60,7 +61,7 @@ function ReviewModal({ entry, onClose, onSaved, onDeleted }) {
   };
 
   return (
-    <Modal title={isNew ? "Новый отзыв" : "Отзыв"} onClose={close} wide>
+    <Modal title={isNew ? t("Новый отзыв") : t("Отзыв")} onClose={close} wide>
       <div className="review-modal__bar">
         <div className="lang-tabs">
           {LANGS.map(({ code, label }) => {
@@ -79,7 +80,7 @@ function ReviewModal({ entry, onClose, onSaved, onDeleted }) {
             setItem({ ...item, status: checked ? undefined : "draft" });
             setDirty(true);
           }}
-          label={item.status === "draft" ? "Черновик" : "Опубликован"}
+          label={item.status === "draft" ? t("Черновик") : t("Опубликован")}
         />
       </div>
       <ErrorAlert error={error} />
@@ -97,15 +98,12 @@ function ReviewModal({ entry, onClose, onSaved, onDeleted }) {
       <div className="modal__actions">
         {!isNew && (
           <button type="button" className="btn btn--danger btn--sm" onClick={remove} disabled={saving}>
-            <Icon name="trash" /> Удалить
-          </button>
+            <Icon name="trash" />{" "}{t("Удалить")}</button>
         )}
         <span style={{ flex: 1 }} />
-        <button type="button" className="btn btn--ghost" onClick={close} disabled={saving}>
-          Отмена
-        </button>
+        <button type="button" className="btn btn--ghost" onClick={close} disabled={saving}>{t("Отмена")}</button>
         <button type="button" className="btn btn--primary" onClick={save} disabled={saving || (!dirty && !isNew)}>
-          {saving ? "Сохраняем…" : "Сохранить"}
+          {saving ? t("Сохраняем…") : t("Сохранить")}
         </button>
       </div>
     </Modal>
@@ -148,18 +146,16 @@ function Reviews() {
     <div className="content-page">
       <div className="page-head">
         <div>
-          <h1 className="page-title">Отзывы {items && <span className="faint">{items.length}</span>}</h1>
-          <p className="page-text">Отзывы клиентов на главной и страницах услуг.</p>
+          <h1 className="page-title">{t("Отзывы")}{" "}{items && <span className="faint">{items.length}</span>}</h1>
+          <p className="page-text">{t("Отзывы клиентов на главной и страницах услуг.")}</p>
         </div>
         <div className="leads__head-actions">
           {items && !ordering && (
             <button type="button" className="btn" onClick={() => setOrdering(true)}>
-              <Icon name="sort" /> Порядок
-            </button>
+              <Icon name="sort" />{" "}{t("Порядок")}</button>
           )}
           <button type="button" className="btn btn--primary" onClick={create}>
-            <Icon name="plus" /> Новый отзыв
-          </button>
+            <Icon name="plus" />{" "}{t("Новый отзыв")}</button>
         </div>
       </div>
 
@@ -180,7 +176,7 @@ function Reviews() {
               const { commit } = await api("/content/reviews/order", { method: "POST", body: { ids } });
               published(commit);
               setOrdering(false);
-              setNotice("Порядок сохранён. Сайт обновится через 2–3 минуты.");
+              setNotice(t("Порядок сохранён. Сайт обновится через 2–3 минуты."));
               load();
             } catch (orderError) {
               setError(orderError.message);
@@ -202,7 +198,7 @@ function Reviews() {
               </div>
               <p className="review-card__text">{locText(entry.item.text, "uk")}</p>
               <div className="content-card__flags">
-                {entry.status === "draft" && <span className="chip chip--draft">Черновик</span>}
+                {entry.status === "draft" && <span className="chip chip--draft">{t("Черновик")}</span>}
                 {locText(entry.item.badge, "uk") && <span className="chip">{locText(entry.item.badge, "uk")}</span>}
                 {["en", "ru"].map((lang) => (
                   <span key={lang} className={`chip ${entry.translated[lang] ? "chip--ok" : "chip--muted"}`}>
@@ -220,7 +216,7 @@ function Reviews() {
           entry={editing}
           onClose={() => setEditing(null)}
           onSaved={done}
-          onDeleted={() => done("Отзыв удалён. Сайт обновится через 2–3 минуты.")}
+          onDeleted={() => done(t("Отзыв удалён. Сайт обновится через 2–3 минуты."))}
         />
       )}
     </div>

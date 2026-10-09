@@ -1,3 +1,4 @@
+import { t } from "./i18n";
 /**
  * Хелпери контенту сайту: перекладні рядки { uk, en, ru }, шляхи до полів,
  * картинки (конвертація в WebP прямо в браузері), чернетки в localStorage.
@@ -79,7 +80,7 @@ function loadImage(file) {
     image.onload = () => resolve({ image, url });
     image.onerror = () => {
       URL.revokeObjectURL(url);
-      reject(new Error("Не удалось открыть картинку"));
+      reject(new Error(t("Не удалось открыть картинку")));
     };
     image.src = url;
   });
@@ -97,8 +98,8 @@ const canvasToDataUrl = (canvas, quality) => {
  *   crop: [w, h] — обрізати по центру точно до цього розміру (як object-fit: cover)
  */
 export async function convertImage(file, { maxWidth = 1800, maxHeight = 2400, crop = null, quality = 0.82 } = {}) {
-  if (!file.type.startsWith("image/")) throw new Error("Это не картинка");
-  if (file.size > 30 * 1024 * 1024) throw new Error("Файл больше 30 МБ");
+  if (!file.type.startsWith("image/")) throw new Error(t("Это не картинка"));
+  if (file.size > 30 * 1024 * 1024) throw new Error(t("Файл больше 30 МБ"));
   const { image, url } = await loadImage(file);
   try {
     const canvas = document.createElement("canvas");

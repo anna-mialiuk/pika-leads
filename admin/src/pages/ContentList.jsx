@@ -9,18 +9,19 @@ import { usePublish } from "../lib/publish";
 import { CASE_SOURCES } from "../content/schemas";
 
 import "./Content.css";
+import { t } from "../lib/i18n";
 
 const LISTS = {
   cases: {
-    title: "Кейсы",
-    text: "Кейсы на сайте: карточки, страницы кейсов, блоки на главной и страницах услуг.",
-    add: "Новый кейс",
+    title: t("Кейсы"),
+    text: t("Кейсы на сайте: карточки, страницы кейсов, блоки на главной и страницах услуг."),
+    add: t("Новый кейс"),
     path: "/cases",
   },
   articles: {
-    title: "Блог",
-    text: "Статьи блога: карточка, обложка и текст на трёх языках.",
-    add: "Новая статья",
+    title: t("Блог"),
+    text: t("Статьи блога: карточка, обложка и текст на трёх языках."),
+    add: t("Новая статья"),
     path: "/blog",
   },
 };
@@ -30,17 +31,15 @@ const SOURCE_LABEL = Object.fromEntries(CASE_SOURCES.map((s) => [s.value, s.labe
 function Flags({ item }) {
   return (
     <div className="content-card__flags">
-      {item.status === "draft" && <span className="chip chip--draft">Черновик</span>}
+      {item.status === "draft" && <span className="chip chip--draft">{t("Черновик")}</span>}
       {item.public === false && item.status !== "draft" && (
-        <span className="chip chip--warn" title="Без обложки кейс не показывается в списке кейсов">
-          Без обложки
-        </span>
+        <span className="chip chip--warn" title={t("Без обложки кейс не показывается в списке кейсов")}>{t("Без обложки")}</span>
       )}
-      {item.featured && <span className="chip chip--accent">★ На главной</span>}
+      {item.featured && <span className="chip chip--accent">{t("★ На главной")}</span>}
       {["en", "ru"].map((lang) => {
         const ok = item.translated?.[lang] && (!item.bodies || item.bodies[lang]);
         return (
-          <span key={lang} className={`chip ${ok ? "chip--ok" : "chip--muted"}`} title={ok ? "Переведено" : "Есть непереведённые поля"}>
+          <span key={lang} className={`chip ${ok ? "chip--ok" : "chip--muted"}`} title={ok ? t("Переведено") : t("Есть непереведённые поля")}>
             {lang.toUpperCase()} {ok ? "✓" : "…"}
           </span>
         );
@@ -64,11 +63,9 @@ export function OrderList({ items, onSave, onCancel }) {
   return (
     <div className="order-list card">
       <div className="order-list__head">
-        <span className="muted">Перетащите строки или используйте стрелки. Сверху — первые на сайте.</span>
+        <span className="muted">{t("Перетащите строки или используйте стрелки. Сверху — первые на сайте.")}</span>
         <div className="order-list__actions">
-          <button type="button" className="btn btn--sm btn--ghost" onClick={onCancel} disabled={saving}>
-            Отмена
-          </button>
+          <button type="button" className="btn btn--sm btn--ghost" onClick={onCancel} disabled={saving}>{t("Отмена")}</button>
           <button
             type="button"
             className="btn btn--sm btn--primary"
@@ -79,7 +76,7 @@ export function OrderList({ items, onSave, onCancel }) {
               setSaving(false);
             }}
           >
-            {saving ? "Сохраняем…" : "Сохранить порядок"}
+            {saving ? t("Сохраняем…") : t("Сохранить порядок")}
           </button>
         </div>
       </div>
@@ -107,14 +104,14 @@ export function OrderList({ items, onSave, onCancel }) {
           <span className="order-row__num mono">{index + 1}</span>
           {item.image ? <img src={imageUrl(item.image)} alt="" loading="lazy" /> : <span className="order-row__noimg" />}
           <span className="order-row__title">{item.title || item.id}</span>
-          {item.status === "draft" && <span className="chip chip--draft">Черновик</span>}
+          {item.status === "draft" && <span className="chip chip--draft">{t("Черновик")}</span>}
           <span className="order-row__arrows">
             <button
               type="button"
               className="icon-btn icon-btn--sm"
               onClick={() => move(index, index - 1)}
               disabled={index === 0}
-              aria-label="Выше"
+              aria-label={t("Выше")}
             >
               <Icon name="up" />
             </button>
@@ -123,7 +120,7 @@ export function OrderList({ items, onSave, onCancel }) {
               className="icon-btn icon-btn--sm"
               onClick={() => move(index, index + 1)}
               disabled={index === list.length - 1}
-              aria-label="Ниже"
+              aria-label={t("Ниже")}
             >
               <Icon name="down" />
             </button>
@@ -175,7 +172,7 @@ function ContentList({ collection }) {
     try {
       const { commit } = await api(`/content/${collection}/order`, { method: "POST", body: { ids } });
       published(commit);
-      setNotice("Порядок сохранён. Сайт обновится через 2–3 минуты.");
+      setNotice(t("Порядок сохранён. Сайт обновится через 2–3 минуты."));
       setOrdering(false);
       load();
     } catch (orderError) {
@@ -195,8 +192,7 @@ function ContentList({ collection }) {
         <div className="leads__head-actions">
           {items && !ordering && (
             <button type="button" className="btn" onClick={() => setOrdering(true)}>
-              <Icon name="sort" /> Порядок
-            </button>
+              <Icon name="sort" />{" "}{t("Порядок")}</button>
           )}
           <Link to={`${config.path}/new`} className="btn btn--primary">
             <Icon name="plus" /> {config.add}
@@ -222,14 +218,14 @@ function ContentList({ collection }) {
               <Icon name="search" />
               <input
                 className="input input--sm"
-                placeholder="Поиск по названию"
+                placeholder={t("Поиск по названию")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
             {collection === "cases" && (
               <select className="select select--sm" value={source} onChange={(e) => setSource(e.target.value)}>
-                <option value="all">Все источники</option>
+                <option value="all">{t("Все источники")}</option>
                 {CASE_SOURCES.map((s) => (
                   <option key={s.value} value={s.value}>
                     {s.label}
@@ -238,20 +234,20 @@ function ContentList({ collection }) {
               </select>
             )}
             <select className="select select--sm" value={status} onChange={(e) => setStatus(e.target.value)}>
-              <option value="all">Все</option>
-              <option value="published">Опубликованные</option>
-              <option value="draft">Черновики</option>
-              <option value="untranslated">С непереведёнными полями</option>
+              <option value="all">{t("Все")}</option>
+              <option value="published">{t("Опубликованные")}</option>
+              <option value="draft">{t("Черновики")}</option>
+              <option value="untranslated">{t("С непереведёнными полями")}</option>
             </select>
           </div>
 
-          {filtered.length === 0 && <div className="leads__empty">Ничего не найдено</div>}
+          {filtered.length === 0 && <div className="leads__empty">{t("Ничего не найдено")}</div>}
 
           <div className="content-grid">
             {filtered.map((item) => (
               <Link key={item.id} to={`${config.path}/${item.id}`} className="content-card card">
                 <div className="content-card__image">
-                  {item.image ? <img src={imageUrl(item.image)} alt="" loading="lazy" /> : <span>Нет обложки</span>}
+                  {item.image ? <img src={imageUrl(item.image)} alt="" loading="lazy" /> : <span>{t("Нет обложки")}</span>}
                 </div>
                 <div className="content-card__body">
                   <div className="content-card__meta">
